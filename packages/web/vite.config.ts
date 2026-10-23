@@ -53,6 +53,10 @@ export default defineConfig({
     // `@supports` fallback path through every unit. This is a private club
     // site on modern devices; all four engines shipped color-mix in 2023.
     target: ["chrome111", "edge111", "firefox113", "safari16.2"],
+    // The quiz trainer loads each of its ~2800 articles as its own chunk, and
+    // gzipping every chunk (plus ~600 MB of rulebooks and art) just to print
+    // the size report ran the build out of memory. The report is cosmetic.
+    reportCompressedSize: false,
     rollupOptions: {
       output: {
         // Split stable third-party libs into their own chunks so a code change
