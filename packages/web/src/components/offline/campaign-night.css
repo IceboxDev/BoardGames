@@ -1,0 +1,259 @@
+/* Campaign nights — a sealed night whose vote winner is a campaign game
+   (core/ical/campaign.ts) takes that game's colours. Consumed by
+   CalendarDayCell and CampaignNightPanel.
+
+   Literal on purpose, like the D&D night they generalise: each game's palette
+   is its identity (tuned on the Campaign Night Studio canvas), not the
+   calendar's theme. Every rule below reads the six variables, so a new
+   campaign is one block here. --cn-glow and --cn-rim are bare colours; the
+   rules mix in their alpha. */
+
+[data-campaign="dungeons-and-dragons"] {
+  --cn-base: #3b0a0a;
+  --cn-ink: #1a0606;
+  --cn-glow: rgb(220 38 38);
+  --cn-rim: rgb(252 211 77);
+  --cn-accent: #fcd34d;
+  --cn-text: #fde68a;
+}
+[data-campaign="gloomhaven"] {
+  --cn-base: #2c1608;
+  --cn-ink: #120904;
+  --cn-glow: rgb(234 88 12);
+  --cn-rim: rgb(253 186 116);
+  --cn-accent: #fdba74;
+  --cn-text: #fed7aa;
+}
+[data-campaign="frosthaven"] {
+  --cn-base: #0c2a4a;
+  --cn-ink: #061423;
+  --cn-glow: rgb(96 165 250);
+  --cn-rim: rgb(191 219 254);
+  --cn-accent: #bfdbfe;
+  --cn-text: #dbeafe;
+}
+[data-campaign="gloomhaven-jaws-of-the-lion"] {
+  --cn-base: #2e1f06;
+  --cn-ink: #130c02;
+  --cn-glow: rgb(245 158 11);
+  --cn-rim: rgb(253 230 138);
+  --cn-accent: #fde68a;
+  --cn-text: #fef3c7;
+}
+[data-campaign="heroquest"] {
+  --cn-base: #1f1b18;
+  --cn-ink: #0c0a09;
+  --cn-glow: rgb(248 113 113);
+  --cn-rim: rgb(253 230 138);
+  --cn-accent: #fca5a5;
+  --cn-text: #fee2e2;
+}
+[data-campaign="legends-of-andor"] {
+  --cn-base: #0f2a17;
+  --cn-ink: #06120a;
+  --cn-glow: rgb(74 222 128);
+  --cn-rim: rgb(252 211 77);
+  --cn-accent: #bbf7d0;
+  --cn-text: #dcfce7;
+}
+[data-campaign="slay-the-spire"] {
+  --cn-base: #1c1022;
+  --cn-ink: #0a050d;
+  --cn-glow: rgb(240 171 252);
+  --cn-rim: rgb(245 208 254);
+  --cn-accent: #f0abfc;
+  --cn-text: #fae8ff;
+}
+[data-campaign="aeons-end"] {
+  --cn-base: #1a1238;
+  --cn-ink: #0a0718;
+  --cn-glow: rgb(129 140 248);
+  --cn-rim: rgb(165 243 252);
+  --cn-accent: #a5f3fc;
+  --cn-text: #e0f2fe;
+}
+[data-campaign="vantage"] {
+  --cn-base: #21143d;
+  --cn-ink: #0b0717;
+  --cn-glow: rgb(167 139 250);
+  --cn-rim: rgb(221 214 254);
+  --cn-accent: #ddd6fe;
+  --cn-text: #ede9fe;
+}
+[data-campaign="escape-tales-the-awakening"] {
+  --cn-base: #1f1a0c;
+  --cn-ink: #0b0904;
+  --cn-glow: rgb(234 179 8);
+  --cn-rim: rgb(254 240 138);
+  --cn-accent: #fef08a;
+  --cn-text: #fef9c3;
+}
+[data-campaign="arcs"] {
+  --cn-base: #0f1530;
+  --cn-ink: #060918;
+  --cn-glow: rgb(251 146 60);
+  --cn-rim: rgb(254 215 170);
+  --cn-accent: #fb923c;
+  --cn-text: #ffedd5;
+}
+[data-campaign="dorfromantik"] {
+  --cn-base: #1d2a0e;
+  --cn-ink: #0a1205;
+  --cn-glow: rgb(190 242 100);
+  --cn-rim: rgb(254 240 138);
+  --cn-accent: #d9f99d;
+  --cn-text: #ecfccb;
+}
+[data-campaign="war-with-the-evil-power-master"] {
+  --cn-base: #0b1a33;
+  --cn-ink: #050b18;
+  --cn-glow: rgb(248 113 113);
+  --cn-rim: rgb(191 219 254);
+  --cn-accent: #fca5a5;
+  --cn-text: #dbeafe;
+}
+[data-campaign="bomb-busters"] {
+  --cn-base: #2a0a12;
+  --cn-ink: #12040a;
+  --cn-glow: rgb(251 113 133);
+  --cn-rim: rgb(254 205 211);
+  --cn-accent: #fda4af;
+  --cn-text: #ffe4e6;
+}
+[data-campaign="the-crew-mission-deep-sea"] {
+  --cn-base: #052e2b;
+  --cn-ink: #021614;
+  --cn-glow: rgb(45 212 191);
+  --cn-rim: rgb(153 246 228);
+  --cn-accent: #5eead4;
+  --cn-text: #ccfbf1;
+}
+[data-campaign="the-crew-quest-for-planet-nine"] {
+  --cn-base: #161a3d;
+  --cn-ink: #080a1c;
+  --cn-glow: rgb(165 180 252);
+  --cn-rim: rgb(199 210 254);
+  --cn-accent: #c7d2fe;
+  --cn-text: #e0e7ff;
+}
+[data-campaign="sky-team"] {
+  --cn-base: #0b2238;
+  --cn-ink: #050f1a;
+  --cn-glow: rgb(251 191 36);
+  --cn-rim: rgb(253 230 138);
+  --cn-accent: #fcd34d;
+  --cn-text: #fef3c7;
+}
+[data-campaign="codenames-duet"] {
+  --cn-base: #0c2414;
+  --cn-ink: #05100a;
+  --cn-glow: rgb(74 222 128);
+  --cn-rim: rgb(187 247 208);
+  --cn-accent: #86efac;
+  --cn-text: #dcfce7;
+}
+
+/* Embers drift in the game's colours, not the calendar's fire. */
+[data-campaign] {
+  --color-heat-glow: var(--cn-text);
+  --color-heat: var(--cn-glow);
+}
+
+.campaign-night-base {
+  background-image: linear-gradient(to bottom right, var(--cn-base), var(--cn-ink), #000);
+}
+/* Light rising from the centre, behind the relic. */
+.campaign-night-torch {
+  background-image: radial-gradient(
+    ellipse 60% 55% at 50% 46%,
+    color-mix(in srgb, var(--cn-glow) 45%, transparent),
+    transparent 70%
+  );
+}
+/* The gilt hairline inside the rim. */
+.campaign-night-gilt {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cn-rim) 30%, transparent);
+}
+.campaign-night-shimmer {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--cn-text) 30%, transparent),
+    transparent
+  );
+}
+
+/* Day-card frame: the game's glow→rim colours, breathing — the D&D night's
+   wax-sealed tome catching torchlight, in every campaign's colours. */
+@keyframes campaign-night-glow {
+  0%,
+  100% {
+    border-color: color-mix(in srgb, var(--cn-rim) 45%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--cn-glow) 40%, transparent),
+      0 0 18px -4px color-mix(in srgb, var(--cn-glow) 55%, transparent),
+      0 0 40px -12px color-mix(in srgb, var(--cn-rim) 40%, transparent),
+      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    border-color: color-mix(in srgb, var(--cn-rim) 85%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--cn-glow) 70%, transparent),
+      0 0 26px -2px color-mix(in srgb, var(--cn-glow) 70%, transparent),
+      0 0 60px -8px color-mix(in srgb, var(--cn-rim) 65%, transparent),
+      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
+  }
+}
+.campaign-night-cell {
+  border-color: color-mix(in srgb, var(--cn-rim) 50%, transparent);
+  animation: campaign-night-glow 4.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .campaign-night-cell {
+    animation: none;
+    border-color: color-mix(in srgb, var(--cn-rim) 70%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--cn-glow) 60%, transparent),
+      0 0 24px -4px color-mix(in srgb, var(--cn-glow) 60%, transparent),
+      0 0 52px -10px color-mix(in srgb, var(--cn-rim) 55%, transparent),
+      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* The relic: painted art, lifted off the cell by a shadow and the game's glow.
+   Still on purpose — the frame breathes, the relic doesn't move. */
+.campaign-relic {
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 8px color-mix(in srgb, var(--cn-glow) 45%, transparent));
+}
+
+/* RSVP modal hero. */
+.campaign-hero {
+  border-color: color-mix(in srgb, var(--cn-rim) 35%, transparent);
+  box-shadow: 0 0 50px -14px color-mix(in srgb, var(--cn-glow) 70%, transparent);
+}
+.campaign-hero-bloom {
+  background-image: radial-gradient(
+    ellipse 55% 60% at 50% 28%,
+    color-mix(in srgb, var(--cn-glow) 50%, transparent),
+    transparent 72%
+  );
+}
+.campaign-hero-title {
+  color: var(--cn-text);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+.campaign-ink {
+  color: var(--cn-text);
+}
+.campaign-accent {
+  color: var(--cn-accent);
+}
+.campaign-rim {
+  border-color: color-mix(in srgb, var(--cn-rim) 30%, transparent);
+}
+.campaign-tint {
+  color: var(--cn-accent);
+  background-color: color-mix(in srgb, var(--cn-glow) 20%, transparent);
+}

@@ -20,7 +20,8 @@ export { EXIT_CATALOG_SLUG };
 
 /**
  * True when a locked night should render its EXIT treatment: picks are locked
- * AND the per-night vote winner is the EXIT anchor. Mirrors `isDndNight`.
+ * AND the per-night vote winner is the EXIT anchor. Mirrors `campaignNightFor`
+ * (core `ical/campaign.ts`).
  */
 export function isExitNight(lock: LockedDate | undefined | null): boolean {
   return !!lock?.picksLockedAt && lock.topGameSlug === EXIT_CATALOG_SLUG;

@@ -41,7 +41,7 @@ export function DemoDay({
           key: `demo-${day}`,
           picksLocked: false,
           attendance: null,
-          dndNight: false,
+          campaign: null,
           privateNight: null,
           interactive: Boolean(onClick),
           onClick: onClick ?? NOOP,

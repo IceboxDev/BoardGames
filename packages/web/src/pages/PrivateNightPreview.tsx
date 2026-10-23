@@ -15,7 +15,7 @@ import { dateKey } from "../lib/offline-availability";
 import { build42Days } from "../lib/offline-week";
 
 // Dev-only visual harness for the private-night treatment: /dev/private-preview
-// (unguarded, like /dev/dnd-preview). One private night per viewer state on a
+// (unguarded, like /dev/campaign-preview). One private night per viewer state on a
 // mock calendar — outsider, invited, seated, waitlisted, host, full table —
 // plus the outsider's peek and the "you're invited" card. `?viewer=<id>`
 // switches whose eyes the grid is drawn for; `?open=peek|invite` starts

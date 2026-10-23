@@ -6,7 +6,7 @@ import type { Attendee } from "../lib/calendar-games";
 import type { ExitNightState } from "../lib/exit-night";
 
 // Dev-only visual harness for the EXIT-night RSVP-modal panel. Reached at
-// /dev/exit-preview (unguarded, like /dev/dnd-preview). The panel renders
+// /dev/exit-preview (unguarded, like /dev/campaign-preview). The panel renders
 // from a preview state instead of hitting /api/calendar/exit, so the
 // second-stage vote UI can be eyeballed without a sealed night in the DB.
 

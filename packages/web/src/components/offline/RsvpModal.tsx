@@ -1,10 +1,10 @@
+import { campaignNightFor } from "@boardgames/core/ical/campaign";
 import { useEffect, useRef, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import { compactAddress } from "../../lib/compact-address.ts";
 import { formatDayKey } from "../../lib/date-format.ts";
-import { DND_SLUG } from "../../lib/dnd-night";
 import { EXIT_CATALOG_SLUG } from "../../lib/exit-night";
 import { canManageNight, seatsLeft, viewerSeat, waitlistPosition } from "../../lib/night-access";
 import { reportPageView } from "../../lib/page-views";
@@ -22,7 +22,7 @@ import {
   useConfirm,
 } from "../ui";
 import AttendeesView from "./AttendeesView";
-import DndNightPanel from "./DndNightPanel";
+import CampaignNightPanel from "./CampaignNightPanel";
 import ExitNightPanel from "./ExitNightPanel";
 import GameCarousel3D from "./GameCarousel3D";
 import GameReactions from "./GameReactions";
@@ -121,10 +121,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // The row confirms first (it names the person and their vote count).
   const resetPersonVotes = (userId: string) => resetVotesMutation.mutate({ userId });
 
-  // A sealed night whose vote winner is D&D takes over the modal: one quest on
-  // the table, a party roster, no bringing. Gated on picks-locked so the normal
-  // pick/vote flow runs right up until the guest list is sealed.
-  const isDnd = picksLocked && topSlugs[0] === DND_SLUG;
+  // A sealed night whose vote winner is a campaign game (D&D among them) takes
+  // over the modal: one game on the table, a party roster, who brings the box.
+  // Gated on picks-locked so the normal pick/vote flow runs right up until the
+  // guest list is sealed.
+  const campaign = picksLocked ? campaignNightFor(lock?.picksLockedAt, topSlugs[0]) : null;
   // Likewise for EXIT — except the winner is a franchise, so the takeover is a
   // second-stage vote narrowing down which box to play (ExitNightPanel).
   const isExit = picksLocked && topSlugs[0] === EXIT_CATALOG_SLUG;
@@ -233,7 +234,13 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   const eyebrow = (
     <span className="inline-flex flex-wrap items-baseline gap-x-2">
       <span>
-        {isDnd ? "D&D night" : isExit ? "EXIT night" : isPrivate ? "Private night" : "Game night"}
+        {campaign
+          ? `${campaign.night} night`
+          : isExit
+            ? "EXIT night"
+            : isPrivate
+              ? "Private night"
+              : "Game night"}
       </span>
       {isPrivate && lock?.title && (
         <span className="max-w-56 truncate font-semibold tracking-normal normal-case text-fg-strong">
@@ -368,7 +375,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
         // going) fits at ~250px of content width — see `RsvpSwitch` and the
         // tightened sm padding in SegmentedControl.
         <div className="flex items-center justify-between gap-2">
-          {showViewToggle && viewerRsvp !== "no" && !isDnd && !isExit ? (
+          {showViewToggle && viewerRsvp !== "no" && !campaign && !isExit ? (
             <SegmentedControl
               shape="pill"
               size="sm"
@@ -428,8 +435,12 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
             />
           ) : gamesQuery.isPending ? (
             <LoadingState label="Finding games…" />
-          ) : isDnd ? (
-            <DndNightPanel attendees={attendees} partyCount={definiteCount} />
+          ) : campaign ? (
+            <CampaignNightPanel
+              campaign={campaign}
+              attendees={attendees}
+              partyCount={definiteCount}
+            />
           ) : isExit ? (
             <ExitNightPanel date={date} attendees={attendees} partyCount={definiteCount} />
           ) : effectiveView === "attendees" ? (

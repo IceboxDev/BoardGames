@@ -1,8 +1,8 @@
 import type { GroupDayMatch } from "@boardgames/core/availability/group-match";
+import { campaignNightFor } from "@boardgames/core/ical/campaign";
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import { freeNightKey, nightsForDate } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
-import { isDndNight } from "../../lib/dnd-night";
 import { viewerSeat } from "../../lib/night-access";
 import type {
   AggregateAvailabilityMap,
@@ -194,7 +194,7 @@ export default function Calendar({
             key: nightKey,
             picksLocked: !!lock.picksLockedAt,
             attendance: lock.attendance ?? null,
-            dndNight: isDndNight(lock),
+            campaign: campaignNightFor(lock.picksLockedAt, lock.topGameSlug),
             privateNight:
               lock.isPrivate && lock.seats
                 ? {

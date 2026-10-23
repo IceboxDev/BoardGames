@@ -1,19 +1,23 @@
+import { CAMPAIGN_NIGHTS } from "@boardgames/core/ical/campaign";
 import type { LockedDate } from "@boardgames/core/protocol";
+import { useState } from "react";
 import Calendar from "../components/offline/Calendar";
-import { D20Die } from "../components/offline/D20Die";
-import DndNightPanel from "../components/offline/DndNightPanel";
+import CampaignNightPanel from "../components/offline/CampaignNightPanel";
+import { CampaignRelic } from "../components/offline/CampaignRelic";
+import { Chip } from "../components/ui/Chip";
 import { PageMain, PageShell } from "../components/ui/PageShell";
 import { Section } from "../components/ui/Section";
 import type { Attendee } from "../lib/calendar-games";
-import { DND_SLUG } from "../lib/dnd-night";
 import type { AvailabilityCounts, AvailabilityMap } from "../lib/offline-availability";
 import { dateKey } from "../lib/offline-availability";
 import { build42Days } from "../lib/offline-week";
 
-// Dev-only visual harness for the D&D-night calendar treatment. Reached at
-// /dev/dnd-preview (unguarded, like /dev/deck-preview). Renders the real
-// Calendar with mock locks so the day-card states can be eyeballed at every
-// breakpoint, plus the standalone modal panel and a row of bare dice.
+// Dev-only visual harness for the campaign-night calendar treatment (D&D and
+// every other campaign game). Reached at /dev/campaign-preview (and the old
+// /dev/dnd-preview), unguarded like /dev/deck-preview. Renders the real
+// Calendar with mock locks for the picked game — several headcounts, a split
+// two-night date, 1 and 12 for the un-numbered fallback — plus the modal panel
+// and every relic of the game.
 
 function mkLock(over: Partial<LockedDate>): LockedDate {
   return {
@@ -39,7 +43,8 @@ function mkLock(over: Partial<LockedDate>): LockedDate {
   };
 }
 
-// Borin is the admin and is coming → he's the DM; Mara hosts the venue → "Host".
+// Borin is the admin and is coming → the DM on a D&D night; Mara hosts and owns
+// every campaign box → "Brings the box" on the others.
 const ATTENDEES: Attendee[] = [
   {
     userId: "u-host",
@@ -50,7 +55,7 @@ const ATTENDEES: Attendee[] = [
     hasRsvped: true,
     isGuest: false,
     votes: { hype: 1, teach: 1, learn: 0 },
-    bringing: [],
+    bringing: CAMPAIGN_NIGHTS.map((c) => c.slug),
     seat: null,
     staleVotes: null,
   },
@@ -108,46 +113,75 @@ const ATTENDEES: Attendee[] = [
   },
 ];
 
-export default function DndNightPreview() {
+const COUNTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+export default function CampaignNightPreview() {
+  const [slug, setSlug] = useState(CAMPAIGN_NIGHTS[0]?.slug ?? "");
+  const campaign = CAMPAIGN_NIGHTS.find((c) => c.slug === slug) ?? CAMPAIGN_NIGHTS[0];
+  if (!campaign) return null;
+
   const weekStart = new Date();
   weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 7);
   const keys = build42Days(weekStart).map(dateKey);
 
-  // Place a few notable cells: a D&D night, a bigger D&D night, a plain
-  // picks-locked night (for the N/N comparison), and a heat day.
-  const dnd = keys[10] ?? "";
-  const dndBig = keys[17] ?? "";
-  const plainLocked = keys[12] ?? "";
-  const hot = keys[23] ?? "";
-
+  // The picked campaign at a few headcounts, a split date with it beside a
+  // plain night, the fallbacks (1 and 12), a plain picks-locked night for the
+  // N/N comparison, and a heat day.
+  const at = (i: number) => keys[i] ?? "";
+  const night = (definite: number, tentative = 1) =>
+    mkLock({ topGameSlug: campaign.slug, attendance: { definite, tentative } });
   const locks = {
-    [dnd]: mkLock({ topGameSlug: DND_SLUG, attendance: { definite: 5, tentative: 2 } }),
-    [dndBig]: mkLock({ topGameSlug: DND_SLUG, attendance: { definite: 6, tentative: 0 } }),
-    [plainLocked]: mkLock({
+    [at(8)]: night(2),
+    [at(9)]: night(3),
+    [at(10)]: night(4, 2),
+    [at(11)]: night(5),
+    [at(15)]: night(6),
+    [at(16)]: night(1),
+    [at(17)]: night(12, 0),
+    [at(18)]: night(4),
+    [`${at(18)}_2`]: mkLock({
       topGameSlug: "lost-cities",
-      attendance: { definite: 4, tentative: 3 },
+      attendance: { definite: 3, tentative: 1 },
     }),
+    [at(12)]: mkLock({ topGameSlug: "lost-cities", attendance: { definite: 4, tentative: 3 } }),
   };
 
-  const availability: AvailabilityMap = { [keys[3] ?? ""]: "can", [keys[4] ?? ""]: "maybe" };
+  const availability: AvailabilityMap = { [at(3)]: "can", [at(4)]: "maybe" };
   const counts: AvailabilityCounts = {
-    [hot]: { can: 5, maybe: 2 },
-    [keys[22] ?? ""]: { can: 3, maybe: 1 },
+    [at(23)]: { can: 5, maybe: 2 },
+    [at(22)]: { can: 3, maybe: 1 },
   };
-  const viewerRsvpByDate = { [dnd]: "yes" as const, [dndBig]: undefined };
+  const viewerRsvpByDate = { [at(10)]: "yes" as const, [at(11)]: "no" as const };
 
   return (
     <PageShell background="plain">
       <PageMain width="6xl" padding="spacious" className="flex flex-col gap-10 text-fg-primary">
-        <header>
-          <h1 className="text-2xl font-bold text-fg-strong">D&amp;D Night — visual preview</h1>
-          <p className="mt-1 text-sm text-fg-secondary">
-            Mock calendar with two D&amp;D nights, a plain picks-locked night, and heat days.
-          </p>
+        <header className="flex flex-col gap-3">
+          <div>
+            <h1 className="text-2xl font-bold text-fg-strong">Campaign nights — visual preview</h1>
+            <p className="mt-1 text-sm text-fg-secondary">
+              Mock calendar for the picked campaign at several headcounts, a split date, the
+              un-numbered fallback (1 and 12), a plain picks-locked night and heat days.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {CAMPAIGN_NIGHTS.map((c) => (
+              <Chip
+                key={c.slug}
+                pressed={c.slug === campaign.slug}
+                tone="accent"
+                size="xs"
+                flat
+                onClick={() => setSlug(c.slug)}
+              >
+                {c.night}
+              </Chip>
+            ))}
+          </div>
         </header>
 
         <Section title="Calendar grid (full)">
-          <div className="h-[680px] rounded-card-2xl border border-line bg-surface-900/40 p-4">
+          <div className="flex h-[680px] flex-col rounded-card-2xl border border-line bg-surface-900/40 p-4 max-sm:h-[520px] max-sm:p-2">
             <Calendar
               weekStart={weekStart}
               availability={availability}
@@ -173,17 +207,23 @@ export default function DndNightPreview() {
           </div>
         </Section>
 
-        <Section title="Bare dice (counts 1 / 4 / 12 / 20)">
-          <div className="flex items-end gap-6 rounded-card-2xl border border-line bg-surface-900/40 p-6">
-            {[1, 4, 12, 20].map((n) => (
-              <D20Die key={n} count={n} className="dnd-die h-20 w-20" />
+        <Section title="Every relic (1–12)">
+          <div
+            data-campaign={campaign.slug}
+            className="flex flex-wrap items-end gap-4 rounded-card-2xl border border-line bg-surface-900/40 p-6"
+          >
+            {COUNTS.map((n) => (
+              <div key={n} className="flex flex-col items-center gap-1">
+                <CampaignRelic slug={campaign.slug} count={n} className="h-20 w-20" />
+                <span className="text-2xs text-fg-muted">{n}</span>
+              </div>
             ))}
           </div>
         </Section>
 
         <Section title="Modal panel">
           <div className="mx-auto h-[640px] w-full max-w-2xl overflow-hidden rounded-card-2xl border border-line bg-surface-950 p-4">
-            <DndNightPanel attendees={ATTENDEES} partyCount={4} />
+            <CampaignNightPanel campaign={campaign} attendees={ATTENDEES} partyCount={4} />
           </div>
         </Section>
       </PageMain>

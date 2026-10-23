@@ -9,6 +9,7 @@
 //   pnpm --filter @boardgames/web card-art --only=crest-oda
 //   pnpm --filter @boardgames/web card-art --strict   # exit 1 on orphans / budget
 //   pnpm --filter @boardgames/web card-art --game=hunger   # The Hunger's blocks instead
+//   pnpm --filter @boardgames/web card-art --game=relics   # campaign-night relics
 //
 // Why: the raw PNGs are 1–3 MB each and never enter git (`packages/web/art-src`
 // is gitignored; *.png is LFS-tracked and LFS bandwidth has already blocked a
@@ -38,6 +39,10 @@ const GAMES = {
   // 7 Wonders: wonder boards, backdrops, Edifice plans and the icon set
   // (ART-PROMPTS.md). Loaded per image as each view needs it.
   "7-wonders": { src: "7-wonders", out: "7-wonders", dir: "art", budgetKb: 12 * 1024 },
+  // Campaign-night relics (components/offline/CAMPAIGN-RELIC-PROMPTS.md): one
+  // per headcount per campaign game plus the un-numbered relic, drawn at most
+  // 112 px wide (the RSVP hero). Not a game's: they live under src/assets.
+  relics: { src: "campaign-relics", outDir: "assets/campaign-relics", budgetKb: 3 * 1024 },
 };
 
 const args = process.argv.slice(2);
@@ -52,15 +57,9 @@ if (!GAME) {
 }
 
 const SRC_DIR = path.resolve(__dirname, "..", "art-src", GAME.src);
-const OUT_DIR = path.resolve(
-  __dirname,
-  "..",
-  "src",
-  "games",
-  GAME.out,
-  "assets",
-  GAME.dir ?? "cards",
-);
+const OUT_DIR = GAME.outDir
+  ? path.resolve(__dirname, "..", "src", GAME.outDir)
+  : path.resolve(__dirname, "..", "src", "games", GAME.out, "assets", GAME.dir ?? "cards");
 const MANIFEST = path.join(OUT_DIR, "manifest.json");
 const BUDGET_BYTES = GAME.budgetKb * 1024;
 
@@ -77,6 +76,8 @@ const ENCODE = {
   portrait: { quality: 78, alphaQuality: 72, smartSubsample: true, effort: 6 },
   icon: { quality: 82, alphaQuality: 80, effort: 6 },
   scene: { quality: 72, effort: 6 },
+  // Campaign relics: glossy painted objects with a painted numeral.
+  relic: { quality: 82, alphaQuality: 80, smartSubsample: true, effort: 6 },
 };
 
 async function mtime(file) {

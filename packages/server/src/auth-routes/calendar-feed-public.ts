@@ -10,6 +10,13 @@ import { createHash } from "node:crypto";
 import { getBggBySlug } from "@boardgames/core/bgg";
 import { buildIcs, type IcsEvent } from "@boardgames/core/ical/builder";
 import {
+  buildCampaignDescription,
+  buildCampaignSummary,
+  type CampaignNight,
+  campaignNightFor,
+  pickKeeper,
+} from "@boardgames/core/ical/campaign";
+import {
   buildDndDescription,
   buildDndSummary,
   type DndPartyMember,
@@ -150,13 +157,17 @@ async function buildEventForLockedDate(
   // changes, so the ETag matches and 304 fires.
   const stamp = formatUtcFromSqlite(view.latestActivityAt);
 
-  // A sealed D&D night takes over the whole entry: themed title + quest copy,
-  // no other-game references — mirroring the web's D&D-night panel. Every other
-  // night keeps the generic "Game Night / Top picks / bring X" shape.
+  // A sealed campaign night takes over the whole entry: themed title + party
+  // copy, no other-game references — mirroring the web's campaign panel. D&D
+  // keeps its own quest voice. Every other night keeps the generic
+  // "Game Night / Top picks / bring X" shape.
   let summary: string;
   let description: string;
+  const campaign = campaignNightFor(view.lock.picksLockedAt, view.wire.topSlugs[0]);
   if (isDndFeedNight(view.lock.picksLockedAt, view.wire.topSlugs[0])) {
     ({ summary, description } = buildDndEvent(view, viewerId, dateKey));
+  } else if (campaign) {
+    ({ summary, description } = buildCampaignEvent(view, campaign, viewerId, dateKey));
   } else {
     // Resolve the viewer's bring slugs into display titles (for the title's
     // [Bring: …] prefix and the description body).
@@ -274,6 +285,58 @@ function buildDndEvent(
     deepLink: buildDeepLink(dateKey) ?? null,
   });
   return { summary, description };
+}
+
+// ── Campaign-night entry ──────────────────────────────────────────────
+
+function buildCampaignEvent(
+  view: AvailableGamesView,
+  campaign: CampaignNight,
+  viewerId: string,
+  dateKey: string,
+): { summary: string; description: string } {
+  const attendees = view.wire.attendees;
+  const keeper = pickKeeper(attendees, campaign);
+  const title = resolveSlugTitles([campaign.slug])[0] ?? campaign.night;
+
+  // Only [Not going] / [RSVP!] apply on a sealed night — plus [Bring: …] for
+  // whoever brings the box, the one thing anyone carries tonight.
+  const prefix = deriveSummaryPrefix({
+    expectedUserIds: view.lock.expectedUserIds,
+    picksLockedAt: view.lock.picksLockedAt,
+    viewerId,
+    viewerRsvp: view.viewer.rsvp,
+    viewerManuallyRsvped: view.viewer.rsvpManual,
+    viewerHyped: view.viewer.hyped,
+    viewerBringing: keeper?.userId === viewerId ? [title] : [],
+  });
+  const summary = buildCampaignSummary(prefix, title, view.lock.hostName ?? null);
+
+  const definiteCount = attendees.filter((a) => a.status === "definite").length;
+  const description = buildCampaignDescription({
+    campaign,
+    title,
+    partyCount: definiteCount,
+    tentativeCount: attendees.length - definiteCount,
+    keeperName: keeper?.name ?? null,
+    party: attendees.map((a) => ({
+      name: a.name,
+      keeper: a.userId === keeper?.userId,
+      host: a.isHost,
+      tentative: a.status === "tentative",
+    })),
+    personalNudge: campaignPersonalNudge(view),
+    deepLink: buildDeepLink(dateKey) ?? null,
+  });
+  return { summary, description };
+}
+
+function campaignPersonalNudge(view: AvailableGamesView): string | null {
+  if (view.viewer.rsvp === "no") return "You're sitting this session out.";
+  if (view.viewer.inExpectedSet && view.viewer.rsvp !== "yes" && !view.viewer.rsvpManual) {
+    return "The party is waiting — RSVP in the planner.";
+  }
+  return null;
 }
 
 /** Themed equivalent of the generic decline / RSVP nudge lines. */

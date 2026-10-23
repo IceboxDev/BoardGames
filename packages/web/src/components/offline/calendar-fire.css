@@ -8,8 +8,7 @@
    unchanged. It used to be fixed literals, which left an orange bonfire
    burning in the middle of a Sakura or Terminal palette.
 
-   The `.dnd-night-cell` rules at the bottom stay literal on purpose: crimson
-   and gold are the D&D night's identity, not the calendar's palette. */
+   Campaign nights (D&D included) have their own sheet, campaign-night.css. */
 
 /* ── Calendar fire / ember effects ──────────────── */
 
@@ -204,44 +203,6 @@
   animation: fire-glow 4.3s ease-in-out infinite;
 }
 
-/* Day-card frame for a sealed D&D night: a crimson→gold rim that breathes,
-   the colors of a wax-sealed adventurer's tome catching torchlight. */
-@keyframes dnd-glow {
-  0%,
-  100% {
-    border-color: rgba(252, 211, 77, 0.45);
-    box-shadow:
-      0 0 0 1px rgba(220, 38, 38, 0.4),
-      0 0 18px -4px rgba(220, 38, 38, 0.55),
-      0 0 40px -12px rgba(252, 211, 77, 0.4),
-      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
-  }
-  50% {
-    border-color: rgba(253, 224, 71, 0.85);
-    box-shadow:
-      0 0 0 1px rgba(248, 113, 113, 0.7),
-      0 0 26px -2px rgba(239, 68, 68, 0.7),
-      0 0 60px -8px rgba(252, 211, 77, 0.65),
-      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
-  }
-}
-.dnd-night-cell {
-  border-color: rgba(252, 211, 77, 0.5);
-  animation: dnd-glow 4.5s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dnd-night-cell {
-    animation: none;
-    border-color: rgba(253, 224, 71, 0.7);
-    box-shadow:
-      0 0 0 1px rgba(239, 68, 68, 0.6),
-      0 0 24px -4px rgba(220, 38, 38, 0.6),
-      0 0 52px -10px rgba(252, 211, 77, 0.55),
-      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
-  }
-}
-
 /* Private night — frosted glass over graphite. The diagonal hatch is what
    says "you can't see in": a low-alpha stripe field on the platinum ink,
    over the graphite gradient the cell paints beneath it. Static on purpose;
@@ -390,8 +351,8 @@
     font-size: var(--text-5xs);
   }
 }
-/* The D&D die and the "+ 2nd night" label follow the same idea. */
-.night-pane-die {
+/* The campaign relic and the "+ 2nd night" label follow the same idea. */
+.night-pane-relic {
   max-width: min(78cqw, 5.5rem);
   max-height: min(70cqh, 5.5rem);
 }

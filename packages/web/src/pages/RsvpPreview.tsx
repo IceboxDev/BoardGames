@@ -15,7 +15,7 @@ import type { Attendee, ReactionAggregate } from "../lib/calendar-games";
 // exact surface behind /offline's day cards, but with static data and no
 // auth/queries, so phone-size regressions (date wrap, address overflow,
 // carousel clipping) can be reproduced headlessly at any viewport. Mirrors
-// DndNightPreview / DeckPreview. Route: /dev/rsvp-preview.
+// CampaignNightPreview / DeckPreview. Route: /dev/rsvp-preview.
 
 // Worst-case-ish fixture strings: long weekday+month date, full
 // Google-Places-style German address.

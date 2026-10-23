@@ -191,7 +191,11 @@ const router = createBrowserRouter(
       {import.meta.env.DEV && (
         <>
           <Route path="dev/deck-preview" lazy={page(() => import("./pages/DeckPreview"))} />
-          <Route path="dev/dnd-preview" lazy={page(() => import("./pages/DndNightPreview"))} />
+          <Route
+            path="dev/campaign-preview"
+            lazy={page(() => import("./pages/CampaignNightPreview"))}
+          />
+          <Route path="dev/dnd-preview" lazy={page(() => import("./pages/CampaignNightPreview"))} />
           <Route path="dev/exit-preview" lazy={page(() => import("./pages/ExitNightPreview"))} />
           <Route
             path="dev/private-preview"

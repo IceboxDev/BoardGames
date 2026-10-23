@@ -2,7 +2,7 @@ import { D20Die } from "../../../components/offline/D20Die";
 import { HeroBanner } from "./ui";
 
 // The campaign hall's torch-lit hero — same recipe as the D&D-night RSVP
-// panel (DndNightPanel), scaled up to a page banner. The d20 always shows a
+// panel (CampaignNightPanel), scaled up to a page banner. The d20 always shows a
 // natural 20: the roll every campaign begins with, in spirit.
 
 export function HallHero() {

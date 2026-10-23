@@ -1,11 +1,13 @@
 import "./calendar-fire.css";
+import "./campaign-night.css";
+import type { CampaignNight } from "@boardgames/core/ical/campaign";
 import { nightSlot } from "@boardgames/core/protocol";
 import { Children, type ReactNode } from "react";
 import type { NightSeats } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import type { ViewerSeat } from "../../lib/night-access";
 import type { Availability, AvailabilityEntry } from "../../lib/offline-availability";
-import { D20Die } from "./D20Die";
+import { CampaignRelic } from "./CampaignRelic";
 import { firstName } from "./group-fit";
 
 /** What a private night's cell needs beyond the lock: the tally and the viewer's own place. */
@@ -29,8 +31,8 @@ export type NightCell = {
   key: string;
   picksLocked: boolean;
   attendance: { definite: number; tentative: number } | null;
-  /** Sealed night whose vote winner is D&D — swaps in the crimson/d20 treatment. */
-  dndNight: boolean;
+  /** Sealed night whose vote winner is a campaign game — swaps in its colours and relic. */
+  campaign: CampaignNight | null;
   /** Private (invitation-only) night — swaps in the frosted graphite treatment. */
   privateNight: PrivateNightCell | null;
   viewerRsvp?: RsvpStatus;
@@ -115,7 +117,7 @@ function SingleDayCell({
   const locked = night !== null;
   const picksLocked = !!night?.picksLocked;
   const attendance = night?.attendance ?? null;
-  const dndNight = !!night?.dndNight;
+  const campaign = night?.campaign ?? null;
   const privateNight = night?.privateNight ?? null;
   const viewerRsvp = night?.viewerRsvp;
   // A locked night decides its own clickability; an unlocked cell the caller's.
@@ -124,13 +126,14 @@ function SingleDayCell({
   // Lock visually overrides heat (and personal mark gradient).
   const showHeatLayer = !locked && heated;
   const showPersonalGradient = !locked && !heated && value;
-  // D&D night: a sealed night whose vote winner is D&D. Takes over the locked
-  // cell entirely — crimson frame, dungeon background, a d20 headcount.
-  const showDnd = dndNight && picksLocked && !!attendance;
+  // Campaign night: a sealed night whose vote winner is a campaign game (D&D
+  // among them). Takes over the locked cell entirely — the game's frame and
+  // background, its relic carrying the headcount.
+  const showCampaign = !!campaign && picksLocked && !!attendance;
   // Private night: frosted graphite, a seat tally instead of a headcount, and
-  // the viewer's own place on the pill. A D&D lineup still wins (a private
+  // the viewer's own place on the pill. A campaign lineup still wins (a private
   // night arrives sealed from lock-in, so `picksLocked` is already true).
-  const showPrivate = locked && !showDnd && privateNight !== null;
+  const showPrivate = locked && !showCampaign && privateNight !== null;
   const invitedPending = showPrivate && !isPast && privateNight?.viewerSeat === "invited";
   // "Find a date": a free date that suits the group is ringed and tallied;
   // one that doesn't steps back (still clickable — the admin may want it).
@@ -171,8 +174,8 @@ function SingleDayCell({
         : "";
 
   const borderClass =
-    showDnd || showPrivate
-      ? "" // `.dnd-night-cell` / `.private-night-cell` own their rim + glow.
+    showCampaign || showPrivate
+      ? "" // `.campaign-night-cell` / `.private-night-cell` own their rim + glow.
       : groupFit && groupFit !== "none"
         ? GROUP_RING[groupFit]
         : locked
@@ -244,7 +247,7 @@ function SingleDayCell({
       aria-label={`${day}${value ? ` — ${value}` : ""}${away ? " — away (admin note)" : ""}${locked ? " — locked in" : ""}${
         !locked && heat.kind === "warming" ? ` — warming up, ${heat.can} confirmed` : ""
       }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}${
-        showDnd ? " — Dungeons & Dragons night" : ""
+        showCampaign && campaign ? ` — ${campaign.night} night` : ""
       }${
         showPrivate && privateNight
           ? ` — private night, ${privateNight.seats.taken} of ${privateNight.seats.total} seats${
@@ -255,6 +258,7 @@ function SingleDayCell({
           : ""
       }`}
       aria-pressed={value !== undefined || away}
+      data-campaign={showCampaign ? campaign?.slug : undefined}
       title={
         groupFit && group
           ? groupTitle(group)
@@ -262,7 +266,7 @@ function SingleDayCell({
             ? "Marked away — not counted in coverage"
             : undefined
       }
-      className={`group relative flex flex-col overflow-hidden rounded-card-xl border ${compact ? "" : "max-sm:rounded-card-md"} transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${showPrivate ? "private-night-cell" : ""} ${invitedPending ? "private-night-cell-invited" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
+      className={`group relative flex flex-col overflow-hidden rounded-card-xl border ${compact ? "" : "max-sm:rounded-card-md"} transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showCampaign ? "campaign-night-cell" : ""} ${showPrivate ? "private-night-cell" : ""} ${invitedPending ? "private-night-cell-invited" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
     >
       <span
         className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
@@ -278,8 +282,8 @@ function SingleDayCell({
       {showHeatLayer && heat.kind === "warming" && <WarmingLayer compact={compact} />}
       {showHeatLayer && heat.kind === "fire" && <FireLayer compact={compact} cellSeed={cellSeed} />}
       {locked &&
-        (showDnd ? (
-          <DndNightLayer compact={compact} viewerRsvp={viewerRsvp} />
+        (showCampaign ? (
+          <CampaignNightLayer compact={compact} viewerRsvp={viewerRsvp} />
         ) : showPrivate && privateNight ? (
           <PrivateNightLayer compact={compact} viewerSeat={privateNight.viewerSeat} />
         ) : (
@@ -311,20 +315,21 @@ function SingleDayCell({
         </span>
       )}
       {isToday && <TodayDot className={`${todayDotPos} ${phoneHide}`} />}
-      {showDnd && attendance ? (
-        // D&D night: a glowing d20 replaces the headcount, the party size
-        // rolled onto its face. The grid position still tells you the date.
+      {showCampaign && campaign && attendance ? (
+        // Campaign night: the game's relic replaces the headcount, the party
+        // size painted into it. The grid position still tells you the date.
         <span
           className={`relative z-lift flex min-h-0 flex-1 items-center justify-center p-1 ${phoneHide}`}
         >
-          {/* The die fills whatever space the cell row gives it (rows are
+          {/* The relic fills whatever space the cell row gives it (rows are
               flex-sized, so they're shorter on a 1080p screen than on 4K) and
-              its SVG `meet` aspect-fit keeps it centered. Caps mirror the old
-              fixed sizes so 4K is unchanged; shorter rows simply shrink it
-              instead of overflowing the bottom edge. */}
-          <D20Die
+              object-fit keeps it centred. Caps keep 4K at the d20's old size;
+              shorter rows simply shrink it instead of overflowing the bottom
+              edge. */}
+          <CampaignRelic
+            slug={campaign.slug}
             count={attendance.definite}
-            className={`dnd-die dnd-die-animated h-full w-full ${
+            className={`h-full w-full ${
               compact
                 ? "max-h-8 max-w-8"
                 : "max-h-12 max-w-12 sm:max-h-16 sm:max-w-16 md:max-h-20 md:max-w-20 lg:max-h-22 lg:max-w-22"
@@ -378,10 +383,11 @@ function SingleDayCell({
             (groupFit !== null ? groupFit !== "none" : (!!value || heated) && !isAdminView)
           }
           main={
-            showDnd && attendance ? (
-              <D20Die
+            showCampaign && campaign && attendance ? (
+              <CampaignRelic
+                slug={campaign.slug}
                 count={attendance.definite}
-                className="dnd-die dnd-die-animated h-[54cqw] w-[54cqw]"
+                className="h-[54cqw] w-[54cqw]"
               />
             ) : showPrivate && privateNight ? (
               <PhoneTally a={privateNight.seats.taken} b={privateNight.seats.total} />
@@ -673,13 +679,14 @@ function SealMedallion({ variant }: { variant: MedallionVariant }) {
 }
 
 /**
- * Background treatment for a sealed D&D night — swapped in for `LockedLayer`.
- * A dungeon-crimson base with central torchlight, a gold hairline + shimmer,
- * and drifting torch embers. The crimson↔gold rim + the red d20 headcount
- * (painted by the cell itself) carry the identity — no explicit "D&D" label
- * needed. This layer is everything behind them.
+ * Background treatment for a sealed campaign night — swapped in for
+ * `LockedLayer`. The game's base colour fading to black with central light, a
+ * gilt hairline + shimmer, and drifting embers, all in the game's colours (the
+ * cell's `data-campaign`, campaign-night.css). The rim + the relic headcount
+ * (painted by the cell itself) carry the identity — no explicit label needed.
+ * This layer is everything behind them.
  */
-function DndNightLayer({
+function CampaignNightLayer({
   compact,
   viewerRsvp,
   pane = false,
@@ -690,25 +697,25 @@ function DndNightLayer({
 }) {
   return (
     <>
-      {/* Deep dungeon base — blood-crimson fading to obsidian. */}
+      {/* The game's base, fading to black. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-dnd-blood via-dnd-ink to-black"
+        className="campaign-night-base pointer-events-none absolute inset-0"
       />
-      {/* Warm torchlight glow rising from the center, behind the die. */}
+      {/* Light rising from the center, behind the relic. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_46%,rgba(220,38,38,0.45),transparent_70%)]"
+        className="campaign-night-torch pointer-events-none absolute inset-0"
       />
-      {/* Gold inner hairline — the gilt edge of a sealed tome. */}
+      {/* Gilt inner hairline — the edge of a sealed tome. */}
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute inset-0 ring-1 ring-amber-300/30 ${pane ? "rounded-card-md" : "rounded-card-xl max-sm:rounded-card-md"}`}
+        className={`campaign-night-gilt pointer-events-none absolute inset-0 ${pane ? "rounded-card-md" : "rounded-card-xl max-sm:rounded-card-md"}`}
       />
-      {/* Slow gold shimmer sweep (shared with the locked wax-seal cell). */}
+      {/* Slow shimmer sweep (shared with the locked wax-seal cell). */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-amber-200/30 to-transparent motion-safe:animate-seal-shimmer"
+        className="campaign-night-shimmer pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 motion-safe:animate-seal-shimmer"
       />
       {/* Torch embers drifting up. Desktop cells only — phones have no room. */}
       {!compact && (
@@ -1533,12 +1540,12 @@ function NightPane({
   compact: boolean;
   isPast: boolean;
 }) {
-  const { picksLocked, attendance, dndNight, privateNight, viewerRsvp } = night;
-  const showDnd = dndNight && picksLocked && !!attendance;
-  const showPrivate = !showDnd && privateNight !== null;
+  const { picksLocked, attendance, campaign, privateNight, viewerRsvp } = night;
+  const showCampaign = !!campaign && picksLocked && !!attendance;
+  const showPrivate = !showCampaign && privateNight !== null;
   const invitedPending = showPrivate && !isPast && privateNight?.viewerSeat === "invited";
-  const chrome = showDnd
-    ? "dnd-night-cell"
+  const chrome = showCampaign
+    ? "campaign-night-cell"
     : showPrivate
       ? `private-night-cell ${invitedPending ? "private-night-cell-invited" : ""}`
       : "border-warn-gold/40";
@@ -1548,23 +1555,25 @@ function NightPane({
       type="button"
       onClick={night.onClick}
       disabled={!clickable}
-      aria-label={paneLabel(night, showDnd, showPrivate)}
+      aria-label={paneLabel(night, showCampaign, showPrivate)}
+      data-campaign={showCampaign ? campaign?.slug : undefined}
       className={`night-pane relative flex overflow-hidden rounded-card-md border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${chrome} ${
         clickable ? "hover:brightness-110 active:brightness-95" : "pointer-events-none"
       }`}
     >
-      {showDnd ? (
-        <DndNightLayer compact={compact} viewerRsvp={viewerRsvp} pane />
+      {showCampaign ? (
+        <CampaignNightLayer compact={compact} viewerRsvp={viewerRsvp} pane />
       ) : showPrivate && privateNight ? (
         <PrivateNightLayer compact={compact} viewerSeat={privateNight.viewerSeat} pane />
       ) : (
         <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} pane />
       )}
-      {showDnd && attendance ? (
+      {showCampaign && campaign && attendance ? (
         <span className="relative z-lift flex min-w-0 flex-1 items-center justify-center p-0.5">
-          <D20Die
+          <CampaignRelic
+            slug={campaign.slug}
             count={attendance.definite}
-            className="dnd-die dnd-die-animated night-pane-die h-full w-full"
+            className="night-pane-relic h-full w-full"
           />
         </span>
       ) : showPrivate && privateNight ? (
@@ -1666,10 +1675,10 @@ function PaneStatusEdge({ tone }: { tone: EdgeTone }) {
   );
 }
 
-function paneLabel(night: NightCell, showDnd: boolean, showPrivate: boolean): string {
+function paneLabel(night: NightCell, showCampaign: boolean, showPrivate: boolean): string {
   const slot = nightSlot(night.key) === 2 ? "Second night" : "First night";
   let label = `${slot} — locked in`;
-  if (showDnd) label += " — Dungeons & Dragons night";
+  if (showCampaign && night.campaign) label += ` — ${night.campaign.night} night`;
   if (showPrivate && night.privateNight) {
     const { seats, viewerSeat } = night.privateNight;
     label += ` — private night, ${seats.taken} of ${seats.total} seats`;
