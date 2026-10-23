@@ -8,6 +8,7 @@ import { Chip } from "../components/ui/Chip";
 import { PageMain, PageShell } from "../components/ui/PageShell";
 import { Section } from "../components/ui/Section";
 import type { Attendee } from "../lib/calendar-games";
+import { relicUrl } from "../lib/campaign-relics";
 import type { AvailabilityCounts, AvailabilityMap } from "../lib/offline-availability";
 import { dateKey } from "../lib/offline-availability";
 import { build42Days } from "../lib/offline-week";
@@ -15,9 +16,9 @@ import { build42Days } from "../lib/offline-week";
 // Dev-only visual harness for the campaign-night calendar treatment (D&D and
 // every other campaign game). Reached at /dev/campaign-preview (and the old
 // /dev/dnd-preview), unguarded like /dev/deck-preview. Renders the real
-// Calendar with mock locks for the picked game — several headcounts, a split
-// two-night date, 1 and 12 for the un-numbered fallback — plus the modal panel
-// and every relic of the game.
+// Calendar with mock locks for the picked game — every headcount it has a
+// relic for, and a split two-night date — plus the modal panel and the game's
+// relics.
 
 function mkLock(over: Partial<LockedDate>): LockedDate {
   return {
@@ -113,7 +114,8 @@ const ATTENDEES: Attendee[] = [
   },
 ];
 
-const COUNTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const COUNTS = Array.from({ length: 12 }, (_, i) => i + 1);
+const NIGHT_CELLS = [8, 9, 10, 11, 15, 16, 17];
 
 export default function CampaignNightPreview() {
   const [slug, setSlug] = useState(CAMPAIGN_NIGHTS[0]?.slug ?? "");
@@ -124,21 +126,18 @@ export default function CampaignNightPreview() {
   weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 7);
   const keys = build42Days(weekStart).map(dateKey);
 
-  // The picked campaign at a few headcounts, a split date with it beside a
-  // plain night, the fallbacks (1 and 12), a plain picks-locked night for the
-  // N/N comparison, and a heat day.
+  // The picked campaign at every headcount it has a relic for (repeating to
+  // fill the row), a split date with it beside a plain night, a plain
+  // picks-locked night for the N/N comparison, and a heat day.
+  const relicCounts = COUNTS.filter((n) => relicUrl(campaign.slug, n));
   const at = (i: number) => keys[i] ?? "";
   const night = (definite: number, tentative = 1) =>
     mkLock({ topGameSlug: campaign.slug, attendance: { definite, tentative } });
   const locks = {
-    [at(8)]: night(2),
-    [at(9)]: night(3),
-    [at(10)]: night(4, 2),
-    [at(11)]: night(5),
-    [at(15)]: night(6),
-    [at(16)]: night(1),
-    [at(17)]: night(12, 0),
-    [at(18)]: night(4),
+    ...Object.fromEntries(
+      NIGHT_CELLS.map((cell, i) => [at(cell), night(relicCounts[i % relicCounts.length] ?? 2)]),
+    ),
+    [at(18)]: night(relicCounts[0] ?? 2),
     [`${at(18)}_2`]: mkLock({
       topGameSlug: "lost-cities",
       attendance: { definite: 3, tentative: 1 },
@@ -160,8 +159,8 @@ export default function CampaignNightPreview() {
           <div>
             <h1 className="text-2xl font-bold text-fg-strong">Campaign nights — visual preview</h1>
             <p className="mt-1 text-sm text-fg-secondary">
-              Mock calendar for the picked campaign at several headcounts, a split date, the
-              un-numbered fallback (1 and 12), a plain picks-locked night and heat days.
+              Mock calendar for the picked campaign at every headcount it has a relic for, a split
+              date, a plain picks-locked night and heat days.
             </p>
           </div>
           <div className="flex flex-wrap gap-1.5">
@@ -207,12 +206,12 @@ export default function CampaignNightPreview() {
           </div>
         </Section>
 
-        <Section title="Every relic (1–12)">
+        <Section title="Every relic">
           <div
             data-campaign={campaign.slug}
             className="flex flex-wrap items-end gap-4 rounded-card-2xl border border-line bg-surface-900/40 p-6"
           >
-            {COUNTS.map((n) => (
+            {relicCounts.map((n) => (
               <div key={n} className="flex flex-col items-center gap-1">
                 <CampaignRelic slug={campaign.slug} count={n} className="h-20 w-20" />
                 <span className="text-2xs text-fg-muted">{n}</span>

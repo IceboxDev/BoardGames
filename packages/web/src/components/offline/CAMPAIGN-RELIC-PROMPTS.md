@@ -6,11 +6,11 @@ Every file is a **PNG with a fully transparent background**. Drop the raw PNGs i
 
 ---
 
-**Status (2026-10-23):** 80 prompts in 18 batches, one batch per game. Generated and wired in except the two 12+ images (Evil Power Master, Codenames Duet); until those exist a night of twelve or more shows the un-numbered relic. Convert after adding or replacing any PNG: `pnpm --filter @boardgames/web card-art --game=relics` (writes `src/assets/campaign-relics/`, used by `lib/campaign-relics.ts`). The un-numbered relics (`relic-{slug}.png` in `art-src/campaign-relics/`) are the approved designs: use each as the reference image for its batch.
+**Status (2026-10-23):** 80 prompts in 18 batches, one batch per game. Generated and wired in except the two 12+ images (Evil Power Master, Codenames Duet); until those exist a night of twelve or more shows no relic. Convert after adding or replacing any PNG: `pnpm --filter @boardgames/web card-art --game=relics` (writes `src/assets/campaign-relics/`, used by `lib/campaign-relics.ts`).
 
 **How to use.** One game per fresh image-generator conversation:
 
-1. Attach that game's approved un-numbered relic (`art-src/campaign-relics/relic-<slug>.png`) as the reference image, and paste the batch's **setup block**.
+1. Attach one of that game's generated relics (`art-src/campaign-relics/relic-<slug>-<n>.png`) as the reference image when regenerating or extending a set, and paste the batch's **setup block**.
 2. Paste the item prompts in order and save each result under the file name above it. Every item after the first asks for the previous image again with only the numeral changed — keep going in the same conversation so the object stays identical.
 3. Check the set side by side: the object, its size and position, and the numeral's lettering, size and position must match across every count. Regenerate any odd one out with its own prompt.
 

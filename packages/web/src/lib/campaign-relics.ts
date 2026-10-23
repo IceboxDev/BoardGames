@@ -17,14 +17,13 @@ for (const [file, url] of Object.entries(FILES)) {
 
 /**
  * The relic for a campaign night of `count` people: the image with that
- * number, `12plus` for twelve or more when the game has one, else the
- * un-numbered relic — so a headcount without its own image never shows a
- * wrong number.
+ * number, or `12plus` for twelve or more when the game has one. Undefined when
+ * no image was generated for the count — the cell then shows no relic rather
+ * than a wrong or blank one.
  */
 export function relicUrl(slug: string, count: number): string | undefined {
   return (
     URLS.get(`relic-${slug}-${count}`) ??
-    (count >= 12 ? URLS.get(`relic-${slug}-12plus`) : undefined) ??
-    URLS.get(`relic-${slug}`)
+    (count >= 12 ? URLS.get(`relic-${slug}-12plus`) : undefined)
   );
 }
