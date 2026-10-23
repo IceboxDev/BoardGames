@@ -1,0 +1,338 @@
+{
+ "article": "a1795",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hanuta",
+   "title": "Hanuta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:23:03.562Z",
+   "snapshot": "1d6685e87766d164b7c8c0698f064cf3517c2b6a620364927f85fc26c47f5c05"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Persil",
+   "title": "Persil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:23:04.581Z",
+   "snapshot": "ef8344bfaded80f13e20105803008b774cc0b73818cb6fe11dee55d3c97e8412"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aldi",
+   "title": "Aldi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:17.794Z",
+   "snapshot": "f844b6aa2e11089f181bd74bd4c45f87d4e48aa6eaf7de02687cff80c08de4db"
+  },
+  "s4": {
+   "url": "https://history.evonik.com/en/inventions/sodium-perborate",
+   "title": "White washing with minimum effort – Evonik History",
+   "publisher": "Evonik Industries",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:30.186Z",
+   "snapshot": "a7bfed50950000a3ac8bc68f7832e252467c8918c72cd2e77c364c57fb6e21b0"
+  },
+  "s5": {
+   "url": "https://www.mcgill.ca/oss/node/2173",
+   "title": "At the Beginning of Laundry There Was.. Persil",
+   "publisher": "McGill University Office for Science and Society",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:30.787Z",
+   "snapshot": "9cc12152394a74b15c53fa7dc2ab38745e22640e605a671e74d3a4cd4ea86c79"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Haselnusstafel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Perborat und Silikat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferrero",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Iowa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:23.961Z",
+   "target": "f08971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Name „hanuta“ ist ein aus dem Wort Haselnusstafel gebildetes Akronym.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haselnusstafel” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:23.961Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Perborat und Silikat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Perborat und Silikat”, “Perborate and silicate”, “перборат и силикат”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:23.961Z",
+   "target": "f23622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hanuta (eigene Schreibweise „hanuta“) ist ein Süßwarenprodukt der italienischen Firma Ferrero.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferrero” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:23.961Z",
+   "target": "f23623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1976, Aldi Süd opened its first store in the United States in Iowa, and, in 1979, Aldi Nord acquired Trader Joe's.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iowa” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:27:29Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The brand name historically stood for Degussa’s perborate and Henkel’s silicate.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:27:37Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The name derived from perborate and silicate, two key components in the product.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:27:51Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Begriff ist ein Silbenwort aus den ursprünglichen Hauptbestandteilen des Waschmittels Perborat (Natriumperborat, als Bleichmittel) und Silikat (Natriumsilikat, als Schmutzlöser).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:11.956Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The brand name historically stood for Degussa’s perborate and Henkel’s silicate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:11.956Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The name derived from perborate and silicate, two key components in the product.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:11.956Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Begriff ist ein Silbenwort aus den ursprünglichen Hauptbestandteilen des Waschmittels Perborat (Natriumperborat, als Bleichmittel) und Silikat (Natriumsilikat, als Schmutzlöser).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:11.956Z",
+   "target": "f08974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The name derived from perborate and silicate, two key components in the product.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Perborate and silicate” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,375 @@
+{
+ "article": "a0637",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tarzan_(musical)",
+   "title": "Tarzan (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:51.150Z",
+   "snapshot": "4c5281e6405b54109cf45a8d485dd36054784dc5de93c44bc172101b3b7206e4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Lion_King_(musical)",
+   "title": "The Lion King (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:52.273Z",
+   "snapshot": "2c5c5361208b6cee0a904d81e8e4c2e7216b927aa9fdf3bcc912273568d40c6e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(musical)",
+   "title": "Beauty and the Beast (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:54.336Z",
+   "snapshot": "bee06176f2f1c895204cdfa0395b3a446d9fec05bebd18e7e5327392c1171ec4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aladdin_(2011_musical)",
+   "title": "Aladdin (2011 musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:54.066Z",
+   "snapshot": "df7ec98e840fcabda0b334b9fc446752ffc50d6049f0375813b5a4bdd03f15bf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Billy_Elliot_the_Musical",
+   "title": "Billy Elliot the Musical – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:29.156Z",
+   "snapshot": "433a8e55527cd9781809286674300d88458e801c562ad4a396d5d04c682a5691"
+  },
+  "s6": {
+   "url": "https://thewaltdisneycompany.com/celebrating-30-years-of-disney-on-broadway-a-global-theatrical-phenomenon/",
+   "title": "Celebrating 30 Years of Disney on Broadway",
+   "publisher": "The Walt Disney Company",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:50.866Z",
+   "snapshot": "ec85fcb197ea95121c8fc201d12b216fa45c5c1e771edcf12fb4baefcc385312"
+  },
+  "s7": {
+   "url": "https://d23.com/beauty-and-the-beast-30-years-of-the-broadway-musical",
+   "title": "Beauty and the Beast: 30 Years of the Broadway Musical",
+   "publisher": "D23 (Disney)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:51.273Z",
+   "snapshot": "d3bc558a9b000f3d66af26596fe2e7af706009ec960e406955a985883905a793"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tarzan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Lion King",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beauty and the Beast",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aladdin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Billy Elliot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:18.423Z",
+   "target": "f03181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tarzan is a musical based on the Walt Disney Animation Studios 1999 film of the same name, with music and lyrics by Phil Collins, and a book by David Henry Hwang.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tarzan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:18.423Z",
+   "target": "f03182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Lion King is a stage musical with a book by Roger Allers and Irene Mecchi based on the 1994 Walt Disney Animation Studios' film of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Lion King” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:18.423Z",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beauty and the Beast is a musical, with music by Alan Menken, lyrics by Howard Ashman and Tim Rice, and book by Linda Woolverton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beauty and the Beast” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:18.423Z",
+   "target": "f03184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aladdin is a stage musical based on the Walt Disney Animation Studios 1992 film of the same name, with a book by Chad Beguelin, music by Alan Menken and lyrics by Howard Ashman, Tim Rice and Beguelin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aladdin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:18.423Z",
+   "target": "f03185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Billy Elliot the Musical is a coming-of-age stage musical based on the 2000 film of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Billy Elliot” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:51Z",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first project for Walt Disney Theatrical Productions (as it was then known), Beauty and the Beast opened on April 18, 1994",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:55Z",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Disney’s Beauty and the Beast debuts at the Palace Theatre on Broadway as The Walt Disney Company’s first venture into what would become Disney Theatrical Group",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:50:00Z",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beauty and the Beast became Disney's first Broadway venture,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Snow White (Radio City, 1979) was not a Disney production; Disney's own first Broadway show is Beauty and the Beast."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:46.914Z",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Disney’s Beauty and the Beast debuts at the Palace Theatre on Broadway as The Walt Disney Company’s first venture into what would become Disney Theatrical Group",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:46.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:46.914Z",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beauty and the Beast became Disney's first Broadway venture,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:46.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:46.914Z",
+   "target": "f03183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Beauty and the Beast: 30 Years of the Broadway Musical - D23",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:46.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Beauty and the Beast” is on the snapshot of s7"
+  }
+ ]
+}

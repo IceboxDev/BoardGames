@@ -61,35 +61,35 @@ export const qk = {
   goReviewByReplay: (replayId: number) => ["go", "review", "replay", replayId] as const,
   goReview: (id: number) => ["go", "review", id] as const,
   goReviews: () => ["go", "reviews"] as const,
-  // Quiztopia trainer + wiki. Root key "quiztopia" is excluded from the
-  // persister (App.tsx): queues are date-bound and content chunks are big.
-  quiztopiaOverview: (today: string) => ["quiztopia", "overview", today] as const,
-  quiztopiaQueue: (category: number | null, today: string) =>
-    ["quiztopia", "queue", category, today] as const,
-  quiztopiaStates: (ids: readonly string[]) => ["quiztopia", "states", ids.join(",")] as const,
-  quiztopiaHistory: (days: number, today: string) => ["quiztopia", "history", days, today] as const,
-  quiztopiaSettings: () => ["quiztopia", "settings"] as const,
-  quiztopiaPins: () => ["quiztopia", "pins"] as const,
-  quiztopiaSearch: (q: string, lang: string, category: number | null) =>
-    ["quiztopia", "search", q, lang, category] as const,
-  quiztopiaWikiReads: () => ["quiztopia", "wiki-reads"] as const,
-  quiztopiaRecentMisses: () => ["quiztopia", "recent-misses"] as const,
-  quiztopiaJournal: (tz: string) => ["quiztopia", "journal", tz] as const,
-  quiztopiaJournalAll: () => ["quiztopia", "journal"] as const,
-  quiztopiaReports: () => ["quiztopia", "reports"] as const,
+  // Quiz trainer + wiki. Root key "quiz" is excluded from the persister
+  // (App.tsx): queues are date-bound and content chunks are big.
+  quizOverview: (today: string) => ["quiz", "overview", today] as const,
+  quizQueue: (domain: string | null, today: string) => ["quiz", "queue", domain, today] as const,
+  quizStates: (ids: readonly string[]) => ["quiz", "states", ids.join(",")] as const,
+  quizHistory: (days: number, today: string) => ["quiz", "history", days, today] as const,
+  quizSettings: () => ["quiz", "settings"] as const,
+  quizPins: () => ["quiz", "pins"] as const,
+  quizSearch: (q: string, lang: string, domain: string | null) =>
+    ["quiz", "search", q, lang, domain] as const,
+  quizWikiReads: () => ["quiz", "wiki-reads"] as const,
+  quizArticleHistory: (articleId: string) => ["quiz", "article-history", articleId] as const,
+  quizRecentMisses: () => ["quiz", "recent-misses"] as const,
+  quizJournal: (tz: string) => ["quiz", "journal", tz] as const,
+  quizJournalAll: () => ["quiz", "journal"] as const,
+  quizReports: () => ["quiz", "reports"] as const,
+  quizContent: (kind: "article" | "index" | "timeline", id: string) =>
+    ["quiz", "content", kind, id] as const,
   onboarding: () => ["onboarding"] as const,
-  adminQuiztopiaReports: (status: string) => ["admin", "quiztopia-reports", status] as const,
-  adminQuiztopiaReportsAll: () => ["admin", "quiztopia-reports"] as const,
+  adminQuizReports: (status: string) => ["admin", "quiz-reports", status] as const,
+  adminQuizReportsAll: () => ["admin", "quiz-reports"] as const,
   // Prefixes for invalidation (every date / id variant of one read).
-  quiztopiaAll: () => ["quiztopia"] as const,
-  quiztopiaOverviewAll: () => ["quiztopia", "overview"] as const,
-  quiztopiaQueueAll: () => ["quiztopia", "queue"] as const,
-  quiztopiaStatesAll: () => ["quiztopia", "states"] as const,
-  quiztopiaHistoryAll: () => ["quiztopia", "history"] as const,
+  quizAll: () => ["quiz"] as const,
+  quizOverviewAll: () => ["quiz", "overview"] as const,
+  quizQueueAll: () => ["quiz", "queue"] as const,
+  quizStatesAll: () => ["quiz", "states"] as const,
+  quizHistoryAll: () => ["quiz", "history"] as const,
   // World Geography trainer. Root "geography" is excluded from the persister
-  // like "quiztopia": the overview is date-bound.
+  // like "quiz": the overview is date-bound.
   geographyOverview: (today: string) => ["geography", "overview", today] as const,
   geographyHistory: (days: number, today: string) => ["geography", "history", days, today] as const,
-  quiztopiaContent: (kind: "questions" | "articles" | "titles" | "timeline", cardId: string) =>
-    ["quiztopia", "content", kind, cardId] as const,
 } as const;

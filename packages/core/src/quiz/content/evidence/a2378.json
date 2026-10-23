@@ -1,0 +1,355 @@
+{
+ "article": "a2378",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Karl_I._(%C3%96sterreich-Ungarn)",
+   "title": "Karl I. (Österreich-Ungarn)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:55.808Z",
+   "snapshot": "6e31f0a8a67ca956bed0a843a08abc969599d4448de8cf1a78ad4571df930a57"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ahmet_Zogu",
+   "title": "Ahmet Zogu",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:57.312Z",
+   "snapshot": "90bd30eca1c0d0b5740c62b20c83feac85b0bf4eb462e8398223cdb08552b368"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Charles_I_of_Austria",
+   "title": "Charles I of Austria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:58.310Z",
+   "snapshot": "ff148a8e1ca7a79d7c0909acab5ea39d17f199ab167f7ccd1817ebfce7564576"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mehmed_VI",
+   "title": "Mehmed VI – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:59.360Z",
+   "snapshot": "0577b4ef3294c8758f038eed502fe52c01e07e9f9c410cb00d05266f1160e49f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Puyi",
+   "title": "Puyi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:03.516Z",
+   "snapshot": "f0b417c69e3a5e221d1f5ab9b5ed8db77f27a6d0a6f61c2015210e6edcbaa801"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Umberto_II_of_Italy",
+   "title": "Umberto II of Italy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:00.365Z",
+   "snapshot": "3efacd24664525741b30f0046b570df17d45ead977ca82718bab7d1384a7eaa7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zogu I.",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-225"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eckartsau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mehmed VI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Puyi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Umberto II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl I.",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Charles I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-263/3, u09: Franz Joseph died in 1916; his great-nephew Karl I reigned until November 1918 and was the last Austrian emperor."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl I.",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charles I",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl I. bewohnte mit seiner Familie 1912 bis 1914 das Schloss Hetzendorf in Wien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl I.” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charles I and IV (German: Karl Franz Josef Ludwig Hubert Georg Otto Maria, Hungarian: Károly Ferenc József Lajos Hubert György Ottó Mária; 17 August 1887 – 1 April 1922) was Emperor of Austria (as Charles I), King of Hungary (as Charles IV), and the ruler of the other states of the Habsburg monarchy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles I” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "April 1961 in Suresnes, Frankreich), war von 1925 bis 1928 Präsident Albaniens und von 1928 bis 1939 als Zogu I. (albanisch offiziell Nalt Madhnija e Tij Zogu I, Mbreti i Shqiptarëve) König der Albaner.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zogu I.” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the same day, the Imperial Family left Schönbrunn Palace and moved to Schloss Eckartsau, east of Vienna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eckartsau” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mehmed VI Vahideddin (Ottoman Turkish: محمد سادس, romanized: Meḥmed-i sâdis, or وحيد الدين, Vaḥîdü'd-Dîn; Turkish: VI.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mehmed VI” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Puyi (Chinese: 溥儀; pinyin: Pǔ Yí; Wade–Giles: P'u-i; 7 February 1906 – 17 October 1967) was the last emperor of China, having reigned as the Xuantong Emperor of the Qing dynasty (1908–1912, with a brief restoration in 1917) and later as the Kangde Emperor of Manchukuo, a Japanese puppet state during",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Puyi” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:08.642Z",
+   "target": "f12417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Umberto II (Italian: Umberto Nicola Tommaso Giovanni Maria di Savoia; 15 September 1904 – 18 March 1983) was the last King of Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Umberto II” is on the snapshot of s6"
+  }
+ ]
+}

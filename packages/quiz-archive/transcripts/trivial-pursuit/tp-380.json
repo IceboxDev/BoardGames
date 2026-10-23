@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-380",
+ "image": "IMG20261007173536.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie viele Kilometer liegen, durch die Erdmitte gemessen, zwischen dem Nord- und Südpol: rund 12.700, 17.500 oder 22.400?",
+   "de": "Wie viele Kilometer liegen, durch die Erdmitte gemessen, rund zwischen dem Nord- und Südpol?",
+   "en": "Roughly how many kilometres lie between the North and South Poles, measured through the centre of the Earth?",
+   "reworked": true,
+   "answerDe": "rund 12.700 (12.713,5 km)",
+   "answerEn": "about 12,700 (12,713.5 km)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1736",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Maupertuis's Lapland expedition sets out to measure a meridian arc, confirming that the Earth is flattened at the poles",
+    "labelDe": "Maupertuis' Lappland-Expedition vermisst einen Meridianbogen und bestätigt die Abplattung der Erde an den Polen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Erde",
+    "title": "Erde",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked. Polar diameter 12,713.5 km (de.wikipedia Erde infobox, NASA fact sheet); the equatorial diameter is about 43 km larger. Timeline date from de.wikipedia 'Pierre Louis Moreau de Maupertuis'.",
+   "domain": "earth-space",
+   "sub": "geology"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wofür steht das „K“ in „K-Pop“?",
+   "de": "Wofür steht das „K“ in „K-Pop“?",
+   "en": "What does the \"K\" in \"K-pop\" stand for?",
+   "reworked": false,
+   "answerDe": "Korean (koreanisch)",
+   "answerEn": "Korean",
+   "timeline": {
+    "kind": "era",
+    "start": "1992",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": true,
+    "labelEn": "K-pop takes shape around 1992 with the debut of Seo Taiji and Boys",
+    "labelDe": "K-Pop entsteht um 1992 mit dem Auftritt von Seo Taiji and Boys"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/K-Pop",
+    "title": "K-Pop",
+    "lang": "de"
+   },
+   "notes": "K-Pop is derived from English 'Korean Popular Music'.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Die chinesische Armee ist der größte Arbeitgeber der Welt. Richtig oder falsch?",
+   "de": "Welcher Arbeitgeber war laut Statista (2022) der größte der Welt – noch vor dem US-Verteidigungsministerium und der chinesischen Volksbefreiungsarmee?",
+   "en": "According to Statista (2022), which employer was the largest in the world – ahead of the US Department of Defense and China's People's Liberation Army?",
+   "reworked": true,
+   "answerDe": "das indische Verteidigungsministerium",
+   "answerEn": "the Indian Ministry of Defence",
+   "timeline": {
+    "kind": "event",
+    "start": "2022",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Statista ranks the world's biggest employers: India's Ministry of Defence leads with about 2.99 million staff",
+    "labelDe": "Statista listet die größten Arbeitgeber der Welt: Indiens Verteidigungsministerium führt mit rund 2,99 Mio. Beschäftigten"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/List_of_largest_employers",
+    "title": "List of largest employers",
+    "lang": "en"
+   },
+   "notes": "True/false reworked. The card's statement is false: the Statista 2022 ranking has India's Ministry of Defence (2.99 M) first, the US DoD (2.91 M) second and the PLA (2.55 M) third. Older rankings (e.g. Statista 2015) put the US DoD first; rankings vary by year and method.",
+   "domain": "society",
+   "sub": "business"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt das literarische Debüt von Matthias Brandt über seine Kindheit im Kanzleramt: Stahlnetz, Raumpatrouille oder Höhlenkinder?",
+   "de": "Wie heißt das literarische Debüt von Matthias Brandt über seine Kindheit im Kanzleramt?",
+   "en": "What is the title of Matthias Brandt's literary debut about his childhood in the Chancellery?",
+   "reworked": true,
+   "answerDe": "Raumpatrouille",
+   "answerEn": "Raumpatrouille (\"Space Patrol\")",
+   "timeline": {
+    "kind": "creation",
+    "start": "2016-09",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Matthias Brandt publishes his first book, the autobiographical stories \"Raumpatrouille\"",
+    "labelDe": "Matthias Brandt veröffentlicht sein erstes Buch, die autobiografischen Geschichten „Raumpatrouille“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Matthias_Brandt",
+    "title": "Matthias Brandt",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked. Published September 2016 by Kiepenheuer & Witsch; his first novel 'Blackbird' followed in 2019.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Was trifft auf den Spitzgebuckelten Raukopf zu: er fliegt, wächst im Wald oder schwimmt im Meer?",
+   "de": "Was für ein Lebewesen ist der Spitzgebuckelte Raukopf, der in Fichtenwäldern wächst?",
+   "en": "What kind of organism is the deadly webcap (Spitzgebuckelter Raukopf), which grows in spruce forests?",
+   "reworked": true,
+   "answerDe": "ein (tödlich giftiger) Pilz",
+   "answerEn": "a (deadly poisonous) mushroom",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1883",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Mordecai Cubitt Cooke describes the deadly webcap, Cortinarius rubellus",
+    "labelDe": "Mordecai Cubitt Cooke beschreibt den Spitzgebuckelten Raukopf (Cortinarius rubellus)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Spitzgebuckelter_Raukopf",
+    "title": "Spitzgebuckelter Raukopf",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked (card answer: grows in the forest). Cortinarius rubellus is a gilled mushroom of acidic, damp spruce forests; its orellanine causes kidney failure. Author citation Cooke, year 1883 per the article's taxobox.",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt der deutsche Modedesigner, der sagte: „Wer Jogginghosen trägt, hat die Kontrolle über sein Leben verloren“?",
+   "de": "Wie heißt der deutsche Modedesigner, der sagte: „Wer Jogginghosen trägt, hat die Kontrolle über sein Leben verloren“?",
+   "en": "Which German fashion designer said: \"Anyone who wears sweatpants has lost control of their life\"?",
+   "reworked": false,
+   "answerDe": "Karl Lagerfeld",
+   "answerEn": "Karl Lagerfeld",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1933-09-10",
+    "end": "2019-02-19",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Karl Lagerfeld, German fashion designer",
+    "labelDe": "Karl Lagerfeld, deutscher Modeschöpfer"
+   },
+   "source": {
+    "url": "https://de.wikiquote.org/wiki/Karl_Lagerfeld",
+    "title": "Karl Lagerfeld – Wikiquote",
+    "lang": "de"
+   },
+   "notes": "Wikiquote attributes the line to Lagerfeld (allegedly on Markus Lanz, ZDF, 19 April 2012, though not found in the broadcast recording); it is universally credited to him. Lifespan from de.wikipedia 'Karl Lagerfeld'.",
+   "domain": "art",
+   "sub": "design"
+  }
+ ]
+}

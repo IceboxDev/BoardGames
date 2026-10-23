@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-070",
+ "image": "IMG20261022154107.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Literature",
+   "cardText": "[Literature] In which country was the world’s first novel written?\nA. India B. Japan C. China\nAnswer: B. “The Tale of Genji,” written in the early 11th century by Japanese noblewoman Murasaki Shikibu, is often regarded as the world’s first novel.",
+   "de": "In welchem Land wurde „Die Geschichte vom Prinzen Genji“, oft als erster Roman der Welt bezeichnet, geschrieben?",
+   "en": "In which country was “The Tale of Genji”, often called the world's first novel, written?",
+   "reworked": true,
+   "answerDe": "Japan",
+   "answerEn": "Japan",
+   "timeline": {
+    "kind": "creation",
+    "start": "1021",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Tale of Genji by Murasaki Shikibu is complete in its present form by about this year",
+    "labelDe": "Murasaki Shikibus „Geschichte vom Prinzen Genji“ liegt spätestens um dieses Jahr in ihrer heutigen Form vor"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/The_Tale_of_Genji",
+    "title": "The Tale of Genji",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed, but 'the world's first novel' is disputed (Wikipedia: considerable debate; earlier texts have been proposed), so the question asks about the Genji by name. Finished by c. 1021.",
+   "domain": "literature",
+   "sub": "classics"
+  },
+  {
+   "category": 2,
+   "discipline": "Epidemiology",
+   "cardText": "[Epidemiology] Which of the following is considered the deadliest animal to humans?\nA. Mosquito\nB. Human\nC. Tapeworm\nAnswer: A. Mosquitoes can transmit diseases like malaria, dengue fever, and Zika virus. Malaria alone accounts for over 500,000 deaths each year, mostly in children under five. Humans come in a close second, causing over 400,000 deaths per year through homicide and war.",
+   "de": "Welches Tier gilt als das für Menschen tödlichste, weil es durch die Übertragung von Krankheiten wie Malaria und Dengue jährlich über eine Million Menschen tötet?",
+   "en": "Which animal is considered the deadliest to humans, killing over a million people a year by spreading diseases such as malaria and dengue?",
+   "reworked": true,
+   "answerDe": "Stechmücke",
+   "answerEn": "Mosquito",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1897",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ronald Ross proves that mosquitoes transmit the malaria parasite",
+    "labelDe": "Ronald Ross weist nach, dass Stechmücken den Malariaerreger übertragen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mosquito",
+    "title": "Mosquito",
+    "lang": "en"
+   },
+   "notes": "Confirmed: mosquitoes cause over one million deaths a year by spreading disease (Mosquito); malaria alone ~610,000 deaths in 2024 (Malaria), consistent with the card's 'over 500,000'. Timeline from the Malaria page.",
+   "domain": "nature",
+   "sub": "animals"
+  }
+ ]
+}

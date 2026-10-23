@@ -1,0 +1,351 @@
+{
+ "article": "a1906",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Geysir",
+   "title": "Geysir – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:25.572Z",
+   "snapshot": "f80aa3fb3b7cdf9eb6c24381a41f559dbc066648ffe061ecc5c5d651037e5bb0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Waimangu_Geyser",
+   "title": "Waimangu Geyser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:26.499Z",
+   "snapshot": "e0f1d788eb390250cbab4fa4a0d4240322d7d4ae0057a57743927e44906a7a6f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Valley_of_Geysers",
+   "title": "Valley of Geysers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:27.542Z",
+   "snapshot": "ab3db1a5d724bc24cb4a031196b85b2c1441e3bd19cf801a75fc0399f252ddea"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/El_Tatio",
+   "title": "El Tatio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:28.591Z",
+   "snapshot": "c54e2fd6c00fd135cc581fb46afbc56a38f897ba30b5521eb7a77bea2c53e630"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Grand_Prismatic_Spring",
+   "title": "Grand Prismatic Spring",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:29.495Z",
+   "snapshot": "f6a145d75d1e2cc2ae8227205e24d9822fa6ac48ffd7c12589b334300a1d4efe"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Strokkur",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:30.506Z",
+   "snapshot": "349777266aa20559dc216fed08bceae0493725d254e5b58dfb667e6142aa2e30"
+  },
+  "s7": {
+   "url": "https://www.nps.gov/places/000/grand-prismatic-spring.htm",
+   "title": "Grand Prismatic Spring",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:18.018Z",
+   "snapshot": "c7b885d13d4939f70759a6f7d127049a9ec1a255288a5a6a27f5d7986a8fc361"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iceland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "New Zealand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Heat-loving microbes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 49; transcript ppm-031"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:42.832Z",
+   "target": "f09526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Geysir (Icelandic pronunciation: [ˈceiːsɪr̥] ), sometimes known as The Great Geysir, is a geyser in south-western Iceland that geological studies suggest started forming about 1150 CE.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iceland” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:42.832Z",
+   "target": "f09528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Waimangu Geyser, located near Rotorua in New Zealand, was for a time the most powerful geyser in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Zealand” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:42.832Z",
+   "target": "f09529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Valley of Geysers (Russian: Долина гейзеров) is a geyser field on Kamchatka Peninsula, Russia, and has the second-largest concentration of geysers in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:42.832Z",
+   "target": "f09530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "El Tatio is a geothermal field with many geysers located in the Andes Mountains of northern Chile at 4,320 metres (14,170 ft) above mean sea level.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chile” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:42.832Z",
+   "target": "f25577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Heat-loving microbes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Heat-loving microbes”, “Wärmeliebende Mikroben”, “Теплолюбивые микробы”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:09:30Z",
+   "target": "f25577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hydrothermal features are also habitats in which microscopic organisms survive and thrive. They are called thermophiles: \"thermo\" for heat and \"phile\" for lover.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:09:33Z",
+   "target": "f25577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Although they are too small to be seen with the naked eye, trillions are grouped together and appear as masses of color.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:09:37Z",
+   "target": "f25577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The bright, vivid colors in the spring are the result of microbial mats of thermophilic bacteria and archaea around the edges of the mineral-rich water.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:34.463Z",
+   "target": "f25577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Although they are too small to be seen with the naked eye, trillions are grouped together and appear as masses of color.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:34.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:34.463Z",
+   "target": "f25577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The bright, vivid colors in the spring are the result of microbial mats of thermophilic bacteria and archaea around the edges of the mineral-rich water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:34.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  }
+ ]
+}

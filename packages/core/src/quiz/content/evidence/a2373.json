@@ -1,0 +1,459 @@
+{
+ "article": "a2373",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Deutsche_Mark",
+   "title": "Deutsche Mark",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:44.911Z",
+   "snapshot": "56b23277073f026bfdfa13742b59253e645d4ac6231a4713c5a0cfa3c1aa160d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/W%C3%A4hrungsreform_1948_(Westdeutschland)",
+   "title": "Währungsreform 1948 (Westdeutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:32.535Z",
+   "snapshot": "dea550724e59bfbe4438ac7498437de35eb59fc59fb2dd0896b3eb6cef5ff146"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Deutsche_Mark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:39.177Z",
+   "snapshot": "4e1b2c5bb2e2cc16ea2fbde3d1ecb1e681933a7a0745f410ffaa225399487caf"
+  },
+  "s4": {
+   "url": "https://www.bundesbank.de/de/aufgaben/bargeld/dm-banknoten-und-muenzen/dm-umlaufmuenzen-599664",
+   "title": "DM-Umlaufmünzen",
+   "publisher": "Deutsche Bundesbank",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:57.756Z",
+   "snapshot": "8efb2707824ef7ea2f54a63a760a8c15bf96e9bd39a9aa44ce59104c66e97b04"
+  },
+  "s5": {
+   "url": "https://www.verfassungen.de/de45-49/bizone-waehrungsgesetz48.htm",
+   "title": "Gesetz Nr. 61 der Militärregierung (Erstes Gesetz zur Neuordnung des Geldwesens – Währungsgesetz), 1948",
+   "publisher": "verfassungen.de (text of the Military Government law)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:57.890Z",
+   "snapshot": "4f76ce17b41a72c51e2591c4d5aa81402252666968bc69960c0b94eebce9dec3"
+  },
+  "s6": {
+   "url": "https://taz.de/70-Jahre-Waehrungsreform/!5511620/",
+   "title": "70 Jahre Währungsreform: Erhard und das D-Mark-Märchen",
+   "publisher": "taz",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:58.110Z",
+   "snapshot": "a9972e6ded594db715578650f0aade3d237eaa0b1cd25f06c45615d6da1dbf1a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die 50-Pfennig-Münze",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-282"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "20. Juni 1948",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "40 Deutsche Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bank deutscher Länder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edward A. Tenenbaum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:07.503Z",
+   "target": "f12380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die 50-Pfennig-Münze",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“die 50-Pfennig-Münze”, “the 50-pfennig coin”, “монета в 50 пфеннигов”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:07.503Z",
+   "target": "f12381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Währungsreform von 1948 trat am 20. Juni 1948 in der Trizone, den drei westlichen Besatzungszonen Deutschlands, in Kraft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “20. Juni 1948” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:07.503Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "40 Deutsche Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“40 Deutsche Mark”, “40 немецких марок”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:07.503Z",
+   "target": "f12383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "März 1948 als Zentralbank der Landeszentralbanken (kurz: „Zentralbank“) die „Bank deutscher Länder“ (BDL) errichtet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bank deutscher Länder” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:07.503Z",
+   "target": "f12384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sie wurde auf Vorschlag des amerikanischen Offiziers Edward A. Tenenbaum, der als Assistent des Finanzberaters von Militärgouverneur Lucius D.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edward A. Tenenbaum” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:48:05Z",
+   "target": "f12380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Münze 50 Pfennig Münzmetall Kupfer-Nickel-Legierung (Cu 75 Ni 25)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23",
+   "note": "The Bundesbank's list of DM circulation coins runs 1, 2, 5, 10 and 50 Pfennig, then 1, 2 and 5 DM – no 20-pfennig coin, and 50 is the highest pfennig value."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:48:06Z",
+   "target": "f12380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es gab zunächst Münzen zu 1, 2, 5 und 10 Pfennig, die aus einem Stahlkern bestanden und nur dünn mit Kupfer oder Messing plattiert waren, sowie Münzen aus einer Kupfer-Nickel-Legierung zu 50 Pfennig, 1 und 2 D-Mark.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:48:07Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "bis zu sechzig Deutsche Mark in bar (Kopfbetrag).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:48:08Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "von nicht mehr als vierzig Deutsche Mark wird sofort ausgezahlt, der Rest innerhalb von zwei Monaten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:48:10Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Am 20. Juni 1948, einem Sonntag, gab es 40 D-Mark pro Kopf, einige Wochen später noch einmal 20 D-Mark.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:48:12Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "an Einzelstehende bzw. Haushaltsvorstände in Höhe von 40 DM je Kopf",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:51.762Z",
+   "target": "f12380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Münze 50 Pfennig Münzmetall Kupfer-Nickel-Legierung (Cu 75 Ni 25)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:51.762Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:51.762Z",
+   "target": "f12380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es gab zunächst Münzen zu 1, 2, 5 und 10 Pfennig, die aus einem Stahlkern bestanden und nur dünn mit Kupfer oder Messing plattiert waren, sowie Münzen aus einer Kupfer-Nickel-Legierung zu 50 Pfennig, 1 und 2 D-Mark.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:51.762Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:51.762Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "von nicht mehr als vierzig Deutsche Mark wird sofort ausgezahlt, der Rest innerhalb von zwei Monaten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:51.762Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:51.762Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Am 20. Juni 1948, einem Sonntag, gab es 40 D-Mark pro Kopf, einige Wochen später noch einmal 20 D-Mark.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:51.762Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:51.762Z",
+   "target": "f12382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "an Einzelstehende bzw. Haushaltsvorstände in Höhe von 40 DM je Kopf",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:51.762Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  }
+ ]
+}

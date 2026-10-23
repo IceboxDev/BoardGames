@@ -1,0 +1,383 @@
+{
+ "article": "a0976",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lost_in_Translation",
+   "title": "Lost in Translation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:37.283Z",
+   "snapshot": "f0fee30c0a1776c2744f80a789f096761535f49567db69368f4979d31ac00ef5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Before_Sunrise",
+   "title": "Before Sunrise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:53.068Z",
+   "snapshot": "aa8ae50bba85b44bbc7ca92e64e4338961efea33dd1292fd0a8a9ea5eefde01f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/In_the_Mood_for_Love",
+   "title": "In the Mood for Love – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:54.105Z",
+   "snapshot": "902db1106ecaaff5f9a58384e6a106ffe414577de01a34f24a19a1423deb8ba0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Somewhere_(film)",
+   "title": "Somewhere (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:55.127Z",
+   "snapshot": "30a54d8ac92b348e7d72c90eed93846b4dd4ce508004284aa72a5fec62935231"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Roma_(2018_film)",
+   "title": "Roma (2018 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:56.088Z",
+   "snapshot": "a1dc7130b9b773548b9894748a11c4a5e00c27246bbda92912da0d52d10b66c7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Ferris_macht_blau",
+   "title": "Ferris macht blau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:32:53.274Z",
+   "snapshot": "b34c451cf425bca0f6f42e3352b96d940e55df66e9a3f45de0aec93e8dbbe705"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Am%C3%A9lie",
+   "title": "Amélie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:52.275Z",
+   "snapshot": "e2ab918c5ef3d938fe45a3be018bfb159ac470791540acdeaebd3405b120e7e7"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Night_on_Earth",
+   "title": "Night on Earth",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:32:54.233Z",
+   "snapshot": "7634d669e1483dfa7b08ba9fdfc66a1d680b71ca5eb2cd0f451cad5176111003"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tokyo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c082"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04878",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hong Kong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04879",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Los Angeles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mexico City",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chicago",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-029"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Canal Saint-Martin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-118"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Night on Earth",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-237"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f04876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bill Murray stars as Bob Harris, a fading American movie star who is having a midlife crisis when he travels to Tokyo to promote Suntory whiskey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tokyo” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f04877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the film, Jesse (Ethan Hawke) and Céline (Julie Delpy) meet on a train and disembark in Vienna to spend the night together.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f04878",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An international co-production between Hong Kong and France, the film follows a man (Tony Leung) and a woman (Maggie Cheung) in 1962 who discover that their spouses are having an affair.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hong Kong” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f04879",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He resides at the Chateau Marmont in Los Angeles, where he is nursing a broken wrist in a plaster arm cast.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Los Angeles” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f04880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is a semi-autobiographical take on Cuarón's upbringing in Mexico City's Colonia Roma neighborhood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mexico City” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f11435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nach überzeugender Schauspielerei ist der Weg für einen Trip durch Chicago frei.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chicago” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f11436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "She is single and lets her imagination roam freely, finding contentment in simple pleasures like dipping her hand into grain sacks, cracking crème brûlée with a spoon, and skipping stones along the Canal Saint-Martin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canal Saint-Martin” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:13.675Z",
+   "target": "f11437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Night on Earth ist ein US-amerikanischer Episodenfilm von Jim Jarmusch, in dem fünf Geschichten erzählt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Night on Earth” is on the snapshot of s8"
+  }
+ ]
+}

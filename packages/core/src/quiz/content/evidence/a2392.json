@@ -1,0 +1,453 @@
+{
+ "article": "a2392",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Wei%C3%9Fes_Haus",
+   "title": "Weißes Haus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:28.704Z",
+   "snapshot": "337e61f3e93fb1861929c70a6c7747973f4e4c7c0d954fc29d9bb0ea7d106a84"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/War_Plan_Red",
+   "title": "War Plan Red",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:32.229Z",
+   "snapshot": "838d1854482a12a09e5b59a41c67e83666829ee8505534c78d7226c503309dae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Burning_of_Washington",
+   "title": "Burning of Washington – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:33.357Z",
+   "snapshot": "43228d6d8dd176532d087f73b73a95784398e6352178119719886bb052aa4d2e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Ghent",
+   "title": "Treaty of Ghent – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:34.278Z",
+   "snapshot": "4d485b2d255e541c1f60be6b5b65beee1fc1e08e3f111ec9bcadd871aab16df8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Star-Spangled_Banner",
+   "title": "The Star-Spangled Banner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:35.184Z",
+   "snapshot": "d39ad421c2fbb50ff54bb0298af3497c1567b6eb951e7a67cdd7548cb780282f"
+  },
+  "s6": {
+   "url": "https://constitutioncenter.org/blog/on-this-day-the-british-set-fire-to-washington-d-c",
+   "title": "On this day, the British set fire to Washington, D.C.",
+   "publisher": "National Constitution Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:04.625Z",
+   "snapshot": "fa22ed6a75edc95d18560396ad55cb018eb88deaf6f3e81b7086cc16f6793e3f"
+  },
+  "s7": {
+   "url": "https://www.aoc.gov/history-us-capitol-building",
+   "title": "History of the U.S. Capitol Building",
+   "publisher": "Architect of the Capitol",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:05.209Z",
+   "snapshot": "f50e27ae2556711bf6a7c0377f763cde870c9044e7df40663d3271a92b5b88ee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1814",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-030"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "James Madison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ghent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Francis Scott Key",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:12.893Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Während des Kriegs von 1812 wurde das Gebäude 1814 beim Brand von Washington von britischen Soldaten in Brand gesteckt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.893Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1814” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:12.893Z",
+   "target": "f12498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The plan further assumed that Britain would probably use its base in Canada as a springboard from which to initiate an invasion of the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.893Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canada” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:12.893Z",
+   "target": "f12499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "President James Madison, along with his administration and several military officials, evacuated and found refuge for the night in Brookeville, a small town in Montgomery County, Maryland; Madison spent the night in the house of Caleb Bentley, a Quaker who lived and worked in Brookeville.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.893Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Madison” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:12.893Z",
+   "target": "f12500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Both sides signed it on December 24, 1814, in the city of Ghent, United Netherlands (now in Belgium).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.893Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ghent” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:12.893Z",
+   "target": "f12501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The lyrics come from the \"Defence of Fort M'Henry\", a poem written by American lawyer Francis Scott Key on September 14, 1814, after he witnessed the bombardment of Fort McHenry by the British Royal Navy during the Battle of Baltimore in the War of 1812.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.893Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Francis Scott Key” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:48:12Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The United States capital of Washington, D.C., burned on this day in 1814",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:15Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The British troops set fire to the Capitol, the White House (then called the Presidential Mansion,) the Library of Congress, and other government buildings that day",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:18Z",
+   "target": "f12497",
+   "claim": "body-number",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "on August 24, 1814, British troops set fire to the building, and only a sudden rainstorm prevented its complete destruction.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same raid; confirms the date (the Capitol burned the same night as the President's House)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:48:22Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "That evening, British soldiers and sailors set fire to multiple public buildings, including the presidential mansion (White House), United States Capitol, and Washington Navy Yard.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:56.250Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The British troops set fire to the Capitol, the White House (then called the Presidential Mansion,) the Library of Congress, and other government buildings that day",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:56.250Z",
+   "target": "f12497",
+   "claim": "body-number",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "on August 24, 1814, British troops set fire to the building, and only a sudden rainstorm prevented its complete destruction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:56.250Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "That evening, British soldiers and sailors set fire to multiple public buildings, including the presidential mansion (White House), United States Capitol, and Washington Navy Yard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:56.250Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Following the defeat of American forces at the Battle of Bladensburg on August 24, 1814, a British force led by Major-General Robert Ross marched on Washington, D.C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1814” is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:56.250Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The United States capital of Washington, D.C., burned on this day in 1814, but it may have been an act of nature that forced the British from the besieged city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1814” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:56.250Z",
+   "target": "f12497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The War of 1812 left the Capitol, in Latrobe's later words, \"a most magnificent ruin\": on August 24, 1814, British troops set fire to the building, and only a sudden rainstorm prevented its complete destruction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1814” is on the snapshot of s7"
+  }
+ ]
+}

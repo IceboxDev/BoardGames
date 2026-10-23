@@ -1,0 +1,242 @@
+{
+ "article": "a1578",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ivan_the_Terrible",
+   "title": "Ivan the Terrible – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:43.065Z",
+   "snapshot": "63a0cdb4e3133cd952b79dff240417b59aa1828fd60048792c88c19b3bb6ee83"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Great_Stand_on_the_Ugra_River",
+   "title": "Great Stand on the Ugra River – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:44.000Z",
+   "snapshot": "2188e0785522708722dcba1e5cc99baf0ecdfeb881562abe99edfb10831012e9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Michael_of_Russia",
+   "title": "Michael of Russia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:44.934Z",
+   "snapshot": "9cf88ec8478e9d1e4b521f03647224f4ea4eabf79a5e17a1e2e66ebc56824466"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peter_the_Great",
+   "title": "Peter the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:02.548Z",
+   "snapshot": "ff9fa0ada8d8f2eb868a264b65ebff9651f43d8e4c36c0ff4cdf45688f9a9be4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+   "title": "Catherine the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:03.644Z",
+   "snapshot": "a52995ec9d2a5a88b733b0ea5c050bc9b0df5cac2e5390e6be0a522fa8c3666b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ivan the Terrible",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c132"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ivan III",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Michael Romanov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peter the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Catherine the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:46.404Z",
+   "target": "f07886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "18 March] 1584), commonly known as Ivan the Terrible, was Grand Prince of Moscow and all Russia from 1533 to 1547 and the first Tsar and Grand Prince of all Russia from 1547 until his death in 1584.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ivan the Terrible” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:46.404Z",
+   "target": "f07887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stand on the Ugra River (Russian: Великое стояние на Угре) or the Standing on the Ugra River, also known as the Battle of the Ugra, was a standoff in 1480 on the banks of the Ugra River between the forces of Akhmat Khan of the Great Horde, and Grand Prince Ivan III of the Grand Duchy of Moscow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ivan III” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:46.404Z",
+   "target": "f07888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "“The Election of Michael Romanov.” The Slavonic and East European Review 67, no.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Romanov” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:46.404Z",
+   "target": "f07889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "By hard daily work (according to the figurative expression of Peter the Great himself, he was simultaneously \"forced to hold a sword and a quill in one right hand\") and courageous behavior he demonstrated to his subjects his personal positive example, showed how to act, fully devoting himself to the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter the Great” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:46.404Z",
+   "target": "f07890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Catherine II (born Sophie Auguste Friederike von Anhalt-Zerbst; 2 May 1729 – 17 November 1796), known as Catherine the Great, was Empress of Russia from 9 July 1762 until her death in 1796.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catherine the Great” is on the snapshot of s5"
+  }
+ ]
+}

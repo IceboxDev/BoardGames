@@ -1,0 +1,202 @@
+{
+ "article": "a1730",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Reader",
+   "title": "The Reader – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:38.548Z",
+   "snapshot": "2bc9cb52bde3bf679314016a1ba76782ef593a4792a9ca47bb4999fbc548a2de"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Tin_Drum",
+   "title": "The Tin Drum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:30.093Z",
+   "snapshot": "7a4aec7b6c2d13178fd7e0d6622f6d3358cd3cb76fe5c090ac2a86bf6663a48c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Perfume_(novel)",
+   "title": "Perfume (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:03.107Z",
+   "snapshot": "4fb4b3019e55202a772758dfa94f1ddeebb0357e2c111118580b3fb1f0c0fb75"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/All_Quiet_on_the_Western_Front_(1930_film)",
+   "title": "All Quiet on the Western Front (1930 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:39.456Z",
+   "snapshot": "6a75654049e23b9b39b78903bf2aef58293f6064f83a8d787dc27d15b02d7d87"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Der_Vorleser",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:16.115Z",
+   "snapshot": "1822a748b57159a72f4fbf8a12c1fd6c2ca1d0c18f94a65a1b08c03445f0d44c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Reader",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tin Drum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Perfume",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "All Quiet on the Western Front",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:13.091Z",
+   "target": "f08646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Reader (German: Der Vorleser) is a novel by German law professor and judge Bernhard Schlink, published in 1995.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Reader” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:13.091Z",
+   "target": "f08647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tin Drum (German: Die Blechtrommel, pronounced [diː ˈblɛçˌtʁɔml̩] ) is a 1959 novel by Günter Grass, the first book of his Danzig Trilogy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Tin Drum” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:13.091Z",
+   "target": "f08648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Perfume: The Story of a Murderer (German: Das Parfum: Die Geschichte eines Mörders [das paʁˈfœ̃ː diː ɡəˈʃɪçtə ˈʔaɪnəs ˈmœʁdɐs] ) is a 1985 literary historical fantasy novel by German writer Patrick Süskind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perfume” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:13.091Z",
+   "target": "f08650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "All Quiet on the Western Front is a 1930 American pre-Code epic anti-war film based on the 1929 novel of the same name by German novelist Erich Maria Remarque.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “All Quiet on the Western Front” is on the snapshot of s4"
+  }
+ ]
+}

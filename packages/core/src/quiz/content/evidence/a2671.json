@@ -1,0 +1,365 @@
+{
+ "article": "a2671",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Jardin_du_Luxembourg",
+   "title": "Jardin du Luxembourg",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:01.394Z",
+   "snapshot": "95027c9abc8061981dbc676129b9aaa5344d69e131b0fd51ed70020cde588f9f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Trastevere",
+   "title": "Trastevere – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:05.094Z",
+   "snapshot": "dd700b03ec6728724bda5380c58794fd0c0b0e783be59eebd56e9c10e04c0239"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alfama",
+   "title": "Alfama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:06.116Z",
+   "snapshot": "5cb7e18e305b2b04f1cd50d4fe4e0582b807a925a4004f3181d6fc603ab40984"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gamla_stan",
+   "title": "Gamla stan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:07.210Z",
+   "snapshot": "76120f815628f2fa365a49c914cb035d7c1492d8ad890055e0b13106b52e559e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Albaic%C3%ADn",
+   "title": "Albaicín – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:08.213Z",
+   "snapshot": "7db2fe0d82cb36f94187d48f1ab5460b72dbdb730a62a93b0ab70fb397568a27"
+  },
+  "s6": {
+   "url": "https://www.visitlisboa.com/en/places/alfama",
+   "title": "Alfama | Visit Lisboa",
+   "publisher": "Turismo de Lisboa (Visit Lisboa)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:24.563Z",
+   "snapshot": "44e46bb0dd4d4792f6e6dcecfca482d54f9e833a54109fb8caae84429e463fe5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-250"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lisbon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stockholm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Granada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:56.218Z",
+   "target": "f14501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jean Colson, Marie-Christine Lauroa (ed.): Dictionnaire des Monuments de Paris.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.218Z",
+   "target": "f14502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Trastevere (Italian: [trasˈteːvere]) is the 13th rione of Rome, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rome” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.218Z",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Alfama (Portuguese pronunciation: [alˈfɐmɐ]) is the oldest neighborhood of Lisbon, spreading on the slope between the São Jorge Castle and the Tagus river.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lisbon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:56.218Z",
+   "target": "f14504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gamla Stan (Swedish: [ˈɡâmːla ˈstɑːn], \"The Old Town\"), until 1980 officially Staden mellan broarna (\"The Town between the Bridges\"), is the old town of Stockholm, Sweden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stockholm” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:56.218Z",
+   "target": "f14505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Albaicín (Spanish pronunciation: [alβajˈθin]), also spelled Albayzín (from Arabic: ٱلْبَيّازِينْ, romanized: al-Bayyāzīn), is a neighbourhood of Granada, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Granada” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:52:21Z",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The oldest and most traditional neighbourhood in Lisbon, with cobbled lanes and alleys and steep, gruelling inclines,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:23Z",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is the oldest neighborhood of Lisbon",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:52:25Z",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "did not destroy the Alfama, which has remained a labyrinth of narrow streets and small squares.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:41.656Z",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The oldest and most traditional neighbourhood in Lisbon, with cobbled lanes and alleys and steep, gruelling inclines,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:41.656Z",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "did not destroy the Alfama, which has remained a labyrinth of narrow streets and small squares.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:41.656Z",
+   "target": "f14503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The oldest and most traditional neighbourhood in Lisbon, with cobbled lanes and alleys and steep, gruelling inclines, should be discovered little by little, stopping frequently to savour the view, atmosphere and authentic spirit of the oldest side of the capital.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Lisbon” is on the snapshot of s6"
+  }
+ ]
+}

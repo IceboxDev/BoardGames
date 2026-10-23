@@ -1,0 +1,242 @@
+{
+ "article": "a1995",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Passepartout_(Rahmen)",
+   "title": "Passepartout (Rahmen) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:08.548Z",
+   "snapshot": "a669ca58fe05637df071eb806b9b21de715263fbf7b4a277a56b9ebe6f8dac6b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Keilrahmen",
+   "title": "Keilrahmen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:09.766Z",
+   "snapshot": "cd42cc030e15fa4e54b6baaca60dfb270f26e54c2393203171baa5a1de51177a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Craquelure",
+   "title": "Craquelure – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:12.326Z",
+   "snapshot": "736bfdaec8d596bbef024a13b0753f47a60608df33c6543533d04e82c37c5882"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Heiligenschein",
+   "title": "Heiligenschein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:10.743Z",
+   "snapshot": "301bd673fb8c9bbc40d692c3acf660edae738b59754a81ea046e8f0bec6adf43"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gemeiner_Lein",
+   "title": "Gemeiner Lein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:11.653Z",
+   "snapshot": "f863062a96b62c26a9349b9e14c52d677cd343e16832dbbbd03106a3eee8bb98"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Passepartout",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript c167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Keilrahmen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09973",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Craquelure",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nimbus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-009"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Flachs",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-237"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:02.530Z",
+   "target": "f09971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Passepartout ([paspaʁˈtuː], französisch passer ‚hindurchgehen‘ und partout ‚überall‘) bezeichnet in der Kunst eine Papier- oder Kartonumrahmung für Grafiken, Fotos und Gemälde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Passepartout” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:02.530Z",
+   "target": "f09972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die gesamte Bildentstehung eines Leinwandgemäldes, von der Grundierung bis zum Firnis, findet auf dem Keilrahmen statt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Keilrahmen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:02.530Z",
+   "target": "f09973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Craquelure (French: craquelure; Italian: crettatura) is a fine pattern of dense cracking formed on the surface of materials.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Craquelure” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:02.530Z",
+   "target": "f10704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Heiligenschein, der Nimbus oder die Gloriole (lateinisch nimbus  ‚Wolke‘, speziell ‚Stirnbinde‘; ‚Heiligenschein‘; altgriechisch ἅλως hálōs, deutsch ‚Tenne, Rundung, Hof um Sonne oder Mond, Strahlenkreis‘) ist eine Leucht- oder Lichterscheinung um den Kopf oder den ganzen Körper einer",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nimbus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:02.530Z",
+   "target": "f10705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gemeiner Lein (Linum usitatissimum), auch Saat-Lein, Haarlinse und Flachs genannt, ist eine alte Kulturpflanze, die zur Faser- (Faserlein) und zur Ölgewinnung (Öllein, Leinsamen, Leinöl) angebaut wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flachs” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "article": "a0024",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/World_of_Warcraft",
+   "title": "World of Warcraft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:36.758Z",
+   "snapshot": "38a2f3ca66e35d74883fab04eac1ac895105473baf5f59eedb1a0278ccbaa0b4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Minecraft",
+   "title": "Minecraft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:37.597Z",
+   "snapshot": "e9272ba8781549e768b0f70fa298aa67e350a05c2ac66f92a38bd15ca2f4382b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)",
+   "title": "The Legend of Zelda (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:38.545Z",
+   "snapshot": "1605af9c0c25e7c32a8206dfe35b4fe440664445a1fe6c9fe1775234e25d6554"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rockstar_Games",
+   "title": "Rockstar Games – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:39.572Z",
+   "snapshot": "357bb640bd0b0af6bdfd7b46d3a5516dc3a7706cedc7f0572d6367daffa2b531"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Epic_Games",
+   "title": "Epic Games – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:40.635Z",
+   "snapshot": "38b04e10321a432ec26492b6794d7ab812ffb9d52b5b3ba6bc09ef7ada5ff068"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mojang_Studios",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:41.438Z",
+   "snapshot": "cfb216cb40476b17a175d4b3b1e00227641670e51d3fa2cc802c78805e62196c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Rockstar_North",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:42.873Z",
+   "snapshot": "eea98f09ca532c6e02ccfd0634c67e5c50c73aa01e0be937ce6c40537bfb13ca"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blizzard Entertainment",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mojang",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nintendo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rockstar Games",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Epic Games",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:38.720Z",
+   "target": "f00116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "World of Warcraft (WoW) is a 2004 massively multiplayer online role-playing (MMORPG) video game developed and published by Blizzard Entertainment for Windows and macOS.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blizzard Entertainment” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:38.720Z",
+   "target": "f00117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Minecraft is a sandbox video game developed and published by the Swedish company Mojang Studios.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mojang” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:38.720Z",
+   "target": "f00118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Legend of Zelda is a 1986 action-adventure game developed and published by Nintendo for the Family Computer Disk System.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nintendo” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:38.720Z",
+   "target": "f00119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Since 1999, several companies acquired by or established under Take-Two have become part of Rockstar Games, such as Rockstar Canada (later renamed Rockstar Toronto) becoming the first one in 1999, and Rockstar Australia the most recent in 2025.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rockstar Games” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:38.720Z",
+   "target": "f00120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "After moving the headquarters to Cary in 1999, the studio changed its name to Epic Games.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Epic Games” is on the snapshot of s5"
+  }
+ ]
+}

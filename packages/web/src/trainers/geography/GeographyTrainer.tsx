@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { TrainerScreen } from "../../games/quiztopia/components/trainer/TrainerScreen";
+import { TrainerScreen } from "../quiz/components/trainer/TrainerScreen";
 import { ExplorePage } from "./ExplorePage";
 import { GeographyHub } from "./GeographyHub";
 import { useGeoOfflineQueue } from "./offline-queue";

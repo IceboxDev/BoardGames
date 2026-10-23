@@ -1,0 +1,289 @@
+{
+ "article": "a0027",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Emil_Nolde",
+   "title": "Emil Nolde – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:52.455Z",
+   "snapshot": "abdd05ee29a1cf20a6d9f7d344cb61a125ea04d92e8757bbc3b20c2963be05f3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ernst_Ludwig_Kirchner",
+   "title": "Ernst Ludwig Kirchner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:53.551Z",
+   "snapshot": "0f56bdbef5fab82cf435abf376b01310bc93e02c5a4fd16d0267a5b1ece0bfdb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Marc",
+   "title": "Franz Marc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:54.440Z",
+   "snapshot": "12778ffdca39ece185fcdd5ea747853166ec7490ed0e8977e682656d2ecb9fa5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Max_Beckmann",
+   "title": "Max Beckmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:55.546Z",
+   "snapshot": "7db4ed4446101d17bc2bd7fd61a27d92fd90f4afce5eda1ceb2913030eda5ced"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Der_Schwebende",
+   "title": "Der Schwebende – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:15:52.668Z",
+   "snapshot": "bbc7f28ad27ef6669bd887b56d178035ee99661f48e2c030949f1c7a76badeb0"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Franz_Marc",
+   "title": "Franz Marc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:15:55.377Z",
+   "snapshot": "431ae482b2508fcd0d6389b7b2bafbe1b667fb4e42c9593ccc20c9d295ac33dd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Emil Nolde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00132",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ernst Ludwig Kirchner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00133",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Marc",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00134",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Max Beckmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ernst Barlach",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-073"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:39.258Z",
+   "target": "f00131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Emil Nolde (born Hans Emil Hansen; 7 August 1867 – 13 April 1956) was a German painter and printmaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emil Nolde” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:39.258Z",
+   "target": "f00132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ernst Ludwig Kirchner (6 May 1880 – 15 June 1938) was a German expressionist painter and printmaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernst Ludwig Kirchner” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:39.258Z",
+   "target": "f00133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Marc was born in 1880 in Munich, the then capital of the Kingdom of Bavaria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Marc” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:39.258Z",
+   "target": "f00134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Max Beckmann was born into a middle-class family in Leipzig, Saxony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Beckmann” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:39.258Z",
+   "target": "f00135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Schwebende, auch Schwebender Engel oder Güstrower Ehrenmal, ist eine von Ernst Barlach im Jahr 1927 geschaffene bronzene Skulptur, deren Erstguss verloren ist und von der heute drei Bronze-Nachgüsse und ein Gipsabguss existieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernst Barlach” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:39.258Z",
+   "target": "f10738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In ihnen macht Marc das Blau von einer „Erscheinensfarbe“ zu einer „Wesensfarbe“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blau” is on the snapshot of s6"
+  }
+ ]
+}

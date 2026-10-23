@@ -1,0 +1,256 @@
+{
+ "article": "a0724",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Aguirre,_the_Wrath_of_God",
+   "title": "Aguirre, the Wrath of God – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:45.285Z",
+   "snapshot": "aa767ee1beaebe299df403cfffdeda954b73eeda178ae4d85c8fe83490b008f7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Raging_Bull",
+   "title": "Raging Bull – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:46.217Z",
+   "snapshot": "4f031b69ef509cfcee4252c3230f988b183fc05b93efc2a1c32ee9d1236e076b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Edward_Scissorhands",
+   "title": "Edward Scissorhands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:47.320Z",
+   "snapshot": "38be1822f78ab4061dac4bc233791fc5d5762a19eb8f7d5621c67aa728130ede"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Seven_Samurai",
+   "title": "Seven Samurai – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:48.301Z",
+   "snapshot": "a9602692ceefc595db9154e21d3d4ff9a91cee10eb9664b01e037569947e901c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/A_Fistful_of_Dollars",
+   "title": "A Fistful of Dollars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:49.300Z",
+   "snapshot": "9f701c3239d0a27587b503722b663b518afabc692dd469010e8ecaefbefeb499"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Klaus_Kinski",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:50.187Z",
+   "snapshot": "64c13e4a5ee7a386ce6f93444f539672672a423d8e05d332396324706aa64d02"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Robert_De_Niro",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:51.420Z",
+   "snapshot": "b4be6ab1ae2dbd47e7d2da98396d6950bc668346fe07ddedc04ed8b3d7a84459"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Klaus Kinski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c061"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robert De Niro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johnny Depp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Toshirō Mifune",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Clint Eastwood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:33.734Z",
+   "target": "f03616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Klaus Kinski stars in the title role of Spanish soldier Lope de Aguirre, who leads a group of conquistadores down the Amazon River in South America in search of the legendary city of gold, El Dorado.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.734Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klaus Kinski” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:33.734Z",
+   "target": "f03617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robert De Niro stars as LaMotta, a former middleweight boxing champion whose turbulent personal life is beset by rage and jealousy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.734Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert De Niro” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:33.734Z",
+   "target": "f03618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was produced by Burton and Denise Di Novi, written by Caroline Thompson from a story by her and Burton, and starring Johnny Depp as the title character, along with Winona Ryder,  Dianne Wiest, Anthony Michael Hall, Kathy Baker, Vincent Price, and Alan Arkin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.734Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johnny Depp” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:33.734Z",
+   "target": "f03619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Starring Toshirō Mifune, Takashi Shimura, Keiko Tsushima and Yukiko Shimazaki, it tells the story of a village of peasants who hire seven samurai to help defend their village from bandits who will return after the harvest to steal their crops.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.734Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toshirō Mifune” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:33.734Z",
+   "target": "f03620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dollars (Italian: Per un pugno di dollari, \"For a Fistful of Dollars\") is a 1964 spaghetti Western film directed by Sergio Leone and starring Clint Eastwood in his first leading role, alongside Gian Maria Volonté, Marianne Koch, Wolfgang Lukschy, Sieghardt Rupp, José Calvo, Antonio Prieto and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.734Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clint Eastwood” is on the snapshot of s5"
+  }
+ ]
+}

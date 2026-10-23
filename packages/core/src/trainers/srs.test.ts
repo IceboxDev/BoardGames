@@ -153,160 +153,96 @@ describe("addDays / daysBetween", () => {
 });
 
 describe("buildDailyQueue", () => {
-  const setIdOf = (id: string) => id.slice(0, 8);
+  const articleOf = (id: string) => id.split(".")[0];
   const learningNewer = review({
-    questionId: "c001-s01-q0",
+    questionId: "a1.f1",
     state: "learning",
     intervalDays: 0,
     lastReviewedAt: "2026-01-01T10:00:00.000Z",
   });
   const relearningOlder = review({
-    questionId: "c002-s02-q0",
+    questionId: "a2.f1",
     state: "relearning",
     intervalDays: 3,
     lastReviewedAt: "2026-01-01T09:00:00.000Z",
   });
-  const reviewLessOverdue = review({ questionId: "c003-s03-q0", dueDate: "2025-12-30" });
-  const reviewMostOverdue = review({ questionId: "c004-s04-q0", dueDate: "2025-12-28" });
-  const leech = review({ questionId: "c005-s05-q0", dueDate: "2025-12-01", lapses: 8 });
+  const reviewLessOverdue = review({ questionId: "a3.f1", dueDate: "2025-12-30" });
+  const reviewMostOverdue = review({ questionId: "a4.f1", dueDate: "2025-12-28" });
+  const leech = review({ questionId: "a5.f1", dueDate: "2025-12-01", lapses: 8 });
   const due = [learningNewer, reviewLessOverdue, leech, relearningOlder, reviewMostOverdue];
-  const newOrder = ["c006-s06-q0", "c001-s01-q0", "c007-s07-q0", "c008-s08-q0"];
+  const facts = (art: string, n: number) => Array.from({ length: n }, (_, i) => `${art}.f${i + 1}`);
   const base = {
     due,
     seenIds: new Set(due.map((s) => s.questionId)),
-    newOrder,
+    newOrder: [...facts("a6", 2), ...facts("a7", 3)],
     newRemaining: 2,
     limit: 50,
     includeLeeches: false,
-    setIdOf,
+    articleOf,
   };
+  const ids = (over: Partial<Parameters<typeof buildDailyQueue>[0]>) =>
+    buildDailyQueue({ ...base, ...over }).map((it) => it.questionId);
 
   it("orders learning (oldest first), then review (most overdue first), then new", () => {
-    const ids = buildDailyQueue(base).map((it) => `${it.tier}:${it.questionId}`);
-    expect(ids).toEqual([
-      "learning:c002-s02-q0",
-      "learning:c001-s01-q0",
-      "review:c004-s04-q0",
-      "review:c003-s03-q0",
-      "new:c006-s06-q0",
-      "new:c007-s07-q0",
+    expect(buildDailyQueue(base).map((it) => `${it.tier}:${it.questionId}`)).toEqual([
+      "learning:a2.f1",
+      "learning:a1.f1",
+      "review:a4.f1",
+      "review:a3.f1",
+      "new:a6.f1",
+      "new:a6.f2",
     ]);
   });
 
-  it("skips seen ids and caps new cards at newRemaining", () => {
-    const fresh = buildDailyQueue({ ...base, newRemaining: 1 }).filter((it) => it.tier === "new");
-    expect(fresh.map((it) => it.questionId)).toEqual(["c006-s06-q0"]);
-    expect(fresh[0].state).toBeNull();
-    expect(buildDailyQueue({ ...base, newRemaining: 0 }).some((it) => it.tier === "new")).toBe(
-      false,
-    );
-    expect(buildDailyQueue({ ...base, newRemaining: -3 }).some((it) => it.tier === "new")).toBe(
-      false,
-    );
-  });
-
   it("excludes leeches unless asked to include them", () => {
-    expect(buildDailyQueue(base).some((it) => it.questionId === leech.questionId)).toBe(false);
+    expect(ids({}).includes(leech.questionId)).toBe(false);
     const withLeeches = buildDailyQueue({ ...base, includeLeeches: true });
-    expect(withLeeches.map((it) => it.questionId)).toContain(leech.questionId);
-    // The leech is the most overdue review, so it leads that tier.
     expect(withLeeches.filter((it) => it.tier === "review")[0].questionId).toBe(leech.questionId);
   });
 
-  it("cuts at limit after interleaving", () => {
-    expect(buildDailyQueue({ ...base, limit: 3 })).toHaveLength(3);
-    expect(buildDailyQueue({ ...base, limit: 0 })).toHaveLength(0);
+  it("cuts at limit", () => {
+    expect(ids({ limit: 3 })).toHaveLength(3);
+    expect(ids({ limit: 0 })).toHaveLength(0);
   });
 
-  it("spreads siblings of one set apart", () => {
-    const siblings = ["c001-s01-q0", "c001-s01-q1", "c001-s01-q2", "c002-s01-q0", "c002-s01-q1"];
-    const order = buildDailyQueue({
-      due: [],
-      seenIds: new Set(),
-      newOrder: siblings,
-      newRemaining: 10,
-      limit: 10,
-      includeLeeches: false,
-      setIdOf,
-    }).map((it) => it.questionId);
-    for (let i = 1; i < order.length; i++) {
-      expect(setIdOf(order[i])).not.toBe(setIdOf(order[i - 1]));
-    }
-    expect(order).toHaveLength(5);
-  });
+  describe("new articles", () => {
+    const fresh = (over: Partial<Parameters<typeof buildDailyQueue>[0]>) =>
+      buildDailyQueue({
+        ...base,
+        due: [],
+        seenIds: new Set(),
+        newOrder: [...facts("a1", 5), ...facts("a2", 8), ...facts("a3", 3)],
+        ...over,
+      }).map((it) => it.questionId);
 
-  describe("set mode", () => {
-    const sets = (card: string, n = 5) => Array.from({ length: n }, (_, q) => `${card}-s01-q${q}`);
-    const input = (over: Partial<Parameters<typeof buildDailyQueue>[0]>) => ({
-      due: [],
-      seenIds: new Set<string>(),
-      newOrder: [...sets("c001"), ...sets("c002"), ...sets("c003")],
-      newRemaining: 10,
-      limit: 50,
-      includeLeeches: false,
-      setIdOf,
-      grouping: "sets" as const,
-      ...over,
-    });
-    const ids = (over: Partial<Parameters<typeof buildDailyQueue>[0]>) =>
-      buildDailyQueue(input(over)).map((it) => it.questionId);
-
-    it("introduces whole sets, siblings back to back", () => {
-      expect(ids({})).toEqual([...sets("c001"), ...sets("c002")]);
+    it("takes whole articles while they fit the fact budget", () => {
+      expect(fresh({ newRemaining: 15 })).toEqual([...facts("a1", 5), ...facts("a2", 8)]);
     });
 
-    // An article begun on an earlier day: its leftover questions are always
-    // dealt and never take a fresh article's place in the day's budget.
-    it("deals a started set's leftovers outside the cap, wherever they sit", () => {
-      const seenIds = new Set(sets("c003").slice(0, 4));
-      const startedSets = new Set(["c003-s01"]);
-      expect(ids({ seenIds, startedSets })).toEqual([
-        "c003-s01-q4",
-        ...sets("c001"),
-        ...sets("c002"),
+    it("skips an article that doesn't fit for a smaller later one", () => {
+      expect(fresh({ newRemaining: 9 })).toEqual([...facts("a1", 5), ...facts("a3", 3)]);
+    });
+
+    it("always takes the first article, even past a small budget", () => {
+      expect(fresh({ newRemaining: 2 })).toEqual(facts("a1", 5));
+      expect(fresh({ newRemaining: 0 })).toEqual([]);
+      expect(fresh({ newRemaining: -3 })).toEqual([]);
+    });
+
+    it("deals a started article's leftovers outside the budget", () => {
+      const seenIds = new Set(facts("a3", 3).slice(0, 2));
+      const startedArticles = new Set(["a3"]);
+      expect(fresh({ seenIds, startedArticles, newRemaining: 5 })).toEqual([
+        "a3.f3",
+        ...facts("a1", 5),
       ]);
-      // Even with no fresh budget left, the leftover still comes.
-      expect(ids({ seenIds, startedSets, newRemaining: 0 })).toEqual(["c003-s01-q4"]);
+      expect(fresh({ seenIds, startedArticles, newRemaining: 0 })).toEqual(["a3.f3"]);
     });
 
-    it("rounds the cap up to finish the set it cut into", () => {
-      expect(ids({ newRemaining: 7 })).toEqual([...sets("c001"), ...sets("c002")]);
-      expect(ids({ newRemaining: 1 })).toEqual(sets("c001"));
-      expect(ids({ newRemaining: 0 })).toEqual([]);
-    });
-
-    it("finishes a partly seen set first", () => {
-      const seenIds = new Set(["c001-s01-q0", "c001-s01-q1"]);
-      expect(ids({ seenIds, newRemaining: 5 })).toEqual([
-        "c001-s01-q2",
-        "c001-s01-q3",
-        "c001-s01-q4",
-        ...sets("c002"),
-      ]);
-    });
-
-    it("shuffles the new sets' questions and the due ones together when seeded", () => {
-      const due = [review({ questionId: "c009-s01-q0", dueDate: "2025-12-20" })];
-      const base = { due, seenIds: new Set(["c009-s01-q0"]), newRemaining: 15 };
-      const a = ids({ ...base, shuffleSeed: 7 });
-      const plain = ["c009-s01-q0", ...sets("c001"), ...sets("c002"), ...sets("c003")];
-      // Three whole sets plus the due card, all there, no longer in order.
-      expect([...a].sort()).toEqual([...plain].sort());
-      expect(a).not.toEqual(plain);
-      // Same seed, same order; another seed, another order.
-      expect(ids({ ...base, shuffleSeed: 7 })).toEqual(a);
-      expect(ids({ ...base, shuffleSeed: 8 })).not.toEqual(a);
-    });
-
-    it("gathers due siblings next to each other", () => {
-      const due = [
-        review({ questionId: "c001-s01-q0", dueDate: "2025-12-20" }),
-        review({ questionId: "c002-s01-q0", dueDate: "2025-12-21" }),
-        review({ questionId: "c001-s01-q1", dueDate: "2025-12-22" }),
-      ];
-      expect(ids({ due, seenIds: new Set(due.map((s) => s.questionId)), newRemaining: 0 })).toEqual(
-        ["c001-s01-q0", "c001-s01-q1", "c002-s01-q0"],
-      );
+    it("mixes the day with a seed, the same way every time", () => {
+      const a = fresh({ newRemaining: 15, shuffleSeed: 7 });
+      expect(a).toEqual(fresh({ newRemaining: 15, shuffleSeed: 7 }));
+      expect([...a].sort()).toEqual([...facts("a1", 5), ...facts("a2", 8)].sort());
     });
   });
 });
@@ -414,6 +350,14 @@ describe("applyReview — hard and easy", () => {
     const s = applyReview(review(10), "hard", at);
     expect(s).toMatchObject({ state: "review", intervalDays: 12, ease: 2.35 });
     expect(applyReview(review(1, 1.3), "hard", at)).toMatchObject({ intervalDays: 2, ease: 1.3 });
+  });
+
+  it("never graduates a missed card on the day of the miss", () => {
+    const missed = applyReview(newState("x", at.localDate), "again", at);
+    const right = applyReview(missed, "good", at);
+    expect(right).toMatchObject({ state: "learning", intervalDays: 1, dueDate: "2026-09-26" });
+    const nextDay = { localDate: "2026-09-26", now: "2026-09-26T09:00:00.000Z" };
+    expect(applyReview(right, "good", nextDay)).toMatchObject({ state: "review", intervalDays: 3 });
   });
 
   it("graduates an easy new card straight to four days", () => {

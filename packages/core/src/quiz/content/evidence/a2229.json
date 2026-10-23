@@ -1,0 +1,242 @@
+{
+ "article": "a2229",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Plastic_Planet",
+   "title": "Plastic Planet",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:45.633Z",
+   "snapshot": "8204a2de6532c45bea2c63cf32395e3208933dc2c2fc9128d74978627d4378ef"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/We_Feed_the_World",
+   "title": "We Feed the World – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:48.759Z",
+   "snapshot": "59cffa22022ebd6356321fd902b6b7fd2240596b4b6e2e206a8834636508c335"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Darwin%27s_Nightmare",
+   "title": "Darwin's Nightmare – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:49.783Z",
+   "snapshot": "c0a117b17451f67d91088c03c750ce882868b5c4ced7cf26f1b0b6895662b818"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Our_Daily_Bread_(2005_film)",
+   "title": "Our Daily Bread (2005 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:50.718Z",
+   "snapshot": "fa0bbd4b45cc397ab0b9003caaa28f96ba4b81b713e1e20095c352b8a2e59265"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ulrich_Seidl",
+   "title": "Ulrich Seidl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:51.728Z",
+   "snapshot": "00d172d6dbd042c4e3f6446cd588f2c997b80b5888d13733202ef01e2988340f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Werner Boote",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-287"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erwin Wagenhofer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hubert Sauper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nikolaus Geyrhalter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ulrich Seidl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:40.000Z",
+   "target": "f11380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Plastic Planet ist ein Kinodokumentarfilm von Regisseur Werner Boote.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Werner Boote” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:40.000Z",
+   "target": "f11381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "We Feed the World is a 2005 documentary film in which Austrian filmmaker Erwin Wagenhofer traces the origins of the food people eat and views modern industrial food production and factory farming in a critical light.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erwin Wagenhofer” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:40.000Z",
+   "target": "f11382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Darwin's Nightmare is a 2004 Austrian-French-Belgian documentary film written and directed by Hubert Sauper, dealing with the environmental and social effects of the fishing industry around Lake Victoria in Tanzania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hubert Sauper” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:40.000Z",
+   "target": "f11383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Our Daily Bread (German: Unser täglich Brot) is a 2005 documentary film directed, co-produced, and with cinematography by Nikolaus Geyrhalter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nikolaus Geyrhalter” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:40.000Z",
+   "target": "f11384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ulrich Seidl grew up in Horn, Austria, in a strictly religious Catholic family of doctors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ulrich Seidl” is on the snapshot of s5"
+  }
+ ]
+}

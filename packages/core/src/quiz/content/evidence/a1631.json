@@ -1,0 +1,322 @@
+{
+ "article": "a1631",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Herr_von_Ribbeck_auf_Ribbeck_im_Havelland",
+   "title": "Herr von Ribbeck auf Ribbeck im Havelland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:42.604Z",
+   "snapshot": "e7ed6cd3cd4bb87281086f5b7d05c42615adbcdfe4bc447f74347cb7ac1fed38"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Flag_of_Canada",
+   "title": "Flag of Canada – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:46.280Z",
+   "snapshot": "e74f7def7838902260a432f9b4a7a5b7e8e86959d66969a12b55d19588de216e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Donareiche",
+   "title": "Donareiche – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:43.573Z",
+   "snapshot": "79197fb28e102f3b4663ba32640115fd14aee2d77c9a6715d08a018527097664"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Winterreise",
+   "title": "Winterreise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:44.840Z",
+   "snapshot": "54342cbe5aebd7e6ce69e329a9ee11dd8af51c47a581fb533dfb8db9c0b5de75"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ribbeck_(Nauen)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:45.660Z",
+   "snapshot": "d78c8dbb8d18178c8c321269fb098b63c1eddaa5a02aa39ccd111dec5786110c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Pfennig",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:46.694Z",
+   "snapshot": "b5e858b7d709967e8ff7383f180177e530b7c31235b9b821819b03fc62b6188d"
+  },
+  "s7": {
+   "url": "https://www.deutschelyrik.de/der-lindenbaum.html",
+   "title": "Der Lindenbaum (1822) - Deutsche Lyrik",
+   "publisher": "Deutsche Lyrik",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:14.562Z",
+   "snapshot": "3c96f0323566f73d4e10f2cd2536b357672c44dd427ce0571823c4a307da7d6a"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Der_Lindenbaum",
+   "title": "Am Brunnen vor dem Tore – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:14.940Z",
+   "snapshot": "ad69bc5e0653624d2548fdf844e56b7320505db525beb4c208ba43fdcdca4d34"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Birnbaum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c136"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "maple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08153",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eiche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:54.613Z",
+   "target": "f08151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aus dieser sprießt ein neuer Birnbaum, der die Kinder dazu einlädt, sich von seinen Früchten weiterhin frei zu bedienen, obwohl sein Erbe den Garten und den dortigen Baum fortan unter Verschluss hält.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Birnbaum” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:54.613Z",
+   "target": "f08152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The national flag of Canada, popularly referred to as the Maple Leaf, consists of a red field with a white square at its centre in the horizontal ratio of 1∶2∶1, in which is featured one stylized, red, 11-pointed maple leaf charged in the centre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “maple” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:54.613Z",
+   "target": "f08153",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bekannt ist die Eiche durch eine Begebenheit während der Missionstätigkeit des Bonifatius.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eiche” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:54.613Z",
+   "target": "f08154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Linde”, “linden”, “липа”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:15:18Z",
+   "target": "f08154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Am Brunnen vor dem Tore Da steht ein Lindenbaum:",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:15:23Z",
+   "target": "f08154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der ursprüngliche Titel lautet Der Lindenbaum. Der Text stammt von Wilhelm Müller und gehört zu einem Gedichtzyklus, den Müller mit Die Winterreise überschrieb.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:42.826Z",
+   "target": "f08154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Am Brunnen vor dem Tore Da steht ein Lindenbaum:",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s7"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:42.826Z",
+   "target": "f08154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der ursprüngliche Titel lautet Der Lindenbaum. Der Text stammt von Wilhelm Müller und gehört zu einem Gedichtzyklus, den Müller mit Die Winterreise überschrieb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:42.826Z",
+   "target": "f08154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Zu Müllers Zeiten war die Linde als Baum der Liebe bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Linde” is on the snapshot of s8"
+  }
+ ]
+}

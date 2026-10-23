@@ -1,0 +1,367 @@
+{
+ "article": "a2314",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Timbuktu",
+   "title": "Timbuktu",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:19.918Z",
+   "snapshot": "4e934705cb12b31ca56b5abf4fbb6afc64bc31c5a83f78c6f10a5dae9566dcab"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Lima",
+   "title": "Lima",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:21.061Z",
+   "snapshot": "cda0ab948b4f109c4bbf42637a821e19a08918969cbda20aca1e92d54540d7bb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bamako",
+   "title": "Bamako – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:23.610Z",
+   "snapshot": "ddfc2363b2b942de70e14f3c64b8eb28f25794ca9f13ee368c2e55a27fbc17c6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mansa_Musa",
+   "title": "Mansa Musa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:22.521Z",
+   "snapshot": "3bed356bf5b46af95ecd6e18a3983219727b35f216bdce7ebf7487fc961e512d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Great_Mosque_of_Djenn%C3%A9",
+   "title": "Great Mosque of Djenné – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:24.499Z",
+   "snapshot": "92422ab1cada5f2ee80d484c1620c44fdfc762c82b6bd0d7280768c7a2fbb8d6"
+  },
+  "s6": {
+   "url": "https://whc.unesco.org/en/news/574",
+   "title": "Restoration works continue despite violent storms at the Great Mosque of Djenné",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:15.278Z",
+   "snapshot": "d4895f14d864de5f445a9551767de293fc1cffe435b0b2c87a7adf5a4932be8f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mali",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-362"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lima",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-091"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11982",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bamako",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mansa Musa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Djenné",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:54.884Z",
+   "target": "f11980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Timbuktu  (deutsch [tɪmˈbʊktu], französisch Tombouctou [tõbukˈtu]) ist eine Oasenstadt in Mali mit 84.821 Einwohnern (2023).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mali” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:54.884Z",
+   "target": "f11981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lima ist die Hauptstadt des südamerikanischen Andenstaates Peru und die mit Abstand größte Stadt des Landes.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lima” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:54.884Z",
+   "target": "f11982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bamako is the capital and largest city of Mali with a 2022 population of 4,227,569.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bamako” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:54.884Z",
+   "target": "f11983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is known from local manuscripts and travellers' accounts that Mansa Musa's wealth came principally from the Mali Empire's control and taxing of the trade in salt from northern regions and especially from gold panned and mined in Bambuk and Bure to the south.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mansa Musa” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:54.884Z",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Great Mosque of Djenné in the Sudano-Sahelian architectural style is the largest adobe brick building in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Djenné” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:48Z",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Great Mosque of Djenné[a] in the Sudano-Sahelian architectural style is the largest adobe brick building in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:51Z",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Restoration works begun on the site the Great Mosque of Djenné, Mali in January 2009",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the answer (the mosque stands in Djenné, Mali; \"exceptional but fragile example of earthen architecture\"); the largest-mud-brick superlative rests on Wikipedia and common reference usage."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:03Z",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in the Sudano-Sahelian architectural style is the largest adobe brick building in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same sentence as e11 without the footnote marker."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:40.564Z",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Restoration works begun on the site the Great Mosque of Djenné, Mali in January 2009",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.564Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:40.564Z",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in the Sudano-Sahelian architectural style is the largest adobe brick building in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.564Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:40.564Z",
+   "target": "f11984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Restoration works continue despite violent storms at the Great Mosque of Djenné - UNESCO World Heritage Centre",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.564Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Djenné” is on the snapshot of s6"
+  }
+ ]
+}

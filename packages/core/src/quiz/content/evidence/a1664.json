@@ -1,0 +1,249 @@
+{
+ "article": "a1664",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Confucius",
+   "title": "Confucius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:39.482Z",
+   "snapshot": "429715444c4e10ce32df9683d29b3b5333caefd3ce31378a8a1776184863c5db"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sangha",
+   "title": "Sangha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:40.278Z",
+   "snapshot": "f6c6520eb06457c261119e0a3f4e5f88897bf2cabcb6a8dec928c6ddacaea7c1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Muhammad",
+   "title": "Muhammad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:41.513Z",
+   "snapshot": "e44aa1ccb2730b792b0052056d376285b139f7bfa0df7afb6f995e9c5968d28e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/First_Council_of_Constantinople",
+   "title": "First Council of Constantinople – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:42.350Z",
+   "snapshot": "23ed7045049962dc98fcd77511ede4e46a79b41cecf4f76cb98fec4743dd8f17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Zakat",
+   "title": "Zakat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:03.433Z",
+   "snapshot": "42d68fab230c4be1c3fa681d2f5ac12ee2c8874fcb2b167dbe184d9e496cfc3c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Three_teachings",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:43.301Z",
+   "snapshot": "309bc67ae1f672246c4ab55b88718909045a7c3d4ac8e79c3f6b6c59f7041c76"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08316",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Confucianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c139"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sangha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Islam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Holy Spirit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zakat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:01.755Z",
+   "target": "f08316",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "His philosophical teachings, called Confucianism, emphasized personal and governmental morality, harmonious social relationships, righteousness, kindness, sincerity, and a ruler's responsibilities to lead by virtue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Confucianism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:01.755Z",
+   "target": "f08317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saṅgha or saṃgha (IPA: [sɐŋɡʱɐ]) is a term meaning \"association\", \"assembly\", \"company\" or \"community\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sangha” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:01.755Z",
+   "target": "f08318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "570 CE – 8 June 632 CE) was an Arab religious, military, and political leader, and the founder of Islam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Islam” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:01.755Z",
+   "target": "f08319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "However, because the Council of Nicaea had not clarified the divinity of the Holy Spirit, the third person of the Trinity, it became a topic of debate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holy Spirit” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:01.755Z",
+   "target": "f08320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zakat (or Zakāh) is one of the Five Pillars of Islam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zakat” is on the snapshot of s5"
+  }
+ ]
+}

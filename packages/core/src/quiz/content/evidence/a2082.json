@@ -1,0 +1,202 @@
+{
+ "article": "a2082",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Guillaume_affair",
+   "title": "Guillaume affair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:14.740Z",
+   "snapshot": "9e3bd50d502bed31f5ecab8495dd96efa9bc767b0d654d3f861a032748680a82"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Helmut_Schmidt",
+   "title": "Helmut Schmidt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:39.615Z",
+   "snapshot": "3c1f7cc6d4e9754449891d30459073c5fe2363028e3dd1c44744d478df6a39b7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Markus_Wolf",
+   "title": "Markus Wolf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:15.839Z",
+   "snapshot": "1c323101456a84ea58fa7922fdb9e7dd0e770be63b476db9d1bee70228c8e94c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Wandel_durch_Ann%C3%A4herung",
+   "title": "Wandel durch Annäherung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:13.443Z",
+   "snapshot": "57287d8ac3cd23df0b020623b45ab81e26460b098f1dd46a47e69c0a29028309"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/G%C3%BCnter_Guillaume",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:14.127Z",
+   "snapshot": "378bcd7a2473ff11934dc4219ad2b2a6e2e70aa67c16f2805d07fc3abe1586c8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Günter Guillaume",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Helmut Schmidt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Markus Wolf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Egon Bahr",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:19.023Z",
+   "target": "f10406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Around 1973, West German security organizations received information that one of Brandt's personal assistants, Günter Guillaume, was a spy for the East German state.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Günter Guillaume” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:19.023Z",
+   "target": "f10407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Helmut Schmidt was the elder of two sons to Ludovica Koch (10 November 1890 – 29 November 1968) and Gustav Ludwig Schmidt (18 April 1888 – 26 March 1981) in Barmbek, a working-class district of Hamburg, in 1918.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:19.023Z",
+   "target": "f10408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Although Fiedler is a German Jew who spent World War II in exile and then gained a senior position in East Germany's Intelligence Service, Carré said he had no idea who Markus Wolf was at the time of the writing of the book.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Markus Wolf” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:19.023Z",
+   "target": "f10410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Formulierung und auch die Erarbeitung gehen zurück auf den Leiter des Presse- und Informationsamtes des Landes Berlin, den SPD-Politiker Egon Bahr.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Egon Bahr” is on the snapshot of s4"
+  }
+ ]
+}

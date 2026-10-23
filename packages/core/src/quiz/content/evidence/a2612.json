@@ -1,0 +1,554 @@
+{
+ "article": "a2612",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bouldern",
+   "title": "Bouldern",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:09:10.016Z",
+   "snapshot": "e78e970615330c791a450d2b4b2b50ed952b26f11c2ce9c0d3bcada02698e651"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Parkour",
+   "title": "Parkour",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:09:10.429Z",
+   "snapshot": "cc852fbf8e2e0107e7865779f2f210b8387789be140225952fef8b0bf7c97f3b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Cheerleading",
+   "title": "Cheerleading",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:09:11.313Z",
+   "snapshot": "3043060e32299f1c93be31f4d209b3e69fcd5a727296af7ffe96779f0b3b33d4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Georges_H%C3%A9bert",
+   "title": "Georges Hébert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:13.111Z",
+   "snapshot": "41fb349fec6c98c2fa5712ae49d4e81602fc71763aef8e8aed0e3ada61d6f422"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/David_Belle",
+   "title": "David Belle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:14.034Z",
+   "snapshot": "d842987b7b5319e7a5e7ed5638298704d2837b10dbd0f4f6831e0513bdda53a8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cheerleading",
+   "title": "Cheerleading – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:15.478Z",
+   "snapshot": "0f88cd692e5c3ba8b50e247210b87ca40096ddf7c2e5eef458b66842412ab99e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Sport_climbing_at_the_2020_Summer_Olympics",
+   "title": "Sport climbing at the 2020 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:16.029Z",
+   "snapshot": "a45f47085ef9fcd7e54e55230793de4cb326497741c0d19052a0e8c5668d5958"
+  },
+  "s8": {
+   "url": "https://usacheer.org/history-of-cheerleading",
+   "title": "History of Cheerleading",
+   "publisher": "USA Cheer",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:38.604Z",
+   "snapshot": "dc56976df492e5d38bbfaf8fc44ac2fc8d47d00160e2beed0b09c4c6c543cc96"
+  },
+  "s9": {
+   "url": "https://www.ifsc-climbing.org/olympics/2020-tokyo",
+   "title": "Olympic Games Tokyo 2020",
+   "publisher": "IFSC (World Climbing)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:37.460Z",
+   "snapshot": "8696fb392966b3d55014baff1c27493e5a486456acde4dca15fe040a134b5939"
+  },
+  "s10": {
+   "url": "https://www.olympedia.org/sports/CLB",
+   "title": "Sport Climbing",
+   "publisher": "Olympedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:38.382Z",
+   "snapshot": "51edbe80f093bf11a52001dbf3ad36e00883bff342cf2b480b28e76152ce4066"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Klettern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-216"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Parkour",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-229"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Männer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-152"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georges Hébert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "David Belle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Johnny Campbell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tokyo 2020",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:47.059Z",
+   "target": "f14081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bouldern (englisch boulder ‚Felsblock‘) ist das Klettern ohne Kletterseil und Klettergurt an Felsblöcken, Felswänden oder an künstlichen Kletterwänden bis zur Absprunghöhe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klettern” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:47.059Z",
+   "target": "f14082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Parkour (abgekürzt PK, /paʁkuʁ/) bezeichnet eine Fortbewegungsart, deren Ziel es ist, nur mit den Fähigkeiten des eigenen Körpers möglichst effizient von Punkt A zu Punkt B zu gelangen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parkour” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:47.059Z",
+   "target": "f14083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Damals waren ausschließlich Männer als Cheerleader zu finden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Männer” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:47.059Z",
+   "target": "f14084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georges Hébert (French: [ʒɔʁʒ ebɛʁ]; 27 April 1875 – 2 August 1957) was a pioneering physical educator in the French military who developed a system of physical education and training known as \"la méthode naturelle\" (\"Natural Method\") and a more wide training program known as Hebertism (built on his",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georges Hébert” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:47.059Z",
+   "target": "f14085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "David Belle began developing parkour in Normandy while living with his grandfather, Gilbert.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Belle” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:47.059Z",
+   "target": "f14086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It was not until 1898 that University of Minnesota student Johnny Campbell directed a crowd in cheering \"Rah, Rah, Rah!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johnny Campbell” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:47.059Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tokyo 2020",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Tokyo 2020”, “Tokio 2020”, “Токио-2020”) on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:58Z",
+   "target": "f14086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It was that day that a University of Minnesota student, Johnny Campbell, got up from the seats and took the field in order to lead the student body in a chant",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:40:00Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Climbing made its Olympic debut at Tokyo 2020",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:40:02Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "sport climbing was approved as a new sport for the 2020 Tokyo Olympics",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:40:04Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Competition climbing made its Olympic debut at the 2020 Summer Olympics in Tokyo",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:31.740Z",
+   "target": "f14086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It was that day that a University of Minnesota student, Johnny Campbell, got up from the seats and took the field in order to lead the student body in a chant",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:31.740Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Climbing made its Olympic debut at Tokyo 2020",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:31.740Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "sport climbing was approved as a new sport for the 2020 Tokyo Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:31.740Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Competition climbing made its Olympic debut at the 2020 Summer Olympics in Tokyo",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:31.740Z",
+   "target": "f14086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It was that day that a University of Minnesota student, Johnny Campbell, got up from the seats and took the field in order to lead the student body in a chant:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Johnny Campbell” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:31.740Z",
+   "target": "f14087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Best of Sport Climbing at Tokyo 2020 | World Climbing",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tokyo 2020” is on the snapshot of s9"
+  }
+ ]
+}

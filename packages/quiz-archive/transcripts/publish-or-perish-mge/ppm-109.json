@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-109",
+ "image": "IMG20261022154418.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Engineering and Invention",
+   "cardText": "[Engineering and Invention] Why are some springs made from square metal?\nA. To fit into square spaces\nB. To reduce manufacturing costs\nC. To enhance load-bearing capacity\nAnswer: C. The flat sides of the square wire provide more surface contact, resulting in a spring that can handle greater loads and resist deformation better.",
+   "de": "Was gewinnt eine Schraubenfeder aus Vierkantdraht gegenüber einer aus Runddraht im gleichen Bauraum?",
+   "en": "What does a coil spring wound from square wire gain over one of round wire in the same space?",
+   "reworked": true,
+   "answerDe": "Höhere Tragfähigkeit (mehr Kraft)",
+   "answerEn": "Greater load-bearing capacity (more force)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1676",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Robert Hooke first states his law of springs, 'as the extension, so the force', as a Latin anagram",
+    "labelDe": "Robert Hooke formuliert sein Federgesetz „wie die Dehnung, so die Kraft“ erstmals als lateinisches Anagramm"
+   },
+   "source": {
+    "url": "https://www.centuryspring.com/resources/square-and-rectangular-springs",
+    "title": "Square and Rectangular Springs – Century Spring",
+    "lang": "en"
+   },
+   "notes": "Card's answer is right but its explanation is off: the gain comes from the larger cross-section (more steel in the same envelope, storing more energy per deflection — 'more force in less space'), not from surface contact; the flat sides mainly give a stable bearing area against buckling (Century Spring). Timeline: Hooke's law (Wikipedia, Hooke's law), as the spring has no date of its own.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 2,
+   "discipline": "Physiology and Anatomy",
+   "cardText": "[Physiology and Anatomy] What are the gaps between nerve cells called?\nA. Axons B. Dendrites C. Synapses\nAnswer: C. Synapses are the small gaps between nerve cells (neurons). They play a crucial role in transmitting signals from one neuron to another, facilitating neural communication throughout the nervous system.",
+   "de": "Wie heißen die Verbindungsstellen zwischen Nervenzellen, an denen Signale von einem Neuron zum nächsten übertragen werden?",
+   "en": "What are the junctions between nerve cells, where signals pass from one neuron to the next, called?",
+   "reworked": true,
+   "answerDe": "Synapsen",
+   "answerEn": "Synapses",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1897",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Charles Sherrington introduces the word 'synapse' in Michael Foster's Textbook of Physiology",
+    "labelDe": "Charles Sherrington führt das Wort „Synapse“ in Michael Fosters Lehrbuch der Physiologie ein"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Synapse",
+    "title": "Synapse",
+    "lang": "en"
+   },
+   "notes": "Imprecise card: a synapse is the whole junction between neurons; the gap itself is the synaptic cleft (Wikipedia). Asked as 'junctions' to keep the answer exact.",
+   "domain": "science",
+   "sub": "biology"
+  }
+ ]
+}

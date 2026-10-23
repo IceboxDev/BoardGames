@@ -1,0 +1,334 @@
+{
+ "article": "a1037",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Frisbee",
+   "title": "Frisbee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:30.417Z",
+   "snapshot": "ff3a53975b2aa6cb08cf23e2793927f6f79dd6a0db6a720dc27254787de4314a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Skeet_shooting",
+   "title": "Skeet shooting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:46.567Z",
+   "snapshot": "82a1b6498aa5c5fce0e861c3ef4c0ec6755bae38a83a38dbcfd793addd665411"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Keirin",
+   "title": "Keirin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:47.577Z",
+   "snapshot": "b16935be479e03e425b7078fba4b4b53c03e8a74611bd3c2878d5b354b5f96f5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mogul_skiing",
+   "title": "Mogul skiing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:48.571Z",
+   "snapshot": "7b2d94ed673b2803dc9c9560de5b42737ebb96285f35c7e15be3f5b52e141ff9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Freestyle_skiing",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:49.626Z",
+   "snapshot": "30c7afc4716a64dc69eed3ad3a3f688077afeaf140771c535d534369f45f7385"
+  },
+  "s6": {
+   "url": "https://www.olympedia.org/sports/CTR",
+   "title": "Cycling Track",
+   "publisher": "Olympedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:23.318Z",
+   "snapshot": "d8efb52c223c6376527aa6b596572e55cd7249853e21c0d6eab9886065ea9c3f"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Track_bicycle",
+   "title": "Track bicycle",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:22.758Z",
+   "snapshot": "29c1b61e3b82f4e8c8488e358752b82b796f39835e48ecf7fa812ef1a758f6de"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frisbee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "shotgun",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "track bicycle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "skis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:23.526Z",
+   "target": "f05181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A  frisbee (pronounced  FRIZ-bee), also called a flying disc or simply a disc, is a gliding toy or sporting item generally made of injection-molded plastic and roughly 20 to 25 centimetres (8 to 10 in) in diameter with a pronounced lip.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frisbee” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:23.526Z",
+   "target": "f05182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The firearm of choice for this task is usually a high-quality, double-barreled over and under shotgun with 24- to 32-inch barrels and very open chokes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “shotgun” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:23.526Z",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "track bicycle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“track bicycle”, “Bahnrad”, “трековый велосипед”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:23.526Z",
+   "target": "f05185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Internationally, the sport is contested at the FIS Freestyle World Ski Championships, and at the Winter Olympic Games.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ski” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:47:18Z",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "they now compete in six track disciplines – the sprint, team sprint, team pursuit, keirin, Madison, and omnium",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:47:19Z",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the track bike is a fixed-gear bicycle ; thus, it has only a single gear ratio and has neither a freewheel nor brakes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23",
+   "note": "quote spacing as rendered around the link"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:06:17Z",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the track bike is a fixed-gear bicycle; thus, it has only a single gear ratio and has neither a freewheel nor brakes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:58.240Z",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "they now compete in six track disciplines – the sprint, team sprint, team pursuit, keirin, Madison, and omnium",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:58.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:58.240Z",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the track bike is a fixed-gear bicycle; thus, it has only a single gear ratio and has neither a freewheel nor brakes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:58.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:58.240Z",
+   "target": "f05184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A track bicycle or track bike is a bicycle optimized for racing at a velodrome or outdoor track.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:58.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “track bicycle” is on the snapshot of s7"
+  }
+ ]
+}

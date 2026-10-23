@@ -1,0 +1,451 @@
+{
+ "article": "a0236",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard",
+   "title": "Søren Kierkegaard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:25.407Z",
+   "snapshot": "2df71edc439466b76399c9798c83822179fc2f8657d77603e4d8beee9bd5f71e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Immanuel_Kant",
+   "title": "Immanuel Kant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:26.283Z",
+   "snapshot": "ff46395601755a2d7f25710d13a2c17b158356985754fb4e5e515f15089ddcb1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Phenomenology_of_Spirit",
+   "title": "The Phenomenology of Spirit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:27.310Z",
+   "snapshot": "254f8b914285feb79e02408e048adc3d35035db67459b398cc2b215c63013281"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_World_as_Will_and_Representation",
+   "title": "The World as Will and Representation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:28.265Z",
+   "snapshot": "753383bedec482b6881fcf294b54204be6fb668bdf628c40dae9111a41e7d0e8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra",
+   "title": "Thus Spoke Zarathustra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:29.185Z",
+   "snapshot": "a6a5f93d7fab75c2b88ac01563c14611a3d86fa642f3a3985958ad3e7068ea57"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Stuttgart",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:30.217Z",
+   "snapshot": "adcf7b2c650910179c6f97fe8a518f7f48aa80c7faf3413ca5355dab7fb73058"
+  },
+  "s7": {
+   "url": "https://plato.stanford.edu/entries/kierkegaard/",
+   "title": "Søren Kierkegaard",
+   "publisher": "Stanford Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:42.891Z",
+   "snapshot": "af31840fc7ce3ec1f566b68b95c12f3b106ee01b827b71c4faf0b4f748d15a16"
+  },
+  "s8": {
+   "url": "https://da.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard",
+   "title": "Søren Kierkegaard",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:31:42.403Z",
+   "snapshot": "73c6293c88093b435022fce5aad47c278cc0f0092cea9562bd53197c7b8d3bd3"
+  },
+  "s9": {
+   "url": "https://iep.utm.edu/kierkega/",
+   "title": "Kierkegaard, Søren",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:42.925Z",
+   "snapshot": "f889b8600f71bedc90f31f47e436a63b0b80a9c6e94d3adb4815cbe8e62c02c3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Søren Kierkegaard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Immanuel Kant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01178",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georg Wilhelm Friedrich Hegel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arthur Schopenhauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Friedrich Nietzsche",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:17.070Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Repetition is about a Young Man (Søren Kierkegaard) who has anxiety and depression because he feels he has to sacrifice his love for a girl (Regine Olsen) to God.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Søren Kierkegaard” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:17.070Z",
+   "target": "f01177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Immanuel Kant (born Emanuel Kant; 22 April 1724 – 12 February 1804) was a German philosopher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:17.070Z",
+   "target": "f01178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Phenomenology of Spirit (German: Phänomenologie des Geistes) is an 1807 book by the German philosopher Georg Wilhelm Friedrich Hegel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Wilhelm Friedrich Hegel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:17.070Z",
+   "target": "f01179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The World as Will and Representation (WWR; German: Die Welt als Wille und Vorstellung), sometimes translated as The World as Will and Idea, is the central work of the German philosopher Arthur Schopenhauer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Schopenhauer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:17.070Z",
+   "target": "f01180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thus Spoke Zarathustra: A Book for All and None (German: Also sprach Zarathustra: Ein Buch für Alle und Keinen), also translated as Thus Spake Zarathustra, is a work of philosophical fiction written by German philosopher Friedrich Nietzsche and published in four volumes between 1883 and 1885.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Nietzsche” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:12:14Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Anne (Lund) Kierkegaard in Copenhagen on 5 May 1813",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:12:15Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kierkegaard regnes ofte for at være den største danske filosof.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "de.wikipedia likewise: 'Kierkegaard gilt als der führende dänische Philosoph'."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:12:17Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Søren Kierkegaard (1813—1855)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:35.733Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Anne (Lund) Kierkegaard in Copenhagen on 5 May 1813",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:35.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:35.733Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kierkegaard regnes ofte for at være den største danske filosof.",
+     "quoteLang": "da",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:35.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:35.733Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Søren Kierkegaard (1813—1855)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:35.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:35.733Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Søren Kierkegaard (Stanford Encyclopedia of Philosophy)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:35.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Søren Kierkegaard” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:35.733Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Søren Kierkegaard har haft en dyb og vedvarende indflydelse på dansk filosofi og teologi.",
+     "quoteLang": "da",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:35.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Søren Kierkegaard” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:35.733Z",
+   "target": "f01176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Søren Kierkegaard is an outsider in the history of philosophy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:35.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Søren Kierkegaard” is on the snapshot of s9"
+  }
+ ]
+}

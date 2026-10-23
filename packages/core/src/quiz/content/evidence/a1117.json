@@ -1,0 +1,242 @@
+{
+ "article": "a1117",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/La_Cucaracha",
+   "title": "La Cucaracha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:46.083Z",
+   "snapshot": "eda4aa1911bb0105b71071ddb56e74beb779cbf56fba606b2befa51f02ff1a2a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cielito_Lindo",
+   "title": "Cielito Lindo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:47.202Z",
+   "snapshot": "8af1e8a8803d4d1b5f559e069e48fbcc9d4d749637850b369d7171668f3acab1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/La_Adelita",
+   "title": "La Adelita – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:48.121Z",
+   "snapshot": "9c7374b6282c78b46c560d0f8add51f21cabad7ba9f4f6b4b56fd545428c7997"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/La_Bamba_(song)",
+   "title": "La Bamba (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:49.147Z",
+   "snapshot": "223c2ac09e93ff5832f4b5ae4a5805c7737ff3b6930fe91934ecef966204ba22"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Las_Ma%C3%B1anitas",
+   "title": "Las Mañanitas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:50.154Z",
+   "snapshot": "d1247bc2278ca2b6c74e60e54824109e6a70925f41ba66cb101d550747fe7a57"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La Cucaracha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c094"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cielito Lindo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "La Adelita",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La Bamba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Las Mañanitas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:35.577Z",
+   "target": "f05581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"La Cucaracha\" (Spanish pronunciation: [la kukaˈɾatʃa], \"The Cockroach\") is a popular folk song about a cockroach that cannot walk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La Cucaracha” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:35.577Z",
+   "target": "f05582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Cielito Lindo\" (roughly translated as \"Lovely Sweet One\") is a Mexican folk song or copla popularized in 1882 by Mexican author Quirino Mendoza y Cortés (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cielito Lindo” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:35.577Z",
+   "target": "f05583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"La Adelita\" is one of the most famous corridos of the Mexican Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La Adelita” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:35.577Z",
+   "target": "f05584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"La Bamba\" (pronounced [la ˈβamba]) is a Mexican folk song, originally from the state of Veracruz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La Bamba” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:35.577Z",
+   "target": "f05585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Las Mañanitas\" (Spanish pronunciation: [las maɲaˈnitas]) is a traditional Mexican birthday song written by Mexican composer Alfonso Esparza Oteo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Las Mañanitas” is on the snapshot of s5"
+  }
+ ]
+}

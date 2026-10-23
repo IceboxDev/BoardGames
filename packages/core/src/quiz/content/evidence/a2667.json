@@ -1,0 +1,460 @@
+{
+ "article": "a2667",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ramadan",
+   "title": "Ramadan",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:58.866Z",
+   "snapshot": "24aa667bf8a935a74c2d47aa05efcc4e8c5d704ccf9a35841b620b2e80a55336"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Islamic_calendar",
+   "title": "Islamic calendar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:54.243Z",
+   "snapshot": "ad8a64c844d207605113bde042c4c6f676da9c7e51332fd416f5d23f446484f3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Eid_al-Fitr",
+   "title": "Eid al-Fitr – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:55.335Z",
+   "snapshot": "6de9c972766e9939b9f9b4e42d0d7da7b9b432cd0786b7cc1953ae51343c1ce2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hajj",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:02.081Z",
+   "snapshot": "a70122a6a845b8aa5612fe166b779e28b0cfd5ecaf99806a75e0f49281af49ba"
+  },
+  "s5": {
+   "url": "https://www.bbc.co.uk/religion/religions/islam/practices/hajj_1.shtml",
+   "title": "Islam: Hajj: pilgrimage to Mecca",
+   "publisher": "BBC",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:22.392Z",
+   "snapshot": "545df89eebbd0ddc316abe05147a56e85d5284a135f4d030fcb0221eb3d3b66a"
+  },
+  "s6": {
+   "url": "https://donate.islamicreliefcanada.org/resources/hajj-in-islam",
+   "title": "Hajj in Islam",
+   "publisher": "Islamic Relief Canada",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:23.183Z",
+   "snapshot": "00742eb76df4a4a5eb5127adab8ddb09f288a18dfebff342de2736420a02b03c"
+  },
+  "s7": {
+   "url": "https://religionfacts.com/islam/calendar",
+   "title": "Islamic Calendar",
+   "publisher": "ReligionFacts",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:23.967Z",
+   "snapshot": "eadaba66b346d795918527dfb5e175989dbc3e48a599bd8106533ffe11469282"
+  },
+  "s8": {
+   "url": "https://sk.sagepub.com/ency/edvol/embed/time/chpt/calendar-islamic",
+   "title": "Calendar, Islamic — Encyclopedia of Time",
+   "publisher": "SAGE Reference",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:25.366Z",
+   "snapshot": "bdf1564b31cea1772be49c158773274a901b152fecf877e567735ddf6203660e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ramadan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-214"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Muharram",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dhu al-Hijjah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shawwal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "354",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:55.541Z",
+   "target": "f14462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Ramadan (arabisch رمضان, DMG ramaḍān ‚heißer Monat‘) ist der Fastenmonat der Muslime und neunter Monat des islamischen Mondkalenders.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ramadan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:55.541Z",
+   "target": "f14463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The forbidden months were four months during which fighting is forbidden, listed as Rajab and the three months around the pilgrimage season, Dhu'l-Qa'da, Dhu'l-Hijja, and Muharram.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Muharram” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:55.541Z",
+   "target": "f14464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dhu al-Hijjah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dhu al-Hijjah”, “Dhu l-Hiddscha”, “Зу-ль-хиджа”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:55.541Z",
+   "target": "f14465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The holiday falls on the first day of Shawwal, the tenth month of the Islamic calendar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shawwal” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:55.541Z",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The (lunar) Hijri calendar (Arabic: ٱلتَّقْوِيم ٱلْهِجْرِيّ, romanized: al-taqwīm al-hijrī), also known in English as the Islamic calendar or Muslim calendar, is a lunar calendar consisting of 12 lunar months in a year of 354 or 355 days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “354” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:55:53Z",
+   "target": "f14464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It occurs in the month of Dhul Hijjah which is the twelfth month of the Islamic lunar calendar.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:55:55Z",
+   "target": "f14464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hajj occurs in the 12th month of the Islamic lunar calendar, called Dhul Hijjah, between the eighth and 13th days of the month.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:55:57Z",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Each month contains 29 or 30 days each, for a total of 354 days per year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:56:00Z",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Islamic or Hijri calendar has 354 days in a year, divided into 12 lunar months of either 29 or 30 days",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:41.179Z",
+   "target": "f14464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It occurs in the month of Dhul Hijjah which is the twelfth month of the Islamic lunar calendar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:41.179Z",
+   "target": "f14464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hajj occurs in the 12th month of the Islamic lunar calendar, called Dhul Hijjah, between the eighth and 13th days of the month.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:41.179Z",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Each month contains 29 or 30 days each, for a total of 354 days per year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:41.179Z",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Islamic or Hijri calendar has 354 days in a year, divided into 12 lunar months of either 29 or 30 days",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:41.179Z",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Each month contains 29 or 30 days each, for a total of 354 days per year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “354” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:41.179Z",
+   "target": "f14466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Islamic or Hijri calendar has 354 days in a year, divided into 12 lunar months of either 29 or 30 days (29.5 days is the time taken by the moon to complete a full circle around the earth).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “354” is on the snapshot of s8"
+  }
+ ]
+}

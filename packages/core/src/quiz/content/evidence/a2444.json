@@ -1,0 +1,289 @@
+{
+ "article": "a2444",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kilgore_Trout",
+   "title": "Kilgore Trout",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:39.980Z",
+   "snapshot": "2c03f17a994c27e2279b4783a2695dbf4b36774aa0cf54f751e190dd1f8adee1"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ausl%C3%B6schung_(VanderMeer)",
+   "title": "Auslöschung (VanderMeer)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:37.397Z",
+   "snapshot": "846cdca55c35fce3bd183cb5787627b424da6e58e0a75d1c9e36c4fad3e2b73b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Slaughterhouse-Five",
+   "title": "Slaughterhouse-Five – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:18.502Z",
+   "snapshot": "17943567ba48370b205699e8d700bc00f7717c6d9fec79fae68e17e12a4ddf32"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Left_Hand_of_Darkness",
+   "title": "The Left Hand of Darkness – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:41.156Z",
+   "snapshot": "ecd42740a19b98c274caff471202416a75b2cc66824e7819f14d042fffa588e7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Do_Androids_Dream_of_Electric_Sheep%3F",
+   "title": "Do Androids Dream of Electric Sheep? – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:14.445Z",
+   "snapshot": "56ff29c1e7e46297c875bb83f647f5c2d4a17fe1a7b8e6d51650a2c537062a89"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Annihilation_(VanderMeer_novel)",
+   "title": "Annihilation (VanderMeer novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:42.069Z",
+   "snapshot": "a45ed53c0afe6c046aeff39d2033427a76782ee6f88bb0997f603a5d3f750a87"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kilgore Trout",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-043"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Auslöschung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-034"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tralfamadore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gethen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Do Androids Dream of Electric Sheep?",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Area X",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:21.189Z",
+   "target": "f12859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kilgore Trout is a fictional character created by author Kurt Vonnegut (1922–2007).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kilgore Trout” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:21.189Z",
+   "target": "f12860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Auslöschung (Originaltitel Annihilation) ist ein 2014 erschienener Roman von Jeff VanderMeer.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auslöschung” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:21.189Z",
+   "target": "f12861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Billy believes that an extraterrestrial species from the planet Tralfamadore held him captive in an alien zoo and that he has experienced time travel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tralfamadore” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:21.189Z",
+   "target": "f12862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The novel follows the story of Genly Ai, a human native of Terra, who is sent to the planet of Gethen as an envoy of the Ekumen, a loose confederation of planets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gethen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:21.189Z",
+   "target": "f12863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Do Androids Dream of Electric Sheep? (retrospectively titled Blade Runner: Do Androids Dream of Electric Sheep?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Do Androids Dream of Electric Sheep?” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:21.189Z",
+   "target": "f12864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The novel follows a team of four women who are sent into a government-managed, uninhabited location called Area X to study and survey the land and ecosystem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Area X” is on the snapshot of s6"
+  }
+ ]
+}

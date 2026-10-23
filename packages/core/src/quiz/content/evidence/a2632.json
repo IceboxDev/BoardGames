@@ -1,0 +1,713 @@
+{
+ "article": "a2632",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Dosen%C3%B6ffner",
+   "title": "Dosenöffner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:19.784Z",
+   "snapshot": "e4f0de0dd10a62f29e9c5ab2961de21a8a0097c02b515a9439e0e15f8bf7b90d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tin_can",
+   "title": "Tin can – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:21.167Z",
+   "snapshot": "c52aa03988355b4349f542c80bb4e31e8ec78bf237e1596086fb6383c7ca60c9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nicolas_Appert",
+   "title": "Nicolas Appert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:22.051Z",
+   "snapshot": "3fa42a75a7906a588941c4f52c22b348402a6037e23f9ec15f6810387a1073ac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Can_opener",
+   "title": "Can opener – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:23.053Z",
+   "snapshot": "6c1fa5c35e94d10475900e481c225a696b3398b459f3fdd1ca2d2eb183e2273a"
+  },
+  "s5": {
+   "url": "https://artsandculture.google.com/story/the-history-of-the-can-opener-museo-del-pomodoro/EAUxTv3nPqXlLQ",
+   "title": "The History of the Can Opener",
+   "publisher": "Museo del Pomodoro (Musei del Cibo di Parma) on Google Arts & Culture",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:59.151Z",
+   "snapshot": "14d02b51304c1f2ecdd8a72a01f7ebe27cae6ce87224a7de0ba06b6e18829bc1"
+  },
+  "s6": {
+   "url": "https://www.gracesguide.co.uk/Peter_Durand",
+   "title": "Peter Durand",
+   "publisher": "Grace's Guide to British Industrial History",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:58.834Z",
+   "snapshot": "174060fdb9d0b84f3bb5699f8fa53680c4b9d329025ae33e84b8733b0297eccd"
+  },
+  "s7": {
+   "url": "https://www.gracesguide.co.uk/Bryan_Donkin",
+   "title": "Bryan Donkin (1768-1855)",
+   "publisher": "Grace's Guide to British Industrial History",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:59.967Z",
+   "snapshot": "79c178be3b4d241076dcc7e780125984293ad44d852daeb2f4ee878e0b9d5a09"
+  },
+  "s8": {
+   "url": "https://patents.google.com/patent/US19063A/en",
+   "title": "US19063A – Instrument for opening cans (E. J. Warner, 1858)",
+   "publisher": "USPTO via Google Patents",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:00.529Z",
+   "snapshot": "06f9663caa49bf73f2b764cbf52727438363e50877430c3a52240f2602950913"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "45 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peter Durand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nicolas Appert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bryan Donkin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ezra Warner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:49.484Z",
+   "target": "f14242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "45 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“45 Jahre”, “45 years”, “45 лет”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:49.484Z",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frenchman Philippe de Girard, had British merchant Peter Durand obtain an English patent for the process in 1810.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Durand” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:49.484Z",
+   "target": "f14244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nicolas Appert (17 November 1749 – 1 June 1841) was a French confectioner and inventor who, in the early 19th century, invented airtight food preservation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicolas Appert” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:49.484Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Durand did not pursue food canning, but, in 1812, sold his patent to two Englishmen, Bryan Donkin and John Hall, who refined the process and product, and set up the world's first commercial canning factory on Southwark Park Road, London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bryan Donkin” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:49.484Z",
+   "target": "f14246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1858, another lever-type opener of a more complex shape was patented in the United States by Ezra Warner of Waterbury, Connecticut, US.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ezra Warner” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:35:30Z",
+   "target": "f14242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter Durand business owner (1766-1822) is remembered for having patented in England, in 1810, a system to produce tinned metal boxes suitable for food storage.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "1810 tin-can patent; the same page dates the first can-opener patent to 13 July 1855 (Yates) -> 45 years"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:35:32Z",
+   "target": "f14242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In England Robert Yates, a cutlery and surgical instruments manufacturer from Middlesex, patented the first can opener in history on July 13 1855 (UK Patent 1.577).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "1855 - 1810 = 45 years; counting to Warner's 1858 US patent gives 48, an alternative some trivia sources use"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:35:34Z",
+   "target": "f14242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1810, 25th August: Patent granted to Peter Durand of Hoxton Square, London, for a method of preserving food by heating and sealing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the 1810 end of the 45-year span"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:35:37Z",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1810, 25th August: Patent granted to Peter Durand of Hoxton Square, London, for a method of preserving food by heating and sealing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:35:38Z",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter Durand business owner (1766-1822) is remembered for having patented in England, in 1810, a system to produce tinned metal boxes suitable for food storage.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:35:40Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "sold it to Bryan Donkin and John Hall (of Dartford) , who in 1812 started a canning factory",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:35:42Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Donkin , Hall , and Gamble formed a business to acquire the English patent on canning from Peter Durand ; Donkin was in charge of developing the process at Bermondsey.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:35:44Z",
+   "target": "f14246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "EZRA J. WARNER, OF VATERBURY, CONNECTICUT",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "OCR of the 1858 patent text (VATERBURY = Waterbury); Letters Patent No. 19,063 dated 5 Jan 1858, 'Instrument for opening cans'"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:35:46Z",
+   "target": "f14246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ezra J. Warner, resident in Waterbury, Connecticut, who on January 5 1858 patented the first can opener in the USA",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:48:29Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "sold it to Bryan Donkin and John Hall (of Dartford), who in 1812 started a canning factory",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted without stray spaces"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:48:31Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Donkin, Hall, and Gamble formed a business to acquire the English patent on canning from Peter Durand; Donkin was in charge of developing the process at Bermondsey.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted without stray spaces; Bermondsey lies in Southwark"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In England Robert Yates, a cutlery and surgical instruments manufacturer from Middlesex, patented the first can opener in history on July 13 1855 (UK Patent 1.577).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1810, 25th August: Patent granted to Peter Durand of Hoxton Square, London, for a method of preserving food by heating and sealing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1810, 25th August: Patent granted to Peter Durand of Hoxton Square, London, for a method of preserving food by heating and sealing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter Durand business owner (1766-1822) is remembered for having patented in England, in 1810, a system to produce tinned metal boxes suitable for food storage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "EZRA J. WARNER, OF VATERBURY, CONNECTICUT",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ezra J. Warner, resident in Waterbury, Connecticut, who on January 5 1858 patented the first can opener in the USA",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "sold it to Bryan Donkin and John Hall (of Dartford), who in 1812 started a canning factory",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s6"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Donkin, Hall, and Gamble formed a business to acquire the English patent on canning from Peter Durand; Donkin was in charge of developing the process at Bermondsey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s7"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter Durand business owner (1766-1822) is remembered for having patented in England, in 1810, a system to produce tinned metal boxes suitable for food storage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Peter Durand” is on the snapshot of s5"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Peter Durand (1766-1822), patented the canning of food for presrvation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Peter Durand” is on the snapshot of s6"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He didn't exploit his patent, but sold it to Bryan Donkin and John Hall (of Dartford), who in 1812 started a canning factory the British army.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bryan Donkin” is on the snapshot of s6"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:59:34.790Z",
+   "target": "f14245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bryan Donkin (1768-1855) - Graces Guide",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bryan Donkin” is on the snapshot of s7"
+  }
+ ]
+}

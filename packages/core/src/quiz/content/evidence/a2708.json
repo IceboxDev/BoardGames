@@ -1,0 +1,303 @@
+{
+ "article": "a2708",
+ "sources": {
+  "s1": {
+   "url": "https://en.wiktionary.org/wiki/%E4%BB%8A%E6%97%A5%E3%81%AF",
+   "title": "今日は – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:13.545Z",
+   "snapshot": "b75b25f9e44e943ae03f96ae18f59f27f759045c7cfe2efbf998de8f16fb9ea7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Katakana",
+   "title": "Katakana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:17.274Z",
+   "snapshot": "a0e9a264790abf4080ec022000c2d2016e691238ccfbf100a9c9d4af70bfbd74"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Man%27y%C5%8Dgana",
+   "title": "Man'yōgana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:18.340Z",
+   "snapshot": "43b846831f702aeee709f430968f3ef50c2dc92b80eac8b1874d7fd31c9d78e0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/J%C5%8Dy%C5%8D_kanji",
+   "title": "Jōyō kanji – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:19.182Z",
+   "snapshot": "9588b953d7933daf03b096c77ae30b792d871eba2ab1dea566e1562b65b803bc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hepburn_romanization",
+   "title": "Hepburn romanization – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:20.296Z",
+   "snapshot": "c2207792365f2e3798adb743b688a90498c8f04e65a33721c16ed9651ef6221d"
+  },
+  "s6": {
+   "url": "https://commons.wikimedia.org/wiki/File:Origin_of_Hiragana_from_Cursive_Kanji_Chart.png",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:17.754Z",
+   "snapshot": "42034e73870975d2efdf6a6c21f98e5fa4561595f7faae91255c8f704d7421d2",
+   "cloneOf": "wikipedia.org"
+  },
+  "s7": {
+   "url": "https://commons.wikimedia.org/wiki/File:Origin_of_Katakana_from_Kanji_Chart.png",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:18.886Z",
+   "snapshot": "c9abd3ff8579981038b4c1a9479915c326be5272a059ef26919e1c7d387fe64a",
+   "cloneOf": "wikipedia.org"
+  },
+  "s8": {
+   "url": "https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf",
+   "title": "常用漢字表（平成22年11月30日内閣告示）",
+   "publisher": "Agency for Cultural Affairs (文化庁), Government of Japan",
+   "kind": "primary",
+   "lang": "ja",
+   "retrievedAt": "2026-10-23T07:53:23Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hiragana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Katakana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Man'yōgana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "2,136",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rōmaji",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:01.072Z",
+   "target": "f25311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This term is often spelled in hiragana, as こんにちは (konnichiwa), especially as it could be otherwise interpreted as 今日(きょう) (kyō, “today”) + は (wa).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hiragana” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:01.072Z",
+   "target": "f25312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Katakana (片仮名, カタカナ; IPA: [kä̀.tä́.kä́.nä̀, -kä̀.nä̀]) is a Japanese syllabary, one component of the Japanese writing system along with hiragana, kanji and in some cases rōmaji.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Katakana” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:01.072Z",
+   "target": "f25313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Man'yōgana (万葉仮名; Japanese pronunciation: [maɰ̃joꜜːɡana] or [maɰ̃joːɡana]) is an ancient Japanese writing system that uses Chinese characters to phonetically represent Old Japanese.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Man'yōgana” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:01.072Z",
+   "target": "f25314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The current list of 2,136 characters was issued in 2010.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2,136” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:01.072Z",
+   "target": "f25315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hepburn (Japanese: ヘボン式ローマ字, romanized: Hebon-shiki rōmaji, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rōmaji” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:53:23Z",
+   "target": "f25314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "「本表」には，字種 2136 字を掲げ，字体，音訓，語例等を併せ示した。",
+     "quoteLang": "ja",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "The official jōyō kanji table (Cabinet Notice No. 2 of 30 Nov 2010) lists 2,136 characters."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:53:25Z",
+   "target": "f25314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The current list of 2,136 characters was issued in 2010.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  }
+ ]
+}

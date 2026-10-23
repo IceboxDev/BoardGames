@@ -1,0 +1,202 @@
+{
+ "article": "a1957",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Georg_B%C3%BCchner",
+   "title": "Georg Büchner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:03.578Z",
+   "snapshot": "2c88d4aa7768b7182c3d188125fabc70cf62ac799c7d8f1ab7cd83e58af6c191"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Heinrich_von_Kleist",
+   "title": "Heinrich von Kleist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:18.924Z",
+   "snapshot": "884a0ac08d9abac264fe3a6766c77bc71dc47aaa6cfc57c4198a78085c0693f8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spring_Awakening_(play)",
+   "title": "Spring Awakening (play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:04.597Z",
+   "snapshot": "489dc51f9aafd395e645f8ddac7d42edda0c6a031decfef758b83c14f2cab708"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_Schiller",
+   "title": "Friedrich Schiller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:02.097Z",
+   "snapshot": "b61f43932390f4f276e4310c3e18afe4503641f8ade2ae3c6f7e251190ac0185"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Woyzeck",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:05.604Z",
+   "snapshot": "1e26923c8db29d51c1197b17b2446c70d7670922f00ab49c605af9dd8458d7ee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09781",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Georg Büchner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09782",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Heinrich von Kleist",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09784",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Frank Wedekind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09785",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedrich Schiller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:53.353Z",
+   "target": "f09781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl Georg Büchner (17 October 1813 – 19 February 1837) was a German dramatist and writer of poetry and prose, considered part of the Young Germany movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Büchner” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:53.353Z",
+   "target": "f09782",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Heinrich von Kleist stand als „Außenseiter im literarischen Leben seiner Zeit […] jenseits der etablierten Lager“ und der Literaturepochen der Weimarer Klassik und der Romantik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich von Kleist” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:53.353Z",
+   "target": "f09784",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spring Awakening (German: Frühlings Erwachen) (also translated as Spring's Awakening and The Awakening of Spring) is the German dramatist Frank Wedekind's first major play and a foundational work in the modern history of theatre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank Wedekind” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:53.353Z",
+   "target": "f09785",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johann Christoph Friedrich Schiller, ab 1802 von Schiller (* 10.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Schiller” is on the snapshot of s4"
+  }
+ ]
+}

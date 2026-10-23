@@ -1,0 +1,423 @@
+{
+ "article": "a1999",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Beate_Uhse",
+   "title": "Beate Uhse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:21.522Z",
+   "snapshot": "f73c01a5496cf6ecc8616ac0b135ba1495dbc25a16702e8ff56a9b5294b33919"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Margarete_Steiff",
+   "title": "Margarete Steiff – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:22.386Z",
+   "snapshot": "6da7d6bf5bb329229b87c92d304509dcd375ba55d79d70df93234de9d4352f3b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Melitta_Bentz",
+   "title": "Melitta Bentz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:10:47.235Z",
+   "snapshot": "28847cb60f892e05fcb8b643dcc06debb3fe0084ad0da74dc194054b854f2de8"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Otto_Group",
+   "title": "Otto Group – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:42.585Z",
+   "snapshot": "feac7a61d97a273a8b7d25d81eafa7b78823628ee024aae8263b49e73e9d53a6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Adidas",
+   "title": "Adidas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:23.480Z",
+   "snapshot": "342c764ee84fa1b830b55209732e2f6af756e2fd517d3adce59b7b4a40c9b2fc"
+  },
+  "s6": {
+   "url": "https://www.horizont.net/medien/nachrichten/-Versandhausgruender-Werner-Otto-ist-gestorben-104695",
+   "title": "Versandhausgründer Werner Otto ist gestorben",
+   "publisher": "Horizont",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:53.542Z",
+   "snapshot": "adbcdf4baf7f0d89c8dbb6037c1870e417637bab95ba3bda564a9288dccc166f"
+  },
+  "s7": {
+   "url": "https://www.unternehmeredition.de/unternehmer-legende-werner-otto-verstorben/",
+   "title": "Unternehmer-Legende Werner Otto verstorben",
+   "publisher": "Unternehmeredition",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:54.669Z",
+   "snapshot": "c720099401b58353c542ac77b8379179db61729ac2743b51531e212582d90763"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Werner_Otto_(entrepreneur)",
+   "title": "Werner Otto (entrepreneur)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:53.795Z",
+   "snapshot": "7406693d00c627c03384c28ee5d1e226f30352297f519af15a1eec832d1d866d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Beate Uhse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c167; transcript tp-248"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Margarete Steiff",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Melitta Bentz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Werner Otto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adolf Dassler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:02.976Z",
+   "target": "f09991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die börsennotierte Beate Uhse AG war ein Marktteilnehmer im erotischen Zubehörhandel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.976Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beate Uhse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:02.976Z",
+   "target": "f09992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Margarete Steiff wurde als drittes von vier Kindern der Eheleute Friedrich (1816–1894) und Maria Margarete Steiff (geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.976Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Margarete Steiff” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:02.976Z",
+   "target": "f09993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Melitta Bentz war die Tochter des Dresdner Verlagsbuchhändlers Karl Liebscher.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.976Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Melitta Bentz” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:02.976Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Im August 1949 gründete der 40-jährige Werner Otto in Hamburg-Schnelsen das Unternehmen Werner Otto Versandhandel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.976Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Werner Otto” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:02.976Z",
+   "target": "f09995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rudolf Dassler, der versierte Geschäftsmann, war der Extrovertiertere der beiden; Schuhmachermeister Adolf Dassler dagegen war eher introvertiert und handwerklich begabter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.976Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adolf Dassler” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:28:51Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aus diesem ging die Otto Group hervor, das heute größte Versandhandelsunternehmen der Welt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:28:55Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "gründete er 1949 mit den verbleibenden Fabrikhallen und 6.000 DM Startkapital den Versandhandel Otto",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:28:59Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1949, he founded the Otto Group, which eventually became the world's largest mail order group.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:50.506Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "gründete er 1949 mit den verbleibenden Fabrikhallen und 6.000 DM Startkapital den Versandhandel Otto",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:50.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:50.506Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1949, he founded the Otto Group, which eventually became the world's largest mail order group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:50.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:50.506Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Versandhausgründer Werner Otto ist gestorben - HORIZONT",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:50.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Werner Otto” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:50.506Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Unternehmer-Legende Werner Otto verstorben - Unternehmeredition.de",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:50.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Werner Otto” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:50.506Z",
+   "target": "f09994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Werner Otto (13 August 1909 – 21 December 2011) was a German entrepreneur.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:50.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Werner Otto” is on the snapshot of s8"
+  }
+ ]
+}

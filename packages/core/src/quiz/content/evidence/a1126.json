@@ -1,0 +1,725 @@
+{
+ "article": "a1126",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Anders_Jonas_%C3%85ngstr%C3%B6m",
+   "title": "Anders Jonas Ångström – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:21.197Z",
+   "snapshot": "e72012f7fae1ee5210a9e46749e284a563f2614da1a3390771f9dda9c6c91e80"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sonne",
+   "title": "Sonne",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:18.575Z",
+   "snapshot": "64227a7e7422a8706a1b4faadf68e775d6ef6c4b4f6bf49898ba299eeef620e3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sun",
+   "title": "Sun",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:22.330Z",
+   "snapshot": "c603e4478faf903127f609f5c15223461f8aa2d358ba5805920faea71ebd2efb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Helium",
+   "title": "Helium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:12.245Z",
+   "snapshot": "32a6e81d98a0a6e7a8128fcd35ea5604658f3924dccaf6da4ccf44b90270d983"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Great_Oxidation_Event",
+   "title": "Great Oxidation Event – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:23.247Z",
+   "snapshot": "8a7f439376a9549fbd7a2b6d320365efc3bdbaf11627f36c75c702a74a57ec01"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Richard_Dixon_Oldham",
+   "title": "Richard Dixon Oldham – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:24.142Z",
+   "snapshot": "533de5330c0add6fdb0eaa42c669ebd4165b6c3070c865b6a3d26e51142e84f1"
+  },
+  "s7": {
+   "url": "https://solar-center.stanford.edu/FAQ/Qcomposition.html",
+   "title": "What is the Sun made of?",
+   "publisher": "Stanford SOLAR Center",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:07.213Z",
+   "snapshot": "fd41fc846160d2ed82fafd782345769f68c86a33983a0eb18b9176856387b115"
+  },
+  "s8": {
+   "url": "https://openstax.org/books/astronomy-2e/pages/15-1-the-structure-and-composition-of-the-sun",
+   "title": "15.1 The Structure and Composition of the Sun – Astronomy 2e",
+   "publisher": "OpenStax (Rice University)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:06.972Z",
+   "snapshot": "b7a66caae09d29f76d323017c19a631e7e41a274985b666a127d803f1c88cb51"
+  },
+  "s9": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+   "title": "Earth Fact Sheet",
+   "publisher": "NASA Goddard Space Flight Center (NSSDCA)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.376Z",
+   "snapshot": "97edc601d43f7cd9ab0826e96760dade7ff1826c84387655430da22533f32f0e"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Earth",
+   "title": "Earth – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:07:22Z"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
+   "title": "Atmosphere of Earth – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:15:31Z"
+  },
+  "s12": {
+   "url": "https://www.newworldencyclopedia.org/entry/Earth",
+   "title": "Earth – New World Encyclopedia",
+   "publisher": "New World Encyclopedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:07.504Z",
+   "snapshot": "b7fcf467b777b7cc211d8f13f562846e1c702d5c5091a84a521cd4b5a3c8c872"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "hydrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c094"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wasserstoff",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-034"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "hydrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-084"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "helium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "oxygen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "iron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:36.625Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "His combination of the spectroscope with photography for the study of the Solar System resulted in proving that the Sun's atmosphere contains hydrogen, among other elements (1862), and in 1868 he published his great map of the normal solar spectrum in Recherches sur le spectre solaire, including",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hydrogen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:36.625Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die durch die Sonnenstrahlung freigesetzte Energie beruht auf der Kernfusion von Wasserstoff zu Helium, das sogenannte Wasserstoffbrennen in der Proton-Proton-Reaktion.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wasserstoff” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:36.625Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The mass of the Sun's surface layer, its photosphere, consists mostly of hydrogen (~73%) and helium (~25%), with much smaller quantities of heavier elements, including oxygen, carbon, neon, and iron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hydrogen” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:36.625Z",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helium (from Ancient Greek: ἥλιος, romanized: helios, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “helium” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:36.625Z",
+   "target": "f05629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Great Oxidation Event (GOE) or Great Oxygenation Event, also called the Oxygen Catastrophe, Oxygen Revolution, Oxygen Crisis, or Oxygen Holocaust, was a time interval during the Earth's Paleoproterozoic era when the Earth's atmosphere and shallow seas first experienced a rise in the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oxygen” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:36.625Z",
+   "target": "f05630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "iron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“iron”, “Eisen”, “железо”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:07:06Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Principal Chemical Constituents by number of atoms: Hydrogen 92.1 %",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:07:08Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Percentage by Number of Atoms Percentage By Mass Hydrogen 92.0 73.4 Helium 7.8 25.0",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:07:11Z",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hydrogen 92.1 % Helium 7.8 %",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:07:13Z",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hydrogen 92.0 73.4 Helium 7.8 25.0",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:07:15Z",
+   "target": "f05629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Major : 78.08% Nitrogen (N2), 20.95% Oxygen (O2)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:07:22Z",
+   "target": "f05630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It is composed mostly of iron (32.1% by mass), oxygen (30.1%), silicon (15.1%), magnesium (13.9%)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:15:31Z",
+   "target": "f05629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "dry air contains 78.08% nitrogen, 20.95% oxygen, 0.93% argon, 0.04% carbon dioxide",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:15:39Z",
+   "target": "f05630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Taken as a whole, the Earth's composition by mass",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23",
+   "note": "NWE (a Wikipedia-derived encyclopedia) lists iron first at 35.1 % from an older model; Morgan & Anders (PNAS 1980) give 32.1 %. The answer iron is uncontested; the exact share depends on the model."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Principal Chemical Constituents by number of atoms: Hydrogen 92.1 %",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Percentage by Number of Atoms Percentage By Mass Hydrogen 92.0 73.4 Helium 7.8 25.0",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hydrogen 92.1 % Helium 7.8 %",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hydrogen 92.0 73.4 Helium 7.8 25.0",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Major : 78.08% Nitrogen (N2), 20.95% Oxygen (O2)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Taken as a whole, the Earth's composition by mass",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s12"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The elements other than Hydrogen and Helium are left over from the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “hydrogen” is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "About 73% of the Sun’s mass is hydrogen, and another 25% is helium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “hydrogen” is on the snapshot of s8"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The elements other than Hydrogen and Helium are left over from the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “helium” is on the snapshot of s7"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "About 73% of the Sun’s mass is hydrogen, and another 25% is helium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “helium” is on the snapshot of s8"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Major : 78.08% Nitrogen (N2), 20.95% Oxygen (O2),",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “oxygen” is on the snapshot of s9"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:55:14.470Z",
+   "target": "f05630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The interior of the planet is also active, with a thick layer (mantle) of highly viscous material and an iron core that generates a magnetic field.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “iron” is on the snapshot of s12"
+  }
+ ]
+}

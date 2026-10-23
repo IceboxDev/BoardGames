@@ -1,0 +1,315 @@
+{
+ "article": "a2377",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/J%C3%BCdische_Emanzipation",
+   "title": "Jüdische Emanzipation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:54.969Z",
+   "snapshot": "f24a3a5604a7dcd07c3c8a57dbaacf9c8d50ce97207c307b6087e0c74570a4bd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Joseph_Bonaparte",
+   "title": "Charles Joseph Bonaparte",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:54.239Z",
+   "snapshot": "dfd803be4fe4f79a578849a86ef4465a223c5bccab19b6efb8993886b3f55bc4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kingdom_of_Westphalia",
+   "title": "Kingdom of Westphalia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:55.160Z",
+   "snapshot": "3159dca38825ec8484096c9a7370cd8e13fcaf746cf9f0f00adf80a49ef4a035"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Bonaparte",
+   "title": "Louis Bonaparte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:56.124Z",
+   "snapshot": "0d0ed6f3da7625234bfb3547dd011861eaa8941200fd81b3511344c6f3a42d6e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Napoleon_and_the_Jews",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:57.339Z",
+   "snapshot": "4b1c4cf0f69d5d645dbda9a21995a53592082d02cd6c120f179e4a19208d62fe"
+  },
+  "s6": {
+   "url": "https://www.napoleon.org/en/history-of-the-two-empires/articles/napoleon-and-the-jews/",
+   "title": "Napoleon I and the integration of the Jews in France: some points of interest",
+   "publisher": "Fondation Napoléon",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:59.516Z",
+   "snapshot": "db136e0aaee95906a57feed11cd60822af3595fa3d39c617df99631afce54d45"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Joseph Bonaparte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kingdom of Westphalia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Holland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Napoleon III",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Napoleon Bonaparte",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "Napoleon Bonaparte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "card contested, the bank narrowed to what is settled (tp-178/3, u05): Napoleon is the figure German Jews regarded as the forerunner of emancipation (ghettos opened, equality in French-ruled German lands), but his 1808 'Infamous Decree' restricted Jews in France; Hardenberg's Prussian edict of 1812 also granted Jews greater freedoms (citizenship, with reservations). The printed answer is unknown, so both count."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:08.437Z",
+   "target": "f12407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Napoleon Bonaparte",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:08.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:08.437Z",
+   "target": "f12407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In countries that Napoleon Bonaparte's ensuing Consulate and French Empire conquered during the Napoleonic Wars, Napoleon emancipated the Jews and introduced other ideas of liberty.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Napoleon Bonaparte” is on the snapshot of s5"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:08.437Z",
+   "target": "f12408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Joseph Bonaparte ( BOH-nə-part; June 9, 1851 – June 28, 1921) was an American lawyer and political activist of French descent from the House of Bonaparte who advocated for progressive and liberal causes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Joseph Bonaparte” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:08.437Z",
+   "target": "f12409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Kingdom of Westphalia was a client state of France in present-day Germany that existed from 1807 to 1813.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kingdom of Westphalia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:08.437Z",
+   "target": "f12410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He was a monarch in his own right from 1806 to 1810, ruling over the Kingdom of Holland (a French client state roughly corresponding to the modern-day Netherlands).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holland” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:08.437Z",
+   "target": "f12411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "His youngest son, Louis-Napoléon, established the Second French Empire in 1852, proclaiming himself Napoleon III.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Napoleon III” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:40:32Z",
+   "target": "f12407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "despite its contradictory nature, combining advances with setbacks for rights for the Jews, opened the way for a real and lasting integration of the Jews in France.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports Napoleon as the accepted answer while documenting the 1808 'Infamous Decree' setback the body mentions; Hardenberg (Prussia 1812) stays an accepted alternative in the notes."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:52.630Z",
+   "target": "f12407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "despite its contradictory nature, combining advances with setbacks for rights for the Jews, opened the way for a real and lasting integration of the Jews in France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:52.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

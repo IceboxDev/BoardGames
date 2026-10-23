@@ -1,0 +1,405 @@
+{
+ "article": "a1902",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Stamford_Bridge",
+   "title": "Battle of Stamford Bridge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:12.496Z",
+   "snapshot": "89859c9c98291b0b8c1a3a9e55e9fc706004a903371dfeb26887c01badab214e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Hastings",
+   "title": "Battle of Hastings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:13.592Z",
+   "snapshot": "e03e9dcc50e318b015cd8c78aed4272d73344b19f5d6f64a5f6420f9a5b909ff"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alemanni",
+   "title": "Alemanni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:14.601Z",
+   "snapshot": "ef2b2d3c7c9b6ebc40565083de458f9f1e0017942c08ea9e74f82232730201e3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cossacks",
+   "title": "Cossacks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:15.964Z",
+   "snapshot": "285ff961720d00433736d99e1431e191de604e62edd6ee51bbb4266734c2e6ef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eskimo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:16.685Z",
+   "snapshot": "d54a16598251ef129bacfda903b3d7f963cc4046f383ca4f7a2a0ca2151e8c30"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wikinger",
+   "title": "Wikinger – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:17.134Z",
+   "snapshot": "e9c68463d7b8986160e04601b12945be0894ff8acaf1762df36e07f9e9309971"
+  },
+  "s7": {
+   "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/",
+   "title": "The Viking Age",
+   "publisher": "National Museum of Denmark",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:17.164Z",
+   "snapshot": "f805548bdaac7540847057e27bfbc558eb22968c2502d4bc845630c13f80bef2"
+  },
+  "s8": {
+   "url": "https://www.wissen.de/lexikon/wikinger",
+   "title": "Wikinger – Lexikon | wissen.de",
+   "publisher": "wissen.de (Bertelsmann/Konradin)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:17.286Z",
+   "snapshot": "9dff0908764573e7e6134682e6a07c617af901a71a3c899244d6ab6fd01937da"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vikings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Normans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alemanni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cossacks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:42.221Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vikings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Vikings”, “Wikinger”, “викинги”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:42.221Z",
+   "target": "f09507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Therefore, the Normans adopted the tactic of pretending to flee in panic and then turning on their pursuers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.221Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Normans” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:42.221Z",
+   "target": "f09508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Alemanni or Alamanni were a confederation of Germanic peoples who first appeared in the region east of the Upper Rhine river during the third century AD, where they eventually took control of a large swathe of lands previously ruled by the Roman empire, within the province of Germania Superior.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.221Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alemanni” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:42.221Z",
+   "target": "f09510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Cossacks are a predominantly East Slavic, Eastern Orthodox Christian militant people, originating from the Pontic–Caspian steppe of eastern Ukraine and southern Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.221Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cossacks” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:44:51Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Es bedeutet einen „Seekrieger, der sich auf langer Fahrt von der Heimat entfernt“.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "The gloss is the traditional explanation; the etymology of víkingr is debated (see en.wikipedia Vikings)."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:44:56Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Viking Age was characterized by sea travel and expeditions to foreign territories.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the seafaring/expedition sense of the name; not a verbatim gloss."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:45:01Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Das altnordische Wort Wikinger bezeichnete einen Räuber und wurde nie als Selbstbezeichnung der Skandinavier benutzt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gives a different gloss (raider) for the same word; confirms the answer Vikings but shows the card's gloss is one explanation among several."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:33.679Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Es bedeutet einen „Seekrieger, der sich auf langer Fahrt von der Heimat entfernt“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:33.679Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Viking Age was characterized by sea travel and expeditions to foreign territories.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:33.679Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Das altnordische Wort Wikinger bezeichnete einen Räuber und wurde nie als Selbstbezeichnung der Skandinavier benutzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:33.679Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Als Wikinger werden die Angehörigen von schiffsreisenden, teilweise kriegerischen Personengruppen aus dem skandinavischen Raum während der Wikingerzeit (790–1070 n.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Wikinger” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:33.679Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Vikings set sail in ships and fleets to trade, obtain revenues and conquer new land.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vikings” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:33.679Z",
+   "target": "f09506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Das altnordische Wort Wikinger bezeichnete einen Räuber und wurde nie als Selbstbezeichnung der Skandinavier benutzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Wikinger” is on the snapshot of s8"
+  }
+ ]
+}

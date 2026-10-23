@@ -1,0 +1,242 @@
+{
+ "article": "a1129",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/A_Streetcar_Named_Desire",
+   "title": "A Streetcar Named Desire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:32.292Z",
+   "snapshot": "37625f32e5de6717633e033ae3692978dbac9594ffeee13f52f09120cf01e3b5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cat_on_a_Hot_Tin_Roof",
+   "title": "Cat on a Hot Tin Roof – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:33.281Z",
+   "snapshot": "4ed42ec2b584808ccc21a869a20d6f75c7a3b2946692e3a22c70c7566cafcf7c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Death_of_a_Salesman",
+   "title": "Death of a Salesman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:34.188Z",
+   "snapshot": "eca27f509c1ac9db5421e13e337436e9f157d8c0ae26f8685f94758486907539"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Glass_Menagerie",
+   "title": "The Glass Menagerie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:35.136Z",
+   "snapshot": "f74906c95a3331d0c16ecb94955ca08f93df83416249b7aacf5af94fb7ff613a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Long_Day's_Journey_into_Night",
+   "title": "Long Day's Journey into Night – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:36.212Z",
+   "snapshot": "6ef3ce89844e8a889ffe784120bb29072c44d3420fd69d9da016b1d3432a2a9c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Streetcar Named Desire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cat on a Hot Tin Roof",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Death of a Salesman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Glass Menagerie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Long Day's Journey into Night",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:37.064Z",
+   "target": "f05641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Streetcar Named Desire is a play written by Tennessee Williams which was first performed on Broadway on December 3, 1947.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Streetcar Named Desire” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:37.064Z",
+   "target": "f05642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cat on a Hot Tin Roof is a 1955 American three-act play by Tennessee Williams.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cat on a Hot Tin Roof” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:37.064Z",
+   "target": "f05643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Death of a Salesman is a 1949 stage play written by the American playwright Arthur Miller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Death of a Salesman” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:37.064Z",
+   "target": "f05644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Glass Menagerie is a memory play by Tennessee Williams that premiered in 1944 and catapulted Williams from obscurity to fame.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Glass Menagerie” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:37.064Z",
+   "target": "f05645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Long Day's Journey into Night is a play in four acts written by American playwright Eugene O'Neill in 1939–1941 and first published posthumously in 1956.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Long Day's Journey into Night” is on the snapshot of s5"
+  }
+ ]
+}

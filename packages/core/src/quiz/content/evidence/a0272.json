@@ -1,0 +1,533 @@
+{
+ "article": "a0272",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Laplace%27s_demon",
+   "title": "Laplace's demon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:22.799Z",
+   "snapshot": "492f8ce0582e44a83dae57296274a7ff629f0302fb3f7d94f5f35bc64b9047a9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cyrenaics",
+   "title": "Cyrenaics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:23.797Z",
+   "snapshot": "0ed7ff1d406a4d33a67080a5e3660607cc47485f10a723dde5ab6fd46124aeaf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Francis_Hutcheson_(philosopher)",
+   "title": "Francis Hutcheson (philosopher) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:24.912Z",
+   "snapshot": "e071e2248f138af27b6c7fbde2cfe0f9c4f1db51907aaafcc5fba2c46a266622"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Utilitarianism",
+   "title": "Utilitarianism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:26.037Z",
+   "snapshot": "c6eeccd69ddacbfcce0f31dec23d100ac3a59bcaf68ae24313d70027c3c14143"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Enchiridion_of_Epictetus",
+   "title": "Enchiridion of Epictetus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:26.856Z",
+   "snapshot": "c9884b0a27914cd97c2a8e1aac288be7788938baf4a5010d773703f88438d0c6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Michel_de_Montaigne",
+   "title": "Michel de Montaigne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:27.914Z",
+   "snapshot": "2514c466415daf2c2b12c82119a26e76ab1b40e2d869f3f5d700413eb284ad41"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Stoicism",
+   "title": "Stoicism",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:11:12Z"
+  },
+  "s8": {
+   "url": "https://iep.utm.edu/stoicism/",
+   "title": "Stoicism",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:58.402Z",
+   "snapshot": "bf19dba275395520cf85fdfe56d382b72824c65d7601fe2ed5b1f3ad7425bcae"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Philosophical_skepticism",
+   "title": "Philosophical skepticism",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:58.656Z",
+   "snapshot": "34460d61a1b58e451f77e2b9505a37a98396a93ed4d28355b49a8e85ec7e46b5"
+  },
+  "s10": {
+   "url": "https://www.dictionary.com/browse/skepticism",
+   "title": "Skepticism Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:58.852Z",
+   "snapshot": "a689100b1a667255f47b515011a99d63a28e54c4111cc5dcd0ce8bb237996ea0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Determinism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01357",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hedonism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Utilitarianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Utilitarianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-067"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stoicism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Skepticism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:22.430Z",
+   "target": "f01356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the history of science, Laplace's demon was a notable articulation of the idea of scientific causal determinism, published in 1814 by Pierre-Simon Laplace.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Determinism” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:22.430Z",
+   "target": "f01357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "For Hegesias, Cyrenaic hedonism was simply the least irrational strategy for dealing with the pains of life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hedonism” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:22.430Z",
+   "target": "f01358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He thus anticipates the utilitarianism of Bentham, not only in principle, but even in the use of the phrase \"the greatest happiness for the greatest number\" (Inquiry concerning Moral Good and Evil, section 3).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utilitarianism” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:22.430Z",
+   "target": "f01358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Utilitarianism is a family of theories in normative ethics that prescribe actions that maximize happiness and well-being for all affected individuals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utilitarianism” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:22.430Z",
+   "target": "f01359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stoicism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Stoicism”, “Stoizismus”, “стоицизм”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:22.430Z",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Skepticism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Skepticism”, “Skeptizismus”, “скептицизм”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:11:12Z",
+   "target": "f01359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the Late Stoa, including Musonius Rufus, Seneca, Epictetus, and Marcus Aurelius",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:11:15Z",
+   "target": "f01359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the Roman Imperial period, or late Stoa, with Seneca, Musonius Rufus, Epictetus and Marcus Aurelius",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:11:18Z",
+   "target": "f01359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the famous dichotomy of control, as expressed at the very beginning of the Enchiridion",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the 'what is not within our power' clue."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:11:21Z",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is a family of philosophical views that question the possibility of knowledge",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:11:24Z",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "One of the main tasks of epistemology is to find an answer to the charge of some extreme skeptics that no knowledge is possible.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:42.479Z",
+   "target": "f01359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the famous dichotomy of control, as expressed at the very beginning of the Enchiridion",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:42.479Z",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is a family of philosophical views that question the possibility of knowledge",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:42.479Z",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "One of the main tasks of epistemology is to find an answer to the charge of some extreme skeptics that no knowledge is possible.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:42.479Z",
+   "target": "f01359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Stoicism | Internet Encyclopedia of Philosophy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stoicism” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:42.479Z",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Philosophical skepticism (UK spelling: scepticism; from Greek σκέψις skepsis, \"inquiry\") is a family of philosophical views that question the possibility of knowledge.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Skepticism” is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:42.479Z",
+   "target": "f01360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "SKEPTICISM Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Skepticism” is on the snapshot of s10"
+  }
+ ]
+}

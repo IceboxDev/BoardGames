@@ -1,0 +1,328 @@
+{
+ "article": "a0409",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Drum_kit",
+   "title": "Drum kit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:06.692Z",
+   "snapshot": "f1445047b3cd5997387fb50f249bc5daf64c2dc10d7c179463b2bddc831ecbc0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Drum",
+   "title": "Drum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:07.474Z",
+   "snapshot": "a48edf478f2f7d362f5e94851c0a32faf70523cef78019622b95e9d60f0cb82a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hornbostel%E2%80%93Sachs",
+   "title": "Hornbostel–Sachs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:08.599Z",
+   "snapshot": "e98b582d34ba7fd7a03384fa3fd812afc4ba521a01e816196fc99285a4fd8486"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Brass_instrument",
+   "title": "Brass instrument – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:09.487Z",
+   "snapshot": "a29630fab4b31ac0f3f9d9c0e3166b7f53b74d1b282358416a6dc0b2d5fa1389"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Terzett",
+   "title": "Terzett",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:06.916Z",
+   "snapshot": "f2392bb567f37acea8372c89034f6e2e3f9304fd73b62997afbad7505bcebc09"
+  },
+  "s6": {
+   "url": "https://www.duden.de/rechtschreibung/Terzett",
+   "title": "Terzett – Rechtschreibung, Bedeutung, Definition | Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:57.047Z",
+   "snapshot": "10743f81f70ee5c374bcb14144449a0e181332c9f9abee6f8a31463f2eff2c96"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Drum kit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Membranophones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Idiophones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brass section",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13012",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "zwei Mitsänger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-038"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:44.145Z",
+   "target": "f02041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A drum kit, acoustic drum kit or drum set (also known as a trap set or simply drums in popular music and jazz contexts) is a musical instrument consisting of a collection of percussion instruments arranged to be played by a single musician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Drum kit” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:44.145Z",
+   "target": "f02042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the Hornbostel–Sachs classification system, it is a membranophone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Membranophone” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:44.145Z",
+   "target": "f02043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Idiophones primarily produce their sounds by means of the actual body of the instrument vibrating, rather than a string, membrane, or column of air.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Idiophones” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:44.145Z",
+   "target": "f02045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Concert bands generally have a larger brass section than an orchestra, typically:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brass section” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:44.145Z",
+   "target": "f13012",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "zwei Mitsänger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“zwei Mitsänger”, “two fellow singers”, “два партнёра”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:59:50Z",
+   "target": "f13012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "eine Komposition für drei konzertierende Singstimmen mit oder ohne Instrumentalbegleitung",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23",
+   "note": "Three voices = the singer plus two fellow singers."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:59:52Z",
+   "target": "f13012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Komposition für drei Singstimmen [mit Instrumentalbegleitung]",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23",
+   "note": "Three voices = the singer plus two fellow singers."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:05.431Z",
+   "target": "f13012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "eine Komposition für drei konzertierende Singstimmen mit oder ohne Instrumentalbegleitung",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:05.431Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:05.431Z",
+   "target": "f13012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Komposition für drei Singstimmen [mit Instrumentalbegleitung]",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:05.431Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

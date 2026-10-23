@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-251",
+ "image": "IMG20261007175848.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Liechtenstein ist kleiner als Luxemburg. Richtig oder falsch?",
+   "de": "Wie groß ist die Fläche Liechtensteins in Quadratkilometern (gerundet)?",
+   "en": "What is the area of Liechtenstein in square kilometres (rounded)?",
+   "reworked": true,
+   "answerDe": "160 km²",
+   "answerEn": "160 km²",
+   "timeline": {
+    "kind": "founding",
+    "start": "1719-01-23",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Liechtenstein becomes a principality of the Holy Roman Empire",
+    "labelDe": "Liechtenstein wird Reichsfürstentum"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Liechtenstein",
+    "title": "Liechtenstein",
+    "lang": "de"
+   },
+   "notes": "Card's statement is true (Liechtenstein ≈ 160.5 km², Luxembourg ≈ 2,586 km²); reworked into an open question on Liechtenstein's area, the sixth-smallest state in the world.",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die Fernsehsendung, die fast 34 Jahre lief und von Frank Elstner, Thomas Gottschalk, Wolfgang Lippert und Markus Lanz moderiert wurde?",
+   "de": "Wie heißt die Fernsehsendung, die fast 34 Jahre lief und von Frank Elstner, Thomas Gottschalk, Wolfgang Lippert und Markus Lanz moderiert wurde?",
+   "en": "What is the name of the TV show that ran for almost 34 years and was hosted by Frank Elstner, Thomas Gottschalk, Wolfgang Lippert and Markus Lanz?",
+   "reworked": false,
+   "answerDe": "Wetten, dass..?",
+   "answerEn": "Wetten, dass..? (Wanna Bet?)",
+   "timeline": {
+    "kind": "period",
+    "start": "1981-02-14",
+    "end": "2014-12-13",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Wetten, dass..? runs on ZDF from its premiere to its (first) final episode",
+    "labelDe": "Wetten, dass..? läuft im ZDF von der Premiere bis zur (ersten) letzten Folge"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Wetten,_dass..%3F",
+    "title": "Wetten, dass..?",
+    "lang": "de"
+   },
+   "notes": "Dated premise: the regular run was 1981–2014 (almost 34 years); the show has since returned with specials (Gottschalk 2021–2023, Tom and Bill Kaulitz 2026).",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt die Stadt, in der das Bauhaus 1926 nach der Schließung in Weimar wiedereröffnet wurde?",
+   "de": "Wie heißt die Stadt, in der das Bauhaus 1926 nach der Schließung in Weimar wiedereröffnet wurde?",
+   "en": "In which city did the Bauhaus reopen in 1926 after being closed in Weimar?",
+   "reworked": false,
+   "answerDe": "Dessau",
+   "answerEn": "Dessau",
+   "timeline": {
+    "kind": "creation",
+    "start": "1926",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Walter Gropius's Bauhaus building in Dessau is completed",
+    "labelDe": "Das von Walter Gropius entworfene Bauhausgebäude in Dessau wird fertiggestellt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bauhaus",
+    "title": "Bauhaus",
+    "lang": "de"
+   },
+   "notes": "The school moved to Dessau in 1925 and occupied Gropius's new building from 1926.",
+   "domain": "art",
+   "sub": "architecture"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt die rothaarige Kinderbuchfigur, deren geistiger Vater Paul Maar ist?",
+   "de": "Wie heißt die rothaarige Kinderbuchfigur, deren geistiger Vater Paul Maar ist?",
+   "en": "What is the name of the red-haired children's book character created by Paul Maar?",
+   "reworked": false,
+   "answerDe": "Das Sams",
+   "answerEn": "The Sams",
+   "timeline": {
+    "kind": "creation",
+    "start": "1973",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Paul Maar's first Sams book, Eine Woche voller Samstage, is published",
+    "labelDe": "Paul Maars erstes Sams-Buch Eine Woche voller Samstage erscheint"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Sams_(Buchreihe)",
+    "title": "Sams (Buchreihe)",
+    "lang": "de"
+   },
+   "notes": "The Sams has red bristly hair, a pig's snout, blue dots on its face and frog feet.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wegen welcher Krankheit dürfen Menschen, die zwischen 1980 und 1996 länger als sechs Monate in Großbritannien waren, in Deutschland kein Blut spenden?",
+   "de": "Wegen welcher Krankheit dürfen Menschen, die zwischen 1980 und 1996 länger als sechs Monate in Großbritannien waren, in Deutschland kein Blut spenden?",
+   "en": "Because of which disease may people who spent more than six months in Great Britain between 1980 and 1996 not donate blood in Germany?",
+   "reworked": false,
+   "answerDe": "Creutzfeldt-Jakob-Krankheit",
+   "answerEn": "Creutzfeldt–Jakob disease",
+   "timeline": {
+    "kind": "period",
+    "start": "1980",
+    "end": "1996",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Exposure window in the UK (BSE era) behind Germany's blood-donor deferral for Creutzfeldt-Jakob disease",
+    "labelDe": "Zeitraum im Vereinigten Königreich (BSE-Ära), der in Deutschland wegen der Creutzfeldt-Jakob-Krankheit vom Blutspenden ausschließt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Blutspende",
+    "title": "Blutspende",
+    "lang": "de"
+   },
+   "notes": "Specifically the variant form (vCJK) linked to BSE; the deferral guards against theoretical transfusion transmission.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 6,
+   "cardDe": "Ihr letztes Profimatch beendete Steffi Graf mit einer verletzungsbedingten Aufgabe. Richtig oder falsch?",
+   "de": "Gegen welche Spielerin gab Steffi Graf 1999 in San Diego ihr letztes Profimatch verletzungsbedingt auf?",
+   "en": "Against which player did Steffi Graf retire injured in her last professional match, in San Diego in 1999?",
+   "reworked": true,
+   "answerDe": "Amy Frazier",
+   "answerEn": "Amy Frazier",
+   "timeline": {
+    "kind": "event",
+    "start": "1999-08-13",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Steffi Graf announces her retirement, shortly after retiring injured against Amy Frazier in San Diego",
+    "labelDe": "Steffi Graf erklärt ihren Rücktritt, kurz nach ihrer verletzungsbedingten Aufgabe gegen Amy Frazier in San Diego"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Steffi_Graf",
+    "title": "Steffi Graf",
+    "lang": "en"
+   },
+   "notes": "Card's statement is true: she retired with a strained hamstring in a second-round match against Amy Frazier in San Diego (1999), then announced her retirement on 13 August 1999.",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

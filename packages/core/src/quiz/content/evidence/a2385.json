@@ -1,0 +1,375 @@
+{
+ "article": "a2385",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kamikaze",
+   "title": "Kamikaze",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:44.589Z",
+   "snapshot": "34b6601fa2f7d2b25d4b6daec8b563b226a0d67b1d328468f8729a617d7747a4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Manhattan_Project",
+   "title": "Manhattan Project",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:04.470Z",
+   "snapshot": "7bcd0bbd741d134d21d9a1be66d78201c65a82fde0e4e284276f89528b7daf6e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Atombombenabw%C3%BCrfe_auf_Hiroshima_und_Nagasaki",
+   "title": "Atombombenabwürfe auf Hiroshima und Nagasaki",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:05.897Z",
+   "snapshot": "2a690ef4f56971f2f0e8408074cff9b79dc9c2bec52e295cb45e6ff2855a2bec"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kapitulation_Japans",
+   "title": "Kapitulation Japans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:06.938Z",
+   "snapshot": "c8f74c9371128de173ff1b6d4ebfd86036d97ea778d186f0467b8c8f305ad418"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki",
+   "title": "Atomic bombings of Hiroshima and Nagasaki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:05.546Z",
+   "snapshot": "0bbaa78b9405ae06bdcb334ee8831dcfa5b5fd6f02814842d06a3d793dd4d885"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Surrender_of_Japan",
+   "title": "Surrender of Japan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:06.322Z",
+   "snapshot": "1eb0e697583fd1eb8fb9aca27884744e1563efa1164f507ba72e3d34f156c79f"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Hiroo_Onoda",
+   "title": "Hiroo Onoda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:07.159Z",
+   "snapshot": "818ada489e9e2ae736b494498a2f42b7709001a8e507d8e3ed160b51a1f0ff9c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12457",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kamikaze attack",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12458",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Manhattan Project",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-328"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12459",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hiroshima",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-145"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Japan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-061"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nagasaki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "USS Missouri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Enola Gay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f27502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hiroo Onoda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 46"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f12457",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Captain Motoharu Okamura, in charge of the Tateyama Base in Tokyo, as well as the 341st Air Group Home, was, according to some sources, the first officer to officially propose kamikaze attack tactics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kamikaze attack” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f12458",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Manhattan Project was a research and development program undertaken during World War II to produce the first nuclear weapons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manhattan Project” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f12459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Atombombenabwürfe auf Hiroshima und Nagasaki",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hiroshima” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f12460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die in China und Südost-Asien kämpfenden Streitkräfte des Kaiserreichs Japan mit ca.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f12461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Atomic bombings of Hiroshima and Nagasaki",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nagasaki” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f12462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Navy battleship USS Missouri, at which officials from the Japanese government signed the Japanese Instrument of Surrender, ending hostilities with the Allies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “USS Missouri” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f12463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 393rd Bombardment Squadron B-29 Enola Gay, named after Tibbets's mother and piloted by Tibbets, took off from North Field, Tinian, about six hours' flight time from Japan, at 02:45 local time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enola Gay” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:10.699Z",
+   "target": "f27502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hiroo Onoda (Japanese: 小野田 寛郎, Hepburn: Onoda Hiroo; IPA: [o̞no̞da̠ çiɾo̞ː]) (19 March 1922 – 16 January 2014) was a Japanese soldier who served as a second lieutenant in the Imperial Japanese Army during World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hiroo Onoda” is on the snapshot of s7"
+  }
+ ]
+}

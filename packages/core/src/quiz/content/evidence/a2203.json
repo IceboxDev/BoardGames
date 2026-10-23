@@ -1,0 +1,242 @@
+{
+ "article": "a2203",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Philatelie",
+   "title": "Philatelie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:45.779Z",
+   "snapshot": "0100271e8bc23bb4bcd342c7342fe1f3889783967942e27e9ed27a47b102be0f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Scrapbooking",
+   "title": "Scrapbooking",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:46.901Z",
+   "snapshot": "11bda5ccbe0172b651100d8b0dfb3551a58148cdec8831f9202a5e04bc3cbfa4"
+  },
+  "s3": {
+   "url": "https://www.csmonitor.com/Books/chapter-and-verse/2016/0811/Do-book-lovers-live-longer",
+   "title": "Do book lovers live longer? (Christian Science Monitor)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:47.052Z",
+   "snapshot": "c422b33d87c0ffe51282730bb78a06bdc883a0d628085912bbd7085f63c6bbc5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Numismatics",
+   "title": "Numismatics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:48.235Z",
+   "snapshot": "e1bfe4e8b31529816ab378b69b5af5189be4e7b3b70668f5753f200e7b45db2c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Deltiology",
+   "title": "Deltiology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:49.314Z",
+   "snapshot": "87feca982a3a024ea61eed07f0da79a792138b8793b080a9074c2ef8b03e52ad"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Briefmarken",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scrapbooking",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-354"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Reading books",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-332"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "coins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "postcards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:36.109Z",
+   "target": "f11201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Erst langsam begann man, sich mit den Briefmarken genauer zu befassen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Briefmarken” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:36.109Z",
+   "target": "f11202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scrapbooking [ˈskɹæpbʊkɪŋ] bezeichnet ein Bastelhobby.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scrapbooking” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:36.109Z",
+   "target": "f11203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "And the study specified that the longevity benefit lies only with reading books, not newspapers or magazines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reading books” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:36.109Z",
+   "target": "f11204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Numismatics is the study or collection of currency, including coins, tokens, paper money, medals, and related objects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “coins” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:36.109Z",
+   "target": "f11205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Deltiology (from Greek δελτίον, deltion, diminutive of δέλτος, deltos, \"writing tablet, letter\"; and -λογία, -logia) is the study and collection of postcards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “postcards” is on the snapshot of s5"
+  }
+ ]
+}

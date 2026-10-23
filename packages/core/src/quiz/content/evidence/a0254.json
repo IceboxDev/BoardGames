@@ -1,0 +1,306 @@
+{
+ "article": "a0254",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/La_Com%C3%A9die_humaine",
+   "title": "La Comédie humaine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:29.679Z",
+   "snapshot": "0d54358001fd2894bd3eb432ce1390973317a67e269bdc9f4a57f1c3a38ef51c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Germinal_(novel)",
+   "title": "Germinal (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:30.545Z",
+   "snapshot": "d215246d87164733133bb4f2efbfd66b7b185d8280c845d9a6b68f953b5ca251"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Divine_Comedy",
+   "title": "Divine Comedy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:31.669Z",
+   "snapshot": "4500e6de13f31476cd7777ac9e72bc5750ed59d2ba48e81e79d8f296acf7db3b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Forsyte_Saga",
+   "title": "The Forsyte Saga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:32.680Z",
+   "snapshot": "2382ad882a4d700ab37cbda07d60a742907ae75b02909bc4a2df601f6e08a793"
+  },
+  "s5": {
+   "url": "https://www.gutenberg.org/cache/epub/5135/pg5135-images.html",
+   "title": "The Fortune of the Rougons by Émile Zola (tr. Vizetelly)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:50.474Z",
+   "snapshot": "82208059201a9a6193b2891d27fc861022e84f27dcfd9a90ec7acfe4cc582e75"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Les_Rougon-Macquart",
+   "title": "Les Rougon-Macquart",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:07:00Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Human Comedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Rougon-Macquart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Divine Comedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Forsyte Saga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:19.767Z",
+   "target": "f01266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La Comédie humaine (French: [la kɔmedi ymɛn]; English: The Human Comedy) is Honoré de Balzac's 1829–48 multi-volume collection of interlinked novels and stories depicting French society in the period of the Restoration (1815–30) and the July Monarchy (1830–48).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Human Comedy” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:19.767Z",
+   "target": "f01267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Rougon-Macquart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Rougon-Macquart”, “Die Rougon-Macquart”, “Ругон-Маккары”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:19.767Z",
+   "target": "f01269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Divine Comedy (Italian: Divina Commedia) is an Italian narrative poem by Dante Alighieri, begun c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Divine Comedy” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:19.767Z",
+   "target": "f01270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Forsyte Saga, first published under that title in 1922, is a series of three novels and two interludes published between 1906 and 1921 by the English author John Galsworthy, who won the 1932 Nobel Prize in Literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Forsyte Saga” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:06:52Z",
+   "target": "f01267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is therefore, in my mind, the\nnatural and social history of a family under the Second Empire.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Zola's own preface (1 July 1871); the edition's introduction calls the cycle the Rougon-Macquart series of twenty volumes."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:06:56Z",
+   "target": "f01267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As previously mentioned, the Rougon-Macquart series forms twenty volumes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:00Z",
+   "target": "f01267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a literary cycle of twenty novels by French writer Émile Zola. Subtitled Histoire naturelle et sociale d'une famille sous le Second Empire",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:52:38.837Z",
+   "target": "f01267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As previously mentioned, the Rougon-Macquart series forms twenty volumes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:38.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:38.837Z",
+   "target": "f01267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "“The Fortune of the Rougons” is the initial volume of the\nRougon-Macquart series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:38.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Rougon-Macquart” is on the snapshot of s5"
+  }
+ ]
+}

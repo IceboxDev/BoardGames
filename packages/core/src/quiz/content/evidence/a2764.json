@@ -1,0 +1,497 @@
+{
+ "article": "a2764",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pteropus",
+   "title": "Pteropus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:59.161Z",
+   "snapshot": "7f16fdd77c66a3442d9ee12b34173ac3ac0230bf5b7ed378a9137e2ff0f907f7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bat",
+   "title": "Bat",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:53.198Z",
+   "snapshot": "e2c834ae60de4c15ed95fbd137ef0b936e4d8c810b639886f9f06ce99dc7caf5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kitti%27s_hog-nosed_bat",
+   "title": "Kitti's hog-nosed bat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:00.033Z",
+   "snapshot": "c66d452f100b01a05b05a10ac355c8edca6c9a65ea31977a8cfcacb64d386c47"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vampire_bat",
+   "title": "Vampire bat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:01.047Z",
+   "snapshot": "4ced47a4c6c62ecad926fc74b8780f791acb91f3bebcee63162f8e8eac627932"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Common_vampire_bat",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:02.063Z",
+   "snapshot": "8a6b290925d1b8e6dffd39006fa503740184da94f4074e28d5f63a1c915f4a99"
+  },
+  "s6": {
+   "url": "https://animaldiversity.org/accounts/Craseonycteris_thonglongyai/",
+   "title": "Craseonycteris thonglongyai (bumblebee bat)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:16.172Z",
+   "snapshot": "56bc7b0a5ebc484c10adaa145f3fe2dd906e7b00088ff507e02142facc4e59b0"
+  },
+  "s7": {
+   "url": "https://animals.sandiegozoo.org/animals/bat",
+   "title": "Bat",
+   "publisher": "San Diego Zoo Wildlife Alliance",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:16.577Z",
+   "snapshot": "5f9be4af70e3da2fbc034153556505bd27427b7ac1b2ff5917daf3c7f0456075"
+  },
+  "s8": {
+   "url": "https://australian.museum/learn/animals/bats/grey-headed-flying-fox/",
+   "title": "Grey-headed Flying-fox",
+   "publisher": "Australian Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:17.862Z",
+   "snapshot": "6ce5e557a0dd1b5a3db82f90d2d3edfd8733f30be52cf798ab3f2dfe2fa85ac6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "bat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript ppm-011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25778",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "echolocation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript ppm-059"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kitti's hog-nosed bat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "vampire bats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25781",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sight and smell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:09.862Z",
+   "target": "f25777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "These include Australian bat lyssavirus, which causes a rabies like illness, and Hendra virus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bat” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:09.862Z",
+   "target": "f25778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yangochiroptera includes the other families of bats (all of which use laryngeal echolocation), a conclusion supported by a 2005 DNA study.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “echolocation” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:09.862Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kitti's hog-nosed bat (Craseonycteris thonglongyai), also known as the bumblebee bat or hog-nosed bat, is a near-threatened species of bat and the only extant member of the family Craseonycteridae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kitti's hog-nosed bat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:09.862Z",
+   "target": "f25780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vampire bats, members of the subfamily Desmodontinae, are leaf-nosed bats currently found in Central and South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vampire bats” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:09.862Z",
+   "target": "f25781",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sight and smell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sight and smell”, “Gesichtssinn und Geruchssinn”, “зрение и обоняние”) on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:45Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kitti's hog-nosed bat is the smallest species of bat and arguably the world's smallest mammal by body length (the Etruscan shrew is regarded as the smallest by body mass).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:50Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "bats are considered among one of the smallest mammals in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:55Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Included in this group is the smallest bat, the Kitti’s hog-nosed bat, which weighs less than a penny.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:59Z",
+   "target": "f25781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They do not echolocate but rely on their well-developed senses of sight and smell.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:03Z",
+   "target": "f25781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "They navigate with keen eyesight, as they cannot echolocate.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:59.043Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kitti's hog-nosed bat is the smallest species of bat and arguably the world's smallest mammal by body length (the Etruscan shrew is regarded as the smallest by body mass).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:59.043Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "bats are considered among one of the smallest mammals in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:59.043Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Included in this group is the smallest bat, the Kitti’s hog-nosed bat, which weighs less than a penny.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:59.043Z",
+   "target": "f25781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They do not echolocate but rely on their well-developed senses of sight and smell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:59.043Z",
+   "target": "f25781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "They navigate with keen eyesight, as they cannot echolocate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:59.043Z",
+   "target": "f25779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Included in this group is the smallest bat, the Kitti’s hog-nosed bat, which weighs less than a penny.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kitti's hog-nosed bat” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:59.043Z",
+   "target": "f25781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They do not echolocate but rely on their well-developed senses of sight and smell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sight and smell” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "article": "a2297",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/World%27s_largest_axe",
+   "title": "World's largest axe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:10.445Z",
+   "snapshot": "77aa874bd65196ac9fc740985da19781de54414768ca4f0a8b4395ea9646740a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Big_Banana",
+   "title": "Big Banana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:11.435Z",
+   "snapshot": "d3163293b05c9d8b3930de1577e713fa5f4cc82c9ea2df8f2a557ba9638ef624"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Big_Pineapple",
+   "title": "Big Pineapple – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:12.551Z",
+   "snapshot": "820918ab01977dc7a64933055631c47e0bbfb46446d98ce4a62ba753be1ecdc5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Big_Lobster",
+   "title": "Big Lobster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:13.488Z",
+   "snapshot": "23a062ce66977f28c0b80c473ed2d2d9aed3fddfeb5c75e693fa3cba2ec5c10c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Australia%27s_Big_Things",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:14.481Z",
+   "snapshot": "bff22c948926bb2217a23f5c05c84af08fcf27d8c33696a6c9720bcd6b729940"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11865",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Canada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; history entry seq 8; transcript tp-035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Coffs Harbour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Woombye",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kingston SE",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:50.965Z",
+   "target": "f11865",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The world's largest axe is a sculpture of an axe located in Nackawic-Millville, New Brunswick, Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canada” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:50.965Z",
+   "target": "f11866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Big Banana is a tourist attraction and amusement park in the city of Coffs Harbour, New South Wales, Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coffs Harbour” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:50.965Z",
+   "target": "f11867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Big Pineapple is a heritage-listed tourist attraction and big thing at Nambour Connection Road, Woombye, Sunshine Coast Region, Queensland, Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Woombye” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:50.965Z",
+   "target": "f11868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Big Lobster is a tourist attraction located in the town of Kingston SE, South Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kingston SE” is on the snapshot of s4"
+  }
+ ]
+}

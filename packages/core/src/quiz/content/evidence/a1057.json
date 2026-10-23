@@ -1,0 +1,242 @@
+{
+ "article": "a1057",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Miller",
+   "title": "Arthur Miller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:04.789Z",
+   "snapshot": "f0c2ae919593aac29b4751839c7f3e18114066332020d19e536be05af0c4f730"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Antonia_Fraser",
+   "title": "Antonia Fraser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:05.619Z",
+   "snapshot": "666ca898b0385dfd77bdadeda7d398fda32803560199a0e352143b84dae6749e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Helene_Weigel",
+   "title": "Helene Weigel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:03.047Z",
+   "snapshot": "273f8f2655168bca136133faef782a05724967974d664720f62b6e358cd9b6fc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Carlotta_Monterey",
+   "title": "Carlotta Monterey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:06.571Z",
+   "snapshot": "1bae99fa57f6d708a39a0a10a348fb9b05e1bcffe5cb1e063f46658eca06cadc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Charlotte_Payne-Townshend",
+   "title": "Charlotte Payne-Townshend – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:08.114Z",
+   "snapshot": "c710951ddf2ab263830e3f82c29cfd13105570a7a1191266f04340b6b253569b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arthur Miller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harold Pinter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eugene O'Neill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "George Bernard Shaw",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:26.359Z",
+   "target": "f05281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Miller retained strong ties to his alma mater through the rest of his life, establishing the university's Arthur Miller Award in 1985 and the Arthur Miller Award for Dramatic Writing in 1999, and lending his name to the Arthur Miller Theatre in 2000.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Miller” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:26.359Z",
+   "target": "f05282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "She is the widow of the 2005 Nobel Laureate in Literature, Harold Pinter, and prior to his death in 2008 was also known as Lady Antonia Pinter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harold Pinter” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:26.359Z",
+   "target": "f05283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ihre Bedeutung für das Gegenwartstheater geht auf ihr ungewöhnliches schauspielerisches Talent und die später daraus entwickelten Darstellungstechniken für das epische Theater ihres Ehemannes Bertolt Brecht zurück.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:26.359Z",
+   "target": "f05284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "She was the third and final wife of playwright Eugene O'Neill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eugene O'Neill” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:26.359Z",
+   "target": "f05285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She married the playwright George Bernard Shaw.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Bernard Shaw” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "article": "a1948",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Forrest_Gump",
+   "title": "Forrest Gump – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:22.244Z",
+   "snapshot": "fd650f7ffab9e1de7ae233e672f8a3bd0f2c40682de1f505af43c64277c3c45c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Barbarella_(film)",
+   "title": "Barbarella (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:34.665Z",
+   "snapshot": "c7360852484219a682370fb24383c0a27175194214430a9779ffd1db021c9918"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)",
+   "title": "Bande à part (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:35.576Z",
+   "snapshot": "efa39c544bbb9043946512cebde0eaea8e3e84b8818914c865ba40be6559f3cc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Big_Lebowski",
+   "title": "The Big Lebowski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:36.688Z",
+   "snapshot": "fa0ee15fc3ba09d4b1dcb456e9597a9001cedd65c44f29d6e130b0dcb9d90cbf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/IPod",
+   "title": "iPod",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:37.686Z",
+   "snapshot": "206988d6df0b83a96a3f3f0fe347803bf5a9150804283f851d479bd382700f3c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bud_Spencer",
+   "title": "Bud Spencer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:32:34.949Z",
+   "snapshot": "aebbe8a0fd2f62f4fc67c8ae65c34c0de34fc195f81778a0b98c3f728b6e2d49"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bubba_Gump_Shrimp_Company",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:38.581Z",
+   "snapshot": "72d9c4b1c834572ff4e69523d5bc46155d1ba0326ffcba7a5f169aad3bc3809e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Forrest Gump",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Barbarella",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bande à part",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Big Lebowski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "2001: A Space Odyssey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-002"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bud Spencer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-375"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:51.813Z",
+   "target": "f09736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Forrest Gump is a 1994 American comedy-drama film directed by Robert Zemeckis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Forrest Gump” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:51.813Z",
+   "target": "f09738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Barbarella (later marketed as Barbarella: Queen of the Galaxy) is a 1968 English-language science fiction film directed by Roger Vadim, based on the French comic series by Jean-Claude Forest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barbarella” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:51.813Z",
+   "target": "f09739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bande à part (French pronunciation: [bɑ̃d a paʁ]) is a 1964 French New Wave film directed by Jean-Luc Godard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bande à part” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:51.813Z",
+   "target": "f09740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Big Lebowski () is a 1998 neo-noir crime comedy film written, directed, produced and co-edited by Joel and Ethan Coen, and starring Jeff Bridges, John Goodman, Julianne Moore, Steve Buscemi, and John Turturro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Big Lebowski” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:51.813Z",
+   "target": "f11282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "After Chieco saw a prototype, he was reminded of the phrase \"Open the pod bay doors, Hal\" from the classic sci-fi film 2001: A Space Odyssey, referring to the white EVA Pods of the Discovery One spaceship.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2001: A Space Odyssey” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:51.813Z",
+   "target": "f14490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Komikerduo trat in zahlreichen Abenteuer- und Western-Komödien mit ausgiebigen Prügelszenen und in einigen ernsteren Italowestern auf (Bud-Spencer-und-Terence-Hill-Filme).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bud Spencer” is on the snapshot of s6"
+  }
+ ]
+}

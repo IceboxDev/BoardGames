@@ -1,0 +1,564 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "sport-games/ball-sports",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-060",
+    "category": 6
+   },
+   "factId": "f10041"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-167",
+    "category": 6
+   },
+   "factId": "f03083"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-309",
+    "category": 6
+   },
+   "factId": "f06922"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-362",
+    "category": 6
+   },
+   "factId": "f06622"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0977",
+   "baseHash": "f1f547568289",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-134",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-207",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-286",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Strikes, Spares and Splits: The Language of Ten-Pin Bowling",
+    "titleDe": "Strike, Spare und Split: Die Sprache des Bowlings",
+    "bodyEn": "Ten-pin bowling looks simple: roll a ball down a 60-foot lane and knock over ten pins. What makes it a sport rather than a pastime is the scoring, and the scoring has produced a vocabulary of its own. The game arose in the early 19th century and is recorded in the United States by about 1820. A game consists of ten frames. In each frame the bowler has two rolls to clear the pins, and what happens on those two rolls determines not only the points for the frame but also a bonus from the following rolls. Two-roll frames became the standard when the American Bowling Congress held its first meeting in September 1895.\n\nThe best result is a strike: all ten pins fall on the first roll. The frame is over immediately and, on the scoreboard, it counts ten points plus the pins knocked down by the next two rolls. If some pins survive the first roll but the second roll finishes them off, the bowler has made a spare, worth ten points plus the pins from the next single roll. A frame in which pins are left standing after both rolls is an open frame and scores only the pins actually knocked down.\n\nBecause strikes carry bonuses forward, they multiply in value when they come in a row. Two consecutive strikes are a double, and three in a row are called a turkey — a name that supposedly dates from 19th-century American tournaments, where a live turkey was awarded for the feat around Thanksgiving. Four in a row are a “four-bagger” or “hambone”, and from there the slang grows ever more inventive. Twelve consecutive strikes — one in each of the ten frames plus the two bonus rolls in the tenth — produce the maximum score of 300 points, a perfect game. Bowling associations keep registers of them; in league play they are rare enough to be celebrated with rings and certificates, and a televised 300 by a professional is still a highlight; the first on live television was rolled by Grazio Castellano on 4 October 1953.\n\nThe scoring also has a dark side. When the first ball leaves two or more pins standing with a gap between them, the result is a split, and the most notorious is the 7-10 split: one pin at the far left of the back row, one at the far right. Converting it requires bouncing one pin off the side wall into the other, and even professionals succeed only a few times in a hundred attempts; Mark Roth was the first to convert it on television, on 5 January 1980. Other named leaves include the “big four” (4-6-7-10), the “Greek church” and the “baby split” (2-7 or 3-10), which is comparatively easy.\n\nA quick reference:\n\n| Term | Meaning |\n|---|---|\n| strike | all ten pins down on the first roll |\n| spare | remaining pins cleared with the second roll |\n| turkey | three strikes in a row |\n| perfect game | twelve strikes in a row, score 300 |\n| split | non-adjacent pins left standing after the first roll |\n\nThe lane itself is 41.5 inches wide, the pins are set in a triangle with 12 inches between them, and the ball, made of reactive resin or urethane, weighs up to 16 pounds. Serious bowlers buy their ball undrilled and have the holes drilled to the measured span of their own hand, usually as a fingertip grip, in which the middle and ring fingers go into the ball only up to the first knuckle; the house balls at the alley have the deeper conventional drilling instead. The biggest stage of all is in Japan: the Inazawa Grand Bowl near Nagoya, opened in 1972, has 116 lanes and is recognised as the world's largest bowling alley. Between those measurements and the vocabulary above lies everything a beginner needs to follow a game — and to understand why a bowler celebrating a “turkey” is not talking about dinner.",
+    "bodyDe": "Bowling sieht einfach aus: Man rollt eine Kugel über eine rund 18 Meter lange Bahn und wirft zehn Pins um. Was daraus einen Sport und nicht bloß einen Zeitvertreib macht, ist die Wertung – und die Wertung hat ein eigenes Vokabular hervorgebracht. Das Spiel entstand im frühen 19. Jahrhundert und ist in den USA um 1820 belegt. Ein Spiel besteht aus zehn Frames. In jedem Frame hat der Spieler zwei Würfe, um die Pins abzuräumen, und was bei diesen beiden Würfen geschieht, bestimmt nicht nur die Punkte für den Frame, sondern auch einen Bonus aus den folgenden Würfen. Zum Standard wurden Frames mit zwei Würfen, als der American Bowling Congress im September 1895 zu seiner ersten Sitzung zusammentrat.\n\nDas beste Ergebnis ist ein Strike: Alle zehn Pins fallen beim ersten Wurf. Der Frame ist damit sofort beendet und zählt auf der Anzeigetafel zehn Punkte plus die Pins, die mit den nächsten beiden Würfen fallen. Überstehen einige Pins den ersten Wurf, räumt der zweite Wurf sie aber ab, hat der Spieler einen Spare erzielt, der zehn Punkte plus die Pins des nächsten einzelnen Wurfs wert ist. Ein Frame, in dem nach beiden Würfen Pins stehen bleiben, ist ein offener Frame und zählt nur die tatsächlich umgeworfenen Pins.\n\nWeil Strikes ihren Bonus nach vorn tragen, vervielfacht sich ihr Wert, wenn sie hintereinander kommen. Zwei Strikes in Folge sind ein Double, und drei in Folge nennt man Turkey – ein Name, der angeblich aus amerikanischen Turnieren des 19. Jahrhunderts stammt, bei denen rund um Thanksgiving ein lebendiger Truthahn für diese Leistung ausgesetzt wurde. Vier in Folge sind ein „Four-Bagger“ oder „Hambone“, und von da an wird der Jargon immer erfinderischer. Zwölf Strikes in Folge – einer in jedem der zehn Frames plus die beiden Bonuswürfe im zehnten – ergeben die Höchstpunktzahl von 300, ein Perfect Game. Bowlingverbände führen Register darüber; im Ligabetrieb sind sie selten genug, um mit Ringen und Urkunden gefeiert zu werden, und ein im Fernsehen übertragenes 300er-Spiel eines Profis ist noch immer ein Höhepunkt; das erste live übertragene spielte Grazio Castellano am 4. Oktober 1953.\n\nDie Wertung hat auch eine Schattenseite. Lässt die erste Kugel zwei oder mehr Pins mit einer Lücke dazwischen stehen, ist das Ergebnis ein Split, und der berüchtigtste ist der 7-10-Split: ein Pin ganz links in der hinteren Reihe, einer ganz rechts. Um ihn abzuräumen, muss man einen Pin von der Seitenwand in den anderen prallen lassen, und selbst Profis gelingt das nur wenige Male in hundert Versuchen; als Erster schaffte es Mark Roth am 5. Januar 1980 im Fernsehen. Weitere benannte Stellungen sind die „Big Four“ (4-6-7-10), die „Greek Church“ und der „Baby Split“ (2-7 oder 3-10), der vergleichsweise leicht ist.\n\nEine kurze Übersicht:\n\n| Begriff | Bedeutung |\n|---|---|\n| Strike | alle zehn Pins beim ersten Wurf |\n| Spare | die restlichen Pins mit dem zweiten Wurf abgeräumt |\n| Turkey | drei Strikes in Folge |\n| Perfect Game | zwölf Strikes in Folge, 300 Punkte |\n| Split | nicht benachbarte Pins bleiben nach dem ersten Wurf stehen |\n\nDie Bahn selbst ist etwa 1,05 Meter breit, die Pins stehen in einem Dreieck mit gut 30 Zentimetern Abstand zueinander, und die Kugel aus reaktivem Harz oder Urethan wiegt bis zu 16 Pfund (rund 7,3 Kilogramm). Ernsthafte Bowler kaufen ihre Kugel ungebohrt und lassen die Löcher nach der vermessenen Spanne ihrer Hand bohren, meist als Fingertip-Bohrung, bei der Mittel- und Ringfinger nur bis zum ersten Fingergelenk in der Kugel stecken; die Hausbälle der Bahn haben dagegen die tiefere konventionelle Bohrung. Die größte Bühne von allen steht in Japan: Der 1972 eröffnete Inazawa Grand Bowl bei Nagoya hat 116 Bahnen und gilt als größtes Bowlingcenter der Welt. Zwischen diesen Maßen und dem Vokabular oben liegt alles, was ein Anfänger braucht, um ein Spiel zu verfolgen – und um zu verstehen, warum ein Spieler, der einen „Turkey“ feiert, nicht vom Abendessen spricht.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0209",
+   "baseHash": "043da0fc3645",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-394",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Walls, Nets and Rallies: The Rules That Define Racket and Net Sports",
+    "titleDe": "Wände, Netze und Ballwechsel: Die Regeln, die Rückschlag- und Netzsportarten ausmachen",
+    "bodyEn": "Every racket or net sport is defined by one or two rules that make it unlike any other. In Squash it is the front wall. The game grew out of rackets at Harrow School in England around 1830, when pupils discovered that a punctured ball that “squashed” on impact made for a more varied game. On a modern court, 9.75 metres long and 6.4 metres wide, the two players alternate strokes, and every shot must reach the front wall before it bounces on the floor. It may travel there directly or indirectly, off the side walls or even the back wall, but it must strike the front wall above the 48-centimetre “tin” at the bottom and below the out line at the top. Because the ball may also rebound off the walls on its way back, rallies in Squash are fast, three-dimensional and physically brutal; the sport is regularly listed among the most demanding in the world. Games are played to 11 points, best of five. Squash was still missing from the Olympic programme at Rio de Janeiro in 2016, when tennis, badminton and table tennis were all contested, but after decades of lobbying the sport will make its Olympic debut at Los Angeles in 2028.\n\nA close cousin is Padel, invented in 1969 by the Mexican businessman Enrique Corcuera, who built a small court at his home in Acapulco. Played almost exclusively in doubles on a 20 by 10 metre court enclosed by glass walls and wire mesh, Padel borrows its scoring from tennis and its use of the walls from Squash: a ball may be played after it has bounced off the glass. The underarm serve and the short, stringless rackets make it easy to learn, which explains its explosive growth in Spain, Argentina and, more recently, the rest of Europe.\n\nOther sports are defined not by walls but by what flies over the net:\n\n| Sport | Defining rule or feature | Origin |\n|---|---|---|\n| Squash | Every shot must reach the front wall, directly or indirectly | Harrow School, England, c. 1830 |\n| Badminton | A feathered shuttlecock instead of a ball; net 1.55 m at the posts | Badminton House, England, 1873 |\n| Table tennis | Games to 11 points (since 2001); table 2.74 by 1.525 m | England, late 19th century |\n| Padel | Doubles on a glass-walled court; walls in play | Acapulco, Mexico, 1969 |\n| Volleyball | Maximum of three touches per side | Holyoke, Massachusetts, 1895 |\n\nBadminton is the only major racket sport that does not use a ball at all. Its shuttlecock has, by the rules, 16 feathers set into a cork base – goose or duck feathers, all taken from the same wing, left or right, never mixed – and it decelerates so sharply that a smash of over 400 km/h can drop gently just behind the net, which is 1.55 metres high at the posts. The game takes its name from Badminton House, the Duke of Beaufort's estate, where it was played in the 1870s after being brought back from India; the first rules were drawn up there in 1873, and the International Badminton Federation was founded on 5 July 1934.\n\nTable tennis, born as an after-dinner amusement in Victorian England, changed its scoring in September 2001 from 21-point to 11-point games and enlarged the ball from 38 to 40 millimetres to slow the game for television. Volleyball, invented in 1895 by William G. Morgan at a YMCA in Holyoke, Massachusetts, and given its name at its first exhibition match in Springfield in 1896, revolves around its three-touch rule: dig (or bump), set, spike – in German baggern, pritschen, schmettern. The rule forces cooperation, and it is what turns six individuals into a team.",
+    "bodyDe": "Jede Rückschlag- oder Netzsportart wird durch ein oder zwei Regeln definiert, die sie von allen anderen unterscheiden. Beim Squash ist es die Vorderwand. Das Spiel entstand um 1830 aus dem Rackets an der Harrow School in England, als Schüler entdeckten, dass ein durchlöcherter Ball, der beim Aufprall „zerquetscht“ wurde (englisch „to squash“), ein abwechslungsreicheres Spiel ergab. Auf einem modernen Court von 9,75 Metern Länge und 6,4 Metern Breite schlagen die beiden Spieler abwechselnd, und jeder Schlag muss die Vorderwand erreichen, bevor der Ball auf dem Boden aufspringt. Er darf direkt oder indirekt dorthin gelangen – über die Seitenwände oder sogar die Rückwand –, muss die Vorderwand aber oberhalb des 48 Zentimeter hohen „Tin“ am unteren Rand und unterhalb der Auslinie am oberen Rand treffen. Weil der Ball auf dem Rückweg ebenfalls von den Wänden abprallen darf, sind die Ballwechsel beim Squash schnell, dreidimensional und körperlich brutal; die Sportart wird regelmäßig zu den anstrengendsten der Welt gezählt. Gespielt wird bis 11 Punkte, Best of five. Bei den Spielen 2016 in Rio de Janeiro, als Tennis, Badminton und Tischtennis allesamt ausgetragen wurden, fehlte Squash noch im olympischen Programm, doch nach jahrzehntelanger Lobbyarbeit feiert die Sportart 2028 in Los Angeles ihr olympisches Debüt.\n\nEin naher Verwandter ist Padel, 1969 vom mexikanischen Geschäftsmann Enrique Corcuera erfunden, der an seinem Haus in Acapulco einen kleinen Platz baute. Fast ausschließlich im Doppel auf einem 20 mal 10 Meter großen, von Glaswänden und Drahtgitter umschlossenen Platz gespielt, übernimmt Padel die Zählweise vom Tennis und die Nutzung der Wände vom Squash: Ein Ball darf gespielt werden, nachdem er vom Glas abgeprallt ist. Der Aufschlag von unten und die kurzen, unbesaiteten Schläger machen das Spiel leicht erlernbar, was sein explosives Wachstum in Spanien, Argentinien und zuletzt im übrigen Europa erklärt.\n\nAndere Sportarten werden nicht durch Wände definiert, sondern durch das, was über das Netz fliegt:\n\n| Sportart | Prägende Regel oder Besonderheit | Ursprung |\n|---|---|---|\n| Squash | Jeder Schlag muss direkt oder indirekt die Vorderwand erreichen | Harrow School, England, um 1830 |\n| Badminton | Ein Federball statt eines Balls; Netz 1,55 m an den Pfosten | Badminton House, England, 1873 |\n| Tischtennis | Sätze bis 11 Punkte (seit 2001); Platte 2,74 mal 1,525 m | England, spätes 19. Jahrhundert |\n| Padel | Doppel auf einem Platz mit Glaswänden; Wände im Spiel | Acapulco, Mexiko, 1969 |\n| Volleyball | Höchstens drei Berührungen pro Seite | Holyoke, Massachusetts, 1895 |\n\nBadminton ist die einzige große Rückschlagsportart, die gar keinen Ball verwendet. Ihr Federball hat laut Regelwerk 16 Federn in einem Korkfuß – Gänse- oder Entenfedern, alle vom selben Flügel, links oder rechts, nie gemischt – und wird so stark abgebremst, dass ein Schmetterschlag mit über 400 km/h sanft knapp hinter dem Netz landen kann, das an den Pfosten 1,55 Meter hoch ist. Das Spiel trägt seinen Namen nach Badminton House, dem Landsitz des Herzogs von Beaufort, wo es in den 1870er-Jahren gespielt wurde, nachdem man es aus Indien mitgebracht hatte; dort entstanden 1873 auch die ersten Regeln, und am 5. Juli 1934 wurde der Internationale Badmintonverband gegründet.\n\nTischtennis, als Zeitvertreib nach dem Abendessen im viktorianischen England entstanden, änderte im September 2001 seine Zählweise von 21 auf 11 Punkte pro Satz und vergrößerte den Ball von 38 auf 40 Millimeter, um das Spiel fürs Fernsehen zu verlangsamen. Volleyball, 1895 von William G. Morgan in einem YMCA in Holyoke, Massachusetts, erfunden und 1896 beim ersten Schauspiel in Springfield so getauft, dreht sich um die Drei-Berührungen-Regel: Annahme, Zuspiel, Angriff – im Spielerjargon baggern, pritschen und schmettern. Die Regel erzwingt Zusammenarbeit – und sie ist es, die aus sechs Einzelspielern eine Mannschaft macht.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1001",
+   "baseHash": "a8d9aac1e507",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-338",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Closest to the Jack: The Family of Boules Games",
+    "titleDe": "Wer liegt am nächsten am Ziel? Die Familie der Boule-Spiele",
+    "bodyEn": "Almost every culture has invented a game in which the object is to get your ball closer to a target than your opponent's ball. The Greeks tossed stones, the Romans rolled wooden spheres, and by the Middle Ages the game was so popular in France and England that kings banned it for distracting archers. Today the family goes by many names, and the differences between its members lie in the surface, the ball and the throw.\n\nThe Italian branch is Boccia. Played with eight balls, traditionally of wood or synthetic material, on a long, sand or gravel lane with side boards, it allows both rolling and throwing. The small target ball is called the pallino (\"little ball\"), and in English-speaking countries the game is usually known as bocce. In Germany the game owes its fame to one man. Konrad Adenauer, the first Federal Chancellor, spent his holidays from 1957 until his death in 1967 in Cadenabbia on Lake Como, and photographs of the octogenarian statesman lobbing balls on the villa's lane went around the country. For a while Boccia was reported on like a state activity, and lanes appeared in German parks and spa gardens. (The paralympic sport of the same name, played with leather balls from a seated position, is a separate discipline.)\n\nThe French branch is dominated by Pétanque, the version most people picture when they hear the word boules. It was born in 1907 (some sources say 1910) in La Ciotat near Marseille, supposedly for a player whose rheumatism no longer allowed him to run. Instead of taking a run-up, the thrower stands inside a small circle with both feet planted on the ground – \"pieds tanqués\" in Provençal, which gave the game its name. Steel balls of about 700 grams are thrown at a small wooden jack, the cochonnet, over a distance of six to ten metres. Because it needs only a patch of gravel, Pétanque has spread across the world and now has more than 600,000 licensed players in France alone.\n\nThe game it grew out of, the Jeu provençal, survives in the south of France. Here the lane is 15 to 24 metres long, the pointer takes one step and the shooter a full three-step run-up before releasing the ball, and a match can take an entire afternoon. Purists consider it the more athletic and elegant of the two, and it has had its own French championships since 1946.\n\nThe British branch went in a different direction. Bowls, or lawn bowls, is played on a perfectly flat, closely mown green with balls that are not spherical but slightly flattened on one side, so that they curve as they slow down. Reading that curve, the \"bias\", is the whole art. Bowls has been played on the same green in Southampton since 1299, and it is one of the core sports of the Commonwealth Games.\n\nAnd on ice the same idea becomes Curling. Two teams slide 20-kilogram granite stones down a sheet of ice towards a target of concentric rings, the house, while sweepers with brooms polish the ice ahead of the stone to lengthen or straighten its path. Curling emerged in sixteenth-century Scotland and has been a full Olympic sport since the 1998 Games in Nagano.\n\n| Game | Origin | Surface | Ball |\n|---|---|---|---|\n| Boccia | Italy | sand or gravel lane | wood or synthetic |\n| Pétanque | France (1907) | gravel | steel |\n| Jeu provençal | France | long gravel lane | steel |\n| Bowls | Britain | grass green | biased composite |\n| Curling | Scotland | ice | granite stone |\n\nDifferent balls, different surfaces, one ancient question: who is closest to the jack?",
+    "bodyDe": "Fast jede Kultur hat ein Spiel erfunden, bei dem es darum geht, die eigene Kugel näher an ein Ziel zu bringen als die Kugel des Gegners. Die Griechen warfen Steine, die Römer rollten Holzkugeln, und im Mittelalter war das Spiel in Frankreich und England so beliebt, dass Könige es verboten, weil es die Bogenschützen vom Üben abhielt. Heute trägt die Familie viele Namen, und die Unterschiede zwischen ihren Mitgliedern liegen im Untergrund, in der Kugel und im Wurf.\n\nDer italienische Zweig ist Boccia. Gespielt mit acht Kugeln, traditionell aus Holz oder Kunststoff, auf einer langen Sand- oder Kiesbahn mit Seitenbanden, erlaubt es sowohl Rollen als auch Werfen. Die kleine Zielkugel heißt Pallino („Kügelchen“); im Englischen nennt man das Spiel meist Bocce. In Deutschland verdankt das Spiel seinen Ruhm einem einzigen Mann. Konrad Adenauer, der erste Bundeskanzler, verbrachte seine Urlaube ab 1957 bis zu seinem Tod 1967 in Cadenabbia am Comer See, und die Fotos des achtzigjährigen Staatsmannes, der auf der Bahn der Villa Kugeln warf, gingen durchs ganze Land. Eine Zeit lang wurde über Boccia berichtet wie über eine Staatsangelegenheit, und in deutschen Parks und Kurgärten entstanden Bahnen. (Der gleichnamige paralympische Sport, der im Sitzen mit Lederbällen gespielt wird, ist eine eigene Disziplin.)\n\nDen französischen Zweig dominiert Pétanque, jene Variante, die sich die meisten vorstellen, wenn sie das Wort Boule hören. Sie entstand 1907 (nach manchen Quellen 1910) in La Ciotat bei Marseille, angeblich für einen Spieler, dem sein Rheuma das Laufen nicht mehr erlaubte. Statt Anlauf zu nehmen, steht der Werfer in einem kleinen Kreis mit beiden Füßen fest am Boden – „pieds tanqués“ auf Provenzalisch, was dem Spiel seinen Namen gab. Stahlkugeln von etwa 700 Gramm werden über sechs bis zehn Meter auf eine kleine Holzkugel, das Cochonnet, geworfen. Weil es nur ein Stück Kies braucht, hat sich Pétanque über die ganze Welt verbreitet und zählt allein in Frankreich mehr als 600.000 lizenzierte Spieler.\n\nDas Spiel, aus dem es hervorging, das Jeu provençal, lebt im Süden Frankreichs weiter. Hier ist die Bahn 15 bis 24 Meter lang, der Leger macht einen Schritt und der Schießer einen vollen Drei-Schritt-Anlauf, bevor er die Kugel loslässt, und eine Partie kann einen ganzen Nachmittag dauern. Puristen halten es für die athletischere und elegantere der beiden Varianten, und seit 1946 gibt es eigene französische Meisterschaften.\n\nDer britische Zweig schlug eine andere Richtung ein. Bowls, auch Lawn Bowls, wird auf einem vollkommen ebenen, kurz geschorenen Rasen mit Kugeln gespielt, die nicht rund, sondern auf einer Seite leicht abgeflacht sind, sodass sie beim Ausrollen eine Kurve beschreiben. Diese Kurve, den „Bias“, zu lesen, ist die ganze Kunst. In Southampton wird Bowls seit 1299 auf demselben Grün gespielt, und es gehört zu den Kernsportarten der Commonwealth Games.\n\nUnd auf dem Eis wird dieselbe Idee zu Curling. Zwei Mannschaften schieben 20 Kilogramm schwere Granitsteine über eine Eisbahn auf ein Ziel aus konzentrischen Ringen, das Haus, während Wischer mit Besen das Eis vor dem Stein polieren, um seinen Weg zu verlängern oder zu begradigen. Curling entstand im Schottland des sechzehnten Jahrhunderts und ist seit den Spielen 1998 in Nagano vollwertige olympische Sportart.\n\n| Spiel | Herkunft | Untergrund | Kugel |\n|---|---|---|---|\n| Boccia | Italien | Sand- oder Kiesbahn | Holz oder Kunststoff |\n| Pétanque | Frankreich (1907) | Kies | Stahl |\n| Jeu provençal | Frankreich | lange Kiesbahn | Stahl |\n| Bowls | Großbritannien | Rasen | abgeflachter Kunststoff |\n| Curling | Schottland | Eis | Granitstein |\n\nVerschiedene Kugeln, verschiedene Untergründe, eine uralte Frage: Wer liegt am nächsten am Ziel?",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0929",
+   "baseHash": "aa1cd4a1d7ec",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-263",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Wunderkind, Mamba, King: The Nicknames of NBA Superstars",
+    "titleDe": "Wunderkind, Mamba, King: Die Spitznamen der NBA-Superstars",
+    "bodyEn": "Basketball loves a nickname. American sportswriters and fans have been christening players since the days of \"Wilt the Stilt\", and in the NBA a good nickname can outlive a career. Five of the league's greatest players of the last thirty years are known almost as well by their epithets as by their names.\n\nThe \"German Wunderkind\" was Dirk Nowitzki. Born in Würzburg in 1978, the son of a handball player and a basketball player, he was drafted in 1998 and spent all 21 of his NBA seasons with the Dallas Mavericks – the longest one-club career in league history. He wore number 41 throughout, and in January 2022 the Mavericks retired the jersey. At 2.13 metres he shot like a guard, and his one-legged fadeaway jumper became one of the most copied moves in the game. In 2007 he was the first European to be named Most Valuable Player, and in 2011 he led Dallas to its only championship, beating LeBron James's Miami Heat in the finals. When he retired in 2019 he had scored 31,560 points, then sixth on the all-time list.\n\nThe template for all modern superstars is Michael Jordan, born in 1963, \"His Airness\" or simply \"Air\", a nickname born of his hang time and of the Nike shoe that carried it. Between 1991 and 1998 he won six championships with the Chicago Bulls, in two runs of three, taking the finals MVP award each time; his brief retirement to play baseball in 1993 only made the second run more famous. Five regular-season MVP awards, ten scoring titles and the 1992 Olympic \"Dream Team\" complete the record.\n\nKobe Bryant (1978–2020) gave himself his nickname. Frustrated by a difficult 2003, he adopted the \"Black Mamba\" persona from the film \"Kill Bill\" – the snake that strikes with precision – and it stuck for the rest of his career. He played twenty seasons for the Los Angeles Lakers, won five titles, scored 81 points in a single game in 2006 and became the only player to have two numbers, 8 and 24, retired by the same club. His death in a helicopter crash in January 2020 was mourned around the world.\n\nLeBron James has been \"the King\" since his high-school days in Akron, Ohio, when \"Sports Illustrated\" put him on its cover as \"The Chosen One\". He won two titles in Miami, then returned home and on 19 June 2016 completed the Cleveland Cavaliers' comeback from a 3–1 deficit against Golden State to the first championship in the club's history. A fourth title followed with the Lakers in 2020, and in February 2023 he passed Kareem Abdul-Jabbar as the leading scorer of all time.\n\nThe latest addition to the list is Giannis Antetokounmpo, the \"Greek Freak\", born in Athens to Nigerian parents and once a street vendor selling watches to help his family. Drafted by the Milwaukee Bucks in 2013 as a thin 2.06-metre teenager, he grew into a two-time MVP and on 20 July 2021 scored 50 points in the deciding game of the finals to give Milwaukee its first title in fifty years.\n\n| Nickname | Player | Club | Titles |\n|---|---|---|---|\n| German Wunderkind | Dirk Nowitzki | Dallas Mavericks | 1 (2011) |\n| His Airness | Michael Jordan | Chicago Bulls | 6 |\n| Black Mamba | Kobe Bryant | Los Angeles Lakers | 5 |\n| The King | LeBron James | Cavaliers, Heat, Lakers | 4 |\n| Greek Freak | Giannis Antetokounmpo | Milwaukee Bucks | 1 (2021) |",
+    "bodyDe": "Basketball liebt Spitznamen. Amerikanische Sportjournalisten und Fans taufen Spieler seit den Tagen von „Wilt the Stilt“, und in der NBA kann ein guter Spitzname eine Karriere überdauern. Fünf der größten Spieler der Liga aus den letzten dreißig Jahren sind unter ihren Beinamen fast so bekannt wie unter ihren Namen.\n\nDas „German Wunderkind“ war Dirk Nowitzki. 1978 in Würzburg als Sohn eines Handballers und einer Basketballerin geboren, wurde er 1998 gedraftet und verbrachte alle 21 NBA-Saisons bei den Dallas Mavericks – die längste Ein-Verein-Karriere der Ligageschichte. Er trug durchgehend die Rückennummer 41, die die Mavericks im Januar 2022 zurückzogen. Mit 2,13 Metern warf er wie ein Guard, und sein einbeiniger Fadeaway-Sprungwurf wurde zu einer der meistkopierten Bewegungen des Spiels. 2007 wurde er als erster Europäer zum wertvollsten Spieler (MVP) gewählt, und 2011 führte er Dallas zur einzigen Meisterschaft, mit einem Finalsieg über die Miami Heat von LeBron James. Als er 2019 zurücktrat, hatte er 31.560 Punkte erzielt, damals Platz sechs der ewigen Liste.\n\nDie Vorlage für alle modernen Superstars ist der 1963 geborene Michael Jordan, „His Airness“ oder schlicht „Air“ – ein Spitzname, der seiner Flugzeit und dem Nike-Schuh entsprang, der sie trug. Zwischen 1991 und 1998 gewann er mit den Chicago Bulls sechs Meisterschaften in zwei Dreierserien und wurde jedes Mal Finals-MVP; sein kurzer Rücktritt, um 1993 Baseball zu spielen, machte die zweite Serie nur noch berühmter. Fünf MVP-Titel der regulären Saison, zehn Korbjägerkronen und das olympische „Dream Team“ von 1992 vervollständigen die Bilanz.\n\nKobe Bryant (1978–2020) gab sich seinen Spitznamen selbst. Frustriert von einem schwierigen Jahr 2003 übernahm er die Figur der „Black Mamba“ aus dem Film „Kill Bill“ – die Schlange, die mit Präzision zuschlägt –, und der Name blieb für den Rest seiner Karriere. Er spielte zwanzig Saisons für die Los Angeles Lakers, gewann fünf Titel, erzielte 2006 in einem einzigen Spiel 81 Punkte und ist der einzige Spieler, dessen zwei Rückennummern, 8 und 24, vom selben Verein zurückgezogen wurden. Sein Tod bei einem Hubschrauberabsturz im Januar 2020 wurde in aller Welt betrauert.\n\nLeBron James ist „the King“ seit seiner Highschool-Zeit in Akron, Ohio, als ihn „Sports Illustrated“ als „The Chosen One“ aufs Titelblatt setzte. Er gewann zwei Titel in Miami, kehrte dann nach Hause zurück und vollendete am 19. Juni 2016 mit den Cleveland Cavaliers die Aufholjagd nach einem 1:3-Rückstand gegen Golden State zur ersten Meisterschaft der Vereinsgeschichte. Ein vierter Titel folgte 2020 mit den Lakers, und im Februar 2023 löste er Kareem Abdul-Jabbar als besten Scorer aller Zeiten ab.\n\nDer jüngste Zugang zur Liste ist Giannis Antetokounmpo, der „Greek Freak“, geboren in Athen als Sohn nigerianischer Eltern und einst Straßenhändler, der Uhren verkaufte, um seiner Familie zu helfen. 2013 von den Milwaukee Bucks als dünner 2,06-Meter-Teenager gedraftet, wuchs er zum zweifachen MVP heran und erzielte am 20. Juli 2021 im entscheidenden Finalspiel 50 Punkte, um Milwaukee den ersten Titel seit fünfzig Jahren zu bescheren.\n\n| Spitzname | Spieler | Verein | Titel |\n|---|---|---|---|\n| German Wunderkind | Dirk Nowitzki | Dallas Mavericks | 1 (2011) |\n| His Airness | Michael Jordan | Chicago Bulls | 6 |\n| Black Mamba | Kobe Bryant | Los Angeles Lakers | 5 |\n| The King | LeBron James | Cavaliers, Heat, Lakers | 4 |\n| Greek Freak | Giannis Antetokounmpo | Milwaukee Bucks | 1 (2021) |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1481",
+   "baseHash": "f566eba6aaad",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-036",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Six Points and a Kick: How American Football Is Scored",
+    "titleDe": "Sechs Punkte und ein Kick: Wie im American Football gezählt wird",
+    "bodyEn": "American football looks chaotic to the newcomer, but its scoring system is simple and its vocabulary precise. Every term describes exactly one thing, and most of them have crossed into everyday English.\n\nThe most valuable score is the touchdown, worth six points since 1912. To achieve it, the offence must carry the ball across the goal line into the opponents' end zone or catch a pass there; the ball, not the player, has to break the plane of the goal line. After a touchdown the scoring team may add a point-after kick from close range or, since 1994 in the NFL, attempt a two-point conversion by running or passing into the end zone once more.\n\nThe player who makes most of this happen is the quarterback – a word recorded since 1876 for the back who stood between the halfbacks and the centre – whose passing game became possible when the forward pass was legalised in 1906. He lines up behind the centre, receives the snap, reads the defence and either hands the ball to a running back, throws it to a receiver or keeps it himself. Because the quarterback touches the ball on almost every offensive play and calls or relays the plays in the huddle, he is the best-paid and most scrutinised player on the field; Tom Brady's seven Super Bowl wins made him the position's benchmark.\n\nWhen a drive stalls within range, the offence may settle for a field goal, worth three points since 1909. The ball is snapped to a holder and kicked from the ground between the uprights and above the crossbar of the goalposts. Kickers routinely succeed from fifty yards, and the decision to try a field goal instead of going for a first down on fourth down is one of the game's classic dilemmas.\n\nThe rarest score belongs to the defence. A safety, worth two points since Walter Camp's scoring reforms of 1883, is awarded when the ball carrier is tackled in his own end zone, steps out of bounds there, or commits certain fouls behind his own goal line. Adding insult to injury, the team that conceded the safety must then kick the ball back to its opponents.\n\nAll of this culminates every February in the Super Bowl, the biggest single day in American football – the championship game of the National Football League between the winners of the AFC and the NFC. The first was played on 15 January 1967, when the Green Bay Packers beat the Kansas City Chiefs 35–10; the games are numbered with Roman numerals, and the broadcast is regularly the most-watched television programme of the year in the United States, with its advertisements and half-time show nearly as famous as the game itself.\n\n| Score | Points |\n|---|---|\n| Touchdown | 6 |\n| Field goal | 3 |\n| Safety | 2 |\n| Two-point conversion | 2 |\n| Point after touchdown | 1 |",
+    "bodyDe": "American Football wirkt auf Neulinge chaotisch, doch sein Punktesystem ist einfach und sein Vokabular präzise. Jeder Begriff bezeichnet genau eine Sache, und die meisten sind in die Alltagssprache übergegangen.\n\nDer wertvollste Punktgewinn ist der Touchdown, seit 1912 sechs Punkte wert. Um ihn zu erzielen, muss die Offense den Ball über die Goalline in die gegnerische Endzone tragen oder ihn dort fangen; der Ball, nicht der Spieler, muss die Ebene der Goalline durchbrechen. Nach einem Touchdown kann die punktende Mannschaft aus kurzer Distanz einen Zusatzpunkt kicken oder, in der NFL seit 1994, eine Two-Point Conversion versuchen, indem sie den Ball erneut per Lauf oder Pass in die Endzone bringt.\n\nDer Spieler, der das meiste davon in Gang setzt, ist der Quarterback – ein seit 1876 belegtes Wort für den Rückraumspieler zwischen den Halfbacks und dem Center –, dessen Passspiel erst möglich wurde, als der Vorwärtspass 1906 erlaubt wurde. Er steht hinter dem Center, nimmt den Snap entgegen, liest die Verteidigung und übergibt den Ball einem Runningback, wirft ihn zu einem Receiver oder behält ihn selbst. Weil der Quarterback bei fast jedem Offensivspielzug den Ball berührt und die Spielzüge im Huddle ansagt oder weitergibt, ist er der bestbezahlte und am genauesten beobachtete Spieler auf dem Feld; Tom Bradys sieben Siege im Super Bowl machten ihn zum Maßstab der Position.\n\nBleibt ein Angriff in Reichweite stecken, kann sich die Offense mit einem Field Goal begnügen, das seit 1909 drei Punkte bringt. Der Ball wird zu einem Holder gesnappt und vom Boden zwischen die Torstangen und über die Querlatte gekickt. Kicker treffen routinemäßig aus fünfzig Yards, und die Entscheidung, beim vierten Versuch ein Field Goal zu probieren statt auf ein neues First Down zu gehen, ist eines der klassischen Dilemmas des Spiels.\n\nDer seltenste Punktgewinn gehört der Verteidigung. Eine Safety, seit Walter Camps Punktereform von 1883 zwei Punkte wert, wird zugesprochen, wenn der Ballträger in seiner eigenen Endzone zu Boden gebracht wird, dort ins Aus tritt oder bestimmte Fouls hinter der eigenen Goalline begeht. Zur Strafe muss die Mannschaft, die die Safety kassiert hat, den Ball anschließend auch noch dem Gegner zurückkicken.\n\nAll das gipfelt jeden Februar im Super Bowl, dem größten Tag im American Football, dem Endspiel der National Football League zwischen den Siegern der AFC und der NFC. Das erste wurde am 15. Januar 1967 gespielt, als die Green Bay Packers die Kansas City Chiefs mit 35:10 besiegten; die Spiele werden mit römischen Ziffern nummeriert, und die Übertragung ist in den USA regelmäßig die meistgesehene Fernsehsendung des Jahres, mit Werbespots und Halbzeitshow, die fast so berühmt sind wie das Spiel selbst.\n\n| Punktgewinn | Punkte |\n|---|---|\n| Touchdown | 6 |\n| Field Goal | 3 |\n| Safety | 2 |\n| Two-Point Conversion | 2 |\n| Point after Touchdown | 1 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1385",
+   "baseHash": "ffa8e3d87a87",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-047",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-233",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Sports That Started as Stories",
+    "titleDe": "Sportarten, die als Geschichten begannen",
+    "bodyEn": "Most team sports grew slowly out of village games. A few, however, can point to a single inventor, a novel or even a film, and their origin stories are half the fun of playing them.\n\nThe strangest is **Jugger**. In the 1989 post-apocalyptic film \"The Blood of Heroes\" (German title \"Die Jugger – Kampf der Besten\"), written and directed by David Webb Peoples and shot in the Australian outback with Rutger Hauer, wandering teams fight for a dog's skull that must be planted on a stake. German live-action role-players turned the fiction into a real sport: the first documented game was played in 1993 by a Heidelberg LARP group, and the first tournament followed in Hamburg in 1995. Two teams of five play with padded \"pompfen\" (staffs, chains and shields) and a felt-covered ball called the jugg, shaped like the film's dog skull and the true goal of every match; only the unarmed \"Qwik\" may carry it. A hit takes a player out for a count of stones drummed at the side of the field. Germany, Australia, Spain and the United States all hold national championships.\n\n**Quidditch** came from J. K. Rowling's Harry Potter books. In 2005 students at Middlebury College in Vermont adapted the fictional broomstick game to the ground, and the sport spread to hundreds of universities. Players run with a broom between their legs, chasers score with a volleyball through three hoops, beaters throw dodgeballs, and a neutral \"snitch runner\" is chased by the seekers. In 2022 the governing bodies renamed the sport quadball to escape the trademark and to distance themselves from the author.\n\n**Basketball** was invented in a single winter. In December 1891 James Naismith (1861–1939), a Canadian physical-education teacher at the YMCA training school in Springfield, Massachusetts, was told to devise an indoor game for unruly students. He nailed two peach baskets to the balcony rail, wrote thirteen rules and used a soccer ball; the first game, on 21 December 1891, ended 1–0. The sport became Olympic in 1936 and the NBA was founded in 1946.\n\n**Cycle ball**, known in German as Radball, was born in 1883 when the American trick cyclist Nick Kaufmann is said to have gently pushed a small dog out of his way with his front wheel. Two riders per team play a ball of about 600 grams into a goal using only the wheels and the body, on fixed-gear bicycles without brakes that let them balance motionless. Kaufmann and John Featherly showed the new game in public in Rochester, New York, on 14 September 1883. World championships have been held since 1929 and are dominated by Germany, Austria, Switzerland and the Czech Republic.\n\n**Ultimate Frisbee**, or simply Ultimate, was invented in 1968 by students at Columbia High School in Maplewood, New Jersey, led by Joel Silver, later a Hollywood producer. Seven players a side – 14 on the field in all – move a 175-gram disc up the field by passing; the thrower may not run, and a catch in the end zone scores. Its defining principle is the \"Spirit of the Game\": even at world championships there are no referees, and players call their own fouls.\n\n| Sport | Origin | Year | Players per side |\n|---|---|---|---|\n| Basketball | James Naismith | 1891 | 5 |\n| Cycle ball | Nick Kaufmann | 1883 | 2 |\n| Ultimate Frisbee | Columbia High School | 1968 | 7 |\n| Jugger | Film \"The Blood of Heroes\" | 1989/1993 | 5 |\n| Quidditch | Middlebury College | 2005 | 7 |\n\nFrom peach baskets to dog skulls, each of these games proves that a rulebook can begin almost anywhere.",
+    "bodyDe": "Die meisten Mannschaftssportarten sind langsam aus Dorfspielen erwachsen. Einige wenige jedoch können auf einen einzelnen Erfinder, einen Roman oder sogar einen Film verweisen, und ihre Entstehungsgeschichten sind der halbe Spaß am Spielen.\n\nDie seltsamste ist **Jugger**. In dem postapokalyptischen Film „The Blood of Heroes“ von 1989 (deutscher Titel „Die Jugger – Kampf der Besten“), geschrieben und inszeniert von David Webb Peoples und mit Rutger Hauer im australischen Outback gedreht, kämpfen umherziehende Teams um einen Hundeschädel, der auf einen Pfahl gesteckt werden muss. Deutsche Liverollenspieler machten aus der Fiktion einen echten Sport: Das erste nachgewiesene Spiel fand 1993 bei einer Heidelberger LARP-Gruppe statt, das erste Turnier folgte 1995 in Hamburg. Zwei Teams zu fünft spielen mit gepolsterten „Pompfen“ (Stäben, Ketten und Schilden) und einem filzbezogenen Ball namens Jugg, geformt wie der Hundeschädel aus dem Film und eigentliches Ziel jeder Partie; nur der unbewaffnete „Qwik“ darf ihn tragen. Ein Treffer nimmt einen Spieler für eine Anzahl von Steinen aus dem Spiel, die am Spielfeldrand getrommelt werden. Deutschland, Australien, Spanien und die USA tragen nationale Meisterschaften aus.\n\n**Quidditch** kam aus J. K. Rowlings Harry-Potter-Büchern. 2005 übertrugen Studenten des Middlebury College in Vermont das fiktive Besenspiel auf den Boden, und der Sport verbreitete sich an Hunderten Universitäten. Die Spieler laufen mit einem Besen zwischen den Beinen, Jäger punkten mit einem Volleyball durch drei Ringe, Treiber werfen Dodgebälle, und ein neutraler „Schnatzläufer“ wird von den Suchern gejagt. 2022 benannten die Verbände den Sport in Quadball um, um der Markenfrage zu entgehen und sich von der Autorin zu distanzieren.\n\n**Basketball** wurde in einem einzigen Winter erfunden. Im Dezember 1891 erhielt James Naismith (1861–1939), ein kanadischer Sportlehrer an der YMCA-Ausbildungsschule in Springfield, Massachusetts, den Auftrag, ein Hallenspiel für widerspenstige Studenten zu entwickeln. Er nagelte zwei Pfirsichkörbe an das Balkongeländer, schrieb dreizehn Regeln und benutzte einen Fußball; das erste Spiel am 21. Dezember 1891 endete 1:0. Der Sport wurde 1936 olympisch, die NBA 1946 gegründet.\n\n**Radball** entstand 1883, als der US-amerikanische Kunstradfahrer Nick Kaufmann angeblich einen kleinen Hund sanft mit dem Vorderrad aus dem Weg schob. Zwei Fahrer pro Team spielen einen etwa 600 Gramm schweren Ball nur mit Rädern und Körper ins Tor, auf Fahrrädern ohne Freilauf und ohne Bremsen, die es ihnen erlauben, regungslos zu balancieren. Kaufmann und John Featherly führten das neue Spiel am 14. September 1883 in Rochester, New York, öffentlich vor. Weltmeisterschaften gibt es seit 1929, dominiert von Deutschland, Österreich, der Schweiz und Tschechien.\n\n**Ultimate Frisbee**, oder einfach Ultimate, wurde 1968 von Schülern der Columbia High School in Maplewood, New Jersey, unter Führung von Joel Silver erfunden, dem späteren Hollywood-Produzenten. Sieben Spieler pro Seite – insgesamt also 14 auf dem Feld – bewegen eine 175 Gramm schwere Scheibe durch Pässe über das Feld; der Werfer darf nicht laufen, und ein Fang in der Endzone zählt als Punkt. Sein bestimmendes Prinzip ist der „Spirit of the Game“: Selbst bei Weltmeisterschaften gibt es keine Schiedsrichter, und die Spieler zeigen ihre Fouls selbst an.\n\n| Sportart | Ursprung | Jahr | Spieler pro Seite |\n|---|---|---|---|\n| Basketball | James Naismith | 1891 | 5 |\n| Radball | Nick Kaufmann | 1883 | 2 |\n| Ultimate Frisbee | Columbia High School | 1968 | 7 |\n| Jugger | Film „The Blood of Heroes“ | 1989/1993 | 5 |\n| Quidditch | Middlebury College | 2005 | 7 |\n\nVon Pfirsichkörben bis zu Hundeschädeln beweist jedes dieser Spiele, dass ein Regelbuch fast überall beginnen kann.",
+    "notesEn": "The film is „The Blood of Heroes“ (also released as „The Salute of the Jugger“), an Australian-American production of 1989.",
+    "notesDe": "Der Film ist „The Blood of Heroes“ (auch als „The Salute of the Jugger“ veröffentlicht, deutsch „Die Jugger – Kampf der Besten“), eine australisch-amerikanische Produktion von 1989."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-218",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the nickname of the South African national rugby union team, adopted on its 1906–07 tour of Britain and Ireland?",
+      "de": "Wie lautet der Spitzname der südafrikanischen Rugby-Union-Nationalmannschaft, den sie auf ihrer Tournee durch Großbritannien und Irland 1906/07 annahm?",
+      "answerEn": "Springboks",
+      "answerDe": "Springboks",
+      "timeline": {
+       "kind": "event",
+       "start": "1906",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "South Africa's touring rugby side adopts the springbok emblem",
+       "labelDe": "Südafrikas Rugby-Auswahl nimmt auf Tournee das Springbock-Emblem an"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/South_Africa_national_rugby_union_team",
+       "title": "South Africa national rugby union team – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the nickname of the Australian national rugby union team, which its players chose on their 1908–09 tour of Britain instead of \"the Rabbits\"?",
+      "de": "Wie lautet der Spitzname der australischen Rugby-Union-Nationalmannschaft, den sich die Spieler auf ihrer Großbritannien-Tournee 1908/09 statt „die Kaninchen“ gaben?",
+      "answerEn": "Wallabies",
+      "answerDe": "Wallabies",
+      "timeline": {
+       "kind": "event",
+       "start": "1908",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Australia's first rugby union tour of Britain; the players call themselves the Wallabies",
+       "labelDe": "Erste Großbritannien-Tournee einer australischen Rugby-Union-Auswahl; die Spieler nennen sich Wallabies"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Australia_national_rugby_union_team",
+       "title": "Australia national rugby union team – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the nickname of the Argentine national rugby union team, coined by a South African journalist on its 1965 tour?",
+      "de": "Wie lautet der Spitzname der argentinischen Rugby-Union-Nationalmannschaft, den ein südafrikanischer Journalist auf ihrer Tournee 1965 prägte?",
+      "answerEn": "Pumas",
+      "answerDe": "Pumas",
+      "timeline": {
+       "kind": "event",
+       "start": "1965",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A South African journalist names Argentina's touring rugby team the Pumas",
+       "labelDe": "Ein südafrikanischer Journalist tauft Argentiniens Rugby-Auswahl auf Tournee die Pumas"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Argentina_national_rugby_union_team",
+       "title": "Argentina national rugby union team – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the haka composed by the Ngāti Toa chief Te Rauparaha that the All Blacks traditionally perform before matches?",
+      "de": "Wie heißt der vom Ngāti-Toa-Häuptling Te Rauparaha gedichtete Haka, den die All Blacks traditionell vor ihren Spielen aufführen?",
+      "answerEn": "Ka Mate",
+      "answerDe": "Ka Mate",
+      "timeline": {
+       "kind": "creation",
+       "start": "1820",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Te Rauparaha composes the haka Ka Mate",
+       "labelDe": "Te Rauparaha dichtet den Haka Ka Mate"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ka_Mate",
+       "title": "Ka Mate – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "All Blacks, Springboks, Wallabies: The Names of Rugby's Great Nations",
+    "titleDe": "All Blacks, Springboks, Wallabies: Die Namen der großen Rugby-Nationen",
+    "bodyEn": "Rugby union is a game of nations as much as clubs, and its great national teams are known around the world less by their countries' names than by their nicknames. Most of those names were born on long sea voyages to Britain in the early 20th century, when touring sides needed an identity the British press could print.\n\nThe most famous are the **All Blacks** of New Zealand. The team had probably been called \"the Blacks\" at home because of its black strip, but the name was popularised on the 1905 tour of the British Isles, France and the United States by the side remembered as the \"Originals\". A cherished story claims that a London newspaper praised them for playing as if they were \"all backs\" and a typesetter turned it into \"All Blacks\" – a tale most historians consider a myth. Before kick-off the All Blacks traditionally perform **Ka Mate**, the haka composed around 1820 by Te Rauparaha, the Ngāti Toa chief, after he escaped his enemies by hiding in a kūmara pit; since 2005 they have also used a second haka, Kapa o Pango. New Zealand won the Rugby World Cup in 1987, 2011 and 2015.\n\nSouth Africa's team are the **Springboks**. Paul Roos's side adopted the leaping antelope as its emblem on the 1906–07 tour of Britain and Ireland, partly so that the British newspapers would not invent a name for them. In Afrikaans they are the Springbokke or simply the Bokke.\n\nAustralia's players chose their own name. Before the 1908–09 tour of Britain – the first by an Australian rugby union team – they were dubbed \"the Rabbits\" at a send-off function; finding that derogatory, they called themselves the **Wallabies** once they reached England, and the marsupial has stayed.\n\nArgentina's nickname was a mistake. On the team's first overseas tour, to Rhodesia and South Africa in 1965, the journalist Carl Kohler of \"Die Transvaler\" wanted a catchy name to match the All Blacks and Springboks. The animal on the Argentine union's crest was a jaguar, but under deadline pressure Kohler guessed and called the team the **Pumas**. Argentines embraced \"Los Pumas\", even though the crest showed a jaguar until 2023.\n\n| Team | Nickname | Since |\n|---|---|---|\n| New Zealand | All Blacks | 1905 |\n| South Africa | Springboks | 1906 |\n| Australia | Wallabies | 1908 |\n| Argentina | Pumas | 1965 |\n\nA nickname, a colour and a pre-match ritual: in rugby, that is how a nation introduces itself.",
+    "bodyDe": "Rugby Union ist ein Spiel der Nationen ebenso wie der Vereine, und seine großen Nationalmannschaften kennt man in aller Welt weniger unter den Namen ihrer Länder als unter ihren Spitznamen. Die meisten dieser Namen entstanden auf langen Schiffsreisen nach Großbritannien im frühen 20. Jahrhundert, als Gastmannschaften eine Identität brauchten, die die britische Presse drucken konnte.\n\nAm berühmtesten sind die **All Blacks** aus Neuseeland. Wegen ihrer schwarzen Trikots hieß die Mannschaft zu Hause vermutlich schon „die Schwarzen“, doch populär wurde der Name auf der Tournee von 1905 durch die Britischen Inseln, Frankreich und die USA, deren Team als die „Originals“ in Erinnerung blieb. Eine beliebte Geschichte behauptet, eine Londoner Zeitung habe gelobt, sie spielten, als wären sie „all backs“ (lauter Hinterspieler), und ein Setzer habe daraus „All Blacks“ gemacht – eine Erzählung, die die meisten Historiker für einen Mythos halten. Vor dem Anpfiff führen die All Blacks traditionell den **Ka Mate** auf, den Haka, den Te Rauparaha, der Häuptling der Ngāti Toa, um 1820 dichtete, nachdem er seinen Feinden in einer Kūmara-Grube entkommen war; seit 2005 tanzen sie auch einen zweiten Haka, Kapa o Pango. Neuseeland gewann die Rugby-Weltmeisterschaft 1987, 2011 und 2015.\n\nSüdafrikas Mannschaft sind die **Springboks**. Das Team von Paul Roos nahm die springende Antilope auf der Tournee durch Großbritannien und Irland 1906/07 als Emblem an, auch damit die britischen Zeitungen ihm keinen Namen erfanden. Auf Afrikaans heißen sie Springbokke oder einfach Bokke.\n\nAustraliens Spieler wählten ihren Namen selbst. Vor der Tournee durch Großbritannien 1908/09 – der ersten einer australischen Rugby-Union-Mannschaft – wurden sie bei einer Abschiedsfeier „die Kaninchen“ getauft; weil sie das abwertend fanden, nannten sie sich nach der Ankunft in England die **Wallabies**, und das Beuteltier ist geblieben.\n\nArgentiniens Spitzname war ein Irrtum. Auf der ersten Auslandstournee der Mannschaft, nach Rhodesien und Südafrika 1965, suchte der Journalist Carl Kohler von „Die Transvaler“ einen griffigen Namen wie All Blacks oder Springboks. Das Tier im Wappen des argentinischen Verbands war ein Jaguar, doch unter Zeitdruck riet Kohler und nannte das Team die **Pumas**. Die Argentinier übernahmen „Los Pumas“ gern, obwohl das Wappen noch bis 2023 einen Jaguar zeigte.\n\n| Mannschaft | Spitzname | Seit |\n|---|---|---|\n| Neuseeland | All Blacks | 1905 |\n| Südafrika | Springboks | 1906 |\n| Australien | Wallabies | 1908 |\n| Argentinien | Pumas | 1965 |\n\nEin Spitzname, eine Farbe und ein Ritual vor dem Spiel: So stellt sich im Rugby eine Nation vor.",
+    "notesEn": "Strictly the team is the New Zealand national rugby union team; \"All Blacks\" is its nickname and brand.",
+    "notesDe": "Offiziell heißt die Mannschaft neuseeländische Rugby-Union-Nationalmannschaft; „All Blacks“ ist ihr Spitzname und ihre Marke."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-383",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which coach, himself a world champion as a player in 1978, led Germany to the handball World Championship title at home in 2007?",
+      "de": "Welcher Trainer, der 1978 selbst als Spieler Weltmeister geworden war, führte Deutschland 2007 zum Handball-Weltmeistertitel im eigenen Land?",
+      "answerEn": "Heiner Brand",
+      "answerDe": "Heiner Brand",
+      "timeline": {
+       "kind": "event",
+       "start": "2007-02-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Germany, coached by Heiner Brand, win the World Men's Handball Championship",
+       "labelDe": "Deutschland wird unter Trainer Heiner Brand Handball-Weltmeister"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Heiner_Brand",
+       "title": "Heiner Brand – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city did Germany beat Poland in the final of the 2007 World Men's Handball Championship?",
+      "de": "In welcher Stadt besiegte Deutschland im Finale der Handball-Weltmeisterschaft der Männer 2007 Polen?",
+      "answerEn": "Cologne",
+      "answerDe": "Köln",
+      "timeline": {
+       "kind": "event",
+       "start": "2007-02-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Germany beat Poland in the World Championship final in the Kölnarena",
+       "labelDe": "Deutschland schlägt Polen im WM-Finale in der Kölnarena"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/2007_World_Men%27s_Handball_Championship",
+       "title": "2007 World Men's Handball Championship – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Icelandic coach led Germany to the 2016 European Men's Handball Championship title?",
+      "de": "Welcher isländische Trainer führte Deutschland 2016 zum Titel bei der Handball-Europameisterschaft der Männer?",
+      "answerEn": "Dagur Sigurðsson",
+      "answerDe": "Dagur Sigurðsson",
+      "timeline": {
+       "kind": "event",
+       "start": "2016-01-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Germany beat Spain 24–17 to win the European Championship",
+       "labelDe": "Deutschland schlägt Spanien 24:17 und wird Europameister"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Dagur_Sigur%C3%B0sson",
+       "title": "Dagur Sigurðsson – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which club, founded in 1904, is the record champion of the German Handball-Bundesliga?",
+      "de": "Welcher 1904 gegründete Verein ist Rekordmeister der Handball-Bundesliga?",
+      "answerEn": "THW Kiel",
+      "answerDe": "THW Kiel",
+      "timeline": {
+       "kind": "founding",
+       "start": "1904-02-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "THW Kiel is founded",
+       "labelDe": "Der THW Kiel wird gegründet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/THW_Kiel",
+       "title": "THW Kiel – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Kretzschmar to Kiel: Germany's Handball Heroes",
+    "titleDe": "Von Kretzschmar bis Kiel: Deutschlands Handballhelden",
+    "bodyEn": "Handball is Germany's second team sport after football, and its heroes fill arenas from Kiel to Magdeburg. A handful of names and dates explain why.\n\nThe face of German handball around the turn of the millennium was **Stefan Kretzschmar**. Born in Leipzig in 1973, the son of Waltraud Kretzschmar, an East German international who won three world titles, he played left wing with a flair – and tattoos and piercings – that made him a pop figure far beyond the sport. His professional clubs were SV Blau-Weiß Spandau (1991–1993) and VfL Gummersbach (1993–1996), and from 1996 until his retirement in 2007 he played for **SC Magdeburg**. For Germany he scored 821 goals in 218 internationals and won Olympic silver in Athens in 2004, losing the final to Croatia. Füchse Berlin, often named as one of his clubs, only knew him later, as sports director from 2020.\n\nThe great home triumph came in 2007. Germany hosted the World Championship, and on 4 February the team beat Poland in the final in the Kölnarena in Köln (Cologne) before a delirious crowd – the country's third world title. The coach was **Heiner Brand**, who had himself won the 1978 World Championship as a player and led the national team from 1997 to 2011; his moustache became as famous as any of his players.\n\nNine years later an outsider repeated the feat. Under the Icelandic coach **Dagur Sigurðsson**, in charge from 2014 to 2017, a young and injury-hit German squad won the 2016 European Championship in Poland, beating Spain 24–17 in the final on 31 January 2016.\n\nAt club level one name towers over the rest. **THW Kiel**, founded in 1904, is the record champion of the Handball-Bundesliga with 23 titles, and it won the EHF Champions League in 2007, 2010, 2012 and 2020. Its matches in the Kiel arena are sold out season after season.\n\n| Name | Achievement |\n|---|---|\n| Stefan Kretzschmar | left wing, SC Magdeburg 1996–2007, Olympic silver 2004 |\n| Heiner Brand | world champion as player (1978) and as coach (2007) |\n| Dagur Sigurðsson | coach of the 2016 European champions |\n| THW Kiel | record German champion, four Champions League titles |\n\nFrom a tattooed winger to a moustached coach, German handball has always had characters to match its results.",
+    "bodyDe": "Handball ist nach dem Fußball Deutschlands zweite Mannschaftssportart, und seine Helden füllen die Hallen von Kiel bis Magdeburg. Eine Handvoll Namen und Daten erklärt, warum.\n\nDas Gesicht des deutschen Handballs um die Jahrtausendwende war **Stefan Kretzschmar**. 1973 in Leipzig geboren, Sohn von Waltraud Kretzschmar, einer DDR-Nationalspielerin mit drei Weltmeistertiteln, spielte er Linksaußen mit einer Extravaganz – samt Tattoos und Piercings –, die ihn weit über den Sport hinaus zur Popfigur machte. Seine Profivereine waren der SV Blau-Weiß Spandau (1991–1993) und der VfL Gummersbach (1993–1996), und von 1996 bis zu seinem Karriereende 2007 spielte er beim **SC Magdeburg**. Für Deutschland erzielte er in 218 Länderspielen 821 Tore und gewann 2004 in Athen olympisches Silber, nach einer Finalniederlage gegen Kroatien. Die Füchse Berlin, oft zu seinen Vereinen gezählt, kannten ihn erst später, als Sportvorstand ab 2020.\n\nDer große Heimtriumph kam 2007. Deutschland richtete die Weltmeisterschaft aus, und am 4. Februar besiegte die Mannschaft im Finale in der Kölnarena in Köln vor einem euphorischen Publikum Polen – der dritte Weltmeistertitel des Landes. Trainer war **Heiner Brand**, der 1978 schon als Spieler Weltmeister geworden war und die Nationalmannschaft von 1997 bis 2011 führte; sein Schnurrbart wurde so berühmt wie jeder seiner Spieler.\n\nNeun Jahre später wiederholte ein Außenseiter das Kunststück. Unter dem isländischen Trainer **Dagur Sigurðsson**, im Amt von 2014 bis 2017, gewann eine junge, von Verletzungen gebeutelte deutsche Mannschaft die Europameisterschaft 2016 in Polen und schlug Spanien im Finale am 31. Januar 2016 mit 24:17.\n\nAuf Vereinsebene überragt ein Name alle anderen. Der 1904 gegründete **THW Kiel** ist mit 23 Titeln Rekordmeister der Handball-Bundesliga und gewann die EHF Champions League 2007, 2010, 2012 und 2020. Seine Spiele in der Kieler Halle sind Saison für Saison ausverkauft.\n\n| Name | Leistung |\n|---|---|\n| Stefan Kretzschmar | Linksaußen, SC Magdeburg 1996–2007, Olympia-Silber 2004 |\n| Heiner Brand | Weltmeister als Spieler (1978) und als Trainer (2007) |\n| Dagur Sigurðsson | Trainer der Europameister von 2016 |\n| THW Kiel | deutscher Rekordmeister, vier Champions-League-Titel |\n\nVom tätowierten Außen bis zum Trainer mit Schnurrbart: Der deutsche Handball hatte immer Charaktere, die zu seinen Erfolgen passten.",
+    "notesEn": "Kretzschmar never played for Füchse Berlin; he was its sports director from 2020. Kiel's title count as of 2025.",
+    "notesDe": "Für die Füchse Berlin hat Kretzschmar nie gespielt; dort war er ab 2020 Sportvorstand. Kiels Titelzahl Stand 2025."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-399",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-342",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which German pair won the men's Olympic beach volleyball gold on Horse Guards Parade in London in 2012?",
+      "de": "Welches deutsche Duo gewann 2012 auf der Horse Guards Parade in London olympisches Gold im Beachvolleyball der Männer?",
+      "answerEn": "Julius Brink and Jonas Reckermann",
+      "answerDe": "Julius Brink und Jonas Reckermann",
+      "timeline": {
+       "kind": "event",
+       "start": "2012-08",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Brink and Reckermann win Olympic beach volleyball gold in London",
+       "labelDe": "Brink und Reckermann gewinnen in London olympisches Gold im Beachvolleyball"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Beach_volleyball_at_the_2012_Summer_Olympics",
+       "title": "Beach volleyball at the 2012 Summer Olympics – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Californian city is the modern two-player game of beach volleyball credited to have begun in 1930?",
+      "de": "In welcher kalifornischen Stadt soll 1930 das moderne Beachvolleyball zu zweit entstanden sein?",
+      "answerEn": "Santa Monica",
+      "answerDe": "Santa Monica",
+      "timeline": {
+       "kind": "event",
+       "start": "1930",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Paul Johnson starts the two-player beach volleyball game in Santa Monica",
+       "labelDe": "Paul Johnson begründet in Santa Monica das Beachvolleyball zu zweit"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Beach_volleyball",
+       "title": "Beach volleyball – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "At which Olympic Games did beach volleyball make its debut on the Olympic programme in 1996?",
+      "de": "Bei welchen Olympischen Spielen stand Beachvolleyball 1996 erstmals auf dem olympischen Programm?",
+      "answerEn": "Atlanta",
+      "answerDe": "Atlanta",
+      "timeline": {
+       "kind": "event",
+       "start": "1996",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Beach volleyball makes its Olympic debut in Atlanta",
+       "labelDe": "Beachvolleyball feiert in Atlanta olympische Premiere"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Beach_volleyball",
+       "title": "Beach volleyball – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How many players does each team field in elite beach volleyball?",
+      "de": "Wie viele Spieler stellt jedes Team im Spitzen-Beachvolleyball?",
+      "answerEn": "two",
+      "answerDe": "zwei",
+      "timeline": {
+       "kind": "event",
+       "start": "1997",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first FIVB Beach Volleyball World Championships are held",
+       "labelDe": "Die ersten FIVB-Beachvolleyball-Weltmeisterschaften finden statt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Beach_volleyball",
+       "title": "Beach volleyball – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Dig, Set, Spike: Volleyball from the Gym to the Beach",
+    "titleDe": "Baggern, Pritschen, Schmettern: Volleyball von der Halle bis zum Strand",
+    "bodyEn": "Volleyball was invented in 1895 by William G. Morgan at the YMCA in Holyoke, Massachusetts, as a gentler indoor game than basketball, and it has a vocabulary all its own. Each side may touch the ball three times before it must go back over the net, and those three touches have names. The first is the dig, or bump: an underhand pass off the forearms that takes the sting out of a serve or an attack. The second is the set, a soft overhand pass with the fingertips that places the ball above the net. The third is the spike, the attack hit smashed down into the opponents' court. German players say baggern, pritschen and schmettern, and anyone who has spent a summer at a lido knows all three words.\n\nThe game's most successful offshoot was born on the sand. People were knocking a volleyball about on Waikiki Beach in Hawaii as early as 1915, but the modern two-player game is credited to Paul \"Pablo\" Johnson in Santa Monica, California, in 1930, when not enough players turned up for the usual six-a-side match. Beach volleyball keeps the three touches but needs only two players per team on a 16-by-8-metre court of sand, which makes every rally a test of stamina as well as touch. It entered the Olympic programme at the Atlanta Games in 1996, and the first FIVB world championships followed in 1997.\n\nFor decades the sport belonged to Americans and Brazilians, until German pairs broke the spell. In London in 2012, on the sand of Horse Guards Parade, Julius Brink and Jonas Reckermann won the men's Olympic gold, beating the Brazilians Alison and Emanuel in the final. Four years later at Copacabana in Rio de Janeiro, Laura Ludwig and Kira Walkenhorst went one better: by beating the home pair Ágatha and Bárbara they became the first European women to win Olympic gold in beach volleyball – indeed the first European women's pair to win any Olympic medal in the sport.\n\n| Term | Meaning |\n|---|---|\n| dig / bump (baggern) | underhand pass off the forearms |\n| set (pritschen) | overhand pass with the fingertips |\n| spike (schmettern) | attack hit over the net |\n\n| Year | Milestone |\n|---|---|\n| 1895 | Morgan invents volleyball in Holyoke |\n| 1930 | two-player beach game in Santa Monica |\n| 1996 | beach volleyball becomes Olympic |\n| 2012 | Brink and Reckermann win Olympic gold |\n| 2016 | Ludwig and Walkenhorst win Olympic gold |\n\nIndoors or on the sand, the rhythm is the same: dig, set, spike – and over.",
+    "bodyDe": "Volleyball wurde 1895 von William G. Morgan beim YMCA in Holyoke, Massachusetts, als sanfteres Hallenspiel als Basketball erfunden, und es hat ein ganz eigenes Vokabular. Jede Seite darf den Ball dreimal berühren, bevor er zurück über das Netz muss, und diese drei Berührungen haben Namen. Die erste ist das Baggern: ein Pass von unten mit den Unterarmen, der einem Aufschlag oder Angriff die Wucht nimmt. Die zweite ist das Pritschen, ein weiches Zuspiel von oben mit den Fingerspitzen, das den Ball über dem Netz platziert. Die dritte ist das Schmettern, der Angriffsschlag, der den Ball ins gegnerische Feld hämmert. Im Englischen heißen sie dig (oder bump), set und spike, und wer einen Sommer im Freibad verbracht hat, kennt alle drei deutschen Wörter.\n\nDer erfolgreichste Ableger des Spiels entstand im Sand. Schon 1915 spielte man am Waikiki Beach auf Hawaii mit einem Volleyball, doch das moderne Spiel zu zweit wird Paul „Pablo“ Johnson zugeschrieben, 1930 in Santa Monica, Kalifornien, als für das übliche Spiel sechs gegen sechs nicht genug Leute kamen. Beachvolleyball behält die drei Berührungen bei, braucht aber nur zwei Spieler pro Team auf einem 16 mal 8 Meter großen Sandfeld, was jeden Ballwechsel zu einer Prüfung von Ausdauer und Ballgefühl macht. Olympisch wurde es bei den Spielen von Atlanta 1996, die ersten FIVB-Weltmeisterschaften folgten 1997.\n\nJahrzehntelang gehörte der Sport Amerikanern und Brasilianern, bis deutsche Duos den Bann brachen. 2012 in London, im Sand der Horse Guards Parade, gewannen Julius Brink und Jonas Reckermann olympisches Gold bei den Männern, mit einem Finalsieg über die Brasilianer Alison und Emanuel. Vier Jahre später an der Copacabana in Rio de Janeiro setzten Laura Ludwig und Kira Walkenhorst noch eins drauf: Mit dem Sieg über das Heimduo Ágatha und Bárbara gewannen sie als erste Europäerinnen olympisches Gold im Beachvolleyball – es war sogar die erste olympische Medaille überhaupt für ein europäisches Frauenduo in dieser Sportart.\n\n| Begriff | Bedeutung |\n|---|---|\n| Baggern (dig / bump) | Pass von unten mit den Unterarmen |\n| Pritschen (set) | Zuspiel von oben mit den Fingerspitzen |\n| Schmettern (spike) | Angriffsschlag über das Netz |\n\n| Jahr | Meilenstein |\n|---|---|\n| 1895 | Morgan erfindet in Holyoke den Volleyball |\n| 1930 | Beachspiel zu zweit in Santa Monica |\n| 1996 | Beachvolleyball wird olympisch |\n| 2012 | Brink und Reckermann gewinnen olympisches Gold |\n| 2016 | Ludwig und Walkenhorst gewinnen olympisches Gold |\n\nOb in der Halle oder im Sand, der Rhythmus bleibt derselbe: baggern, pritschen, schmettern – und rüber.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-008",
+   "category": 6,
+   "domain": "sport-games",
+   "sub": "games",
+   "why": "Billiards lives in sport-games/games: a0257 \"Three Balls, No Pockets: The Forms of Billiards\" holds the reverse fact f01281 (which form is played with 3 balls → carom); the number of balls is a new fact there, not an alias."
+  },
+  {
+   "card": "tp-069",
+   "category": 6,
+   "domain": "sport-games",
+   "sub": "games",
+   "why": "Billiards terminology belongs with a2009 \"The Language of the Billiard Table\" (sport-games/games); no existing jump-shot fact."
+  },
+  {
+   "card": "tp-298",
+   "category": 6,
+   "domain": "sport-games",
+   "sub": "games",
+   "why": "The 'Oma' (cue rest) is billiard-table vocabulary: a2009 \"The Language of the Billiard Table\" (sport-games/games) already has the Pomeranze fact in the same German-slang vein."
+  },
+  {
+   "card": "tp-389",
+   "category": 6,
+   "domain": "sport-games",
+   "sub": "games",
+   "why": "Snooker player nickname; the bank's billiards/snooker articles (a0257, a2009) are all in sport-games/games, none in ball-sports."
+  },
+  {
+   "card": "tp-097",
+   "category": 6,
+   "domain": "sport-games",
+   "sub": "olympics",
+   "why": "Asks about the Olympic programme (absent in Rio 2016, debut LA 2028), an Olympics fact; every ball-sports article that could hold it already has Squash as an answer (a0209, a0017, a0845), and one answer may not appear twice in an article."
+  }
+ ]
+}

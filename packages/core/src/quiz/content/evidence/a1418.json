@@ -1,0 +1,426 @@
+{
+ "article": "a1418",
+ "sources": {
+  "s1": {
+   "url": "https://fr.wikipedia.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann",
+   "title": "Du côté de chez Swann – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:00:04.088Z",
+   "snapshot": "1f101ab3dfc8867df251a621f6b0f91e05496a22d6709625841432f51ea5e42f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/P%C3%A8re_Goriot",
+   "title": "Père Goriot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:05.341Z",
+   "snapshot": "cb2cbe79c1790c055c89594106e673f31b7d5fb4fff64de51bc78a85a4a93c21"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Les_Rougon-Macquart",
+   "title": "Les Rougon-Macquart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:06.308Z",
+   "snapshot": "0f6a7dbb1efce120b58aad9e1d4c30ae73d9642a87ec4a96a4c7eba661fc1d7f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables",
+   "title": "Les Misérables – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:07.341Z",
+   "snapshot": "ef18362b580602fef01c940085737a86ed5190ce8867b193294f96d6e979cba5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Madame_Bovary",
+   "title": "Madame Bovary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:43.402Z",
+   "snapshot": "43f22f46ddbbc946b792827824b6744bf96575c3ebf07e87c8d5eac93cae3432"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/La_Com%C3%A9die_humaine",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:29.679Z",
+   "snapshot": "0d54358001fd2894bd3eb432ce1390973317a67e269bdc9f4a57f1c3a38ef51c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time",
+   "title": "In Search of Lost Time – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:58:10Z"
+  },
+  "s8": {
+   "url": "https://www.gallimard.fr/auteurs/marcel-proust",
+   "title": "Marcel Proust – Gallimard",
+   "publisher": "Éditions Gallimard",
+   "kind": "official",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:39:52.225Z",
+   "snapshot": "418661b3a0559a2fc168daf882492ba10d05209a791926bed4a3c94f9304bf1a"
+  },
+  "s9": {
+   "url": "https://www.gutenberg.org/cache/epub/1968/pg1968-images.html",
+   "title": "The Human Comedy: Introductions and Appendix – Project Gutenberg",
+   "publisher": "Project Gutenberg (George Saintsbury, introductions)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:50.838Z",
+   "snapshot": "071da324f4786557054f6a4a6f1963fe92f5f9a388ea78062adb96d9f5faac2a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Search of Lost Time",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Human Comedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07088",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Les Rougon-Macquart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Les Misérables",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Madame Bovary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:22.474Z",
+   "target": "f07086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Search of Lost Time",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“In Search of Lost Time”, “Auf der Suche nach der verlorenen Zeit”, “В поисках утраченного времени”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:22.474Z",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Human Comedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Human Comedy”, “Die menschliche Komödie”, “Человеческая комедия”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:22.474Z",
+   "target": "f07088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Les Rougon-Macquart (French pronunciation: [le ʁuɡɔ̃ makaʁ]) is a literary cycle of twenty novels by French writer Émile Zola.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Les Rougon-Macquart” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:22.474Z",
+   "target": "f07089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Les Misérables (, French: [le mizeʁabl] ) is a French epic historical novel by Victor Hugo, first published on 31 March 1862, that is considered one of the greatest novels of the 19th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Les Misérables” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:22.474Z",
+   "target": "f07090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Madame Bovary: Provincial Manners (French: Madame Bovary : Mœurs de province, pronounced [madam bɔvaʁi mœʁ(s) də pʁɔvɛ̃s]), commonly known as simply Madame Bovary,  is the debut novel of French writer Gustave Flaubert, originally published in 1856 and 1857.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madame Bovary” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:58:10Z",
+   "target": "f07086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a novel in seven volumes by French author Marcel Proust",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:58:13Z",
+   "target": "f07086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "À la recherche du temps perdu - VII",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23",
+   "note": "publisher lists the seventh volume, Le Temps retrouvé"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:58:15Z",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is Honoré de Balzac's 1829–48 multi-volume collection of interlinked novels and stories depicting French society in the period of the Restoration",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:58:18Z",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "At the end of this introduction will be found a full table of the Comedie Humaine and the other works.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:07.417Z",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is Honoré de Balzac's 1829–48 multi-volume collection of interlinked novels and stories depicting French society in the period of the Restoration",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:07.417Z",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "At the end of this introduction will be found a full table of the Comedie Humaine and the other works.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:07.417Z",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "La Comédie humaine (French: [la kɔmedi ymɛn]; English: The Human Comedy) is Honoré de Balzac's 1829–48 multi-volume collection of interlinked novels and stories depicting French society in the period of the Restoration (1815–30) and the July Monarchy (1830–48).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Human Comedy” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:07.417Z",
+   "target": "f07087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Balzac's 1842 introduction to The Human Comedy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Human Comedy” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,478 @@
+{
+ "article": "a2633",
+ "sources": {
+  "s1": {
+   "url": "https://www.computerwoche.de/article/2624174/die-geschichte-der-telekom.html",
+   "title": "Die Geschichte der Telekom",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:22.286Z",
+   "snapshot": "972d716bdcf99ec9aca91acb60d9435e6fed0f5b2195535b20156852a0c168d7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Telefonzelle_(Deutschland)",
+   "title": "Telefonzelle (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:22.999Z",
+   "snapshot": "682975b08a30d8b81c13625bd476ef6b286e6e0085e9cc20c8fc740a21b54192"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_telephone_box",
+   "title": "Red telephone box – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:24.175Z",
+   "snapshot": "2a89e3597313b33c33ec6d82a44d290aaa39a986829ad3ad1c63c673468de5c0"
+  },
+  "s4": {
+   "url": "https://www.mdr.de/geschichte/ddr/alltag/telefonzelle-ende-aus-muenzfernsprecher-telefonieren-handy-smartphone-100.html",
+   "title": "Telefonzelle: Das Ende einer Epoche",
+   "publisher": "MDR",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:00.076Z",
+   "snapshot": "a97e11735539e3158820790ebb608896935d1ae70f8f18ca3ef351340e0e4861"
+  },
+  "s5": {
+   "url": "https://www.telekom.com/de/blog/konzern/artikel/die-letzten-groschen-sind-gefallen-1019918",
+   "title": "Die letzten Groschen sind gefallen",
+   "publisher": "Deutsche Telekom",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:59.795Z",
+   "snapshot": "129a4d2584eb8fa91de1faa2b879926ddc70c73dd3810c93b0b2029f7ab5d7a7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Telefonzelle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Giles Gilbert Scott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gelb",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Münzen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:49.584Z",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1904 entwickelt Wilhelm Quante in Wuppertal die erste Telefonzelle.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telefonzelle” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:49.584Z",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Januar 1881 in Berlin in Betrieb genommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:49.584Z",
+   "target": "f14249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The red telephone box is a telephone kiosk for a public telephone designed by Sir Giles Gilbert Scott, the architect responsible for famous sites like Liverpool Cathedral and Battersea Power Station.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giles Gilbert Scott” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:49.584Z",
+   "target": "f14250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zunächst waren Blau und Gelb, ab 1934 Rot vorgeschrieben; ab 1946 wurde auf das in Westdeutschland 1951 vorgeschriebene einheitliche Gelb umgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gelb” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:49.584Z",
+   "target": "f14251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Gebühren des Telefonats werden an einem Münzfernsprecher mit Münzen, sonst mit einer Telefonkarte, Kredit- oder Geldkarte bezahlt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Münzen” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:36:20Z",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bis Anfang 2025 sollen alle noch vorhandenen Telefonzellen aus dem Straßenbild verschwinden und abgebaut werden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports 'telephone box' disappearing; MDR dates the first German kiosk to 1881 (Berlin), not the card's 1904"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:36:23Z",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Noch in den 1990er-Jahren waren die in der Regel gelben Häuschen aus dem Stadtbild nicht wegzudenken.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "the card's 1904 (Quante booth) conflicts with the 1881 Berlin kiosk; the answer (telephone box) is unaffected"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:36:25Z",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die allererste Telefonzelle, der sogenannte Fernsprechkiosk, wurde übrigens 1881 in Berlin aufgestellt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:36:28Z",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Begonnen hatte sie 1881 in Berlin mit dem ersten sogenannten \"Fernsprechkiosk\".",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bis Anfang 2025 sollen alle noch vorhandenen Telefonzellen aus dem Straßenbild verschwinden und abgebaut werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Noch in den 1990er-Jahren waren die in der Regel gelben Häuschen aus dem Stadtbild nicht wegzudenken.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die allererste Telefonzelle, der sogenannte Fernsprechkiosk, wurde übrigens 1881 in Berlin aufgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Begonnen hatte sie 1881 in Berlin mit dem ersten sogenannten \"Fernsprechkiosk\".",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Ende der Telefonzelle in Deutschland – nach 142 Jahren!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Telefonzelle” is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die allererste Telefonzelle, der sogenannte Fernsprechkiosk, wurde übrigens 1881 in Berlin aufgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Telefonzelle” is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Begonnen hatte sie 1881 in Berlin mit dem ersten sogenannten \"Fernsprechkiosk\".",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Berlin” is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:34.922Z",
+   "target": "f14248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die allererste Telefonzelle, der sogenannte Fernsprechkiosk, wurde übrigens 1881 in Berlin aufgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Berlin” is on the snapshot of s5"
+  }
+ ]
+}

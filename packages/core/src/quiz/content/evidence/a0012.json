@@ -1,0 +1,595 @@
+{
+ "article": "a0012",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Whitcomb_L._Judson",
+   "title": "Whitcomb L. Judson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:34.422Z",
+   "snapshot": "5259d7b0868e7ace9d384ab782c41daaa18be7e37adbb8649770add007df2580"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Velcro",
+   "title": "Velcro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:35.522Z",
+   "snapshot": "cb1333db685f100ae04722584200bd447fc763b1878fc9c9f421b549437c6a2a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Klettverschluss",
+   "title": "Klettverschluss – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:14:32.602Z",
+   "snapshot": "18b2523755331bff1257c4af26ebcd255ed4a1f67c744473a0b70454a629c993"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Safety_pin",
+   "title": "Safety pin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:36.452Z",
+   "snapshot": "c3bbb8dfcfc3ec1601715080d8068c4371585038e1de41322cfd715678684810"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Centennial_Exposition",
+   "title": "Centennial Exposition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:37.434Z",
+   "snapshot": "f87bb04605f695f5e1064b1ac701ef9503223641e81566bf6c97cfb5946f2deb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ferris_Wheel_(1893)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:38.426Z",
+   "snapshot": "d24120c943a93cec9fc7e22be095a9327a77da7ab37d48c85c5e5a45be5b2186"
+  },
+  "s7": {
+   "url": "https://www.velcro.com/?p=7429",
+   "title": "The story of VELCRO® Brand fasteners",
+   "publisher": "Velcro Companies",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:19.353Z",
+   "snapshot": "7b0e9a1dc679ba51fdf38b2447bc327805301907ae3d72439ed1294550649b40"
+  },
+  "s8": {
+   "url": "https://lemelson.mit.edu/resources/george-de-mestral",
+   "title": "George de Mestral – Lemelson Center",
+   "publisher": "Lemelson-MIT Program",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:19.149Z",
+   "snapshot": "b143fbd4232915fec7f8623fc67786e3b847e287af60ba3ec9906290be58c5d5"
+  },
+  "s9": {
+   "url": "https://ebsco.com/research-starters/history/bell-demonstrates-telephone",
+   "title": "Bell Demonstrates the Telephone – EBSCO Research Starters",
+   "publisher": "EBSCO",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:19.893Z",
+   "snapshot": "b04b8f12540c4cdcc2bd181defabd468cf7bb01c7206aa2f1f77e2ef2134324b"
+  },
+  "s10": {
+   "url": "https://www.mentalfloss.com/history/party-its-1876-12-items-centennial-exposition",
+   "title": "Party Like It's 1876: 12 Items From the Centennial Exposition",
+   "publisher": "Mental Floss",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.242Z",
+   "snapshot": "92cb88e6e8e8f856c83aefb57211836d1066ad0ce9035c4eec4a265ccabee0b9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "zipper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c001; transcript tp-216"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Velcro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Klettverschluss",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-048"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "safety pin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "telephone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:37.014Z",
+   "target": "f00056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Judson's most noteworthy invention, a chain-lock fastener, was the precursor to the modern zipper which he developed and invented in 1891.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “zipper” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:37.014Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Velcro is a brand of versatile fastening devices, known as hook-and-loop fasteners, hook-and-pile fasteners, or touch fasteners, that allow two surfaces to be repeatedly attached and detached with ease.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Velcro” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:37.014Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Klettverschluss oder die Klettverbindung ist überwiegend ein textiles, fast beliebig oft zu lösendes Verschlussmittel, das auf dem Prinzip von Klettfrüchten beruht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klettverschluss” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:37.014Z",
+   "target": "f00058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A safety pin is a variation of the regular pin which includes a simple spring mechanism and a clasp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “safety pin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:37.014Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The exposition also featured many well-known products including Alexander Graham Bell's first telephone, set up at opposite ends of Machinery Hall, Thomas Edison's automatic telegraph system, screw-cutting machines that dramatically improved the production of screws and bolts from 8,000 to 100,000",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “telephone” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:32:40Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "But the idea that changed fastening came in 1941, after burrs clung to his clothes and to his dog’s coat on a hunting trip.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "Answer Velcro confirmed; the card's year 1948 is contested — the maker dates the burr episode to 1941 (patent granted 1955). Wording narrowed to drop the year."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:32:44Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It may be difficult to imagine a world without Velcro®, but the fastening mechanism did not exist before George de Mestral created it in 1955.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:32:47Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "De Mestral submitted his idea for a patent in Switzerland in 1951, which was granted in 1955.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:32:51Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Alexander Graham Bell’s first public demonstrations of the telephone caused a sensation at Philadelphia’s Centennial Exposition",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:32:53Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Bell, who hadn't planned to attend the event, gave the first public demonstration of his instrument on a sweltering afternoon in June",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:32:56Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Consumer products first displayed to the public include:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "The list continues with Alexander Graham Bell's telephone."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "But the idea that changed fastening came in 1941, after burrs clung to his clothes and to his dog’s coat on a hunting trip.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It may be difficult to imagine a world without Velcro®, but the fastening mechanism did not exist before George de Mestral created it in 1955.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "De Mestral submitted his idea for a patent in Switzerland in 1951, which was granted in 1955.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Alexander Graham Bell’s first public demonstrations of the telephone caused a sensation at Philadelphia’s Centennial Exposition",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Bell, who hadn't planned to attend the event, gave the first public demonstration of his instrument on a sweltering afternoon in June",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Consumer products first displayed to the public include:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Who Invented VELCRO® Brand Fasteners?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Velcro” is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It may be difficult to imagine a world without Velcro®, but the fastening mechanism did not exist before George de Mestral created it in 1955.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Velcro” is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bell Demonstrates the Telephone | History | Research Starters | EBSCOhost",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “telephone” is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:51:52.677Z",
+   "target": "f00060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "While the Corliss steam engine initially attracted the largest crowds, Alexander Graham Bell's telephone would eventually become the talk of the fair.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “telephone” is on the snapshot of s10"
+  }
+ ]
+}

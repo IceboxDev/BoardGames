@@ -1,0 +1,249 @@
+{
+ "article": "a1503",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Altes_Rathaus_(Bamberg)",
+   "title": "Altes Rathaus (Bamberg) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:19.241Z",
+   "snapshot": "ece9dd870bec17dcc565769ac71cd3f8bffd4a2ad65616d213e88907e77a8226"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Holstentor",
+   "title": "Holstentor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:20.420Z",
+   "snapshot": "a30ecd3860f7d87dfe7fd9edf3fb633754cd1f67fe09fe0cb16db46f4d222e52"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bremer_Roland",
+   "title": "Bremer Roland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:21.338Z",
+   "snapshot": "aa24f6e90ba5800ad66e023d1213be2d47ce082ba6c7288cb6263fe0f052cf66"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/R%C3%B6mer_(Frankfurt_am_Main)",
+   "title": "Römer (Frankfurt am Main) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:22.498Z",
+   "snapshot": "24dc2ba7492e87a12d835b961d5975ed16d773f40e7d05d25e6e9f7911cdadfc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Stone_Bridge_(Regensburg)",
+   "title": "Stone Bridge (Regensburg) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:19.502Z",
+   "snapshot": "56116092ca83095979d21d0499b7df2dd11ac2c746b88622ec09a64a09e413d0"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Steinerne_Br%C3%BCcke",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:23.468Z",
+   "snapshot": "d08498155322f84bcb905046d3be979c28c7f412b89f35c6a9482ce8202f9a15"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bamberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lübeck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bremen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Frankfurt am Main",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Regensburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:35.772Z",
+   "target": "f07511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Alte Rathaus in Bamberg ist eines der bedeutendsten Bauwerke, die die historische Innenstadt prägen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bamberg” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:35.772Z",
+   "target": "f07512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Holstentor („Holstein-Tor“) ist ein Stadttor, das die Altstadt der Hansestadt Lübeck nach Westen begrenzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lübeck” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:35.772Z",
+   "target": "f07513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bremen war Teil des Département des Bouches-du-Weser, es wurde eine Markthalle geplant, was aber durch das Ende der französischen Herrschaft nicht ausgeführt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bremen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:35.772Z",
+   "target": "f07514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jahrhundert das Rathaus der Stadt Frankfurt am Main und mit seiner charakteristischen Treppengiebelfassade eines ihrer Wahrzeichen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frankfurt am Main” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:35.772Z",
+   "target": "f07515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Stone Bridge (Steinerne Brücke) in Regensburg, Germany, is a 12th-century bridge across the Danube linking the Old Town with Stadtamhof.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Regensburg” is on the snapshot of s5"
+  }
+ ]
+}

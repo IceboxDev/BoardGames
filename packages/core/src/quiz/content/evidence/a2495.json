@@ -1,0 +1,448 @@
+{
+ "article": "a2495",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Diploptera_punctata",
+   "title": "Diploptera punctata",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:34.620Z",
+   "snapshot": "519adb68852f1c64130255519b3c7c0751b794f55536e5517b74ad45fd596c17"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Schaben",
+   "title": "Schaben",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:32.086Z",
+   "snapshot": "1dc57a220c4be9ab48ebbf057787c647aaf2b223dc679a141ea1b2d845214eed"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cockroach",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:35.725Z",
+   "snapshot": "5c625b911915903b0599834475a2ecf267c1db613f19d234b4b51e9978b4c910"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/German_cockroach",
+   "title": "German cockroach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:36.650Z",
+   "snapshot": "7cf98958ad466e3c06346703990c245fc153aa5e4d58928c91f91980ed858e58"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Madagascar_hissing_cockroach",
+   "title": "Madagascar hissing cockroach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:37.636Z",
+   "snapshot": "a2ca811acf9b856d6ddd9b615c5f4c4c5b190df92de349eec038998ffad29bf9"
+  },
+  "s6": {
+   "url": "https://www.scientificamerican.com/article/fact-or-fiction-cockroach-can-live-without-head/",
+   "title": "Fact or Fiction?: A Cockroach Can Live without Its Head",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:35.811Z",
+   "snapshot": "01078d8b5766417565679a2b7a0618c704627f0977a055bcfb4ecb200d786081"
+  },
+  "s7": {
+   "url": "https://askentomologists.com/2016/07/31/cockroach-milk-is-not-the-next-superfood/",
+   "title": "Cockroach milk is not the next superfood. It could be a lot more important than that.",
+   "publisher": "Ask an Entomologist",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:41.211Z",
+   "snapshot": "d34e019ba972be67497da10e0a2c04c33e6e21be2e4a13a26fd2b9e03611c869"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4937783/",
+   "title": "Structure of a heterogeneous, glycosylated, lipid-bound, in vivo-grown protein crystal at atomic resolution from the viviparous cockroach Diploptera punctata (IUCrJ, 2016)",
+   "publisher": "IUCrJ / PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:41.487Z",
+   "snapshot": "0c5b920180a5512b64455be723f5ee7f8121281d23fffa0ade41182bb22ded84"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cockroaches",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; history entry seq 5; transcript tp-017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "German cockroach",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Madagascar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cockroach",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript pp-040"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carboniferous",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Karbon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-189/3, u01): Cockroaches (insects) do not descend from dinosaurs. The oldest cockroach-like fossils (roachoids) are Carboniferous (~320 Ma); true crown-group cockroaches appear in the Late Jurassic, so \"oldest known cockroach fossils\" was loose. The wording now says \"cockroach-like fossils\"."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f13231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carboniferous",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:29.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f13231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karbon",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:29.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cockroaches",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cockroaches”, “Kakerlaken”, “тараканы”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f13231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die ältesten bekannten Fossilien dieser Insektenordnung stammen aus dem Karbon.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karbon” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f13231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Their ancestors, known as \"roachoids\", likely originated during the Carboniferous period around 320 million years ago.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carboniferous” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f13232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The German cockroach (Blattella germanica), colloquially known as the croton bug, is a species of small cockroach, typically about 1.1 to 1.6 cm (0.43 to 0.63 in) long.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “German cockroach” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f13233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Madagascar hissing cockroach (Gromphadorhina portentosa), also known as the hissing cockroach, Malagasy hissing cockroach or simply hisser, is one of the largest species of cockroach, reaching 5 to 7.5 centimetres (2 to 3 inches) at maturity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madagascar” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:29.355Z",
+   "target": "f25326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fact or Fiction?: A Cockroach Can Live without Its Head | Scientific American",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cockroach” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:16:44Z",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A number of articles circulating everywhere online are claiming that a new ‘superfood’ has been found in cockroaches",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:16:49Z",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A single crystal is estimated to contain more than three times the energy of an equivalent mass of dairy milk.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:13.030Z",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A number of articles circulating everywhere online are claiming that a new ‘superfood’ has been found in cockroaches",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:13.030Z",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A single crystal is estimated to contain more than three times the energy of an equivalent mass of dairy milk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:13.030Z",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A number of articles circulating everywhere online are claiming that a new ‘superfood’ has been found in cockroaches, and although I’m happy popular culture is focusing on the fact cockroaches are good moms…they’re missing a far more important story.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cockroaches” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:13.030Z",
+   "target": "f13230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Cockroaches have evolved over the past 320 million years (Garwood & Sutton, 2010 ▸; Garwood et al., 2012 ▸).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cockroaches” is on the snapshot of s8"
+  }
+ ]
+}

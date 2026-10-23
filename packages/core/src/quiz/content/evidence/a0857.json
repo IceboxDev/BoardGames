@@ -1,0 +1,904 @@
+{
+ "article": "a0857",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1974_FIFA_World_Cup_final",
+   "title": "1974 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:18.024Z",
+   "snapshot": "0af091aa80033dc2511bb52c970a93f11b76e10535055835512f28f34a45391a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1994_FIFA_World_Cup_final",
+   "title": "1994 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:48.298Z",
+   "snapshot": "cbbaa5b539b067f73da6020976bae5463758f3fa3907822b0b44e1b5dad95843"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1982_FIFA_World_Cup_final",
+   "title": "1982 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:49.344Z",
+   "snapshot": "8662fdaf5672538368b1e92d9eef59b239ca020cd93a543743c26fe5939752ed"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_final",
+   "title": "2018 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:50.292Z",
+   "snapshot": "15a19811e99606055ab5744c99ff73c6595b37c203d623aac0fd21e2a8046102"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_hosts",
+   "title": "List of FIFA World Cup hosts",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:51.289Z",
+   "snapshot": "8b0a39446dba3409377c24ab603d0ec69710c9217dce0da2aed2f5d0ccb9509c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup_final",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:52.213Z",
+   "snapshot": "386e5fcd188f5b7606d0219a5d59e0dae6b2705e0f992e694c1f2d2fb9d83d3b"
+  },
+  "s7": {
+   "url": "https://www.rsssf.org/tablesw/worldcup.html",
+   "title": "World Cup – overview (RSSSF)",
+   "publisher": "RSSSF",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:11.720Z",
+   "snapshot": "eeb2983dcfb4e3934e5b52a05ef732e0f1cc627e3c0da5e8b3ace8c8de9fa305"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+   "title": "List of FIFA World Cup finals – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:12.468Z",
+   "snapshot": "6966d3213aa535bbafcdcb8e396137ee44c8534dc16368d95a4fc0eec8645a3a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1954, 1974, 1990 and 2014",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1958, 1962, 1970, 1994 and 2002",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1934, 1938, 1982 and 2006",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1998 and 2018",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uruguay",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "Uruguay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-115/6, u10: False: Uruguay won the first World Cup at home in 1930 (4–2 v Argentina); Italy 1934 and England 1966 also won at home before West Germany 1974."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uruguay",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:55.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s6"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Uruguay",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:55.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1954, 1974, 1990 and 2014",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“1954, 1974, 1990 and 2014”, “1954, 1974, 1990 und 2014”, “1954, 1974, 1990 и 2014”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1958, 1962, 1970, 1994 and 2002",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“1958, 1962, 1970, 1994 and 2002”, “1958, 1962, 1970, 1994 und 2002”, “1958, 1962, 1970, 1994 и 2002”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1934, 1938, 1982 and 2006",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“1934, 1938, 1982 and 2006”, “1934, 1938, 1982 und 2006”, “1934, 1938, 1982 и 2006”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f04285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1998 and 2018",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“1998 and 2018”, “1998 und 2018”, “1998 и 2018”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The decision to hold the first cup in Uruguay, for example, led to only four European nations competing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uruguay” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:55.655Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The final match of the 1930 FIFA World Cup, the inaugural edition of FIFA's competition for national football teams, was played at the Estadio Centenario in Montevideo, Uruguay, on 30 July 1930, and was contested by Uruguay and Argentina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uruguay” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:06:26Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1954 West Germany 1958 Brazil 1962 Brazil 1966 England 1970 Brazil 1974 West Germany 1978 Argentina 1982 Italy 1986 Argentina 1990 West Germany",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Germany (as West Germany) 1954, 1974, 1990; Germany 2014."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:06:28Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2010 Spain 2014 Germany 2018 France",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:06:31Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1994 Brazil 1998 France 2002 Brazil",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "With 1958, 1962, 1970 from the same palmares list."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:06:33Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1958 Brazil 1962 Brazil 1966 England 1970 Brazil",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:06:38Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1930 Uruguay 1934 Italy 1938 Italy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Italy also 1982 and 2006 in the same list."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:06:44Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2002 Brazil 2006 Italy 2010 Spain",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:06:47Z",
+   "target": "f04285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1998 France 2002 Brazil",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "France 1998 and 2018 (2018 France in the same list)."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:06:51Z",
+   "target": "f04285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Argentina has won three titles, Uruguay, France and Spain have two each, and England has one.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Count as of 2026 (Spain's second title 2026); France's two are 1998 and 2018."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:06:53Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1930 Uruguay 4-2 Argentina [Final tournament in Uruguay]",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:06:55Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1930 Uruguay Champions First tournament to be held",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:08:00Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1954 West Germany 3–2 Hungary",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:08:02Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1974 West Germany 2–1 Netherlands",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:08:04Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1990 West Germany 1–0 Argentina",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:08:05Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "2014 Germany 1–0† Argentina",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:08:07Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1958 Brazil 5–2 Sweden",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:08:08Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1962 Brazil 3–1 Czechoslovakia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:08:10Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1970 Brazil 4–1 Italy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:08:11Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1994 Brazil 0–0*[d] Italy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:08:13Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "2002 Brazil 2–0 Germany",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:08:14Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1934 Italy 2–1† Czechoslovakia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:08:16Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1938 Italy 4–2 Hungary",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:08:18Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1982 Italy 3–1 West Germany",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:08:19Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "2006 Italy 1–1*[e] France",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:08:21Z",
+   "target": "f04285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1998 France 3–0 Brazil",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:08:22Z",
+   "target": "f04285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "2018 France 4–2 Croatia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:54:23.989Z",
+   "target": "f04281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2010 Spain 2014 Germany 2018 France",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:23.989Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e40",
+   "at": "2026-10-23T12:54:23.989Z",
+   "target": "f04282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1958 Brazil 1962 Brazil 1966 England 1970 Brazil",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:23.989Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e41",
+   "at": "2026-10-23T12:54:23.989Z",
+   "target": "f04283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2002 Brazil 2006 Italy 2010 Spain",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:23.989Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s7"
+  },
+  {
+   "id": "e42",
+   "at": "2026-10-23T12:54:23.989Z",
+   "target": "f04285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1998 France 2002 Brazil",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:23.989Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s7"
+  },
+  {
+   "id": "e43",
+   "at": "2026-10-23T12:54:23.989Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1930 Uruguay 4-2 Argentina [Final tournament in Uruguay]",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:23.989Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s7"
+  },
+  {
+   "id": "e44",
+   "at": "2026-10-23T12:54:23.989Z",
+   "target": "f13848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "and Amsterdam (1928), both won by Uruguay.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:23.989Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Uruguay” is on the snapshot of s7"
+  }
+ ]
+}

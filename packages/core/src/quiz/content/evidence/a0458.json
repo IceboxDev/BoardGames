@@ -1,0 +1,532 @@
+{
+ "article": "a0458",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/A_Christmas_Carol",
+   "title": "A Christmas Carol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:35.958Z",
+   "snapshot": "af83a755892cee344d788554df66f87e978658e64210e6359f87d472de22b23e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Oliver_Twist",
+   "title": "Oliver Twist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:36.896Z",
+   "snapshot": "427c17d2ab2056bf0ec62f60be9685cdca6d564808088da981e134fb15ce83a9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Great_Expectations",
+   "title": "Great Expectations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:38.002Z",
+   "snapshot": "5f369b5b8913502f676147024e56ac8d68d8e889464d43b5f8725b8b66b8fc42"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities",
+   "title": "A Tale of Two Cities – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:38.877Z",
+   "snapshot": "4a5f01d14441294cc367d0919ea454b70786a5d595951204bbedbd242012441b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/David_Copperfield",
+   "title": "David Copperfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:40.086Z",
+   "snapshot": "afbf299877a096d44669b59867b5afa2dac20c9cef2b45c8ef9fe9dac6b19d51"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Charles_Dickens",
+   "title": "Charles Dickens",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:37.274Z",
+   "snapshot": "fd451745cc0c0cb31ac9939ab7ee3cffe235347e7b5791180385f02f1cbeebe7"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Uriah_Heep_(band)",
+   "title": "Uriah Heep (band)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:40.899Z",
+   "snapshot": "5cdc46d601b43bcbed709e23238253fe9a30ac5124c59fe9c6682aebfd4a23e5"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+   "title": "Charles Dickens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:41.980Z",
+   "snapshot": "641281a373a627f60cccf9ba1c2a2041b0cce1fd15b5f2c78a94d04c649dc6a9"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/The_Old_Curiosity_Shop",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:42.812Z",
+   "snapshot": "b593a4907c5a5c0e8c5fd2a6a8488323a1318d11f4891c62279a80cbdabc7a99"
+  },
+  "s10": {
+   "url": "https://www.gutenberg.org/cache/epub/21332/pg21332-images.html",
+   "title": "Charles Dickens as a Reader, by Charles Kent (1872) – Project Gutenberg",
+   "publisher": "Project Gutenberg (Charles Kent, 1872)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:19.426Z",
+   "snapshot": "ad8155140d29d3ee0edd790515ffccb67b71e75aea8f7a1b93f485c9c7c35094"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Christmas Carol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oliver Twist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Great Expectations",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Tale of Two Cities",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "David Copperfield",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Charles Dickens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-040"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Uriah Heep",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-167"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Charles Dickens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 48; transcript tp-280"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f02286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Being a Ghost Story of Christmas, commonly known as A Christmas Carol, is a novella by Charles Dickens, first published in London by Chapman & Hall in 1843 and illustrated by John Leech.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Christmas Carol” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f02287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oliver Twist; or, The Parish Boy's Progress, is the second novel by English author Charles Dickens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oliver Twist” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f02288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Great Expectations is the thirteenth novel by the English author Charles Dickens and his penultimate completed novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Expectations” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f02289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Tale of Two Cities is a historical novel published in 1859 by English author Charles Dickens, set in London and Paris before and during the French Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Tale of Two Cities” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f02290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "David Copperfield is a novel by the English author Charles Dickens, narrated by the eponymous David Copperfield, detailing his adventures in his journey from infancy to maturity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Copperfield” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f12661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Charles Dickens war das zweite von acht Kindern von John Dickens (1786–1851), einem mittellosen Marineschreiber in der Zahlstelle der Royal Navy in Portsmouth, und seiner Frau Elizabeth (geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Dickens” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f12662",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Uriah Heep are an English rock band formed in London in 1969.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uriah Heep” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:51.405Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "As he recalled to John Forster (from Life of Charles Dickens):",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Dickens” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:54:16Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It was on the evening of Thursday, the 29th of April, 1858, that Charles Dickens first made his appearance upon a platform in a strictly professional character as a public Reader.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:54:19Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The enterprise was, in its way, wholly unexampled.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23",
+   "note": "Kent, who managed the readings' publicity, calls the 1858 provincial reading tour without precedent; 'first great author' is the card's superlative, consistent with these sources."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:54:22Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "His first reading tour, lasting from April 1858 to February 1859, consisted of 129 appearances in 49 towns throughout England, Scotland and Ireland.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:54:25Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "whilst pondering a project to give public readings for his own profit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:13.597Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The enterprise was, in its way, wholly unexampled.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:13.597Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:13.597Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "whilst pondering a project to give public readings for his own profit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:13.597Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:13.597Z",
+   "target": "f25201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a memorial of Charles Dickens in association with his Readings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:13.597Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Charles Dickens” is on the snapshot of s10"
+  }
+ ]
+}

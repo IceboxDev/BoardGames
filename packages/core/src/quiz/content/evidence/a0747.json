@@ -1,0 +1,195 @@
+{
+ "article": "a0747",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Neoclassical_architecture",
+   "title": "Neoclassical architecture – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:28.332Z",
+   "snapshot": "e5c017de3f7e23c40013712d895a522b7cad550acaef3a1b4b08e9f5646551e1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Worms_Cathedral",
+   "title": "Worms Cathedral – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:29.354Z",
+   "snapshot": "03e79027b4da4389551293f88e743139fe3d0c468b168eed782358de222c8a49"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/W%C3%BCrzburg_Residence",
+   "title": "Würzburg Residence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:30.353Z",
+   "snapshot": "187c937d30491b8f9e7b8a703a0ab777c99259395f7f00209397bbe520c7f145"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/H%C3%B4tel_Tassel",
+   "title": "Hôtel Tassel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:31.243Z",
+   "snapshot": "a2d8247e9d814ce58915ff10b00c0eb09d9944693b5570ec1f61adac3e56dafe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neoclassicism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03733",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Romanesque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03734",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Baroque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03735",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Art Nouveau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:38.241Z",
+   "target": "f03731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An early centre of neoclassicism was Italy, especially Naples, where by the 1730s court architects such as Luigi Vanvitelli and Ferdinando Fuga were recovering classical, Palladian and Mannerist forms in their Baroque architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neoclassicism” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:38.241Z",
+   "target": "f03733",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The cathedral is located on the highest point of the inner city of Worms and is the most important building of the Romanesque style in Worms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romanesque” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:38.241Z",
+   "target": "f03734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johann Lukas von Hildebrandt and Maximilian von Welsch, representatives of the Austrian/Southern German Baroque style, were involved in the construction, as well as Robert de Cotte and Germain Boffrand, who were followers of the French style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baroque” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:38.241Z",
+   "target": "f03735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was designed by Victor Horta for the scientist and professor Emile Tassel, and built between 1892 and 1893, in Art Nouveau style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Art Nouveau” is on the snapshot of s4"
+  }
+ ]
+}

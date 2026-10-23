@@ -1,0 +1,366 @@
+{
+ "article": "a2404",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kaa",
+   "title": "Kaa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:09.241Z",
+   "snapshot": "914f1c66eb7e85682d54708d66d9c412291c539a57a4efee78d4349c678b55ef"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Das_Dschungelbuch",
+   "title": "Das Dschungelbuch",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:06.681Z",
+   "snapshot": "791fc325b257af8b469e3dbeacc94bd5d611dee476d4c9fd67df4dfcb0f28fa5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Jungle_Book",
+   "title": "The Jungle Book – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:10.219Z",
+   "snapshot": "db657fd69448aa4285b9253fb844d38ac7ee69696ea24c1bbf6bdb46797d4da9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mowgli",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:11.348Z",
+   "snapshot": "fa64d529a3fb7d2afaabbed4d48f39d5794cb5875fca6187e658a473a113c697"
+  },
+  "s5": {
+   "url": "https://www.gutenberg.org/cache/epub/236/pg236.txt",
+   "title": "The Jungle Book by Rudyard Kipling (Project Gutenberg)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:06.836Z",
+   "snapshot": "949a7614866818179903b8a35dc53bba69048cd2425fb64bd1b16c69b27ebefb"
+  },
+  "s6": {
+   "url": "https://www.kiplingsociety.co.uk/readers-guide/rg_jungle_intro.htm",
+   "title": "The Jungle Books: introduction – Readers' Guide",
+   "publisher": "The Kipling Society",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:08.217Z",
+   "snapshot": "dcb4a21f192ef8d7442f24a5d64f970a3658800e805a6c23e5d58a874172b60e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "a python",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rikki-Tikki-Tavi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-202"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mowgli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "a bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shere Khan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bombay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:14.950Z",
+   "target": "f12588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The fighting strength of a python is in the driving blow of his head, backed by all the strength and weight of his body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “a python” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:14.950Z",
+   "target": "f12589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Liedtext Darzees Preislied (Darzee’s Chaunt, in manchen Ausgaben auch Darzee’s Chant), gesungen zu Ehren von Rikki-Tikki-Tavi.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rikki-Tikki-Tavi” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:14.950Z",
+   "target": "f12590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Most of the characters are animals such as Shere Khan the tiger and Baloo the bear, though a principal character is the boy or \"man-cub\" Mowgli, who is raised in the jungle by wolves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mowgli” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:14.950Z",
+   "target": "f12591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "a bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“a bear”, “ein Bär”, “медведь”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:14.950Z",
+   "target": "f12592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Most of the characters are animals such as Shere Khan the tiger and Baloo the bear, though a principal character is the boy or \"man-cub\" Mowgli, who is raised in the jungle by wolves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shere Khan” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:14.950Z",
+   "target": "f12593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rudyard himself was born in Mumbai—then referred to as Bombay—in the western coastal Indian state of Maharashtra, where he spent his first six years of life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bombay” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:54:18Z",
+   "target": "f12591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Baloo, the sleepy brown bear who teaches the wolf cubs the Law of the Jungle",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Kipling's own text, chapter 'Mowgli's Brothers'."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:54:21Z",
+   "target": "f12591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "and Baloo the bear is on hand to point out the virtues of a balanced diet",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:58.179Z",
+   "target": "f12591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Baloo, the sleepy brown bear who teaches the wolf cubs the Law of the Jungle",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:58.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:58.179Z",
+   "target": "f12591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "and Baloo the bear is on hand to point out the virtues of a balanced diet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:58.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  }
+ ]
+}

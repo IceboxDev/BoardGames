@@ -1,0 +1,440 @@
+{
+ "article": "a0039",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Tower_of_Babel_(Bruegel)",
+   "title": "The Tower of Babel (Bruegel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:45.503Z",
+   "snapshot": "048a3eae0a31c504e94099784559b1cfe4b51d53fe3c3939c19e8c1c0e0a919b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Etemenanki",
+   "title": "Etemenanki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:46.482Z",
+   "snapshot": "16fc16955871afe884e233aa460b4ed4292e4e032ccea41d484f0e3060fa6cda"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
+   "title": "The Creation of Adam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:47.474Z",
+   "snapshot": "f098f64ba523b41dfac3b5de5a82ab06c034616e4ec6b962ea3a52a70812e408"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Sacrifice_of_Isaac_(Rembrandt)",
+   "title": "The Sacrifice of Isaac (Rembrandt) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:48.449Z",
+   "snapshot": "65f651a6149b0e79055988a5007602822b299b0b11a4c9dc29e4143d75bafda5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Expulsion_from_the_Garden_of_Eden",
+   "title": "Expulsion from the Garden of Eden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:49.436Z",
+   "snapshot": "35c8f32079b30ece3c7c1fe55442633560ad7db8397d40cd8159b1b76bec1ebc"
+  },
+  "s6": {
+   "url": "https://smb.museum-digital.de/object/60851",
+   "title": "Jakob ringt mit dem Engel – Staatliche Museen zu Berlin (museum-digital)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:46.595Z",
+   "snapshot": "b5910ca2bad10cb098a190db2bcc08d101ee87ca0334e80c3fedfb332ccae8b3"
+  },
+  "s7": {
+   "url": "https://collections.vam.ac.uk/item/O502462/",
+   "title": "Copy after The Expulsion of Adam and Eve from the Garden of Eden, Masaccio in the Brancacci chapel",
+   "publisher": "Victoria and Albert Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:26.770Z",
+   "snapshot": "58f6001325cffbd7b1179511048e8736d8b7e0bdb7b99f26057abcee630fbb5a"
+  },
+  "s8": {
+   "url": "https://www.italianrenaissance.org/masaccios-expulsion-of-adam-and-eve-from-eden/",
+   "title": "Masaccio’s Expulsion of Adam and Eve from Eden",
+   "publisher": "ItalianRenaissance.org",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:29.374Z",
+   "snapshot": "8e2d122495fee87b8dc54d7b2e40c403f1ec4bab8faa3ba36b0a6f776d84d1fc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Tower of Babel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tower of Babel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c004"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Creation of Adam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Sacrifice of Isaac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Expulsion from Paradise",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jakobs Kampf mit dem Engel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.686Z",
+   "target": "f00191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Tower of Babel was the subject of two surviving paintings and one lost painting by Dutch and Flemish Renaissance painter Pieter Bruegel the Elder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Tower of Babel” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.686Z",
+   "target": "f00191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Some scholars have proposed Etemenanki as the ziggurat that may have influenced the biblical account of the Tower of Babel.\n\nConstruction",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Tower of Babel” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:40.686Z",
+   "target": "f00192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Creation of Adam (Italian: Creazione di Adamo), also known as The Creation of Man, is a fresco painting by Italian artist Michelangelo, which forms part of the Sistine Chapel's ceiling, painted 1508–1512.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Creation of Adam” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:40.686Z",
+   "target": "f00193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Sacrifice of Isaac is a 1635 autograph oil on canvas work by Rembrandt, now in the Hermitage Museum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Sacrifice of Isaac” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:40.686Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Expulsion from Paradise",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Expulsion from Paradise”, “Die Vertreibung aus dem Paradies”, “Изгнание из рая”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:40.686Z",
+   "target": "f00195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jakob ringt mit dem Engel (Jacob Wrestling with the Angel) :: Gemäldegalerie :: museum-digital:staatliche museen zu berlin",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacob Wrestling with the Angel” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:57:10Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Copy after The Expulsion of Adam and Eve from the Garden of Eden, Masaccio in the Brancacci chapel (Santa Maria del Carmine, Florence)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:57:12Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Masaccio’s fresco depicting Adam and Eve being expelled from the Garden of Eden by an angel is located in the Brancacci Chapel inside the church of Santa Maria del Carmine in Florence.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:58:20Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It depicts the expulsion of Adam and Eve from the garden of Eden, from the biblical Book of Genesis chapter 3",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:51:56.314Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Copy after The Expulsion of Adam and Eve from the Garden of Eden, Masaccio in the Brancacci chapel (Santa Maria del Carmine, Florence)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:56.314Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Masaccio’s fresco depicting Adam and Eve being expelled from the Garden of Eden by an angel is located in the Brancacci Chapel inside the church of Santa Maria del Carmine in Florence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:56.314Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It depicts the expulsion of Adam and Eve from the garden of Eden, from the biblical Book of Genesis chapter 3",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:56.314Z",
+   "target": "f00194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Inscribed with pencil, on the verso: Copy of the fresco / “The Expulsion from Paradise” / by Masaccio (1402-1443)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Expulsion from Paradise” is on the snapshot of s7"
+  }
+ ]
+}

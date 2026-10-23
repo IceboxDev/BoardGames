@@ -1,0 +1,249 @@
+{
+ "article": "a1864",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Different_Seasons",
+   "title": "Different Seasons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:52.612Z",
+   "snapshot": "2cd0cfa73b3f9efbd758e79c230ab626f4924bbcbea8adcbc0d87b749877a100"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Godfather_(novel)",
+   "title": "The Godfather (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:00.979Z",
+   "snapshot": "967d009236799a401f5313ebd8ac08ef9efea937ccb5d71bd0c2f022599c2e72"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/DinoPark",
+   "title": "DinoPark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:49.752Z",
+   "snapshot": "e13c315eb458fb7fc899d1669afe240a13128de2938c8fcfc3def30659ba8e42"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Silence_of_the_Lambs_(novel)",
+   "title": "The Silence of the Lambs (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:53.467Z",
+   "snapshot": "ca117987480d79cc702ba85d655af50da4965af802bb8909ed995dba8ae1fb3f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jaws_(novel)",
+   "title": "Jaws (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:03.996Z",
+   "snapshot": "057be979ec501357c1016cf6151dc064b219c633bdbead20ad0fe76854ef7e99"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Jurassic_Park_(Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:50.693Z",
+   "snapshot": "e13c315eb458fb7fc899d1669afe240a13128de2938c8fcfc3def30659ba8e42"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09316",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stephen King",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mario Puzo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Michael Crichton",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-324"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thomas Harris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter Benchley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:36.140Z",
+   "target": "f09316",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Different Seasons (1982) is a collection of four Stephen King novellas with a more dramatic bent, rather than the horror fiction for which King is famous.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stephen King” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:36.140Z",
+   "target": "f09317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Godfather is a crime novel by Italian American author Mario Puzo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mario Puzo” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:36.140Z",
+   "target": "f25109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "DinoPark (bekannter unter dem englischen Originaltitel Jurassic Park) ist ein Thriller des US-amerikanischen Schriftstellers Michael Crichton aus dem Jahre 1990.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Crichton” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:36.140Z",
+   "target": "f09319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Silence of the Lambs is a 1988 psychological horror crime thriller novel by Thomas Harris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Harris” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:36.140Z",
+   "target": "f09320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jaws is a novel by American writer Peter Benchley, published by Doubleday in 1974.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Benchley” is on the snapshot of s5"
+  }
+ ]
+}

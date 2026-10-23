@@ -1,0 +1,408 @@
+{
+ "article": "a1945",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Barber_of_Seville",
+   "title": "The Barber of Seville – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:17.578Z",
+   "snapshot": "b1dd068355c3c5a93c925ae6d1b56c4b843c2a77b3b4c748096c91b8ba573c07"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Marriage_of_Figaro_(play)",
+   "title": "The Marriage of Figaro (play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:18.688Z",
+   "snapshot": "580025545e8267b0b5976aa646c18c9bdb3d5d045fce36093b2274c224e4dde3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Henri_Murger",
+   "title": "Henri Murger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:19.573Z",
+   "snapshot": "97da0946dc078868ae73cabcea9c8840cf8c1ead70a7d04b01158235066d0c5f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/La_Tosca",
+   "title": "La Tosca – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:20.695Z",
+   "snapshot": "1faffb4f8722d09d942958534cad910657ec6e550bad69139c15cbdc307fb47d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Die_Meistersinger_von_N%C3%BCrnberg",
+   "title": "Die Meistersinger von Nürnberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:21.713Z",
+   "snapshot": "ca79219e028ad82fa84b1eb89f77da7f66bf3ba769b9d473b7c4b4c47f7c421a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sc%C3%A8nes_de_la_vie_de_boh%C3%A8me",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:22.560Z",
+   "snapshot": "07241a2414fefd659c7aa19afe3c2fcef01c60a5b448956a48056d8acafbe5e7"
+  },
+  "s7": {
+   "url": "https://www.opera-guide.ch/operas/tosca/",
+   "title": "Tosca von Giacomo Puccini – Opera-Guide",
+   "publisher": "Opera-Guide",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:34.664Z",
+   "snapshot": "73a800b8d9ee355f8bf1c7741d6833f35224817494bea471a368c5442fefa204"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Tosca",
+   "title": "Tosca – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:12:33Z"
+  },
+  "s9": {
+   "url": "https://www.operone.de/opern/tosca.html",
+   "title": "Tosca von Puccini - Operone",
+   "publisher": "Operone",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:35.291Z",
+   "snapshot": "17717c39f1d6a8cb8f204fab5981bec793bbe385f1fc77336d7f37a8460b273d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "barber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "valet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "poet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "painter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "shoemaker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:51.320Z",
+   "target": "f09721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Barber of Seville, or The Useless Precaution (Italian: Il barbiere di Siviglia, ossia L'inutile precauzione [il barˈbjɛːre di siˈviʎʎa osˈsiːa liˈnuːtile prekautˈtsjoːne]) is an opera buffa (comic opera) in two acts composed by Gioachino Rossini with an Italian libretto by Cesare Sterbini.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “barber” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:51.320Z",
+   "target": "f09722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": ":Figaro, the Count's valet and major-domo; engaged to Suzanne",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “valet” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:51.320Z",
+   "target": "f09723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Louis-Henri Murger (27 March 1822 – 28 January 1861), also known as Henri Murger and Henry Murger, was a French novelist and poet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “poet” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:51.320Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "painter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“painter”, “Maler”, “художник”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:51.320Z",
+   "target": "f09725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The cobbler brushes them off with bantering complaints about his lot as a shoemaker, poet, and widower.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “shoemaker” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:27Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "MARIO CAVARADOSSI, Maler (Tenor)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:33Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The painter Mario Cavaradossi arrives to continue work on his picture of Mary Magdalene.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:38Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cavaradossi (Maler)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:41.101Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "MARIO CAVARADOSSI, Maler (Tenor)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:41.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:41.101Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cavaradossi (Maler)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:41.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:41.101Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "MARIO CAVARADOSSI, Maler (Tenor)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:41.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Maler” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:41.101Z",
+   "target": "f09724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cavaradossi (Maler) - Jugendlicher Heldentenor",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:41.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Maler” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,696 @@
+{
+ "article": "a1785",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/La_sonnambula",
+   "title": "La sonnambula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:27.575Z",
+   "snapshot": "d2b4fe515641e4e3550dc307565df3d5ddb281a335672cf68131ee7c1b56201c"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/bruxism",
+   "title": "bruxism – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Osborne_(farmer)",
+   "title": "Charles Osborne (farmer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:28.371Z",
+   "snapshot": "b15497a9763e8c8b5ac27178900bbe123542f5e01026ac7fe39ab3e9d4de1fed"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bedwetting_alarm",
+   "title": "Bedwetting alarm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:29.401Z",
+   "snapshot": "21f044cee759d6e07dd5e65aae0816d144ec8d51fae8d5fd7b67013bd5c980ce"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%A4ltekopfschmerz",
+   "title": "Kältekopfschmerz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:26.595Z",
+   "snapshot": "a6813a2160a36c010381296f06f26ea63c8f6621c94526136f9e027e53ccaea0"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Jamais-vu",
+   "title": "Jamais-vu",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:27.554Z",
+   "snapshot": "bcc51d4ea7d85cda142d0e9d62b78e0f552f10f3b86bf0ae77f490797024b3f4"
+  },
+  "s7": {
+   "url": "https://neurosciencenews.com/sleep-novel-location-4097",
+   "title": "Why It’s Hard To Fall Asleep Somewhere New – Neuroscience News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:28.298Z",
+   "snapshot": "ce22584e61530da127144dccb288c899d8586637dffd764bf12792ffe775bd87"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Synesthesia",
+   "title": "Synesthesia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:30.629Z",
+   "snapshot": "e53d3eb0717692769a5e0a32c65b76d5a45bce771009e85041b9b679723e47b6"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/somnambulism",
+   "title": "SOMNAMBULISM – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:23.651Z",
+   "snapshot": "c77f3ce05c65036ae97f61389d844569bd48d04f3dfc10633ca9800eff791850"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Sleepwalking",
+   "title": "Sleepwalking – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:24.561Z",
+   "snapshot": "fc679525e52b1f41e45a2e3ba606de78caab9e76c023e36ed827de752d89fd70"
+  },
+  "s11": {
+   "url": "https://www.nhs.uk/conditions/teeth-grinding/",
+   "title": "Teeth grinding (bruxism) – NHS",
+   "publisher": "NHS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:23.879Z",
+   "snapshot": "b2dc91b0b2bba9fc6dbdc7f5d5e60898b7e59e35060120b9b14501984156ca91"
+  },
+  "s12": {
+   "url": "https://my.clevelandclinic.org/health/diseases/10955-teeth-grinding-bruxism",
+   "title": "Bruxism (Teeth Grinding)",
+   "publisher": "Cleveland Clinic",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:24.164Z",
+   "snapshot": "3068acc721d7e2014cc51e238fd871202197fd6973c44e42c2e56a1719dbc772"
+  },
+  "s13": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/bruxism",
+   "title": "BRUXISM – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:24.691Z",
+   "snapshot": "dec3dfb32a48021cb9b55f01b034b8610fe4ee2266b2bb6c624f7e59a3e73a56"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sleepwalking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "teeth grinding",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08923",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "hiccups",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "bedwetting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hirnfrost",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-344"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jamais-vu",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-088"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "First-night effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 68; transcript pp-054"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Synesthesia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-112"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:22.304Z",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sleepwalking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sleepwalking”, “Schlafwandeln”, “лунатизм”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:22.304Z",
+   "target": "f08923",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He gained national attention to the American public for hiccuping for over 68 years, estimating over 430 million hiccups throughout his life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hiccups” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:22.304Z",
+   "target": "f08924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A bedwetting alarm is a behavioral treatment for nocturnal enuresis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bedwetting” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:22.304Z",
+   "target": "f13528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kältekopfschmerz (auch englisch ice cream headache  ‚Eiscreme-Kopfschmerz‘, englisch brain freeze  ‚Hirnfrost, Hirnvereisung‘, englisch freezie, englisch frozen brain syndrome  ‚Gefrorenes Gehirn-Syndrom‘) ist ein durch kalte Speisen oder Getränke ausgelöster Kopfschmerz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hirnfrost” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:22.304Z",
+   "target": "f14624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Jamais-vu-Erlebnis [ʒamɛˈvy] (franz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jamais-vu” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:22.304Z",
+   "target": "f25401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The study in Current Biology explains what underlies the “first-night effect,” a phenomenon that poses an inconvenience to business travelers and sleep researchers alike.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “First-night effect” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:22.304Z",
+   "target": "f25853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Synesthesia (American English) or synaesthesia (British English) is a perceptual phenomenon in which stimulation of one sensory or cognitive pathway leads to involuntary experiences in other sensory or cognitive pathways.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Synesthesia” is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:27:16Z",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a situation in which a person walks around while they are sleeping",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:27:19Z",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "also known as somnambulism or noctambulism",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:27:22Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Teeth grinding (bruxism)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:27:24Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Bruxism is when you clench, grind or gnash your teeth. It usually happens subconsciously, either during waking hours or when you’re asleep.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:27:26Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "the habit of constantly moving the teeth against each other, especially when sleeping",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a situation in which a person walks around while they are sleeping",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "also known as somnambulism or noctambulism",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Teeth grinding (bruxism)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Bruxism is when you clench, grind or gnash your teeth. It usually happens subconsciously, either during waking hours or when you’re asleep.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "the habit of constantly moving the teeth against each other, especially when sleeping",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s13"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "sleepwalking (sleepwalker)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sleepwalking” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Sleepwalking, also known as somnambulism or noctambulism, is a phenomenon of combined sleep and wakefulness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sleepwalking” is on the snapshot of s10"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "stress and anxiety – this is the most common cause of teeth grinding",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “teeth grinding” is on the snapshot of s11"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Bruxism (Teeth Grinding): Symptoms, Causes & Treatment",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “teeth grinding” is on the snapshot of s12"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:57:10.138Z",
+   "target": "f08922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Disruptions in sleep can be caused by a variety of issues, from teeth grinding (bruxism) to night terrors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “teeth grinding” is on the snapshot of s13"
+  }
+ ]
+}

@@ -1,0 +1,418 @@
+{
+ "article": "a1123",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Griechische_Eurom%C3%BCnzen",
+   "title": "Griechische Euromünzen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:04.603Z",
+   "snapshot": "6bd8749489eab4dbcf4083adee74bd610f5a17c60c8ede3057fde4df249ed2c0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bertha_von_Suttner",
+   "title": "Bertha von Suttner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:08.220Z",
+   "snapshot": "920ace50ac18b05e6e785a9bddb69bf4482adaa44fd20a09822824b526eb3dcb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dante_Alighieri",
+   "title": "Dante Alighieri – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:09.192Z",
+   "snapshot": "95aebdc9a251af1a1c68df46c4300ad575fdbc3c59f48c1b67215cc54d730c7e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Bundeswappen_Deutschlands",
+   "title": "Bundeswappen Deutschlands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:06.557Z",
+   "snapshot": "ca40b3ba62a24dba70fb10d205cf94837bac9b3be9be14eb7aa76b87889162c3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coins_of_the_Republic_of_Ireland",
+   "title": "Coins of the Republic of Ireland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:10.180Z",
+   "snapshot": "2437160ca505beffe3a113a8cac8e9dd9c64b2146a77d2370ce6859479af0eb9"
+  },
+  "s6": {
+   "url": "https://www.ecb.europa.eu/euro/coins/html/gr.en.html",
+   "title": "Greece – euro coins",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:05.032Z",
+   "snapshot": "5b699dc015c58a24d58df6070fc99e92fe4d012436a43638199310b601c3f999"
+  },
+  "s7": {
+   "url": "https://www.ecb.europa.eu/euro/coins/html/ie.en.html",
+   "title": "Ireland – euro coins",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:05.955Z",
+   "snapshot": "69da3fdbd9608dba2a2acdf3e1a9f9e4089289440f7a1b4ed1a093a70044347d"
+  },
+  "s8": {
+   "url": "https://www.centralbank.ie/consumer-hub/notes-and-coins/euro-coins",
+   "title": "Euro Coins",
+   "publisher": "Central Bank of Ireland",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:25:24Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Entführung der Europa durch Zeus in Stiergestalt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c094"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bertha von Suttner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dante Alighieri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "der Bundesadler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Celtic harp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:36.257Z",
+   "target": "f05611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Entführung der Europa durch Zeus in Stiergestalt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“die Entführung der Europa durch Zeus in Stiergestalt”, “the abduction of Europa by Zeus in the form of a bull”, “похищение Европы Зевсом в образе быка”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:36.257Z",
+   "target": "f05612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arthur and Bertha von Suttner were largely socially isolated in Georgia; their poverty restricted their engagement with high society, and neither ever became fluent speakers of Mingrelian or Georgian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertha von Suttner” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:36.257Z",
+   "target": "f05613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dante Alighieri (Italian: [ˈdante aliˈɡjɛːri]; most likely baptized Durante di Alighiero degli Alighieri; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dante Alighieri” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:36.257Z",
+   "target": "f05614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Amtlich wird der Bundesadler im Bundeswappen, in der Dienstflagge der Bundesbehörden oder auch in der Standarte des Bundespräsidenten verwendet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “der Bundesadler” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:36.257Z",
+   "target": "f05615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Celtic harp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Celtic harp”, “die keltische Harfe”, “кельтская арфа”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:25:21Z",
+   "target": "f05611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This coin depicts a scene from a mosaic in Sparta (third century AD), showing Europa being abducted by Zeus, who has taken the form of a bull.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:25:22Z",
+   "target": "f05611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "durch Zeus in Gestalt eines Stieres, nach einem römischen Bodenmosaik aus Sparta",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:25:23Z",
+   "target": "f05615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They show the Celtic harp, a traditional symbol of Ireland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:25:24Z",
+   "target": "f05615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Irish euro coins feature the Celtic harp, a traditional symbol of Ireland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:14.056Z",
+   "target": "f05611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This coin depicts a scene from a mosaic in Sparta (third century AD), showing Europa being abducted by Zeus, who has taken the form of a bull.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:14.056Z",
+   "target": "f05611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "durch Zeus in Gestalt eines Stieres, nach einem römischen Bodenmosaik aus Sparta",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:14.056Z",
+   "target": "f05615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They show the Celtic harp, a traditional symbol of Ireland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:14.056Z",
+   "target": "f05615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They show the Celtic harp, a traditional symbol of Ireland, decorated with the year of issue and the inscription \"Éire\" − the Irish word for Ireland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Celtic harp” is on the snapshot of s7"
+  }
+ ]
+}

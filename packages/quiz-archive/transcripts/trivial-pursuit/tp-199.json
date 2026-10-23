@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-199",
+ "image": "IMG20261007175502.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt der letzte Superkontinent der Erde, der vor rund 270 Millionen Jahren entstand?",
+   "de": "Wie heißt der letzte Superkontinent der Erde, der vor rund 270 Millionen Jahren entstand?",
+   "en": "What is the name of Earth's last supercontinent, which formed around 270 million years ago?",
+   "reworked": false,
+   "answerDe": "Pangaea",
+   "answerEn": "Pangaea",
+   "timeline": {
+    "kind": "period",
+    "start": "-335000000",
+    "end": "-175000000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Pangaea exists as a supercontinent, from its assembly in the Carboniferous to its breakup in the Jurassic",
+    "labelDe": "Pangaea besteht als Superkontinent, von seiner Entstehung im Karbon bis zum Zerfall im Jura"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pangaea",
+    "title": "Pangaea",
+    "lang": "en"
+   },
+   "notes": "Also spelled Pangäa in German. The card's 270 million years is a dated/loose figure: Wikipedia gives assembly about 335 Ma (Early Carboniferous) and breakup from about 175 Ma; the supercontinent covered all landmasses in the Permian (299–252 Ma).",
+   "domain": "earth-space",
+   "sub": "geology"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welchen Beruf hat Actionlegende Jean-Claude Van Damme erlernt: Balletttänzer, Florist oder Goldschmied?",
+   "de": "Welche Tanzausbildung machte Actionlegende Jean-Claude Van Damme ab dem Alter von 16 Jahren?",
+   "en": "What kind of dance training did action legend Jean-Claude Van Damme take up from the age of 16?",
+   "reworked": true,
+   "answerDe": "Ballett",
+   "answerEn": "Ballet",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1960-10-18",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Life of the Belgian actor and martial artist Jean-Claude Van Damme",
+    "labelDe": "Lebensdaten des belgischen Schauspielers und Kampfkünstlers Jean-Claude Van Damme"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Jean-Claude_Van_Damme",
+    "title": "Jean-Claude Van Damme",
+    "lang": "de"
+   },
+   "notes": "Card intends 'Balletttänzer'. Reworked because an open 'which profession' is ambiguous: his father was a florist (Blumenhändler), and Van Damme trained in karate and bodybuilding as well as ballet.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt die südamerikanische Stadt, in der Papst Franziskus geboren wurde?",
+   "de": "Wie heißt die südamerikanische Stadt, in der Papst Franziskus geboren wurde?",
+   "en": "What is the name of the South American city where Pope Francis was born?",
+   "reworked": false,
+   "answerDe": "Buenos Aires",
+   "answerEn": "Buenos Aires",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1936-12-17",
+    "end": "2025-04-21",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of Pope Francis (Jorge Mario Bergoglio), pope from 2013 to 2025",
+    "labelDe": "Lebensdaten von Papst Franziskus (Jorge Mario Bergoglio), Papst von 2013 bis 2025"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Franziskus_(Papst)",
+    "title": "Franziskus (Papst)",
+    "lang": "de"
+   },
+   "notes": "Born Jorge Mario Bergoglio in Buenos Aires, Argentina; died 21 April 2025 in Vatican City.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wer war die erste Schwarze, die als Gesicht für den Moderiesen Dior Werbung machte: Whitney Houston, Rihanna oder Beyoncé?",
+   "de": "Wer war die erste Schwarze, die als Gesicht für den Moderiesen Dior Werbung machte?",
+   "en": "Who was the first Black woman to front advertising for the fashion giant Dior?",
+   "reworked": true,
+   "answerDe": "Rihanna",
+   "answerEn": "Rihanna",
+   "timeline": {
+    "kind": "event",
+    "start": "2015-03",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Rihanna becomes the first Black woman to be named the face of Dior",
+    "labelDe": "Rihanna wird als erste schwarze Frau zum Gesicht von Dior ernannt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Rihanna",
+    "title": "Rihanna",
+    "lang": "en"
+   },
+   "notes": "Named the face of Dior in March 2015 (the 'Secret Garden' campaign).",
+   "domain": "art",
+   "sub": "design"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie heißt der nach Jupiter zweitgrößte Planet unseres Sonnensystems?",
+   "de": "Wie heißt der nach Jupiter zweitgrößte Planet unseres Sonnensystems?",
+   "en": "What is the name of the second-largest planet in our solar system after Jupiter?",
+   "reworked": false,
+   "answerDe": "Saturn",
+   "answerEn": "Saturn",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1610",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Galileo Galilei first sees Saturn's rings through a telescope, taking them for 'handles'",
+    "labelDe": "Galileo Galilei sieht als Erster die Saturnringe im Fernrohr und deutet sie als „Henkel“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Saturn_(Planet)",
+    "title": "Saturn (Planet)",
+    "lang": "de"
+   },
+   "notes": "Saturn has been known since antiquity; the timeline marks the first telescopic observation of its rings.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welche Jahrmarktsüßigkeit wurde ausgerechnet von einem Zahnarzt miterfunden: gebrannte Mandeln, Zuckerwatte oder Kandisäpfel?",
+   "de": "Welche Jahrmarktsüßigkeit wurde ausgerechnet von einem Zahnarzt miterfunden?",
+   "en": "Which fairground sweet was, of all people, co-invented by a dentist?",
+   "reworked": true,
+   "answerDe": "Zuckerwatte",
+   "answerEn": "Cotton candy",
+   "timeline": {
+    "kind": "creation",
+    "start": "1897",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Dentist William Morrison and confectioner John C. Wharton invent machine-spun cotton candy",
+    "labelDe": "Zahnarzt William Morrison und Konditor John C. Wharton erfinden die maschinell gesponnene Zuckerwatte"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cotton_candy",
+    "title": "Cotton candy",
+    "lang": "en"
+   },
+   "notes": "Introduced to a wide audience as 'Fairy Floss' at the 1904 World's Fair in St. Louis. Hand-spun sugar existed earlier.",
+   "domain": "everyday",
+   "sub": "food"
+  }
+ ]
+}

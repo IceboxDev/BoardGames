@@ -1,0 +1,242 @@
+{
+ "article": "a2506",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jane_Goodall",
+   "title": "Jane Goodall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:09.723Z",
+   "snapshot": "2f29e1035ac0932a2fd10de6def1c28c872033d5b29547b317559336c8ed1e0c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gombe_Stream_National_Park",
+   "title": "Gombe Stream National Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:10.636Z",
+   "snapshot": "d3714b134cd15f49ec82d9668ef5623ed7a3e5ab7e137f637afbaccdd3027740"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/David_Greybeard",
+   "title": "David Greybeard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:11.835Z",
+   "snapshot": "5fcab0a422c659986ad7bde0fd80ba2072afbac1d4bed0137dc43999fcce4bad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Leakey",
+   "title": "Louis Leakey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:12.812Z",
+   "snapshot": "62d0084f06d85e9bd0e6118ccf2028406d3a0a3dacf3aa9a1f3e4b81a385d5f1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gombe-Stream-Nationalpark",
+   "title": "Gombe-Stream-Nationalpark",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:09.964Z",
+   "snapshot": "bb7233600bdcf4b62908d1f3ba27cbda37d7d840992a53820cc3dc005bf7661c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jane Goodall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gombe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "David Greybeard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Louis Leakey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tansania",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-181"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:31.080Z",
+   "target": "f13312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She founded the Jane Goodall Institute in 1977 to promote wildlife conservation, followed by the Roots & Shoots youth programme in 1991, which grew into a global network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jane Goodall” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:31.080Z",
+   "target": "f13313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gombe National Park () is a national park in Tanzania, located in the Kigoma District of the Kigoma Region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gombe” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:31.080Z",
+   "target": "f13314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 4 November 1960, Goodall observed a chimpanzee that she had named David Greybeard using a grass stalk as a tool to extract termites from a termite hill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Greybeard” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:31.080Z",
+   "target": "f13315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Louis Leakey was married to Mary Leakey, who made the noteworthy discovery of fossil footprints at Laetoli, Tanzania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis Leakey” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:31.080Z",
+   "target": "f14602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Gombe-Stream-Nationalpark ist ein Nationalpark im Westen von Tansania (Ostafrika), direkt am Ostufer des Tanganjikasees.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tansania” is on the snapshot of s5"
+  }
+ ]
+}

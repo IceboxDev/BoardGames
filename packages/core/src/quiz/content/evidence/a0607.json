@@ -1,0 +1,387 @@
+{
+ "article": "a0607",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/August_Heinrich_Hoffmann_von_Fallersleben",
+   "title": "August Heinrich Hoffmann von Fallersleben – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:46.214Z",
+   "snapshot": "7ac44b149a4210988d13ef760023bb98b77b08deee8dfdd45e2dd9bd73828cdc"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/%C3%96sterreichische_Bundeshymne",
+   "title": "Österreichische Bundeshymne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:46.715Z",
+   "snapshot": "9c72994f44859aee4686934aaa621a5744f985ca3a9b3f776454cc1840c2a78f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/La_Marseillaise",
+   "title": "La Marseillaise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:49.469Z",
+   "snapshot": "386382ce5059747e2ac6720a6566a9341d3b8b84a3481cd692f6074d3e2b3372"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gott_erhalte_Franz_den_Kaiser",
+   "title": "Gott erhalte Franz den Kaiser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:13:46.571Z",
+   "archiveUrl": "https://web.archive.org/web/20261023064341/https://en.wikipedia.org/wiki/Gott_erhalte_Franz_den_Kaiser",
+   "snapshot": "d1882fb57ac39669dc0d52b3dfad7e664df35a219d7420c5a4a8b392c4d7147f"
+  },
+  "s5": {
+   "url": "https://www.geschichtewiki.wien.gv.at/Paula_von_Preradovi%C4%87",
+   "title": "Paula von Preradović – Wien Geschichte Wiki",
+   "publisher": "Stadt Wien (Wiener Stadt- und Landesarchiv / Wienbibliothek)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:28.280Z",
+   "snapshot": "86a6fbe8155323f987bc7e644d3f1f05a4f2004fee7758b7d7b5d2e9e551a2e3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Paula_von_Preradovi%C4%87",
+   "title": "Paula von Preradović – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:27.737Z",
+   "snapshot": "0bc97f2d57e0f73c34661e1b81748c3586852035b81eb81bdd1f2b1d9a4824e1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "August Heinrich Hoffmann von Fallersleben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paula von Preradović",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Claude Joseph Rouget de Lisle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Francis II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chant de guerre pour l’armée du Rhin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:13.250Z",
+   "target": "f03031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hans-Joachim Behr, Herbert Blume, Eberhard Rohse (Hrsg.): August Heinrich Hoffmann von Fallersleben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “August Heinrich Hoffmann von Fallersleben” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:13.250Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paula von Preradović",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Paula von Preradović”, “Паула фон Прерадович”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:13.250Z",
+   "target": "f03034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was written in 1792 by Claude Joseph Rouget de Lisle in Strasbourg after the First French Republic declared war against Austria, and was originally titled \"Chant de Guerre pour l'Armée du Rhin\" (\"War Song for the Army of the Rhine\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claude Joseph Rouget de Lisle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:13.250Z",
+   "target": "f23720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In its original version it was paired with lyrics by Lorenz Leopold Haschka and served as a patriotic song, expressing devotion to Francis II, Emperor of the Holy Roman Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Francis II” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:13.250Z",
+   "target": "f23721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was written in 1792 by Claude Joseph Rouget de Lisle in Strasbourg after the First French Republic declared war against Austria, and was originally titled \"Chant de Guerre pour l'Armée du Rhin\" (\"War Song for the Army of the Rhine\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chant de guerre pour l’armée du Rhin” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:10:01Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Am 25. Februar 1947 wurde ihr Gedicht \"Land der Berge, Land am Strome\" nach leichten, mit der Autorin akkordierten Abänderungen offiziell als Text der österreichischen Bundeshymne eingeführt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:10:03Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "She composed the lyrics for the national anthem of Austria, \" Land der Berge, Land am Strome \", in 1947",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:11:24Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "She composed the lyrics for the national anthem of Austria, \"Land der Berge, Land am Strome\", in 1947",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Re-quoted: e12 carried extraction spacing artefacts."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:39.744Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Am 25. Februar 1947 wurde ihr Gedicht \"Land der Berge, Land am Strome\" nach leichten, mit der Autorin akkordierten Abänderungen offiziell als Text der österreichischen Bundeshymne eingeführt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:39.744Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "She composed the lyrics for the national anthem of Austria, \"Land der Berge, Land am Strome\", in 1947",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:39.744Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paula von Preradović kam als Tochter des Seeoffiziers Dušan von Preradović und dessen Ehefrau Helene Freiin Falke von Lilienstein in Wien zur Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Paula von Preradović” is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:39.744Z",
+   "target": "f03033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Paula Preradović (German: [ˈpaʊ̯la fɔn ˈpreːradɔvɪtʃ]; 12 October 1887 – 25 May 1951), known professionally as Paula von Preradović or by her married name as Paula Molden, was an Austrian writer and poet of Croatian descent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Paula von Preradović” is on the snapshot of s6"
+  }
+ ]
+}

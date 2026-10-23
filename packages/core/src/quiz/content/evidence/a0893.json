@@ -1,0 +1,712 @@
+{
+ "article": "a0893",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sudoku",
+   "title": "Sudoku – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:19.231Z",
+   "snapshot": "1a9b1b74dc8ad1d07472f63aa01e69e86a4076b6b163fc3a1a86cfd5143d6fab"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Monopoly_(game)",
+   "title": "Monopoly (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:20.493Z",
+   "snapshot": "1e96f963cbc6c8c28b982d842194fd7856099617a60a98a5a6d31c96f2fa1f05"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alfred_Mosher_Butts",
+   "title": "Alfred Mosher Butts – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:21.220Z",
+   "snapshot": "ed14e001f936225e276196f503bf139cd4a52dc3e93ccb0bec5205077956af80"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Go_(game)",
+   "title": "Go (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:22.499Z",
+   "snapshot": "53d58abf68b1b24eece90081b65c9df1acefda3f195ea3b9566682eb027117bb"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Monopoly",
+   "title": "Monopoly",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:19.816Z",
+   "snapshot": "34cddbb57ba7d6a4be38d89673630764db4214e0ecbe578028ee4fcf6dcb5d82"
+  },
+  "s6": {
+   "url": "https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/",
+   "title": "Sudoku Rules for Complete Beginners",
+   "publisher": "Sudoku.com (Easybrain)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:29.033Z",
+   "snapshot": "21d534cfcd71edecbfffaf8d22811e8c62da6aed11207b7db1f5a4f548ff27bc"
+  },
+  "s7": {
+   "url": "https://arxiv.org/abs/1704.08136",
+   "title": "[1704.08136] Sudoku Rectangle Completion",
+   "publisher": "arXiv",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:29.188Z",
+   "snapshot": "177f5ee269862172d8ed33b2a4fd17ea84b4a98598933064130c2b6dcc2542aa"
+  },
+  "s8": {
+   "url": "https://legacy-www.math.harvard.edu/archive/21b_fall_05/Articles/monopolyrevisited.pdf",
+   "title": "Monopoly Revisited (Ian Stewart, Mathematical Recreations, Scientific American)",
+   "publisher": "Scientific American / Harvard Math 21b archive",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:02:31Z"
+  },
+  "s9": {
+   "url": "http://www.durangobill.com/Monopoly.html",
+   "title": "Monopoly Probabilities",
+   "publisher": "Bill Butler (durangobill.com)",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:29.512Z",
+   "snapshot": "13930d99f60aee88ee4e6e1972050de7ba2d49882cc9aa113d29ccc3431cb39e"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Scrabble",
+   "title": "Scrabble - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:02:35Z"
+  },
+  "s11": {
+   "url": "https://collectionswa.net.au/items/b5744762-851d-4326-b766-e37565edda27",
+   "title": "Travel Game - Scrabble | Collections WA",
+   "publisher": "Collections WA (Western Australian museums)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:31.641Z",
+   "snapshot": "95f9308f6eba47354e317fbfd6c1fd225d70d6abcca01cf6b9e4c885d87dc8e5"
+  },
+  "s12": {
+   "url": "https://collections.vam.ac.uk/item/O26379/",
+   "title": "Scrabble for Juniors | V&A Explore The Collections",
+   "publisher": "Victoria and Albert Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:29.651Z",
+   "snapshot": "448f6ed3b361cf54712ed4910c625e525a5c36598741d08744d6fd774550b337"
+  },
+  "s13": {
+   "url": "https://www.britgo.org/intro/intro2.html",
+   "title": "How to Play | British Go Association",
+   "publisher": "British Go Association",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:29.868Z",
+   "snapshot": "810f1917a096639499c4e6392a095c6c9098d9dd57b3a9c2e3771e03cd08bcef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "81 cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "40 spaces",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "225",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "361",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Badstraße",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-090"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:01.139Z",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "81 cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“81 cells”, “81 Felder”, “81 клетка”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:01.139Z",
+   "target": "f04463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "40 spaces",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“40 spaces”, “40 Felder”, “40 полей”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:01.139Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "225",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“225”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:01.139Z",
+   "target": "f04465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The standard Go board has a 19×19 grid of lines, containing 361 points.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “361” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:01.139Z",
+   "target": "f14674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "So besitzt in der deutschen Grundversion die „Badstraße“ den geringsten Wert und die „Schlossallee“ den höchsten, in der Schweizer Version reicht das Spektrum von „Chur, Kornplatz“ bis zu „Zürich, Paradeplatz“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Badstraße” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:02:22Z",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sudoku is played on a grid of 9 x 9 spaces.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "9 × 9 = 81 cells"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:02:24Z",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "complete a partially filled $9 \\times 9$ square with numbers 1 through 9",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "9 × 9 = 81 cells"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:02:27Z",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In classic sudoku, the objective is to fill a 9×9 grid with digits",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "9 × 9 = 81 cells"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:02:29Z",
+   "target": "f04463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Monopoly game board consists of forty spaces containing twenty-eight properties",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:02:31Z",
+   "target": "f04463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A player can be in any one of 40 squares on the board",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:02:33Z",
+   "target": "f04463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the size of the matrix increases to 40 (physical board spaces)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:02:35Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Scrabble is played on a 15x15 board, containing 225 squares.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:02:36Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "contains a foldable board with 225 squares; 100 lettered tiles; 4 racks",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:02:38Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "On the inside a pale blue board is divided into 225 squares (15 x 15)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "museum catalogue of a Scrabble for Juniors board; the full-size side is 15 x 15 = 225"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:02:39Z",
+   "target": "f04465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The standard Go board has a 19×19 grid of lines, containing 361 points.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:02:41Z",
+   "target": "f04465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Although the normal size of a Go board is 19 by 19 lines",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "19 × 19 = 361 intersections"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sudoku is played on a grid of 9 x 9 spaces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "complete a partially filled $9 \\times 9$ square with numbers 1 through 9",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In classic sudoku, the objective is to fill a 9×9 grid with digits",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Monopoly game board consists of forty spaces containing twenty-eight properties",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the size of the matrix increases to 40 (physical board spaces)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "contains a foldable board with 225 squares; 100 lettered tiles; 4 racks",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "On the inside a pale blue board is divided into 225 squares (15 x 15)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Although the normal size of a Go board is 19 by 19 lines",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s13"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "This compact game is packed in a vinyl blue pouch, and contains a foldable board with 225 squares; 100 lettered tiles; 4 racks; instruction sheet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “225” is on the snapshot of s11"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:54:30.345Z",
+   "target": "f04464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "On the inside a pale blue board is divided into 225 squares (15 x 15) printed in black with a grid of words.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “225” is on the snapshot of s12"
+  }
+ ]
+}

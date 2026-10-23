@@ -1,0 +1,249 @@
+{
+ "article": "a0645",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Boundary_layer",
+   "title": "Boundary layer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:30.281Z",
+   "snapshot": "08abd51648cffa7ba2cf72bd1a0c7b10ad49a0e980626f40515910fa5c72638d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hydrodynamica",
+   "title": "Hydrodynamica – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:31.043Z",
+   "snapshot": "5179a7ce33847261dd83b5b2aaaf544fedc75ec5f3911ae0be187529cc08d3d1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Simon_Stevin",
+   "title": "Simon Stevin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:32.128Z",
+   "snapshot": "cda28a3fa6b3c4d9888d07d2ed35b8c96817a2435c711b9822f8a29a526abcd5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire",
+   "title": "Reflections on the Motive Power of Fire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:33.032Z",
+   "snapshot": "83ff8a5ce4447e95c8d85f31c0d62e4117aad86f6f162f25482b5b32f1530a21"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kinematics",
+   "title": "Kinematics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:34.341Z",
+   "snapshot": "ada4176c5008e8166c8ec1c0c9988d513f6ec1bb9e3d6b26b5025050945b38d6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/On_Floating_Bodies",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:35.082Z",
+   "snapshot": "eb2c6753d2d89e17276157f03ace21edc80d1aeda718bf0a934aaaecc2827f3d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aerodynamics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hydrodynamics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hydrostatics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03224",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thermodynamics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03225",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kinematics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:20.066Z",
+   "target": "f03221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fundamentals of Aerodynamics (2nd ed.).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aerodynamics” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:20.066Z",
+   "target": "f03222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hydrodynamica, sive de Viribus et Motibus Fluidorum Commentarii (Latin for Hydrodynamics, or commentaries on the forces and motions of fluids) is a book published by Daniel Bernoulli in 1738.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hydrodynamics” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:20.066Z",
+   "target": "f03223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "De Beghinselen des Waterwichts (Principles on the weight of water) in 1586 on the subject of hydrostatics;",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hydrostatics” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:20.066Z",
+   "target": "f03224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carnot's Reflections is now widely regarded as a key document in the development of modern thermodynamics, and Carnot himself (who published nothing else during his lifetime) has often been identified as the \"father of thermodynamics\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thermodynamics” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:20.066Z",
+   "target": "f03225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kinematics is a subfield of physics and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kinematics” is on the snapshot of s5"
+  }
+ ]
+}

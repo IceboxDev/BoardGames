@@ -1,0 +1,263 @@
+{
+ "article": "a0211",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Edeka",
+   "title": "Edeka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:10.947Z",
+   "snapshot": "13aa3f0e6bdd499d7c3ada66cb7696e438979d3985ea511410f6d4b8093e70b5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/REWE_Group",
+   "title": "REWE Group – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:14.695Z",
+   "snapshot": "d524f1b35adc6c4b681bddd155ed661f9b9f2750c6cb675e705913817689b524"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Theo_Albrecht",
+   "title": "Theo Albrecht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:15.726Z",
+   "snapshot": "311bbbc1fd0720db199e5646822886cb8078792c8eb3dad509ff90dd31accd12"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/IKEA",
+   "title": "IKEA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:13.289Z",
+   "snapshot": "5071e5eff45ff84541894d82102bae698e6373bcdbea0980030e8d533791a44c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Adidas",
+   "title": "Adidas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:16.800Z",
+   "snapshot": "4ea419a17de5b0b24e74ecdd7cfd91680e5e09c8d05ca26450a2a27abbbd889f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Aldi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:17.487Z",
+   "snapshot": "8ae800eb8cfb3ccdb33db90b8e39c774995cacb31076377774a73a61b327657a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aldi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:17.794Z",
+   "snapshot": "f844b6aa2e11089f181bd74bd4c45f87d4e48aa6eaf7de02687cff80c08de4db"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/IKEA",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:18.943Z",
+   "snapshot": "58d88bbc29850d4097dee2d758b8ce0fa4ddc50fc017cebe584c0451bcaaeef7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edeka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018; transcript tp-325"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rewe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aldi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "IKEA",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adidas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:12.528Z",
+   "target": "f01051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Edeka-Gruppe (Eigenschreibweise EDEKA; ehemals Abkürzung für Einkaufsgenossenschaft der Kolonialwarenhändler im Halleschen Torbezirk zu Berlin) ist ein genossenschaftlich organisierter kooperativer Unternehmensverbund im deutschen Einzelhandel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edeka” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:12.528Z",
+   "target": "f01052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The REWE Group is a German diversified retail and tourism co-operative group based in Cologne.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rewe” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:12.528Z",
+   "target": "f01053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He established the discount supermarket chain Aldi with his brother Karl Albrecht.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aldi” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:12.528Z",
+   "target": "f01054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "IKEA (Abkürzung für Ingvar Kamprad Elmtaryd Agunnaryd) ist ein multinationaler Einrichtungskonzern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IKEA” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:12.528Z",
+   "target": "f01055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adidas AG (German pronunciation: [ˈadiˌdas] ; styled as adidas since 1949) is a German multinational athletic apparel and footwear corporation headquartered in Herzogenaurach, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adidas” is on the snapshot of s5"
+  }
+ ]
+}

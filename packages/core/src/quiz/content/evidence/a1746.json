@@ -1,0 +1,419 @@
+{
+ "article": "a1746",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Chaostage",
+   "title": "Chaostage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:42.364Z",
+   "snapshot": "c261b65ded1e5cfb9e9adc73cdf3f7667b03a05aff0ca03e92c8122b3714fdf8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Startbahn_West",
+   "title": "Startbahn West – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:17.695Z",
+   "snapshot": "9b8f7cab100ce52c8c6ed3d985ace7680c8195de297009983095f849dd348989"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gel%C3%B6bnisfeier_in_Bremen_1980",
+   "title": "Gelöbnisfeier in Bremen 1980 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:43.252Z",
+   "snapshot": "ba908587b842bfaae50430106b6e1594fad00e83d1acad59fcb55a281d6b26c6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hafenstra%C3%9Fe",
+   "title": "Hafenstraße – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:45.477Z",
+   "snapshot": "b46bcc4d7e06095a7c0be65cf1d3d9cb8a5534e39d20259bd7674d3a51d1f0d5"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hafenstra%C3%9Fe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:44.253Z",
+   "snapshot": "3b7eeb5fc8894d598f6fdb3370e49f5f5dce13ea484396b974f8a545c267a842"
+  },
+  "s6": {
+   "url": "https://www.evangelisch.de/inhalte/96778/04-11-2009/startbahn-west-wer-nicht-kaempft-hat-schon-verloren",
+   "title": "Startbahn West: \"Wer nicht kämpft, hat schon verloren\"",
+   "publisher": "evangelisch.de (Gemeinschaftswerk der Evangelischen Publizistik)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:05.866Z",
+   "snapshot": "b4960c504b37c311412b4a6de86033dc7750c030c35b6bdbb539b088b150a9b0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hannover",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frankfurt am Main",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bremen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hamburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hamburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:15.937Z",
+   "target": "f08726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die ersten Chaostage fanden 1983 in der niedersächsischen Landeshauptstadt Hannover statt und richteten sich gegen eine geplante Punker-Kartei der Polizei.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannover” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:15.937Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frankfurt am Main",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Frankfurt am Main”, “Франкфурт-на-Майне”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:15.937Z",
+   "target": "f08728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Freie Hansestadt Bremen wurde für die Auftaktveranstaltung ausgewählt, weil dort 25 Jahre zuvor 1955 das erste öffentliche Gelöbnis in der Geschichte der Bundeswehr stattgefunden hatte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bremen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:15.937Z",
+   "target": "f08729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pauli, a quarter of Hamburg, Germany, known for its legalized squats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:15.937Z",
+   "target": "f08729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pauli, Hamburg, Deutschland bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:38:13Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ist eine 4000 Meter lange reine Startbahn auf dem Flughafen Frankfurt Main, die sich in dessen westlichem Teil befindet",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:38:17Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Hüttendorf wurde am Morgen des 2. November 1981 geräumt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:38:22Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Bürgerbewegung gegen den Bau der Startbahn West am Flughafen Frankfurt am Main gilt als eine der größten sozialen Bewegungen in der Bundesrepublik.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:38:34Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aus der ersten Hütte wurde schnell ein ganzes Hüttendorf.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:39:02Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ist eine 4000 Meter lange reine Startbahn auf dem Flughafen Frankfurt Main, die sich in dessen westlichem Teil befindet",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Hut village (Hüttendorf) cleared 2 November 1981 per the same page."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:39:10Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Bürgerbewegung gegen den Bau der Startbahn West am Flughafen Frankfurt am Main gilt als eine der größten sozialen Bewegungen in der Bundesrepublik.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: 'Aus der ersten Hütte wurde schnell ein ganzes Hüttendorf.'"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:03.626Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ist eine 4000 Meter lange reine Startbahn auf dem Flughafen Frankfurt Main, die sich in dessen westlichem Teil befindet",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:03.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:03.626Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Bürgerbewegung gegen den Bau der Startbahn West am Flughafen Frankfurt am Main gilt als eine der größten sozialen Bewegungen in der Bundesrepublik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:03.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:03.626Z",
+   "target": "f08727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Bürgerbewegung gegen den Bau der Startbahn West am Flughafen Frankfurt am Main gilt als eine der größten sozialen Bewegungen in der Bundesrepublik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:03.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Frankfurt am Main” is on the snapshot of s6"
+  }
+ ]
+}

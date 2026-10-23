@@ -1,0 +1,507 @@
+{
+ "article": "a1012",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sat.1",
+   "title": "Sat.1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:10.521Z",
+   "snapshot": "b5df29e46528ad443d0d479e113912ca6db9f466c4baf16b29ee8b6cc271b7e3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/RTL_Television",
+   "title": "RTL Television – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:11.526Z",
+   "snapshot": "92806e2c71252db0feceea37d9dff23bc72b9d354340d946da64cfa6412b99d7"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/ProSieben",
+   "title": "ProSieben – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:12.427Z",
+   "snapshot": "5238c477667de47652ae794a319e6278a3af2fe71037ad372d6d06c3ff9a1cea"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ntv_(Deutschland)",
+   "title": "ntv (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:13.337Z",
+   "snapshot": "c83ac54b01b0f260966b4b84fb1a3eea049f322f474c8dbb61aba2b69bfa880a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/VIVA_Deutschland",
+   "title": "VIVA Deutschland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:15.935Z",
+   "snapshot": "49a72c33b827d343b93d071bd286a5c035759ef9476a96822b9497a624b1cacc"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Kabelpilotprojekt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:15.373Z",
+   "snapshot": "138da32268aeb26e7d42400eefdca85298c4863342a0f552c6b5528714eeeea3"
+  },
+  "s7": {
+   "url": "https://mediendiskurs.online/beitrag/das-fernseharchiv-der-fall-40-jahre-privatfernsehen-beitrag-1188/",
+   "title": "Das Fernseharchiv: Der Fall – 40 Jahre Privatfernsehen",
+   "publisher": "mediendiskurs (FSF)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:12.568Z",
+   "snapshot": "b45b3c2dc7c9dfa5f4415a90628ac17496c578cb3034004829b9883be760f181"
+  },
+  "s8": {
+   "url": "https://www.spiegel.de/geschichte/25-jahre-privatfernsehen-a-948078.html",
+   "title": "25 Jahre Privatfernsehen - DER SPIEGEL",
+   "publisher": "Der Spiegel",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:13.037Z",
+   "snapshot": "deb68c97c3b1005dead74998a467f1bf39ea1e0c64f19510ccaf57d876b3ea3e"
+  },
+  "s9": {
+   "url": "https://www.bundespraesident.de/SharedDocs/Reden/DE/Frank-Walter-Steinmeier/Reden/2022/11/221123-Jubilaeum-30-Jahre-ntv.html",
+   "title": "Jubiläumsfeier zu 30 Jahren Nachrichtensender ntv",
+   "publisher": "Bundespräsidialamt",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:13.244Z",
+   "snapshot": "e501f05cdcb9eaa984e003cc146c8048ec46dfb2e2bebf421c5bbbd464ef8f80"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "PKS",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "RTL plus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-240"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ProSieben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "n-tv",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "VIVA",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:19.541Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Um 9:58 Uhr ging die Programmgesellschaft für Kabel- und Satellitenrundfunk (PKS) aus einem Kellerstudio in Ludwigshafen am Rhein auf Sendung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “PKS” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:19.541Z",
+   "target": "f05057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "RTL plus war bereits durch den Radiosender bekannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “RTL plus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:19.541Z",
+   "target": "f05058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ProSieben (oft stilisiert zu Pro7) ist ein deutscher Privatsender.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ProSieben” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:19.541Z",
+   "target": "f05059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ntv (ursprünglich n-tv) ist ein von der ntv Nachrichtenfernsehen GmbH betriebener Fernseh-Nachrichtensender mit Sitz in Köln, der seit 2006 zu RTL Deutschland gehört.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “n-tv” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:19.541Z",
+   "target": "f05060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "VIVA Deutschland war ein deutscher Fernsehsender mit Sitz zunächst in Köln, ab 2005 in Berlin, der hauptsächlich Musikvideos sendete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.541Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “VIVA” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:17:18Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Januar 1984 im Ludwigshafener Kabelfernsehen der erste kommerzielle Sender PKS seinen Betrieb aufnahm.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:17:20Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Endlich ist die \"PKS\" auf Sendung, die \"Programmgesellschaft für Kabel- und Satellitenrundfunk\" hat ihren Betrieb aufgenommen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:17:22Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Um 9:58 Uhr ging die Programmgesellschaft für Kabel- und Satellitenrundfunk (PKS) aus einem Kellerstudio in Ludwigshafen am Rhein auf Sendung.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wikipedia notes Telesaar (Saarland, 1954) as an earlier private station before the Saar joined the FRG; PKS is the first of the dual system"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:17:23Z",
+   "target": "f05059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Dass der älteste private Nachrichtensender Deutschlands seit drei Jahrzehnten",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:17:25Z",
+   "target": "f05059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Am 30. November 1992 startete n-tv in Berlin, noch im selben Jahr unter Beteiligung von CNN.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:51.540Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Januar 1984 im Ludwigshafener Kabelfernsehen der erste kommerzielle Sender PKS seinen Betrieb aufnahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:51.540Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Endlich ist die \"PKS\" auf Sendung, die \"Programmgesellschaft für Kabel- und Satellitenrundfunk\" hat ihren Betrieb aufgenommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:51.540Z",
+   "target": "f05059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Dass der älteste private Nachrichtensender Deutschlands seit drei Jahrzehnten",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:51.540Z",
+   "target": "f05059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Am 30. November 1992 startete n-tv in Berlin, noch im selben Jahr unter Beteiligung von CNN.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:51.540Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Januar 1984 im Ludwigshafener Kabelfernsehen der erste kommerzielle Sender PKS seinen Betrieb aufnahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “PKS” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:51.540Z",
+   "target": "f05056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Endlich ist die \"PKS\" auf Sendung, die \"Programmgesellschaft für Kabel- und Satellitenrundfunk\" hat ihren Betrieb aufgenommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “PKS” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:51.540Z",
+   "target": "f05059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Festakt \"30 Jahre Nachrichtensender n-tv\"",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “n-tv” is on the snapshot of s9"
+  }
+ ]
+}

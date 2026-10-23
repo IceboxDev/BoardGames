@@ -1,0 +1,372 @@
+{
+ "article": "a2778",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pareto_efficiency",
+   "title": "Pareto efficiency",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:04.084Z",
+   "snapshot": "480584065da55c185da83f1af7dba647889af39ac738e8dfa94df77b9f6d8031"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gini_coefficient",
+   "title": "Gini coefficient",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:05.329Z",
+   "snapshot": "cf4d2b3234a9c8814aca6fa208c26c73e577abd473da36c641cacb0bfbc768e9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lorenz_curve",
+   "title": "Lorenz curve",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:06.172Z",
+   "snapshot": "8368e27b5441fc8a456d678647c7fe19f1fbd58ad324c7e913124e1dacfb3f3c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Corrado_Gini",
+   "title": "Corrado Gini",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:07.081Z",
+   "snapshot": "acad3d4e5fe20879cdf08259bee46c3fdeae0c06027a0713118cfbb7f16b2974"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pareto_principle",
+   "title": "Pareto principle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:08.201Z",
+   "snapshot": "a91afce55efe36bfbb40edb9e9daf84d0b30141d5ddf9186f6625e1076421be7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Vilfredo_Pareto",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:09.178Z",
+   "snapshot": "d9613ec6642637cce7d158e52e2bc7ab7afc7923a89a14a2f50bdb578fae037b"
+  },
+  "s7": {
+   "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Gini_coefficient",
+   "title": "Glossary:Gini coefficient",
+   "publisher": "Eurostat",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:20.566Z",
+   "snapshot": "27fbfc3140908edacca77565c3a4d3aaed342c2d91bf52d11e3ea9c119b1da12"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25894",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pareto efficiency",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25895",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Greater inequality",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-133"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25896",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lorenz curve",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25897",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Corrado Gini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pareto principle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25899",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Joseph M. Juran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:12.212Z",
+   "target": "f25894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In addition to the context of efficiency in allocation, the concept of Pareto efficiency also arises in the context of efficiency in production vs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pareto efficiency” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:12.212Z",
+   "target": "f25895",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Greater inequality",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Greater inequality”, “Größere Ungleichheit”, “Большее неравенство”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:12.212Z",
+   "target": "f25896",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In economics, the Lorenz curve is a graphical representation of the distribution of income or of wealth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lorenz curve” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:12.212Z",
+   "target": "f25897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Corrado Gini (23 May 1884 – 13 March 1965) was an Italian statistician, demographer and sociologist who developed the Gini coefficient, a measure of the income inequality in a society.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Corrado Gini” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:12.212Z",
+   "target": "f25898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Pareto principle (also known as the 80:20 rule, the law of the vital few and the principle of factor sparsity) states that, for many outcomes, roughly 80% of consequences come from 20% of causes (the \"vital few\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pareto principle” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:12.212Z",
+   "target": "f25899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1941, management consultant Joseph M. Juran developed the concept in the context of quality control and improvement after reading the works of Italian sociologist and economist Vilfredo Pareto, who wrote in 1906 about the 80:20 connection while teaching at the University of Lausanne.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph M. Juran” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:39Z",
+   "target": "f25895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Gini coefficient of 0 reflects perfect equality, where all income or wealth values are the same. In contrast, a Gini coefficient of 1 (or 100%) reflects maximal inequality",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:42:41Z",
+   "target": "f25895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A coefficient of 0 expresses perfect equality where everyone has the same income, while a coefficient of 100 expresses full inequality where only one person has all the income.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T13:00:01.009Z",
+   "target": "f25895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Gini coefficient of 0 reflects perfect equality, where all income or wealth values are the same. In contrast, a Gini coefficient of 1 (or 100%) reflects maximal inequality",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:01.009Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T13:00:01.009Z",
+   "target": "f25895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A coefficient of 0 expresses perfect equality where everyone has the same income, while a coefficient of 100 expresses full inequality where only one person has all the income.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:01.009Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

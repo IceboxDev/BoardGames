@@ -1,0 +1,242 @@
+{
+ "article": "a0102",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pussy_Riot",
+   "title": "Pussy Riot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:41.017Z",
+   "snapshot": "39f7715fbbe4f142aa3c69544f7e7d0cdaccaf1eed6e3c448a2708c68f6f444e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cathedral_of_Christ_the_Saviour",
+   "title": "Cathedral of Christ the Saviour – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:41.926Z",
+   "snapshot": "053d6afd9ba5729c872882c42e6cd211181f8a0836dbc81132c10bd7aa566c0c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alexei_Navalny",
+   "title": "Alexei Navalny – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:43.259Z",
+   "snapshot": "5413a1d998676c9c3cb3b61c27f44603d6df6651cf281e1844fbd9fe71e32a5e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mikhail_Khodorkovsky",
+   "title": "Mikhail Khodorkovsky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:44.116Z",
+   "snapshot": "f15ed98b1dbc0693d11518bdf21f9d0d09c9f88975db9435bb44b93d25243070"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Aleksandr_Solzhenitsyn",
+   "title": "Aleksandr Solzhenitsyn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:45.019Z",
+   "snapshot": "825cdc43932a84f77d966561b0b9cfd548264f6051d395b3b841f4c631856817"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pussy Riot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c009"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cathedral of Christ the Saviour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alexei Navalny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mikhail Khodorkovsky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aleksandr Solzhenitsyn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:50.902Z",
+   "target": "f00506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pussy Riot is a Russian feminist protest and performance art group that became popular for its provocative punk rock music which later turned into a more accessible style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pussy Riot” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:50.902Z",
+   "target": "f00507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Cathedral of Christ the Saviour (Russian: Храм Христа Спасителя, romanized: Khram Khrista Spasitelya, Russian pronunciation: [xram xrʲɪˈsta spɐˈsʲitʲɪlʲə]) is a Russian Orthodox cathedral in Moscow, Russia, on the northern bank of the Moskva River, a few hundred metres southwest of the Kremlin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cathedral of Christ the Saviour” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:50.902Z",
+   "target": "f00508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He added he would like to eventually re-establish the institution of co-chairmanship, adding, \"Neither Alexei Navalny nor Mikhail Khodorkovsky will enter our party today and be elected as co-chairmen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexei Navalny” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:50.902Z",
+   "target": "f00509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The former heads of Yukos, Mikhail Khodorkovsky and Platon Lebedev, were sentenced to eight years' imprisonment for fraud and tax evasion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mikhail Khodorkovsky” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:50.902Z",
+   "target": "f00510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "would crush my independence and would not permit my personality to develop.\" In her 1974 memoir, Sanya: My Life with Aleksandr Solzhenitsyn, she wrote that she was \"perplexed\" that the West had accepted The Gulag Archipelago as \"the solemn, ultimate truth\", saying its significance had been",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aleksandr Solzhenitsyn” is on the snapshot of s5"
+  }
+ ]
+}

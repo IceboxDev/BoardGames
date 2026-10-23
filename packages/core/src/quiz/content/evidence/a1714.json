@@ -1,0 +1,249 @@
+{
+ "article": "a1714",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Algeria",
+   "title": "Algeria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:33.910Z",
+   "snapshot": "b5d938eae056bade2b55550d59b3c9afa74a4c2b5c7a13399808d3854764bc79"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sudan",
+   "title": "Sudan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:34.554Z",
+   "snapshot": "5fbb1a8d55a939b7d5009e11b21dc93b72984758ab856c4f9f01dcb54e013125"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Union_of_South_Africa",
+   "title": "Union of South Africa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:35.441Z",
+   "snapshot": "88f37cdabcc2c8a675a6f05289e554b220be87f3fdfd49303288658ff994f698"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ogaden_War",
+   "title": "Ogaden War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:36.871Z",
+   "snapshot": "8be3c627fd2ae085a79d26504dd8b6698cf22b17fb150e99e64dc425382257e5"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Lesotho",
+   "title": "Lesotho",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:02.817Z",
+   "snapshot": "033dd3468c0de9e4833602abf6b1db1f83cc8c4f0d5edda0ce57a4416e09244f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Berlin_Conference",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:37.495Z",
+   "snapshot": "071d74fabbe550d001e1bd355289e5e72922b0120beb6dc851bf6797ba0bef58"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Algeria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sudan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "South Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Somalia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Afrika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-295"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:10.433Z",
+   "target": "f08566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Algeria, officially the People's Democratic Republic of Algeria, is a country in North Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Algeria” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:10.433Z",
+   "target": "f08567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sudan, officially the Republic of the Sudan, is a country in Northeast Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sudan” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:10.433Z",
+   "target": "f08569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Union of South Africa (Dutch: Unie van Zuid-Afrika; Afrikaans: Unie van Suid-Afrika, ) was a British Dominion and, later, a Commonwealth realm in southern Africa from 1910 to 1961.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Africa” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:10.433Z",
+   "target": "f08570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "also known as the Ethio-Somali War (Somali: Dagaalkii Xoraynta Soomaali Galbeed, Amharic: የኢትዮጵያ ሶማሊያ ጦርነት, romanized: ye’ītiyop’iya somalīya t’orinet), was a military conflict between Somalia and Ethiopia fought from July 1977 to March 1978 over control of the sovereignty of the Ogaden region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Somalia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:10.433Z",
+   "target": "f11902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Königreich Lesotho (Sesotho [lɪ’sʊːtʰʊ]), 1868 bis 1966 Basutoland, ist ein Binnenstaat im südlichen Afrika.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Afrika” is on the snapshot of s5"
+  }
+ ]
+}

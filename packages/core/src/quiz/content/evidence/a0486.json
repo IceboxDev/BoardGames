@@ -1,0 +1,195 @@
+{
+ "article": "a0486",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Salt_March",
+   "title": "Salt March – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:34.071Z",
+   "snapshot": "6f5e5dd8c9efca5f567b72d4237737a7148c72077330d0a14f910aa9be3bca1d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Selma_to_Montgomery_marches",
+   "title": "Selma to Montgomery marches – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:35.495Z",
+   "snapshot": "32d6bce191929b4dbda6f08eca9ba5b2b6bb0ade88119e1fe48ea3644791ecd3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Long_March",
+   "title": "Long March – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:36.080Z",
+   "snapshot": "4aeb5982dd44bf65ba2dbeab819b9e19420a6be63ed3015a92730501e0b2c582"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kwame_Nkrumah",
+   "title": "Kwame Nkrumah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:37.083Z",
+   "snapshot": "30558c4caa2a59b88b608fc4eb5b978549d4f073f8bb124b10bb3c074a6ea44d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mahatma Gandhi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Martin Luther King",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mao Zedong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kwame Nkrumah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:56.377Z",
+   "target": "f02426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Salt March, also known as the Salt Satyagraha, Dandi March, and the Dandi Satyagraha, was an act of nonviolent civil disobedience in colonial India, led by Mahatma Gandhi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mahatma Gandhi” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:56.377Z",
+   "target": "f02427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In March 1975, Coretta Scott King, the widow of Martin Luther King Jr., led four thousand marchers commemorating Bloody Sunday.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Luther King” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:56.377Z",
+   "target": "f02428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mao Zedong, who was not a member of the Politburo, suggested going through Guizhou instead, which was accepted.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mao Zedong” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:56.377Z",
+   "target": "f02430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kwame Nkrumah (born Francis Nwia Kofi Ngonloma, /(ə)nˈkruːmə/ (ə)n-KROO-mə; 21 September 1909 – 27 April 1972) was a Ghanaian politician, political theorist, and revolutionary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kwame Nkrumah” is on the snapshot of s4"
+  }
+ ]
+}

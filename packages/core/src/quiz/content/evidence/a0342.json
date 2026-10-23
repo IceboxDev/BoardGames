@@ -1,0 +1,444 @@
+{
+ "article": "a0342",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kosovo_War",
+   "title": "Kosovo War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:21.722Z",
+   "snapshot": "441c0997d1887a075d75d0f8ec277cfa7b3840c38556b2c4e69fb2311c4a54c0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Deliberate_Force",
+   "title": "Operation Deliberate Force – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:22.350Z",
+   "snapshot": "294dba89499704f0869c5dba95add5f51634f42fc29edf1e260d9dd3b5a7c9e1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gulf_War",
+   "title": "Gulf War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:23.561Z",
+   "snapshot": "274e049d7fd2156ad335352614c59ff5ce97db8ace4b918bea209fbb79607f80"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Korean_War",
+   "title": "Korean War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:24.736Z",
+   "snapshot": "ea7103c137d2b19aaecc7dff38b3a6f9c4c386dcf887e809e85b2102ee9f5f4e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/International_Security_Assistance_Force",
+   "title": "International Security Assistance Force – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:25.360Z",
+   "snapshot": "94021efcc3a659b79df741cc18450385598dfb862c74278e00780aa1e4c10e41"
+  },
+  "s6": {
+   "url": "https://www.veterans.gc.ca/en/remembrance/wars-and-conflicts/korean-war",
+   "title": "Korean War – Veterans Affairs Canada",
+   "publisher": "Veterans Affairs Canada",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:25.448Z",
+   "snapshot": "796818324bda4aadfc7c92019baae57f6601671c722b40cc1e771913903246e6"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/United_Nations_Command",
+   "title": "United Nations Command – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:24.748Z",
+   "snapshot": "4393aa891c61440ad8f7fb350b1fa016992133ac518fdf25a1a28d28ef4b9991"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_84",
+   "title": "United Nations Security Council Resolution 84 – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:25.744Z",
+   "snapshot": "34ef0049252d8da759f5d58f5dcf4b005ac740ea4473491d9e98659beffed10a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kosovo War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bosnian War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gulf War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Korean War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "War in Afghanistan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:32.809Z",
+   "target": "f01706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Kosovo War (Albanian: Lufta e Kosovës; Serbian: Косовски рат, Kosovski rat) was an armed conflict in Kosovo that lasted from 28 February 1998 until 11 June 1999.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kosovo War” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:32.809Z",
+   "target": "f01707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "UNPROFOR ground operations, to undermine the military capability of the Army of Republika Srpska (VRS), which had threatened and attacked UN-designated \"safe areas\" in Bosnia and Herzegovina during the Bosnian War, with the Srebrenica genocide and Markale massacres precipitating the intervention.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bosnian War” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:32.809Z",
+   "target": "f01708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Gulf War was an armed conflict between Iraq and a 42-country coalition led by the United States in response to Saddam Hussein invading neighboring Kuwait on 2 August 1990.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gulf War” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:32.809Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Korean War (25 June 1950 – 27 July 1953) was an armed conflict fought on the Korean Peninsula between North Korea (Democratic People's Republic of Korea; DPRK) and South Korea (Republic of Korea; ROK) and their allies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Korean War” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:32.809Z",
+   "target": "f01710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ISAF's primary goal was to train the Afghan National Security Forces (ANSF) and assist Afghanistan in rebuilding key government institutions; it gradually took part in the broader war in Afghanistan against the Taliban insurgency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “War in Afghanistan” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:19:01Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yet the first UN armed intervention in history successfully stopped the communist aggression",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:19:06Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It was the first international unified command established by the UN Security Council and the first attempt at collective security under the UN System after the UN Charter was signed.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:19:12Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "authorize said commander to use the flag of the United Nations at their discretion",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Resolution 84 of 7 July 1950 authorised the unified command in Korea to fly the UN flag."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:52.986Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yet the first UN armed intervention in history successfully stopped the communist aggression",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:52.986Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It was the first international unified command established by the UN Security Council and the first attempt at collective security under the UN System after the UN Charter was signed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:52.986Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "authorize said commander to use the flag of the United Nations at their discretion",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:52.986Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Korean War | Veterans Affairs Canada",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Korean War” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:52.986Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "United Nations Command (UNC or UN Command) is the multinational military force established under UN authority to support the Republic of Korea (South Korea) during and after the Korean War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Korean War” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:52.986Z",
+   "target": "f01709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Security Council Resolution 84, adopted on July 7, 1950, was the United Nations Security Council resolution which authorized the formation of the United Nations Command to provide military support for South Korea, following a North Korean invasion and offensive at the outbreak of the Korean War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Korean War” is on the snapshot of s8"
+  }
+ ]
+}

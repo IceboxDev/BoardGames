@@ -1,0 +1,428 @@
+{
+ "article": "a2306",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bangladesch",
+   "title": "Bangladesch",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:58:48.368Z",
+   "snapshot": "46d57e99d7d7205adbcca7d9f4695f04909f0cb8785577ce46fa62cdbb3cddc4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nordkorea",
+   "title": "Nordkorea",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:48.176Z",
+   "snapshot": "ea1f7dd0562cc8e1c20c8e5b6c3ad7cf5fbea4c6a16c0d8089b564285c5ab74a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bhutan",
+   "title": "Bhutan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:56.815Z",
+   "snapshot": "39a849b847e9a8c9d3ee86ea156030736d07c0dab085ead0fc51a2c72a4f70bd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mongolia",
+   "title": "Mongolia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:51.899Z",
+   "snapshot": "52d45bf35254b5567dc2befc76ef7134145f339ec748cc887fd8d5884397133d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Laos",
+   "title": "Laos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:52.578Z",
+   "snapshot": "a0763a41ba5d02be207919be301b22dd6e599dcfab62ff8d55a7dfa4c1eac1b2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/North_Korea%E2%80%93Russia_border",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:53.460Z",
+   "snapshot": "91632d64f0caedfc545da7973f6ba6e51d7fccc762cd9863000622f93551a928"
+  },
+  "s7": {
+   "url": "https://snl.no/Nord-Korea",
+   "title": "Nord-Korea",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:09.552Z",
+   "snapshot": "dc8da983fb9a5ef3323f8fc00e81d93515f7a5d3fad779748ff7bcbccc703e7c"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/North_Korea",
+   "title": "North Korea",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:09.049Z",
+   "snapshot": "50033d49a4e9009b3244d49cf9fd56deacd4bd58003ac6f7a0f39ca9a55f477e"
+  },
+  "s9": {
+   "url": "https://snl.no/Laos",
+   "title": "Laos",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:10.554Z",
+   "snapshot": "08e2233d118879a954cbcece5a4f138506ee71e8546fee7ef09e0b9589122ef8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11925",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bangladesch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-379"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "China, Russland und Südkorea",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-299"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bhutan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mongolia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Laos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:52.720Z",
+   "target": "f11925",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bangladesch (bengalisch  IAST Bāṃlādeś [ˈbaŋlaˌd̪eʃ]; Zusammensetzung aus bangla ‚bengalisch‘ und desch ‚Land‘) ist ein Staat in Südasien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bangladesch” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:52.720Z",
+   "target": "f11926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "China, Russland und Südkorea",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“China, Russland und Südkorea”, “China, Russia and South Korea”, “Китай, Россия и Южная Корея”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:52.720Z",
+   "target": "f11928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bhutan, officially the Kingdom of Bhutan, is a landlocked country in South Asia, located in the Eastern Himalayas, bordering China's Tibet Autonomous Region to the north and northwest and India to the south and southeast.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bhutan” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:52.720Z",
+   "target": "f11929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mongolia is a landlocked country in East Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mongolia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:52.720Z",
+   "target": "f11930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Laos, officially the Lao People's Democratic Republic (LPDR), is a country in Mainland Southeast Asia; it is the only landlocked country in Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laos” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:44:13Z",
+   "target": "f11926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "I nord grenser Nord-Korea mot Kina og Russland, i sør mot Sør-Korea",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:44:16Z",
+   "target": "f11926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "borders China and Russia to the north at the Yalu (Amnok) and Tumen rivers, and South Korea (officially the Republic of Korea) to the south",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:44:19Z",
+   "target": "f11930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Laos is the only landlocked country in Southeast Asia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:44:22Z",
+   "target": "f11930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Det er en innlandsstat som grenser til Vietnam i øst, Kambodsja i sør, Thailand i vest og Myanmar og Kina i nord og nordvest.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Every other Southeast Asian state (Myanmar, Thailand, Cambodia, Vietnam, Malaysia, Singapore, Indonesia, Brunei, Philippines, Timor-Leste) has a coast."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:38.258Z",
+   "target": "f11926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "I nord grenser Nord-Korea mot Kina og Russland, i sør mot Sør-Korea",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:38.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:38.258Z",
+   "target": "f11926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "borders China and Russia to the north at the Yalu (Amnok) and Tumen rivers, and South Korea (officially the Republic of Korea) to the south",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:38.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:38.258Z",
+   "target": "f11930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Laos is the only landlocked country in Southeast Asia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:38.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:38.258Z",
+   "target": "f11930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Laos – les om historie, språk, politikk – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:38.258Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Laos” is on the snapshot of s9"
+  }
+ ]
+}

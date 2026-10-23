@@ -1,0 +1,307 @@
+{
+ "article": "a2517",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Knorpeltang",
+   "title": "Knorpeltang",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:45.953Z",
+   "snapshot": "a98f9c92c4dddd5b9df304914b8ba439f7b579ad8733404de2e434a1a0c5cb49"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kathleen_Mary_Drew-Baker",
+   "title": "Kathleen Mary Drew-Baker",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:47.269Z",
+   "snapshot": "2b107f49c3c24ce58dbb1dd6bf812d260bed48d79f7829c53a3cbbd548ed0441"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carrageenan",
+   "title": "Carrageenan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:45.654Z",
+   "snapshot": "a8f7d0eeec3bbc5ce97f1f3671f56c2836c59db3fbab2d35aade20cff6102cf0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Agar",
+   "title": "Agar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:46.808Z",
+   "snapshot": "9fba2ded74161f32614162fbb505662dcd164f82c3acef73c5263b8128bef75a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kathleen_Mary_Drew-Baker",
+   "title": "Kathleen Mary Drew-Baker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:47.650Z",
+   "snapshot": "4daf2880b023f5956a22869626fa6bbae15c659571e2dbf8b3efef2dd18e33f0"
+  },
+  "s6": {
+   "url": "https://www.nature.com/articles/164748a0",
+   "title": "Conchocelis-Phase in the Life-History of Porphyra umbilicalis (L.) Kütz (Drew, Nature 164, 1949)",
+   "publisher": "Nature",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:53.458Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rotalge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Großbritannien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-154"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "carrageenan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "agar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Uto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:33.149Z",
+   "target": "f13389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Irländisches Moos, (irländisches) Perlmoos oder Carrag(h)een-Alge oder -Moos benannt, ist eine Rotalge der nordatlantischen Küsten, die auch in der Nordsee und Ostsee vorkommt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.149Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotalge” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:33.149Z",
+   "target": "f13390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Großbritannien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Großbritannien”, “United Kingdom”, “Великобритания”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:33.149Z",
+   "target": "f13391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kappa-carrageenan has one sulfate group per disaccharide, iota-carrageenan has two, and lambda-carrageenan has three.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.149Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carrageenan” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:33.149Z",
+   "target": "f13392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Agar ( or ), or agar-agar, is a jelly-like substance consisting of polysaccharides obtained from the cell walls of some species of red algae (phylum Rhodophyta) primarily from the Gracilaria genus (Irish moss, ogonori) and the Gelidiaceae family (tengusa).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.149Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “agar” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:33.149Z",
+   "target": "f13393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A monument to her was erected in 1963 at Sumiyoshi Shrine in Uto, Kumamoto, Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.149Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uto” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:10:28Z",
+   "target": "f13390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Department of Cryptogamic Botany, University of Manchester",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "The 1949 paper announcing the discovery gives Drew's affiliation as the University of Manchester (England, UK)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:10:34Z",
+   "target": "f13390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She was known for her research on the edible seaweed Porphyra umbilicalis",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:17.079Z",
+   "target": "f13390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She was known for her research on the edible seaweed Porphyra umbilicalis",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.079Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  }
+ ]
+}

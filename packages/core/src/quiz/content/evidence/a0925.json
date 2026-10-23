@@ -1,0 +1,475 @@
+{
+ "article": "a0925",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Graceland",
+   "title": "Graceland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:29.411Z",
+   "snapshot": "0a78810395d41c180b218e258487a3e9be596201a69135e2ed2740b98838b76e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sun_Studio",
+   "title": "Sun Studio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:30.412Z",
+   "snapshot": "4bdba75668477bbe8112674cd5fcd076a18a53d600cb17b6ba376d43e0729e6f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Neverland_Ranch",
+   "title": "Neverland Ranch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:31.305Z",
+   "snapshot": "96c89729f988b27de08c5588005f1fb281324fcdd1272152cd254b50178ab5ac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Paisley_Park",
+   "title": "Paisley Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:32.282Z",
+   "snapshot": "c34988fc339103509dac26eca9d13b7ba44b755e15b7e12f6957edd05dcf52b9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Abbey_Road_Studios",
+   "title": "Abbey Road Studios – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:33.299Z",
+   "snapshot": "520ae64babe7e2b1e35dbbed7383ee8b3c8b058039096f5525d0bd590b85a159"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Every_Breath_You_Take",
+   "title": "Every Breath You Take",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:34.418Z",
+   "snapshot": "10aaf1c03457b608180159911116ea527e9f1582465f0b006495b3768f8ab6d2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Goldeneye_(estate)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:35.316Z",
+   "snapshot": "10913cc28d0906f1a8f582e5547800754429d9bc3bc3df8146e1415182a721a7"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Liverpool_Institute_for_Performing_Arts",
+   "title": "Liverpool Institute for Performing Arts",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:36.301Z",
+   "snapshot": "e8762cb2a39d255c8b53dd83c5e6ffb763ea1eb2532f1ca3f6701134c0904c0f"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Hitsville_U.S.A.",
+   "title": "Hitsville U.S.A. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:37.291Z",
+   "snapshot": "94f3922fa9262410bb27fd899c7dda3ad4d35e3b88a09a35221c7f8060975ea0"
+  },
+  "s10": {
+   "url": "https://www.motownmuseum.org/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:34.699Z",
+   "snapshot": "4cbcb4aefa569f4d6065508402b50a2ae3e83d6e6a11af147869ebe8ca488d60"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04621",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Graceland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sun Studio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neverland Ranch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paisley Park",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04625",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Abbey Road Studios",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jamaica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-165"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jamaica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 33"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Paul McCartney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-329"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f27701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Hitsville U.S.A.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 49"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23",
+   "target": "f27701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Hitsville U.S.A.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 49"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f04621",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Graceland is a mansion on a 13.8-acre (5.6-hectare) estate in Memphis, Tennessee, United States, where American singer Elvis Presley lived from 1957 until he died there in 1977.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Graceland” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f04622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sun Studio is a recording studio opened by rock-and-roll pioneer Sam Phillips at 706 Union Avenue in Memphis, Tennessee, on January 3, 1950.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sun Studio” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f04623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sycamore Valley Ranch, formerly Neverland Ranch or Neverland Valley Ranch, is a developed property in Santa Barbara County, California, on the edge of Los Padres National Forest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neverland Ranch” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f04624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paisley Park is a 65,000-square-foot (6,000 m2) estate in Chanhassen, Minnesota, United States, once owned by American musician Prince.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paisley Park” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f04625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Abbey Road Studios (formerly EMI Recording Studios) is a music recording studio at 3 Abbey Road, St John's Wood, City of Westminster, London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abbey Road Studios” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f14568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He started writing the song at Ian Fleming's writing desk on the Goldeneye estate in Oracabessa Bay, Jamaica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jamaica” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f14568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Goldeneye is the original name of novelist Ian Fleming's estate on Oracabessa Bay on the northern coastline of Jamaica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jamaica” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f14569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Liverpool Institute for Performing Arts (LIPA) is a performing arts higher education institution in Liverpool, founded by Paul McCartney and Mark Featherstone-Witty and opened in 1996.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul McCartney” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f27701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "\"Hitsville U.S.A.\" is the nickname given to Motown's first headquarters and recording studio.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hitsville U.S.A.” is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:26:05.535Z",
+   "target": "f27701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Each tour is led by a knowledgeable guide, who will share the interesting history, fascinating anecdotes and captivating stories that all took place at Hitsville U.S.A.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hitsville U.S.A.” is on the snapshot of s10"
+  }
+ ]
+}

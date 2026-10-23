@@ -34,7 +34,6 @@ import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { logActivity, settingsChanges } from "../lib/activity-log.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
-import { ReviewRejectedError } from "../lib/quiztopia/srs-db.ts";
 import {
   type DeckReviewResult,
   deckHistory,
@@ -47,6 +46,7 @@ import {
   resetDeck,
   writeDeckSettings,
 } from "../lib/trainers/deck-db.ts";
+import { ReviewRejectedError } from "../lib/trainers/review-guards.ts";
 
 export const geographyRoutes = authedApp();
 

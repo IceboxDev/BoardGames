@@ -1,0 +1,460 @@
+{
+ "article": "a2524",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Gentechnisch_ver%C3%A4ndertes_Lebensmittel",
+   "title": "Gentechnisch verändertes Lebensmittel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:18.869Z",
+   "snapshot": "c9c43b65c235fc80f3dbc091f8d97cdf4c1201cbfc655d1ea5bae5b06d218d40"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Flavr_Savr",
+   "title": "Flavr Savr",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:20.656Z",
+   "snapshot": "732f6deac850fa95dd9e73a2926c9f15cf3c5ee7fe1cebaaf0358dfb7d46788f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bacillus_thuringiensis",
+   "title": "Bacillus thuringiensis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:21.783Z",
+   "snapshot": "4917fdecc79588c2524bed5ba042e85847be2a07cb82035c429dcd81d28f44a6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Golden_rice",
+   "title": "Golden rice",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:22.643Z",
+   "snapshot": "22c3614bdfbcbb5f6696cb2eba33e4fc2bfb02655a0d418be94d1d3cd0921393"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/CRISPR_gene_editing",
+   "title": "CRISPR gene editing",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:23.970Z",
+   "snapshot": "2a3dd6549a26edf4ce2dd14defb36630786ab7c26dd0d6c9be176dcad1556311"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Genetically_modified_food",
+   "title": "Genetically modified food",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:24.912Z",
+   "snapshot": "3bffb6044a1ff0de720a3b2140652dfe8777b26a5c8c5a60a9233793f9520597"
+  },
+  "s7": {
+   "url": "https://www.genengnews.com/insights/mistakes-shorten-first-approved-gmos-shelf-life/",
+   "title": "Flaws in Science, Business Model Spoil Calgene’s Genetically Modified Tomatoes",
+   "publisher": "Genetic Engineering & Biotechnology News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:54.655Z",
+   "snapshot": "1383dc9731981af2c635a97d2137ba5595817674fe265efb7b1f1bec8f10b4e1"
+  },
+  "s8": {
+   "url": "https://www.fda.gov/food/agricultural-biotechnology/science-and-history-gmos-and-other-food-modification-processes",
+   "title": "Science and History of GMOs and Other Food Modification Processes",
+   "publisher": "U.S. Food and Drug Administration",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:54.979Z",
+   "snapshot": "45adaa265d529199d5fa9d929c07917fe327e11c75689e6df1e575551463357a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "GVO",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Flavr Savr",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13453",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bacillus thuringiensis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Golden Rice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "CRISPR-Cas9",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Papaya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-095"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:33.799Z",
+   "target": "f13451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein gentechnisch verändertes Lebensmittel ist ein Lebensmittel, das aus gentechnisch veränderten Pflanzen, Tieren oder Mikroorganismen (genetisch veränderte Organismen, GVO oder im Englischen GMO) besteht, diese enthält oder daraus hergestellt worden ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “GVO” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:33.799Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Flavr Savr (also known as CGN-89564-2; pronounced \"flavor saver\"), is a genetically modified tomato that was the first commercially grown genetically engineered food to be granted a license for human consumption.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flavr Savr” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:33.799Z",
+   "target": "f13453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bacillus thuringiensis (or Bt) is a gram-positive, soil-dwelling bacterium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bacillus thuringiensis” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:33.799Z",
+   "target": "f13454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Golden rice is a variety of rice (Oryza sativa) produced through genetic engineering to biosynthesize beta-carotene, a precursor of vitamin A, in the edible parts of the rice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Golden Rice” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:33.799Z",
+   "target": "f13455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is based on a simplified version of the bacterial CRISPR-Cas9 antiviral defense system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CRISPR-Cas9” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:33.799Z",
+   "target": "f25985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Papaya was genetically modified to resist the ringspot virus (PSRV).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Papaya” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:18:59Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Calgene won FDA approval for Flavr Savr on May 18, 1994.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:06Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the first genetically modified (GM) food crop to be marketed commercially following FDA approval in 1994",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:19:11Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1994: The first GMO produce created through genetic engineering—a GMO tomato—becomes available for sale",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official FDA timeline: confirms a GE tomato was the first in 1994 but does not name it."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:19:15Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a genetically modified tomato that was the first commercially grown genetically engineered food to be granted a license for human consumption.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:17.718Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the first genetically modified (GM) food crop to be marketed commercially following FDA approval in 1994",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.718Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:17.718Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1994: The first GMO produce created through genetic engineering—a GMO tomato—becomes available for sale",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.718Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:17.718Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a genetically modified tomato that was the first commercially grown genetically engineered food to be granted a license for human consumption.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.718Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:17.718Z",
+   "target": "f13452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mistakes Shorten Flavr Savr’s Shelf Life",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.718Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Flavr Savr” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,449 @@
+{
+ "article": "a0671",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Haplorhini",
+   "title": "Haplorhini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:10.086Z",
+   "snapshot": "0995ffb0220f14c0509bfaf680beffa53599e9777469a5161d2a2ae64c82690c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Strepsirrhini",
+   "title": "Strepsirrhini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:11.240Z",
+   "snapshot": "25511314e6b8247883839ab3986b7a4854893d69892e9d77b9bfd3f394f9d686"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hominidae",
+   "title": "Hominidae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:12.194Z",
+   "snapshot": "c0b66b31ef42bda0cd5e95e021f09abf97edf629bb6c1ccbca8c0017c57a274d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Homo",
+   "title": "Homo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:13.186Z",
+   "snapshot": "15d7ce20dbca0eaca5a5604e2348ce2d9148d90a7f8d0ccb183c511526b2b2ef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Blue-eyed_black_lemur",
+   "title": "Blue-eyed black lemur",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:14.109Z",
+   "snapshot": "1206ce825ee09b5d8142d2ac9b0698464c46e7c95aa3459c4697699e477a4180"
+  },
+  "s6": {
+   "url": "https://animaldiversity.org/accounts/Primates/",
+   "title": "Primates",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:03.745Z",
+   "snapshot": "79a9faf7dab4c36d9ce6d5317a22417948feaa0c30b8b08da0e350182a2b2098"
+  },
+  "s7": {
+   "url": "https://animaldiversity.org/accounts/Strepsirrhini/",
+   "title": "Strepsirrhini (lemurs, lorises, galagos, aye-aye, and relatives)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:04.926Z",
+   "snapshot": "fce782a4c78a83df3ca2777932f8b1290c46570251c0df38e9238f4a5f857fcd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dry-nosed primates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wet-nosed primates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "great apes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Homo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Blue eyes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-039"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:24.129Z",
+   "target": "f03351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dry-nosed primates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“dry-nosed primates”, “Trockennasenprimaten”, “сухоносые обезьяны”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:24.129Z",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wet-nosed primates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“wet-nosed primates”, “Feuchtnasenprimaten”, “мокроносые обезьяны”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:24.129Z",
+   "target": "f03353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hominidae (; hominids ), whose members are known as the great apes, are a taxonomic family of primates that includes eight extant species in four genera: Pongo (the Bornean, Sumatran and Tapanuli orangutan); Gorilla (the eastern and western gorilla); Pan (the chimpanzee and the bonobo); and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “great apes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:24.129Z",
+   "target": "f03355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Homo (from Latin  homō 'human') is a genus of great ape (family Hominidae) that emerged from the genus Australopithecus (subtribe Hominina), encompassing a single extant species, Homo sapiens (modern humans), along with a number of extinct species (e.g.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Homo” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:24.129Z",
+   "target": "f13304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Both sexes have blue eyes, hence the common name, and are one of the only primates other than humans to consistently have blue eyes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue eyes” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:17:19Z",
+   "target": "f03351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The simians include catarrhines (Old World monkeys and apes, including humans), and the platyrrhines (New World monkeys).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:17:22Z",
+   "target": "f03351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Haplorrhines are further divided into two major groups, the Platyrrhini and the Catarrhini.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23",
+   "note": "ADW: haplorrhines have furry (dry) noses, strepsirrhines naked (moist) ones; humans fall in the Catarrhini (Hominoidea) within the Haplorrhini."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:17:26Z",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "lemurs, lorises, galagos, aye-aye, and relatives",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:17:30Z",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a suborder of primates that includes the lemuriform primates, which consist of the lemurs of Madagascar",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:17:35Z",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Strepsirrhines have naked noses, lower incisors forming a toothcomb",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:52.983Z",
+   "target": "f03351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The simians include catarrhines (Old World monkeys and apes, including humans), and the platyrrhines (New World monkeys).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:52.983Z",
+   "target": "f03351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Haplorrhines are further divided into two major groups, the Platyrrhini and the Catarrhini.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:52.983Z",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "lemurs, lorises, galagos, aye-aye, and relatives",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:52.983Z",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a suborder of primates that includes the lemuriform primates, which consist of the lemurs of Madagascar",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:52.983Z",
+   "target": "f03352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Strepsirrhines have naked noses, lower incisors forming a toothcomb",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  }
+ ]
+}

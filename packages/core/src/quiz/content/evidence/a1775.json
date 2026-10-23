@@ -1,0 +1,303 @@
+{
+ "article": "a1775",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pastis",
+   "title": "Pastis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:42.367Z",
+   "snapshot": "acc9dc96a5f718da9dff417f29b9095db48524eb25610bd7648a2678074c6bc8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Reinheitsgebot",
+   "title": "Reinheitsgebot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:43.465Z",
+   "snapshot": "326651891d930370df34f41035829c727b03cc106284b5bc243970e29424f5c0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Absinthe",
+   "title": "Absinthe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:25.924Z",
+   "snapshot": "a39fcdbd67d5f18714a02275096392dae7a500e84246a765bdbfa851f9ed4891"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/K%C3%BCmmel_(liqueur)",
+   "title": "Kümmel (liqueur) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:44.379Z",
+   "snapshot": "2cc3adec2936560ac08f2ecd7c1abbae716dbe22ff46c42d04784ceaee95d1fb"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Aperol",
+   "title": "Aperol",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:21:41.826Z",
+   "snapshot": "a6845f848a4d883b29e8b0d7d9067282befd7fb54892b84c3016be9ae444341b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Reinheitsgebot",
+   "title": "Reinheitsgebot",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:21:42.748Z",
+   "snapshot": "6efb883d3ee7bb423f42e157de0543cf063ed302d2443b2866d3e99ec1ff32a8"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Juniperus_communis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:45.410Z",
+   "snapshot": "b6c39aea183211547175f800bc060c67878813998283152fb77fdb7634ff3953"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Hallertau",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:46.400Z",
+   "snapshot": "112d70ceb207029e1fc7d612b7ad0134ecbf293982bd2417b0ee4d3e9625e044"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08871",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "anise",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08873",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hops",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08874",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "wormwood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "caraway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bitterorange",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-035"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hopfen, Malz, Hefe und Wasser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-256"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:20.384Z",
+   "target": "f08871",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pastis (UK: , US: , French: [pastis]; Occitan: pastís [pasˈtis]) is an anise-flavoured spirit and apéritif traditionally from France, typically containing less than 100 g/L sugar and 40–45% ABV (alcohol by volume).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “anise” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:20.384Z",
+   "target": "f08873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "According to the 1516 Bavarian law, the only ingredients that could be used in the production of beer were water, barley and hops.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hops” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:20.384Z",
+   "target": "f08874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Absinthe (, French: [apsɛ̃t] ) is an anise-flavoured spirit derived from several plants, including the flowers and leaves of Artemisia absinthium (\"grand wormwood\"), together with green anise, sweet fennel, and other medicinal and culinary herbs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wormwood” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:20.384Z",
+   "target": "f08875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kümmel, kummel or kimmel (Latvian: ķimelis), is a sweet, colourless liqueur flavoured with caraway (German: Kümmel, Latvian: ķimenes) seeds, cumin and fennel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “caraway” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:20.384Z",
+   "target": "f11020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Er ist eine Zubereitung aus Rhabarber, Chinarinde, Gelbem Enzian, Bitterorange und aromatischen Kräutern mit orange-roter Färbung durch die künstlichen Lebensmittelfarbstoffe E 110 (Gelborange S) und E 124 (Cochenillerot A).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bitterorange” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:20.384Z",
+   "target": "f11021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jahrhundert die Vorstellung bezeichnet, dass Bier nur aus Hopfen, Malz, Hefe und Wasser hergestellt werden soll.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hopfen, Malz, Hefe und Wasser” is on the snapshot of s6"
+  }
+ ]
+}

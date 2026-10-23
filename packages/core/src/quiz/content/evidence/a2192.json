@@ -1,0 +1,241 @@
+{
+ "article": "a2192",
+ "sources": {
+  "s1": {
+   "url": "https://gizmodo.com/lobsters-were-once-only-fed-to-poor-people-and-prisoner-1612356919",
+   "title": "Lobsters Were Once Only Fed to Poor People and Prisoners",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:08.226Z",
+   "snapshot": "1caced64bbfc3205a9c3dd02e6298d71dbeb4e311385513d7d177be1a10b86e3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lobster",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:11.321Z",
+   "snapshot": "9ee8d22d4a273194e691f24a2ab9025d7df467d41d7845cff52b082820334302"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Oyster",
+   "title": "Oyster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:12.404Z",
+   "snapshot": "ca591bfb17bc6ebcb5164923e3a5deecf4cff6d3c529c548f91af0c73b51926a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/History_of_pizza",
+   "title": "History of pizza – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:13.299Z",
+   "snapshot": "cabb15876dcc975b4234ee4c29db6f2ef3078c107143eee0928f5b18b82b51e2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Polenta",
+   "title": "Polenta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:14.221Z",
+   "snapshot": "69e8af16b612ae1672e19b774321f9b22a4d2d2f728d8a82316646259f9b446e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lobster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lobster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11136",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oysters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; history entry seq 13"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11137",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pizza",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11138",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Polenta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:35.048Z",
+   "target": "f11135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "That Surf and Turf now costs an arm and a leg thanks to lobster’s recent resurgence in popularity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lobster” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:35.048Z",
+   "target": "f11135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Commercially important species include two species of Homarus from the northern Atlantic Ocean; the smaller Nephrops norvegicus, known as true scampi, Norway lobster, or langoustine; and multiple small species in the genus Metanephrops, commonly called Pacific scampi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lobster” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.048Z",
+   "target": "f11136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Many (but not all) oysters are in the superfamily Ostreoidea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oysters” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:35.048Z",
+   "target": "f11137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The history of pizza began in antiquity, as various ancient cultures produced flatbreads with several toppings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pizza” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:35.048Z",
+   "target": "f11138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Polenta (, Italian: [poˈlɛnta]) is an Italian dish of boiled cornmeal that was historically made from other grains.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polenta” is on the snapshot of s5"
+  }
+ ]
+}

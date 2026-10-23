@@ -1,0 +1,296 @@
+{
+ "article": "a1270",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Capelinhos",
+   "title": "Capelinhos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:07.126Z",
+   "snapshot": "3c075482493770a1fedfd1d7d9ab970ee8dec6a239bdd6f67801813091e31a7c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/2021_Cumbre_Vieja_volcanic_eruption",
+   "title": "2021 Cumbre Vieja volcanic eruption – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:08.152Z",
+   "snapshot": "9023f36597fa6d6854e603992d97d06043522c7dd0c9e7e6df8c2f0473fa351e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Madeira",
+   "title": "Madeira – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:09.156Z",
+   "snapshot": "442e06e0b17e49609fcba6898d52aba1453809799147559789ed5c187ed29520"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Faroe_Islands",
+   "title": "Faroe Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:10.289Z",
+   "snapshot": "e6eda2fed353bce1aa66279194e8cc17eb5e0907df844677a02a3145e605ac8f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands",
+   "title": "Galápagos Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:11.242Z",
+   "snapshot": "b89752c2ba2813750843a59648d5cf5de8ebd83bde85f1273bd219a4854087cb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Island",
+   "title": "Island",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:51:08.546Z",
+   "snapshot": "32f96d9ff5eb99ff0ab6d104f6fecd26c5dfcddf3a9e70a059c52493c6b48c63"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Madeira_Island",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:12.040Z",
+   "snapshot": "b502354121dbe5c14ebcaa6f4b446ff188db833776a5ea6b96c5c8afe492df11"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Azores",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canary Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Madeira",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Faroe Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Galápagos Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12077",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Island",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-298"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:58.072Z",
+   "target": "f06346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Capelinhos (from Capelo + -inhos diminutive, which literally means \"little cape\") is a monogenetic volcano located on the western coast of Faial Island in the Azores.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Azores” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:58.072Z",
+   "target": "f06347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An eruption at the Cumbre Vieja volcanic ridge, comprising the southern half of the Spanish island of La Palma in the Canary Islands, took place between 19 September and 13 December 2021.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canary Islands” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:58.072Z",
+   "target": "f06348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Madeira, officially the Autonomous Region of Madeira, is an autonomous region of Portugal, in the Atlantic Ocean about 805 km (500 miles) southwest of mainland Portugal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madeira” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:58.072Z",
+   "target": "f06349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Faroe Islands ( FAIR-oh), also known as the Faroes, are an archipelago in the North Atlantic Ocean and a rigsdel ('autonomous territory') of the Kingdom of Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Faroe Islands” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:58.072Z",
+   "target": "f06350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Galápagos Islands (Spanish: Islas Galápagos) are an archipelago of volcanic islands in the Eastern Pacific, located around the equator, 485 nautical miles (898 km; 558 mi) west of the mainland of South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galápagos Islands” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:58.072Z",
+   "target": "f12077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Island (isländisch  [ˈist͡länt], ‚Eisland‘) ist ein Inselstaat im äußersten Nordwesten Europas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Island” is on the snapshot of s6"
+  }
+ ]
+}

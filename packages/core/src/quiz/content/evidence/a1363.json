@@ -1,0 +1,335 @@
+{
+ "article": "a1363",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2022_German_presidential_election",
+   "title": "2022 German presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:04.205Z",
+   "snapshot": "f065306193881193122476fd327650b702894c4630091a1f2490bbf779f56dad"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bundesverfassungsgericht",
+   "title": "Bundesverfassungsgericht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:04.398Z",
+   "snapshot": "3e7683a0375ddfa25a4aa285e8478e03ed3586806dda821a323bb44052c6fa12"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bundespr%C3%A4sidentenwahl_in_%C3%96sterreich_1951",
+   "title": "Bundespräsidentenwahl in Österreich 1951 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:03.667Z",
+   "snapshot": "d8d1fcf267ca0adc70c4c9fddd01f27630a09d101cc69c5358d91981cee89c6a"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Bundesversammlung_(Deutschland)",
+   "title": "Bundesversammlung (Deutschland)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:04.748Z",
+   "snapshot": "95a3a9c1ac0e17c2df220bc9cab27c5b353f8dc242032503c647b4e61a485f0c"
+  },
+  "s5": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000138&Artikel=60&Paragraf=&Anlage=&Uebergangsrecht=",
+   "title": "B-VG Art. 60 – RIS",
+   "publisher": "Rechtsinformationssystem des Bundes (Austrian Federal Chancellery)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:36.393Z",
+   "snapshot": "c7854e04b85f239db22476e7a0a22406e06d18ac85bbf0a9e3a0c47331a57696"
+  },
+  "s6": {
+   "url": "https://www.parlament.gv.at/verstehen/politisches-system/bundespraesident",
+   "title": "Bundespräsident:in – Parlament Österreich",
+   "publisher": "Parlament Österreich",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:36.497Z",
+   "snapshot": "24f97e02e8d0fb72a04bb77bd2fc72c3cf3ae11a9a914575932feca150169dcf"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Federal_President_of_Austria",
+   "title": "President of Austria – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:40.930Z",
+   "snapshot": "f4f123eab90b6b108d593468f8d7dc4f73ff985186829460062bd30d0f0a84dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Federal Convention",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c114"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06813",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bundestag und Bundesrat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Volk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wahl des Bundespräsidenten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-109"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:14.518Z",
+   "target": "f06811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Federal Convention consists of all the members of the current Bundestag (736 members) and an equal number of state electors, allocated to the sixteen states of Germany in proportion to their population.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Federal Convention” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:14.518Z",
+   "target": "f06813",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zwei Jahre nach Inkrafttreten des Grundgesetzes nahm das Gericht seine Arbeit 1951 auf, seinerzeit bestehend aus zwei mit jeweils zwölf Richtern besetzten Senaten, die je zur Hälfte vom Bundestag und Bundesrat gewählt wurden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bundestag und Bundesrat” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:14.518Z",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Volk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Das Volk”, “The people”, “народ”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:14.518Z",
+   "target": "f13689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Bundesversammlung ist ein nichtständiges Verfassungsorgan der Bundesrepublik Deutschland, dessen einzige Aufgabe in der Wahl des Bundespräsidenten besteht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wahl des Bundespräsidenten” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:18:44Z",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Bundespräsident wird vom Bundesvolk auf Grund des gleichen, unmittelbaren, persönlichen, freien und geheimen Wahlrechtes",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:18:45Z",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "die einzigen staatlichen Institutionen auf Bundesebene, die direkt vom Volk gewählt werden",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:18:46Z",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The president of Austria is elected by popular vote for a term of six years",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:59.454Z",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "die einzigen staatlichen Institutionen auf Bundesebene, die direkt vom Volk gewählt werden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.454Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:59.454Z",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The president of Austria is elected by popular vote for a term of six years",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.454Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:59.454Z",
+   "target": "f06814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Since the institution of the popular vote in 1951, only nominees of the Social Democratic Party and the People's Party were elected to the presidency, until Green-endorsed incumbent Alexander Van der Bellen won it in 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.454Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The people” is on the snapshot of s7"
+  }
+ ]
+}

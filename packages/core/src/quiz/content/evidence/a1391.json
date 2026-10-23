@@ -1,0 +1,249 @@
+{
+ "article": "a1391",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alpaca",
+   "title": "Alpaca – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:27.352Z",
+   "snapshot": "9abebbf2b08734e6fe2060c17db3d87d99e70f5f4f07b2e8045d0a1b614379cc"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Alpaka",
+   "title": "Alpaka",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:24.474Z",
+   "snapshot": "20b2a9c84b5051b299efeea39b9c914b391041fadae17fe544da193fc37f2588"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Llama",
+   "title": "Llama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:28.328Z",
+   "snapshot": "21d3d33764de9d15de2714b791b4527cabac6c74bde56d020d7f8c324c07eb15"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mohair",
+   "title": "Mohair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:27.080Z",
+   "snapshot": "e2047995c542e344d1e375eda8b670e96203d946600d9771a67cc8ba316a1bc4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cashmere_wool",
+   "title": "Cashmere wool – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:26.107Z",
+   "snapshot": "088e81bab8f5b3ec79629661f8be58d4dcb1953d2aa4e82d3a21695546cd895e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Angora_rabbit",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:27.986Z",
+   "snapshot": "bdab760954f219f37ed98ddd9e597df4366ee339435e6dcad98da024f7b258ad"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "alpaca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alpaka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-208"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "llama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Angora goat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "cashmere goat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:18.154Z",
+   "target": "f06951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The alpaca (Lama pacos) is a domesticated species of South American camelid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “alpaca” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:18.154Z",
+   "target": "f06951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Alpaka (Vicugna pacos), auch Pako, ist eine aus den südamerikanischen Anden stammende, domestizierte Kamelart, die vorwiegend wegen ihrer Wolle gezüchtet wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alpaka” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:18.154Z",
+   "target": "f06952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The llama (; Spanish pronunciation: [ˈʎama] or [ˈʝama]; Lama glama) is a domesticated South American camelid, widely used as a meat and pack animal by Andean cultures since the pre-Columbian era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “llama” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:18.154Z",
+   "target": "f06953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mohair (pronounced ) is a fabric or yarn made from the hair of the Angora goat (not Angora wool from the fur of the Angora rabbit).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angora goat” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:18.154Z",
+   "target": "f06954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "such wool product is the fine (dehaired) undercoat fibers produced by a cashmere goat (Capra hircus laniger);",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cashmere goat” is on the snapshot of s5"
+  }
+ ]
+}

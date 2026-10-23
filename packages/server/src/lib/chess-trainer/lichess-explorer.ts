@@ -3,14 +3,19 @@
  * a position (every rating and speed — the trainer's "popular"), so the farm
  * pads opponent replies exactly like the trainer does, and how many games
  * reached the position (the farm's claim order). Needs `LICHESS_TOKEN`
- * (a personal token, no scopes) on the server; one request at a time, a minute's
- * wait after a 429 (lichess's rule), a dropped connection retried, answers kept
- * for the life of the process.
+ * (a personal token, no scopes) on the server; one request at a time, at least
+ * three seconds apart (lichess refuses faster), a minute's wait after a 429
+ * (lichess's rule), a dropped connection retried. Every answer goes into the
+ * shared explorer cache (`explorer-cache.ts`), which is read first, so a
+ * position is fetched once for the farm and every member's trainer.
  */
 import { parseFen } from "@boardgames/core/games/chess/engine/fen";
 import { legalMoves } from "@boardgames/core/games/chess/engine/movegen";
 import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
+import type { ExplorerAnswer as CachedAnswer } from "@boardgames/core/protocol";
 import { z } from "zod";
+import { getDb } from "../../db.ts";
+import { lookupExplorer, saveExplorer } from "./explorer-cache.ts";
 
 const EXPLORER = "https://explorer.lichess.org/lichess";
 const ExplorerSchema = z.object({
@@ -40,22 +45,37 @@ interface ExplorerAnswer {
   readonly moves: PopularMove[];
 }
 
+/** lichess refuses explorer requests faster than about one every three seconds. */
+const MIN_GAP_MS = 3_000;
 const cache = new Map<string, Promise<ExplorerAnswer>>();
 let tail: Promise<unknown> = Promise.resolve();
+let lastRequestAt = 0;
+
+/** The farm pads replies from the top 12, as the trainer does. */
+const toPopular = (a: CachedAnswer): ExplorerAnswer => ({
+  games: a.games,
+  moves: a.moves
+    .map((m) => ({ uci: m.uci, games: m.white + m.draws + m.black }))
+    .sort((x, y) => y.games - x.games)
+    .slice(0, 12),
+});
 
 /** Whether the server can ask the explorer at all. */
 export const explorerConfigured = () => Boolean(process.env.LICHESS_TOKEN);
 
-async function fetchOnce(fen: string, token: string): Promise<ExplorerAnswer> {
+async function fetchOnce(fen: string, token: string): Promise<CachedAnswer> {
   const url = new URL(EXPLORER);
   url.search = new URLSearchParams({
     variant: "standard",
     fen,
-    moves: "12",
+    moves: "30",
     topGames: "0",
     recentGames: "0",
   }).toString();
   for (let attempt = 0; attempt < 5; attempt++) {
+    const wait = lastRequestAt + MIN_GAP_MS - Date.now();
+    if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+    lastRequestAt = Date.now();
     let res: Response;
     try {
       res = await fetch(url, {
@@ -79,11 +99,9 @@ async function fetchOnce(fen: string, token: string): Promise<ExplorerAnswer> {
       .map((m) => {
         const castle = CASTLE_AS_ROOK[m.uci];
         const uci = !legal.has(m.uci) && castle && legal.has(castle) ? castle : m.uci;
-        return { uci, games: m.white + m.draws + m.black };
+        return { uci, white: m.white, draws: m.draws, black: m.black };
       })
-      .filter((m) => legal.has(m.uci))
-      .sort((a, b) => b.games - a.games)
-      .slice(0, 12);
+      .filter((m) => legal.has(m.uci));
     return { games: answer.white + answer.draws + answer.black, moves };
   }
   throw new Error("lichess explorer kept rate-limiting");
@@ -95,9 +113,22 @@ function explore(fen: string): Promise<ExplorerAnswer> {
   const key = fen.split(" ").slice(0, 4).join(" ");
   const hit = cache.get(key);
   if (hit) return hit;
-  const run = () => fetchOnce(fen, token);
-  const next = tail.then(run, run);
-  tail = next.catch(() => undefined);
+  // The shared cache first; lichess only for a position nobody has fetched.
+  const fromLichess = () => {
+    const run = () => fetchOnce(fen, token);
+    const fetched = tail.then(run, run);
+    tail = fetched.catch(() => undefined);
+    return fetched.then(async (a) => {
+      await saveExplorer(getDb(), [{ fen, ...a }]).catch((err: unknown) =>
+        console.error("[chess-farm] explorer cache save failed", err),
+      );
+      return a;
+    });
+  };
+  const next = lookupExplorer(getDb(), [fen])
+    .catch(() => new Map<string, CachedAnswer>())
+    .then((found) => found.get(fen) ?? fromLichess())
+    .then(toPopular);
   cache.set(key, next);
   next.catch(() => cache.delete(key));
   return next;

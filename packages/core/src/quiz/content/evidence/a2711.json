@@ -1,0 +1,311 @@
+{
+ "article": "a2711",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Biome",
+   "title": "Biome",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:30.203Z",
+   "snapshot": "75ed46e6d88963d3660d1d132c3f538c4325ef9ad3f4e343412ed58cc64b45a5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Biodiversity",
+   "title": "Biodiversity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:31.432Z",
+   "snapshot": "f4b7afdbe4c302c444ba92b223f359457b9d60f11e27396fb9ea7f6a85e73b10"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carrying_capacity",
+   "title": "Carrying capacity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:32.348Z",
+   "snapshot": "648a2ea122d82c09bc833fb70f1811acca40c433dcd71634d71f88716ed02b65"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ecology",
+   "title": "Ecology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:33.479Z",
+   "snapshot": "629254fc0a9657f4a445d80d57a7f800774fab6b6cbadeb4783bee30dc5c20cb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Keystone_species",
+   "title": "Keystone species – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:34.290Z",
+   "snapshot": "6f6eba5c588762d9dbb199d67586178cdef9b2bd5473df9225eedc495bc1c13e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ecological_niche",
+   "title": "Ecological niche – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:35.320Z",
+   "snapshot": "2d8724b98b48f2724f591fbac56648fae8b58f76f2ddf02480cd3cb1c803f5aa"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Robert_T._Paine_(ecologist)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:36.185Z",
+   "snapshot": "4bddd06b4dd34efbabe77688e5663b3b6db95f0a6a896282d1d93c63e574e709"
+  },
+  "s8": {
+   "url": "https://commons.wikimedia.org/wiki/File:Vegetation.png",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:33.647Z",
+   "snapshot": "b5c6709471c898a15fe74906f572139d0471f8b76261bef063f2707a4715a8da",
+   "cloneOf": "wikipedia.org"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Ernst_Haeckel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:37.340Z",
+   "snapshot": "bf95cc1ec321e5f75f9d4cf26a3572a81c3f6c7778f892a912cec2a3bf70be8e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Biome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Biodiversity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-069"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carrying capacity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-090"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ecology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "keystone species",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-111"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ecological niche",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:01.427Z",
+   "target": "f25343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A biome ( BY-ohm) is a distinct geographical region with specific climate, vegetation, animal life, and an ecosystem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.427Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biome” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:01.427Z",
+   "target": "f25344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Biodiversity is the variability of life on Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.427Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biodiversity” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:01.427Z",
+   "target": "f25345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The carrying capacity of an ecosystem is the maximum population size of a living biological species that can be sustained by that specific environment, given the food, habitat, water, and other resources available, over a fixed amount of time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.427Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carrying capacity” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:01.427Z",
+   "target": "f25346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ecology (from Ancient Greek  οἶκος (oîkos)  'house' and  -λογία (-logía)  'study of') is the natural science which studies the interactions between organisms and their environments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.427Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ecology” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:01.427Z",
+   "target": "f25348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A keystone species is a species that has a disproportionately large effect on its natural environment relative to its abundance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.427Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “keystone species” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:01.427Z",
+   "target": "f25349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Different definitions have been proposed for the ecological niche, though they mainly revolve around describing the relationship between a species or population and its environment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.427Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ecological niche” is on the snapshot of s6"
+  }
+ ]
+}

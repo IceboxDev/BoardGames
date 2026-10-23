@@ -1,0 +1,364 @@
+{
+ "article": "a2758",
+ "sources": {
+  "s1": {
+   "url": "https://www.nature.com/articles/347473a0",
+   "title": "Contributions to birdsong from the left and right sides of the intact syrinx – Nature",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:29.898Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nictitating_membrane",
+   "title": "Nictitating membrane",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:33.028Z",
+   "snapshot": "33853ccde9a52855c4ed8c0d977ad8c195489b5d21d0a22dd533f0551b21b18e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Owl",
+   "title": "Owl",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:34.153Z",
+   "snapshot": "6e19b35e00136a9df60203c9329486c584033b6044fadb4d35f220eb2bc9c676"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Black-capped_chickadee",
+   "title": "Black-capped chickadee",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:35.063Z",
+   "snapshot": "c8863348516f5feed97476758e8449be334daeca54db5622458e9e90aa95136f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pin_feather",
+   "title": "Pin feather",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:36.033Z",
+   "snapshot": "ff09bc916e531112aa89a4e68f0791a32dffe79b42eb111c178ef3ea74c8c135"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Syrinx_(bird_anatomy)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:37.149Z",
+   "snapshot": "4944e6b3c9231a0be050f1c9aa2b3964ec5ed1de7a3ea2bd69a376dc1c70533c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "syrinx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nictitating membrane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-099"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tubular",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript ppm-050"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Finding their stored food",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript ppm-127"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A pin feather",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript ppm-093"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:08.738Z",
+   "target": "f10495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "syrinx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“syrinx”, “Syrinx”, “сиринкс”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:08.738Z",
+   "target": "f25322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The nictitating membrane (from Latin nictare, to blink) is a transparent or translucent third eyelid present in some animals that can be drawn across the eye from the medial canthus to protect and moisten it while maintaining vision.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nictitating membrane” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:08.738Z",
+   "target": "f25739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An apparent consequence of the evolution of an absolutely large eye in a relatively small skull is that the eye of the owl has become tubular in shape.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tubular” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:08.738Z",
+   "target": "f25740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Finding their stored food",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Finding their stored food”, “Wiederfinden ihrer Futterverstecke”, “Поиск спрятанного корма”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:08.738Z",
+   "target": "f25741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A pin feather is a developing feather on a bird.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A pin feather” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:22:18Z",
+   "target": "f10495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it produces sounds without the vocal folds of mammals",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same sentence pair: 'The syrinx … is the vocal organ of birds. Located at the base of a bird's trachea'."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:22:24Z",
+   "target": "f10495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "THE vocal organ, the syrinx, of some songbirds has been hypothesized to contain two sound sources that can be operated independently.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "The two sound sources are the two sides of the syrinx, one in each bronchus at the fork of the windpipe."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:09:39Z",
+   "target": "f25740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The hippocampus of the black-capped chickadee grows during the caching season, which is believed to help it better remember its cache locations.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Rests on Smulders et al. 1995 (J. Neurobiol.) seasonal hippocampal volume study; the journal pages are behind bot checks, so no second verbatim source this run."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:57.544Z",
+   "target": "f10495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it produces sounds without the vocal folds of mammals",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:57.544Z",
+   "target": "f25740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The hippocampus of the black-capped chickadee grows during the caching season, which is believed to help it better remember its cache locations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:57.544Z",
+   "target": "f10495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The syrinx (from Ancient Greek  σῦριγξ (súrinx) 'pan pipes') is the vocal organ of birds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “syrinx” is on the snapshot of s6"
+  }
+ ]
+}

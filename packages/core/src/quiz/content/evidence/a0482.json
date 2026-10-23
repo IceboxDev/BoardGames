@@ -1,0 +1,499 @@
+{
+ "article": "a0482",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Lappjagd",
+   "title": "Lappjagd – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:19.487Z",
+   "snapshot": "4483f6a052ee9844ffe25eae773f1b0cf94a097a886e3b0a4d75d28ae816e26e"
+  },
+  "s2": {
+   "url": "https://www.phrases.org.uk/meanings/beat-around-the-bush.html",
+   "title": "Beat around the bush – The Phrase Finder",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:19.600Z",
+   "snapshot": "b6eed81a46817bfe4ed22b8965b70c923e3501bc47f183656b67c959c1e90fad"
+  },
+  "s3": {
+   "url": "https://www.dwds.de/wb/Garn",
+   "title": "Garn – DWDS (Etymologie nach Pfeifer)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:19.726Z",
+   "snapshot": "ab0847284a0e0ebfd869f68508d03176859d52bc2ffd0305ba025c26bc237808"
+  },
+  "s4": {
+   "url": "https://www.dwds.de/wb/Schlich",
+   "title": "Schlich – DWDS (Etymologie nach Pfeifer)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:20.644Z",
+   "snapshot": "49333c00e84bcb3d449d58df165786a0b00f584655d99616ceca807897078481"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/Strecke",
+   "title": "Strecke – DWDS (Etymologie nach Pfeifer)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:21.670Z",
+   "snapshot": "d472648882b7eb3588702319bea178e4f1a39a2f381142a76996460bdca87fd4"
+  },
+  "s6": {
+   "url": "https://www.duden.de/rechtschreibung/Busch_Strauch_Dickicht",
+   "title": "Busch – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:26.916Z",
+   "snapshot": "9840ae1316cffc0aea9f2e405986ab29ea960a7f0036a57bef14d10b46149c59"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/auf%20den%20Busch%20klopfen",
+   "title": "auf den Busch klopfen – DWDS",
+   "publisher": "DWDS (Berlin-Brandenburgische Akademie der Wissenschaften)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:26.513Z",
+   "snapshot": "9f5f124a65c63634aede30cab3b1072fbcef6190fd814a3141a3b7866d1170a9"
+  },
+  "s8": {
+   "url": "https://www.duden.de/rechtschreibung/Schlich",
+   "title": "Schlich – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:28.026Z",
+   "snapshot": "5d977d03ab4c71f28a4c5a5d4871b987270a5ca0496a73f88ae8196a47b532a7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "durch die Lappen gehen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "auf den Busch klopfen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ins Garn gehen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "jemandem auf die Schliche kommen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "auf der Strecke bleiben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:55.886Z",
+   "target": "f02406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "„Durch die Lappen gehen“ im Sinne von „entkommen, entgehen“ ist eine aus der Jägersprache entlehnte und seit dem 18.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “durch die Lappen gehen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:55.886Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "auf den Busch klopfen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“auf den Busch klopfen”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:55.886Z",
+   "target": "f02408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zeit bedeutet Garn auch das ‘Netz zum Fangen von Wild, Vögeln und Fischen’, heute noch in der Jäger- und Fischersprache; daraus die Wendung ins Garn gehen ‘hereinfallen’, ferner die Ableitung umgarnen Vb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ins Garn gehen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:55.886Z",
+   "target": "f02409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "jemandem auf die Schliche kommen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“jemandem auf die Schliche kommen”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:55.886Z",
+   "target": "f02410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "⟨auf der Strecke bleiben (= nicht weiter können)⟩ DWDS, 12.04.2021",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “auf der Strecke bleiben” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:13:52Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[bei jemandem] auf den Busch klopfen (umgangssprachlich: bei jemandem auf etwas anspielen, um etwas Bestimmtes zu erfahren; aus der Jägersprache, eigentlich, um festzustellen, ob sich im Gebüsch Wild verbirgt)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:13:53Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "geschickt bzw. entschieden nachfragen, um etw. (besonders Absichten, Meinungen, Einstellungen o. Ä.) in Erfahrung zu bringen; (vorsichtig) anfragen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:13:55Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In bird hunts some of the participants roused the birds by beating the bushes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "English cognate; supports the beaters origin and the c. 1440 Generydes first record in the body."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:13:57Z",
+   "target": "f02409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "jemandes Absichten erkennen, durchschauen, jemandes heimliches Treiben entdecken; wohl aus dem Jagdwesen; der Jäger macht sich mit den Wildwechseln, den Schleichwegen des Wildes vertraut",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:13:59Z",
+   "target": "f02409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "jmdm., etw. auf die Schliche kommen / jmdm., etw. hinter die Schliche kommen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "DWDS lists the idiom under Schlich ('List, Trick', 'Schleichweg')."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:18.364Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[bei jemandem] auf den Busch klopfen (umgangssprachlich: bei jemandem auf etwas anspielen, um etwas Bestimmtes zu erfahren; aus der Jägersprache, eigentlich, um festzustellen, ob sich im Gebüsch Wild verbirgt)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.364Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:18.364Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "geschickt bzw. entschieden nachfragen, um etw. (besonders Absichten, Meinungen, Einstellungen o. Ä.) in Erfahrung zu bringen; (vorsichtig) anfragen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.364Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:18.364Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In bird hunts some of the participants roused the birds by beating the bushes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.364Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:18.364Z",
+   "target": "f02409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "jemandes Absichten erkennen, durchschauen, jemandes heimliches Treiben entdecken; wohl aus dem Jagdwesen; der Jäger macht sich mit den Wildwechseln, den Schleichwegen des Wildes vertraut",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.364Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:18.364Z",
+   "target": "f02409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "jmdm., etw. auf die Schliche kommen / jmdm., etw. hinter die Schliche kommen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.364Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:18.364Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[bei jemandem] auf den Busch klopfen (umgangssprachlich: bei jemandem auf etwas anspielen, um etwas Bestimmtes zu erfahren; aus der Jägersprache, eigentlich, um festzustellen, ob sich im Gebüsch Wild verbirgt)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.364Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “auf den Busch klopfen” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:18.364Z",
+   "target": "f02407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "auf den Busch klopfen – Schreibung, Definition, Bedeutung, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.364Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “auf den Busch klopfen” is on the snapshot of s7"
+  }
+ ]
+}

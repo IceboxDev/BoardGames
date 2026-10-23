@@ -1,0 +1,767 @@
+{
+ "article": "a1171",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Polish_z%C5%82oty",
+   "title": "Polish złoty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:24.965Z",
+   "snapshot": "8d82e60c64330e41170d715c741498c7ea4406a2dfd8212b6176aa0b3e674462"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Czech_koruna",
+   "title": "Czech koruna – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:01.862Z",
+   "snapshot": "102d02bbfa023270a2e4bedc1f3134576aa600fe7185737b48efea1c793c8835"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hungarian_forint",
+   "title": "Hungarian forint – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:02.839Z",
+   "snapshot": "1054ae20903912ae5ad535b23aa94306d07dc7ba0b389647be2cd025dd095b04"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Croatian_kuna",
+   "title": "Croatian kuna – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:03.911Z",
+   "snapshot": "5faeca140f65a17e335494bacfe7f80cdf86d9a1ef6b49c73335007f4cdb3a74"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Swiss_franc",
+   "title": "Swiss franc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:04.952Z",
+   "snapshot": "86fa9faf611f22ab0523ade023fdcd46453b20a6545ebb528325c694019362b0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cashless_society",
+   "title": "Cashless society",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:05.960Z",
+   "snapshot": "f6a17a47f118bb884988c2381863db0d47e783bc985433d7d7d4d4d2d1ae52c4"
+  },
+  "s7": {
+   "url": "https://www.ecb.europa.eu/pub/convergence/html/ecb.cr201805.en.html",
+   "title": "Convergence Report, May 2018",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:28.203Z",
+   "snapshot": "840cf2c4c0eda3d09425fa42a7a3c09ed271a6f99328c16eb470be44b9696540"
+  },
+  "s8": {
+   "url": "https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy",
+   "title": "The SNB's monetary policy",
+   "publisher": "Swiss National Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:28.373Z",
+   "snapshot": "6b96d1bb76500299d2b5af2874ad76a7f69d4a1d0226cea45384815cc35c4b5a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "złoty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Czech koruna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "forint",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "kuna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Swiss franc",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sweden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-350"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:43.473Z",
+   "target": "f05851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The złoty (alternative spelling: zloty; Polish: polski złoty, pronounced [ˈzwɔtɨ] ; abbreviation: zł; code: PLN,) is the official currency and legal tender of Poland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.473Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “złoty” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:43.473Z",
+   "target": "f05852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Czech koruna replaced the Czechoslovak koruna in 1993 after the dissolution of Czechoslovakia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.473Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Czech koruna” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:43.473Z",
+   "target": "f05853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The forint (sign Ft; code HUF) is the currency of Hungary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.473Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “forint” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:43.473Z",
+   "target": "f05854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The kuna (pronounced [kǔːna]; sign: kn; code: HRK) was the currency of Croatia from 1994 until 2023, when it was replaced by the euro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.473Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kuna” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:43.473Z",
+   "target": "f05855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Swiss franc or simply the franc, (currency code: CHF; symbols: Fr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.473Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Swiss franc” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:43.473Z",
+   "target": "f13583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "By 2016, only about 2% of the value transacted in Sweden was by cash, and only about 20% of retail transactions were in cash.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.473Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sweden” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:25:34Z",
+   "target": "f05851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:25:36Z",
+   "target": "f05852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:25:38Z",
+   "target": "f05853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:25:39Z",
+   "target": "f05854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Croatian kuna and the Romanian leu traded under exchange rate regimes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:25:41Z",
+   "target": "f05851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is the official currency and legal tender of Poland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:25:43Z",
+   "target": "f05852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "has been the currency of the Czech Republic since 1993",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:25:44Z",
+   "target": "f05853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is the currency of Hungary",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:25:46Z",
+   "target": "f05854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "was the currency of Croatia from 1994 until 2023, when it was replaced by the euro",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:25:48Z",
+   "target": "f05855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it seeks to keep the short-term Swiss franc money market rates close to the SNB policy rate",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:25:49Z",
+   "target": "f05855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is the currency and legal tender of Switzerland and Liechtenstein",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Croatian kuna and the Romanian leu traded under exchange rate regimes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is the official currency and legal tender of Poland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s1"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "has been the currency of the Czech Republic since 1993",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s2"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is the currency of Hungary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s3"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "was the currency of Croatia from 1994 until 2023, when it was replaced by the euro",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s4"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it seeks to keep the short-term Swiss franc money market rates close to the SNB policy rate",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s8"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is the currency and legal tender of Switzerland and Liechtenstein",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s5"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period, while the Romanian leu and the Swedish krona depreciated (see Chart 3.3).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Czech koruna” is on the snapshot of s7"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Polish zloty, the Czech koruna and, to a lesser degree, the Hungarian forint, appreciated against the euro over the reference period, while the Romanian leu and the Swedish krona depreciated (see Chart 3.3).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “forint” is on the snapshot of s7"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Croatian kuna and the Romanian leu traded under exchange rate regimes involving – to different degrees – a managed float vis-à-vis the euro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “kuna” is on the snapshot of s7"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:55:23.305Z",
+   "target": "f05855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In so doing, it seeks to keep the short-term Swiss franc money market rates close to the SNB policy rate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:23.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Swiss franc” is on the snapshot of s8"
+  }
+ ]
+}

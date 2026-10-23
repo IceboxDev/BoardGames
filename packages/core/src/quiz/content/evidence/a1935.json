@@ -1,0 +1,336 @@
+{
+ "article": "a1935",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chalk_Cliffs_on_R%C3%BCgen",
+   "title": "Chalk Cliffs on Rügen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:32.568Z",
+   "snapshot": "f6cf340c4d584e3fc84c90461f9916274092d30c17a49350d248104a7a300a7c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Philipp_Otto_Runge",
+   "title": "Philipp Otto Runge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:33.558Z",
+   "snapshot": "a02fa5877994724a0c540aecd0189fc6926add7ddea5fa570524b1038b8f6218"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Hay_Wain",
+   "title": "The Hay Wain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:34.563Z",
+   "snapshot": "3074d0af3e92fbb87a77ad3ffbfbc4bc199933866ab8245194becfaf0abd457d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa",
+   "title": "The Raft of the Medusa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:35.593Z",
+   "snapshot": "7ec5ba5b52af942fc70717c60c15bceb8ef8e16615ab403461d8823b7c9978c9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People",
+   "title": "Liberty Leading the People – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:36.576Z",
+   "snapshot": "ecc1d08c34309b139d4f7fe86cecf0a784a20844e226cff2ef6b36971a9dd33e"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Caspar_David_Friedrich",
+   "title": "Caspar David Friedrich",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:31:34.183Z",
+   "snapshot": "acab21817b5c4fb1346cce9dae659a5592d33eb45e9392127d01e5b77c5df051"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Ludwig_Emil_Grimm",
+   "title": "Ludwig Emil Grimm",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:31:35.323Z",
+   "snapshot": "710548d422c02d38c11ea3a4852c892080c04bbcb9d5c76704b10ead548a6e4e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Caspar David Friedrich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philipp Otto Runge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Constable",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Théodore Géricault",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eugène Delacroix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dresden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-101"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10715",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Maler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-279"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:49.046Z",
+   "target": "f09671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chalk Cliffs on Rügen (German: Kreidefelsen auf Rügen) is an oil painting of circa 1818 by German Romantic artist Caspar David Friedrich.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Caspar David Friedrich” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:49.046Z",
+   "target": "f09672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philipp Otto Runge (German: [ˈʁʊŋə]; 1777–1810) was a German artist, draftsman, painter, and color theorist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philipp Otto Runge” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:49.046Z",
+   "target": "f09673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hay Wain – originally titled Landscape: Noon – is a painting by John Constable, completed in 1821, which depicts a rural scene on the River Stour between the English counties of Suffolk and Essex.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Constable” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:49.046Z",
+   "target": "f09674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Raft of the Medusa (French: Le Radeau de la Méduse [lə ʁado d(ə) la medyz])—originally titled Scène de Naufrage (Shipwreck Scene)—is an oil painting of 1818–1819 by the French Romantic painter and lithographer Théodore Géricault (1791–1824).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Théodore Géricault” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:49.046Z",
+   "target": "f09675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Liberty Leading the People (French: La Liberté guidant le peuple [la libɛʁte ɡidɑ̃ lə pœpl]) is a painting of the Romantic era by the French artist Eugène Delacroix,  commemorating the July Revolution of 1830 that toppled King Charles X (r.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eugène Delacroix” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:49.046Z",
+   "target": "f10714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mai 1840 in Dresden, Königreich Sachsen) war ein deutscher Maler, Grafiker und Zeichner.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dresden” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:49.046Z",
+   "target": "f10715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "April 1863 in Kassel) war ein deutscher Maler, Radierer und Kupferstecher.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maler” is on the snapshot of s7"
+  }
+ ]
+}

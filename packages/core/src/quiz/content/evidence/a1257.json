@@ -1,0 +1,327 @@
+{
+ "article": "a1257",
+ "sources": {
+  "s1": {
+   "url": "https://fr.wikipedia.org/wiki/Mouvement_perp%C3%A9tuel",
+   "title": "Mouvement perpétuel – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:50:23.969Z",
+   "snapshot": "4e5e08fb16748e539a189b65d515e0e29fe114bdb39e41230883374676e556c8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Conservation_of_energy",
+   "title": "Conservation of energy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:22.382Z",
+   "snapshot": "0a58b212fa6fdde7430caa06e77d44e0dc6075adca24e356f4bb638281d08c9f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carnot_cycle",
+   "title": "Carnot cycle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:27.461Z",
+   "snapshot": "286ac48e274ec09ed38395f7535065971b4d40f4783c579ef6e16f93234aa1b9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maxwell%27s_demon",
+   "title": "Maxwell's demon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:28.573Z",
+   "snapshot": "b1d560bc86510e84b9712549f57dc288b8f048fccc2754d41a00c1eb901cde02"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Negative_temperature",
+   "title": "Negative temperature",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:29.556Z",
+   "snapshot": "8f72b0f9a9a94f1429b7e9eb35e22ca08405b98795d323d7d383de3dfa043f7a"
+  },
+  "s6": {
+   "url": "https://www.mpg.de/research/negative-absolute-temperature",
+   "title": "A temperature below absolute zero",
+   "publisher": "Max-Planck-Gesellschaft",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:59.526Z",
+   "snapshot": "cb7303c50af81f4f15252d0b3a6e7cb11149bf2cb214eca71f33dec1eeb12333"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Perpetual motion machine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Law of conservation of energy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carnot cycle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maxwell's demon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Evenly across all states",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-089"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:56.022Z",
+   "target": "f06281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ils avaient peut-être puisé leur confiance en cet axiome dans les théories de Girolamo Cardano qui, écrivant contre le perpetuum mobile, n'avait peut-être fait que résumer les quelques notes éparses de Léonard de Vinci, qui proposa quelques candidats au mouvement perpétuel, petits croquis rapidement",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perpetuum mobile” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:56.022Z",
+   "target": "f06282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The law of conservation of energy states that the total energy of an isolated system remains constant; it is said to be conserved over time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Law of conservation of energy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:56.022Z",
+   "target": "f06284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A Carnot cycle (English:  kar-NOH, French: [kaʁno]) is an ideal thermodynamic cycle proposed by French physicist Sadi Carnot in 1824 and expanded upon by others in the 1830s and 1840s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carnot cycle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:56.022Z",
+   "target": "f06285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maxwell's demon is a thought experiment that appears to disprove the second law of thermodynamics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maxwell's demon” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:56.022Z",
+   "target": "f25427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Evenly across all states",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Evenly across all states”, “Gleichmäßig auf alle Zustände”, “Равномерно по всем состояниям”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:16:39Z",
+   "target": "f25427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a temperature which is hotter than one that is infinitely high, where the particles are distributed equally over all energies",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23",
+   "note": "holds for systems whose energy spectrum is bounded; for an unbounded spectrum the infinite-temperature limit is only formal"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:16:41Z",
+   "target": "f25427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "so that the number of particles in the lower energy states and in the higher energy states approaches equality",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:38.621Z",
+   "target": "f25427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a temperature which is hotter than one that is infinitely high, where the particles are distributed equally over all energies",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.621Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:38.621Z",
+   "target": "f25427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "so that the number of particles in the lower energy states and in the higher energy states approaches equality",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.621Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  }
+ ]
+}

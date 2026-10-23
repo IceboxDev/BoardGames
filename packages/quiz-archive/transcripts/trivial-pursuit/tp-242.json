@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-242",
+ "image": "IMG20261007182431.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt die amerikanische Stadt, in der sich das J. Paul Getty Museum für Kunst befindet?",
+   "de": "Wie heißt die amerikanische Stadt, in der sich das J. Paul Getty Museum für Kunst befindet?",
+   "en": "In which American city is the J. Paul Getty Museum of art located?",
+   "reworked": false,
+   "answerDe": "Los Angeles",
+   "answerEn": "Los Angeles",
+   "timeline": {
+    "kind": "founding",
+    "start": "1954",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "J. Paul Getty opens the J. Paul Getty Museum in his ranch house",
+    "labelDe": "J. Paul Getty eröffnet in seinem Ranchhaus das J. Paul Getty Museum"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/J._Paul_Getty_Museum",
+    "title": "J. Paul Getty Museum",
+    "lang": "de"
+   },
+   "notes": "Two sites in Los Angeles: the Getty Center in Brentwood and the Getty Villa in Pacific Palisades.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der erste japanische Zeichentrickfilm, der einen Oscar gewann?",
+   "de": "Wie heißt der erste japanische Zeichentrickfilm, der einen Oscar gewann?",
+   "en": "What is the name of the first Japanese animated film to win an Oscar?",
+   "reworked": false,
+   "answerDe": "Chihiros Reise ins Zauberland",
+   "answerEn": "Spirited Away",
+   "timeline": {
+    "kind": "event",
+    "start": "2003-03-23",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hayao Miyazaki's Spirited Away wins the Oscar for Best Animated Feature at the 75th Academy Awards",
+    "labelDe": "Hayao Miyazakis Chihiros Reise ins Zauberland gewinnt bei der 75. Oscarverleihung den Oscar als bester Animationsfilm"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Spirited_Away",
+    "title": "Spirited Away",
+    "lang": "en"
+   },
+   "notes": "First hand-drawn, non-English-language film to win Best Animated Feature (75th Academy Awards, 23 March 2003). Japanese title Sen to Chihiro no Kamikakushi.",
+   "domain": "film-media",
+   "sub": "animation"
+  },
+  {
+   "category": 3,
+   "cardDe": "Napoleon Bonaparte ließ die Quadriga für das Brandenburger Tor in Berlin bauen. Richtig oder falsch?",
+   "de": "Nach dem Entwurf welches Bildhauers entstand die Quadriga auf dem Brandenburger Tor in Berlin?",
+   "en": "Which sculptor designed the Quadriga on top of the Brandenburg Gate in Berlin?",
+   "reworked": true,
+   "answerDe": "Johann Gottfried Schadow",
+   "answerEn": "Johann Gottfried Schadow",
+   "timeline": {
+    "kind": "creation",
+    "start": "1793",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Johann Gottfried Schadow's Quadriga is placed on top of the Brandenburg Gate",
+    "labelDe": "Johann Gottfried Schadows Quadriga wird auf das Brandenburger Tor gesetzt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor",
+    "title": "Brandenburger Tor",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: the gate was built for the Prussian king Friedrich Wilhelm II; Napoleon only had the Quadriga carried off to Paris in 1806 (returned 1814).",
+   "domain": "art",
+   "sub": "sculpture"
+  },
+  {
+   "category": 4,
+   "cardDe": "Keiner der Beatles konnte Noten lesen. Richtig oder falsch?",
+   "de": "Welcher Beatle erhielt 1995 eine Ehrenmitgliedschaft des Royal College of Music, obwohl er nach eigenen Worten keine einzige Note lesen kann?",
+   "en": "Which Beatle was made an Honorary Fellow of the Royal College of Music in 1995, despite saying himself that he can't read a note of music?",
+   "reworked": true,
+   "answerDe": "Paul McCartney",
+   "answerEn": "Paul McCartney",
+   "timeline": {
+    "kind": "event",
+    "start": "1995",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Prince Charles presents Paul McCartney with an Honorary Fellowship of the Royal College of Music",
+    "labelDe": "Prinz Charles verleiht Paul McCartney eine Ehrenmitgliedschaft des Royal College of Music"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Paul_McCartney",
+    "title": "Paul McCartney",
+    "lang": "en"
+   },
+   "notes": "Card statement is true: none of the four Beatles could read sheet music. Reworked around McCartney's own quote ('kind of amazing for somebody who doesn't read a note of music').",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 5,
+   "cardDe": "Vor wie vielen Milliarden Jahren begann sich, laut dem Titelsong der Fernsehserie The Big Bang Theory, das Universum auszudehnen: 14, 20 oder 28?",
+   "de": "Vor wie vielen Milliarden Jahren begann sich, laut dem Titelsong der Fernsehserie The Big Bang Theory, das Universum auszudehnen?",
+   "en": "According to the theme song of the TV series The Big Bang Theory, how many billion years ago did the universe begin to expand?",
+   "reworked": true,
+   "answerDe": "14",
+   "answerEn": "14",
+   "timeline": {
+    "kind": "creation",
+    "start": "2007-09-24",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Big Bang Theory premieres on CBS with the Barenaked Ladies theme song",
+    "labelDe": "The Big Bang Theory startet auf CBS mit dem Titelsong der Barenaked Ladies"
+   },
+   "source": {
+    "url": "https://www.looper.com/1231132/who-sings-the-big-bang-theory-theme-song",
+    "title": "Who Sings The Big Bang Theory Theme Song?",
+    "lang": "en"
+   },
+   "notes": "The song says expansion started 'nearly fourteen billion years ago' (science: about 13.8 billion). Premiere date from en.wikipedia 'The Big Bang Theory'. Multiple-choice options removed.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie oft im Jahr findet in Berlin die Fashion Week statt?",
+   "de": "Wie oft im Jahr findet in Berlin die Fashion Week statt?",
+   "en": "How many times a year does Berlin Fashion Week take place?",
+   "reworked": false,
+   "answerDe": "2-mal",
+   "answerEn": "Twice",
+   "timeline": {
+    "kind": "founding",
+    "start": "2007",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Berlin Fashion Week is held for the first time; since then twice a year",
+    "labelDe": "Die Berlin Fashion Week findet erstmals statt, seitdem zweimal jährlich"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Berlin_Fashion_Week",
+    "title": "Berlin Fashion Week",
+    "lang": "de"
+   },
+   "notes": "Twice a year, about a week each (summer and winter seasons).",
+   "domain": "art",
+   "sub": "design"
+  }
+ ]
+}

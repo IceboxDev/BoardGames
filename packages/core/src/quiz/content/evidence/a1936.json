@@ -1,0 +1,376 @@
+{
+ "article": "a1936",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/76th_Academy_Awards",
+   "title": "76th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:37.583Z",
+   "snapshot": "adea57d1457498d29ae3f916185a94ab98fae408e858f7ba9cf190de27fc6799"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_At_World's_End",
+   "title": "Pirates of the Caribbean: At World's End – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:38.676Z",
+   "snapshot": "e0469286e8a25dd59b2256d390a1d8b02e149ceb4a64363226bb38cf0c6dd30c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Keira_Knightley",
+   "title": "Keira Knightley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:39.805Z",
+   "snapshot": "633d1f8312050ff71b598bd6fc6aad7df572674bf7fd86d73a6288972b0af1ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Geoffrey_Rush",
+   "title": "Geoffrey Rush – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:40.675Z",
+   "snapshot": "06259a44837f68c56623e6c8776ea16a804e5c8c28817740fc2988edc5f2a3f7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Man's_Chest",
+   "title": "Pirates of the Caribbean: Dead Man's Chest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:41.757Z",
+   "snapshot": "7b232bf20784db330d588ccbcf5588e85b86f6dd022244c4ddf350c55086277c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jack_Sparrow",
+   "title": "Jack Sparrow – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:29.744Z",
+   "snapshot": "55394c6998d3234bc45d6169f4a4ce8a46327a4681abf9a22302025b11bf186c"
+  },
+  "s7": {
+   "url": "https://variety.com/2008/digital/features/disney-depp-return-to-caribbean-1117992798/",
+   "title": "Disney, Depp return to 'Caribbean'",
+   "publisher": "Variety",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:29.503Z",
+   "snapshot": "84b55e86d8f33055ea41756e06b3451f181138f0faa8854e1e8bdbd6774763c4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jack Sparrow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Will Turner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elizabeth Swann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hector Barbossa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Davy Jones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:49.314Z",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jack Sparrow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Jack Sparrow”, “Джек Воробей”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:49.314Z",
+   "target": "f09677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In an uneasy alliance, Will Turner (Orlando Bloom), Elizabeth Swann (Keira Knightley), Hector Barbossa (Geoffrey Rush), and the Black Pearl crew rescue Jack and prepare to fight Lord Cutler Beckett, who controls Davy Jones and the Flying Dutchman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Will Turner” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:49.314Z",
+   "target": "f09678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "She achieved global recognition for playing Elizabeth Swann in the Pirates of the Caribbean film series (2003–2007, 2017).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elizabeth Swann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:49.314Z",
+   "target": "f09679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He played Captain Hector Barbossa in the Pirates of the Caribbean franchise (2003–2017), and Francis Walsingham in Elizabeth (1998) and its 2007 sequel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hector Barbossa” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:49.314Z",
+   "target": "f09680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is set a year after the first film and follows Captain Jack Sparrow who owes a debt to Davy Jones (Bill Nighy), the ghastly captain of the Flying Dutchman, and being marked for death and pursued by the Kraken.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Davy Jones” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:50Z",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Captain Jack Sparrow is a fictional character and the protagonist of Disney's Pirates of the Caribbean franchise.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "infobox: Portrayed by Johnny Depp"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:18:53Z",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Depp has agreed to reprise his role as Captain Jack Sparrow in a fourth “Pirates of the Caribbean” pic",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:39.523Z",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Captain Jack Sparrow is a fictional character and the protagonist of Disney's Pirates of the Caribbean franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:39.523Z",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Depp has agreed to reprise his role as Captain Jack Sparrow in a fourth “Pirates of the Caribbean” pic",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:39.523Z",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Captain Jack Sparrow is a fictional character and the protagonist of Disney's Pirates of the Caribbean franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jack Sparrow” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:39.523Z",
+   "target": "f09676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Depp has agreed to reprise his role as Captain Jack Sparrow in a fourth “Pirates of the Caribbean” pic and play Tonto in a bigscreen adaptation of “The Lone Ranger,” both produced by Jerry Bruckheimer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jack Sparrow” is on the snapshot of s7"
+  }
+ ]
+}

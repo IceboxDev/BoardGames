@@ -1,0 +1,195 @@
+{
+ "article": "a1098",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alaska_Purchase",
+   "title": "Alaska Purchase – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:39.155Z",
+   "snapshot": "1d8ee07dbebf8aaf7adbe37c525ff6135445337ad8df4f94ce5d3e759a74ec79"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Adams%E2%80%93On%C3%ADs_Treaty",
+   "title": "Adams–Onís Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:40.077Z",
+   "snapshot": "d3205d9bb8b4a015acc008115ab436cc4815e39297e4bb98c2859532f0f5b469"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Danish_West_Indies",
+   "title": "Danish West Indies – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:41.257Z",
+   "snapshot": "a8ce238fb927519cfe9199e8ee97129ce0cc59c1e4bb9798417aeeb6226faaf1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Heligoland%E2%80%93Zanzibar_Treaty",
+   "title": "Heligoland–Zanzibar Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:42.063Z",
+   "snapshot": "f9611910bead76cb28389737579f2b4b9b058a78b734dd36f99aff3fa5a9e0bb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alaska",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Florida",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Danish West Indies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heligoland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:32.517Z",
+   "target": "f05486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Alaska Purchase in 1867 resulted in the transfer of Russian America to the United States for $7.2 million (equivalent to $132 million in 2024).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alaska” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:32.517Z",
+   "target": "f05488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The United States acquired Florida while renouncing claims to Spanish Texas and establishing its first transcontinental boundary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Florida” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:32.517Z",
+   "target": "f05489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Danish West Indies (Danish: Dansk Vestindien), also known as the Danish Virgin Islands (Danish: Danske Jomfruøer) or the Danish Antilles, were a Danish colony in the Caribbean, consisting of the islands of Saint Thomas with 83 square kilometres (32 sq mi), Saint John (Danish: St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Danish West Indies” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:32.517Z",
+   "target": "f05490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Heligoland–Zanzibar Treaty (German: Helgoland-Sansibar-Vertrag; also known as the Anglo-German Agreement of 1890) was an agreement signed on 1 July 1890 between Germany and the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heligoland” is on the snapshot of s4"
+  }
+ ]
+}

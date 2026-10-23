@@ -1,0 +1,330 @@
+{
+ "article": "a2099",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hoatzin",
+   "title": "Hoatzin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:17.952Z",
+   "snapshot": "8dd59d345fade0d2ef19042d164fcb8994d7c09f89ba54bdf03eabf019b02572"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cloaca_Maxima",
+   "title": "Cloaca Maxima – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:18.760Z",
+   "snapshot": "7c6beba6008abd7dd45df7948dac686209ac524e1b65b0d919efe8aba047b0ec"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Flamingo",
+   "title": "Flamingo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:19.875Z",
+   "snapshot": "6c09d80b6712da926b7a0b581ea011d3095abcf09c82fd6a84668807030dfede"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rete_mirabile",
+   "title": "Rete mirabile",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:20.770Z",
+   "snapshot": "ade418c5fae45546a07e1d967ae33e9092c0195ce193e907a6865d7878803f01"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Snowy_albatross",
+   "title": "Snowy albatross",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:21.764Z",
+   "snapshot": "c7d777accfbe34e003e1a6661e405049965dc73bfd7ab3d2bb9e1d3db8739180"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Wandering_albatross",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:22.767Z",
+   "snapshot": "c7d777accfbe34e003e1a6661e405049965dc73bfd7ab3d2bb9e1d3db8739180"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Crop_milk",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:23.776Z",
+   "snapshot": "eba8ce35597d6f3bad7d7719740875795e1d2f8a605d8c7de2dbcbdd0a74aba1"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Gizzard",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:24.776Z",
+   "snapshot": "42287700879fa6cc054ec5ce4f710a990c16ce7ecf7254b1a7f1ebba022b1296"
+  },
+  "s9": {
+   "url": "https://animaldiversity.org/accounts/Diomedea_exulans/",
+   "title": "Diomedea exulans (wandering albatross)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:35.775Z",
+   "snapshot": "1d8b0ee8cce4b7891150f4a8efe5e663936c5a25997eda2ce586683d55879030"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "crop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cloaca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13254",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brine shrimp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-304"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rete mirabile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 58; transcript pp-095"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wandering albatross",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-032"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:22.527Z",
+   "target": "f10491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The hoatzin uses a leathery \"bump\" on the bottom of its crop to help balance its weight on the branches.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “crop” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:22.527Z",
+   "target": "f10493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Cloaca Maxima (Latin: Cloāca Maxima [kɫɔˈaːka ˈmaksɪma], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cloaca” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:22.527Z",
+   "target": "f13254",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flamingos are omnivores who filter-feed on brine shrimp, cyanobacteria, larvae, insects, mollusks and crustaceans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brine shrimp” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:22.527Z",
+   "target": "f25323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A rete mirabile (Latin for 'wonderful net'; pl.: retia mirabilia) is a complex of arteries and veins lying very close to each other, found in some vertebrates, mainly warm-blooded ones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rete mirabile” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:22.527Z",
+   "target": "f25324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The snowy albatross (Diomedea exulans), also known as the wandering albatross, white-winged albatross, or goonie, is a large seabird from the family Diomedeidae; they have a circumpolar range in the Southern Ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wandering albatross” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:40Z",
+   "target": "f25324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wandering albatrosses have extraordinary morphology, with perhaps the longest wingspan of any bird.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:58:09.142Z",
+   "target": "f25324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wandering albatrosses have extraordinary morphology, with perhaps the longest wingspan of any bird.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s9"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:09.142Z",
+   "target": "f25324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Diomedea exulans (wandering albatross) | INFORMATION | Animal Diversity Web",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Wandering albatross” is on the snapshot of s9"
+  }
+ ]
+}

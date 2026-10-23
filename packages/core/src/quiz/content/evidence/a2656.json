@@ -1,0 +1,242 @@
+{
+ "article": "a2656",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/ConferenceBike",
+   "title": "ConferenceBike",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:25.913Z",
+   "snapshot": "aeb2639bc895e2db64914be5d03142c196822cf50af5d98ac5cf8528dc6e7c97"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tandem_bicycle",
+   "title": "Tandem bicycle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:26.206Z",
+   "snapshot": "8979180980a9b28e4a14a77d6613c891f1b7c76e286ceef89ec5892c7e133e34"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Penny-farthing",
+   "title": "Penny-farthing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:27.194Z",
+   "snapshot": "578db3407e40009c0851567af2ee15f2ea9a83f46b65b3de5858263e387d1ad5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Recumbent_bicycle",
+   "title": "Recumbent bicycle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:28.219Z",
+   "snapshot": "99cf04177c6e3700dd13fbe2624d01cf4faee1dc15165c309d45b8a564f972b2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fixed-gear_bicycle",
+   "title": "Fixed-gear bicycle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:29.204Z",
+   "snapshot": "bafe3940cf440937ea78785c393ad879afdbbe763a3eb1524c0f9cca6cb0af15"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ConferenceBike",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tandem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Penny-farthing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Recumbent bicycle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fixie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:53.349Z",
+   "target": "f14388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ConferenceBike ist der Produktname eines Fahrrads für sieben Personen, das von der Firma Velo.Saliko hergestellt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ConferenceBike” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:53.349Z",
+   "target": "f14389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A tandem bicycle or twin is a bicycle (occasionally a tricycle) designed to be ridden by more than one person at a time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tandem” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:53.349Z",
+   "target": "f14390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The penny-farthing, also known as a high wheel, high wheeler or ordinary, is an early type of bicycle distinguished by its large front wheel and comparatively small back wheel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Penny-farthing” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:53.349Z",
+   "target": "f14391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A recumbent bicycle is a bicycle that places the rider in a laid-back reclining position, and often called a human-powered vehicle or HPV, especially if it has an aerodynamic fairing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Recumbent bicycle” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:53.349Z",
+   "target": "f14392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A fixed-gear bicycle or fixie is a bicycle that has a drivetrain with no freewheel mechanism, meaning the pedals always spin together with the rear wheel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fixie” is on the snapshot of s5"
+  }
+ ]
+}

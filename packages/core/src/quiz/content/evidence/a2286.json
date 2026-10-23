@@ -1,0 +1,396 @@
+{
+ "article": "a2286",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Markusplatz",
+   "title": "Markusplatz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:30.552Z",
+   "snapshot": "0a92bcecd19d381b5f97985729fe72603565f14ae8dfa52f4373314afff2982a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Trevi-Brunnen",
+   "title": "Trevi-Brunnen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:31.547Z",
+   "snapshot": "3c61cbf62105635863eb537819ae2fbafd7ff0121d8edd20a279377aff860c91"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Niles",
+   "title": "Leaning Tower of Niles",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:32.087Z",
+   "snapshot": "c6f858f51d7abd52c2a5701220ed274ababd8da218b07b62f0a944d4d32cc84a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bellagio_(resort)",
+   "title": "Bellagio (resort)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:33.452Z",
+   "snapshot": "611dc5b77e62621e46c94dac493b2c9932df56944712420b22555fffeca56c44"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Schiefer_Turm_von_Suurhusen",
+   "title": "Schiefer Turm von Suurhusen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:32.497Z",
+   "snapshot": "72b66e9cca88e785a353b4aa461fbc113e5e3974db6666fe13b5afa6366b7a2e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Venetian_Las_Vegas",
+   "title": "The Venetian Las Vegas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:34.047Z",
+   "snapshot": "65373663cbe28b01b4463fa0c129f2323103e78de320c925dbbcfe156e8c79e2"
+  },
+  "s7": {
+   "url": "https://hinte.de/leben-kultur-bildung/allgemeines/sehenswuerdigkeiten/",
+   "title": "Sehenswürdigkeiten – Gemeinde Hinte",
+   "publisher": "Gemeinde Hinte",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:53.482Z",
+   "snapshot": "0756ee6adfb40144f29d2750cd7c28413356af28c4009bdd2a488aae3a01c654"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Venedig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rom",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-062"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leaning Tower of Pisa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-368"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bellagio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-340"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Suurhusen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-328"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Venetian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:48.680Z",
+   "target": "f11790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Markusplatz (italienisch Piazza San Marco, venetisch Piasa San Marco) ist der bedeutendste und bekannteste Platz in Venedig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Venedig” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:48.680Z",
+   "target": "f11791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fontana di Trevi) ist ein Monumentalbrunnen auf der Piazza di Trevi vor dem Palazzo Poli in Rom.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rom” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:48.680Z",
+   "target": "f11792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Leaning Tower of Niles is a half-size replica of the Leaning Tower of Pisa located in Niles, Illinois, a suburb of Chicago.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leaning Tower of Pisa” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:48.680Z",
+   "target": "f11793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bellagio ( bə-LAH-zhee-oh) is a resort, luxury hotel, and casino on the Las Vegas Strip in Paradise, Nevada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bellagio” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:48.680Z",
+   "target": "f11794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der schiefe Turm von Suurhusen ist ein Kirchturm in Suurhusen, einem Ortsteil der ostfriesischen Gemeinde Hinte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Suurhusen” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:48.680Z",
+   "target": "f11795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Venetian Las Vegas is a luxury hotel and casino resort located on the Las Vegas Strip in Paradise, Nevada, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Venetian” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:47:57Z",
+   "target": "f11794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mit dem Turm der alten Kirche von Suurhusen verfügt die Gemeinde Hinte über den schiefsten Turm der Welt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: 'Seit 2007 allerdings ist offiziell bestätigt …' with 5.19° against Pisa."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:48:01Z",
+   "target": "f11794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Im Guinness-Buch der Rekorde hat der Turm der Suurhuser Kirche 2007 den Schiefen Turm von Pisa",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Continues: '… als schiefsten Turm der Welt abgelöst'. The intentionally tilted Capital Gate (Abu Dhabi, 18°) is not counted."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:33.740Z",
+   "target": "f11794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mit dem Turm der alten Kirche von Suurhusen verfügt die Gemeinde Hinte über den schiefsten Turm der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:33.740Z",
+   "target": "f11794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Im Guinness-Buch der Rekorde hat der Turm der Suurhuser Kirche 2007 den Schiefen Turm von Pisa",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:33.740Z",
+   "target": "f11794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Highlights sind die Kirche, die Mühle und die Wasserburg in Hinte, das alte Herrenhaus in Loppersum, die Kirche in Westerhusen und das Landarbeiterhaus in Suurhusen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Suurhusen” is on the snapshot of s7"
+  }
+ ]
+}

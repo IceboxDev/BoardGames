@@ -1,0 +1,249 @@
+{
+ "article": "a1561",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/An_Actor_Prepares",
+   "title": "An Actor Prepares – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:26.887Z",
+   "snapshot": "350da1f53e8cc90822376e1e0ab12d4237cc4cc5575b0030cb950a5d26c8b1a9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/A_Short_Organum_for_the_Theatre",
+   "title": "A Short Organum for the Theatre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:27.919Z",
+   "snapshot": "c4b9e5617822e6d6308a82444d46f6ab23c9f10070dc9783c82a298d0e7b8bb2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vsevolod_Meyerhold",
+   "title": "Vsevolod Meyerhold – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:28.994Z",
+   "snapshot": "ff9e2a5a387c808b4c3d6cf6799fb93881a0eee5ea3e40e8b874bbfa022fac0c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jerzy_Grotowski",
+   "title": "Jerzy Grotowski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:29.969Z",
+   "snapshot": "2d88c6596e550ca9168ffacd48ed7301a342fd794155014ea849c05a021aa629"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lee_Strasberg",
+   "title": "Lee Strasberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:31.110Z",
+   "snapshot": "9a3f8cada4df60086727c0cc1fb8504edc1871d4b5bc184dde899153331989b4"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Ensemble",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:17.150Z",
+   "snapshot": "bd1dc6cfccfae1ec0a8c013575dbf1160524e243ada3b46f220c9bf954aeaf72"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Konstantin Stanislavski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vsevolod Meyerhold",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jerzy Grotowski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07805",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lee Strasberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:44.337Z",
+   "target": "f07801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An Actor Prepares (Russian: Рабо́та актёра над собо́й, romanized: Rabóta aktyora nad sobóy, IPA: [rɐˈbotə ɐkˈtʲɵrə nət sɐˈboj]) is the first of Konstantin Stanislavski's books on acting, followed by Building a Character and Creating a Role.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konstantin Stanislavski” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:44.337Z",
+   "target": "f07802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"A Short Organum for the Theatre\" (\"Kleines Organon für das Theater\") is a theoretical work by the twentieth-century German theatre practitioner Bertolt Brecht.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:44.337Z",
+   "target": "f07803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vsevolod Meyerhold was born Karl Kasimir Theodor Meyerhold in Penza on 9 February [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vsevolod Meyerhold” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:44.337Z",
+   "target": "f07804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "man to have access to another level of perception is to be found in the art of performance.\" Moreover, it was in 1986 that  Grotowski changed the name of the Italian centre to the Workcenter of Jerzy Grotowski and Thomas Richards, to signal the unique and central place Richards held in his work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jerzy Grotowski” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:44.337Z",
+   "target": "f07805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lee Strasberg (born Israel Strassberg; November 17, 1901 – February 17, 1982) was an American acting coach and actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lee Strasberg” is on the snapshot of s5"
+  }
+ ]
+}

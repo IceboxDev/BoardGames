@@ -1,0 +1,576 @@
+{
+ "article": "a1614",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Doktor",
+   "title": "Doktor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:57.904Z",
+   "snapshot": "91e79b12b3191a45a24146f527bf7492d3c1b9908d7676492e3eeeaf4b015fb9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Dissertation",
+   "title": "Dissertation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:59.068Z",
+   "snapshot": "bb401c52dde53d35e7ac2c7282b1216eb567f724d17a485c0ad82176210ca0e8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Habilitation",
+   "title": "Habilitation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:59.786Z",
+   "snapshot": "80081dfe509b99f5a58a9ebbb9d038cb0c77112d21c36825ebf414f29f757ece"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Heidelberg_University",
+   "title": "Heidelberg University – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:01.683Z",
+   "snapshot": "e10074007a0523658ff11967c4802d2efd0ed4e88f52e9511d0fa2c0dfda778c"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/summa%20cum%20laude",
+   "title": "summa cum laude – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:09.719Z",
+   "snapshot": "9ff857ab25242a4c99cbbcd363097ecc89fe906568341e218e792e335dc239b4"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/cum%20laude",
+   "title": "cum laude – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:10.758Z",
+   "snapshot": "db126a840bc658b63529d9c6f5f067bc194289bb37651b9ffac6d70beae42073"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Promotion_(Doktor)",
+   "title": "Promotion (Doktor) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:10.525Z",
+   "snapshot": "2bbdb4182027ce8ef2a644568ae10afdcf124c8ffd734794f5fc86c3f4362aea"
+  },
+  "s8": {
+   "url": "https://www.uni-heidelberg.de/en/university/history",
+   "title": "History – Heidelberg University",
+   "publisher": "Heidelberg University",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:10.390Z",
+   "snapshot": "93728cfd40058e853cf9f8ee1be29d7fb8162701485023f0ab573339e4ec6aae"
+  },
+  "s9": {
+   "url": "https://snl.no/Heidelberg",
+   "title": "Heidelberg – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:41:10.647Z",
+   "snapshot": "17a8d6235956e80fe65d1c7d97b182ca5b9b95b09c11409f47722500323c74ab"
+  },
+  "s10": {
+   "url": "https://www.uni-erfurt.de/universitaet/profil/geschichte",
+   "title": "Die Geschichte der Universität Erfurt",
+   "publisher": "Universität Erfurt",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:10.865Z",
+   "snapshot": "2393ff6a51030a82978aa8cedd0361978c250e9bf1be5d9681118682a3f9de3b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "summa cum laude, magna cum laude, cum laude",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "rite",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dissertation",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Habilitation",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heidelberg University",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:51.272Z",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "summa cum laude, magna cum laude, cum laude",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“summa cum laude, magna cum laude, cum laude”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:51.272Z",
+   "target": "f08067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zusätzlich zu den Personen, die über ein universitäres Studium zur Promotion kamen (rite promoti oder doctores legitimae promoti), machten vor allem seit Ende des 15.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rite” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:51.272Z",
+   "target": "f08068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eine Dissertation (abgekürzt Diss.), Doktorarbeit, seltener Promotionsschrift, Dissertationsschrift oder Doktorschrift, offiziell auch Inauguraldissertation, Antritts- oder Einführungsdissertation, ist eine wissenschaftliche Arbeit zur Erlangung eines Doktorgrades an einer Wissenschaftlichen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dissertation” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:51.272Z",
+   "target": "f08069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Habilitation ist die höchstrangige Hochschulprüfung in den meisten westeuropäischen und einigen osteuropäischen Ländern (im angelsächsischen Hochschulsystem gibt es hingegen nichts Vergleichbares), mit der im Rahmen eines akademischen Prüfungsverfahrens die Lehrbefähigung (lateinisch facultas",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Habilitation” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:51.272Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heidelberg University, officially the Ruprecht Karl University of Heidelberg (German: Ruprecht-Karls-Universität Heidelberg; Latin: Universitas Ruperto Carola Heidelbergensis), is a public research university in Heidelberg, Baden-Württemberg, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heidelberg University” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:47Z",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in deutschsprachigen Ländern die beste Benotung (vor allem bei der Doktorarbeit, Doktorprüfung)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "DWDS: magna cum laude 'die zweitbeste', cum laude 'die drittbeste Benotung'; laus = Lob (praise)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:50Z",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "in deutschsprachigen Ländern die drittbeste Benotung (vor allem bei der Doktorarbeit, Doktorprüfung)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:47:53Z",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "summa cum laude, mit höchstem Lob, mit Auszeichnung, ausgezeichnet (eine hervorragende Leistung), magna cum laude, mit großem Lob, sehr gut",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:47:55Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Heidelberg University – also known as Ruperto Carola – was established in 1386 and is Germany’s oldest university.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:47:58Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Her ligger Tysklands eldste universitet, Ruprecht-Karl-Universität, grunnlagt i 1386",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:48:02Z",
+   "target": "f08070",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Die einstige Alma Mater Erfordensis gilt mit ihrem Gründungsprivileg von 1379 als die älteste Universität vor Heidelberg (1385) und Köln (1388).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "Erfurt claims 'oldest' by its 1379 privilege, but opened only in 1392 ('1392 | Die städtische Universität wird eröffnet') and was closed 1816–1994; wording narrowed to 'first to open', which is Heidelberg."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:48:05Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Die städtische Universität wird eröffnet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "Erfurt opened 1392, after Heidelberg (1386): supports Heidelberg as the first to open."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in deutschsprachigen Ländern die beste Benotung (vor allem bei der Doktorarbeit, Doktorprüfung)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "in deutschsprachigen Ländern die drittbeste Benotung (vor allem bei der Doktorarbeit, Doktorprüfung)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "summa cum laude, mit höchstem Lob, mit Auszeichnung, ausgezeichnet (eine hervorragende Leistung), magna cum laude, mit großem Lob, sehr gut",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Heidelberg University – also known as Ruperto Carola – was established in 1386 and is Germany’s oldest university.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Her ligger Tysklands eldste universitet, Ruprecht-Karl-Universität, grunnlagt i 1386",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08070",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Die einstige Alma Mater Erfordensis gilt mit ihrem Gründungsprivileg von 1379 als die älteste Universität vor Heidelberg (1385) und Köln (1388).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Die städtische Universität wird eröffnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:39.162Z",
+   "target": "f08070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Heidelberg University – also known as Ruperto Carola – was established in 1386 and is Germany’s oldest university.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Heidelberg University” is on the snapshot of s8"
+  }
+ ]
+}

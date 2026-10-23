@@ -1,0 +1,296 @@
+{
+ "article": "a1147",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mannesmann",
+   "title": "Mannesmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:46.188Z",
+   "snapshot": "c58e0c1b0abdeec905a1daebee631e3cd6aa4625517ba83b0f210f78135366fd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Opel",
+   "title": "Opel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:58.116Z",
+   "snapshot": "efdac9f77b1c623cf6ad26f8787b08bfbb8ab9e35f4255fc4b3116782ee2946d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chrysler",
+   "title": "Chrysler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:47.359Z",
+   "snapshot": "247bf61c0f6c79125546ce1fef35ff7aa0480b556b6d732fcd8fb79ccbb446c3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jaguar_Land_Rover",
+   "title": "Jaguar Land Rover – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:48.252Z",
+   "snapshot": "f65595277817dc38f5a97e3baa5d6045fd2e4419e505f0a7742a140e1fc9ea5b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Monsanto",
+   "title": "Monsanto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:06.677Z",
+   "snapshot": "fb8f8f5337efa2a7150e3ade08dec20b4ff4969e586290b148dceb6ecb3af96c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Reebok",
+   "title": "Reebok",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:43:45.432Z",
+   "snapshot": "0166b0bd6defbbf735b97e4e141e60f204cc6c906e8d55b18fb0868dd64ebcf4"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Mannesmann-Prozess",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:43:46.496Z",
+   "snapshot": "e15ee0b89de19dc5076931cc818372988deda33f7f9992e2a483a04c02f5594b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vodafone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "General Motors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05733",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Daimler-Benz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05734",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tata Motors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05735",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bayer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Adidas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-129"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:39.839Z",
+   "target": "f05731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The particular success of the corporate activities in the area of telecommunications that started in 1990 was the predominant reason for the takeover of Mannesmann by the British telecommunications company Vodafone in 2000, still one of the largest-ever company takeovers worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vodafone” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:39.839Z",
+   "target": "f05732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was owned by the American automaker General Motors from 1929 until 2017 and the PSA Group prior to its merger with Fiat Chrysler Automobiles to form Stellantis in 2021.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “General Motors” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:39.839Z",
+   "target": "f05733",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1998, it merged with Daimler-Benz, which renamed itself DaimlerChrysler but in 2007 sold off its Chrysler stake.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daimler-Benz” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:39.839Z",
+   "target": "f05734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jaguar Land Rover has been a subsidiary of India-based Tata Motors Passenger Vehicles (formerly Tata Motors) since they founded it as a holding company for the acquisition of Jaguar Cars and Land Rover from Ford in 2008.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tata Motors” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:39.839Z",
+   "target": "f05735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In September 2016, German chemical company Bayer announced its intent to acquire Monsanto for US$66 billion in an all-cash deal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bayer” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:39.839Z",
+   "target": "f13577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die US-amerikanisch geprägte Sportmarke Reebok mit 1,8 Milliarden Euro Umsatz im Jahr 2017 wurde 2006 von Adidas unter deren Manager Herbert Hainer für 3,8 Milliarden Dollar (3,1 Milliarden Euro) aufgekauft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adidas” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "article": "a1612",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jack_Nicholson",
+   "title": "Jack Nicholson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:53.609Z",
+   "snapshot": "33ece943305813ff51ce0ea4e3e73be4b55ddc1603edb3995e1138f45ca61f04"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tom_Hanks",
+   "title": "Tom Hanks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:16.092Z",
+   "snapshot": "57c46152cff047dc6e8f2697f5d829a6685853cdb8250e20df671b3ad44a9442"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Robert_De_Niro",
+   "title": "Robert De Niro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:51.420Z",
+   "snapshot": "b4be6ab1ae2dbd47e7d2da98396d6950bc668346fe07ddedc04ed8b3d7a84459"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gandhi_(film)",
+   "title": "Gandhi (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:49.911Z",
+   "snapshot": "ff0ac6a37c801fe3008cb5ef6ae4e04b94af2ed9d06d159ed9c481a12ecb462b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tootsie",
+   "title": "Tootsie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:54.565Z",
+   "snapshot": "219f941cf7ff3ea77a70d5f8102918dedc75444db0a02c4c6a1a6d7058d28281"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Immer_noch_ein_seltsames_Paar",
+   "title": "Immer noch ein seltsames Paar",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:52.514Z",
+   "snapshot": "066230ea5c0b58aeadabfb2f3113406ab1dc21ae7961f2139ad1abf7f0885608"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Top_Gun",
+   "title": "Top Gun",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:55.589Z",
+   "snapshot": "0eb036af2207a851e51c90ca65c15a194c93751c8237ed830ed5dec82ef89b63"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Mrs._Doubtfire_%E2%80%93_Das_stachelige_Kinderm%C3%A4dchen",
+   "title": "Mrs. Doubtfire – Das stachelige Kindermädchen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:53.474Z",
+   "snapshot": "62da5812505ebf26b23c217a21b7fc0c61da37d5da83c8a93385a702c4f72e25"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jack Nicholson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tom Hanks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robert De Niro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ben Kingsley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dustin Hoffman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jack Lemmon und Walter Matthau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-181"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Top Gun",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-383"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11403",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Robin Williams",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript tp-317"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f08056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After that, who is there but Jack Nicholson?\" During the filming, Nicholson struck up what became a lifelong friendship with Garfunkel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack Nicholson” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f08057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tom Hanks was born at the Mount Diablo Hospital in Concord, California.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Hanks” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f08058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robert Anthony De Niro was born in the Manhattan, New York City, on August 17, 1943, the only child of painters Virginia Admiral and Robert De Niro Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert De Niro” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f08059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is based on the life of Mahatma Gandhi (portrayed by Ben Kingsley), a major leader in the Indian independence movement against the British Empire during the 20th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ben Kingsley” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f08060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It stars Dustin Hoffman, Jessica Lange, Teri Garr, Dabney Coleman, and Charles Durning.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dustin Hoffman” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f11401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie ist, als letzter von elf gemeinsamen Filmen von Jack Lemmon und Walter Matthau, die Fortsetzung von Ein seltsames Paar (1968).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack Lemmon und Walter Matthau” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f11402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Top Gun is a 1986 American action drama film film directed by Tony Scott and produced by Don Simpson and Jerry Bruckheimer, with distribution by Paramount Pictures.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Top Gun” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:50.948Z",
+   "target": "f11403",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Doubtfire – Das stachelige Hausmädchen) ist eine US-amerikanische Filmkomödie aus dem Jahr 1993, in dem Robin Williams, Sally Field und Pierce Brosnan die Hauptrollen spielen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robin Williams” is on the snapshot of s8"
+  }
+ ]
+}

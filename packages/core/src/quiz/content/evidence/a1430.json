@@ -1,0 +1,287 @@
+{
+ "article": "a1430",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bastian_Sick",
+   "title": "Bastian Sick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:51.726Z",
+   "snapshot": "934dc89668e0a62b994dd93ea395a283bd2029d3ba805afa63e4a6175216fcb0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mark_Twain",
+   "title": "Mark Twain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:55.416Z",
+   "snapshot": "5cc6cfdbec2c3f7d0c3c45b1427c411dc6774205bbf70cf9afc568c47ac7b75d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Genitive_case",
+   "title": "Genitive case – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:56.422Z",
+   "snapshot": "6a7c6b786a12a737bb9b8aa4e08e7659c728952b39e930b3ecf8387f0a559dbb"
+  },
+  "s4": {
+   "url": "https://www.dwds.de/wb/Akkusativ",
+   "title": "Akkusativ – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:53.446Z",
+   "snapshot": "a8d0326c55d277363414cc5e05be08490fd90636c8141494bee14f2080ed07ac"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Akkusativ",
+   "title": "Akkusativ – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:45:57Z"
+  },
+  "s6": {
+   "url": "https://www.scribbr.de/wortarten/akkusativ/",
+   "title": "Akkusativ – Scribbr",
+   "publisher": "Scribbr",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:54.243Z",
+   "snapshot": "0bce5a39209528259ee5146f984af99304cccd89b5e02bced91399d5fb8c5d44"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Dativ",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mark Twain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The genitive",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Akkusativ",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:24.534Z",
+   "target": "f07146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Juli 1965 in Lübeck) ist ein deutscher Journalist, Autor, Sprachkritiker und Entertainer, der insbesondere als Verfasser der „sprachpflegerischen“ Kolumne Zwiebelfisch und der daraus entstandenen Buchreihe Der Dativ ist dem Genitiv sein Tod bekannt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Dativ” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:24.534Z",
+   "target": "f07147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samuel Langhorne Clemens (November 30, 1835 – April 21, 1910), known by the pen name Mark Twain, was an American writer, humorist, and essayist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mark Twain” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:24.534Z",
+   "target": "f07149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In grammar, the genitive case (abbreviated gen) is the grammatical case that marks a word, usually a noun, as modifying another word, also usually a noun—thus indicating an attributive relationship of one noun to the other noun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The genitive” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:24.534Z",
+   "target": "f07150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Akkusativ",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Der Akkusativ”, “The accusative”, “винительный падеж”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:45:57Z",
+   "target": "f07150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In der Schulgrammatik wird er auch als Wen-Fall bezeichnet, da ein Akkusativ-Objekt mit der Frage „wen oder was?“ erfragt werden kann.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:46:00Z",
+   "target": "f07150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Um das Akkusativobjekt zu identifizieren, verwendest du die Frage ‚wen oder was?‘.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:09.628Z",
+   "target": "f07150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Um das Akkusativobjekt zu identifizieren, verwendest du die Frage ‚wen oder was?‘.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:09.628Z",
+   "target": "f07150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Akkusativ erfüllt neben der Markierung des Objekts allerdings noch weitere Funktionen (siehe Kapitel ‚Die 6 Funktionen des Akkusativs‘).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Der Akkusativ” is on the snapshot of s6"
+  }
+ ]
+}

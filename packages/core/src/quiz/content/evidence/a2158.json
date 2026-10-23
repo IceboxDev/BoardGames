@@ -1,0 +1,327 @@
+{
+ "article": "a2158",
+ "sources": {
+  "s1": {
+   "url": "https://us.fashionnetwork.com/news/Astronaut-tests-stink-free-underwear,497683.html",
+   "title": "Astronaut tests stink free underwear – FashionNetwork",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:59.256Z",
+   "snapshot": "180045c9fb0f003805ff75e358cf87c72fa1add907748f7618d27de6dd3bd65c"
+  },
+  "s2": {
+   "url": "https://www.thetakeout.com/1999883/staple-food-iss-1998-tortillas/",
+   "title": "The Staple Food That's Been Served On The ISS Since 1985",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:59.491Z",
+   "snapshot": "2fa75200f55052c1673f978bf86568771fe70ad48b530fd54e1e30af9871eb87"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tim_Peake",
+   "title": "Tim Peake",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:02.895Z",
+   "snapshot": "3b86ff7e16b9e7bd37b53ace54ed716c95d6be27e14b26f0455f3d5f0ba98a18"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mikhail_Tyurin",
+   "title": "Mikhail Tyurin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:03.897Z",
+   "snapshot": "6f0bd2459900ecf6f1e8a1fe78bb56031cbbec4c5e7f2e3d4a3af25c87354dec"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Chris_Hadfield",
+   "title": "Chris Hadfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:04.987Z",
+   "snapshot": "82242a555879dd53fb711fa23a0b30ac552020353488b7c7bf22d8d4dfca4613"
+  },
+  "s6": {
+   "url": "https://csmonitor.com/Science/2016/0425/Just-another-day-on-the-ISS-Tim-Peake-runs-marathon-breaks-record",
+   "title": "Just another day on the ISS: Tim Peake runs marathon, breaks record – Christian Science Monitor",
+   "publisher": "The Christian Science Monitor",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:03.328Z",
+   "snapshot": "b712297b180e53ae52c0fb7f3a539b0354677e7d5edc5907a3faef9f3924d807"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Underwear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tortillas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-246"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the International Space Station",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-378"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mikhail Tyurin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-353"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Space Oddity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:31.443Z",
+   "target": "f10902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Astronaut tests stink-free underwear - FashionNetwork USA",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Underwear” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:31.443Z",
+   "target": "f10903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Case in point: tortillas have been standard astronaut fare for four decades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tortillas” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:31.443Z",
+   "target": "f10904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the International Space Station",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“On the International Space Station”, “Auf der Internationalen Raumstation”, “На Международной космической станции”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:31.443Z",
+   "target": "f10905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mikhail Tyurin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mikhail Tyurin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:31.443Z",
+   "target": "f10906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He received significant media exposure during his time on the ISS, and ended his time on the station by paying tribute to David Bowie with a rendition of \"Space Oddity\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Space Oddity” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:09:44Z",
+   "target": "f10904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 24 April 2016, Peake ran the 2016 London Marathon from the ISS treadmill.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:09:47Z",
+   "target": "f10904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "running the London marathon while strapped to a treadmill at the International Space Station on Sunday",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "Time 3:35:21."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:18.076Z",
+   "target": "f10904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 24 April 2016, Peake ran the 2016 London Marathon from the ISS treadmill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:18.076Z",
+   "target": "f10904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "running the London marathon while strapped to a treadmill at the International Space Station on Sunday",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

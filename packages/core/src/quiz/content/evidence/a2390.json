@@ -1,0 +1,348 @@
+{
+ "article": "a2390",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Manfred_von_Richthofen",
+   "title": "Manfred von Richthofen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:21.102Z",
+   "snapshot": "7c29f78359d1076b98aff1479d955b2e94803b4d9bcb294a55121d9f67c97c70"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fokker_Dr.I",
+   "title": "Fokker Dr.I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:24.346Z",
+   "snapshot": "c96638c990f8d330aad9c5f271e1601176fed719df3f70c39e20f62d5342b304"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Oswald_Boelcke",
+   "title": "Oswald Boelcke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:25.301Z",
+   "snapshot": "db4a774fe1b1d9fe696d06d4a73c541b5d6bd081b30f2edf34ce7ff1b381ff37"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Fonck",
+   "title": "René Fonck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:26.252Z",
+   "snapshot": "9ae1fd82e0cd7d75d4c835e5a927a0659b05142ba714ea8531ee2c9e40aadd54"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eddie_Rickenbacker",
+   "title": "Eddie Rickenbacker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:27.414Z",
+   "snapshot": "aeb3a3f34e47d5a969625d9d425a8d416066ba0489c26c24471b85b0c4ab8ac7"
+  },
+  "s6": {
+   "url": "http://www.theaerodrome.com/aces/france/fonck.php",
+   "title": "René Fonck",
+   "publisher": "The Aerodrome",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:04.594Z",
+   "snapshot": "2c413f760d19b9133a2d2cb53376db42c314535f134a44c8df35908a18532154"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Manfred von Richthofen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-244"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fokker Dr.I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oswald Boelcke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "René Fonck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eddie Rickenbacker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:12.478Z",
+   "target": "f12487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Manfred von Richthofen wurde weltweit einer der bekanntesten Piloten, an den bis in die Gegenwart Filme, Bücher und andere Medien erinnern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manfred von Richthofen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:12.478Z",
+   "target": "f12488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Fokker Dr.I (Dreidecker, \"triplane\" in German), often known simply as the Fokker Triplane, was a World War I fighter aircraft built by Fokker-Flugzeugwerke.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fokker Dr.I” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:12.478Z",
+   "target": "f12489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hauptmann Oswald Boelcke (German: [ˈbœlkə]; 19 May 1891 – 28 October 1916) was a German professional soldier and pioneering flying ace credited with 40 aerial victories during World War I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oswald Boelcke” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:12.478Z",
+   "target": "f12490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rene Fonck was also awarded the British Military Cross and the British Distinguished Conduct Medal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “René Fonck” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:12.478Z",
+   "target": "f12491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eddie Rickenbacker Composite Squadron (OH-115) and Rickenbacker ANGB Composite Squadron in Lancaster, Ohio (OH-210) which merged in 2023.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eddie Rickenbacker” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:29Z",
+   "target": "f12490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fonck was the highest scoring ace for France and the Allies.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "The page's victory list numbers 75 confirmed victories, the last on 1 Nov 1918."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:33Z",
+   "target": "f12490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He received confirmation for 75 victories (72 solo and three shared)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:55.926Z",
+   "target": "f12490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fonck was the highest scoring ace for France and the Allies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:55.926Z",
+   "target": "f12490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He received confirmation for 75 victories (72 solo and three shared)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:55.926Z",
+   "target": "f12490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"René Fonck was in my judgment easily the finest fighter pilot produced by the aviation service of any nation in World War I.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “René Fonck” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0942",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Aktion_T4",
+   "title": "Aktion T4 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:42.134Z",
+   "snapshot": "1df9be6123ef0e74306f79f8c7c3ce22eba302e65d68713ff8bc027d403297d9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wannsee_Conference",
+   "title": "Wannsee Conference – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:43.034Z",
+   "snapshot": "a1a0968c4187a28584079c453d4d590f6bc2f7c9ac34c7fc67ed6e1654ab57fd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Sonderbehandlung",
+   "title": "Sonderbehandlung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:30:41.616Z",
+   "snapshot": "77717890a5e3dc733724020cf1c0f0b1647807db6ee935e795c225d52604a111"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Arisierung",
+   "title": "Arisierung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:30:43.179Z",
+   "snapshot": "1daf1366fdb9017e8f34f2aa05145a8449ab3212c7ed170560381d4dd54272c0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gleichschaltung",
+   "title": "Gleichschaltung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:43.946Z",
+   "snapshot": "89ef8acd9fc047750c706155134ca9f3a13d360b44459a232c34c38d06e2adc3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "euthanasia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Final Solution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sonderbehandlung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arisierung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gleichschaltung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:08.379Z",
+   "target": "f04706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In October 1939, Adolf Hitler signed a \"euthanasia note\", backdated to 1 September 1939, which authorised his physician Karl Brandt and Reichsleiter Philipp Bouhler to begin the killing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “euthanasia” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:08.379Z",
+   "target": "f04707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reinhard Heydrich, was to ensure the co-operation of administrative leaders of various government departments in the implementation of the Final Solution to the Jewish Question, whereby most of the Jews of German-occupied Europe would be deported to occupied Poland and murdered.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Final Solution” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:08.379Z",
+   "target": "f04708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "„Sonderbehandlung“ (S.B.) war in der NS-Sprache eine Tarnbezeichnung für die Ermordung von Menschen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sonderbehandlung” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:08.379Z",
+   "target": "f04709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arisierung (abgeleitet von „Arier“) oder Entjudung nannten die Nationalsozialisten die Verdrängung von Juden und „jüdischen Mischlingen“ aus Handel, Gewerbe, Wohnungen, Häusern und Wissenschaft im Sinne der Nürnberger Gesetze.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arisierung” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:08.379Z",
+   "target": "f04710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Nazi terminology, Gleichschaltung (German pronunciation: [ˈɡlaɪçʃaltʊŋ] ), meaning 'synchronization' or 'coordination', was the process of Nazification by which Adolf Hitler—leader of the Nazi Party in Germany—established a system of totalitarian control and coordination over all aspects of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gleichschaltung” is on the snapshot of s5"
+  }
+ ]
+}

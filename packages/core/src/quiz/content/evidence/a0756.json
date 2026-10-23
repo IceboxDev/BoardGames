@@ -1,0 +1,330 @@
+{
+ "article": "a0756",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/X_(social_network)",
+   "title": "X (social network) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:08.279Z",
+   "snapshot": "cd3942699df24013b4d7f39a533762d4e7a70dd3da7673c1689b07d80c490d20"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Shitstorm",
+   "title": "Shitstorm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:18:05.999Z",
+   "snapshot": "5c78a586a271ae836f1e776a20b5bb986fb13a7c81d5f07e556c9b12c40f21dd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hashtag",
+   "title": "Hashtag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:09.365Z",
+   "snapshot": "efdb415269f052fae08fb15d0def1188b2fa2153b093dbcca9631a54c20c55e5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Internet_meme",
+   "title": "Internet meme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:10.392Z",
+   "snapshot": "c03b0edece60aa77a5ebeb4822e3831a55367d8b88c948192b59e6837ba66c95"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Orkney_Library_and_Archive",
+   "title": "Orkney Library and Archive - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:28.937Z",
+   "snapshot": "ee5ab4f8241eb1cbd1b2fe139cb5ff363b65f3ee004d19e7c6f51f01891a61a5"
+  },
+  "s6": {
+   "url": "https://www.cnn.com/2017/12/30/politics/trump-celebrity-twitter-feuds-2017/index.html",
+   "title": "9 celebrity feuds of 2017, starring Donald Trump | CNN Politics",
+   "publisher": "CNN",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:29.310Z",
+   "snapshot": "a3c633f0f36c703a52aa222e350f2ac7d864b07c3ab17fd69388385e8718ed95"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Twitter feud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shitstorm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "hashtag",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "meme",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:40.148Z",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Twitter feud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Twitter feud”, “Twitter-Fehde”, “твиттер-война”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:40.148Z",
+   "target": "f03777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shitstorm [ˈʃɪtstɔɹm] (zusammengesetzt aus englisch shit „Scheiße“ und storm „Sturm“) bezeichnet im Deutschen das lawinenartige Auftreten negativer Kritik bis hin zur Schmähkritik im Rahmen von sozialen Netzwerken, Blogs oder Kommentarfunktionen von Internetseiten, wobei die Kritik im Grunde auch",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shitstorm” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:40.148Z",
+   "target": "f03779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A hashtag is a metadata tag operator that is prefaced by the hash symbol, #.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hashtag” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:40.148Z",
+   "target": "f03780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An Internet meme, or meme (), is a cultural item (such as an idea, behavior, or style) that spreads across the Internet, now primarily through social media platforms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “meme” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:02:03Z",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Library enjoys a good-natured and well publicised Twitter feud with Shetland Library",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "usage of the term for a public quarrel conducted in tweets"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:02:04Z",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LeBron enters Trump-Curry twitter feud",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "press usage of the term; no dictionary entry exists; Twitter war / spat accepted in notes"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:54:09.388Z",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Library enjoys a good-natured and well publicised Twitter feud with Shetland Library",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:09.388Z",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LeBron enters Trump-Curry twitter feud",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:09.388Z",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Library enjoys a good-natured and well publicised Twitter feud with Shetland Library.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Twitter feud” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:09.388Z",
+   "target": "f03776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LeBron enters Trump-Curry twitter feud",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Twitter feud” is on the snapshot of s6"
+  }
+ ]
+}

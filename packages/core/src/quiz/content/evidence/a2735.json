@@ -1,0 +1,242 @@
+{
+ "article": "a2735",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Myth",
+   "title": "Myth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:53.023Z",
+   "snapshot": "07910e5afc65b0d03f51b3768bb9ca5024578169a36693bc7aa769ed3096c240"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Legend",
+   "title": "Legend",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:53.951Z",
+   "snapshot": "b82f359fb13495395234290e2cdf37275efe356738f6351d79647db1f0540523"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fable",
+   "title": "Fable",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:55.032Z",
+   "snapshot": "907819f8a8f1633f02a34f08371827565b3c7ed4b73c113805b3a7a34925caac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Parable",
+   "title": "Parable",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:55.930Z",
+   "snapshot": "097d1f7da6d0b522fdee34e52c9b0336c10a6fd9bec0f42c6aac793fb1f9c347"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fairy_tale",
+   "title": "Fairy tale",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:57.107Z",
+   "snapshot": "8bf634c34ecc3c35603285e24a15f9b43e7e7c40304ee9047960f2a91348a94c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A myth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A legend",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A fable",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A parable",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A fairy tale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:05.372Z",
+   "target": "f25536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "For scholars, this is different from the ordinary sense of the term myth, meaning a belief that is not true, as the veracity of a piece of folklore is entirely irrelevant to determining whether it constitutes a myth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A myth” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:05.372Z",
+   "target": "f25537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A legend is a genre of folklore that consists of a narrative featuring human actions, believed or perceived to have taken place in human history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A legend” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:05.372Z",
+   "target": "f25538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A fable differs from a parable in that the latter excludes animals, plants, inanimate objects, and forces of nature as actors that assume speech or other powers of humankind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A fable” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:05.372Z",
+   "target": "f25539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A parable is a succinct, didactic story, in prose or verse, that illustrates one or more instructive lessons or principles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A parable” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:05.372Z",
+   "target": "f25540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A fairy tale (alternative names include fairytale, fairy story, household tale, magic tale, or wonder tale) is a short story that belongs to the folklore genre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A fairy tale” is on the snapshot of s5"
+  }
+ ]
+}

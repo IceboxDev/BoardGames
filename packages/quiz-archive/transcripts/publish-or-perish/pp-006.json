@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-006",
+ "image": "IMG20261022010645.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Astronomy",
+   "cardText": "[Astronomy] Which planet in our solar system has the most moons?\nA. Saturn\nB. Jupiter\nC. Neptune\nAnswer: A. With over 100 moons, Saturn holds the record for the most moons of any planet in our solar system.",
+   "de": "Welcher Planet unseres Sonnensystems hat die meisten bekannten Monde?",
+   "en": "Which planet in our solar system has the most known moons?",
+   "reworked": true,
+   "answerDe": "Saturn",
+   "answerEn": "Saturn",
+   "timeline": {
+    "kind": "event",
+    "start": "2025-03-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "128 newly found moons of Saturn are announced, bringing its confirmed total to 274",
+    "labelDe": "128 neu entdeckte Saturnmonde werden bekanntgegeben; damit hat Saturn 274 bestätigte Monde"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Moons_of_Saturn",
+    "title": "Moons of Saturn",
+    "lang": "en"
+   },
+   "notes": "The count keeps changing with new discoveries: since the March 2025 announcement Saturn has 274 confirmed moons, far ahead of Jupiter.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 2,
+   "discipline": "Paleontology",
+   "cardText": "[Paleontology] Which came first, the plant or the seed?\nA. The plant\nB. The seed\nC. They came at the same time\nAnswer: A. Early plants, like mosses and ferns, reproduced using spores. Seeds evolved later as a more efficient reproductive strategy, allowing plants to survive in a wider range of environments and facilitating the development of more complex plant forms, such as flowering plants and conifers.",
+   "de": "Die ersten Landpflanzen wie Moose und Farne vermehrten sich durch Sporen. Welche effizientere Fortpflanzungsstruktur entwickelte sich erst später und ermöglichte Pflanzen wie Nadelbäume und Blütenpflanzen?",
+   "en": "The first land plants, such as mosses and ferns, reproduced using spores. Which more efficient reproductive structure evolved only later, making plants such as conifers and flowering plants possible?",
+   "reworked": true,
+   "answerDe": "Der Samen",
+   "answerEn": "The seed",
+   "timeline": {
+    "kind": "era",
+    "start": "-383000000",
+    "end": "-359000000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The first seed-bearing plants (early gymnosperms) appear in the Late Devonian",
+    "labelDe": "Die ersten Samenpflanzen (frühe Gymnospermen) erscheinen im Oberdevon"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Seed",
+    "title": "Seed",
+    "lang": "en"
+   },
+   "notes": "The card's either-or question is asked as the underlying fact: plants reproduced by spores long before seeds evolved.",
+   "domain": "nature",
+   "sub": "plants"
+  }
+ ]
+}

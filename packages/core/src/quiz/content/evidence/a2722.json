@@ -1,0 +1,383 @@
+{
+ "article": "a2722",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Shadow_blister_effect",
+   "title": "Shadow blister effect",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:32.322Z",
+   "snapshot": "50da03c41947266635c1d7b2e0c01b66f013c4fcbef35ed278e1f78fe5e541a7"
+  },
+  "s2": {
+   "url": "https://en.wiktionary.org/wiki/penumbra",
+   "title": "penumbra – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:31.388Z",
+   "snapshot": "c0206dcd23853fc02fed822a75a0375817c635071834a4b6f3c3997239855858"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Brocken_spectre",
+   "title": "Brocken spectre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:33.257Z",
+   "snapshot": "69a24f25ff363725a7b73da12065f05d57946432a72347a4c98c9e4809861b24"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Heiligenschein",
+   "title": "Heiligenschein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:34.293Z",
+   "snapshot": "3e0b76aa75795d073f73b3b8b5a3ba57e54fefebbaff26aa60d2f34e052e2b61"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gnomon",
+   "title": "Gnomon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:35.252Z",
+   "snapshot": "0e02a75ea65fd9ec474de52c526fe98709d2c2b5b7c96c4b299ed8badd05c1a3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Camera_obscura",
+   "title": "Camera obscura",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:36.416Z",
+   "snapshot": "bd213ab93498bdc07e78651e1ed4cbd930af501ec1f826d487f8dce39559ac7a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pinhole_camera",
+   "title": "Pinhole camera – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:52.515Z",
+   "snapshot": "252341da61c216d7e2238199dbd25ca0c95844603c3744e33198989b7ba4290f"
+  },
+  "s8": {
+   "url": "https://eclipse.aas.org/eye-safety/projection",
+   "title": "Indirect Solar Viewing: Pinhole & Optical Projection",
+   "publisher": "American Astronomical Society (Solar Eclipse Task Force)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:52.219Z",
+   "snapshot": "413eeae6d0e88af92a363abf61d65a3bd6a12e964bc6ba73b39c27df0e3083de"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shadow blister effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "penumbra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brocken spectre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "heiligenschein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "gnomon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The candle flame",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 55; transcript ppm-003"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:03.313Z",
+   "target": "f25433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The shadow blister effect is a visual phenomenon in which a shadow bulges (or blisters) as it approaches another.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shadow blister effect” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:03.313Z",
+   "target": "f25434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "penumbra - Wiktionary, the free dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “penumbra” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:03.313Z",
+   "target": "f25435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A Brocken spectre (British English; American spelling: Brocken specter; German: Brockengespenst), also called Brocken bow, mountain spectre, or spectre of the Brocken, is the magnified (and apparently enormous) shadow of an observer cast in midair upon any type of cloud opposite a strong light",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brocken spectre” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:03.313Z",
+   "target": "f25436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heiligenschein (German: [ˈhaɪlɪɡn̩ˌʃaɪn] ; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “heiligenschein” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:03.313Z",
+   "target": "f25437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A gnomon (; from Ancient Greek  γνώμων (gnṓmōn) 'one that knows or examines'), or stylus, is the stationary part of a sundial that casts a shadow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gnomon” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:03.313Z",
+   "target": "f25877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The candle flame",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The candle flame”, “Die Kerzenflamme”, “Пламя свечи”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:20:15Z",
+   "target": "f25877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Light from a scene passes through the aperture and projects an inverted image on the opposite side of the box, which is known as the camera obscura effect.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:20:19Z",
+   "target": "f25877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the tiny spaces between the leaves will act as pinhole projectors, dappling the ground with images of the crescent Sun",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "a small hole projects an image of the light source (here the crescent Sun), not the hole's own outline — the same principle as the candle flame"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:50.780Z",
+   "target": "f25877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Light from a scene passes through the aperture and projects an inverted image on the opposite side of the box, which is known as the camera obscura effect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:50.780Z",
+   "target": "f25877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the tiny spaces between the leaves will act as pinhole projectors, dappling the ground with images of the crescent Sun",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "article": "a0208",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Godfather_Part_III",
+   "title": "The Godfather Part III – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:04.699Z",
+   "snapshot": "875368411489918d68650c5e4ccebc760036cda545063d861dc662733ec37e27"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+   "title": "Peaky Blinders (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:01.843Z",
+   "snapshot": "30327086da77671f41d5bec1c4471d15bf0edc178bee64591738bb9c3d0deaca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gomorrah_(TV_series)",
+   "title": "Gomorrah (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:02.812Z",
+   "snapshot": "a9df841d64ac94e9183760ec406bd35659ac33811d45c421c4da317dfde930e8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ozark_(TV_series)",
+   "title": "Ozark (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:00.454Z",
+   "snapshot": "7a95fb2e76aa737de6889a08bfdb583d108f807a573f153a0470f9ebf63fec44"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Corleone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shelby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Savastano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Byrde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:11.952Z",
+   "target": "f01036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The film concludes the fictional story of Michael Corleone, the patriarch of the Corleone family, who attempts to legitimize his criminal empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Corleone” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:11.952Z",
+   "target": "f01038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The series features an ensemble cast: led by Cillian Murphy, starring as Tommy Shelby, Helen McCrory as Elizabeth \"Polly\" Gray, Paul Anderson as Arthur Shelby, Sophie Rundle as Ada Shelby, and Joe Cole as John Shelby, the group's senior members.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shelby” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:11.952Z",
+   "target": "f01039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The show, largely filmed in the Scampia neighbourhood of Naples, tells the story of Ciro Di Marzio (Marco D'Amore), a member of the Camorra's Savastano clan, headed by Pietro Savastano (Fortunato Cerlino), a high-ranking member.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Savastano” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:11.952Z",
+   "target": "f01040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The series stars Jason Bateman and Laura Linney as Marty and Wendy Byrde, a married couple who moves their family to the Lake of the Ozarks to continue their work laundering money for a Mexican drug cartel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Byrde” is on the snapshot of s4"
+  }
+ ]
+}

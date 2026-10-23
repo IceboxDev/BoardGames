@@ -1,0 +1,374 @@
+{
+ "article": "a0540",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gunpowder",
+   "title": "Gunpowder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:39.261Z",
+   "snapshot": "46a16ba01e6d87019182a200458d1fdc16dbd1e87f6360428a0f60965c93088c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nitroglycerin",
+   "title": "Nitroglycerin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:40.146Z",
+   "snapshot": "4524fde419bd11fc5f97be5d6044bc8deb1eaba70851e33409b9643cdf0f2e9c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/TNT",
+   "title": "TNT – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:41.055Z",
+   "snapshot": "4a44f8a4c8d5e9428ad42dc776433c962fe93252cdd8456d21a685f4e3ef1baa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Semtex",
+   "title": "Semtex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:42.141Z",
+   "snapshot": "6ed3e6357184d545d9c4d3ec3c18a8877a4fd0b66c4faee9d71fb92327127f0d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Schwarzpulver",
+   "title": "Schwarzpulver – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:57.554Z",
+   "snapshot": "038660d1ee9bf707f36069acdc8e864fd84e9f518a930e2d3b228b1ecd3e2c07"
+  },
+  "s6": {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8427773",
+   "title": "Evolution of Medieval Gunpowder: Thermodynamic and Combustion Analysis",
+   "publisher": "ACS Omega (via PubMed Central)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:57.687Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Explosive",
+   "title": "Explosive – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:57.902Z",
+   "snapshot": "05e9dfc0143e6f6fd741fb5d5826b41041ab223f750aeddbb13f1c71fe793e19"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "black powder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c045"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "nitroglycerin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "TNT",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02700",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Semtex",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:04.343Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gunpowder, referred to as black powder to distinguish it from modern smokeless powder, is the earliest known chemical explosive.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “black powder” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:04.343Z",
+   "target": "f02698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nitroglycerin (NG, alternative spelling nitroglycerine), also known as trinitroglycerin (TNG), nitro, glyceryl trinitrate (GTN), or 1,2,3-trinitroxypropane, is a dense, colorless or pale yellow, oily, explosive liquid most commonly produced by nitrating glycerol with white fuming nitric acid under",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nitroglycerin” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:04.343Z",
+   "target": "f02699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Trinitrotoluene ( TRY-ny-troh-TOL-yoo-een, try-NY-), more commonly known as TNT (and more specifically 2,4,6-trinitrotoluene, and by its preferred IUPAC name 2-methyl-1,3,5-trinitrobenzene), is a chemical compound with the formula C6H2(NO2)3CH3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “TNT” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:04.343Z",
+   "target": "f02700",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Semtex is a general-purpose plastic explosive containing RDX and PETN.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Semtex” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:46:22Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gunpowder, referred to as black powder to distinguish it from modern smokeless powder, is the earliest known chemical explosive.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:46:24Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Schwarzpulver war als Büchsenpulver der erste Explosivstoff, der als Schießpulver für Treibladungen von Schusswaffen verwendet wurde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:46:26Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gunpowder, also known as black powder, is only humanity’s second great experiment (after fire) with harnessing chemical energy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:46:28Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first explosive stronger than black powder to see widespread use was nitroglycerin, developed in 1847.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:28.595Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Schwarzpulver war als Büchsenpulver der erste Explosivstoff, der als Schießpulver für Treibladungen von Schusswaffen verwendet wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:28.595Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first explosive stronger than black powder to see widespread use was nitroglycerin, developed in 1847.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:28.595Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Schwarzpulver war als Büchsenpulver der erste Explosivstoff, der als Schießpulver für Treibladungen von Schusswaffen verwendet wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schwarzpulver” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:28.595Z",
+   "target": "f02696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Most commonly it is stored as chemical energy, such as black powder, nitroglycerin or even grain dust.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “black powder” is on the snapshot of s7"
+  }
+ ]
+}

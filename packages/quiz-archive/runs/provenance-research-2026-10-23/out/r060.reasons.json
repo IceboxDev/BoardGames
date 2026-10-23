@@ -1,0 +1,68 @@
+{
+ "a2523": {
+  "kind": "edited",
+  "reason": "The body said Pisa is 'usually named as the oldest' without qualification; the museum's own region (Visit Tuscany) and Italian sources describe it as 'one of the oldest in the world'. The sentence and notes now say so, keeping Pisa as the card's answer.",
+  "sources": [
+   {
+    "url": "https://www.visittuscany.com/en/attractions/natural-history-museum-of-pisa"
+   },
+   {
+    "url": "https://it.wikipedia.org/wiki/Museo_di_storia_naturale_dell%27Universit%C3%A0_di_Pisa"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu",
+   "notesEn",
+   "notesDe",
+   "notesRu"
+  ]
+ },
+ "a2715": {
+  "kind": "corrected",
+  "reason": "The body gave 'some 600' broken olfactory-receptor pseudogenes; genome analyses count 425 (Niimura 2012: 396 intact genes, 425 pseudogenes; 'more than 400' in Niimura et al. 2014). The older figure of ~600 counted 1,000 candidate genes. Now 'several hundred'.",
+  "sources": [
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3308321/"
+   },
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4158756/"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "a2527": {
+  "kind": "edited",
+  "reason": "Added a note to the fattiest-organ question: the brain is the standard answer, but some papers count adipose tissue as an organ and call the brain the 'second-fattiest' (Rhineland study, Lipids Health Dis).",
+  "sources": [
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8234848/"
+   },
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13063565/"
+   }
+  ],
+  "fields": [
+   "notesEn",
+   "notesDe",
+   "notesRu"
+  ]
+ },
+ "f13540": {
+  "kind": "marked",
+  "reason": "Ayurveda being 'still widely practised' in India and Nepal is a present-tense claim (confirmed by NIH NCCIH, 2026); set a review date a year out.",
+  "sources": [
+   {
+    "url": "https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ }
+}

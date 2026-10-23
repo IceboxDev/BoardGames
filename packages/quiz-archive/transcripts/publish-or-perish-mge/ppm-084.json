@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-084",
+ "image": "IMG20261022154209.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] What is the primary diet of horned lizards?\nA. Ants B. Mosquitoes C. Small birds\nAnswer: A. Horned lizards primarily feed on ants, especially harvester ants, making them difficult to keep as pets, as they often slowly starve in captivity. Some horned lizards also have unique defense mechanisms, including the ability to inflate quickly by gulping air, and, rarely, spurting blood from their eyes to deter predators.",
+   "de": "Wovon ernähren sich Krötenechsen (Phrynosoma) hauptsächlich?",
+   "en": "What do horned lizards mainly eat?",
+   "reworked": true,
+   "answerDe": "Ameisen (vor allem Ernteameisen)",
+   "answerEn": "Ants (especially harvester ants)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1828",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Arend Wiegmann names the horned lizard genus Phrynosoma",
+    "labelDe": "Arend Wiegmann benennt die Krötenechsen-Gattung Phrynosoma"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Horned_lizard",
+    "title": "Horned lizard",
+    "lang": "en"
+   },
+   "notes": "Card correct: Wikipedia describes their myrmecophagous diet of large quantities of harvester ants, and native ants they require for food.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 2,
+   "discipline": "Paleontology",
+   "cardText": "[Paleontology] Which of the following best describes what dinosaurs are?\nA. A type of ancient bird\nB. A large amphibian\nC. A group of reptiles\nAnswer: C. Dinosaurs are a group of reptiles that dominated land ecosystems during the Mesozoic era. However, birds evolved from a specific clade of dinosaurs known as theropods.",
+   "de": "Zu welcher Gruppe der Wirbeltiere gehören die Dinosaurier, die im Mesozoikum die Landökosysteme beherrschten?",
+   "en": "To which group of vertebrates do dinosaurs, which dominated land ecosystems during the Mesozoic, belong?",
+   "reworked": true,
+   "answerDe": "Reptilien",
+   "answerEn": "Reptiles",
+   "timeline": {
+    "kind": "event",
+    "start": "1842",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Richard Owen coins the name “dinosaur” for a group of great fossil reptiles",
+    "labelDe": "Richard Owen prägt den Namen „Dinosaurier“ für eine Gruppe großer fossiler Reptilien"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Dinosaur",
+    "title": "Dinosaur",
+    "lang": "en"
+   },
+   "notes": "Card correct. Option A is backwards rather than wrong in spirit: birds are themselves dinosaurs (a theropod lineage), not the other way round. Asked as the underlying fact since “which best describes” only works among the options.",
+   "domain": "nature",
+   "sub": "ecology"
+  }
+ ]
+}

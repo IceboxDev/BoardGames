@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  ChessDrillReviewBodySchema,
   ChessGamesQuerySchema,
   ChessUploadGamesBodySchema,
   CreateRepertoireBodySchema,
@@ -83,5 +84,23 @@ describe("chess trainer protocol", () => {
     expect(badLine.error?.issues[0]?.path).toEqual(["library", "roots", "w", 0, "moves"]);
     const noVersion = UpdateLibraryBodySchema.safeParse({ library });
     expect(noVersion.error?.issues[0]?.path).toEqual(["expectedVersion"]);
+  });
+
+  it("parses a drill review and refuses a bad card or grade", () => {
+    const review = {
+      clientId: "c-12345678",
+      color: "w",
+      cardId: "rnbqkbnr/ppppppp1/8/7p/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -",
+      grade: "good",
+      localDate: "2026-10-20",
+      outcome: { played: "d2d4", expected: "d2d4", hinted: false },
+    };
+    expect(ChessDrillReviewBodySchema.parse(review).source).toBe("trainer");
+    const badCard = ChessDrillReviewBodySchema.safeParse({ ...review, cardId: "not a key" });
+    expect(badCard.success).toBe(false);
+    if (!badCard.success) expect(badCard.error.issues[0]?.path).toEqual(["cardId"]);
+    const badGrade = ChessDrillReviewBodySchema.safeParse({ ...review, grade: "perfect" });
+    expect(badGrade.success).toBe(false);
+    if (!badGrade.success) expect(badGrade.error.issues[0]?.path).toEqual(["grade"]);
   });
 });

@@ -1,0 +1,566 @@
+{
+ "article": "a1958",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Brave_New_World",
+   "title": "Brave New World – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:06.796Z",
+   "snapshot": "bd78177e42d6ae643ba800917a9c9744e28e0f5b3b27f888efd2e8460a32a660"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four",
+   "title": "Nineteen Eighty-Four – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:07.780Z",
+   "snapshot": "4af214183b68f2bb84c035fe1a955b21ca449f3892a8c21481c78a3ae4e74226"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/1984_(Roman)",
+   "title": "1984 (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:05.005Z",
+   "snapshot": "41c0250c0222a407800711e359c629861b1e25a370bbb205b628a1e8423623bf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fahrenheit_451",
+   "title": "Fahrenheit 451 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:08.714Z",
+   "snapshot": "fba2b4a0347a28c136d0b1654510add3f3e756f67e06d954e296035c096a902a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Der_Report_der_Magd",
+   "title": "Der Report der Magd – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:05.879Z",
+   "snapshot": "c8741e21c667df0b26c609d7a71221b3439387e368f052b4da6bce98ff1b9ef6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/We_(novel)",
+   "title": "We (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:09.702Z",
+   "snapshot": "60fb5ac1d2595479ee3e46a31fab674cb3c69be39e2d0fbefa6402375c534ed0"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Fahrenheit_451",
+   "title": "Fahrenheit 451",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:07.327Z",
+   "snapshot": "bc9d96c10f3da81d6a43cae9d2aa3a36f36c7a53e4cbfa6068b956cbb10875b6"
+  },
+  "s8": {
+   "url": "https://en.wikiquote.org/wiki/Nineteen_Eighty-Four",
+   "title": "Nineteen Eighty-Four",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:07.466Z",
+   "snapshot": "bc98d6595de4d89588b7a752047c95b014fc057001cf57d6126341ede09ff748"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/George_Orwell",
+   "title": "George Orwell",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:25.755Z",
+   "snapshot": "cff77f7c2ef13ffe5017a1b78f1954fd4573ddc73f1870b23666190399ed794e"
+  },
+  "s10": {
+   "url": "https://gutenberg.net.au/ebooks01/0100021.txt",
+   "title": "Nineteen Eighty-Four (full text)",
+   "publisher": "Project Gutenberg Australia",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:40.413Z",
+   "snapshot": "0595155b99ddf2eb2f68f262442160f06ef978be4f7e08598c62722361fc9dee"
+  },
+  "s11": {
+   "url": "http://orwell.ru/library/novels/1984/english/en_p_1",
+   "title": "George Orwell: Nineteen Eighty-Four -- Part I",
+   "publisher": "orwell.ru",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:37.881Z",
+   "snapshot": "45197382d2ce17a3016c8a87d3d94229baa032f5a58cf33a83c5684410733ce6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brave New World",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nineteen Eighty-Four",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1984",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-050"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fahrenheit 451",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Report der Magd",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f09790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "„We“",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bücher",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-338"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Thirteen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; history entry seq 48; transcript tp-374"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f12847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The River Orwell in Suffolk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 54; transcript tp-254"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f09786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brave New World is a dystopian novel by English author Aldous Huxley, written in 1931, and published in 1932.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brave New World” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f09787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nineteen Eighty-Four (also published as 1984) is a dystopian and speculative fiction novel by the English writer George Orwell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nineteen Eighty-Four” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f09787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1984 (Originaltitel: Nineteen Eighty-Four, deutscher Alternativtitel: Neunzehnhundertvierundachtzig), geschrieben von 1946 bis 1948 und erschienen im Juni 1949, ist ein dystopischer Roman von George Orwell, in dem ein totalitärer Überwachungsstaat im Jahr 1984 dargestellt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1984” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f09788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fahrenheit 451 is a 1953 dystopian novel by American writer Ray Bradbury.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fahrenheit 451” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f09789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Report der Magd (Originaltitel: The Handmaid’s Tale) ist ein dystopischer Roman von Margaret Atwood aus dem Jahr 1985.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Report der Magd” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f09790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"A Neglected Source of Zamiatin's Novel \"We\"\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “„We“” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f12845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Fahrenheit 451 spielt in einem Staat, in dem es als schweres Verbrechen gilt, Bücher zu besitzen oder zu lesen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bücher” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It was a bright cold day in April, and the clocks were striking thirteen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thirteen” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:28:53.822Z",
+   "target": "f12847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "He finally adopted the pen name George Orwell because \"It is a good round English name.\" The name George was inspired by the patron saint of England, and Orwell after the River Orwell in Suffolk which was one of Orwell's favourite locations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The River Orwell in Suffolk” is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:51:01Z",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It was a bright cold day in April, and the clocks were striking thirteen.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Opening sentence of the novel."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:51:05Z",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "It was a bright cold day in April, and the clocks were striking thirteen.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Opening sentence of the novel (independent transcription)."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:43.010Z",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It was a bright cold day in April, and the clocks were striking thirteen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:43.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:43.010Z",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "It was a bright cold day in April, and the clocks were striking thirteen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:43.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:43.010Z",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It was a bright cold day in April, and the clocks were striking thirteen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:43.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Thirteen” is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:43.010Z",
+   "target": "f12846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "It was a bright cold day in April, and the clocks were striking thirteen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:43.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Thirteen” is on the snapshot of s11"
+  }
+ ]
+}

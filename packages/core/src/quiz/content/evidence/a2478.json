@@ -1,0 +1,374 @@
+{
+ "article": "a2478",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/%C3%89dith_Piaf",
+   "title": "Édith Piaf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:33.788Z",
+   "snapshot": "c2f7e88937a8cc88616598e26a178edcbabf2e94a3515d7aa204e0221017a0a6"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gilbert_B%C3%A9caud",
+   "title": "Gilbert Bécaud",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:34.674Z",
+   "snapshot": "85fa54b326637a08f9db56359cb44b9d1acc40ccc1f201ee642c6f954ff979a9"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Django_Reinhardt",
+   "title": "Django Reinhardt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:35.726Z",
+   "snapshot": "dde14cb6dff1ffb80baf1181129cba672fcc0e1495512fd6480ba5da9b7a1248"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89dith_Piaf",
+   "title": "Édith Piaf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:35.702Z",
+   "snapshot": "a86caa27bb774198464a3bc018f856705b554abe5bcad3496fda3f21fb0bc3ba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gilbert_B%C3%A9caud",
+   "title": "Gilbert Bécaud – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:36.614Z",
+   "snapshot": "d645b270a38aacbd56fc10c3367406f628212582e5c6df3f9f1324491081171a"
+  },
+  "s6": {
+   "url": "https://fr.wikipedia.org/wiki/Gilbert_B%C3%A9caud",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T06:01:35.209Z",
+   "snapshot": "2a2972a69ca4076dcf9eed4668b5cf0816ce6656bcb587f7715262245570fed7"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Django_Reinhardt",
+   "title": "Django Reinhardt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:39.681Z",
+   "snapshot": "927c3afca9d6b778f5d639bebd61600d9d00adaf399ff1bc7a8476daf0376a63"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-291"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gilbert Bécaud",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-083"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gitarre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-039"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Non, je ne regrette rien",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Et maintenant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Olympia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Olympia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 32"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f13099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Stéphane Grappelli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als 15-Jährige verließ Piaf ihren Vater und zog mit einer Freundin als Straßensängerin nach Paris.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gilbert-Bécaud-Fanpage, deutsch und französisch",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gilbert Bécaud” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Django Reinhardt lernte früh Violine, Banjo und schließlich Gitarre zu spielen und begann seine Karriere als professioneller Musiker als Zwölfjähriger mit dem Akkordeonisten Pierre „Guérino“ Vettese (1895–1952).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gitarre” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In addition to her signature song, her most widely known songs include \"Non, je ne regrette rien\" (1960), \"Hymne à l'amour\" (1949), \"Milord\" (1959), \"La Foule\" (1957), \"L'Accordéoniste\" (1940), and \"Padam, padam...\" (1951).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Non, je ne regrette rien” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "His best-known hits are \"Nathalie\" and \"Et maintenant\", a 1961 release that became an English language hit as \"What Now My Love\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Et maintenant” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When asked to explain his gift he said, \"A flower doesn't understand botany.\" His favourite venue was the Paris Olympia under the management of Bruno Coquatrix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Olympia” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Au cours de sa carrière, il se produit trente trois fois sur la scène de l'Olympia, où il gagne son surnom de « Monsieur 100 000 volts » en raison de son sens du swing, du fait des passions qu'il soulevait dans son sillage et de ses fans qui, souvent, à ses débuts, cassaient par enthousiasme les",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Olympia” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:26.665Z",
+   "target": "f13099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "With violinist Stéphane Grappelli, Reinhardt formed the Paris-based Quintette du Hot Club de France in 1934.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:26.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stéphane Grappelli” is on the snapshot of s7"
+  }
+ ]
+}

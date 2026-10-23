@@ -1,0 +1,430 @@
+{
+ "article": "a0972",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wi-Fi",
+   "title": "Wi-Fi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:40.190Z",
+   "snapshot": "cf88523222d3f98b705914a73d942d20d21bbc1d2bd81bb4f8a1e7379c3c177c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Digital_subscriber_line",
+   "title": "Digital subscriber line – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:41.102Z",
+   "snapshot": "b7b4a1952f171ca77b7b58c1040844745bb3d4f91f2c8d048ddeab39547daf6e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Point-to-Point_Tunneling_Protocol",
+   "title": "Point-to-Point Tunneling Protocol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:41.983Z",
+   "snapshot": "9aaf9756ae73966ace82b04b02c04c70aea04f1185bc84a3c71068484ddfe3ef"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/HTTP",
+   "title": "HTTP – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:43.110Z",
+   "snapshot": "e34816437562f5a5e63a2ddb61b1cb6e0845b7c11baf1a62087eef6c25ade118"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Internet_Protocol",
+   "title": "Internet Protocol",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:32:40.794Z",
+   "snapshot": "9d830f205520cdfe3d0e02f037f400708aaf8a09e800b39cd61994dbe60a3422"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/IP-Telefonie",
+   "title": "IP-Telefonie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:32:42.092Z",
+   "snapshot": "9e5592ab52080e3abbb8592c9c0ddfc435bdea14d6458cfc2790d33e893566cc"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Wi-Fi_7",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:43.985Z",
+   "snapshot": "2c63571c343de677e2f58e68006010f1d2559c583c86bb9028fc1ac29f38d46a"
+  },
+  "s8": {
+   "url": "https://csrc.nist.gov/glossary/term/virtual_private_network",
+   "title": "virtual private network (VPN) – NIST CSRC Glossary",
+   "publisher": "National Institute of Standards and Technology",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:57.141Z",
+   "snapshot": "f108fecb78d25a423742897995af45b98fb7aef310ccf373bd9297298fdebf66"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/vpn",
+   "title": "VPN – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:56.520Z",
+   "snapshot": "b0ca3e5afa645ad728105473d9a3ca82bf9065553ffc49e92fad521ef98c427d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wireless Local Area Network",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04857",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Digital Subscriber Line",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Virtual Private Network",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hypertext Transfer Protocol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Internet Protocol",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-269"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Telefonieren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-267"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:13.316Z",
+   "target": "f04856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A prototype test bed for a wireless local area network (WLAN) was developed in 1992 by a team of researchers from the Radiophysics Division of the CSIRO (Commonwealth Scientific and Industrial Research Organisation) in Australia, led by John O'Sullivan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wireless Local Area Network” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:13.316Z",
+   "target": "f04857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Digital subscriber line (DSL), originally digital subscriber loop, is a family of technologies that are used to transmit digital data over telephone lines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Digital Subscriber Line” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:13.316Z",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Virtual Private Network",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Virtual Private Network”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:13.316Z",
+   "target": "f04860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "HTTP (Hypertext Transfer Protocol) is an application layer protocol in the Internet protocol suite for distributed, collaborative, hypermedia information systems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hypertext Transfer Protocol” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:13.316Z",
+   "target": "f14189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Internet Protocol (IP; deutsch Internetprotokoll) ist ein in Rechnernetzen weit verbreitetes Netzwerkprotokoll und stellt durch seine Funktion die Grundlage des Internets dar.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Internet Protocol” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:13.316Z",
+   "target": "f14190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "IP-Telefonie (kurz für Internet-Protokoll-Telefonie sowie Internettelefonie) oder Voice over IP (kurz VoIP; aus englisch voice over internet protocol, „Sprachübertragung über das Internetprotokoll“) genannt, ist das Telefonieren über Rechnernetze, welche nach Internetstandards aufgebaut sind.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telefonieren” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:48:11Z",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "virtual private network (VPN) Share to Facebook",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Glossary entry heading 'virtual private network (VPN)'."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:48:12Z",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for Virtual Private Network: a private computer network within a larger network such as the internet",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:43.801Z",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "virtual private network (VPN) Share to Facebook",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:43.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:43.801Z",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for Virtual Private Network: a private computer network within a larger network such as the internet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:43.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:43.801Z",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "virtual private network (VPN) - Glossary | CSRC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:43.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Virtual Private Network” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:43.801Z",
+   "target": "f04858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for Virtual Private Network: a private computer network within a larger network such as the internet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:43.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Virtual Private Network” is on the snapshot of s9"
+  }
+ ]
+}

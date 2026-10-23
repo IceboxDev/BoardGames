@@ -1,0 +1,242 @@
+{
+ "article": "a2085",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/National_Ignition_Facility",
+   "title": "National Ignition Facility – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:25.963Z",
+   "snapshot": "5e45799ebc2928957ac57b5baa19ab7cd9592cfe2063033c0296c0ad7afab1af"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lise_Meitner",
+   "title": "Lise Meitner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:59.628Z",
+   "snapshot": "6fff0a2810e261526654a5ebf4b5eaf016fc7a3ecbd203f5561cd43928279ac0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chicago_Pile-1",
+   "title": "Chicago Pile-1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:27.071Z",
+   "snapshot": "bd612e5d44b171effd1dd338946c7c4bcec26b1147b2a3b8d1a8ea2ea3520665"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Half-life",
+   "title": "Half-life – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:27.763Z",
+   "snapshot": "4b2fb4f91c2c9a381c4c551d60873129024c77576e12e23093911ac8a4f76659"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Frederick_Soddy",
+   "title": "Frederick Soddy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:28.779Z",
+   "snapshot": "c8b3f95e1ad5f5f28a2c1259fe75e5e3f4299e8f3e9a320759c0d8d651628b75"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nuclear fusion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nuclear fission",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chain reaction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Half-life",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Isotopes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:19.452Z",
+   "target": "f10421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Experiments in 2020 and 2021 yielded the world's first burning plasmas in the laboratory, in which most of the plasma heating came from nuclear fusion reactions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.452Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nuclear fusion” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:19.452Z",
+   "target": "f10422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elise \"Lise\" Meitner  ( MYTE-ner; German: [ˈliːzə ˈmaɪtnɐ] ; 7 November 1878 – 27 October 1968) was an Austrian and Swedish nuclear physicist who was instrumental in the discovery of nuclear fission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.452Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nuclear fission” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:19.452Z",
+   "target": "f10423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 2 December 1942, the first human-made self-sustaining nuclear chain reaction was initiated in CP-1 during an experiment led by Enrico Fermi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.452Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chain reaction” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:19.452Z",
+   "target": "f10424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Half-life (symbol t½) is the time required for a quantity (of substance) to reduce to half of its initial value.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.452Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Half-life” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:19.452Z",
+   "target": "f10425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He also proved the existence of isotopes of certain radioactive elements.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.452Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isotopes” is on the snapshot of s5"
+  }
+ ]
+}

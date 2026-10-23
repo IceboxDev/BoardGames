@@ -1,0 +1,371 @@
+{
+ "article": "a1262",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Johann_Carl_Weck",
+   "title": "Johann Carl Weck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:43.864Z",
+   "snapshot": "02b7383c7836188840a81d95843b9dd86efc400144cde5f020e1cd86b0e79913"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen",
+   "title": "Wilhelm Röntgen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:43.171Z",
+   "snapshot": "e1ca02dd0e7fa997d956af2e55dc2237977953744a01480eba98a75a7fac0159"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89tienne_de_Silhouette",
+   "title": "Étienne de Silhouette – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:43.051Z",
+   "snapshot": "6c294191daa31983a650361b1637205c8df3fcb39f9ef6cddc9a67d9c4aafa74"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sandwich",
+   "title": "Sandwich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:42.471Z",
+   "snapshot": "1904c8f055668dca7918a472c352eda8e3f54d132dc3319a421cac99d060450c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Praline",
+   "title": "Praline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:44.880Z",
+   "snapshot": "19451fdac8433f059e8203c38830423024e2c744e42525853f182a3d1416088a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Praline_(nut_confection)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:43.470Z",
+   "snapshot": "394c4ada8e1b69e7531c3a6f8623dc70d1e8c98fb5777630fd111da28977083b"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/Praline",
+   "title": "Praline – DWDS",
+   "publisher": "DWDS (Berlin-Brandenburgische Akademie der Wissenschaften)",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:00.747Z",
+   "snapshot": "d01f30efcac377b8a09965621c884c462417a333d61d424166f2f54c20086f96"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johann Carl Weck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wilhelm Conrad Röntgen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Étienne de Silhouette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Montagu, 4th Earl of Sandwich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-111"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "César de Choiseul du Plessis-Praslin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "César de Choiseul du Plessis-Praslin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:56.581Z",
+   "target": "f06306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johann Carl Weck",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Carl Weck” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:56.581Z",
+   "target": "f06307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wilhelm Conrad Röntgen (27 March 1845 – 10 February 1923) was a German experimental physicist who produced and detected electromagnetic radiation in a wavelength range known as X-rays (known as Röntgen rays in many languages).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Conrad Röntgen” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:56.581Z",
+   "target": "f06309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Étienne de Silhouette (5 July 1709 – 20 January 1767) was a French Ancien Régime Controller-General of Finances under Louis XV.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Étienne de Silhouette” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:56.581Z",
+   "target": "f06310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The sandwich is named after the inventor of a certain roast-beef sandwich in 18th-century England, John Montagu, 4th Earl of Sandwich.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Montagu, 4th Earl of Sandwich” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:56.581Z",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "César de Choiseul du Plessis-Praslin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“César de Choiseul du Plessis-Praslin”, “Сезар де Шуазёль дю Плесси-Прален”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:56.581Z",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "César de Choiseul du Plessis-Praslin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“César de Choiseul du Plessis-Praslin”, “Сезар де Шуазёль дю Плесси-Прален”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:56:49Z",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Graf war Marschall von Frankreich, Minister König Ludwigs XIV.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:56:51Z",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Das Wort leitet sich her vom Namen des französischen Marschalls du Plessis-Praslin (17. Jh.), dessen Koch als Erfinder dieser Konfektart gilt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:39.186Z",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Graf war Marschall von Frankreich, Minister König Ludwigs XIV.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:39.186Z",
+   "target": "f28900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Das Wort leitet sich her vom Namen des französischen Marschalls du Plessis-Praslin (17. Jh.), dessen Koch als Erfinder dieser Konfektart gilt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

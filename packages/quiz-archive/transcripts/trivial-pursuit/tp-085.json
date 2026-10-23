@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-085",
+ "image": "IMG20261007180800.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher asiatischen Stadt gab es 2010 einen 100 Kilometer langen Stau, der sich erst nach zwölf Tagen auflöste?",
+   "de": "In Richtung welcher asiatischen Hauptstadt bildete sich 2010 ein 100 Kilometer langer Lkw-Stau, der sich erst nach zwölf Tagen auflöste?",
+   "en": "Towards which Asian capital did a 100-kilometre truck jam form in 2010 that only cleared after twelve days?",
+   "reworked": true,
+   "answerDe": "Peking",
+   "answerEn": "Beijing",
+   "timeline": {
+    "kind": "event",
+    "start": "2010-08-14",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A 100 km traffic jam forms on China's G110 / Beijing–Tibet expressway and lasts 12 days",
+    "labelDe": "Auf Chinas G110 und der Schnellstraße Peking–Tibet bildet sich ein 100 km langer Stau, der 12 Tage dauert"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/China_National_Highway_110_traffic_jam",
+    "title": "China National Highway 110 traffic jam",
+    "lang": "en"
+   },
+   "notes": "The card's premise is inaccurate: the jam was not in a city but on the G110 / G6 Beijing–Tibet expressway in Hebei and Inner Mongolia, caused by coal trucks heading to Beijing plus roadworks. Reworded to keep the intended answer (Peking) true.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die Heimatstadt der aus einer Dokusoap bekannten Familie Geiss?",
+   "de": "Wie heißt die Heimatstadt der aus einer Dokusoap bekannten Familie Geiss?",
+   "en": "What is the home town of the Geiss family, known from a docusoap?",
+   "reworked": false,
+   "answerDe": "Monaco",
+   "answerEn": "Monaco",
+   "timeline": {
+    "kind": "event",
+    "start": "2011-01-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "RTL II airs the first episode of the docusoap Die Geissens – Eine schrecklich glamouröse Familie",
+    "labelDe": "RTL II zeigt die erste Folge der Dokusoap Die Geissens – Eine schrecklich glamouröse Familie"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Robert_Geiss",
+    "title": "Robert Geiss",
+    "lang": "de"
+   },
+   "notes": "The Geissens live in (or near) Monaco, where Robert Geiss moved his main residence for tax reasons; they also have homes near Saint-Tropez and in Dubai. Robert Geiss was born in Cologne.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Der Hebesatz ist ein physikalisches Gesetz. Richtig oder falsch?",
+   "de": "Wer legt in Deutschland den Hebesatz für die Grund- und die Gewerbesteuer fest?",
+   "en": "Who sets the multiplier rate (Hebesatz) for property tax and trade tax in Germany?",
+   "reworked": true,
+   "answerDe": "die Gemeinde",
+   "answerEn": "The municipality",
+   "timeline": {
+    "kind": "event",
+    "start": "1973",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Germany's Property Tax Act (Grundsteuergesetz) sets out the municipal multiplier rate in § 25",
+    "labelDe": "Das Grundsteuergesetz regelt in § 25 den Hebesatz der Gemeinden"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hebesatz_(Steuerrecht)",
+    "title": "Hebesatz (Steuerrecht)",
+    "lang": "de"
+   },
+   "notes": "Card's statement is false: the Hebesatz is a municipal tax multiplier (Art. 106 Abs. 6 GG), not a physical law; reworked to an open question.",
+   "domain": "society",
+   "sub": "politics"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt der Hund, mit dem Cartoonfigur Garfield in einem Haushalt lebt?",
+   "de": "Wie heißt der Hund, mit dem Cartoonfigur Garfield in einem Haushalt lebt?",
+   "en": "What is the name of the dog that the cartoon character Garfield shares a household with?",
+   "reworked": false,
+   "answerDe": "Odie",
+   "answerEn": "Odie",
+   "timeline": {
+    "kind": "creation",
+    "start": "1978-08-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Odie the dog first appears in Jim Davis's Garfield comic strip",
+    "labelDe": "Der Hund Odie hat seinen ersten Auftritt in Jim Davis' Comicstrip Garfield"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/List_of_Garfield_characters",
+    "title": "List of Garfield characters",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welches Element gibt es im Periodensystem der Elemente nicht: Moscovium, Darmstadtium oder Frankfurtium?",
+   "de": "Welches nach einer hessischen Stadt benannte chemische Element hat die Ordnungszahl 110?",
+   "en": "Which chemical element, named after a city in Hesse, has atomic number 110?",
+   "reworked": true,
+   "answerDe": "Darmstadtium",
+   "answerEn": "Darmstadtium",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Darmstadtium is first produced at the GSI heavy-ion research centre in Darmstadt",
+    "labelDe": "Darmstadtium wird erstmals bei der Gesellschaft für Schwerionenforschung in Darmstadt erzeugt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Darmstadtium",
+    "title": "Darmstadtium",
+    "lang": "de"
+   },
+   "notes": "Card asked which of Moscovium / Darmstadtium / Frankfurtium does NOT exist (Frankfurtium); reworked to the positive fact about the real Hessian-named element.",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welche Tennisspielerin hatte mit ihrem Wimbledon-Sieg 2016 genauso viele Grand-Slam-Turniere im Einzel gewonnen wie Steffi Graf?",
+   "de": "Welche Tennisspielerin hatte mit ihrem Wimbledon-Sieg 2016 genauso viele Grand-Slam-Turniere im Einzel gewonnen wie Steffi Graf?",
+   "en": "Which tennis player, with her 2016 Wimbledon win, had won as many Grand Slam singles titles as Steffi Graf?",
+   "reworked": false,
+   "answerDe": "Serena Williams",
+   "answerEn": "Serena Williams",
+   "timeline": {
+    "kind": "event",
+    "start": "2016-07-09",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Serena Williams beats Angelique Kerber in the Wimbledon final for her 22nd major singles title",
+    "labelDe": "Serena Williams schlägt Angelique Kerber im Wimbledon-Finale und gewinnt ihren 22. Grand-Slam-Einzeltitel"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/2016_Wimbledon_Championships_%E2%80%93_Women%27s_singles",
+    "title": "2016 Wimbledon Championships – Women's singles",
+    "lang": "en"
+   },
+   "notes": "22 titles, equalling Graf's Open Era record; Williams later won a 23rd (Australian Open 2017).",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

@@ -1,0 +1,288 @@
+{
+ "article": "a1182",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bauh%C3%BCtte",
+   "title": "Bauhütte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:48.868Z",
+   "snapshot": "7c2358b6b9219c1c6dfd904aa3c90381035292a7a463cdfe2fa8f812b72f880d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Knights_Templar",
+   "title": "Knights Templar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:52.056Z",
+   "snapshot": "5ffb7723fc8ea01f583549e50ec188777160edd4798f97c7fbe0a4a8c3405802"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Knights_Hospitaller",
+   "title": "Knights Hospitaller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:53.066Z",
+   "snapshot": "735fd4d5376bc81e47afc0a8c3fc9192fd5da3dde309e039eb222b4731695957"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hanseatic_League",
+   "title": "Hanseatic League – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:53.931Z",
+   "snapshot": "016e2a78d3233199003e303d8989f8bd76ad14782d8d7f227f273c066fe848f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Freemasonry",
+   "title": "Freemasonry – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:31.032Z",
+   "snapshot": "df80da325ef68ab1a221bda0b8f0094c10fae5909b0bf5d412044d62af7e4a4c"
+  },
+  "s6": {
+   "url": "https://www.ugle.org.uk/discover-freemasonry/history-freemasonry",
+   "title": "History of Freemasonry",
+   "publisher": "United Grand Lodge of England",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:30.198Z",
+   "snapshot": "3449ed2c8164ece529d9c3f089472b95efd1afc390b1ef6653fc4ec3c160cdd2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Freimaurer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Knights Templar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05908",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Order of Malta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05909",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Hanseatic League",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:44.804Z",
+   "target": "f05906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Freimaurer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“die Freimaurer”, “the Freemasons”, “масоны”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:44.804Z",
+   "target": "f05907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Poor Fellow-Soldiers of Christ and of the Temple of Solomon, mainly known as the Knights Templar, was a  military order of the Catholic faith, and one of the most important military orders in Western Christianity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Knights Templar” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:44.804Z",
+   "target": "f05908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(even when compounded for), possessed by secular or regular congregations, by holders of benefices, members of corporations (including the Order of Malta and other religious and military orders), as well as those devoted to the maintenance of churches, those impropriated to lay persons and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Order of Malta” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:44.804Z",
+   "target": "f05909",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Hanseatic League, commonly called The Hansa, was a medieval commercial and defensive network of merchant guilds and market towns in Central and Northern Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Hanseatic League” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:52:06Z",
+   "target": "f05906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "consists of fraternal groups that trace their origins to medieval guilds of stonemasons.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:52:09Z",
+   "target": "f05906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the general consensus among Masonic scholars is that they lie with the medieval stonemasons",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:55:26.221Z",
+   "target": "f05906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "consists of fraternal groups that trace their origins to medieval guilds of stonemasons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.221Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:26.221Z",
+   "target": "f05906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Russia, the Freemasons supported constitutional liberalism and maintained ties with France while simplifying many of the ceremonial rituals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.221Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Freemasons” is on the snapshot of s5"
+  }
+ ]
+}

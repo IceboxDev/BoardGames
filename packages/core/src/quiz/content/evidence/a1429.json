@@ -1,0 +1,242 @@
+{
+ "article": "a1429",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Blues_Brothers_(film)",
+   "title": "The Blues Brothers (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:50.321Z",
+   "snapshot": "37b0eba20d4a5b976dc7c41629869d7b0cef373ed7e1adb72baa075d35531b5a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/James_Brown",
+   "title": "James Brown – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:51.506Z",
+   "snapshot": "f3492765b8445c51f17fcd783410fe99976964c31f59281102c6ca8daaf5ae01"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ray_Charles",
+   "title": "Ray Charles – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:52.429Z",
+   "snapshot": "06fff6fa263d07b45b77b2cd5f929a739bea3ead5f7b11956becaef99c8e1bde"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Minnie_the_Moocher",
+   "title": "Minnie the Moocher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:53.345Z",
+   "snapshot": "107e9ef39afb9d777fb1bf4f842ffb1cf4c456db4ff67290e5f6c9f01f3ae948"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Boom_Boom_(John_Lee_Hooker_song)",
+   "title": "Boom Boom (John Lee Hooker song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:54.327Z",
+   "snapshot": "92e50e986fc0f1432c291c911722a4cf474bd2a3bcbdf3cf57c14532a21690d6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aretha Franklin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James Brown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ray Charles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cab Calloway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "John Lee Hooker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:24.387Z",
+   "target": "f07141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It features musical numbers by singers James Brown, Cab Calloway, Aretha Franklin, Ray Charles and John Lee Hooker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aretha Franklin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:24.387Z",
+   "target": "f07142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With the hit ballads \"Please, Please, Please\" and \"Try Me\", Brown built a reputation as a dynamic live performer with the Famous Flames and his backing band, sometimes known as the James Brown Band or the James Brown Orchestra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Brown” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:24.387Z",
+   "target": "f07143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ray Charles Robinson (September 23, 1930 – June 10, 2004) was an American singer, songwriter, and pianist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ray Charles” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:24.387Z",
+   "target": "f07144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Minnie the Moocher\" is a jazz song written by American musicians Cab Calloway and Irving Mills, and first recorded in 1931 by Calloway and his swing orchestra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cab Calloway” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:24.387Z",
+   "target": "f07145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Boom Boom\" is a song written by American blues singer and guitarist John Lee Hooker and first recorded in 1961.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Lee Hooker” is on the snapshot of s5"
+  }
+ ]
+}

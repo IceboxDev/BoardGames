@@ -1,0 +1,554 @@
+{
+ "article": "a0430",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pluto",
+   "title": "Pluto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:25.841Z",
+   "snapshot": "c3fef0d5675f337cfe57d98eee6f27bbb214ef960e9f28cc3a9c31a36f4a5566"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Southern_Ocean",
+   "title": "Southern Ocean – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:26.821Z",
+   "snapshot": "c9b24f773907ecaa211b2f0148714b9b498afb2591496021ecfe727758f59243"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Haumea",
+   "title": "Haumea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:27.750Z",
+   "snapshot": "596e33805678acdce407c131a80555c7983903b08b41cf627276bed1159732cf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Simon_Marius",
+   "title": "Simon Marius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:28.675Z",
+   "snapshot": "a98bd84ff4a9665e871b7ef95ec6af3cfad85e08d4d8f37fab0e43d3163df10d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Erd%C3%A4hnlicher_Himmelsk%C3%B6rper",
+   "title": "Erdähnlicher Himmelskörper",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:26.298Z",
+   "snapshot": "ae9ae14693b21f476309e5acad654576ab108547000a801be5ea28ff1c80295c"
+  },
+  "s6": {
+   "url": "https://science.nasa.gov/solar-system/planets/",
+   "title": "About the Planets",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:05.437Z",
+   "snapshot": "0a7c684243addb4ffdf1598684c681691ce97ee869510c189c96fe816364a3f1"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Planet",
+   "title": "Planet – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:06.335Z",
+   "snapshot": "567fa2223f1fc283e1c2fa2d040d92e8e9506ca17fd531b18927f8131f4f1e19"
+  },
+  "s8": {
+   "url": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+   "title": "How many oceans are there?",
+   "publisher": "NOAA National Ocean Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:05.966Z",
+   "snapshot": "a02f0ea8b61f46f061e01d89f6fd008c9c0436ad2b76d1af31b4ff9820cd1325"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Ocean",
+   "title": "Ocean – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:07.345Z",
+   "snapshot": "bccad2b7d7b0c698656dd932b91860ae7b5a684cd3893746d6cc3b1f63451a3a"
+  },
+  "s10": {
+   "url": "https://science.nasa.gov/dwarf-planets/",
+   "title": "Pluto & Dwarf Planets",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:06.361Z",
+   "snapshot": "ae13214d34cbc07fe663610c621c81611113db3d882bebd662e8d77f9ed70cf4"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Dwarf_planet",
+   "title": "Dwarf planet – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:08.257Z",
+   "snapshot": "5f8e11c62bf85e232752707d0e973b7b650c0d01a63a0f3b7266e41abbf0e020"
+  },
+  "s12": {
+   "url": "https://science.nasa.gov/jupiter/jupiter-moons/",
+   "title": "Jupiter Moons",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:07.369Z",
+   "snapshot": "9be08d69199166605ed2667caacb4aa44b56bcffaeb375c35b72a3b7badc506b"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Galilean_moons",
+   "title": "Galilean moons – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:09:45Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pacific, Atlantic, Indian, Southern, Arctic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ceres, Pluto, Haumea, Makemake, Eris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Io, Europa, Ganymede, Callisto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Merkur, Venus, Erde und Mars",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; history entry seq 37; transcript tp-175"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:47.209Z",
+   "target": "f02146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune”, “Merkur, Venus, Erde, Mars, Jupiter, Saturn, Uranus, Neptun”, “Меркурий, Венера, Земля, Марс, Юпитер, Сатурн, Уран, Нептун”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:47.209Z",
+   "target": "f02148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pacific, Atlantic, Indian, Southern, Arctic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pacific, Atlantic, Indian, Southern, Arctic”, “Pazifik, Atlantik, Indischer Ozean, Südlicher Ozean, Arktischer Ozean”, “Тихий, Атлантический, Индийский, Южный, Северный Ледовитый”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:47.209Z",
+   "target": "f02149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ceres, Pluto, Haumea, Makemake, Eris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ceres, Pluto, Haumea, Makemake, Eris”, “Церера, Плутон, Хаумеа, Макемаке, Эрида”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:47.209Z",
+   "target": "f02150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Io, Europa, Ganymede, Callisto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Io, Europa, Ganymede, Callisto”, “Io, Europa, Ganymed, Kallisto”, “Ио, Европа, Ганимед, Каллисто”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:47.209Z",
+   "target": "f10852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Historisch gehörten nur die vier Planeten des inneren Sonnensystems in die Gruppe der damals noch „terrestrische Planeten“ genannten Gruppe von Himmelskörpern: Merkur, Venus, Erde und Mars.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merkur, Venus, Erde und Mars” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:09:22Z",
+   "target": "f02146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Our solar system has eight planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:09:25Z",
+   "target": "f02146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "According to the IAU definition, there are eight planets in the Solar System, which are (in increasing distance from the Sun):[1] Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:09:28Z",
+   "target": "f02148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Historically, there are four named oceans: the Atlantic, Pacific, Indian, and Arctic. However, most countries - including the United States - now recognize the Southern (Antarctic) as the fifth ocean.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23",
+   "note": "Five-ocean division is now standard; older four-ocean count still found."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:09:32Z",
+   "target": "f02148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Five oceanic divisions are usually recognized: the Pacific Ocean, the Atlantic Ocean, the Indian Ocean, the Antarctic/Southern Ocean, and the Arctic Ocean;",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:09:35Z",
+   "target": "f02149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "So far, the IAU has only recognized five dwarf planets. In order of distance from the Sun they are: Ceres, Pluto, Haumea, Makemake, and Eris.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:09:39Z",
+   "target": "f02149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "These five bodies – the three under consideration in 2006 (Pluto, Ceres and Eris) plus the two named in 2008 (Haumea and Makemake)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:09:42Z",
+   "target": "f02150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The four largest moons – Io, Europa, Ganymede, and Callisto – were first observed by the astronomer Galileo Galilei in 1610 using an early version of the telescope.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:09:45Z",
+   "target": "f02150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "or Galilean satellites, are the four largest moons of Jupiter. They are, in descending-size order, Ganymede, Callisto, Io, and Europa.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:09.124Z",
+   "target": "f02146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Our solar system has eight planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:09.124Z",
+   "target": "f02148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Historically, there are four named oceans: the Atlantic, Pacific, Indian, and Arctic. However, most countries - including the United States - now recognize the Southern (Antarctic) as the fifth ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:09.124Z",
+   "target": "f02149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "So far, the IAU has only recognized five dwarf planets. In order of distance from the Sun they are: Ceres, Pluto, Haumea, Makemake, and Eris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:09.124Z",
+   "target": "f02149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "These five bodies – the three under consideration in 2006 (Pluto, Ceres and Eris) plus the two named in 2008 (Haumea and Makemake)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:09.124Z",
+   "target": "f02150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The four largest moons – Io, Europa, Ganymede, and Callisto – were first observed by the astronomer Galileo Galilei in 1610 using an early version of the telescope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s12"
+  }
+ ]
+}

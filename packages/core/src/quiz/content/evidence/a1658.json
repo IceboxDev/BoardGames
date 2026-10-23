@@ -1,0 +1,256 @@
+{
+ "article": "a1658",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ferdinand_von_Schirach",
+   "title": "Ferdinand von Schirach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:17.592Z",
+   "snapshot": "5d7ef7512ec075b41f338981a1aeb5db78a5fa28d2c5980f27e26ca0ea09d314"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Der_Vorleser",
+   "title": "Der Vorleser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:16.115Z",
+   "snapshot": "1822a748b57159a72f4fbf8a12c1fd6c2ca1d0c18f94a65a1b08c03445f0d44c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Unterleuten",
+   "title": "Unterleuten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:56.182Z",
+   "snapshot": "a6554c2bbc78522b8e348fbf4a7d41c67db26689986eb31a3dbb6805f4ab34d3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Sebastian_Fitzek",
+   "title": "Sebastian Fitzek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:16.689Z",
+   "snapshot": "efa4cad59f8d0b428baf8b2f16a121223b395e446efe6d7089fc58b419376c5e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Der_nasse_Fisch._Gereon_Raths_erster_Fall",
+   "title": "Der nasse Fisch. Gereon Raths erster Fall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:17.606Z",
+   "snapshot": "54137f5fc73cabbdf265a6a1a5c095dc1a968793b7caea9aa2d2883e8de12902"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bernhard_Schlink",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:18.489Z",
+   "snapshot": "8f934d547b8c3660cae7db619f523c7e7ea7cd3fe37f1b02429fb4c5d8cc1d22"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Juli_Zeh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:20.994Z",
+   "snapshot": "b79da3e2939402f1f787b5c7e2853cb6931eb29140084a2a9bd82b53c5c36853"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferdinand von Schirach",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c139"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bernhard Schlink",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Juli Zeh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sebastian Fitzek",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Volker Kutscher",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:00.124Z",
+   "target": "f08286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "März 2018: „Ferdinand von Schirach ist kein Schriftsteller des lauschigen Halbdunkels.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:00.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferdinand von Schirach” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:00.124Z",
+   "target": "f08287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Vorleser ist ein Roman des deutschen Schriftstellers Bernhard Schlink aus dem Jahr 1995.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:00.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bernhard Schlink” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:00.124Z",
+   "target": "f08288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unterleuten ist ein Gesellschaftsroman von Juli Zeh aus dem Jahr 2016, der fast ausschließlich im fiktiven Dorf Unterleuten in Brandenburg angesiedelt ist und zum größten Teil im Juli/August 2010 spielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:00.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juli Zeh” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:00.124Z",
+   "target": "f08289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sebastian Fitzek wurde 1971 in West-Berlin als Sohn des Oberstudiendirektors und Schulleiters des Lilienthal-Gymnasiums in Berlin-Lichterfelde, Freimut Fitzek (1930–2016) und dessen Ehefrau, der Diplom-Volkswirtin Christa Schneider geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:00.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sebastian Fitzek” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:00.124Z",
+   "target": "f08290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der nasse Fisch ist ein historischer Roman des deutschen Autors Volker Kutscher, der 2007 im Verlag Kiepenheuer & Witsch erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:00.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volker Kutscher” is on the snapshot of s5"
+  }
+ ]
+}

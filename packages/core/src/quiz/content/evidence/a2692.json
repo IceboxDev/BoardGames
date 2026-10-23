@@ -1,0 +1,242 @@
+{
+ "article": "a2692",
+ "sources": {
+  "s1": {
+   "url": "https://de.wiktionary.org/wiki/fonctionnaire",
+   "title": "fonctionnaire – Wiktionary",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:13:03.577Z",
+   "snapshot": "f09629f326bdebb015ccda3148176db6e67350d5e6d7afb10438bcc2249c59b9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mandarin_(bureaucrat)",
+   "title": "Mandarin (bureaucrat) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:06.173Z",
+   "snapshot": "55c72150119320f41d4286c21767454e9f19cb4a2aa63d44cda822200ad96a5e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Whitehall",
+   "title": "Whitehall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:07.253Z",
+   "snapshot": "17379720f0b66d1a923dd89449dc91ec6b6961f084db82053d7acddfbc4992f0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Northcote%E2%80%93Trevelyan_Report",
+   "title": "Northcote–Trevelyan Report – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:08.180Z",
+   "snapshot": "30585ca48be87f895ead8c1a387fc985d357f90ef63a4a254ed6d374d8317a10"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89cole_nationale_d%27administration",
+   "title": "École nationale d'administration – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:09.146Z",
+   "snapshot": "f2a7e1efe854135354f17ded3db225909c0e4753e9769f8dd8bda449885f7f27"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fonctionnaire",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-324"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mandarin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Whitehall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Northcote-Trevelyan Report",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "École nationale d'administration",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:58.260Z",
+   "target": "f14657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "[1] Französischer Wikipedia-Artikel „fonctionnaire“",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fonctionnaire” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:58.260Z",
+   "target": "f14658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A mandarin (Chinese: 官; pinyin: guān) was a scholar-bureaucrat in the historical governments of China, Korea, and Vietnam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mandarin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:58.260Z",
+   "target": "f14659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Whitehall is a road and area in the City of Westminster, Central London, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Whitehall” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:58.260Z",
+   "target": "f14660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Northcote–Trevelyan Report was a document prepared by Stafford H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Northcote-Trevelyan Report” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:58.260Z",
+   "target": "f14661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The École nationale d'administration (French pronunciation: [ekɔl nɑsjɔnal dadministʁɑsjɔ̃]; ENA; English: National School of Administration) was a French grande école, created in 1945 by the then provisional chief of government Charles de Gaulle and principal co-author of the 1958 Constitution",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “École nationale d'administration” is on the snapshot of s5"
+  }
+ ]
+}

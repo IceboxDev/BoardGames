@@ -1,0 +1,302 @@
+{
+ "id": "a0144",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "The Other Laws of Computing",
+ "titleDe": "Die anderen Gesetze der Informatik",
+ "titleRu": "Другие законы информатики",
+ "bodyEn": "Gordon Moore's famous observation, published in April 1965, is the most quoted \"law\" in computing, but it is far from the only one. Several other engineers and scientists have proposed their own compact rules describing how computing power, networks, and efficiency change over time — some optimistic, some deliberately humbling.\n\nMoore's Law itself states that the number of transistors that can be packed onto a microchip roughly doubles every two years (Moore first said every year and revised the pace in 1975), driving decades of exponential growth in computing power. Stated as simply as possible: it doubles.\n\nA more expansive rule concerns networks rather than chips. Metcalfe's Law, formulated by Ethernet co-inventor Robert Metcalfe, holds that the value of a communications network grows not in proportion to the number of its users, but in proportion to the square of the number of users, since every new participant can potentially connect with every existing one; the name \"Metcalfe's law\" was popularised by a September 1993 Forbes article by George Gilder — a principle often used to explain why social networks and telephone systems become dramatically more valuable as they grow.\n\nNot every law celebrates progress, however. Wirth's Law, named half-jokingly after Pascal creator Niklaus Wirth, who described it in his February 1995 essay \"A Plea for Lean Software\" and credited the line to his colleague Martin Reiser, observes a frustrating pattern familiar to anyone whose new phone still feels sluggish: in practice, software slows down faster than hardware speeds up, as new features and inefficient code repeatedly eat up the performance gains that faster chips deliver.\n\nAmdahl's Law, formulated by computer architect Gene Amdahl in 1967, addresses the limits of parallel computing directly. However many processors are added to a task, the maximum possible speedup is capped by whichever part of the job cannot be split up and run at once — in short, the task's sequential portion sets a hard ceiling that more hardware alone can never fully overcome.\n\nFinally, Koomey's Law, identified by researcher Jonathan Koomey in 2011, tracks a quieter but equally important trend: for a fixed amount of computation, computing energy efficiency roughly doubles every one and a half years, meaning battery-powered devices can do more with the same charge with each passing generation.\n\nTogether, these five laws form a kind of engineer's proverb collection — reminders that in computing, growth, value, and even disappointment tend to follow surprisingly predictable curves.",
+ "bodyDe": "Gordon Moores berühmte, im April 1965 veröffentlichte Beobachtung ist das meistzitierte „Gesetz“ der Informatik, doch bei Weitem nicht das einzige. Mehrere andere Ingenieure und Wissenschaftler haben eigene, knappe Regeln aufgestellt, die beschreiben, wie sich Rechenleistung, Netzwerke und Energieeffizienz im Laufe der Zeit verändern – manche davon optimistisch, manche bewusst ernüchternd.\n\nDas Mooresche Gesetz selbst besagt, dass sich die Anzahl der Transistoren, die auf einem Mikrochip untergebracht werden können, etwa alle zwei Jahre verdoppelt (Moore sprach zunächst von jedem Jahr und korrigierte das Tempo 1975), was jahrzehntelanges exponentielles Wachstum der Rechenleistung antrieb. So einfach wie möglich ausgedrückt: Sie verdoppelt sich.\n\nEine umfassendere Regel betrifft nicht Chips, sondern Netzwerke. Das Metcalfesche Gesetz, formuliert vom Ethernet-Miterfinder Robert Metcalfe, besagt, dass der Wert eines Kommunikationsnetzwerks nicht proportional zur Anzahl seiner Nutzer wächst, sondern zu deren Quadrat – denn jeder neue Teilnehmer kann sich potenziell mit jedem bereits vorhandenen verbinden; bekannt gemacht wurde der Name „Metcalfe's law“ durch einen Forbes-Artikel von George Gilder im September 1993. Kurz gefasst: Das Quadrat der Nutzerzahl bestimmt den Netzwerkwert, ein Prinzip, das oft erklärt, warum soziale Netzwerke und Telefonsysteme mit ihrem Wachstum dramatisch an Wert gewinnen.\n\nNicht jedes Gesetz feiert jedoch den Fortschritt. Das halb scherzhaft nach dem Pascal-Erfinder Niklaus Wirth benannte Wirthsche Gesetz, das er im Februar 1995 in seinem Aufsatz „A Plea for Lean Software“ beschrieb und dessen Formulierung er seinem Kollegen Martin Reiser zuschrieb, beschreibt ein frustrierendes Muster, das jedem bekannt vorkommt, dessen neues Telefon sich trotzdem träge anfühlt. Kurz gesagt: Software verlangsamt sich schneller, als Hardware sich beschleunigt, denn neue Funktionen und ineffizienter Code fressen die Geschwindigkeitsgewinne schnellerer Chips immer wieder auf.\n\nDas 1967 vom Computerarchitekten Gene Amdahl formulierte Amdahlsche Gesetz befasst sich direkt mit den Grenzen paralleler Datenverarbeitung. Wie viele Prozessoren man einer Aufgabe auch hinzufügt – die maximal mögliche Beschleunigung wird durch jenen Teil der Arbeit begrenzt, der sich nicht aufteilen und gleichzeitig ausführen lässt: Kurz gesagt, der sequenzielle Anteil der Aufgabe setzt eine harte Obergrenze, die zusätzliche Hardware allein niemals vollständig überwinden kann.\n\nSchließlich beschreibt das 2011 vom Forscher Jonathan Koomey identifizierte Koomeysche Gesetz einen leiseren, aber ebenso bedeutenden Trend: Bei einer festen Rechenmenge verdoppelt sich die Energieeffizienz von Computern etwa alle eineinhalb Jahre, sodass batteriebetriebene Geräte mit jeder neuen Generation bei gleicher Akkuladung mehr leisten können.\n\nZusammen bilden diese fünf Gesetze eine Art Sprichwortsammlung für Ingenieure – Erinnerungen daran, dass Wachstum, Wert und sogar Enttäuschung in der Informatik oft überraschend vorhersehbaren Kurven folgen.",
+ "bodyRu": "Знаменитое наблюдение Гордона Мура, опубликованное в апреле 1965 года, – самый цитируемый «закон» информатики, но далеко не единственный. Другие инженеры и учёные предложили собственные краткие правила, описывающие, как со временем меняются вычислительная мощность, сети и энергоэффективность, – одни оптимистичные, другие намеренно отрезвляющие.\n\nСам закон Мура гласит, что число транзисторов, которые можно разместить на микросхеме, примерно удваивается каждые два года (сначала Мур говорил о каждом годе и скорректировал темп в 1975 году), что десятилетиями обеспечивало экспоненциальный рост вычислительной мощности. Проще некуда: оно удваивается.\n\nБолее масштабное правило касается не чипов, а сетей. Закон Меткалфа, сформулированный соавтором Ethernet Робертом Меткалфом, гласит, что ценность сети связи растёт не пропорционально числу её пользователей: её определяет квадрат числа пользователей, ведь каждый новый участник потенциально может связаться с каждым из уже имеющихся; название «закон Меткалфа» популяризировала статья Джорджа Гилдера в Forbes в сентябре 1993 года. Этим принципом часто объясняют, почему социальные сети и телефонные системы по мере роста становятся несравнимо ценнее.\n\nОднако не каждый закон воспевает прогресс. Закон Вирта, полушутя названный в честь создателя языка Pascal Никлауса Вирта, который описал его в эссе «A Plea for Lean Software» в феврале 1995 года и приписал саму формулировку своему коллеге Мартину Райзеру, фиксирует досадную закономерность, знакомую каждому, чей новый телефон всё равно кажется медленным. Коротко: программы замедляются быстрее, чем ускоряется аппаратура, потому что новые функции и неэффективный код снова и снова съедают прирост производительности, который дают более быстрые чипы.\n\nЗакон Амдала, сформулированный архитектором компьютеров Джином Амдалом в 1967 году, прямо касается пределов параллельных вычислений. Сколько бы процессоров ни добавляли к задаче, максимально возможное ускорение ограничено той частью работы, которую нельзя разделить и выполнить одновременно: короче говоря, жёсткий потолок задаёт последовательная часть задачи, и одна лишь дополнительная аппаратура никогда не сможет его полностью преодолеть.\n\nНаконец, закон Куми, выявленный исследователем Джонатаном Куми в 2011 году, описывает более тихую, но не менее важную тенденцию: при фиксированном объёме вычислений примерно каждые полтора года удваивается энергоэффективность вычислений, так что устройства на батареях с каждым поколением успевают сделать больше на одном заряде.\n\nВместе эти пять законов образуют своего рода сборник инженерных пословиц – напоминание о том, что в информатике рост, ценность и даже разочарование, как правило, следуют удивительно предсказуемым кривым.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Moore%27s_Law_Transistor_Count_1970-2020.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Moore%27s_law",
+   "width": 3133,
+   "height": 2318,
+   "alt": {
+    "en": "Chart of transistor counts of microchips from 1970 to 2020 on a logarithmic scale",
+    "de": "Diagramm der Transistorzahlen von Mikrochips 1970–2020 auf logarithmischer Skala",
+    "ru": "График числа транзисторов в микросхемах с 1970 по 2020 год в логарифмическом масштабе"
+   },
+   "caption": {
+    "en": "Transistor counts of microprocessors from 1970 to 2020: on a logarithmic scale the points form an almost straight line – the doubling about every two years that Moore's Law describes.",
+    "de": "Transistorzahlen von Mikroprozessoren 1970–2020: Auf logarithmischer Skala bilden die Punkte fast eine Gerade – die Verdopplung etwa alle zwei Jahre, die das Mooresche Gesetz beschreibt.",
+    "ru": "Число транзисторов в микропроцессорах с 1970 по 2020 год: в логарифмическом масштабе точки ложатся почти на прямую – это и есть удвоение примерно каждые два года, которое описывает закон Мура."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Koomeys_law_graph%2C_made_by_Koomey.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Koomey%27s_law",
+   "width": 631,
+   "height": 767,
+   "alt": {
+    "en": "Koomey's graph of computations per kilowatt-hour since the 1940s",
+    "de": "Koomeys Diagramm der Rechenoperationen pro Kilowattstunde seit den 1940er-Jahren",
+    "ru": "График Куми: число вычислений на киловатт-час с 1940-х годов"
+   },
+   "caption": {
+    "en": "Jonathan Koomey's own chart of computations per kilowatt-hour: computing energy efficiency has doubled roughly every one and a half years.",
+    "de": "Jonathan Koomeys eigenes Diagramm der Rechenoperationen pro Kilowattstunde: Die Energieeffizienz von Computern hat sich etwa alle eineinhalb Jahre verdoppelt.",
+    "ru": "Собственный график Джонатана Куми – число вычислений на киловатт-час: энергоэффективность вычислений удваивалась примерно каждые полтора года."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f00716",
+   "answerEn": "It doubles",
+   "answerDe": "Sie verdoppelt sich",
+   "answerRu": "оно удваивается",
+   "spans": {
+    "en": [
+     604,
+     10
+    ],
+    "de": [
+     734,
+     19
+    ],
+    "ru": [
+     635,
+     15
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1965-04",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Gordon Moore publishes the observation that becomes Moore's Law",
+    "labelDe": "Gordon Moore veröffentlicht die Beobachtung, aus der das Mooresche Gesetz wird",
+    "labelRu": "Гордон Мур публикует наблюдение, ставшее законом Мура"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Moore%27s_law",
+    "title": "Moore's law – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00716",
+     "en": "According to Moore's Law, what happens roughly every two years to the possible number of transistors on a microchip?",
+     "de": "Was passiert nach dem Mooreschen Gesetz alle zwei Jahre mit der möglichen Menge Transistoren auf einem Mikrochip?",
+     "ru": "Что, согласно закону Мура, происходит примерно каждые два года с возможным числом транзисторов на микросхеме?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c012",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f00717",
+   "answerEn": "The square of the number of users",
+   "answerDe": "Das Quadrat der Nutzerzahl",
+   "answerRu": "квадрат числа пользователей",
+   "spans": {
+    "en": [
+     866,
+     33
+    ],
+    "de": [
+     1245,
+     26
+    ],
+    "ru": [
+     874,
+     27
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1993-09",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "George Gilder's Forbes article popularises „Metcalfe's law“",
+    "labelDe": "George Gilders Forbes-Artikel macht das „Metcalfesche Gesetz“ bekannt",
+    "labelRu": "Статья Джорджа Гилдера в Forbes популяризирует «закон Меткалфа»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Metcalfe%27s_law",
+    "title": "Metcalfe's law – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00717",
+     "en": "According to Metcalfe's Law, how does the value of a network relate to its number of users?",
+     "de": "Was besagt das Metcalfesche Gesetz über den Wert eines Netzwerks im Verhältnis zur Anzahl seiner Nutzer?",
+     "ru": "Как, согласно закону Меткалфа, ценность сети связана с числом её пользователей?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f00718",
+   "answerEn": "Software slows down faster than hardware speeds up",
+   "answerDe": "Software verlangsamt sich schneller, als Hardware sich beschleunigt",
+   "answerRu": "программы замедляются быстрее, чем ускоряется аппаратура",
+   "spans": {
+    "en": [
+     1538,
+     50
+    ],
+    "de": [
+     1832,
+     67
+    ],
+    "ru": [
+     1569,
+     56
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1995-02",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Niklaus Wirth publishes „A Plea for Lean Software“",
+    "labelDe": "Niklaus Wirth veröffentlicht „A Plea for Lean Software“",
+    "labelRu": "Никлаус Вирт публикует «A Plea for Lean Software»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Wirth%27s_law",
+    "title": "Wirth's law – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00718",
+     "en": "What does the law named after computer scientist Niklaus Wirth state about the relationship between software speed and hardware progress?",
+     "de": "Was besagt das nach dem Informatiker Niklaus Wirth benannte Gesetz über das Verhältnis von Softwaregeschwindigkeit zu Hardwarefortschritt?",
+     "ru": "Что гласит закон, названный в честь информатика Никлауса Вирта, о соотношении скорости программ и прогресса аппаратуры?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f00719",
+   "answerEn": "The task's sequential portion",
+   "answerDe": "Der sequenzielle Anteil der Aufgabe",
+   "answerRu": "последовательная часть задачи",
+   "spans": {
+    "en": [
+     1976,
+     29
+    ],
+    "de": [
+     2367,
+     35
+    ],
+    "ru": [
+     2086,
+     29
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1967",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Gene Amdahl formulates Amdahl's Law",
+    "labelDe": "Gene Amdahl formuliert das Amdahlsche Gesetz",
+    "labelRu": "Джин Амдал формулирует закон Амдала"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Amdahl%27s_law",
+    "title": "Amdahl's law – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00719",
+     "en": "According to the law named after Gene Amdahl, what limits the maximum speedup achievable by parallelizing a computing task?",
+     "de": "Was begrenzt laut dem nach Gene Amdahl benannten Gesetz die maximal durch Parallelisierung erreichbare Beschleunigung einer Rechenaufgabe?",
+     "ru": "Что, согласно закону, названному в честь Джина Амдала, ограничивает максимальное ускорение, достижимое распараллеливанием вычислительной задачи?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f00720",
+   "answerEn": "Computing energy efficiency",
+   "answerDe": "Die Energieeffizienz von Computern",
+   "answerRu": "энергоэффективность вычислений",
+   "spans": {
+    "en": [
+     2232,
+     27
+    ],
+    "de": [
+     2688,
+     34
+    ],
+    "ru": [
+     2406,
+     30
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "2011",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Jonathan Koomey describes the doubling of computing energy efficiency",
+    "labelDe": "Jonathan Koomey beschreibt die Verdopplung der Energieeffizienz von Computern",
+    "labelRu": "Джонатан Куми описывает удвоение энергоэффективности вычислений"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Koomey%27s_law",
+    "title": "Koomey's law – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00720",
+     "en": "According to Koomey's Law, what roughly doubles every one and a half years?",
+     "de": "Was verdoppelt sich laut dem Koomeyschen Gesetz etwa alle eineinhalb Jahre?",
+     "ru": "Что, согласно закону Куми, удваивается примерно каждые полтора года?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing",
+  "topic:science/laws",
+  "audience:international"
+ ]
+}

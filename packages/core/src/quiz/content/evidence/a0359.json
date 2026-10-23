@@ -1,0 +1,249 @@
+{
+ "article": "a0359",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Acacia_pycnantha",
+   "title": "Acacia pycnantha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:32.954Z",
+   "snapshot": "19f4f2bbc7c06871e6e02ce0a53f9f186cd654c71f421b46455713561e32ff25"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eucalyptus",
+   "title": "Eucalyptus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:34.085Z",
+   "snapshot": "825ab91c76b9ab3efba64ad6385fb32988c348143790c2ad6eb4fa12ce4992cd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Unter_den_Linden",
+   "title": "Unter den Linden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:31.377Z",
+   "snapshot": "901a2aba09368bef500aeb3ac87bfb4461e6a1a9de48dfdbc12af83ed796d9c8"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Klee",
+   "title": "Klee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:34.324Z",
+   "snapshot": "c0d497e482715504a2d42f623894513759a6272d22c65126902631eccfa5d98d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Taraxacum",
+   "title": "Taraxacum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:34.831Z",
+   "snapshot": "b41aba028856676df966c347e32151034771fc6e1701236d3ae8db8e7bf83618"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Acacia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:35.824Z",
+   "snapshot": "38ae3c9ead25e5257515adc24580d9dbe8e57d3d6987a8442995b83d6fe2e82c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Acacia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c030"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eucalyptus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Linde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Klee",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dandelion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:35.728Z",
+   "target": "f01791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Acacia pycnantha, most commonly known as the golden wattle, is a tree of the family Fabaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Acacia” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:35.728Z",
+   "target": "f01792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eucalyptus () is a genus of more than 700 species of flowering plants in the family Myrtaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eucalyptus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:35.728Z",
+   "target": "f01793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unter den Linden ist eine Prachtstraße im Berliner Ortsteil Mitte des gleichnamigen Bezirks, die zwischen dem Forum Fridericianum und dem Pariser Platz verläuft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linden” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:35.728Z",
+   "target": "f01794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Klee (Trifolium) ist eine 245 Arten umfassende Pflanzengattung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klee” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:35.728Z",
+   "target": "f01795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "officinale (the common dandelion) and T.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dandelion” is on the snapshot of s5"
+  }
+ ]
+}

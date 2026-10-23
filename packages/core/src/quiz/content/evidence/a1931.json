@@ -1,0 +1,497 @@
+{
+ "article": "a1931",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mangrove",
+   "title": "Mangrove – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:19.651Z",
+   "snapshot": "c9ae25ef83938daf3eb3b06643c162320c70800b811e87686f3dc6ddc44dede4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Venus_flytrap",
+   "title": "Venus flytrap – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:20.644Z",
+   "snapshot": "383d251a7659ba9326faed8d7cf548edfaad2b57a24c3f3eb6462538a4673219"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rhizobium",
+   "title": "Rhizobium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:46.589Z",
+   "snapshot": "a7ff562e469bad4266a45cec428f09799809869afc55c039c8fe70034368fc24"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Common_sunflower",
+   "title": "Common sunflower – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:58.167Z",
+   "snapshot": "6edea8684fcc786bf4611beed1c632c2904bc510639641f48e461a3eac85d03a"
+  },
+  "s5": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2838359/",
+   "title": "Hygromorphs: from pine cones to biomimetic bilayers",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:17.742Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Welwitschia",
+   "title": "Welwitschia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:21.606Z",
+   "snapshot": "d7651801adcf48150b38d36d530ed288842eb617410beb5baf0309df55170e06"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Saguaro",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:22.575Z",
+   "snapshot": "1e6635c13d7eb19665c7b7ea5b162e7e1baf4f8b1b63f10a0132082f362d7882"
+  },
+  "s8": {
+   "url": "https://www.nature.com/articles/s41467-021-24528-4",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:19.983Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s9": {
+   "url": "https://www.nps.gov/ever/learn/nature/mangroves.htm",
+   "title": "Mangroves – Everglades National Park",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:28.384Z",
+   "snapshot": "0a8e194c61b6e155b804600d82851bd4ce4878a64c2ff717a825db5d12174a3f"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Cone_(botany)",
+   "title": "Cone (botany) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:28.561Z",
+   "snapshot": "a32c4abdbfb39891540794bb6d94a7479a92e7ded1ed579328f1e3c9b8f89116"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "salt tolerance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "carnivory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "nitrogen fixation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "heliotropism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pine cones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 50; transcript pp-002"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Welwitschia",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Welwitschia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-045/2, u01: The card overstates (\"thousands of years\"): most Welwitschia plants are hundreds of years old, the oldest perhaps ~2,000. Our wording avoids the claim (two ever-growing leaves, Namibia/Angola) and the body already gives \"several hundred … oldest around 2,000\"."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:48.063Z",
+   "target": "f25800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Welwitschia",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:48.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:48.063Z",
+   "target": "f09651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "salt tolerance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“salt tolerance”, “Salztoleranz”, “солеустойчивость”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:48.063Z",
+   "target": "f09653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carnivory in plants is a very specialized form of foliar feeding, and is an adaptation found in several plants that grow in nutrient-poor soil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:48.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carnivory” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:48.063Z",
+   "target": "f09654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Current research on nitrogen fixation by rhizobia at the Norwich Research Park",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:48.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nitrogen fixation” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:48.063Z",
+   "target": "f09655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This alignment results from heliotropism in an earlier development stage, the young flower stage, before full maturity of flower heads (anthesis).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:48.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “heliotropism” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:48.063Z",
+   "target": "f25367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pine cones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pine cones”, “Kiefernzapfen”, “Сосновые шишки”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:48.063Z",
+   "target": "f25800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Welwitschia is a monotypic genus of gnetophytes containing only the species Welwitschia mirabilis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:48.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Welwitschia” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:09:05Z",
+   "target": "f09651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is used to identify several species of salt-tolerant trees that thrive amidst the harsh growing conditions of the coast",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:09:07Z",
+   "target": "f09651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mangroves are salt-tolerant (halophytic) and are adapted to live in harsh coastal conditions.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:09:08Z",
+   "target": "f25367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Using the pine cone as an example that opens when dried and closes when wet",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:09:10Z",
+   "target": "f25367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "cones are open when dry and closed when wet. This assures that the small, windborne seeds will be dispersed during relatively dry weather",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:38.747Z",
+   "target": "f09651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is used to identify several species of salt-tolerant trees that thrive amidst the harsh growing conditions of the coast",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:38.747Z",
+   "target": "f09651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mangroves are salt-tolerant (halophytic) and are adapted to live in harsh coastal conditions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:38.747Z",
+   "target": "f25367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "cones are open when dry and closed when wet. This assures that the small, windborne seeds will be dispersed during relatively dry weather",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:38.747Z",
+   "target": "f25367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "After ripening, the opening of non-serotinous pine cones is associated with their moisture content—cones are open when dry and closed when wet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pine cones” is on the snapshot of s10"
+  }
+ ]
+}

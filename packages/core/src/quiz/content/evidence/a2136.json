@@ -1,0 +1,552 @@
+{
+ "article": "a2136",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cobweb_painting",
+   "title": "Cobweb painting",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:35.841Z",
+   "snapshot": "4eca722e56809ea11a84fe2974a0c21c7654a275009d4e6514084a9ce45679ae"
+  },
+  "s2": {
+   "url": "https://artdependence.com/articles/a-question-in-trivial-pursuit-which-artist-created-a-portrait-of-queen-elisabeth-ii-using-1-000-teabags-answer-andy-brown/",
+   "title": "A question in Trivial Pursuit: which artist created a portrait of Queen Elisabeth II using 1,000 teabags? Answer: Andy Brown",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:33.456Z",
+   "snapshot": "099d0714af44f340c161cca46025bc140a4b3d4eb670b279cbf6461b35b42bd0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/NASA_Art_Program",
+   "title": "NASA Art Program",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:36.875Z",
+   "snapshot": "3df06cb5d35c2684ba1b537d605792d03023d684a2584ae992206f96eec785b2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Chris_Ofili",
+   "title": "Chris Ofili – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:37.841Z",
+   "snapshot": "0643a657c299f2d1e8c5e375138ff142b30a95359b09567783449ea193caee91"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fallen_Astronaut",
+   "title": "Fallen Astronaut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:38.824Z",
+   "snapshot": "fb7eba00a3326ff572da6c93975ddd7a805e6376fee62539ede84753f2c62f36"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Giuseppe_Arcimboldo",
+   "title": "Giuseppe Arcimboldo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:39.988Z",
+   "snapshot": "2966f95e87d31e865d8474d917e057a57a69bb6afb616ac161f1e7149920b4c0"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Frida_Kahlo",
+   "title": "Frida Kahlo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:44.761Z",
+   "snapshot": "a538818a91ce95aa88985b50ea6264c9722a1ea27a7553df10469b86e8542c4c"
+  },
+  "s8": {
+   "url": "https://www.atlasobscura.com/articles/the-lost-art-of-painting-on-cobweb-canvases",
+   "title": "The Lost Art of Painting on Cobweb Canvases",
+   "publisher": "Atlas Obscura",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:01:04Z"
+  },
+  "s9": {
+   "url": "https://www.khm.at/en/artworks/tuerkenkopf-spinnwebbild-390569",
+   "title": "Türkenkopf, Spinnwebbild",
+   "publisher": "Kunsthistorisches Museum Wien (Schloss Ambras Innsbruck)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:55.821Z",
+   "snapshot": "ccd2f658febd058695070411377c57d5395ac4cfff2e1583fd2f1afc237cf7fa"
+  },
+  "s10": {
+   "url": "https://www.koreaherald.com/article/10365704",
+   "title": "Tea with the queen just a trivial pursuit for U.K. expat",
+   "publisher": "The Korea Herald",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:55.544Z",
+   "snapshot": "8fbdbb0ee8ccefb07769493fc07be857c126953f787b37c8f592023b5bc0741c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "as a canvas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-185"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1,000 tea bags",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-219"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1962",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-351"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "elephant dung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fallen Astronaut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Giuseppe Arcimboldo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Norman Rockwell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Frida Kahlo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript tp-030"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f10724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "as a canvas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“as a canvas”, “als Leinwand”, “как холст”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f10725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "I used over 1,000 tea bags.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1,000 tea bags” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f10726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The NASA Fine Art Program was established in 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1962” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f10727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He has used resin, beads, oil paint, glitter, lumps of elephant dung and cut-outs from pornographic magazines as painting elements.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “elephant dung” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f10728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fallen Astronaut is a 3.5-inch (8.9 cm) aluminum sculpture created by Belgian artist Paul Van Hoeydonck.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fallen Astronaut” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f10729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Giuseppe Arcimboldo, also spelled Arcimboldi (Italian: [dʒuˈzɛppe artʃimˈbɔldo]; 5 April 1527 – 11 July 1593), was an Italian Mannerist painter best known for creating imaginative portraits in the shapes of human heads, though composed entirely of objects such as fruits, vegetables, flowers, fish",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giuseppe Arcimboldo” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f10730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Artists, including Norman Rockwell, Robert Rauschenberg, Malcolm H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norman Rockwell” is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:28.336Z",
+   "target": "f14437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Magdalena Carmen Frida Kahlo y Calderón (Spanish pronunciation: [ˈfɾiða ˈkalo]; 6 July 1907 – 13 July 1954) was a Mexican painter known for her many portraits, self-portraits, and works inspired by the nature and artifacts of Mexico.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frida Kahlo” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:01:03Z",
+   "target": "f10724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cobweb painting, sometimes known as gossamer painting, is the delicate process of painting on canvases made from caterpillar and spider webs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:01:04Z",
+   "target": "f10724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "they would take the cobwebs and transform them into a delicate canvas",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:01:06Z",
+   "target": "f10724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "were very popular in the Tyrol in the 18th and 19th centuries. The material was streched on a cardboard frame, coated with milk and painted with watercolour.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:01:08Z",
+   "target": "f10725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "I used over 1,000 tea bags.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "The artist's own words in interview; the work is captioned 'God Save the Queen, 2002. Tea bags on Hessian'."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:01:10Z",
+   "target": "f10725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The question related to a portrait of Britain’s Queen Elizabeth II he made using tea bags in 2002",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms tea bags and 2002; does not give the count."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:14.677Z",
+   "target": "f10724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cobweb painting, sometimes known as gossamer painting, is the delicate process of painting on canvases made from caterpillar and spider webs",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:14.677Z",
+   "target": "f10724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "were very popular in the Tyrol in the 18th and 19th centuries. The material was streched on a cardboard frame, coated with milk and painted with watercolour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:14.677Z",
+   "target": "f10725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The question related to a portrait of Britain’s Queen Elizabeth II he made using tea bags in 2002",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s10"
+  }
+ ]
+}

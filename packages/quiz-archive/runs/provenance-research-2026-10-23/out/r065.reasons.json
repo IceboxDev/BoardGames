@@ -1,0 +1,45 @@
+{
+ "a1771": {
+  "kind": "corrected",
+  "reason": "The body said Jim Cramer coined FANG in 2013. Investopedia credits the coinage to TheStreet's Bob Lang, with Cramer popularising it on Mad Money (Wikipedia also mentions Lang). The sentence now says Cramer popularised it in 2013 and that the label is usually credited to Bob Lang (EN/DE/RU). The answer (Facebook, Amazon, Netflix and Google) is unchanged.",
+  "sources": [
+   {
+    "url": "https://www.investopedia.com/terms/f/fang-stocks-fb-amzn.asp"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Big_Tech"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "a1975": {
+  "kind": "edited",
+  "reason": "'No woman has been elected since' is time-sensitive. It is now dated 'as of 2026' in EN/DE/RU; the next Federal Convention is due in early 2027.",
+  "sources": [
+   {
+    "url": "https://de.wikipedia.org/wiki/Bundespr%C3%A4sident_(Deutschland)"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f13686": {
+  "kind": "marked",
+  "reason": "The body's 'no woman elected since' depends on the 2027 Federal Convention, so the fact gets reviewBy 2027-03-01. The answer for 1949–2010 ('none') is not affected.",
+  "sources": [
+   {
+    "url": "https://de.wikipedia.org/wiki/Bundespr%C3%A4sident_(Deutschland)"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ }
+}

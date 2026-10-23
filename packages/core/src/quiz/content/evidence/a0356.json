@@ -1,0 +1,408 @@
+{
+ "article": "a0356",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel",
+   "title": "Georg Wilhelm Friedrich Hegel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:21.888Z",
+   "snapshot": "2b215530572419788346608e85f3d7f1ad4384d596023378f902136dd18b598f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Socrates",
+   "title": "Socrates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:23.063Z",
+   "snapshot": "2d00fa6353bce0e4908b03af8e59bdd72baab7cc8cc8f47b6cac51e7589bc204"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/G%C3%B6del%27s_completeness_theorem",
+   "title": "Gödel's completeness theorem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:24.131Z",
+   "snapshot": "bd25b97cb9fd156d3408d4be20f48891f3ab230225061dd6d5db5e399a6902ad"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ontologie",
+   "title": "Ontologie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:22.796Z",
+   "snapshot": "181c5f1ea507e73dbf8a9df94566c2f65c41b76849f4715c69e46dd63bf1986b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/%C3%9Cber_ein_vermeintes_Recht_aus_Menschenliebe_zu_l%C3%BCgen",
+   "title": "Über ein vermeintes Recht aus Menschenliebe zu lügen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:23.626Z",
+   "snapshot": "13436ec310bd00ac2d4baa37b25e032be5435cef62b17d85f58a40a37aa41195"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Heinrich_Moritz_Chaly%C3%A4us",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Maeeutik",
+   "title": "Mäeutik",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:33.599Z",
+   "snapshot": "7c8a9e9d93040e8dddf4c724d1c04ee38a941123f9d81a51faf550a029b7a099"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/maieutic",
+   "title": "Maieutic Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:33.725Z",
+   "snapshot": "abcc26e71a85afb87b0ff0a4e45048477c46e06a9f89614ecbeb715b8cd1fdab"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Maieutics",
+   "title": "Maieutics",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:35.117Z",
+   "snapshot": "7788aa161dbdfef415c7d2bff355bc29e7bfd03ab0f05b418de8cea42d321e4d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Synthesis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c030"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Maieutics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01778",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deduction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ontologie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kategorischer Imperativ",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:35.265Z",
+   "target": "f01776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fichte introduced into German philosophy the three-step of thesis, antithesis, and synthesis, using these three terms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Synthesis” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:35.265Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Maieutics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Maieutics”, “Mäeutik”, “майевтика”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:35.265Z",
+   "target": "f01778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "There are numerous deductive systems for first-order logic, including systems of natural deduction and Hilbert-style systems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deduction” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:35.265Z",
+   "target": "f01779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heute werden in der analytischen Ontologie die Ausdrücke „Ontologie“ und „Metaphysik“ zumeist synonym verwendet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ontologie” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:35.265Z",
+   "target": "f01780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kants kategorischer Imperativ ist unhaltbar und seine Ableitung eines generellen Lügenverbots ist es selbstverständlich auch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kategorischer Imperativ” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:11:41Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "die sokratische Methode, durch geschicktes Fragen die im Partner schlummernden, ihm aber nicht bewussten richtigen Antworten und Einsichten heraufzuholen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:11:42Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "of or relating to the method used by Socrates of eliciting knowledge in the mind of a person by interrogation and insistence on close and logical reasoning.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:11:44Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Socrates describes his method as a form of \"midwifery\" (maieutikós; source of the English adjective maieutic)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:55.887Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "die sokratische Methode, durch geschicktes Fragen die im Partner schlummernden, ihm aber nicht bewussten richtigen Antworten und Einsichten heraufzuholen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:55.887Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "of or relating to the method used by Socrates of eliciting knowledge in the mind of a person by interrogation and insistence on close and logical reasoning.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:55.887Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Socrates describes his method as a form of \"midwifery\" (maieutikós; source of the English adjective maieutic)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:55.887Z",
+   "target": "f01777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mäeutik ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mäeutik” is on the snapshot of s7"
+  }
+ ]
+}

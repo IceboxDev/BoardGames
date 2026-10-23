@@ -1,0 +1,373 @@
+{
+ "article": "a2490",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Positions_of_the_feet_in_ballet",
+   "title": "Positions of the feet in ballet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:15.605Z",
+   "snapshot": "2d8f70c93ed5a371ec00f0fddee33946bbb8d1e5334e288bd2067e4f84144357"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Spitzenschuh",
+   "title": "Spitzenschuh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:13.285Z",
+   "snapshot": "0ec768018eb52ff4f7588a3a94c3f6eb2853b11c078e1f89ad5a56c936178a9c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pas_de_deux",
+   "title": "Pas de deux",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:16.635Z",
+   "snapshot": "cf6ad3d4c33db4fcbda04236b5668e59013137f24171ca82049ba0f0d6ee95c3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Acad%C3%A9mie_Royale_de_Danse",
+   "title": "Académie Royale de Danse",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:17.597Z",
+   "snapshot": "529b8c6ffcd38f59639fdb7fedddc7dc5f80c4e0e5775a8c179a83869428c68f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/La_Sylphide",
+   "title": "La Sylphide",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:18.615Z",
+   "snapshot": "9006656ffa851d74323e8c917ead66545f02e64dc5887973dfe1b76f015721cf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tutu_(clothing)",
+   "title": "Tutu (clothing)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:19.618Z",
+   "snapshot": "0c2eec0770d32d08e87190065acd9fd11e865dd61be28045127b8960bb60952f"
+  },
+  "s7": {
+   "url": "https://www.abt.org/explore/learn/ballet-dictionary/",
+   "title": "Ballet Dictionary",
+   "publisher": "American Ballet Theatre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:41.043Z",
+   "snapshot": "7929bafca13282d6729957eb4344dabfe8efb23d5f50d3cde2edaa67e94503a4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "5 basic positions",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13198",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spitzenschuhe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-194"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pas de deux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-396"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Louis XIV",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "La Sylphide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tutu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.569Z",
+   "target": "f13197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "5 basic positions",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“5 basic positions”, “5 Grundpositionen”, “5 основных позиций”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.569Z",
+   "target": "f13198",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spitzenschuhe werden nahezu ausschließlich von Frauen getragen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spitzenschuhe” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.569Z",
+   "target": "f13199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In ballet, a pas de deux [pɑ d(ə) dø] (French, literally \"step of two\") is a dance duet in which two dancers perform ballet steps together.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pas de deux” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.569Z",
+   "target": "f13200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Académie Royale de Danse was a former dance academy founded by Letters Patent on the initiative of King Louis XIV of France in March 1661.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis XIV” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:28.569Z",
+   "target": "f13201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On 12 March 1832 the first version of La Sylphide premiered at the Salle Le Peletier of the Paris Opéra with choreography by the groundbreaking Italian choreographer Filippo Taglioni and music by Jean-Madeleine Schneitzhoeffer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La Sylphide” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:28.569Z",
+   "target": "f13202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A tutu is a dress worn as a costume in a classical ballet performance, often with attached bodice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tutu” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:01:08Z",
+   "target": "f13197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "There are five basic positions of the feet in classical ballet, and every step or movement is begun and ended in one or another of these positions",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:01:10Z",
+   "target": "f13197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "There are five basic positions in modern-day classical ballet, known as the first through fifth positions.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:10.927Z",
+   "target": "f13197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "There are five basic positions of the feet in classical ballet, and every step or movement is begun and ended in one or another of these positions",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:10.927Z",
+   "target": "f13197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "There are five basic positions in modern-day classical ballet, known as the first through fifth positions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  }
+ ]
+}

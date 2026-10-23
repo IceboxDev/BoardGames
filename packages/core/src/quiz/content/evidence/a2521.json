@@ -1,0 +1,346 @@
+{
+ "article": "a2521",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Michio_Kaku",
+   "title": "Michio Kaku",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:57.272Z",
+   "snapshot": "7a64f2a993b2632df387d97cb864cf77a23f5e06599a201a2cb52713a2a89e27"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Man_Who_Mistook_His_Wife_for_a_Hat",
+   "title": "The Man Who Mistook His Wife for a Hat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:59.677Z",
+   "snapshot": "ff3a6546c282c68cde70af64d4c9a8ce2af847c8ca7204bdccaa0bdabef0694c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Descartes%27_Error",
+   "title": "Descartes' Error – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:00.664Z",
+   "snapshot": "86bda31011b83377bf5846179425a7a98ceec7b25d6f248a759654236805fd91"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Phantoms_in_the_Brain",
+   "title": "Phantoms in the Brain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:01.676Z",
+   "snapshot": "9ffbdcbc474ff8d08bdc07f567ad00a13623b028e852e6a9901e4413f66af4ff"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eric_Kandel",
+   "title": "Eric Kandel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:02.755Z",
+   "snapshot": "134770611139458d41bbd3731ab1bb661df0c6dbea9c6f83c109f24be5106bd4"
+  },
+  "s6": {
+   "url": "https://publishersweekly.com/9780688152475",
+   "title": "Phantoms in the Brain: Probing the Mysteries of the Human Mind (review)",
+   "publisher": "Publishers Weekly",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:54.449Z",
+   "snapshot": "c86302feb708774b6968e43aea732ccc3373a448064044f393d84de44554b804"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Physik des Bewusstseins",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-346"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oliver Sacks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Antonio Damasio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "V. S. Ramachandran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eric Kandel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:33.535Z",
+   "target": "f13427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Physik des Bewusstseins: Über die Zukunft des Geistes (The Future of the Mind, 2014).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Physik des Bewusstseins” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:33.535Z",
+   "target": "f13428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Man Who Mistook His Wife for a Hat and Other Clinical Tales is a 1985 book by neurologist Oliver Sacks presenting narratives based on some of his patients.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oliver Sacks” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:33.535Z",
+   "target": "f13429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Descartes' Error: Emotion, Reason, and the Human Brain is a 1994 book by neuroscientist António Damásio describing the physiology of rational thought and decision, and how the faculties could have evolved through Darwinian natural selection.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antonio Damasio” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:33.535Z",
+   "target": "f13430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "V. S. Ramachandran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“V. S. Ramachandran”, “В. С. Рамачандран”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:33.535Z",
+   "target": "f13431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eric Kandel was born on November 7, 1929, in Vienna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eric Kandel” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:29:34Z",
+   "target": "f13430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Phantoms in the Brain: Probing the Mysteries of the Human Mind V. S. Ramachandran.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:29:36Z",
+   "target": "f13430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is a 1998 popular science book by neuroscientist V.S. Ramachandran and New York Times science writer Sandra Blakeslee",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:17.395Z",
+   "target": "f13430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Phantoms in the Brain: Probing the Mysteries of the Human Mind V. S. Ramachandran.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:17.395Z",
+   "target": "f13430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is a 1998 popular science book by neuroscientist V.S. Ramachandran and New York Times science writer Sandra Blakeslee",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:17.395Z",
+   "target": "f13430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Phantoms in the Brain: Probing the Mysteries of the Human Mind by V. S. Ramachandran",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “V. S. Ramachandran” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-057",
+ "image": "IMG20261007181500.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher Stadt ist der Piazza San Marco ein zentraler Platz?",
+   "de": "In welcher Stadt ist der Piazza San Marco ein zentraler Platz?",
+   "en": "In which city is the Piazza San Marco a central square?",
+   "reworked": false,
+   "answerDe": "Venedig",
+   "answerEn": "Venice",
+   "timeline": {
+    "kind": "period",
+    "start": "1172",
+    "end": "1178",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "St Mark's Square in Venice is enlarged westward under Doge Sebastiano Ziani",
+    "labelDe": "Der Markusplatz in Venedig wird unter dem Dogen Sebastiano Ziani nach Westen erweitert"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Markusplatz",
+    "title": "Markusplatz – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "The card's 'der Piazza' (masculine) is kept verbatim; Italian piazza is feminine.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der Drehbuchautor des Films Rocky?",
+   "de": "Wie heißt der Drehbuchautor des Films Rocky?",
+   "en": "Who wrote the screenplay of the film Rocky?",
+   "reworked": false,
+   "answerDe": "Sylvester Stallone",
+   "answerEn": "Sylvester Stallone",
+   "timeline": {
+    "kind": "creation",
+    "start": "1976",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Rocky, written by and starring Sylvester Stallone, is released",
+    "labelDe": "Rocky, geschrieben von und mit Sylvester Stallone, kommt in die Kinos"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Rocky",
+    "title": "Rocky – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welche beiden Länder nahmen im Jahr 2016, nach fast 55 Jahren des Kalten Krieges, erstmalig wieder volle diplomatische Beziehungen auf?",
+   "de": "Welche beiden Länder nahmen im Jahr 2015, nach fast 55 Jahren des Kalten Krieges, erstmalig wieder volle diplomatische Beziehungen auf?",
+   "en": "Which two countries restored full diplomatic relations in 2015 for the first time after almost 55 years of Cold War hostility?",
+   "reworked": true,
+   "answerDe": "USA und Kuba",
+   "answerEn": "United States and Cuba",
+   "timeline": {
+    "kind": "event",
+    "start": "2015-07-20",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Cuba and the United States restore diplomatic relations, severed since 1961",
+    "labelDe": "Kuba und die USA nehmen ihre 1961 abgebrochenen diplomatischen Beziehungen wieder auf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cuba%E2%80%93United_States_relations",
+    "title": "Cuba–United States relations – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "Card says 2016, but relations were restored on 20 July 2015 (severed 1961); 2016 was Obama's Havana visit. Year corrected in de/en.",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher niederländische Künstler, der auch „Teufelsmaler” genannt wird, hat den gleichen Namen wie ein Detektiv in Michael Connellys Krimireihe?",
+   "de": "Welcher niederländische Künstler, der auch „Teufelsmaler” genannt wird, hat den gleichen Namen wie ein Detektiv in Michael Connellys Krimireihe?",
+   "en": "Which Dutch artist, also called the 'Devil's painter', shares his name with a detective in Michael Connelly's crime series?",
+   "reworked": false,
+   "answerDe": "Hieronymus Bosch",
+   "answerEn": "Hieronymus Bosch",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1450",
+    "end": "1516",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Hieronymus Bosch, Dutch painter of the late Gothic and Renaissance",
+    "labelDe": "Hieronymus Bosch, niederländischer Maler der Spätgotik und Renaissance"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hieronymus_Bosch",
+    "title": "Hieronymus Bosch – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Connelly's detective is Hieronymus 'Harry' Bosch (en.wikipedia.org/wiki/Harry_Bosch). Born c. 1450, died August 1516.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie viel Dollar kostete im Jahr 1976 ein Applecomputer der ersten Generation?",
+   "de": "Wie viel Dollar kostete im Jahr 1976 ein Applecomputer der ersten Generation?",
+   "en": "How many dollars did a first-generation Apple computer cost in 1976?",
+   "reworked": false,
+   "answerDe": "666,66 Dollar",
+   "answerEn": "$666.66",
+   "timeline": {
+    "kind": "event",
+    "start": "1976-07",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Apple I goes on sale for $666.66",
+    "labelDe": "Der Apple I kommt für 666,66 Dollar in den Handel"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Apple_I",
+    "title": "Apple I – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "Apple I; Wozniak chose the price for its repeating digits (one-third markup on $500 wholesale).",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wasserball wurde früher auf Fässern reitend gespielt. Richtig oder falsch?",
+   "de": "Worauf ritten die Spieler in den frühen Formen des Wasserballs?",
+   "en": "What did players ride on in the early forms of water polo?",
+   "reworked": true,
+   "answerDe": "Auf Fässern",
+   "answerEn": "On barrels",
+   "timeline": {
+    "kind": "era",
+    "start": "1870",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Early water polo in Britain, played riding barrels painted like horses",
+    "labelDe": "Früher Wasserball in Großbritannien, gespielt reitend auf wie Pferde bemalten Fässern"
+   },
+   "source": {
+    "url": "https://www.ctpublic.org/2016-08-15/dipping-a-toe-in-water-polo-for-the-first-time-heres-a-handy-guide",
+    "title": "Dipping A Toe In Water Polo For The First Time? Here's A Handy Guide – Connecticut Public",
+    "lang": "en"
+   },
+   "notes": "Reworked from true/false (true). 19th-century players rode barrels painted like horses and struck the ball with mallets; Britannica and the Canadian Encyclopedia (c. 1870, England) say the same.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

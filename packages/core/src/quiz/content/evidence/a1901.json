@@ -1,0 +1,400 @@
+{
+ "article": "a1901",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sebastian_Vettel",
+   "title": "Sebastian Vettel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:07.689Z",
+   "snapshot": "311b36842d45732b7efc690f78a4c172d64dbd5be36871ed703197c6566ec5e9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton",
+   "title": "Lewis Hamilton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:08.731Z",
+   "snapshot": "24d58ec8fe3f52d66405d8922a0e07d49c0aa93a2f9c008119ba4f4c59cb4bea"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2021_Abu_Dhabi_Grand_Prix",
+   "title": "2021 Abu Dhabi Grand Prix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:09.624Z",
+   "snapshot": "776edfad6918e8b944851d22f1f5d680b9a284827ac6c4877e4fcfa04fbebf6c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Juan_Manuel_Fangio",
+   "title": "Juan Manuel Fangio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:10.694Z",
+   "snapshot": "b086ec979c1a901f35cc975a835974d968ea495a550a5e84edf8e2e88df15672"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Schumacher",
+   "title": "Michael Schumacher",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:29:08.305Z",
+   "snapshot": "34a2c2c40043cd64c61c5fafe02e7c52834157cd57632e435a3db6d3f65bbd69"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/2025_Formula_One_World_Championship",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:11.615Z",
+   "snapshot": "50161d97bfb29714b8d3439caacf2d23ea5e23bb3f14d307cb266596fd69c5e6"
+  },
+  "s7": {
+   "url": "https://www.wral.com/michael-schumacher-fast-facts/18085182/",
+   "title": "Michael Schumacher Fast Facts",
+   "publisher": "WRAL (CNN Library)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:16.497Z",
+   "snapshot": "eb62e2e9a52cdf0c640b6ae10addcd8621c5e77d77a1ae8643e9f1f79d03bc54"
+  },
+  "s8": {
+   "url": "https://www.hellomagazine.com/profiles/476048/michael-schumacher/",
+   "title": "Michael Schumacher – Biography",
+   "publisher": "HELLO! Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:16.987Z",
+   "snapshot": "8452baaca5f53e4461769b25970d9e69bd6322ec6bcbaa45867560d467b8cd44"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sebastian Vettel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lewis Hamilton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Max Verstappen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Juan Manuel Fangio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "siebenmal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; history entry seq 38; transcript tp-026"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:41.869Z",
+   "target": "f09501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sebastian Vettel (German pronunciation: [zeˈbasti̯a(ː)n ˈfɛtl̩] ; born 3 July 1987) is a German former racing driver who competed in Formula One from 2007 to 2022.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sebastian Vettel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:41.869Z",
+   "target": "f09503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He is also involved in charitable work through the creation of his Lewis Hamilton Foundation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lewis Hamilton” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:41.869Z",
+   "target": "f09504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The race decided both the Drivers' and Constructors' championships; Max Verstappen of the Red Bull Racing team and Lewis Hamilton of the Mercedes-AMG Petronas team both entered the race on 369.5 points, with Verstappen clinching his maiden Drivers' title while Mercedes-AMG Petronas won a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Verstappen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:41.869Z",
+   "target": "f09505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Juan Manuel Fangio (Spanish: [ˈxwan maˈnwel ˈfaŋxjo], Italian: [ˈfandʒo]; 24 June 1911 – 17 July 1995) was an Argentine racing driver, who competed in Formula One from 1950 to 1958.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juan Manuel Fangio” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:41.869Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "siebenmal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“siebenmal”, “seven times”, “семь раз”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:33:29Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Er hält die Rekorde von sieben Weltmeistertiteln (seit 2020 zusammen mit Lewis Hamilton), fünf Weltmeisterschaften in Folge und 77 schnellsten Rennrunden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:33:32Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Here's a look at the life of seven-time Formula One world champion Michael Schumacher.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:33:35Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "seven-times World Formula One Champion Michael Schumacher",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:33.286Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Er hält die Rekorde von sieben Weltmeistertiteln (seit 2020 zusammen mit Lewis Hamilton), fünf Weltmeisterschaften in Folge und 77 schnellsten Rennrunden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:33.286Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Here's a look at the life of seven-time Formula One world champion Michael Schumacher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:33.286Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "seven-times World Formula One Champion Michael Schumacher",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:33.286Z",
+   "target": "f13980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "While he barely flinched at hurtling towards hairpin bends at break-neck speed, word is that seven-times World Formula One Champion Michael Schumacher was so overwhelmed at the birth of his first child, daughter Gina Maria, he thought he would faint.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “seven times” is on the snapshot of s8"
+  }
+ ]
+}

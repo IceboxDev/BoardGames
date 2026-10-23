@@ -1,0 +1,517 @@
+{
+ "article": "a0168",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Archimedes%27_screw",
+   "title": "Archimedes' screw – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:18.270Z",
+   "snapshot": "5c1ae5309d01776c3d4df44d95d315a6b7d8622602035bd92c5a43dd79e86817"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Shadoof",
+   "title": "Shadoof – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:19.176Z",
+   "snapshot": "16d5ce1a52e24ebfe5e9b5519f229f45623769013f0fef9c2422479155d233ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Archimedes",
+   "title": "Archimedes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:20.245Z",
+   "snapshot": "360c793e32d916c1074185af4e1d22a3223bc184e7ec9a5261471a771d3299b6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aeolipile",
+   "title": "Aeolipile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:21.159Z",
+   "snapshot": "b688687be3a6b58fd627f10b0e2aeeef48df40873b9bde141d44320637b8f7bb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+   "title": "Antikythera mechanism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:22.274Z",
+   "snapshot": "98e0df6db4bf356e930896fd1650f022814432a09721da46bed85c4d78717fb8"
+  },
+  "s6": {
+   "url": "https://www.grc.nasa.gov/www/k-12/rocket/TRCRocket/history_of_rockets.html",
+   "title": "Brief History of Rockets",
+   "publisher": "NASA Glenn Research Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:20.726Z",
+   "snapshot": "91628ef928303a5bca71b651eaa87abebaa13701f73b64acd2f063511ce924b5"
+  },
+  "s7": {
+   "url": "https://www.antikythera-mechanism.gr/faq",
+   "title": "Frequently Asked Questions – Antikythera Mechanism Research Project",
+   "publisher": "Antikythera Mechanism Research Project",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:20.362Z",
+   "snapshot": "85d88442d61ad511cf6375d506201480b0237fe80c362195bb7ddfb9ce69faf6"
+  },
+  "s8": {
+   "url": "https://www.nature.com/articles/s41598-021-84310-w",
+   "title": "A Model of the Cosmos in the ancient Greek Antikythera Mechanism (Scientific Reports, 2021)",
+   "publisher": "Nature Portfolio / Scientific Reports",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:21.019Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Archimedes' screw",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c014"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shadoof",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Block and tackle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aeolipile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Antikythera mechanism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-004"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:03.605Z",
+   "target": "f00836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An Archimedes' screw is a hydraulic machine composed of an outer cylinder and an inner cylinder with helical blades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Archimedes' screw” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:03.605Z",
+   "target": "f00837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A shadoof (or shaduf, well pole, well sweep, sweep, swape, or simply a lift) is a tool that is used to lift water from a well or another water source onto land or into another waterway or basin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shadoof” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:03.605Z",
+   "target": "f00838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "and the authors of these stories provide conflicting ideas about how this task was accomplished: Plutarch states that Archimedes constructed a block-and-tackle pulley system, while Hero of Alexandria attributed the same boast to Archimedes' invention of the baroulkos, a kind of windlass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Block and tackle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:03.605Z",
+   "target": "f00839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An aeolipile, aeolipyle, or eolipile, also known as a Hero's (or Heron's) engine, is a simple, bladeless radial steam turbine which spins when the central water container is heated.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aeolipile” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:03.605Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Antikythera mechanism ( AN-tik-ih-THEER-ə, US also  AN-ty-kih-) is an ancient Greek hand-powered orrery (model of the Solar System) built in the 2nd century BC and discovered in 1901.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antikythera mechanism” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:42:05Z",
+   "target": "f00839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "invented a similar rocket-like device called an aeolipile",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same passage: Hero of Alexandria's aeolipile 'used steam as a propulsive gas' — a sphere on a kettle spun by steam jets."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:42:07Z",
+   "target": "f00839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The aeolipile is considered to be the first recorded steam engine or reaction steam turbine",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:09Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is the oldest known example of an analogue computer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:42:11Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It was a mechanical computer of bronze gears that used ground-breaking technology to make astronomical predictions",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:42:13Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Antikythera mechanism is generally referred to as the first known analogue computer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:42:29Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Mechanism provides a unique window on history, allowing us to view the collected astronomical knowledge of the Ancient Greeks",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "Correction to e13: its quote ('It is the oldest known example of an analogue computer') was misattributed — it is from the Wikipedia article (s5), not this FAQ. This FAQ confirms the ancient Greek astronomical device, not the 'computer' label."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:42:32Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is the oldest known example of an analogue computer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:23.061Z",
+   "target": "f00839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "invented a similar rocket-like device called an aeolipile",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:23.061Z",
+   "target": "f00839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The aeolipile is considered to be the first recorded steam engine or reaction steam turbine",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:23.061Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Mechanism provides a unique window on history, allowing us to view the collected astronomical knowledge of the Ancient Greeks",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:23.061Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is the oldest known example of an analogue computer",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:23.061Z",
+   "target": "f00839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "invented a similar rocket-like device called an aeolipile.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aeolipile” is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:23.061Z",
+   "target": "f00840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Frequently Asked Questions | Antikythera Mechanism Research Project",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Antikythera mechanism” is on the snapshot of s7"
+  }
+ ]
+}

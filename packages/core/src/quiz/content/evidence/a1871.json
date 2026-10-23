@@ -1,0 +1,585 @@
+{
+ "article": "a1871",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Potato",
+   "title": "Potato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:47.604Z",
+   "snapshot": "5dd8e83ed91515d752c02698cb5551984790f71763360f95e7083cf4c281778d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nicotine",
+   "title": "Nicotine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:54.136Z",
+   "snapshot": "8aece99b890db1e2c521da82375b923e57f47282feeeba2536fc6aea1a67c329"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Eggplant",
+   "title": "Eggplant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:15.475Z",
+   "snapshot": "659af91375a8ceb1791a1b0e2c7ab2d023c4cf993d719854a0003a52d9877a5a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Atropine",
+   "title": "Atropine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:19.249Z",
+   "snapshot": "cd92a1b91dd583a02c40695a96637f982602e5a19b287170444141bb87b1764b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Solanum_watneyi",
+   "title": "Solanum watneyi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:19.533Z",
+   "snapshot": "133f6eaf71db6c7bbaefb3f5e0a18a32bbddd834f059d4e970ad0919bad3bd53"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Berry_(botany)",
+   "title": "Berry (botany)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:20.670Z",
+   "snapshot": "973ef84089dd2b94442e852e93698c73261ae0a92e3731a995319b8c1bafb6d0"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tomato",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:54.146Z",
+   "snapshot": "939e0d7d1bb533b4b3090c0bf630e7727df65f18d23a166b2eef64a1779ba848"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4816977/",
+   "title": "Solanum watneyi, a new bush tomato species from the Northern Territory, Australia named for Mark Watney of the book and film “The Martian”",
+   "publisher": "PhytoKeys (Martine et al. 2016), via PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:00.674Z",
+   "snapshot": "e68a86b06db47e466887cb3dee196e6817a37dcca5b1d580f0874dcd5cc5881e"
+  },
+  "s9": {
+   "url": "https://www.law.cornell.edu/supremecourt/text/149/304",
+   "title": "Nix v. Hedden, 149 U.S. 304 (1893)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:00.926Z",
+   "snapshot": "646998d50a263920f029649515a66d1d81e537a25c67cb5e821819e116c3afa1"
+  },
+  "s10": {
+   "url": "https://ahdictionary.com/word/search.html?q=berry",
+   "title": "berry – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:01.154Z",
+   "snapshot": "5b99c5b03171881e2511dfacfd83b987c115b8fc9d62a243854381b27289295a"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Nix_v._Hedden",
+   "title": "Nix v. Hedden – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:08:01Z"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Solanaceae",
+   "title": "Solanaceae – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:08:03Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "potato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "tobacco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09354",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "aubergine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "deadly nightshade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13363",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "bush tomato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-254"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tomato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-146"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:37.337Z",
+   "target": "f09351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The potato () is a starchy tuberous vegetable native to the Americas that is consumed as a staple food in many parts of the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “potato” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:37.337Z",
+   "target": "f09353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nicotine is a stimulant and alkaloid found primarily in plants of the nightshade family, notably in tobacco; it is also synthesized.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tobacco” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:37.337Z",
+   "target": "f09354",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is known by a number of names, including eggplant, aubergine, and brinjal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aubergine” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:37.337Z",
+   "target": "f09355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Atropine occurs naturally in a number of plants of the nightshade family, including deadly nightshade (Atropa belladonna), jimsonweed (Datura stramonium), mandrake (Mandragora officinarum) and angel's trumpet (Brugmansia).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.337Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deadly nightshade” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:37.337Z",
+   "target": "f13363",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "bush tomato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“bush tomato”, “Buschtomate”, “кустовой томат”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:37.337Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tomato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Tomato”, “Tomate”, “Томат”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:07:54Z",
+   "target": "f13363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "watneyi, a new bush tomato species from the Northern Territory, Australia named for Mark Watney of the book and film “The Martian”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:07:55Z",
+   "target": "f13363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Solanum watneyi is named after Mark Watney, a fictional botanist from The Martian.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:07:57Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Botanically speaking, tomatoes are the fruit of a vine, just as are cucumbers, squashes, beans, and peas.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:07:58Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "An indehiscent fruit derived from a single ovary and having the whole wall fleshy, such as a grape or tomato.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:08:01Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "the Court unanimously held that tomatoes should be classified as vegetables rather than fruits for purposes of tariffs, imports and customs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:08:03Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The fruit can be a berry as in the case of the tomato or wolfberry",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:26.572Z",
+   "target": "f13363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "watneyi, a new bush tomato species from the Northern Territory, Australia named for Mark Watney of the book and film “The Martian”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:26.572Z",
+   "target": "f13363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Solanum watneyi is named after Mark Watney, a fictional botanist from The Martian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:26.572Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Botanically speaking, tomatoes are the fruit of a vine, just as are cucumbers, squashes, beans, and peas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:26.572Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "An indehiscent fruit derived from a single ovary and having the whole wall fleshy, such as a grape or tomato.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:26.572Z",
+   "target": "f13363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Solanum watneyi, a new bush tomato species from the Northern Territory, Australia named for Mark Watney of the book and film “The Martian” - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “bush tomato” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:26.572Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The plaintiff's counsel then read in evidence from the same dictionaries the definitions of the word 'tomato.' The defendant's counsel then read in evidence from Webster's Dictionary the definitions of the words 'pea,' 'egg plant,' 'cucumber,' 'squash,' and 'pepper.'",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tomato” is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:26.572Z",
+   "target": "f25804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Botany An indehiscent fruit derived from a single ovary and having the whole wall fleshy, such as a grape or tomato.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tomato” is on the snapshot of s10"
+  }
+ ]
+}

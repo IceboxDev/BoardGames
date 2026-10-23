@@ -1,0 +1,242 @@
+{
+ "article": "a1783",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2013_horse_meat_scandal",
+   "title": "2013 horse meat scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:16.541Z",
+   "snapshot": "df5db09c9ddf4ba7e0f30b86e314db873eb665d4497d62ecbbf6bbd9251775c9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Harles_und_Jentzsch",
+   "title": "Harles und Jentzsch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:13.811Z",
+   "snapshot": "38d91bd3f68500f900a39e81cd403e723b6d4adb0a686cf6c584b05df68fee31"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2017_fipronil_eggs_contamination",
+   "title": "2017 fipronil eggs contamination – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:17.463Z",
+   "snapshot": "4dfe2835f27410094a064d8b4f158f0e4d80979275f9e413e0431d519a4421d6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2008_Chinese_milk_scandal",
+   "title": "2008 Chinese milk scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:18.624Z",
+   "snapshot": "7aba194a3036ddd5ad3e731c5c61edc7dd8cae169c00db954649c414f8163a72"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1985_Austrian_diethylene_glycol_wine_scandal",
+   "title": "1985 Austrian diethylene glycol wine scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:19.407Z",
+   "snapshot": "072e44d648a26d6201ffdfedc28e4ee3b92068a6ce2e1c2a565e9f32992026c2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "horse meat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dioxin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fipronil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "melamine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "diethylene glycol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:21.723Z",
+   "target": "f08911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The 2013 horse meat scandal was a food fraud crisis that began on 15 January 2013 when it was reported that a wide range of food products advertised in the European Union as containing beef were found to contain undeclared or improperly declared horse meat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “horse meat” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:21.723Z",
+   "target": "f08912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Unternehmen steht im Mittelpunkt eines Futtermittelskandals („Dioxin-Skandal“), der Ende 2010 bekannt wurde und bei dem nach Behördenangaben mindestens 3.000 Tonnen dioxinbelastetes Futterfett zur Weiterverarbeitung an zahlreiche deutsche Futtermittelhersteller geliefert wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dioxin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:21.723Z",
+   "target": "f08913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The 2017 fipronil eggs contamination is an incident in Europe and Asia involving the spread of fipronil insecticide which contaminated human-consumed chicken eggs and egg products.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fipronil” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:21.723Z",
+   "target": "f08914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The scandal involved Sanlu Group's milk and infant formula along with other food materials and components being adulterated with the chemical melamine, which resulted in kidney stones and other kidney damage in infants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “melamine” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:21.723Z",
+   "target": "f08915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1985 Austrian diethylene glycol wine scandal",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “diethylene glycol” is on the snapshot of s5"
+  }
+ ]
+}

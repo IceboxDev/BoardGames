@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-091",
+ "image": "IMG20261022154242.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which mammal has the most powerful bite force in the world?\nA. Hippopotamus\nB. Grizzly bear\nC. Siberian tiger\nAnswer: A. The hippopotamus has the strongest bite force of any mammal, with the ability to exert a pressure of about 1,800 pounds per square inch (about 1.2 million kilograms per square meter).",
+   "de": "Der Biss welches Säugetiers wurde mit etwa 1.800 Pfund pro Quadratzoll gemessen, dem stärksten für ein Säugetier berichteten Wert?",
+   "en": "Which mammal's bite has been measured at about 1,800 pounds per square inch, the strongest reported for any mammal?",
+   "reworked": true,
+   "answerDe": "Das Flusspferd",
+   "answerEn": "The hippopotamus",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1758",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Carl Linnaeus formally names the common hippopotamus, Hippopotamus amphibius",
+    "labelDe": "Carl Linné beschreibt das Flusspferd wissenschaftlich als Hippopotamus amphibius"
+   },
+   "source": {
+    "url": "https://www.fieldandstream.com/survival/10-most-powerful-animal-bites-on-planet",
+    "title": "10 most powerful animal bites on planet",
+    "lang": "en"
+   },
+   "notes": "Field & Stream: female hippos measured at 1,800 psi (males too aggressive to test), the highest mammal on its list behind saltwater crocodile and great white shark. 'Strongest of any mammal' is the commonly reported ranking, not a rigorous survey; the card's metric conversion (1,800 psi ≈ 1.27 million kgf/m²) is roughly right. Wikipedia's hippo article gives no figure.",
+   "domain": "nature",
+   "sub": "mammals"
+  },
+  {
+   "category": 2,
+   "discipline": "Physics",
+   "cardText": "[Physics] What is diffraction?\nA. The scattering of waves off surfaces\nB. The change in direction of waves as they pass from one medium to another\nC. The bending of waves around obstacles or through apertures\nAnswer: C. Diffraction is fundamental to holography, as holograms are produced by recording the diffraction patterns of light scattered from an object.",
+   "de": "Wie heißt die Beugung von Wellen um Hindernisse herum oder durch Öffnungen, deren Muster Hologramme aufzeichnen?",
+   "en": "What is the name for the bending of waves around obstacles or through apertures, the effect recorded in holograms?",
+   "reworked": true,
+   "answerDe": "Diffraktion (Beugung)",
+   "answerEn": "Diffraction",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1660",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Francesco Maria Grimaldi coins the word diffraction and first records accurate observations of it",
+    "labelDe": "Francesco Maria Grimaldi prägt das Wort Diffraktion und zeichnet erstmals genaue Beobachtungen davon auf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Diffraction",
+    "title": "Diffraction",
+    "lang": "en"
+   },
+   "notes": "Option B describes refraction; asked in reverse (definition → term).",
+   "domain": "science",
+   "sub": "physics"
+  }
+ ]
+}

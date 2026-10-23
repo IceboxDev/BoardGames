@@ -1,0 +1,242 @@
+{
+ "article": "a0923",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tristan_Otto",
+   "title": "Tristan Otto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:29:17.580Z",
+   "snapshot": "bd92446390c276a069ade4ab13027826a5614af4080194aed9efe99806db6aa4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Archaeopteryx",
+   "title": "Archaeopteryx – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:21.496Z",
+   "snapshot": "48ebc936b0dbb941bb988185f72b5c8b847bf4bbfc55bd9d000c85123abd0132"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sue_(dinosaur)",
+   "title": "Sue (dinosaur) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:22.373Z",
+   "snapshot": "3e129bd892ccdd008b1ccffd9f067e761df8a9a49b428188d05db3791961d390"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lucy_(hominid)",
+   "title": "Lucy (hominid) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:23.393Z",
+   "snapshot": "6b401ba825119c3fb15d7df13982cfb5ed73bcfb697e46a87390058db85c6a44"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tyrannosaurus",
+   "title": "Tyrannosaurus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:24.576Z",
+   "snapshot": "b820a817514236048275786b3535594f7ac60b7c1c5e99b4374981ac56fb9897"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tristan Otto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Archaeopteryx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lucy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tyrannosaurus rex",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-107"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:05.289Z",
+   "target": "f04611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "„Tristan Otto“, auch nur „Tristan“, wird das Skelett eines Tyrannosaurus rex (kurz T.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tristan Otto” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:05.289Z",
+   "target": "f04612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Between the late 19th century and the early 21st century, Archaeopteryx was generally accepted by palaeontologists and popular reference books as the oldest known bird (member of the group Avialae).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Archaeopteryx” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:05.289Z",
+   "target": "f04614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sue (stylized: SUE), officially designated FMNH PR 2081, is one of the largest, most extensive, and best preserved Tyrannosaurus rex fossils ever found, at over 90% recovered by bulk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sue” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:05.289Z",
+   "target": "f04615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "AL 288-1, commonly known as Lucy or Dinkʼinesh (Amharic: ድንቅ ነሽ, romanized: dənqə näš, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lucy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:05.289Z",
+   "target": "f13291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The type species Tyrannosaurus rex (rex meaning 'king' in Latin), often shortened to T.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tyrannosaurus rex” is on the snapshot of s5"
+  }
+ ]
+}

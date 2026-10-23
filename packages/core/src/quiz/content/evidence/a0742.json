@@ -1,0 +1,389 @@
+{
+ "article": "a0742",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Typhoon_Haiyan",
+   "title": "Typhoon Haiyan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:09.446Z",
+   "snapshot": "1f751e1422d0915142bd6bad4b3dbdcf4149db325db3a7187c9f99f5c0d0ded3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hurricane_Katrina",
+   "title": "Hurricane Katrina – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:10.492Z",
+   "snapshot": "e317fa26c844d15c14afe121d372b2be89df16470b21951778140c42b44024a9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Piddington",
+   "title": "Henry Piddington – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:11.224Z",
+   "snapshot": "ee848e6a6d3e4b2657b36493328ad980f023df6701e9e893d7b4ee31e284e0c1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maharashtra_floods_of_2005",
+   "title": "Maharashtra floods of 2005 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:12.217Z",
+   "snapshot": "7bfeb8f61b54cc5fb0eb4c577a665b371d83e4cc618ae7968321d0d851de01ad"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tropical_cyclone",
+   "title": "Tropical cyclone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:13.490Z",
+   "snapshot": "ddc7301301d5b3c38b86438448f4585c16b381d2f42b5edff920e63bf2b3b8ba"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/1999_Bridge_Creek%E2%80%93Moore_tornado",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:14.253Z",
+   "snapshot": "19c2bcb615b3df126bcb47833c151542b431ac395217c7f3381c8225905c4141"
+  },
+  "s7": {
+   "url": "https://oceanservice.noaa.gov/facts/cyclone.html",
+   "title": "What is the difference between a hurricane and a typhoon?",
+   "publisher": "NOAA National Ocean Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:21.093Z",
+   "snapshot": "f8dfcb90cffc702620b647288498790c3374d09b97d89ab2fc1d146b5c458b25"
+  },
+  "s8": {
+   "url": "https://wmo.int/topics/tropical-cyclone",
+   "title": "Tropical cyclone",
+   "publisher": "World Meteorological Organization",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:22.708Z",
+   "snapshot": "4fdb8089c874de36d1e0e996ac0195953d155dc2f93a4c6693426077d056b77e"
+  },
+  "s9": {
+   "url": "https://www.metoffice.gov.uk/weather/learn-about/weather/types-of-weather/hurricanes",
+   "title": "What are hurricanes?",
+   "publisher": "Met Office",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:21.693Z",
+   "snapshot": "26a84aa4710b56d51e8988646b45d0fb13bfb1c66fc5a24780b3a569bc75d159"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Typhoons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c062"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hurricanes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cyclones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monsoon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The ocean region where it occurs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript pp-077"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:37.677Z",
+   "target": "f03706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is one of the deadliest typhoons on record in the Philippines, killing at least 6,300 people in the region of Visayas alone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Typhoons” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:37.677Z",
+   "target": "f03707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The pressure measurement made Katrina the fifth most intense Atlantic hurricane on record at the time, only to be surpassed by Hurricanes Rita and Wilma later in the season; it was also the strongest hurricane ever recorded in the Gulf of Mexico at the time, before Rita broke the record.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hurricanes” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:37.677Z",
+   "target": "f03708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The following cover his major works on cyclones (he uses the word \"cyclone\" from his eighteenth memoir onwards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cyclones” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:37.677Z",
+   "target": "f03710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The rising number of extreme rain events is attributed to an increase in the fluctuations of the monsoon westerly winds, due to increased warming in the Arabian Sea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monsoon” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:37.677Z",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The ocean region where it occurs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The ocean region where it occurs”, “Das Meeresgebiet, in dem er auftritt”, “морской район, в котором он возникает”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:49Z",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The only difference between a hurricane and a typhoon is the location where the storm occurs.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:21:50Z",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tropical cyclones are also called hurricanes or typhoons, depending on the region.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:21:52Z",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "When wind speeds reach 74 mph, the tropical cyclone is referred to as a hurricane, typhoon or simply a cyclone depending upon where it is on the globe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:06.926Z",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The only difference between a hurricane and a typhoon is the location where the storm occurs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:06.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:06.926Z",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tropical cyclones are also called hurricanes or typhoons, depending on the region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:06.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:06.926Z",
+   "target": "f25268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "When wind speeds reach 74 mph, the tropical cyclone is referred to as a hurricane, typhoon or simply a cyclone depending upon where it is on the globe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:06.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  }
+ ]
+}

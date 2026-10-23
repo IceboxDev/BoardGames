@@ -1,0 +1,41 @@
+{
+ "id": "tp-ingest",
+ "title": "Trivial Pursuit: transcribe 399 cards and merge them into the bank",
+ "startedAt": "2026-10-20",
+ "endedAt": "2026-10-21",
+ "kind": "ingest",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded) (transcribers: 2-4 cards per job; planners/shard writers per bucket)",
+  "Owner: Mantas Kandratavičius (decisions, pauses, rulings)"
+ ],
+ "brief": "PROMPT.md",
+ "inputs": [
+  "photos/trivial-pursuit",
+  "repo scripts/quiz-ingest/TRANSCRIBE.md, PLAN.md, MERGE.md"
+ ],
+ "outputs": [
+  "transcripts/trivial-pursuit (399; tp-221 came later, run tp-221)",
+  "decisions/*.json applied with pnpm quiz-ingest apply"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/trivial-pursuit"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 293,
+  "bytes": 14329755,
+  "byExt": {
+   ".json": 166,
+   ".md": 105,
+   ".sh": 4,
+   ".tsv": 3,
+   ".txt": 15
+  },
+  "cards": 399,
+  "printedQuestions": 2394,
+  "reworked": 927,
+  "historyEntries": 12359
+ },
+ "notes": "numbers.tsv maps photo -> card number. queue*/next*.sh/prompt_*.txt drove the worker launches; candidates/ are the per-bucket candidate lists, plans/ the planner output for big buckets, decisions/ the merge decisions (history refs 'decisions/...' all point here; every one is dated 2026-10-20). STATE.md is the coordinator's running log for the whole TP programme (ingest, dedupe, enrich). Not archived: printed/ (= transcripts/), staged/ bank snapshots (37 MB), scratch/ (866 MB), num/*.png and m*.png crops."
+}

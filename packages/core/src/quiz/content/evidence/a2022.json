@@ -1,0 +1,333 @@
+{
+ "article": "a2022",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Deutsche_Einigungskriege",
+   "title": "Deutsche Einigungskriege – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:31.057Z",
+   "snapshot": "032cd5e5884c39f6eb13734a03fda07e8f618458bf1cbc407feeb01227a3bf38"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Crimean_War",
+   "title": "Crimean War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:34.448Z",
+   "snapshot": "12f703bd1fc820c761636e685b21b4826cb55cd3f2841f8787c3ff84f978034c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Second_Italian_War_of_Independence",
+   "title": "Second Italian War of Independence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:35.289Z",
+   "snapshot": "d5b8745923a5587bf73f6ebc1920d2c745fb35de3f7c524d7f9767ab6d14582f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Schleswig-Holsteinische_Erhebung",
+   "title": "Schleswig-Holsteinische Erhebung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:33.512Z",
+   "snapshot": "6200a8f062de4965c48e0f076807edb95fbec4ca43911db93c29bd3e244af926"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Russo-Turkish_War_(1877%E2%80%931878)",
+   "title": "Russo-Turkish War (1877–1878) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:36.680Z",
+   "snapshot": "469c0440360ee4b78c8ebb5d3eb9499a0f989911fc03bd42fbcee6754147b48e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Second_Schleswig_War",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:37.451Z",
+   "snapshot": "160f66d3c717db69525d00b0f209144df4d82f3a92ccecd6e7c6792b0e194b7f"
+  },
+  "s7": {
+   "url": "https://www.dhm.de/lemo/biografie/otto-bismarck",
+   "title": "Otto von Bismarck – LeMO Biografie",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:05.618Z",
+   "snapshot": "0d06ee895521aa1f5c5829b1437a20094c285846c4f170f5c324f2e057746798"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deutsch-Dänischer Krieg, Deutscher Krieg und Deutsch-Französischer Krieg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Crimean War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Second Italian War of Independence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schleswig-Holsteinischer Krieg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Russo-Turkish War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:08.106Z",
+   "target": "f10106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deutsch-Dänischer Krieg, Deutscher Krieg und Deutsch-Französischer Krieg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Deutsch-Dänischer Krieg, Deutscher Krieg und Deutsch-Französischer Krieg”, “Second Schleswig War, Austro-Prussian War and Franco-Prussian War”, “Вторая Шлезвигская война, Австро-прусская война и Франко-прусская война”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:08.106Z",
+   "target": "f10107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Crimean War was fought between Russia and an alliance of the Ottoman Empire, France, the United Kingdom, and Sardinia from October 1853 to February 1856.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crimean War” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:08.106Z",
+   "target": "f10108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Second Italian War of Independence was fought by the Second French Empire and the Kingdom of Sardinia against the Austrian Empire in 1859 and played a crucial part in the process of Italian Unification.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Second Italian War of Independence” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:08.106Z",
+   "target": "f10109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Erhebung vom März 1848 wurde zum Ersten Schleswig-Holsteinischen Krieg; der Deutsch-Dänische Krieg von 1864 wird deswegen auch als Zweiter Schleswig-Holsteinischer Krieg bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schleswig-Holsteinischer Krieg” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:08.106Z",
+   "target": "f10110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Russo-Turkish War (1877–1878) was a conflict between the Ottoman Empire and a coalition led by the Russian Empire which included Romania, Serbia, and Montenegro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russo-Turkish War” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:23Z",
+   "target": "f10106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nach den Siegen im Deutsch-Dänischen Krieg (1864), dem Deutschen Krieg (1866) und dem Deutsch-Französischen Krieg (1870/71) entstand das preußisch dominierte Deutsche Kaiserreich.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:26Z",
+   "target": "f10106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die im Nachhinein \"Einigungskriege\" genannten Kriege gegen Dänemark 1864, Österreich 1866 und Frankreich 1870/71 sind in diesem Sinne das Mittel",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:54.801Z",
+   "target": "f10106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nach den Siegen im Deutsch-Dänischen Krieg (1864), dem Deutschen Krieg (1866) und dem Deutsch-Französischen Krieg (1870/71) entstand das preußisch dominierte Deutsche Kaiserreich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:54.801Z",
+   "target": "f10106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die im Nachhinein \"Einigungskriege\" genannten Kriege gegen Dänemark 1864, Österreich 1866 und Frankreich 1870/71 sind in diesem Sinne das Mittel",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

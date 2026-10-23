@@ -1,0 +1,289 @@
+{
+ "article": "a1767",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Spandau_Citadel",
+   "title": "Spandau Citadel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:09.470Z",
+   "snapshot": "e0a11ee531871c73f4df8823afd1fc6c8aa97d1a92906065bdebb3ee3e2c38d7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bastion_fort",
+   "title": "Bastion fort – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:10.703Z",
+   "snapshot": "ff3ff0c959669c08ee9a142eddbdbc9503e999e88175125ade790227f8fa9351"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Krak%C3%B3w_Barbican",
+   "title": "Kraków Barbican – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:11.414Z",
+   "snapshot": "58c4eee89eff8301f4c76325a2da9df865026219120571608ac4fd6040aed093"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Casemate",
+   "title": "Casemate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:12.518Z",
+   "snapshot": "ac393e0cdcecd6e27d2f03a18c6213090edbc1de918218b5380a3b648ac61691"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ringstrasse",
+   "title": "Ringstrasse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:13.463Z",
+   "snapshot": "1c8059f2660e3866747c1675dfd90d1e6c571ae41df1c33e7891234e9befd194"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Michelangelo",
+   "title": "Michelangelo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:14.508Z",
+   "snapshot": "f8a1bc758c33eed8229f4cc00935e8ab459cf4c5fb535fcb7d44921ad22278ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Citadel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bastion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Barbican",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Casemate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Glacis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fortifications",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-244"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:18.946Z",
+   "target": "f08831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Spandau Citadel (German: Zitadelle Spandau) is a fortress in Berlin, Germany, one of the best-preserved Renaissance  military structures  of Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Citadel” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:18.946Z",
+   "target": "f08832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A bastion fort or trace italienne (a phrase derived from non-standard French, meaning 'Italian outline') is a style of fortification developed in Italy during the early modern period in response to the ascendancy of gunpowder weapons such as cannon, which rendered earlier medieval approaches to",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bastion” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:18.946Z",
+   "target": "f08833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Barbican (Polish: Barbakan) is a barbican – a fortified outpost once connected to the city walls.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barbican” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:18.946Z",
+   "target": "f08834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A casemate is a fortified gun emplacement or armoured structure from which guns are fired, in a fortification, warship, or armoured fighting vehicle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Casemate” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:18.946Z",
+   "target": "f08835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The walls were surrounded by a glacis approximately 500 meters wide, where construction and vegetation were prohibited for military defensive purposes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glacis” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:18.946Z",
+   "target": "f10637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A siege of the city ensued, and Michelangelo went to the aid of his beloved Florence by working on the city's fortifications from 1528 to 1529.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fortifications” is on the snapshot of s6"
+  }
+ ]
+}

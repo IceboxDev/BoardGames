@@ -1,0 +1,348 @@
+{
+ "article": "a1719",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia",
+   "title": "Sagrada Família – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:29.767Z",
+   "snapshot": "d4d352e3c3a6c57215042063ad65f3f88ebd09020da4b4ee192b9c0ed22865dd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Park_G%C3%BCell",
+   "title": "Park Güell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:38.073Z",
+   "snapshot": "24255846a2abd81366b1a307844709d60d60c570eca2b2f2429a860b31d3c225"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Casa_Mil%C3%A0",
+   "title": "Casa Milà – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:52.470Z",
+   "snapshot": "550e61f5514302db9bea9e81975b446b4cf7a16707242b6360e90884f7d8d594"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Casa_Batll%C3%B3",
+   "title": "Casa Batlló – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:53.436Z",
+   "snapshot": "bdc3c048f23ecb497a7cdc0e3c2239b657975d7e4912f22dc8d7f443d365c079"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Palau_G%C3%BCell",
+   "title": "Palau Güell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:54.409Z",
+   "snapshot": "0cc4324505f9086e6b6f46c4398bf03d1d37c8333961228e503467ef7d6e3c6f"
+  },
+  "s6": {
+   "url": "https://www.smithsonianmag.com/smart-news/still-unfinished-after-143-years-barcelonas-dazzling-sagrada-familia-now-tallest-church-in-world-180987624/",
+   "title": "Still Unfinished After 143 Years, Barcelona's Dazzling Sagrada Familia Is Now the Tallest Church in the World",
+   "publisher": "Smithsonian Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:23.274Z",
+   "snapshot": "131d68a33ed2b12847e0c37a6f785dbca90afb0896150fe13d380dc905ebfe39"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sagrada Família",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Park Güell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Casa Milà",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Casa Batlló",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Palau Güell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:11.236Z",
+   "target": "f08591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Basílica i Temple Expiatori de la Sagrada Família, or simply Sagrada Família, is a Catholic Basilica in the Eixample district of Barcelona, Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sagrada Família” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:11.236Z",
+   "target": "f08592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Park Güell (Catalan: Parc Güell [ˈpaɾɡ ˈɡweʎ]; Spanish: Parque Güell) is a complex of parks and gardens in Barcelona with architectural elements, located in the La Salut neighborhood of the Gràcia district in Barcelona, Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Park Güell” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:11.236Z",
+   "target": "f08593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Casa Milà (Catalan: [ˈkazə miˈla], Spanish: [ˈkasa miˈla]), popularly known as La Pedrera (Catalan: [lə pəˈðɾeɾə], Spanish: [la peˈðɾeɾa]; \"the stone quarry\") in reference to its unconventional rough-hewn appearance, is a Modernista building in Barcelona, Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Casa Milà” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:11.236Z",
+   "target": "f08594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Casa Batlló (Catalan pronunciation: [ˈkazə βəˈʎːo] ) is a building in the center of Barcelona, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Casa Batlló” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:11.236Z",
+   "target": "f08595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Palau Güell (Catalan pronunciation: [pəˈlaw ˈɣweʎ], English: Güell Palace) is a mansion designed by the architect Antoni Gaudí for the industrial tycoon Eusebi Güell, and was built between 1886 and 1888.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palau Güell” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:09:52Z",
+   "target": "f08591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The church is designed to have three grand façades: the Nativity façade to the east, the Passion façade to the west, and the Glory façade to the south (incomplete).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23",
+   "note": "as of Oct 2026 the Glory façade is still incomplete; the central tower was finished Feb 2026"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:09:56Z",
+   "target": "f08591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Still Unfinished After 143 Years, Barcelona’s Dazzling Sagrada Familia Is Now the Tallest Church in the World",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:57.896Z",
+   "target": "f08591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The church is designed to have three grand façades: the Nativity façade to the east, the Passion façade to the west, and the Glory façade to the south (incomplete).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:57.896Z",
+   "target": "f08591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Still Unfinished After 143 Years, Barcelona’s Dazzling Sagrada Familia Is Now the Tallest Church in the World",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:57.896Z",
+   "target": "f08591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Still Unfinished After 143 Years, Barcelona's Dazzling Sagrada Familia Is Now the Tallest Church in the World",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sagrada Família” is on the snapshot of s6"
+  }
+ ]
+}

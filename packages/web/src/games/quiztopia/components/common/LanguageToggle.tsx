@@ -1,10 +1,10 @@
-import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
+import type { QuizLanguage } from "@boardgames/core/protocol";
 import { type CoreTone, SegmentedControl } from "../../../../components/ui";
 
-// EN / DE / Both. The trainer setting seeds it; a board or study screen can
-// flip it locally without touching the setting.
+// EN / DE / Both — the table game's question language. The room default
+// seeds it; a reader flips it locally on their own screen.
 
-type Props<T extends QuiztopiaLanguage | "en" | "de"> = {
+type Props<T extends QuizLanguage | "en" | "de"> = {
   value: T;
   onChange: (next: T) => void;
   /** Offer the "Both" option (question + translation). Default true. */
@@ -14,7 +14,7 @@ type Props<T extends QuiztopiaLanguage | "en" | "de"> = {
   disabled?: boolean;
 };
 
-export function LanguageToggle<T extends QuiztopiaLanguage>({
+export function LanguageToggle<T extends QuizLanguage>({
   value,
   onChange,
   allowBoth = true,

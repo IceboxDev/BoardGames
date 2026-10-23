@@ -1,0 +1,256 @@
+{
+ "article": "a1040",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Chamber_of_Secrets_(film)",
+   "title": "Harry Potter and the Chamber of Secrets (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:56.691Z",
+   "snapshot": "c5c1084509c376db945b215be640d9640de46e165d7b05b9303b10f02ab92cc5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Chimera_(mythology)",
+   "title": "Chimera (mythology) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:57.612Z",
+   "snapshot": "6bac76e343e6fdb3bd22621a033a70b46f66833ed9934a65ec0dc550bd01c2d9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Minotaur",
+   "title": "Minotaur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:58.739Z",
+   "snapshot": "99c7e77f2d0e1b958a514094a61b3ef2f5279938d7b6706ae5058df16aa4283a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Perseus_with_the_Head_of_Medusa",
+   "title": "Perseus with the Head of Medusa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:09.331Z",
+   "snapshot": "8f98d7f6ece92e9101e5c7e9db1c9ba1d201cac2acaacfff1e84c712d2c83c6b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Daedalus",
+   "title": "Daedalus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:59.663Z",
+   "snapshot": "a3fec24565799f14c7779d521c770366b88d3e0b3a7b58119c410b81ba49ea8e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Medusa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:00.570Z",
+   "snapshot": "f94779496503ef3f8ff59cb9607719efd343ab23233b3ab9da7c1ac029c22db2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Inferno_(Dante)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:01.971Z",
+   "snapshot": "ddc541af2e6dcbe511f35e34c30e9e9f4aa0bf10c74a7a7f65ad16de47ebc874"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Basilisk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chimera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Minotaur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Perseus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Daedalus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:24.043Z",
+   "target": "f05196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A book page the boys find in Hermione's hand identifies the monster as a basilisk, a giant serpent that kills people who make direct eye contact; the petrified victims only saw it indirectly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basilisk” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:24.043Z",
+   "target": "f05199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Chimera, Chimaera, Chimæra, or Khimaira ( ky-MEER-ə, kih-, -⁠MAIR-; Ancient Greek: Χίμαιρα, romanized: Chímaira, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chimera” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:24.043Z",
+   "target": "f05200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In Greek mythology, the Minotaur (Ancient Greek: Μινώταυρος, romanized: Mīnṓtauros), also known as Asterion or Asterius, is a mythical creature portrayed during classical antiquity with the head and tail of a bull and the body of a man or, as described by Roman poet Ovid, a being \"part man and part",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minotaur” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:24.043Z",
+   "target": "f20380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Perseus with the Head of Medusa is a bronze sculpture made by Benvenuto Cellini in the period 1545–1554.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perseus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:24.043Z",
+   "target": "f20381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Greek mythology, Daedalus (UK: , US:  ; Greek: Ancient Greek: Δαίδαλος, romanized: Daídalos, Etruscan: Taitale, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daedalus” is on the snapshot of s5"
+  }
+ ]
+}

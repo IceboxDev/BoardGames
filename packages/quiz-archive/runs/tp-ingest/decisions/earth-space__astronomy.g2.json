@@ -1,0 +1,797 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "earth-space/astronomy",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-124",
+    "category": 5
+   },
+   "factId": "f00655"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-228",
+    "category": 5
+   },
+   "factId": "f07729"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-293",
+    "category": 5
+   },
+   "factId": "f07726"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-341",
+    "category": 5
+   },
+   "factId": "f10378"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1212",
+   "baseHash": "d8ebc8f39de7",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-111",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-277",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Firsts and Lasts in Human Spaceflight",
+    "titleDe": "Erste und Letzte in der bemannten Raumfahrt",
+    "bodyEn": "The history of crewed spaceflight is often told as a list of firsts, and a few names carry most of the weight.\n\nThe first was Yuri Gagarin. On 12 April 1961 the 27-year-old Soviet air force pilot completed a single orbit of the Earth in Vostok 1, a flight of 108 minutes that ended with him parachuting separately from his capsule over the Volga region. He never flew in space again and died in a training jet crash on 27 March 1968, but 12 April is still celebrated worldwide as Yuri's Night.\n\nTwo years later the Soviet Union scored another first. Valentina Tereshkova, a former textile worker and amateur parachutist selected for the female cosmonaut corps on 16 February 1962, spent almost three days alone in orbit aboard Vostok 6 in June 1963, circling the Earth 48 times. She remains the only woman ever to fly a solo space mission; no other woman went to space until Svetlana Savitskaya in 1982.\n\nThe Moon belonged to Apollo. On 20 July 1969 Apollo 11, the mission that brought the first humans to the Moon, delivered its crew to the surface: Neil Armstrong stepped from the lunar module Eagle onto the Sea of Tranquility with the words \"That's one small step for man, one giant leap for mankind\". About nineteen minutes later he was joined by Buzz Aldrin, the mission's lunar module pilot, who described the landscape as \"magnificent desolation\". Aldrin (born 1930), an MIT-trained engineer who had written his doctoral thesis on orbital rendezvous, was the second person to walk on the Moon; Michael Collins, meanwhile, orbited alone in the command module Columbia. The two moonwalkers spent about two and a half hours outside, planted a flag, set up experiments and collected 21.5 kilograms of rock.\n\nFive more landings followed, and the programme closed with Apollo 17, the last Apollo mission to take humans to the Moon, in December 1972. Its commander, Eugene Cernan, was the last person to climb back up the ladder, on 14 December, leaving behind a plaque and his daughter's initials traced in the dust. He is therefore the last human to have walked on the Moon, a title he held with some frustration until his death in 2017, and one that NASA's Artemis programme intends to retire.\n\n| Milestone | Person | Mission | Date |\n|---|---|---|---|\n| first human in space | Yuri Gagarin | Vostok 1 | 12 April 1961 |\n| first woman in space | Valentina Tereshkova | Vostok 6 | 16 June 1963 |\n| first person on the Moon | Neil Armstrong | Apollo 11 | 20 July 1969 |\n| second person on the Moon | Buzz Aldrin | Apollo 11 | 20 July 1969 |\n| last person on the Moon | Eugene Cernan | Apollo 17 | 14 December 1972 |\n\nOnly twelve people have walked on the Moon, all of them American men between 1969 and 1972. The technology that put them there – guidance computers with less memory than a modern watch, hand-sewn spacesuits, slide-rule trajectories – makes the achievement look larger, not smaller, with every passing decade.",
+    "bodyDe": "Die Geschichte der bemannten Raumfahrt wird oft als Liste von Premieren erzählt, und einige wenige Namen tragen den Großteil des Gewichts.\n\nDer Erste war Juri Gagarin. Am 12. April 1961 vollendete der 27-jährige sowjetische Luftwaffenpilot in Wostok 1 eine einzige Erdumrundung, einen Flug von 108 Minuten, der damit endete, dass er getrennt von seiner Kapsel über der Wolgaregion am Fallschirm landete. Er flog nie wieder ins All und starb am 27. März 1968 beim Absturz eines Trainingsjets, doch der 12. April wird weltweit noch immer als Yuri's Night gefeiert.\n\nZwei Jahre später gelang der Sowjetunion eine weitere Premiere. Walentina Tereschkowa, eine frühere Textilarbeiterin und Hobby-Fallschirmspringerin, die am 16. Februar 1962 in die Kosmonautinnengruppe aufgenommen worden war, verbrachte im Juni 1963 fast drei Tage allein in der Umlaufbahn an Bord von Wostok 6 und umkreiste die Erde 48-mal. Sie ist bis heute die einzige Frau, die je eine Solo-Raumfahrtmission geflogen hat; keine andere Frau kam bis Swetlana Sawizkaja 1982 ins All.\n\nDer Mond gehörte Apollo. Am 20. Juli 1969 brachte Apollo 11 die ersten Menschen auf den Mond: Neil Armstrong stieg aus der Mondlandefähre Eagle auf das Meer der Ruhe, mit den Worten „Das ist ein kleiner Schritt für einen Menschen, ein riesiger Sprung für die Menschheit“. Etwa neunzehn Minuten später folgte ihm Buzz Aldrin, der Pilot der Landefähre, der die Landschaft als „großartige Trostlosigkeit“ beschrieb. Aldrin (geboren 1930), ein am MIT ausgebildeter Ingenieur, der seine Doktorarbeit über das Rendezvous in der Umlaufbahn geschrieben hatte, war der zweite Mensch, der den Mond betrat; Michael Collins kreiste derweil allein im Kommandomodul Columbia. Die beiden Mondgänger verbrachten etwa zweieinhalb Stunden draußen, hissten eine Flagge, bauten Experimente auf und sammelten 21,5 Kilogramm Gestein.\n\nFünf weitere Landungen folgten, und das Programm endete mit Apollo 17, der letzten Apollo-Mission, die Menschen zum Mond brachte, im Dezember 1972. Sein Kommandant Eugene Cernan war am 14. Dezember der Letzte, der die Leiter wieder hinaufstieg, und hinterließ eine Plakette und die in den Staub gezeichneten Initialen seiner Tochter. Er ist damit der letzte Mensch, der auf dem Mond gegangen ist – ein Titel, den er bis zu seinem Tod 2017 mit einiger Frustration trug und den das Artemis-Programm der NASA ablösen will.\n\n| Meilenstein | Person | Mission | Datum |\n|---|---|---|---|\n| erster Mensch im Weltall | Juri Gagarin | Wostok 1 | 12. April 1961 |\n| erste Frau im Weltall | Walentina Tereschkowa | Wostok 6 | 16. Juni 1963 |\n| erster Mensch auf dem Mond | Neil Armstrong | Apollo 11 | 20. Juli 1969 |\n| zweiter Mensch auf dem Mond | Buzz Aldrin | Apollo 11 | 20. Juli 1969 |\n| letzter Mensch auf dem Mond | Eugene Cernan | Apollo 17 | 14. Dezember 1972 |\n\nNur zwölf Menschen haben den Mond betreten, allesamt amerikanische Männer zwischen 1969 und 1972. Die Technik, die sie dorthin brachte – Bordcomputer mit weniger Speicher als eine moderne Armbanduhr, handgenähte Raumanzüge, mit dem Rechenschieber berechnete Flugbahnen –, lässt die Leistung mit jedem Jahrzehnt größer erscheinen, nicht kleiner.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2122",
+   "baseHash": "e052b9202a88",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-293",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-375",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Firsts in Orbit: From Gagarin to the Two Germanys",
+    "titleDe": "Premieren im Orbit: von Gagarin zu den zwei deutschen Staaten",
+    "bodyEn": "Space flight has a short history and a long list of firsts, and several of the most important ones were flown from the same launch pad at Baikonur.\n\n**Yuri Gagarin** opened the era on 12 April 1961. The 27-year-old Soviet air force pilot completed exactly 1 orbit of the Earth in Vostok 1, a single circuit lasting 108 minutes, ejected at seven kilometres altitude as planned, and landed by parachute in a field near Saratov, where a farmer’s wife asked whether he had come from space. He never flew again and died in a training-jet crash in 1968. On 7 April 2011 the United Nations proclaimed the anniversary of his flight, 12 April, the International Day of Human Space Flight.\n\nIn 1963, just two years after Gagarin, **Valentina Tereshkova**, a former textile worker and amateur parachutist, became the first woman in space; she lifted off on 16 June. Her Vostok 6 flight lasted almost three days and 48 orbits, longer than all the American Mercury flights combined. On 3 November 1963 she married the cosmonaut Andriyan Nikolayev. No other woman flew until Svetlana Savitskaya in 1982.\n\nIn the 1970s the Soviet Union opened its capsules to allies through the Interkosmos programme. The first guest was **Vladimír Remek** of Czechoslovakia, who flew to the Salyut 6 station on Soyuz 28 on 2 March 1978 and so became the first person in space who was neither a Soviet nor a US citizen. Poland followed in June, and East Germany in August.\n\n**Sigmund Jähn** was born in 1937 in Morgenröthe-Rautenkranz in the Vogtland, trained as a fighter pilot in the National People’s Army and studied at the Gagarin Air Force Academy in Moscow. On 26 August 1978 he lifted off with Valery Bykovsky in Soyuz 31, spent almost eight days on Salyut 6, and returned on 3 September 1978. He was the first German in space, was promoted to major general, and became one of the most popular figures in the GDR; after reunification he advised the German and European space agencies and helped train the astronauts who flew to Mir. He died in 2019.\n\n**Ulf Merbold**, a physicist born in Greiz, Thuringia, in 1941, had left East Germany for the West before the Wall was built. On 28 November 1983 he flew on the Space Shuttle Columbia as the first non-American aboard a NASA mission, working in the European Spacelab module. He was thus the first West German citizen in space, five years after Jähn, and went on to fly twice more, including a 1994 mission to the Russian station Mir.\n\n| First | Person | Date | Spacecraft |\n|---|---|---|---|\n| First human in space | Yuri Gagarin | 12 April 1961 | Vostok 1 |\n| First woman in space | Valentina Tereshkova | 16 June 1963 | Vostok 6 |\n| First non-Soviet, non-American | Vladimír Remek | 2 March 1978 | Soyuz 28 |\n| First German (GDR) | Sigmund Jähn | 26 August 1978 | Soyuz 31 |\n| First West German | Ulf Merbold | 28 November 1983 | Columbia (STS-9) |\n\nJähn and Merbold, both born in the Vogtland, met only after 1990; they became friends, and the German Space Travel Exhibition in Jähn’s home village, opened in 1979 to mark his flight, today honours both.",
+    "bodyDe": "Die Raumfahrt hat eine kurze Geschichte und eine lange Liste von Premieren, und mehrere der wichtigsten starteten von derselben Rampe in Baikonur.\n\n**Juri Gagarin** eröffnete die Ära am 12. April 1961. Der 27-jährige sowjetische Luftwaffenpilot absolvierte in Wostok 1 genau 1 Erdumrundung, einen einzigen Umlauf von 108 Minuten, katapultierte sich planmäßig in sieben Kilometern Höhe aus der Kapsel und landete am Fallschirm auf einem Feld bei Saratow, wo eine Bäuerin ihn fragte, ob er aus dem Weltraum komme. Er flog nie wieder und starb 1968 beim Absturz eines Trainingsjets. Am 7. April 2011 erklärten die Vereinten Nationen den Jahrestag seines Fluges, den 12. April, zum Internationalen Tag der bemannten Raumfahrt.\n\n1963, nur zwei Jahre nach Gagarin, wurde **Walentina Tereschkowa**, eine ehemalige Textilarbeiterin und Hobby-Fallschirmspringerin, die erste Frau im Weltraum; sie startete am 16. Juni. Ihr Flug in Wostok 6 dauerte fast drei Tage und 48 Erdumkreisungen, länger als alle amerikanischen Mercury-Flüge zusammen. Am 3. November 1963 heiratete sie den Kosmonauten Andrijan Nikolajew. Keine andere Frau flog bis Swetlana Sawizkaja 1982.\n\nIn den 1970er-Jahren öffnete die Sowjetunion ihre Kapseln im Interkosmos-Programm für Verbündete. Der erste Gast war **Vladimír Remek** aus der Tschechoslowakei, der am 2. März 1978 mit Sojus 28 zur Station Saljut 6 flog und so der erste Mensch im Weltraum wurde, der weder Sowjetbürger noch US-Amerikaner war. Polen folgte im Juni, die DDR im August.\n\n**Sigmund Jähn** wurde 1937 in Morgenröthe-Rautenkranz im Vogtland geboren, ließ sich in der Nationalen Volksarmee zum Jagdflieger ausbilden und studierte an der Gagarin-Luftwaffenakademie in Moskau. Am 26. August 1978 startete er mit Waleri Bykowski in Sojus 31, verbrachte fast acht Tage auf Saljut 6 und kehrte am 3. September 1978 zurück. Er war der erste Deutsche im Weltraum, wurde zum Generalmajor befördert und einer der beliebtesten Menschen der DDR; nach der Wiedervereinigung beriet er die deutsche und die europäische Raumfahrtagentur und half, die Astronauten auszubilden, die zur Mir flogen. Er starb 2019.\n\n**Ulf Merbold**, ein 1941 im thüringischen Greiz geborener Physiker, hatte die DDR noch vor dem Mauerbau in Richtung Westen verlassen. Am 28. November 1983 flog er an Bord des Spaceshuttles Columbia als erster Nicht-Amerikaner auf einer NASA-Mission und arbeitete im europäischen Spacelab-Modul. Er war damit der erste Bundesbürger im Weltraum, fünf Jahre nach Jähn, und flog noch zweimal, darunter 1994 zur russischen Station Mir.\n\n| Premiere | Person | Datum | Raumfahrzeug |\n|---|---|---|---|\n| Erster Mensch im Weltraum | Juri Gagarin | 12. April 1961 | Wostok 1 |\n| Erste Frau im Weltraum | Walentina Tereschkowa | 16. Juni 1963 | Wostok 6 |\n| Erster Nicht-Sowjet, Nicht-Amerikaner | Vladimír Remek | 2. März 1978 | Sojus 28 |\n| Erster Deutscher (DDR) | Sigmund Jähn | 26. August 1978 | Sojus 31 |\n| Erster Bundesbürger | Ulf Merbold | 28. November 1983 | Columbia (STS-9) |\n\nJähn und Merbold, beide im Vogtland geboren, begegneten sich erst nach 1990; sie wurden Freunde, und die 1979 zu Ehren seines Fluges eröffnete Deutsche Raumfahrtausstellung in Jähns Heimatdorf ehrt heute beide.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1786",
+   "baseHash": "62716878c60a",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-360",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Space Shuttle Fleet",
+    "titleDe": "Die Space-Shuttle-Flotte",
+    "bodyEn": "On the cold morning of 28 January 1986, the Space Shuttle Challenger lifted off from Cape Canaveral on mission STS-51-L, carrying seven crew members including Christa McAuliffe, a schoolteacher who was to have given lessons from orbit. Seventy-three seconds later, at a height of about 15 kilometres, the vehicle disintegrated in front of millions of television viewers. The Rogers Commission traced the cause to the rubber O-rings sealing the joints of the right solid rocket booster: in the near-freezing temperatures of the launch morning they had lost their elasticity, hot gas burned through the joint and ignited the external fuel tank. Engineers had warned about the seals the evening before, and the physicist Richard Feynman famously demonstrated the problem by dropping a piece of O-ring into a glass of ice water at a televised hearing. Shuttle flights were suspended for 32 months.\n\nNASA built six orbiters in all. The first, Enterprise, named after the starship of the television series Star Trek following a letter campaign by its fans, was used only for approach and landing tests in 1977 and never reached space. Columbia was the first Space Shuttle to reach space: it flew the programme's maiden mission, STS-1, on 12 April 1981 and was the workhorse of the early years; on 1 February 2003, on its 28th flight, it broke apart during re-entry over Texas after a piece of foam insulation had punched a hole in the leading edge of its left wing during launch. All seven astronauts died, and the accident led directly to the decision to retire the fleet.\n\nDiscovery, the most-flown orbiter with 39 missions, carried the Hubble Space Telescope into orbit on STS-31, launched on 24 April 1990, and also flew the \"return to flight\" missions after both accidents. Endeavour was assembled from structural spare parts as the replacement for Challenger and made its debut on 7 May 1992 with the rescue of a stranded Intelsat satellite. Atlantis launched the Magellan and Galileo planetary probes and, on 8 July 2011, lifted off for STS-135, the 135th and final Shuttle mission; its landing on 21 July closed thirty years of the programme.\n\n| Orbiter | First flight | Fate |\n|---|---|---|\n| Enterprise | 1977 (atmospheric tests only) | Museum, New York |\n| Columbia | 1981 | Lost on re-entry, 2003 |\n| Challenger | 1983 | Lost at launch, 1986 |\n| Discovery | 1984 | Museum, Virginia |\n| Atlantis | 1985 | Museum, Florida |\n| Endeavour | 1992 | Museum, Los Angeles |",
+    "bodyDe": "Am kalten Morgen des 28. Januar 1986 hob das Space Shuttle Challenger in Cape Canaveral zur Mission STS-51-L ab, an Bord sieben Besatzungsmitglieder, darunter Christa McAuliffe, eine Lehrerin, die Unterrichtsstunden aus dem Orbit halten sollte. Dreiundsiebzig Sekunden später, in etwa 15 Kilometern Höhe, zerbrach das Raumfahrzeug vor den Augen von Millionen Fernsehzuschauern. Die Rogers-Kommission führte die Ursache auf die Gummi-O-Ringe zurück, die die Segmentverbindungen der rechten Feststoffrakete abdichteten: Bei den Temperaturen um den Gefrierpunkt am Startmorgen hatten sie ihre Elastizität verloren, heißes Gas brannte durch die Verbindung und entzündete den Außentank. Ingenieure hatten am Vorabend vor den Dichtungen gewarnt, und der Physiker Richard Feynman führte das Problem in einer im Fernsehen übertragenen Anhörung berühmt vor, indem er ein Stück O-Ring in ein Glas Eiswasser tauchte. Die Shuttle-Flüge wurden für 32 Monate ausgesetzt.\n\nDie NASA baute insgesamt sechs Orbiter. Der erste, Enterprise, nach einer Briefkampagne von Fans nach dem Raumschiff der Fernsehserie „Raumschiff Enterprise“ (Star Trek) benannt, diente 1977 nur für Anflug- und Landetests und erreichte nie den Weltraum. Columbia war das erste Space Shuttle, das den Weltraum erreichte: Sie flog am 12. April 1981 die Jungfernmission des Programms, STS-1, und war das Arbeitspferd der frühen Jahre; am 1. Februar 2003 zerbrach sie auf ihrem 28. Flug beim Wiedereintritt über Texas, nachdem ein Stück Schaumstoffisolierung beim Start ein Loch in die Vorderkante ihres linken Flügels geschlagen hatte. Alle sieben Astronauten starben, und der Unfall führte unmittelbar zur Entscheidung, die Flotte auszumustern.\n\nDiscovery, mit 39 Missionen der meistgeflogene Orbiter, brachte auf STS-31, gestartet am 24. April 1990, das Hubble-Weltraumteleskop in die Umlaufbahn und flog nach beiden Unglücken auch die „Return to Flight“-Missionen. Endeavour wurde aus strukturellen Ersatzteilen als Ersatz für die Challenger zusammengebaut und gab am 7. Mai 1992 mit der Rettung eines gestrandeten Intelsat-Satelliten ihr Debüt. Atlantis setzte die Planetensonden Magellan und Galileo aus und startete am 8. Juli 2011 zu STS-135, der 135. und letzten Shuttle-Mission; ihre Landung am 21. Juli beendete dreißig Jahre des Programms.\n\n| Orbiter | Erstflug | Schicksal |\n|---|---|---|\n| Enterprise | 1977 (nur Atmosphärentests) | Museum, New York |\n| Columbia | 1981 | beim Wiedereintritt verloren, 2003 |\n| Challenger | 1983 | beim Start verloren, 1986 |\n| Discovery | 1984 | Museum, Virginia |\n| Atlantis | 1985 | Museum, Florida |\n| Endeavour | 1992 | Museum, Los Angeles |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0670",
+   "baseHash": "19eedb3e4dab",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-086",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Robot Visitors to the Planets",
+    "titleDe": "Roboter zu Besuch bei den Planeten",
+    "bodyEn": "Since the 1960s a small fleet of robotic spacecraft has visited every planet of the solar system, and a few of them have stayed for years as orbiters, mapping worlds that no human will reach for generations.\n\nThe innermost planet was the hardest to reach. Mercury orbits so deep in the Sun's gravity well that a spacecraft must shed enormous speed to be captured. NASA's MESSENGER (MErcury Surface, Space ENvironment, GEochemistry, and Ranging), a Discovery Programme mission launched in 2004, needed six and a half years and six planetary flybys before it finally entered orbit around Mercury on 18 March 2011. It became the first spacecraft ever to orbit the planet, mapped its entire surface, confirmed water ice in permanently shadowed polar craters and crashed onto the surface in April 2015 when its fuel ran out.\n\nVenus, the next planet out, hides beneath permanent clouds, so NASA's Magellan orbiter used synthetic-aperture radar. Between its arrival on 10 August 1990 and its deliberate plunge into the atmosphere on 13 October 1994, it mapped 98 per cent of the surface at a resolution of about 100 metres, revealing vast lava plains, few impact craters and a world resurfaced by volcanism within the last few hundred million years.\n\nBeyond the asteroid belt, Jupiter received its second long-term visitor when the NASA probe Juno, launched on 5 August 2011, entered a polar orbit on 4 July 2016 (5 July UTC) after a five-year cruise. Solar-powered despite the distance, Juno has measured the planet's gravity and magnetic fields, found that the Great Red Spot extends hundreds of kilometres deep and photographed the cyclones clustered around both poles.\n\nSaturn's great explorer was Cassini, a joint NASA-ESA-ASI mission. After a seven-year journey it entered orbit on 1 July 2004, dropped the Huygens lander onto the moon Titan in January 2005, discovered water plumes erupting from Enceladus and ended its life in September 2017 with a deliberate plunge into the planet's atmosphere.\n\nThe two outermost planets have only ever been visited once, and by the same spacecraft. Voyager 2, launched in 1977, used the rare alignment of the outer planets to fly past Jupiter and Saturn and then on to Uranus, which it passed on 24 January 1986, discovering ten new moons and two new rings. It went on to Neptune in August 1989 and is now in interstellar space.\n\n| Planet | Spacecraft | Key date |\n|---|---|---|\n| Mercury | MESSENGER | orbit 18 March 2011 |\n| Venus | Magellan | radar mapping 1990–1994 |\n| Jupiter | Juno | orbit July 2016 |\n| Saturn | Cassini | orbit 1 July 2004 |\n| Uranus | Voyager 2 | flyby 24 January 1986 |\n\nEach of these missions took the better part of a decade from launch to arrival, a reminder that planetary exploration is measured in careers rather than years.",
+    "bodyDe": "Seit den 1960er-Jahren hat eine kleine Flotte robotischer Raumsonden jeden Planeten des Sonnensystems besucht, und einige von ihnen sind jahrelang als Orbiter geblieben, um Welten zu kartieren, die kein Mensch über Generationen hinweg erreichen wird.\n\nDer innerste Planet war am schwersten zu erreichen. Merkur kreist so tief im Schwerefeld der Sonne, dass eine Raumsonde enorm viel Geschwindigkeit abbauen muss, um eingefangen zu werden. Die NASA-Sonde MESSENGER (MErcury Surface, Space ENvironment, GEochemistry, and Ranging), eine 2004 gestartete Mission des Discovery-Programms, brauchte sechseinhalb Jahre und sechs Vorbeiflüge an Planeten, bevor sie am 18. März 2011 endlich in eine Umlaufbahn um Merkur einschwenkte. Sie wurde zur ersten Raumsonde überhaupt, die den Planeten umkreiste, kartierte seine gesamte Oberfläche, bestätigte Wassereis in dauerhaft beschatteten Polkratern und stürzte im April 2015, als ihr Treibstoff ausging, auf die Oberfläche.\n\nVenus, der nächste Planet weiter außen, verbirgt sich unter einer permanenten Wolkendecke, weshalb der NASA-Orbiter Magellan Radar mit synthetischer Apertur einsetzte. Zwischen seiner Ankunft am 10. August 1990 und seinem gezielten Absturz in die Atmosphäre am 13. Oktober 1994 kartierte er 98 Prozent der Oberfläche mit einer Auflösung von etwa 100 Metern und enthüllte weite Lavaebenen, wenige Einschlagkrater und eine Welt, deren Oberfläche in den letzten paar hundert Millionen Jahren durch Vulkanismus erneuert wurde.\n\nJenseits des Asteroidengürtels erhielt Jupiter seinen zweiten Langzeitbesucher, als die am 5. August 2011 gestartete NASA-Sonde Juno nach fünfjähriger Reise am 4. Juli 2016 (5. Juli UTC) in eine polare Umlaufbahn einschwenkte. Trotz der Entfernung solarbetrieben, hat Juno das Schwere- und Magnetfeld des Planeten vermessen, herausgefunden, dass der Große Rote Fleck Hunderte Kilometer tief reicht, und die Zyklone fotografiert, die sich um beide Pole drängen.\n\nSaturns großer Erforscher war Cassini, eine gemeinsame Mission von NASA, ESA und ASI. Nach siebenjähriger Reise schwenkte die Sonde am 1. Juli 2004 in die Umlaufbahn ein, setzte im Januar 2005 den Lander Huygens auf dem Mond Titan ab, entdeckte Wasserfontänen, die aus Enceladus hervorbrechen, und beendete ihr Leben im September 2017 mit einem gezielten Sturz in die Atmosphäre des Planeten.\n\nDie beiden äußersten Planeten wurden bisher nur ein einziges Mal besucht, und zwar von derselben Sonde. Voyager 2, gestartet 1977, nutzte die seltene Konstellation der äußeren Planeten, um an Jupiter und Saturn vorbeizufliegen und dann weiter zu Uranus, den sie am 24. Januar 1986 passierte und dabei zehn neue Monde und zwei neue Ringe entdeckte. Sie flog im August 1989 weiter zu Neptun und befindet sich heute im interstellaren Raum.\n\n| Planet | Raumsonde | Schlüsseldatum |\n|---|---|---|\n| Merkur | MESSENGER | Orbit 18. März 2011 |\n| Venus | Magellan | Radarkartierung 1990–1994 |\n| Jupiter | Juno | Orbit Juli 2016 |\n| Saturn | Cassini | Orbit 1. Juli 2004 |\n| Uranus | Voyager 2 | Vorbeiflug 24. Januar 1986 |\n\nJede dieser Missionen brauchte vom Start bis zur Ankunft fast ein Jahrzehnt – eine Erinnerung daran, dass Planetenerkundung in Berufsleben und nicht in Jahren gemessen wird.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1510",
+   "baseHash": "276b4d15a1a3",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-082",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Messages and Missions: What Space Probes Are For",
+    "titleDe": "Botschaften und Missionen: wozu Raumsonden da sind",
+    "bodyEn": "Every spacecraft is built for a purpose, and usually the purpose is a place: a planet, a moon, a comet, a patch of sky. Two probes launched in 1977, however, carry something whose purpose lies far beyond any place they will ever reach.\n\nVoyager 2 lifted off on 20 August 1977 and Voyager 1 on 5 September, both on a grand tour of the outer planets. Bolted to the side of each is a gold-plated copper phonograph record, 30 centimetres across, in an aluminium cover engraved with instructions for playing it and a pulsar map showing the location of the Sun. The Voyager Golden Records were compiled by a committee under Carl Sagan and are intended as **a message to extraterrestrial civilisations about Earth and humanity**: 115 images, greetings in 55 languages, the sounds of surf, wind, birds and a kiss, and 90 minutes of music from Bach and Beethoven to Chuck Berry's \"Johnny B. Goode\". Voyager 1 crossed into interstellar space in 2012 and Voyager 2 in 2018; the records will outlast the Earth itself, even if no one ever finds them.\n\nThe other great missions of recent decades had more concrete goals. Cassini, launched on 15 October 1997, was dedicated to **exploring Saturn and its moons**. It arrived in 2004, released the European Huygens lander onto the surface of Titan in January 2005, discovered water geysers on Enceladus and orbited the ringed planet for thirteen years before being deliberately steered into Saturn's atmosphere on 15 September 2017 so that it could never contaminate a potentially habitable moon.\n\nThe European Space Agency's Rosetta, launched on 2 March 2004, spent ten years chasing its target and reached it in August 2014. Its purpose was **studying comet 67P/Churyumov-Gerasimenko** from orbit and, with the lander Philae, from the surface. Philae's harpoons failed, so the lander tumbled across the surface, bouncing twice before coming to rest in the shadow of a cliff on 12 November 2014 – the first landing on a comet nucleus. Rosetta itself was set down on the comet in September 2016.\n\nNew Horizons, launched on 19 January 2006, was the fastest spacecraft ever to leave Earth, and its primary goal was **the first flyby of Pluto**. On 14 July 2015 it passed within 12,500 kilometres of the dwarf planet and sent back images of a heart-shaped nitrogen glacier and mountains of water ice; on New Year's Day 2019 it flew past the Kuiper belt object Arrokoth, the most distant world ever visited.\n\nKepler, finally, never went anywhere in particular. Launched on 7 March 2009 into an orbit around the Sun, the space telescope stared at a single field of about 150,000 stars in Cygnus and Lyra, watching for the tiny dips in brightness that betray a planet passing in front of its star. Its purpose was **the search for exoplanets**, and by the time it was retired in October 2018 it had found more than 2,600 confirmed ones.\n\n| Mission | Launched | Purpose |\n|---|---|---|\n| Voyager 1 and 2 | 1977 | outer planets; Golden Record as a message to extraterrestrials |\n| Cassini | 1997 | exploring Saturn and its moons |\n| Rosetta | 2004 | studying comet 67P/Churyumov-Gerasimenko |\n| New Horizons | 2006 | the first flyby of Pluto |\n| Kepler | 2009 | the search for exoplanets |",
+    "bodyDe": "Jedes Raumfahrzeug wird für einen Zweck gebaut, und meist ist der Zweck ein Ort: ein Planet, ein Mond, ein Komet, ein Stück Himmel. Zwei 1977 gestartete Sonden tragen jedoch etwas mit sich, dessen Zweck weit jenseits jedes Ortes liegt, den sie je erreichen werden.\n\nVoyager 2 hob am 20. August 1977 ab und Voyager 1 am 5. September, beide zu einer großen Rundreise zu den äußeren Planeten. An der Seite jeder Sonde ist eine vergoldete Kupferschallplatte von 30 Zentimetern Durchmesser angeschraubt, in einer Aluminiumhülle, in die eine Abspielanleitung und eine Pulsarkarte mit der Position der Sonne eingraviert sind. Die Voyager Golden Records wurden von einem Komitee unter Carl Sagan zusammengestellt und sind als **eine Botschaft an außerirdische Zivilisationen über die Erde und die Menschheit** gedacht: 115 Bilder, Grüße in 55 Sprachen, die Geräusche von Brandung, Wind, Vögeln und einem Kuss sowie 90 Minuten Musik von Bach und Beethoven bis zu Chuck Berrys „Johnny B. Goode“. Voyager 1 trat 2012 in den interstellaren Raum ein, Voyager 2 2018; die Platten werden die Erde selbst überdauern, auch wenn sie nie jemand findet.\n\nDie anderen großen Missionen der letzten Jahrzehnte hatten konkretere Ziele. Cassini, gestartet am 15. Oktober 1997, war **die Erforschung des Saturn und seiner Monde** gewidmet. Die Sonde kam 2004 an, setzte im Januar 2005 den europäischen Lander Huygens auf der Oberfläche des Titan ab, entdeckte Wassergeysire auf Enceladus und umkreiste den Ringplaneten dreizehn Jahre lang, bevor sie am 15. September 2017 absichtlich in die Saturnatmosphäre gelenkt wurde, damit sie niemals einen möglicherweise bewohnbaren Mond kontaminieren könnte.\n\nRosetta, die Sonde der Europäischen Weltraumorganisation, startete am 2. März 2004, jagte zehn Jahre lang ihrem Ziel hinterher und erreichte es im August 2014. Ihr Zweck war **die Erforschung des Kometen 67P/Tschurjumow-Gerassimenko** aus dem Orbit und, mit dem Lander Philae, von der Oberfläche aus. Philaes Harpunen versagten, sodass der Lander über die Oberfläche purzelte und zweimal hüpfte, bevor er am 12. November 2014 im Schatten einer Klippe zur Ruhe kam – die erste Landung auf einem Kometenkern. Rosetta selbst wurde im September 2016 auf dem Kometen abgesetzt.\n\nNew Horizons, gestartet am 19. Januar 2006, war das schnellste Raumfahrzeug, das je die Erde verließ, und ihr Hauptziel war **der erste Vorbeiflug am Pluto**. Am 14. Juli 2015 passierte sie den Zwergplaneten in 12.500 Kilometern Entfernung und schickte Bilder eines herzförmigen Stickstoffgletschers und von Bergen aus Wassereis zurück; am Neujahrstag 2019 flog sie am Kuipergürtel-Objekt Arrokoth vorbei, der fernsten je besuchten Welt.\n\nKepler schließlich flog nirgendwohin im Besonderen. Am 7. März 2009 in eine Umlaufbahn um die Sonne gestartet, starrte das Weltraumteleskop auf ein einziges Feld von etwa 150.000 Sternen in den Sternbildern Schwan und Leier und achtete auf die winzigen Helligkeitseinbrüche, die einen vor seinem Stern vorbeiziehenden Planeten verraten. Sein Zweck war **die Suche nach Exoplaneten**, und als es im Oktober 2018 außer Dienst gestellt wurde, hatte es mehr als 2600 bestätigte gefunden.\n\n| Mission | Start | Zweck |\n|---|---|---|\n| Voyager 1 und 2 | 1977 | äußere Planeten; Golden Record als Botschaft an Außerirdische |\n| Cassini | 1997 | die Erforschung des Saturn und seiner Monde |\n| Rosetta | 2004 | die Erforschung des Kometen 67P/Tschurjumow-Gerassimenko |\n| New Horizons | 2006 | der erste Vorbeiflug am Pluto |\n| Kepler | 2009 | die Suche nach Exoplaneten |",
+    "notesEn": "The card's expected answer is presumably a paraphrase; any wording to the effect of a message to extraterrestrial life about Earth and humanity should be accepted.",
+    "notesDe": "Die erwartete Antwort der Karte ist vermutlich eine Umschreibung (z. B. „Außerirdischen Informationen über die Menschheit vermitteln“); jede Formulierung im Sinne einer Botschaft an außerirdisches Leben über die Erde und die Menschheit sollte gelten."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-013",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-117",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-108",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "Which company brokered the flights of the first paying space tourists aboard Russian Soyuz spacecraft, from Dennis Tito in 2001 to Guy Laliberté in 2009?",
+      "de": "Welche Firma vermittelte die Flüge der ersten zahlenden Weltraumtouristen an Bord russischer Sojus-Raumschiffe, von Dennis Tito 2001 bis Guy Laliberté 2009?",
+      "answerEn": "Space Adventures",
+      "answerDe": "Space Adventures",
+      "timeline": {
+       "kind": "founding",
+       "start": "1998",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Space Adventures, the first space tourism company, is founded",
+       "labelDe": "Space Adventures, die erste Weltraumtourismus-Firma, wird gegründet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Space_Adventures",
+       "title": "Space Adventures – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which spaceflight company, founded by Jeff Bezos in 2000, flew its founder into space in its New Shepard capsule on 20 July 2021?",
+      "de": "Welches von Jeff Bezos im Jahr 2000 gegründete Raumfahrtunternehmen flog seinen Gründer am 20. Juli 2021 mit seiner Kapsel New Shepard ins All?",
+      "answerEn": "Blue Origin",
+      "answerDe": "Blue Origin",
+      "timeline": {
+       "kind": "event",
+       "start": "2021-07-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Blue Origin's first crewed New Shepard flight carries Jeff Bezos into space",
+       "labelDe": "Der erste bemannte New-Shepard-Flug von Blue Origin bringt Jeff Bezos ins All"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Blue_Origin",
+       "title": "Blue Origin – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the SpaceX mission of September 2021 that was the first orbital spaceflight with only private citizens aboard?",
+      "de": "Wie hieß die SpaceX-Mission vom September 2021, der erste Orbitalflug mit ausschließlich Privatleuten an Bord?",
+      "answerEn": "Inspiration4",
+      "answerDe": "Inspiration4",
+      "timeline": {
+       "kind": "event",
+       "start": "2021-09-16",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Inspiration4 launches: the first all-civilian orbital spaceflight",
+       "labelDe": "Start von Inspiration4, dem ersten Orbitalflug nur mit Privatleuten"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Inspiration4",
+       "title": "Inspiration4 – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Tickets to Orbit: Space Tourism and Private Spaceflight",
+    "titleDe": "Tickets in den Orbit: Weltraumtourismus und private Raumfahrt",
+    "bodyEn": "For its first forty years spaceflight was the business of governments. Only state agencies could build rockets, choose crews and decide who went up. Since the turn of the millennium that monopoly has crumbled, first through wealthy passengers buying seats on government spacecraft and then through companies building spacecraft of their own.\n\nThe door was opened by **Space Adventures**, a company founded in Virginia in 1998. It struck a deal with the Russian space agency to sell spare seats on Soyuz flights to the space station. In April 2001 the American multimillionaire Dennis Tito flew on Soyuz TM-32 and became the first paying space tourist, reportedly for about 20 million US dollars. Seven more clients followed over the next eight years, among them the South African Mark Shuttleworth, the first female space tourist Anousheh Ansari, and the software pioneer Charles Simonyi, who went twice.\n\nThe most theatrical of them was the Canadian Guy Laliberté, a former street performer who had founded the Cirque du Soleil. In September 2009 he launched on Soyuz TMA-16 and, for a price of 35 million US dollars, spent ten days aboard the International Space Station (ISS), using his stay to draw attention to the scarcity of clean drinking water on Earth.\n\nAt the same time private companies were building their own vehicles. In 2004 the British entrepreneur Richard Branson founded **Virgin Galactic**, which developed the sub-orbital spaceplane SpaceShipTwo; it is carried aloft by a mother aircraft, fires its rocket engine and glides back to a runway. Branson himself rode it to the edge of space on 11 July 2021. Nine days later Jeff Bezos, who had founded **Blue Origin** in 2000, followed in his reusable New Shepard capsule, which flies above the 100-kilometre Kármán line and lands under parachutes.\n\nThe real shift came in orbit. On its maiden flight in December 2010 the capsule **Dragon (SpaceX)**, built by Elon Musk's company, became the first privately owned spacecraft to return from orbit, and in 2012 it became the first commercial spacecraft to visit the ISS. Its crewed successor, Crew Dragon, now ferries NASA astronauts, and in September 2021 it carried **Inspiration4**, the first orbital mission with only private citizens aboard: four people spent three days circling the Earth without a single professional astronaut.\n\n| Name | What it is | Milestone |\n|---|---|---|\n| Space Adventures | broker of Soyuz seats | Dennis Tito, 2001 |\n| Virgin Galactic | sub-orbital spaceplane | Branson's flight, 2021 |\n| Blue Origin | sub-orbital capsule | Bezos's flight, 2021 |\n| Dragon (SpaceX) | orbital capsule | first private return from orbit, 2010 |\n| Inspiration4 | all-civilian mission | first private orbital crew, 2021 |\n\nA seat is still far beyond most budgets, but space is no longer reserved for people chosen by a state.",
+    "bodyDe": "In ihren ersten vierzig Jahren war die Raumfahrt Sache der Staaten. Nur staatliche Agenturen konnten Raketen bauen, Besatzungen auswählen und entscheiden, wer hinaufflog. Seit der Jahrtausendwende ist dieses Monopol zerbröckelt, zuerst durch wohlhabende Passagiere, die sich Plätze in staatlichen Raumschiffen kauften, dann durch Firmen, die eigene Raumfahrzeuge bauen.\n\nDie Tür öffnete **Space Adventures**, ein 1998 in Virginia gegründetes Unternehmen. Es schloss mit der russischen Raumfahrtagentur ein Abkommen über den Verkauf freier Plätze auf Sojus-Flügen zur Raumstation. Im April 2001 flog der amerikanische Multimillionär Dennis Tito mit Sojus TM-32 und wurde der erste zahlende Weltraumtourist, angeblich für rund 20 Millionen US-Dollar. In den folgenden acht Jahren folgten sieben weitere Kunden, darunter der Südafrikaner Mark Shuttleworth, die erste Weltraumtouristin Anousheh Ansari und der Software-Pionier Charles Simonyi, der gleich zweimal flog.\n\nDer theatralischste von ihnen war der Kanadier Guy Laliberté, ein ehemaliger Straßenkünstler, der den Cirque du Soleil gegründet hatte. Im September 2009 startete er mit Sojus TMA-16; sein Ziel für 35 Millionen US-Dollar war die Internationale Raumstation (ISS), wo er zehn Tage verbrachte und seinen Aufenthalt nutzte, um auf den Mangel an sauberem Trinkwasser auf der Erde aufmerksam zu machen.\n\nZur gleichen Zeit bauten private Firmen eigene Fahrzeuge. 2004 gründete der britische Unternehmer Richard Branson **Virgin Galactic**, das das suborbitale Raumflugzeug SpaceShipTwo entwickelte; es wird von einem Mutterflugzeug in die Höhe getragen, zündet sein Raketentriebwerk und gleitet zu einer Landebahn zurück. Branson selbst flog damit am 11. Juli 2021 an den Rand des Weltraums. Neun Tage später folgte Jeff Bezos, der **Blue Origin** im Jahr 2000 gegründet hatte, in seiner wiederverwendbaren Kapsel New Shepard, die über die 100-Kilometer-Grenze der Kármán-Linie fliegt und an Fallschirmen landet.\n\nDer eigentliche Umbruch geschah im Orbit. Auf ihrem Jungfernflug im Dezember 2010 wurde die Kapsel **Dragon (SpaceX)** aus Elon Musks Firma das erste Raumschiff in Privatbesitz, das aus der Umlaufbahn zurückkehrte, und 2012 das erste kommerzielle Raumschiff, das die ISS besuchte. Ihr bemannter Nachfolger Crew Dragon bringt heute NASA-Astronauten ins All und trug im September 2021 **Inspiration4**, die erste Orbitalmission nur mit Privatleuten an Bord: Vier Menschen umkreisten drei Tage lang die Erde, ohne einen einzigen Berufsastronauten.\n\n| Name | Was es ist | Meilenstein |\n|---|---|---|\n| Space Adventures | Vermittler von Sojus-Plätzen | Dennis Tito, 2001 |\n| Virgin Galactic | suborbitales Raumflugzeug | Bransons Flug, 2021 |\n| Blue Origin | suborbitale Kapsel | Bezos' Flug, 2021 |\n| Dragon (SpaceX) | Orbitalkapsel | erste private Rückkehr aus dem Orbit, 2010 |\n| Inspiration4 | Mission nur mit Zivilisten | erste private Orbitalbesatzung, 2021 |\n\nEin Platz übersteigt noch immer die meisten Budgets, doch der Weltraum ist nicht mehr nur Menschen vorbehalten, die ein Staat ausgewählt hat.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-029",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "Which country, like the Soviet Union before it, calls its space travellers cosmonauts?",
+      "de": "Welches Land nennt seine Raumfahrer, wie zuvor die Sowjetunion, Kosmonauten?",
+      "answerEn": "Russia",
+      "answerDe": "Russland",
+      "timeline": {
+       "kind": "event",
+       "start": "1961-04-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Yuri Gagarin, the first cosmonaut, flies into space",
+       "labelDe": "Juri Gagarin, der erste Kosmonaut, fliegt ins All"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Astronaut",
+       "title": "Astronaut – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which country's space travellers are sometimes called spationauts?",
+      "de": "Die Raumfahrer welches Landes werden manchmal Spationauten genannt?",
+      "answerEn": "France",
+      "answerDe": "Frankreich",
+      "timeline": {
+       "kind": "event",
+       "start": "1982",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Jean-Loup Chrétien becomes the first French space traveller",
+       "labelDe": "Jean-Loup Chrétien wird der erste französische Raumfahrer"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Astronaut",
+       "title": "Astronaut – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which country calls its space travellers angkasawan, from the Malay word for space?",
+      "de": "Welches Land nennt seine Raumfahrer Angkasawan, nach dem malaiischen Wort für Weltraum?",
+      "answerEn": "Malaysia",
+      "answerDe": "Malaysia",
+      "timeline": {
+       "kind": "event",
+       "start": "2007",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Sheikh Muszaphar Shukor flies as Malaysia's first angkasawan",
+       "labelDe": "Sheikh Muszaphar Shukor fliegt als erster Angkasawan Malaysias"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Astronaut",
+       "title": "Astronaut – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Astronaut, Cosmonaut, Taikonaut: What Space Travellers Are Called",
+    "titleDe": "Astronaut, Kosmonaut, Taikonaut: Wie Raumfahrer heißen",
+    "bodyEn": "Everyone who leaves the Earth does the same job, but not everyone gets the same title. The word a country uses for its space travellers is a small piece of Cold War history and national pride.\n\n**Astronaut** comes from the Greek for \"star sailor\" and is the word NASA chose for its first seven Mercury pilots in 1959. It has become the international default: Europe's ESA, Japan and Canada all use it, and in English it covers anyone who has flown in space.\n\n**Cosmonaut**, \"sailor of the cosmos\", was the Soviet answer. When Yuri Gagarin flew on 12 April 1961 he went up as a kosmonavt, and Russia has kept the word ever since. The allies who flew on Soviet spacecraft under the Interkosmos programme adopted it too, so the first Czechoslovak, Pole and East German in space were all cosmonauts, and the former Eastern Bloc still uses variations of it.\n\n**Taikonaut** is a hybrid of the Chinese tàikōng, \"outer space\", with the Greek ending. English-language media began using it for space travellers from China in the late 1990s, and it became common after Yang Liwei flew aboard Shenzhou 5 on 15 October 2003, making China the third country to launch a human on its own rocket. Chinese official media prefer hángtiānyuán, \"space navigation personnel\", which they also use for foreign astronauts; taikonaut remains an informal Western coinage.\n\n**Spationaut**, from the French espace, is sometimes used for travellers from France, whose first, Jean-Loup Chrétien, flew to the Soviet station Salyut 7 in 1982. **Angkasawan**, from the Malay angkasa, \"space\", was coined in Malaysia for its national astronaut programme, which sent the orthopaedic surgeon Sheikh Muszaphar Shukor to the International Space Station in 2007. German, Dutch and the Scandinavian languages, finally, simply say \"space traveller\": Raumfahrer, ruimtevaarder, rymdfarare.\n\n| Word | Country | Root |\n|---|---|---|\n| astronaut | USA, ESA, Japan, Canada | Greek \"star sailor\" |\n| cosmonaut | Russia (and the Soviet Union) | Greek \"cosmos sailor\" |\n| taikonaut | China | Chinese tàikōng, \"space\" |\n| spationaut | France | French espace |\n| angkasawan | Malaysia | Malay angkasa, \"space\" |\n\nWhatever the name, the job description is identical: sit on top of a rocket and trust the engineers.",
+    "bodyDe": "Jeder, der die Erde verlässt, macht dieselbe Arbeit, aber nicht jeder trägt denselben Titel. Das Wort, das ein Land für seine Raumfahrer benutzt, ist ein kleines Stück Geschichte des Kalten Krieges und des Nationalstolzes.\n\n**Astronaut** kommt aus dem Griechischen für „Sternenseefahrer“ und ist das Wort, das die NASA 1959 für ihre ersten sieben Mercury-Piloten wählte. Es ist zum internationalen Standard geworden: Europas ESA, Japan und Kanada verwenden es, und im Englischen bezeichnet es jeden, der im Weltraum war.\n\n**Kosmonaut**, „Seefahrer des Kosmos“, war die sowjetische Antwort. Als Juri Gagarin am 12. April 1961 flog, startete er als Kosmonaut, und Russland hat das Wort seitdem behalten. Die Verbündeten, die im Interkosmos-Programm auf sowjetischen Raumschiffen mitflogen, übernahmen es ebenfalls, sodass der erste Tschechoslowake, Pole und DDR-Bürger im All allesamt Kosmonauten waren; der frühere Ostblock verwendet bis heute Abwandlungen davon.\n\n**Taikonaut** ist eine Mischung aus dem chinesischen tàikōng, „Weltraum“, und der griechischen Endung. Englischsprachige Medien begannen Ende der 1990er-Jahre, das Wort für Raumfahrer aus China zu verwenden, und es setzte sich durch, nachdem Yang Liwei am 15. Oktober 2003 an Bord von Shenzhou 5 geflogen war und China zum dritten Land gemacht hatte, das einen Menschen mit eigener Rakete ins All brachte. Chinesische Staatsmedien bevorzugen hángtiānyuán, „Raumfahrtpersonal“, das sie auch für ausländische Astronauten verwenden; Taikonaut bleibt eine informelle westliche Wortschöpfung.\n\n**Spationaut**, vom französischen espace, wird manchmal für Raumfahrer aus Frankreich verwendet, dessen erster, Jean-Loup Chrétien, 1982 zur sowjetischen Station Saljut 7 flog. **Angkasawan**, vom malaiischen angkasa, „Weltraum“, wurde in Malaysia für das nationale Astronautenprogramm geprägt, das 2007 den Orthopäden Sheikh Muszaphar Shukor zur Internationalen Raumstation schickte. Deutsch, Niederländisch und die skandinavischen Sprachen schließlich sagen einfach „Raumfahrer“: Raumfahrer, ruimtevaarder, rymdfarare.\n\n| Wort | Land | Wurzel |\n|---|---|---|\n| Astronaut | USA, ESA, Japan, Kanada | griechisch „Sternenseefahrer“ |\n| Kosmonaut | Russland (und die Sowjetunion) | griechisch „Kosmosseefahrer“ |\n| Taikonaut | China | chinesisch tàikōng, „Weltraum“ |\n| Spationaut | Frankreich | französisch espace |\n| Angkasawan | Malaysia | malaiisch angkasa, „Weltraum“ |\n\nWie auch immer der Name lautet, die Arbeitsbeschreibung ist dieselbe: oben auf einer Rakete sitzen und den Ingenieuren vertrauen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-064",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-246",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-378",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-353",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which David Bowie song did the Canadian astronaut Chris Hadfield record as a music video aboard the International Space Station in 2013?",
+      "de": "Welchen Song von David Bowie nahm der kanadische Astronaut Chris Hadfield 2013 an Bord der Internationalen Raumstation als Musikvideo auf?",
+      "answerEn": "Space Oddity",
+      "answerDe": "Space Oddity",
+      "timeline": {
+       "kind": "creation",
+       "start": "2013-05-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Chris Hadfield releases his \"Space Oddity\" video recorded on the ISS",
+       "labelDe": "Chris Hadfield veröffentlicht sein auf der ISS aufgenommenes „Space Oddity“-Video"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Chris_Hadfield",
+       "title": "Chris Hadfield – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which NASA astronaut ran the Boston Marathon on a treadmill aboard the International Space Station in April 2007, the first marathon run in space?",
+      "de": "Welche NASA-Astronautin lief im April 2007 auf einem Laufband an Bord der Internationalen Raumstation den Boston-Marathon mit, den ersten im Weltraum gelaufenen Marathon?",
+      "answerEn": "Sunita Williams",
+      "answerDe": "Sunita Williams",
+      "timeline": {
+       "kind": "event",
+       "start": "2007-04-16",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Sunita Williams runs the Boston Marathon aboard the ISS",
+       "labelDe": "Sunita Williams läuft auf der ISS den Boston-Marathon mit"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sunita_Williams",
+       "title": "Sunita Williams – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Life Aboard the Space Station: Tortillas, Marathons and a Golf Shot",
+    "titleDe": "Leben an Bord der Raumstation: Tortillas, Marathons und ein Golfschlag",
+    "bodyEn": "Living in orbit for months means solving problems nobody on the ground ever thinks about. The crews of the International Space Station have to eat, wash, exercise and stay sane in a tin can circling the Earth every ninety minutes – and some of their solutions have become famous.\n\nFood comes first. Bread is a nuisance in weightlessness: every crumb floats off and can drift into an air filter, an eye or a piece of electronics. Since the mid-1980s astronauts have therefore eaten **tortillas** instead. The flat breads hardly crumble, keep for months and can be wrapped around almost anything, from scrambled eggs to peanut butter, so they have become the staple of orbital cuisine.\n\nLaundry is the next problem, because there is none. Clothes are worn for as long as possible and then thrown away with the rubbish. In 2009 the Japanese astronaut Koichi Wakata tested J-Wear, antibacterial, odour-eliminating underwear developed at Japan Women's University, and wore the same pair without a break for a month; according to him, none of his crewmates complained.\n\nExercise is compulsory, because muscles and bones waste away without gravity, and crew members spend about two hours a day on a bicycle, a weight machine and a treadmill that holds them down with elastic straps. On 16 April 2007 the American astronaut **Sunita Williams** used that treadmill to run the Boston Marathon as an official entrant, finishing in 4 hours and 24 minutes – the first marathon run in space. On 24 April 2016 the British astronaut Tim Peake followed suit and ran the London Marathon on the International Space Station (ISS), finishing in about three and a half hours while the course scrolled past on a screen.\n\nThe station also has room for showmanship. During a spacewalk in November 2006 the Russian cosmonaut **Mikhail Tyurin** hit a three-gram golf ball into orbit with a gold-plated club, a publicity stunt paid for by a Canadian golf-club maker. And in May 2013 the Canadian commander Chris Hadfield released a music video of David Bowie's **Space Oddity**, recorded with his guitar in the station's modules; it was watched millions of times within days.\n\n| Who | What | When |\n|---|---|---|\n| Mikhail Tyurin | golf shot during a spacewalk | 2006 |\n| Sunita Williams | Boston Marathon on the treadmill | 2007 |\n| Koichi Wakata | a month in the same underwear | 2009 |\n| Chris Hadfield | \"Space Oddity\" video | 2013 |\n| Tim Peake | London Marathon on the treadmill | 2016 |\n\nSmall as they seem, these experiments keep the crews healthy and remind the people on the ground that the station is a home as well as a laboratory.",
+    "bodyDe": "Monatelang im Orbit zu leben bedeutet, Probleme zu lösen, an die am Boden nie jemand denkt. Die Besatzungen der Internationalen Raumstation müssen essen, sich waschen, trainieren und bei Verstand bleiben, in einer Blechbüchse, die alle neunzig Minuten die Erde umkreist – und einige ihrer Lösungen sind berühmt geworden.\n\nZuerst das Essen. Brot ist in der Schwerelosigkeit lästig: Jeder Krümel schwebt davon und kann in einen Luftfilter, ein Auge oder ein elektronisches Gerät geraten. Seit Mitte der 1980er-Jahre essen Astronauten deshalb stattdessen **Tortillas**. Die Fladenbrote krümeln kaum, halten sich monatelang und lassen sich um fast alles wickeln, von Rührei bis Erdnussbutter, und so sind sie zum Grundnahrungsmittel der Orbitalküche geworden.\n\nDas nächste Problem ist die Wäsche, denn es gibt keine. Kleidung wird so lange wie möglich getragen und dann mit dem Müll entsorgt. 2009 testete der japanische Astronaut Koichi Wakata J-Wear, eine an der Japanischen Frauenuniversität entwickelte antibakterielle, geruchshemmende Unterwäsche, und trug dasselbe Stück einen Monat lang ohne Unterbrechung; nach seinen Angaben beschwerte sich keiner seiner Kollegen.\n\nTraining ist Pflicht, denn ohne Schwerkraft schwinden Muskeln und Knochen, und die Besatzungsmitglieder verbringen etwa zwei Stunden am Tag auf einem Fahrrad, einem Kraftgerät und einem Laufband, das sie mit Gummigurten festhält. Am 16. April 2007 lief die amerikanische Astronautin **Sunita Williams** auf diesem Laufband als offizielle Teilnehmerin den Boston-Marathon mit und kam nach 4 Stunden und 24 Minuten ins Ziel – der erste im Weltraum gelaufene Marathon. Am 24. April 2016 tat es ihr der britische Astronaut Tim Peake gleich und lief den London-Marathon auf der Internationalen Raumstation (ISS) mit, in etwa dreieinhalb Stunden, während die Strecke auf einem Bildschirm an ihm vorbeizog.\n\nDie Station bietet auch Platz für Showeinlagen. Bei einem Außenbordeinsatz im November 2006 schlug der russische Kosmonaut **Michail Tjurin** mit einem vergoldeten Schläger einen drei Gramm schweren Golfball in die Umlaufbahn, ein Werbegag, den ein kanadischer Golfschlägerhersteller bezahlte. Und im Mai 2013 veröffentlichte der kanadische Kommandant Chris Hadfield ein Musikvideo von David Bowies **Space Oddity**, aufgenommen mit seiner Gitarre in den Modulen der Station; es wurde innerhalb weniger Tage millionenfach angesehen.\n\n| Wer | Was | Wann |\n|---|---|---|\n| Michail Tjurin | Golfschlag beim Außenbordeinsatz | 2006 |\n| Sunita Williams | Boston-Marathon auf dem Laufband | 2007 |\n| Koichi Wakata | ein Monat in derselben Unterwäsche | 2009 |\n| Chris Hadfield | Video zu „Space Oddity“ | 2013 |\n| Tim Peake | London-Marathon auf dem Laufband | 2016 |\n\nSo klein sie scheinen, halten diese Versuche die Besatzungen gesund und erinnern die Menschen am Boden daran, dass die Station ein Zuhause ist und nicht nur ein Labor.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-068",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-209",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-332",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-351",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Soviet probe made the first soft landing on the Moon in February 1966 and sent back the first pictures from its surface?",
+      "de": "Welche sowjetische Sonde landete im Februar 1966 als erste weich auf dem Mond und funkte die ersten Bilder von seiner Oberfläche?",
+      "answerEn": "Luna 9",
+      "answerDe": "Luna 9",
+      "timeline": {
+       "kind": "event",
+       "start": "1966-02-03",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Luna 9 makes the first soft landing on the Moon",
+       "labelDe": "Luna 9 landet als erste Sonde weich auf dem Mond"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Luna_9",
+       "title": "Luna 9 – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which giant Soviet Moon rocket failed on all four of its launches between 1969 and 1972?",
+      "de": "Welche sowjetische Mond-Großrakete scheiterte bei allen vier Starts zwischen 1969 und 1972?",
+      "answerEn": "N1",
+      "answerDe": "N1",
+      "timeline": {
+       "kind": "period",
+       "start": "1969",
+       "end": "1972",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The four launches of the Soviet N1 Moon rocket all fail",
+       "labelDe": "Die vier Starts der sowjetischen Mondrakete N1 scheitern alle"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/N1_(rocket)",
+       "title": "N1 (rocket) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which sport did Alan Shepard play on the Moon during the Apollo 14 mission in 1971?",
+      "de": "Welchen Sport spielte Alan Shepard 1971 während der Mission Apollo 14 auf dem Mond?",
+      "answerEn": "golf",
+      "answerDe": "Golf",
+      "timeline": {
+       "kind": "event",
+       "start": "1971-02",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Alan Shepard hits two golf balls on the Moon during Apollo 14",
+       "labelDe": "Alan Shepard schlägt während Apollo 14 zwei Golfbälle auf dem Mond"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Apollo_14",
+       "title": "Apollo 14 – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the electric car that astronauts drove on the Moon on Apollo 15, 16 and 17?",
+      "de": "Wie hieß das Elektroauto, mit dem Astronauten bei Apollo 15, 16 und 17 auf dem Mond fuhren?",
+      "answerEn": "Lunar Roving Vehicle",
+      "answerDe": "Lunar Roving Vehicle",
+      "timeline": {
+       "kind": "event",
+       "start": "1971-07-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Lunar Roving Vehicle is first driven on the Moon (Apollo 15)",
+       "labelDe": "Das Lunar Roving Vehicle fährt erstmals auf dem Mond (Apollo 15)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Lunar_Roving_Vehicle",
+       "title": "Lunar Roving Vehicle – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Race to the Moon: Curiosities from Both Sides",
+    "titleDe": "Der Wettlauf zum Mond: Kuriositäten von beiden Seiten",
+    "bodyEn": "The race to the Moon was fought with rockets, but it is remembered through small, human details – a signature, a piece of bread, a golf ball – and through the side that lost.\n\nThe Soviet Union led for years. Its Luna probes were the first to hit the Moon in 1959 and to photograph its far side the same year, and on 3 February 1966 **Luna 9** made the first soft landing and sent back the first pictures from the lunar surface. But the giant rocket meant to carry cosmonauts there, the **N1**, failed on all four of its launches between 1969 and 1972, one of them in one of the largest explosions in the history of rocketry. The crewed programme was halted in 1974, and so the number of cosmonauts the Soviet Union sent to the Moon before its collapse in 1991 remained 0. The robots kept going: in November 1970 the Soviet Union landed the eight-wheeled, remote-controlled rover Lunokhod 1, the first vehicle to drive on another world, which trundled across the Sea of Rains for ten months.\n\nThe Americans got there first with people. Before Apollo 11 lifted off in July 1969, its crew faced an unusual problem: no insurer would sell life insurance to men about to fly to the Moon. Neil Armstrong, Buzz Aldrin and Michael Collins therefore signed hundreds of envelopes – postal covers (insurance covers), as collectors call them – and had them postmarked on significant dates, so that their families could sell them if the crew did not come back. They came back, and the covers are now prized collectors' items.\n\nShortly after landing in the Sea of Tranquillity, Aldrin, an elder of his Presbyterian church, quietly took communion with a kit his pastor had given him. So the first food eaten on the Moon was a communion wafer, and the first liquid poured there was a little wine.\n\nLater missions were more relaxed. During Apollo 14 in February 1971 Alan Shepard fixed a club head to a sample-collecting tool and hit two balls of **golf**, claiming the second flew \"miles and miles\". From Apollo 15 onward the astronauts no longer had to walk: the battery-powered **Lunar Roving Vehicle**, folded up beside the lander, let them drive several kilometres from their base. Three of them are still parked on the Moon.\n\n| Detail | Side | Year |\n|---|---|---|\n| Luna 9, first soft landing | USSR | 1966 |\n| insurance covers signed | USA | 1969 |\n| communion on the Moon | USA | 1969 |\n| Lunokhod 1, first lunar rover | USSR | 1970 |\n| golf on the Moon | USA | 1971 |\n| N1 programme halted | USSR | 1974 |\n\nThe United States won the race, but some of the Soviet firsts were as important as anything Apollo achieved.",
+    "bodyDe": "Der Wettlauf zum Mond wurde mit Raketen ausgetragen, doch in Erinnerung bleibt er durch kleine, menschliche Details – eine Unterschrift, ein Stück Brot, einen Golfball – und durch die Seite, die verlor.\n\nDie Sowjetunion lag jahrelang vorn. Ihre Luna-Sonden trafen 1959 als erste den Mond und fotografierten im selben Jahr seine Rückseite, und am 3. Februar 1966 gelang **Luna 9** die erste weiche Landung mit den ersten Bildern von der Mondoberfläche. Doch die Großrakete, die Kosmonauten dorthin bringen sollte, die **N1**, scheiterte bei allen vier Starts zwischen 1969 und 1972, einmal in einer der größten Explosionen der Raketengeschichte. Das bemannte Programm wurde 1974 eingestellt, und so blieb die Zahl der Kosmonauten, die die Sowjetunion bis zu ihrem Zerfall 1991 zum Mond schickte, bei 0. Die Roboter machten weiter: Im November 1970 setzte die Sowjetunion das achträdrige, ferngesteuerte Mondauto Lunochod 1 ab, das erste Fahrzeug, das auf einem anderen Himmelskörper fuhr; es rollte zehn Monate lang über das Regenmeer.\n\nMit Menschen waren die Amerikaner zuerst dort. Bevor Apollo 11 im Juli 1969 abhob, hatte die Besatzung ein ungewöhnliches Problem: Kein Versicherer wollte Männern, die zum Mond fliegen würden, eine Lebensversicherung verkaufen. Neil Armstrong, Buzz Aldrin und Michael Collins unterschrieben deshalb Hunderte Briefumschläge (Insurance Covers), wie Sammler sie nennen, und ließen sie an bedeutenden Tagen abstempeln, damit ihre Familien sie verkaufen konnten, falls die Besatzung nicht zurückkehrte. Sie kehrten zurück, und die Umschläge sind heute begehrte Sammlerstücke.\n\nKurz nach der Landung im Meer der Ruhe nahm Aldrin, Ältester seiner presbyterianischen Gemeinde, im Stillen das Abendmahl mit einem Set, das ihm sein Pastor mitgegeben hatte. So war das erste auf dem Mond gegessene Nahrungsmittel eine Hostie, und die erste dort eingeschenkte Flüssigkeit ein wenig Wein.\n\nSpätere Missionen verliefen entspannter. Bei Apollo 14 im Februar 1971 befestigte Alan Shepard einen Schlägerkopf an einem Werkzeug zum Probensammeln und schlug zwei Bälle – **Golf** auf dem Mond; der zweite flog angeblich „meilenweit“. Ab Apollo 15 mussten die Astronauten nicht mehr laufen: Das batteriebetriebene **Lunar Roving Vehicle**, zusammengeklappt neben der Landefähre verstaut, ließ sie mehrere Kilometer von ihrer Basis wegfahren. Drei davon stehen noch heute auf dem Mond.\n\n| Detail | Seite | Jahr |\n|---|---|---|\n| Luna 9, erste weiche Landung | UdSSR | 1966 |\n| Insurance Covers unterschrieben | USA | 1969 |\n| Abendmahl auf dem Mond | USA | 1969 |\n| Lunochod 1, erstes Mondauto | UdSSR | 1970 |\n| Golf auf dem Mond | USA | 1971 |\n| N1-Programm eingestellt | UdSSR | 1974 |\n\nDie Vereinigten Staaten gewannen den Wettlauf, doch manche sowjetische Premiere war so bedeutend wie alles, was Apollo erreichte.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-276",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-141",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "After which Hungarian-American engineer is the boundary between the Earth's atmosphere and outer space at 100 kilometres named?",
+      "de": "Nach welchem ungarisch-amerikanischen Ingenieur ist die Grenze zwischen Erdatmosphäre und Weltraum in 100 Kilometern Höhe benannt?",
+      "answerEn": "Theodore von Kármán",
+      "answerDe": "Theodore von Kármán",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1881-05-11",
+       "end": "1963-05-06",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Theodore von Kármán, aerospace engineer",
+       "labelDe": "Theodore von Kármán, Luft- und Raumfahrtingenieur"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Theodore_von_K%C3%A1rm%C3%A1n",
+       "title": "Theodore von Kármán – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Under which project name did Felix Baumgartner make his record jump from a balloon capsule at about 39 kilometres in October 2012?",
+      "de": "Unter welchem Projektnamen sprang Felix Baumgartner im Oktober 2012 aus etwa 39 Kilometern Höhe aus einer Ballonkapsel?",
+      "answerEn": "Red Bull Stratos",
+      "answerDe": "Red Bull Stratos",
+      "timeline": {
+       "kind": "event",
+       "start": "2012-10-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Red Bull Stratos: Felix Baumgartner jumps from about 39 km",
+       "labelDe": "Red Bull Stratos: Felix Baumgartner springt aus etwa 39 km Höhe"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Red_Bull_Stratos",
+       "title": "Red Bull Stratos – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which US Air Force officer jumped from a balloon at about 31 kilometres in 1960, a height record that stood until 2012?",
+      "de": "Welcher Offizier der US-Luftwaffe sprang 1960 aus etwa 31 Kilometern Höhe von einem Ballon, ein Höhenrekord, der bis 2012 hielt?",
+      "answerEn": "Joseph Kittinger",
+      "answerDe": "Joseph Kittinger",
+      "timeline": {
+       "kind": "event",
+       "start": "1960-08-16",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Joseph Kittinger jumps from 31.3 km in Project Excelsior",
+       "labelDe": "Joseph Kittinger springt im Projekt Excelsior aus 31,3 km Höhe"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Joseph_Kittinger",
+       "title": "Joseph Kittinger – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Google executive broke Felix Baumgartner's record in October 2014 with a jump from about 41 kilometres?",
+      "de": "Welcher Google-Manager brach im Oktober 2014 mit einem Sprung aus etwa 41 Kilometern Höhe den Rekord von Felix Baumgartner?",
+      "answerEn": "Alan Eustace",
+      "answerDe": "Alan Eustace",
+      "timeline": {
+       "kind": "event",
+       "start": "2014-10-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Alan Eustace jumps from about 41 km, a new record",
+       "labelDe": "Alan Eustace springt aus etwa 41 km Höhe, ein neuer Rekord"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Alan_Eustace",
+       "title": "Alan Eustace – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Where Space Begins: The Kármán Line and the Highest Jumps",
+    "titleDe": "Wo der Weltraum beginnt: Die Kármán-Linie und die höchsten Sprünge",
+    "bodyEn": "The atmosphere does not end with a wall; it simply grows thinner until there is almost nothing left. So where does space begin? The answer is a convention, and a handful of daredevils have tested how close a human can get to it without a rocket.\n\nThe most widely used boundary is the Kármán line, 100 kilometres above sea level. It is named after **Theodore von Kármán** (1881–1963), the Hungarian-born engineer and co-founder of the Jet Propulsion Laboratory, who calculated in the 1950s that at roughly this height an aircraft would have to fly at orbital speed to generate enough lift – so wings stop being useful and only rockets work. The international air sports federation FAI, which keeps aviation and spaceflight records, adopted the 100-kilometre figure in the 1960s. The US armed forces and NASA, however, award astronaut wings to anyone who flies above 50 miles, about 80 kilometres, which is why some sub-orbital tourist flights count as spaceflights in America but not in the FAI's books.\n\nLong before anyone crossed that line, people tried to fall from its threshold. On 16 August 1960 the US Air Force officer **Joseph Kittinger** stepped out of an open balloon gondola at about 31 kilometres as part of Project Excelsior, testing parachute systems for pilots ejecting at high altitude. His record stood for 52 years.\n\nIt was broken by the Austrian skydiver **Felix Baumgartner**. On 14 October 2012, in a project called **Red Bull Stratos**, a helium balloon lifted his pressurised capsule from Roswell, New Mexico, to almost 39 kilometres. He jumped, and in the thin air of the stratosphere reached 1,357 kilometres per hour, or Mach 1.25 – becoming the first person to break the sound barrier in free fall without any vehicle. Kittinger, by then his mentor, spoke to him by radio from mission control. Millions watched the jump live online.\n\nTwo years later the record changed hands again, almost unnoticed. On 24 October 2014 **Alan Eustace**, a senior vice president at Google, rose to about 41 kilometres beneath a balloon, without a capsule, and jumped back to Earth in a specially built pressure suit.\n\n| Who | Height | Year |\n|---|---|---|\n| Joseph Kittinger | about 31 km | 1960 |\n| Felix Baumgartner | about 39 km | 2012 |\n| Alan Eustace | about 41 km | 2014 |\n| Kármán line | 100 km | convention |\n\nEven the highest of these jumps began less than halfway to the edge of space.",
+    "bodyDe": "Die Atmosphäre endet nicht an einer Wand; sie wird einfach immer dünner, bis fast nichts mehr übrig ist. Wo also beginnt der Weltraum? Die Antwort ist eine Konvention, und eine Handvoll Wagemutiger hat getestet, wie nahe ein Mensch ihr ohne Rakete kommen kann.\n\nDie am häufigsten verwendete Grenze ist die Kármán-Linie, 100 Kilometer über dem Meeresspiegel. Sie ist nach **Theodore von Kármán** (1881–1963) benannt, dem in Ungarn geborenen Ingenieur und Mitbegründer des Jet Propulsion Laboratory, der in den 1950er-Jahren berechnete, dass ein Flugzeug in etwa dieser Höhe mit Orbitalgeschwindigkeit fliegen müsste, um genug Auftrieb zu erzeugen – Flügel nützen dort nichts mehr, nur Raketen funktionieren. Der internationale Luftsportverband FAI, der die Rekorde der Luft- und Raumfahrt führt, übernahm den Wert von 100 Kilometern in den 1960er-Jahren. Die US-Streitkräfte und die NASA verleihen das Astronautenabzeichen jedoch jedem, der höher als 50 Meilen fliegt, etwa 80 Kilometer; deshalb zählen manche suborbitalen Touristenflüge in Amerika als Raumflüge, in den Büchern der FAI aber nicht.\n\nLange bevor jemand diese Linie überquerte, versuchten Menschen, von ihrer Schwelle zu fallen. Am 16. August 1960 trat der Offizier der US-Luftwaffe **Joseph Kittinger** im Projekt Excelsior in etwa 31 Kilometern Höhe aus einer offenen Ballongondel, um Fallschirmsysteme für Piloten zu testen, die sich in großer Höhe hinauskatapultieren. Sein Rekord hielt 52 Jahre.\n\nGebrochen wurde er vom österreichischen Fallschirmspringer **Felix Baumgartner**. Am 14. Oktober 2012 trug im Projekt **Red Bull Stratos** ein Heliumballon seine Druckkapsel von Roswell in New Mexico auf fast 39 Kilometer Höhe. Er sprang und erreichte in der dünnen Luft der Stratosphäre 1357 Kilometer pro Stunde oder Mach 1,25 – als erster Mensch durchbrach er im freien Fall ohne Fahrzeug die Schallmauer. Kittinger, inzwischen sein Mentor, sprach von der Missionskontrolle aus per Funk mit ihm. Millionen verfolgten den Sprung live im Internet.\n\nZwei Jahre später wechselte der Rekord fast unbemerkt erneut den Besitzer. Am 24. Oktober 2014 stieg **Alan Eustace**, ein leitender Vizepräsident von Google, ohne Kapsel unter einem Ballon auf etwa 41 Kilometer und sprang in einem eigens gebauten Druckanzug zur Erde zurück.\n\n| Wer | Höhe | Jahr |\n|---|---|---|\n| Joseph Kittinger | etwa 31 km | 1960 |\n| Felix Baumgartner | etwa 39 km | 2012 |\n| Alan Eustace | etwa 41 km | 2014 |\n| Kármán-Linie | 100 km | Konvention |\n\nSelbst der höchste dieser Sprünge begann nicht einmal auf halbem Weg zum Rand des Weltraums.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-360",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the rhesus monkey that in June 1949 became the first primate in space aboard a US V-2 rocket?",
+      "de": "Wie hieß der Rhesusaffe, der im Juni 1949 an Bord einer amerikanischen V2-Rakete als erster Primat ins All flog?",
+      "answerEn": "Albert II",
+      "answerDe": "Albert II",
+      "timeline": {
+       "kind": "event",
+       "start": "1949-06-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Albert II becomes the first monkey in space",
+       "labelDe": "Albert II fliegt als erster Affe ins All"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Albert_II_(monkey)",
+       "title": "Albert II (monkey) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What were the names of the two dogs that in August 1960 became the first animals to orbit the Earth and return alive?",
+      "de": "Wie hießen die beiden Hunde, die im August 1960 als erste Tiere die Erde umkreisten und lebend zurückkehrten?",
+      "answerEn": "Belka and Strelka",
+      "answerDe": "Belka und Strelka",
+      "timeline": {
+       "kind": "event",
+       "start": "1960-08-19",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Belka and Strelka are launched; they return alive from orbit",
+       "labelDe": "Belka und Strelka starten und kehren lebend aus dem Orbit zurück"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Soviet_space_dogs",
+       "title": "Soviet space dogs – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the chimpanzee that became the first great ape in space on a Mercury flight in January 1961?",
+      "de": "Wie hieß der Schimpanse, der im Januar 1961 auf einem Mercury-Flug als erster Menschenaffe ins All flog?",
+      "answerEn": "Ham",
+      "answerDe": "Ham",
+      "timeline": {
+       "kind": "event",
+       "start": "1961-01-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The chimpanzee Ham flies on Mercury-Redstone 2",
+       "labelDe": "Der Schimpanse Ham fliegt mit Mercury-Redstone 2"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ham_(chimpanzee)",
+       "title": "Ham (chimpanzee) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the cat that France sent into space in October 1963, the only cat ever launched?",
+      "de": "Wie hieß die Katze, die Frankreich im Oktober 1963 ins All schickte, die einzige jemals gestartete Katze?",
+      "answerEn": "Félicette",
+      "answerDe": "Félicette",
+      "timeline": {
+       "kind": "event",
+       "start": "1963-10-18",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Félicette becomes the only cat in space",
+       "labelDe": "Félicette wird die einzige Katze im Weltraum"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/F%C3%A9licette",
+       "title": "Félicette – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Before Gagarin: Animals in Space",
+    "titleDe": "Vor Gagarin: Tiere im Weltraum",
+    "bodyEn": "Before anyone dared to send a human above the atmosphere, engineers needed to know whether a living body could survive the launch, weightlessness and the radiation of space. The first space travellers were therefore animals, and their flights paved the way for Yuri Gagarin.\n\nThe very first were insects. On 9 July 1946 the United States launched captured German V-2 rockets from White Sands in New Mexico, and one carried a container of **fruit flies** above the 100-kilometre mark. Those flies were not recovered, but on 20 February 1947 another batch returned alive in a capsule, apparently unharmed by radiation. Fruit flies were ideal passengers: small, cheap and, thanks to genetics research, very well understood.\n\nMammals followed. On 14 June 1949 a rhesus monkey named **Albert II** rode a V-2 to about 134 kilometres and became the first primate and the first mammal in space; he survived the flight but died when his parachute failed. The Soviet Union preferred dogs, especially strays from the streets of Moscow, which were used to cold and hunger. In November 1957 Laika became the first animal to orbit the Earth aboard Sputnik 2, though she died within hours. On 19 August 1960 two other dogs, **Belka and Strelka**, spent a day in orbit aboard Korabl-Sputnik 2 and landed safely – the first living creatures to go into orbit and come back alive. One of Strelka's puppies was later given to President Kennedy's family.\n\nThe Americans trained chimpanzees. On 31 January 1961 **Ham** flew a sub-orbital Mercury flight and, pulling levers in response to flashing lights, showed that a primate could work in space; he splashed down in the Atlantic with nothing worse than a bruised nose. Less than three months later Gagarin made his flight. France, too, ran its own programme, and on 18 October 1963 launched a black-and-white cat named **Félicette** on a rocket from the Sahara. She returned safely and remains the only cat ever sent into space.\n\n| Animal | Name | Country | Year |\n|---|---|---|---|\n| fruit flies | – | USA | 1946/1947 |\n| rhesus monkey | Albert II | USA | 1949 |\n| dogs | Belka and Strelka | USSR | 1960 |\n| chimpanzee | Ham | USA | 1961 |\n| cat | Félicette | France | 1963 |\n\nMany of these animals did not survive, and memorials in Moscow and elsewhere now honour them as the unwilling pioneers of spaceflight.",
+    "bodyDe": "Bevor jemand wagte, einen Menschen über die Atmosphäre hinauszuschicken, mussten die Ingenieure wissen, ob ein lebender Körper den Start, die Schwerelosigkeit und die Strahlung des Weltraums überstehen kann. Die ersten Raumfahrer waren deshalb Tiere, und ihre Flüge ebneten Juri Gagarin den Weg.\n\nDie allerersten waren Insekten. Am 9. Juli 1946 starteten die Vereinigten Staaten erbeutete deutsche V2-Raketen von White Sands in New Mexico, und eine trug einen Behälter mit **Fruchtfliegen** über die 100-Kilometer-Marke. Diese Fliegen wurden nicht geborgen, doch am 20. Februar 1947 kehrte eine weitere Ladung lebend in einer Kapsel zurück, offenbar unversehrt von der Strahlung. Fruchtfliegen waren ideale Passagiere: klein, billig und dank der Genetikforschung sehr gut verstanden.\n\nSäugetiere folgten. Am 14. Juni 1949 flog ein Rhesusaffe namens **Albert II** mit einer V2 auf etwa 134 Kilometer und wurde der erste Primat und das erste Säugetier im Weltraum; er überlebte den Flug, starb aber, als sein Fallschirm versagte. Die Sowjetunion bevorzugte Hunde, besonders Streuner von den Straßen Moskaus, die Kälte und Hunger gewohnt waren. Im November 1957 umkreiste Laika an Bord von Sputnik 2 als erstes Tier die Erde, starb jedoch nach wenigen Stunden. Am 19. August 1960 verbrachten zwei andere Hunde, **Belka und Strelka**, einen Tag im Orbit an Bord von Korabl-Sputnik 2 und landeten sicher – die ersten Lebewesen, die in die Umlaufbahn flogen und lebend zurückkamen. Einer von Strelkas Welpen wurde später der Familie von Präsident Kennedy geschenkt.\n\nDie Amerikaner trainierten Schimpansen. Am 31. Januar 1961 flog **Ham** einen suborbitalen Mercury-Flug und zeigte, indem er auf Lichtsignale hin Hebel betätigte, dass ein Primat im Weltraum arbeiten kann; er wasserte im Atlantik mit nicht mehr als einer geprellten Nase. Keine drei Monate später absolvierte Gagarin seinen Flug. Auch Frankreich hatte ein eigenes Programm und schoss am 18. Oktober 1963 eine schwarz-weiße Katze namens **Félicette** mit einer Rakete aus der Sahara ins All. Sie kehrte sicher zurück und ist bis heute die einzige Katze, die je in den Weltraum geschickt wurde.\n\n| Tier | Name | Land | Jahr |\n|---|---|---|---|\n| Fruchtfliegen | – | USA | 1946/1947 |\n| Rhesusaffe | Albert II | USA | 1949 |\n| Hunde | Belka und Strelka | UdSSR | 1960 |\n| Schimpanse | Ham | USA | 1961 |\n| Katze | Félicette | Frankreich | 1963 |\n\nViele dieser Tiere überlebten nicht, und Denkmäler in Moskau und anderswo ehren sie heute als unfreiwillige Pioniere der Raumfahrt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-195",
+   "category": 3,
+   "domain": "earth-space",
+   "sub": "astronomy",
+   "why": "Its answer \"Columbia\" repeats fact f08927 in a1786 (an article may not hold the same answer twice). Alias it to f08927 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

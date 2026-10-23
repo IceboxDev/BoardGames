@@ -1,0 +1,343 @@
+{
+ "article": "a1302",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Thailand",
+   "title": "Thailand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:25.941Z",
+   "snapshot": "183c46bd010161f610a5ad4f8872e074e44420fa46398d14a711752d833d9d1f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dominion_of_Ceylon",
+   "title": "Dominion of Ceylon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:26.152Z",
+   "snapshot": "400f84e078fc27ed7c0c2655452f9f92250803f845431f25214a534b81cb868b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Name_of_Iran",
+   "title": "Name of Iran – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:27.208Z",
+   "snapshot": "13c2a2a3c0186e723fb9634aee78e78b5c1d25c6a38b25eb5b9fa1f36c5d0ace"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Iran",
+   "title": "Iran",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:25.033Z",
+   "snapshot": "dc15f73e04c7ecf72b974f674b537c6b17d83cad2dceff1ff202aab55dc4cd67"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Names_of_Myanmar",
+   "title": "Names of Myanmar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:28.192Z",
+   "snapshot": "68b27d8f4cee052ad442e43e61be9f9fc99542ba13cfaa201e35fe7b95c7dc13"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Burkina_Faso",
+   "title": "Burkina Faso – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:29.782Z",
+   "snapshot": "ca39febf2fb9292b80727f9b211a80e2fa0c03f48ca16a09cc35cb0efd5df46b"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Republik_Kongo",
+   "title": "Republik Kongo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:26.450Z",
+   "snapshot": "4e543ab2a7dd9c22da8be822c726521c56b96e7c15eeafea813ec6866109ef58"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Kingdom_of_Kandy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:30.281Z",
+   "snapshot": "7f592c9708e5ebee96f34173c827544abb708aa8d3f4cc37e56ecd5c0a89c41e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Siam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ceylon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Persia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Persien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-184"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Burma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Upper Volta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Französisch-Kongo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-210"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:02.978Z",
+   "target": "f06506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thailand, officially the Kingdom of Thailand, and formerly known as Siam, is a country located in Mainland Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Siam” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:02.978Z",
+   "target": "f06507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Dominion of Ceylon, officially Ceylon, was an independent country in the Commonwealth of Nations from 1948 to 1972,  that shared a monarch with other dominions of the Commonwealth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ceylon” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:02.978Z",
+   "target": "f06508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Historically, Iran was commonly referred to as \"Persia\" in the Western world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Persia” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:02.978Z",
+   "target": "f06508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Iran (persisch ايران, DMG Īrān, [ʔiːˈɾɒːn] , amtlich seit 1979 Islamische Republik Iran; auch der Iran; historisch als Exonym bis 1935 und teils darüber hinaus auch Persien) ist ein Staat in Vorderasien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Persien” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:02.978Z",
+   "target": "f06509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The country known in English as Myanmar, or Burma, has undergone changes in both its official and popular names worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burma” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:02.978Z",
+   "target": "f06510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1960, it gained full independence with the name of the Republic of Upper Volta, with Maurice Yaméogo as the president.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Upper Volta” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:02.978Z",
+   "target": "f11972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "[kɔ̃ˈgo], bis 1960 als Kolonie Französisch-Kongo; auch Mittelkongo, 1969 bis 1991 Volksrepublik Kongo) ist eine Republik in Zentralafrika.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Französisch-Kongo” is on the snapshot of s7"
+  }
+ ]
+}

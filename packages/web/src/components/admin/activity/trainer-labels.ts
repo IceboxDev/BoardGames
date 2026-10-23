@@ -3,6 +3,7 @@ import { count } from "./describe-context";
 
 /** How a trainer is named in a sentence. */
 export const TRAINER_NAME: Readonly<Record<TrainerDeck, string>> = {
+  quiz: "Quiz",
   quiztopia: "Quiztopia",
   geography: "World Geography",
 };
@@ -22,7 +23,12 @@ interface FieldLabel {
   values?: ValueWords;
 }
 
-const LANGUAGE: ValueWords = { en: "English", de: "German", both: "English + German" };
+const LANGUAGE: ValueWords = {
+  en: "English",
+  de: "German",
+  ru: "Russian",
+  both: "English + German",
+};
 const CONTINENT: ValueWords = {
   af: "Africa",
   an: "Antarctica",
@@ -33,9 +39,18 @@ const CONTINENT: ValueWords = {
   sa: "South America",
 };
 
-// Keyed by the settings schemas' field names (core/protocol/http/quiztopia.ts
-// and trainer-geography.ts). An unknown field still reads — by its key.
+// Keyed by the settings schemas' field names (core/protocol/http/trainer-quiz.ts
+// and trainer-geography.ts; "quiztopia" is the legacy trainer's, kept so old
+// rows read). An unknown field still reads — by its key.
 const FIELDS: Readonly<Record<TrainerDeck, Readonly<Record<string, FieldLabel>>>> = {
+  quiz: {
+    language: { name: "language", values: LANGUAGE },
+    newFactsPerDay: { name: "new facts a day" },
+    includeLeeches: { name: "leeches" },
+    gameReviewsAffectSrs: { name: "table-game answers count" },
+    sources: { name: "games studied" },
+    excludeFromAll: { name: "domains left out of Study all" },
+  },
   quiztopia: {
     language: { name: "language", values: LANGUAGE },
     newPerDay: { name: "new questions a day" },
@@ -66,6 +81,12 @@ function valueWords(value: unknown, words: ValueWords | undefined): string {
   if (typeof value === "boolean") return value ? "on" : "off";
   if (typeof value === "string") return words?.[value] ?? value;
   if (typeof value === "number") return String(value);
+  // The quiz trainer's languages: { primary, secondary }.
+  if (typeof value === "object" && "primary" in value) {
+    const { primary, secondary } = value as { primary: unknown; secondary: unknown };
+    const first = valueWords(primary, words);
+    return secondary ? `${first} + ${valueWords(secondary, words)}` : first;
+  }
   if (typeof value === "object") return Object.keys(value).length === 0 ? "none" : "custom";
   return String(value);
 }

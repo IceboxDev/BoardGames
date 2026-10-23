@@ -1,0 +1,442 @@
+{
+ "article": "a2263",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV",
+   "title": "Rocket Beans TV",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:17.613Z",
+   "snapshot": "8e13fb633d5b48a5c728caa532cc9160f4ef4491979e4513a364aa0d42b39fe3"
+  },
+  "s2": {
+   "url": "https://www.dwdl.de/nachrichten/48966/rocket_beans_wollen_livestreamingsender_starten/",
+   "title": "Rocket Beans wollen Livestreaming-Sender starten",
+   "publisher": "DWDL.de",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:44.008Z",
+   "snapshot": "b75a73f494c6f37008a82e12e4270e134c42d967ede6d1d09cc0272a88246939"
+  },
+  "s3": {
+   "url": "https://www.br.de/puls/themen/netz/rocket-beans-tv-interview-etienne-garde-100.html",
+   "title": "Rocket Beans TV: Interview mit Etienne Gardé",
+   "publisher": "Bayerischer Rundfunk (PULS)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:44.272Z",
+   "snapshot": "0b3593bfe7518f94aae19b399c47c0a9e7c0dfab7bd8c4a42beda654cb1931a0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rocket Beans TV",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-365"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MTV",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hamburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Twitch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "2021",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:44.751Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rocket Beans TV, kurz RBTV, ist ein deutschsprachiger Livestream-Kanal der Fernseh- und Medienproduktionsfirma BEANS Entertainment GmbH mit Sitz in Hamburg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rocket Beans TV” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:44.751Z",
+   "target": "f11606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Entstanden ist Rocket Beans TV als YouTube-Kanal parallel zur Ausstrahlung der Videospiel-Sendung Game One auf dem Sender MTV.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MTV” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:44.751Z",
+   "target": "f11607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rocket Beans TV, kurz RBTV, ist ein deutschsprachiger Livestream-Kanal der Fernseh- und Medienproduktionsfirma BEANS Entertainment GmbH mit Sitz in Hamburg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:44.751Z",
+   "target": "f11608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Sender übertrug seinen Inhalt auf der Streamingplattform Twitch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Twitch” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:44.751Z",
+   "target": "f11609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "November 2021 stellte man den 24/7-Betrieb des Kanals ein und konzentriert sich seither auf die Veröffentlichung von Eigen- und Fremdproduktionen sowie Live-Formate, welche zumeist donnerstags und freitags ausgestrahlt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2021” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:19:51Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wollen sich ab dem 15. Januar 2015 im Internet an einem 24-Stunden-Streaming-Kanal versuchen. Dieser hört auf den Namen Rocket Beans TV",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms the 24-hour channel and launch date; DWDL quotes the founders calling it the \"größten deutschen Livestreaming-Kanal\", not the first"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:19:54Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rocket Beans ist ein Internetsender, der 24 Stunden Programm bietet rund um die Themen Internetkultur, Popkultur, Gaming",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:19:58Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ihr Angebot von einem YouTube-Kanal zu einem gleichnamigen Internetsender mit 24-stündiger Sendezeit auszubauen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer confirmed; the card premise \"Deutschlands erster 24-Stunden-Internetsender\" is not stated by Wikipedia, DWDL, heise, BR, Welt or Gamestar — wording narrowed to drop \"first\""
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:51:09Z",
+   "target": "f11605",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ihr Angebot von einem YouTube-Kanal zu einem gleichnamigen Internetsender mit 24-stündiger Sendezeit auszubauen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "resolves e13: wording w11680 and bodies narrowed to \"a 24-hour internet TV channel\" (no \"first\"); that premise is confirmed"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:51:14Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ihr Angebot von einem YouTube-Kanal zu einem gleichnamigen Internetsender mit 24-stündiger Sendezeit auszubauen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer confirmed after narrowing the wording"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:30.635Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wollen sich ab dem 15. Januar 2015 im Internet an einem 24-Stunden-Streaming-Kanal versuchen. Dieser hört auf den Namen Rocket Beans TV",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:30.635Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rocket Beans ist ein Internetsender, der 24 Stunden Programm bietet rund um die Themen Internetkultur, Popkultur, Gaming",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:30.635Z",
+   "target": "f11605",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ihr Angebot von einem YouTube-Kanal zu einem gleichnamigen Internetsender mit 24-stündiger Sendezeit auszubauen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:30.635Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ihr Angebot von einem YouTube-Kanal zu einem gleichnamigen Internetsender mit 24-stündiger Sendezeit auszubauen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:30.635Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dieser hört auf den Namen Rocket Beans TV und soll in großen Teil live senden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rocket Beans TV” is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:30.635Z",
+   "target": "f11605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Früher war Rocket Beans TV eine klassische Produktionsfirma - aber eine Auftragsflaute zwang das Team dazu, sein Konzept neu auszurichten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rocket Beans TV” is on the snapshot of s3"
+  }
+ ]
+}
