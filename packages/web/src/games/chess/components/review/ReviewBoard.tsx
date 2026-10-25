@@ -25,6 +25,7 @@ import { BoardStage } from "../BoardStage";
 import ChessBoard, { type BoardArrow } from "../board/ChessBoard";
 import { PlayerStrip } from "../PlayerStrip";
 import { PracticeCard, type PracticeView, SideLineCard, StartCard, StoryCard } from "./MoveCard";
+import { RepertoireCard } from "./RepertoireCard";
 import { ReviewActions } from "./ReviewActions";
 import { type HeadlineTone, type PracticeItem, ReviewRail } from "./ReviewRail";
 
@@ -55,10 +56,8 @@ export interface ReviewBoardProps {
   readonly onOrientationChange: (orientation: Color) => void;
   /** The game just ended here: play its last move's sound and the ending. */
   readonly announce?: boolean;
-  /** "Your repertoire" (the trainer), between the key moments and the moves. */
-  readonly repertoire?: ReactNode;
-  /** More buttons for the action bar ("Play from here"). */
-  readonly extraActions?: (ply: number) => ReactNode;
+  /** More buttons for the action bar ("Play from here"), for the game position on screen. */
+  readonly extraActions?: (ply: number, fen: string) => ReactNode;
 }
 
 /** Each side's clock after `ply` moves, from the clocks the moves recorded. */
@@ -109,7 +108,6 @@ export function ReviewBoard({
   orientation,
   onOrientationChange,
   announce = false,
-  repertoire,
   extraActions,
 }: ReviewBoardProps) {
   const total = moves.length;
@@ -193,6 +191,8 @@ export function ReviewBoard({
   const current = practice ? practice.queue[practice.at] : undefined;
   const currentMove = current !== undefined ? moves[current] : undefined;
   const [judged, setJudged] = useState<{ drop: number } | null>(null);
+  // The tree's move, marked where "Your repertoire" says the game left it.
+  const [mark, setMark] = useState<{ ply: number; uci: string } | null>(null);
   const tryMove = useCallback(
     (uci: string) => {
       if (!practice || current === undefined || !currentMove) return;
@@ -217,6 +217,11 @@ export function ReviewBoard({
     },
     [practice, current, currentMove, analysis.evals, fens, startFen, explore, dispatch],
   );
+  // A new practice position starts without the last one's miss.
+  const practiceAt = practice ? practice.at : null;
+  useEffect(() => {
+    if (practiceAt !== undefined) setJudged(null);
+  }, [practiceAt]);
   // Each practice position is shown from its mover's side.
   useEffect(() => {
     if (currentMove && currentMove.by !== orientation) onOrientationChange(currentMove.by);
@@ -287,12 +292,13 @@ export function ReviewBoard({
         line: lineText(fens[current] ?? startFen, [practice.tried ?? "", ...pv].filter(Boolean)),
       };
     }
-    if (practice.tried && judged) return { kind: "miss", drop: judged.drop, against };
-    if (practice.tried) return { kind: "judging", against };
+    if (practice.tried && !judged) return { kind: "judging", against };
     if (practice.revealed) {
       const best = analysis.evals[current];
       return { kind: "revealed", answer: lineText(fens[current] ?? startFen, best?.pv ?? [], 3) };
     }
+    // A miss stays said after the board takes the move back, until the next try.
+    if (judged) return { kind: "miss", drop: judged.drop, against };
     return { kind: "ask", against };
   };
 
@@ -327,28 +333,42 @@ export function ReviewBoard({
   );
 
   // ── Board ─────────────────────────────────────────────────────────────
-  const arrows: BoardArrow[] = practice
-    ? practice.revealed && current !== undefined && analysis.evals[current]?.best
+  const marked =
+    mark && mark.ply === ply && extra.length === 0 && !practice
       ? [
           {
-            from: (analysis.evals[current]?.best ?? "").slice(0, 2),
-            to: (analysis.evals[current]?.best ?? "").slice(2, 4),
-            tone: "best",
+            from: mark.uci.slice(0, 2),
+            to: mark.uci.slice(2, 4),
+            tone: "pick" as const,
+            emphasis: true,
           },
         ]
-      : []
-    : shownLines.slice(0, 3).flatMap((l, i) => {
-        const uci = l.pv[0];
-        return uci
+      : [];
+  const arrows: BoardArrow[] =
+    marked.length > 0
+      ? marked
+      : practice
+        ? practice.revealed && current !== undefined && analysis.evals[current]?.best
           ? [
               {
-                from: uci.slice(0, 2),
-                to: uci.slice(2, 4),
-                tone: i === 0 ? ("best" as const) : ("alt" as const),
+                from: (analysis.evals[current]?.best ?? "").slice(0, 2),
+                to: (analysis.evals[current]?.best ?? "").slice(2, 4),
+                tone: "best",
               },
             ]
-          : [];
-      });
+          : []
+        : shownLines.slice(0, 3).flatMap((l, i) => {
+            const uci = l.pv[0];
+            return uci
+              ? [
+                  {
+                    from: uci.slice(0, 2),
+                    to: uci.slice(2, 4),
+                    tone: i === 0 ? ("best" as const) : ("alt" as const),
+                  },
+                ]
+              : [];
+          });
   const canTry = practice && !practice.done && !practice.tried && !practice.solved;
   const boardMoves = practice ? (canTry ? legalAt(shownFen) : []) : legalAt(shownFen);
   const badgeGrade = story?.grade ?? null;
@@ -420,7 +440,19 @@ export function ReviewBoard({
           stories={stories}
           moments={moments}
           practice={practiceItems}
-          repertoire={repertoire}
+          repertoire={
+            viewer ? (
+              <RepertoireCard
+                color={viewer}
+                startFen={startFen}
+                moves={ucis}
+                onShow={(index, uci) => {
+                  dispatch({ type: "go", ply: index });
+                  setMark(uci ? { ply: index, uci } : null);
+                }}
+              />
+            ) : null
+          }
           history={moves}
           grades={review.grades}
           startFen={startFen}
@@ -452,7 +484,7 @@ export function ReviewBoard({
             black: names.b,
             date,
           }}
-          extra={extraActions?.(ply)}
+          extra={extraActions?.(ply, baseFen)}
         />
       }
     >

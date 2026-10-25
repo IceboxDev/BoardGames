@@ -12,6 +12,7 @@ import { BoardFallback } from "../../components/RouteFallback";
 import { type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
 import GameBoard from "./components/GameBoard";
+import { PlayFromHere } from "./components/review/PlayFromHere";
 import { ReviewBoard } from "./components/review/ReviewBoard";
 import SetupScreen, { type ChessSetup } from "./components/SetupScreen";
 import { colourSwap } from "./logic/colour-swap";
@@ -23,7 +24,11 @@ function toSoloStart(setup: ChessSetup): SoloStart {
   const ai: SeatRequest = { kind: "ai", strategy: setup.strategy };
   return {
     seats: color === "w" ? [human, ai] : [ai, human],
-    config: { timeControl: setup.timeControl, takebacks: setup.takebacks },
+    config: {
+      timeControl: setup.timeControl,
+      takebacks: setup.takebacks,
+      openingMoves: setup.openingMoves,
+    },
   };
 }
 
@@ -102,6 +107,13 @@ function ChessGame({ source }: GameComponentProps) {
         orientation={orientation}
         onOrientationChange={setOrientation}
         announce
+        extraActions={(ply) => (
+          <PlayFromHere
+            moves={view.history.slice(0, ply).map((h) => h.uci)}
+            side={view.color ?? "w"}
+            before={flow.changeSetup ?? undefined}
+          />
+        )}
       />
     );
   }

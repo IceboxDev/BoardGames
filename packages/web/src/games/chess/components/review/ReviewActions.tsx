@@ -31,7 +31,7 @@ export function ReviewActions({
     <Surface
       variant="raised"
       padding="sm"
-      className="flex min-h-12 shrink-0 flex-wrap items-center justify-between gap-2 whitespace-nowrap lg:grid lg:grid-cols-[1fr_auto_1fr]"
+      className="flex min-h-12 shrink-0 flex-wrap items-center justify-between gap-2 whitespace-nowrap lg:flex-nowrap"
     >
       <div className="flex items-center gap-2">
         <Button size="xs" variant="ghost" onClick={onFlip} title="Turn the board around (F)">
@@ -49,7 +49,7 @@ export function ReviewActions({
         )}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-2">
+      <div className="flex flex-1 flex-wrap items-center justify-center gap-2 lg:flex-nowrap">
         {endActions.map((a) => (
           <Button
             key={a.label}
@@ -62,7 +62,7 @@ export function ReviewActions({
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-end gap-2">
+      <div className="flex flex-wrap items-center justify-end gap-2 lg:flex-nowrap">
         {practice && (
           <Button
             size="xs"
@@ -76,11 +76,11 @@ export function ReviewActions({
                 : "Waiting for the analysis"
             }
           >
-            Learn from mistakes{practice.ready ? ` (${practice.count})` : ""}
+            Practise mistakes{practice.ready ? ` (${practice.count})` : ""}
           </Button>
         )}
         {extra}
-        <PgnButtons input={pgn} />
+        <PgnButtons input={pgn} compact />
       </div>
     </Surface>
   );

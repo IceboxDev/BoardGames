@@ -50,6 +50,8 @@ export interface ChessGame {
   readonly takebackRequest: Color | null;
   readonly takebackRequestedAt: Readonly<Record<Color, number>>;
   readonly result: ChessResult | null;
+  /** Moves the game was set up with (a line from the trainer): no takeback goes past them. */
+  readonly openingPlies?: number;
 }
 
 const NEVER: Readonly<Record<Color, number>> = { w: -1, b: -1 };
@@ -59,13 +61,15 @@ export interface NewGameOptions {
   readonly now: number;
   readonly startFen?: string;
   readonly bughouse?: boolean;
+  /** A line to start after (UCI from the start): played at once, the clocks start after it. */
+  readonly openingMoves?: readonly string[];
 }
 
 export function createGame(opts: NewGameOptions): ChessGame {
   const bughouse = opts.bughouse ?? false;
   const startFen = opts.startFen ?? START_FEN;
   const position = parseFen(startFen, { bughouse });
-  return {
+  const game: ChessGame = {
     startFen: toFen(position),
     bughouse,
     position,
@@ -78,6 +82,37 @@ export function createGame(opts: NewGameOptions): ChessGame {
     takebackRequest: null,
     takebackRequestedAt: NEVER,
     result: null,
+  };
+  return opts.openingMoves?.length ? withOpening(game, opts.openingMoves, opts.now) : game;
+}
+
+/**
+ * `game` with `ucis` already played: a game set up from a line. The moves go
+ * into the history (the score sheet, PGN and replay show the whole game) with
+ * no clock times; the clocks start for whoever is to move after them.
+ */
+function withOpening(game: ChessGame, ucis: readonly string[], now: number): ChessGame {
+  let position = game.position;
+  const history: HistoryEntry[] = [];
+  const repetitions: Record<string, number> = { ...game.repetitions };
+  for (const uci of ucis) {
+    const legal = legalMoves(position);
+    const move = legal.find((m) => moveToUci(m) === uci);
+    if (!move) throw new Error(`opening: illegal move ${uci} in ${toFen(position)}`);
+    const san = toSan(position, move, legal);
+    const effects = applyMoveDetailed(position, move);
+    history.push({ uci, san, by: position.turn, clockMs: null, captured: effects.captured });
+    position = effects.position;
+    const key = positionKey(position);
+    repetitions[key] = (repetitions[key] ?? 0) + 1;
+  }
+  return {
+    ...game,
+    position,
+    history,
+    repetitions,
+    clock: game.timeControl ? startClock(game.timeControl, position.turn, now) : null,
+    openingPlies: history.length,
   };
 }
 
@@ -228,8 +263,9 @@ export function declineDraw(game: ChessGame): ChessGame {
 }
 
 /** Has `color` a move of its own on the board to take back? */
+/** A move of `color`'s since the game began (its set-up line doesn't count) — what a takeback needs. */
 export function hasOwnMove(game: ChessGame, color: Color): boolean {
-  return game.history.some((h) => h.by === color);
+  return game.history.slice(game.openingPlies ?? 0).some((h) => h.by === color);
 }
 
 export function canRequestTakeback(game: ChessGame, color: Color): boolean {
@@ -259,9 +295,10 @@ export function declineTakeback(game: ChessGame): ChessGame {
  * for whoever is to move.
  */
 export function takeBack(game: ChessGame, color: Color, now: number): ChessGame {
+  const floor = game.openingPlies ?? 0;
   let cut = game.history.length - 1;
-  while (cut >= 0 && game.history[cut]?.by !== color) cut--;
-  if (cut < 0) return game;
+  while (cut >= floor && game.history[cut]?.by !== color) cut--;
+  if (cut < floor) return game;
   const rebuilt = replayGame(game.startFen, game.history.slice(0, cut), game.bughouse);
   return {
     ...game,

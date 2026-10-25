@@ -5,6 +5,8 @@
  * rail: when the move just played isn't your tree's, make it yours; where you
  * chose the move yourself, hand it back to the engine.
  */
+
+import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -12,6 +14,7 @@ import {
   ChevronsRightIcon,
 } from "../../../../components/icons";
 import { Button, IconButton } from "../../../../components/ui";
+import { playFromHereUrl } from "../../logic/play-line";
 
 export function BoardTools({
   ply,
@@ -62,7 +65,26 @@ export function BoardTools({
       <Button variant="ghost" size="sm" onClick={onFlip} title="Turn the board around (F)">
         ⇅ Flip
       </Button>
+      <PlayFromHere ply={ply} />
     </div>
+  );
+}
+
+/** "▶ Play": a game against the AI from the position on the board (the URL holds the line). */
+function PlayFromHere({ ply }: { ply: number }) {
+  const navigate = useNavigate();
+  const [params] = useSearchParams();
+  const line = (params.get("line") ?? "").split(".").filter(Boolean).slice(0, ply);
+  const side = params.get("side") === "b" ? "b" : "w";
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      onClick={() => navigate(playFromHereUrl(line, side))}
+      title="Play this position against the AI"
+    >
+      ▶ Play
+    </Button>
   );
 }
 

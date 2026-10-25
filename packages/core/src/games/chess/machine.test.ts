@@ -190,6 +190,41 @@ describe("chess machine", () => {
     expect(view(a).claimAtMs).toEqual([null, null]);
   });
 
+  it("starts after a set-up line, clocks running only from then on", async () => {
+    const a = start(HUMANS, {
+      openingMoves: ["e2e4", "e7e5", "g1f3"],
+      timeControl: { initialMs: 60_000, incrementMs: 0 },
+    });
+    const v = view(a);
+    expect(v.history.map((h) => h.san)).toEqual(["e4", "e5", "Nf3"]);
+    expect(v.clock?.running).toBe("b");
+    expect(v.clock?.remainingMs).toEqual({ w: 60_000, b: 60_000 });
+    expect(kinds(a, 1)).toContain("move");
+  });
+
+  it("lets the AI move first when the line leaves it to move", async () => {
+    const a = start(VS_AI, { openingMoves: ["e2e4"] });
+    await vi.advanceTimersByTimeAsync(1_000);
+    expect(view(a).history).toHaveLength(2);
+  });
+
+  it("takes back nothing past the set-up line", async () => {
+    const a = start(VS_AI, { openingMoves: ["e2e4", "e7e5"] });
+    expect(kinds(a, 0)).not.toContain("takeback");
+    move(a, 0, "g1f3");
+    await vi.advanceTimersByTimeAsync(1_000);
+    act(a, 0, { kind: "takeback" });
+    expect(view(a).history.map((h) => h.uci)).toEqual(["e2e4", "e7e5"]);
+    expect(kinds(a, 0)).not.toContain("takeback");
+  });
+
+  it("refuses a line that isn't legal or leaves no move", () => {
+    expect(ChessConfigSchema.safeParse({ openingMoves: ["e2e5"] }).success).toBe(false);
+    const foolsMate = ["f2f3", "e7e5", "g2g4", "d8h4"];
+    expect(ChessConfigSchema.safeParse({ openingMoves: foolsMate }).success).toBe(false);
+    expect(ChessConfigSchema.safeParse({ openingMoves: foolsMate.slice(0, 3) }).success).toBe(true);
+  });
+
   it("gives nothing to an idle snapshot", () => {
     const idle = createActor(chessSpec.machine);
     idle.start();

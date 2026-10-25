@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "../../../components/ui";
 
 /** Copy / download the game as PGN — pastes straight into lichess or chess.com. */
-export function PgnButtons({ input }: { input: PgnInput }) {
+export function PgnButtons({ input, compact = false }: { input: PgnInput; compact?: boolean }) {
   const [copied, setCopied] = useState(false);
   const pgn = () => toPgn(input);
 
@@ -30,15 +30,16 @@ export function PgnButtons({ input }: { input: PgnInput }) {
   return (
     <>
       <Button size="xs" variant="secondary" onClick={copy} title="Copy the game as PGN">
-        {copied ? "Copied ✓" : "Copy PGN"}
+        {copied ? "Copied ✓" : compact ? "PGN" : "Copy PGN"}
       </Button>
       <Button
         size="xs"
         variant="secondary"
         onClick={download}
         title="Download the game as a .pgn file"
+        aria-label="Download PGN"
       >
-        Download PGN
+        {compact ? "⤓" : "Download PGN"}
       </Button>
     </>
   );

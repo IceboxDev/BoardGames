@@ -5,6 +5,7 @@ import type { MatchSummary } from "@boardgames/core/protocol";
 import { useMemo, useState } from "react";
 import { EmptyState } from "../../../components/ui";
 import type { ReplayProps } from "../../types";
+import { PlayFromHere } from "./review/PlayFromHere";
 import { ReviewBoard } from "./review/ReviewBoard";
 
 const SIDES: readonly Color[] = ["w", "b"];
@@ -66,6 +67,12 @@ function Replay({
       }
       orientation={orientation}
       onOrientationChange={setOrientation}
+      extraActions={(ply) => (
+        <PlayFromHere
+          moves={log.moves.slice(0, ply).map((m) => m.uci)}
+          side={viewer ?? orientation}
+        />
+      )}
     />
   );
 }

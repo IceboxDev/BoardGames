@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { colourSwap } from "./colour-swap";
 
-const setup = { strategy: "sf-1400", color: "random" as const, timeControl: null, takebacks: true };
+const setup = {
+  strategy: "sf-1400",
+  color: "random" as const,
+  timeControl: null,
+  takebacks: true,
+  openingMoves: [],
+};
 const human = { kind: "human" as const };
 const ai = { kind: "ai" as const, strategy: "sf-1400" };
 

@@ -1,6 +1,9 @@
 import { z } from "zod";
 import { defineManifest, type StrategyInfo } from "../../machines/manifest";
-import { type TimeControl, TimeControlSchema } from "./schemas";
+import { START_FEN } from "./engine/fen";
+import { legalMoves } from "./engine/movegen";
+import { replayGame } from "./game";
+import { type TimeControl, TimeControlSchema, UciSchema } from "./schemas";
 
 /**
  * The AI ladder, easiest first. Every tier above `random` is Stockfish on the
@@ -100,7 +103,32 @@ export const ChessConfigSchema = z.object({
   timeControl: TimeControlSchema.nullable().default(null),
   /** Against an AI a takeback is instant; against a person the opponent must agree. */
   takebacks: z.boolean().default(true),
+  /**
+   * A line to start after (UCI from the start position) — "Play from here"
+   * in the trainer and the review. It must be legal and leave a move to play.
+   */
+  openingMoves: z
+    .array(UciSchema)
+    .max(60)
+    .default([])
+    .refine(playableLine, "The opening line isn't legal, or the game is already over"),
 });
+
+function playableLine(ucis: readonly string[]): boolean {
+  if (ucis.length === 0) return true;
+  try {
+    return (
+      legalMoves(
+        replayGame(
+          START_FEN,
+          ucis.map((uci) => ({ uci })),
+        ).position,
+      ).length > 0
+    );
+  } catch {
+    return false;
+  }
+}
 export type ChessConfig = z.infer<typeof ChessConfigSchema>;
 
 export const chessManifest = defineManifest({

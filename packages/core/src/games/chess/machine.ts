@@ -193,7 +193,11 @@ export const chessMachine = setup({
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
       return safeApply("chess", () => ({
-        game: createGame({ timeControl: event.config.timeControl, now: Date.now() }),
+        game: createGame({
+          timeControl: event.config.timeControl,
+          now: Date.now(),
+          openingMoves: event.config.openingMoves,
+        }),
         seed: event.seed,
         strategies: event.strategies,
         config: event.config,
@@ -262,7 +266,7 @@ export const chessMachine = setup({
     game: null,
     seed: 0,
     strategies: [],
-    config: { timeControl: null, takebacks: true },
+    config: { timeControl: null, takebacks: true, openingMoves: [] },
     disconnected: [],
     abandoned: [],
     droppedAt: {},
