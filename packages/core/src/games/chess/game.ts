@@ -28,7 +28,7 @@ import {
   boardState,
   CLAIM_HALFMOVES,
   CLAIM_REPETITIONS,
-  hasLoneKing,
+  cannotMate,
   insufficientMaterial,
 } from "./engine/status";
 import type { Color, PieceType, Position } from "./engine/types";
@@ -134,12 +134,13 @@ function finish(game: ChessGame, result: ChessResult, now: number): ChessGame {
 
 /**
  * The running side ran out of time. FIDE 6.9: it is a draw instead when the
- * opponent could not possibly mate — here, when the opponent has a lone king.
+ * opponent could not possibly mate by any series of legal moves (`cannotMate`:
+ * a lone king, or king and one minor piece against a lone king).
  */
 export function flagGame(game: ChessGame, now: number): ChessGame {
   const loser = game.clock?.running ?? game.position.turn;
   const winner = opposite(loser);
-  const drawn = !game.bughouse && hasLoneKing(game.position, winner);
+  const drawn = !game.bughouse && cannotMate(game.position, winner);
   return finish(
     game,
     drawn

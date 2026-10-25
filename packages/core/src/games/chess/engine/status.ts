@@ -54,3 +54,19 @@ export function hasLoneKing(pos: Position, color: Color): boolean {
   }
   return pos.board.every((p) => !p || colorOf(p) !== color || typeOf(p) === "k");
 }
+
+/**
+ * Can `color` not mate by any series of legal moves, however the other side
+ * plays? True for a lone king, and for king and one minor piece against a
+ * lone king. Anything more can mate with the other side's help (a bishop
+ * mates a king boxed in by its own rook), so a flag fall loses then.
+ * FIDE 6.9, on the board alone (a bughouse pocket counts as mating material).
+ */
+export function cannotMate(pos: Position, color: Color): boolean {
+  if (hasLoneKing(pos, color)) return true;
+  if (pos.pockets) return false;
+  const mine = pos.board.filter((p) => p && colorOf(p) === color && typeOf(p) !== "k");
+  const one = mine.length === 1 ? mine[0] : null;
+  const minor = one ? typeOf(one) === "n" || typeOf(one) === "b" : false;
+  return minor && hasLoneKing(pos, color === "w" ? "b" : "w");
+}

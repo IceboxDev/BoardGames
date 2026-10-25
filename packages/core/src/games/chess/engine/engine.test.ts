@@ -4,7 +4,7 @@ import { parseSquare } from "./board";
 import { FenError, parseFen, positionKey, START_FEN, toFen } from "./fen";
 import { legalMoves } from "./movegen";
 import { parseSan, toSan } from "./san";
-import { boardState, hasLoneKing, insufficientMaterial } from "./status";
+import { boardState, cannotMate, hasLoneKing, insufficientMaterial } from "./status";
 import type { Move, Position } from "./types";
 import { moveToUci, uciToMove } from "./uci";
 
@@ -150,6 +150,18 @@ describe("rules", () => {
     const pos = parseFen("8/8/4k3/8/8/2K5/5P2/8 w - - 0 1");
     expect(hasLoneKing(pos, "b")).toBe(true);
     expect(hasLoneKing(pos, "w")).toBe(false);
+  });
+
+  it.each([
+    ["K v K+R", "8/8/4k3/8/8/2K5/5R2/8 w - - 0 1", "b", true],
+    ["K+B v K", "8/8/4k3/8/8/2K5/5B2/8 w - - 0 1", "w", true],
+    ["K+N v K", "8/8/4k3/8/8/2K5/5N2/8 w - - 0 1", "w", true],
+    ["K+N v K+P", "8/4p3/4k3/8/8/2K5/5N2/8 w - - 0 1", "w", false],
+    ["K+B v K+P", "8/4p3/4k3/8/8/2K5/5B2/8 w - - 0 1", "w", false],
+    ["K+B+N v K", "8/8/4k3/8/8/2K5/4BN2/8 w - - 0 1", "w", false],
+    ["K+R v K", "8/8/4k3/8/8/2K5/5R2/8 w - - 0 1", "w", false],
+  ] as const)("can't mate on time: %s", (_name, fen, color, expected) => {
+    expect(cannotMate(parseFen(fen), color)).toBe(expected);
   });
 
   it("repeats the same key after a knight dance", () => {
