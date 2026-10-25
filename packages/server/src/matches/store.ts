@@ -113,11 +113,35 @@ export async function listMatches(
            LIMIT ?`,
     args: [gameSlug, viewerId, limit],
   });
-  const matches = parseRows(MatchRowSchema, rows, "session_replays");
-  if (matches.length === 0) return [];
+  return summarize(parseRows(MatchRowSchema, rows, "session_replays"), viewerId);
+}
 
+/**
+ * One finished game from the asking account's point of view (its seats, which
+ * one the account held), or `null` when there is no such game of this kind.
+ */
+export async function getMatchSummary(
+  gameSlug: string,
+  id: number,
+  viewerId: string,
+): Promise<MatchSummary | null> {
+  const { rows } = await getDb().execute({
+    sql: `SELECT r.id, r.game_slug, r.created_at, r.player_count, r.outcome_json, r.winner, r.scores_json
+            FROM session_replays r
+           WHERE r.id = ? AND r.game_slug = ?`,
+    args: [id, gameSlug],
+  });
+  const [summary] = await summarize(parseRows(MatchRowSchema, rows, "session_replays"), viewerId);
+  return summary ?? null;
+}
+
+async function summarize(
+  matches: readonly z.infer<typeof MatchRowSchema>[],
+  viewerId: string,
+): Promise<MatchSummary[]> {
+  if (matches.length === 0) return [];
   const ids = matches.map((m) => m.id);
-  const seatQuery = await db.execute({
+  const seatQuery = await getDb().execute({
     sql: `SELECT s.replay_id, s.seat, s.kind, s.user_id, s.strategy, u.name
             FROM replay_seats s
             LEFT JOIN "user" u ON u.id = s.user_id

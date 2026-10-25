@@ -6,6 +6,7 @@ import {
   BulkSaveResultsResponseSchema,
   GameResultListSchema,
   MatchSummaryListSchema,
+  MatchSummarySchema,
   OkResponseSchema,
   ReplayLogSchema,
   type SaveResultBody,
@@ -65,6 +66,12 @@ export const apiClient = {
     return apiFetch(`${BASE}/games/${gameSlug}/replays`, {
       response: MatchSummaryListSchema,
       signal,
+    });
+  },
+
+  async getGameReplaySummary(gameSlug: string, id: number) {
+    return apiFetch(`${BASE}/games/${gameSlug}/replays/${id}/summary`, {
+      response: MatchSummarySchema,
     });
   },
 

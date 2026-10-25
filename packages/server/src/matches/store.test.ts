@@ -8,7 +8,7 @@ vi.mock("../db.ts", () => ({
 }));
 
 const { runMigrations } = await import("../migrations/migrator.ts");
-const { getMatchLog, listMatches, saveMatch } = await import("./store.ts");
+const { getMatchLog, getMatchSummary, listMatches, saveMatch } = await import("./store.ts");
 
 async function addUser(id: string, name: string): Promise<void> {
   await db.current?.execute({
@@ -58,6 +58,9 @@ describe("match store", () => {
       ],
     });
     expect(await getMatchLog("durak", id)).toEqual({ formatVersion: 1, seed: 7 });
+    expect(await getMatchSummary("durak", id, "bo")).toEqual(mine);
+    expect(await getMatchSummary("durak", id, "ana")).toMatchObject({ viewerSeat: 0 });
+    expect(await getMatchSummary("parks", id, "bo")).toBeNull();
   });
 
   it("stores each seat's result so per-player stats are a lookup", async () => {

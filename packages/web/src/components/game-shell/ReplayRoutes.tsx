@@ -1,3 +1,4 @@
+import type { MatchSummary } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
@@ -16,12 +17,14 @@ function ReplayShell({
   loading,
   error,
   log,
+  match,
   backHref,
   backLabel,
 }: {
   loading: boolean;
   error: unknown;
   log: unknown;
+  match?: MatchSummary;
   backHref: string;
   backLabel: string;
 }) {
@@ -52,7 +55,7 @@ function ReplayShell({
 
   return (
     <Suspense fallback={<BoardFallback />}>
-      <Replay game={log} onBack={() => navigate(backHref)} />
+      <Replay game={log} match={match} onBack={() => navigate(backHref)} />
     </Suspense>
   );
 }
@@ -76,6 +79,13 @@ export function MatchHistoryReplayRoute() {
     queryFn: () => apiClient.getGameReplay(def.slug, replayId),
     enabled: valid,
   });
+  // Who sat where: optional — a replay still shows without it.
+  const summary = useQuery({
+    queryKey: ["game-replay-summary", def.slug, replayId],
+    queryFn: () => apiClient.getGameReplaySummary(def.slug, replayId),
+    enabled: valid,
+    retry: false,
+  });
 
   if (!def.manifest || !def.replayComponent) {
     return <Navigate to={`/play/${def.slug}`} replace />;
@@ -86,9 +96,12 @@ export function MatchHistoryReplayRoute() {
 
   return (
     <ReplayShell
-      loading={query.isPending}
+      // Wait for the seats too (they set whose side the board shows); a failed
+      // lookup shows the replay without them.
+      loading={query.isPending || summary.isPending}
       error={query.error}
       log={query.data}
+      match={summary.data}
       backHref={`/play/${def.slug}/match-history`}
       backLabel="Back to history"
     />

@@ -7,6 +7,7 @@ import {
   GameResultsQuerySchema,
   isCompanionRecordSlug,
   MatchSummaryListSchema,
+  MatchSummarySchema,
   OkResponseSchema,
   ReplayListQuerySchema,
   ReplayLogSchema,
@@ -22,7 +23,7 @@ import { logActivity } from "../lib/activity-log.ts";
 import { jsonColumn, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { listCompanionRecords, saveCompanionRecord } from "../matches/companion-store.ts";
-import { getMatchLog, listMatches } from "../matches/store.ts";
+import { getMatchLog, getMatchSummary, listMatches } from "../matches/store.ts";
 
 export const persistenceRoutes = authedApp();
 
@@ -123,6 +124,16 @@ persistenceRoutes.get("/:slug/replays", zQuery(ReplayListQuerySchema), async (c)
   const { limit } = c.req.valid("query");
   const matches = await listMatches(c.req.param("slug"), c.get("user").id, limit);
   return c.json(MatchSummaryListSchema.parse(matches));
+});
+
+persistenceRoutes.get("/:slug/replays/:id{[0-9]+}/summary", async (c) => {
+  const summary = await getMatchSummary(
+    c.req.param("slug"),
+    Number(c.req.param("id")),
+    c.get("user").id,
+  );
+  if (summary === null) return errorResponse(c, 404, "Not found");
+  return c.json(MatchSummarySchema.parse(summary));
 });
 
 persistenceRoutes.get("/:slug/replays/:id{[0-9]+}", async (c) => {

@@ -1,6 +1,6 @@
 import type { BggGame } from "@boardgames/core/bgg";
 import type { GameManifest } from "@boardgames/core/machines/manifest";
-import type { SkillWeights } from "@boardgames/core/protocol";
+import type { MatchSummary, SkillWeights } from "@boardgames/core/protocol";
 import type { TournamentResults } from "@boardgames/core/tournament/results";
 import type { ComponentType, LazyExoticComponent } from "react";
 
@@ -91,6 +91,8 @@ export type LobbyConfigProps = {
 export type ReplayProps = {
   game: unknown;
   onBack?: () => void;
+  /** Who sat where, from the viewer's side (absent while loading or when it failed). */
+  match?: MatchSummary;
 };
 
 /**
