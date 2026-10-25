@@ -2,17 +2,9 @@ import type { HistoryEntry } from "@boardgames/core/games/chess/schemas";
 import { useEffect, useRef } from "react";
 import { Button } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
+import { GRADE_MARK } from "../analysis/grade-marks";
 
 export type MoveGrade = "best" | "inaccuracy" | "mistake" | "blunder" | null;
-
-const GRADE_MARK: Readonly<
-  Record<Exclude<MoveGrade, null>, { mark: string; className: string; label: string }>
-> = {
-  best: { mark: "★", className: "text-emerald-400", label: "best move" },
-  inaccuracy: { mark: "?!", className: "text-amber-300", label: "inaccuracy" },
-  mistake: { mark: "?", className: "text-orange-400", label: "mistake" },
-  blunder: { mark: "??", className: "text-rose-400", label: "blunder" },
-};
 
 interface Props {
   history: readonly HistoryEntry[];
@@ -23,6 +15,8 @@ interface Props {
   startNumber?: number;
   startsWithBlack?: boolean;
   grades?: readonly MoveGrade[];
+  /** The "Back to the game" button while browsing (the live game; a review has its own ways). */
+  backToLive?: boolean;
 }
 
 /**
@@ -37,15 +31,22 @@ export function MoveList({
   startNumber = 1,
   startsWithBlack = false,
   grades,
+  backToLive = true,
 }: Props) {
   const endRef = useRef<HTMLDivElement | null>(null);
   const live = viewing === null;
 
   const plies = history.length;
-  // Follow the newest move while live (re-run when a move arrives).
+  // Follow the newest move while live (re-run when a move arrives), and the
+  // move on screen while browsing.
+  const listRef = useRef<HTMLOListElement | null>(null);
   useEffect(() => {
     if (live && plies >= 0) endRef.current?.scrollIntoView({ block: "nearest" });
   }, [live, plies]);
+  useEffect(() => {
+    if (viewing === null) return;
+    listRef.current?.querySelector('[aria-current="step"]')?.scrollIntoView?.({ block: "nearest" });
+  }, [viewing]);
 
   const offset = startsWithBlack ? 1 : 0;
   const rows: { number: number; plies: (number | null)[] }[] = [];
@@ -63,7 +64,7 @@ export function MoveList({
       {history.length === 0 ? (
         <p className="text-sm text-fg-muted">No moves yet.</p>
       ) : (
-        <ol className="grid grid-cols-[2.25rem_1fr_1fr] gap-x-1 gap-y-0.5 text-sm">
+        <ol ref={listRef} className="grid grid-cols-[2.25rem_1fr_1fr] gap-x-1 gap-y-0.5 text-sm">
           {rows.map((row) => (
             <li key={row.number} className="contents">
               <span className="py-0.5 text-right tabular-nums text-fg-muted">{row.number}.</span>
@@ -74,7 +75,7 @@ export function MoveList({
         </ol>
       )}
       <div ref={endRef} />
-      {!live && (
+      {!live && backToLive && (
         <Button size="xs" variant="secondary" onClick={() => onSelect(null)}>
           Back to the game →
         </Button>

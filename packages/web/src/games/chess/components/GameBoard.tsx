@@ -1,68 +1,54 @@
 import type { Color } from "@boardgames/core/games/chess/engine/types";
 import type { ChessAction, ChessPlayerView } from "@boardgames/core/games/chess/schemas";
-import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { GameScreen } from "../../../components/game-layout";
 import { useTurnAlert } from "../../../hooks/useTurnAlert";
 import { useMuted } from "../../../lib/sound/useMuted";
-import { positionAt, useSquareFit } from "../logic/board-view";
+import { positionAt } from "../logic/board-view";
 import { material } from "../logic/moves";
 import { CHESS_MUTE_KEY, playSound, soundForSan } from "../logic/sound";
 import { LOW_TIME_MS, useClockMs } from "../logic/useClockMs";
 import { useOfferNotices } from "../logic/useOfferNotices";
 import { ActionBar } from "./ActionBar";
+import { BoardStage } from "./BoardStage";
 import { BrowseChip } from "./BrowseChip";
-import ChessBoard, { type BoardArrow } from "./board/ChessBoard";
-import { type MoveGrade, MoveList } from "./MoveList";
+import ChessBoard from "./board/ChessBoard";
+import { MoveList } from "./MoveList";
 import { PlayerStrip } from "./PlayerStrip";
-
-/** Room for the two player strips (name + captured row + clock) and their gaps. */
-const STRIPS_H = 2 * 48 + 8;
 
 interface Props {
   view: ChessPlayerView;
-  /** The viewer's colour, or `null` for a spectator / replay. */
+  /** The viewer's colour, or `null` for a spectator. */
   color: Color | null;
   names: Readonly<Record<Color, string>>;
   legal: readonly ChessAction[];
   send: (action: ChessAction) => void;
-  /** Extra buttons for the action bar (game over: PGN, analysis). */
-  actionExtra?: ReactNode;
-  /** Analysis overlays for the browsed position. */
-  arrows?: readonly BoardArrow[];
-  grades?: readonly MoveGrade[];
-  /** Shown beside the board, given the board's size in px (the analysis eval bar). */
-  besideBoard?: (boardSize: number) => ReactNode;
-  /** Shown above the move list (analysis summary). */
-  sidebarExtra?: ReactNode;
-  /** Report the ply on screen and its FEN (analysis follows it). */
-  onShownChange?: (shown: { ply: number; fen: string }) => void;
-  /** Controlled browsing (analysis drives it); otherwise local. */
-  viewing?: number | null;
-  onViewingChange?: (ply: number | null) => void;
+  /** The colour at the bottom, kept by the caller so the review opens the same way up. */
+  orientation: Color;
+  onOrientationChange: (orientation: Color) => void;
 }
 
+/**
+ * The live game: the board between the player strips, the score sheet, the
+ * action bar. Once the game ends `ReviewBoard` takes its place, laid out the
+ * same (`BoardStage`), so the board stays where it was.
+ */
 export default function GameBoard({
   view,
   color,
   names,
   legal,
   send: sendRaw,
-  actionExtra,
-  arrows,
-  grades,
-  besideBoard,
-  sidebarExtra,
-  onShownChange,
-  viewing: viewingProp,
-  onViewingChange,
+  orientation,
+  onOrientationChange,
 }: Props) {
-  const [orientation, setOrientation] = useState<Color>(color ?? "w");
-  const [localViewing, setLocalViewing] = useState<number | null>(null);
-  const viewing = viewingProp !== undefined ? viewingProp : localViewing;
-  const setViewing = onViewingChange ?? setLocalViewing;
+  const [viewing, setViewing] = useState<number | null>(null);
   const [premove, setPremove] = useState<string | null>(null);
   const [muted, toggleMuted] = useMuted(CHESS_MUTE_KEY);
-  const [fitRef, size] = useSquareFit<HTMLDivElement>(besideBoard ? 40 : 0, STRIPS_H);
+  const flip = useCallback(
+    () => onOrientationChange(orientation === "w" ? "b" : "w"),
+    [orientation, onOrientationChange],
+  );
 
   const live = viewing === null;
   const shownFen = live ? view.fen : (positionAt(view, viewing) ?? view.fen);
@@ -72,9 +58,6 @@ export default function GameBoard({
       ? (view.history[viewing - 1]?.uci ?? null)
       : null;
   const shownPly = viewing ?? view.history.length;
-  useEffect(() => {
-    onShownChange?.({ ply: shownPly, fen: shownFen });
-  }, [onShownChange, shownPly, shownFen]);
   const moveUcis = useMemo(
     () => (live ? legal.flatMap((a) => (a.kind === "move" ? [a.uci] : [])) : []),
     [legal, live],
@@ -138,7 +121,7 @@ export default function GameBoard({
       const next = Math.max(0, Math.min(total, current + delta));
       setViewing(next === total ? null : next);
     },
-    [view.history.length, viewing, setViewing],
+    [view.history.length, viewing],
   );
 
   useEffect(() => {
@@ -150,13 +133,13 @@ export default function GameBoard({
       else if (e.key === "ArrowRight") step(1);
       else if (e.key === "Home") setViewing(view.history.length === 0 ? null : 0);
       else if (e.key === "End") setViewing(null);
-      else if (e.key === "f" || e.key === "F") setOrientation((o) => (o === "w" ? "b" : "w"));
+      else if (e.key === "f" || e.key === "F") flip();
       else return;
       e.preventDefault();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [step, setViewing, view.history.length]);
+  }, [step, flip, view.history.length]);
 
   const { taken, lead } = material(shownFen, view.history.slice(0, shownPly));
   const top: Color = orientation === "w" ? "b" : "w";
@@ -183,67 +166,55 @@ export default function GameBoard({
   return (
     <GameScreen
       sidebar={
-        <div className="flex min-h-0 flex-col gap-3">
-          {sidebarExtra}
-          <MoveList
-            history={view.history}
-            viewing={viewing}
-            onSelect={setViewing}
-            startNumber={Number(startFields[5] ?? "1") || 1}
-            startsWithBlack={startFields[1] === "b"}
-            grades={grades}
-          />
-        </div>
+        <MoveList
+          history={view.history}
+          viewing={viewing}
+          onSelect={setViewing}
+          startNumber={Number(startFields[5] ?? "1") || 1}
+          startsWithBlack={startFields[1] === "b"}
+        />
       }
       actionBar={
         <ActionBar
           legal={legal}
           send={send}
-          onFlip={() => setOrientation((o) => (o === "w" ? "b" : "w"))}
+          onFlip={flip}
           onStep={step}
           muted={muted}
           onToggleMute={toggleMuted}
-          extra={actionExtra}
         />
       }
     >
-      {/* Strips and board are one block sized to the space, so the names and
-          clocks stay against the board's edges at every width. */}
-      <div ref={fitRef} className="flex min-h-0 flex-1 items-center justify-center">
-        <div className="flex items-center gap-2">
-          {besideBoard?.(size)}
-          <div className="flex flex-col gap-1" style={{ width: size }}>
-            {strip(top)}
-            <div className="relative" style={{ width: size, height: size }}>
-              {!live && !over && (
-                <BrowseChip
-                  ply={shownPly}
-                  total={view.history.length}
-                  fresh={fresh}
-                  onLive={() => setViewing(null)}
-                />
-              )}
-              {size > 0 && (
-                <ChessBoard
-                  className="size-full overflow-hidden rounded-card-md shadow-lg"
-                  fen={shownFen}
-                  orientation={orientation}
-                  moves={myTurn ? moveUcis : []}
-                  onMove={(uci) => send({ kind: "move", uci })}
-                  premoveColor={live && !over && color && !myTurn ? color : null}
-                  premove={premove}
-                  onPremove={setPremove}
-                  lastMove={shownLast}
-                  arrows={arrows}
-                  onInertPress={!live && !over ? () => setViewing(null) : undefined}
-                  aria-label={`Chess board, ${toMove === "w" ? "White" : "Black"} to move`}
-                />
-              )}
-            </div>
-            {strip(bottom)}
-          </div>
-        </div>
-      </div>
+      <BoardStage
+        top={strip(top)}
+        bottom={strip(bottom)}
+        overlay={
+          !live && !over ? (
+            <BrowseChip
+              ply={shownPly}
+              total={view.history.length}
+              fresh={fresh}
+              onLive={() => setViewing(null)}
+            />
+          ) : null
+        }
+      >
+        {() => (
+          <ChessBoard
+            className="size-full overflow-hidden rounded-card-md shadow-lg"
+            fen={shownFen}
+            orientation={orientation}
+            moves={myTurn ? moveUcis : []}
+            onMove={(uci) => send({ kind: "move", uci })}
+            premoveColor={live && !over && color && !myTurn ? color : null}
+            premove={premove}
+            onPremove={setPremove}
+            lastMove={shownLast}
+            onInertPress={!live && !over ? () => setViewing(null) : undefined}
+            aria-label={`Chess board, ${toMove === "w" ? "White" : "Black"} to move`}
+          />
+        )}
+      </BoardStage>
     </GameScreen>
   );
 }

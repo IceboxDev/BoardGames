@@ -1,7 +1,7 @@
 import { toFen } from "@boardgames/core/games/chess/engine/fen";
 import { replayGame } from "@boardgames/core/games/chess/game";
 import type { ChessPlayerView } from "@boardgames/core/games/chess/schemas";
-import { type RefObject, useEffect, useRef, useState } from "react";
+import { type RefObject, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 /** Below this much height the space is content-sized, not a limit. */
 const MIN_BOARD_PX = 160;
@@ -17,22 +17,35 @@ export function useSquareFit<T extends HTMLElement>(
 ): [RefObject<T | null>, number] {
   const ref = useRef<T | null>(null);
   const [size, setSize] = useState(0);
+  // Measured before the first paint too: a board swapped for another (the
+  // live game for its review) never shows a frame without one.
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const style = getComputedStyle(el);
+    const width = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+    const height = el.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
+    if (width > 0) setSize(fitSquare(width, height, reserveX, reserveY));
+  }, [reserveX, reserveY]);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const ro = new ResizeObserver(([entry]) => {
       if (!entry) return;
-      const { width, height } = entry.contentRect;
-      const wide = width - reserveX;
-      const tall = height - reserveY;
-      // On phones the column is sized by its content (the page scrolls), so a
-      // tiny height isn't a limit: fit the width and let the column grow.
-      setSize(Math.max(0, Math.floor(tall >= MIN_BOARD_PX ? Math.min(wide, tall) : wide)));
+      setSize(fitSquare(entry.contentRect.width, entry.contentRect.height, reserveX, reserveY));
     });
     ro.observe(el);
     return () => ro.disconnect();
   }, [reserveX, reserveY]);
   return [ref, size];
+}
+
+function fitSquare(width: number, height: number, reserveX: number, reserveY: number): number {
+  const wide = width - reserveX;
+  const tall = height - reserveY;
+  // On phones the column is sized by its content (the page scrolls), so a
+  // tiny height isn't a limit: fit the width and let the column grow.
+  return Math.max(0, Math.floor(tall >= MIN_BOARD_PX ? Math.min(wide, tall) : wide));
 }
 
 /** Board position after `ply` moves (for browsing the game), or `null` when unparseable. */

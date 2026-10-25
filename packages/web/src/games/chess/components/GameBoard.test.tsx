@@ -48,7 +48,15 @@ const NF3 = {
 };
 
 const board = (v: ChessPlayerView) => (
-  <GameBoard view={v} color="w" names={{ w: "You", b: "AI" }} legal={[]} send={() => {}} />
+  <GameBoard
+    view={v}
+    color="w"
+    names={{ w: "You", b: "AI" }}
+    legal={[]}
+    send={() => {}}
+    orientation="w"
+    onOrientationChange={() => {}}
+  />
 );
 
 describe("GameBoard browsing", () => {

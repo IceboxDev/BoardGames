@@ -53,15 +53,31 @@ export function EvalBar({
   );
 }
 
-/** White's win chance across the game; click a point to go to that move. */
+/** A mark on the graph: a graded move, in its grade's colour. */
+export interface GraphTick {
+  /** The position the move made. */
+  readonly ply: number;
+  readonly color: string;
+}
+
+/**
+ * White's win chance across the game; click or drag to go to a move. Graded
+ * moves are dotted on the line; positions not analysed yet sit on the
+ * middle line.
+ */
 export function EvalGraph({
   scores,
   current,
   onSelect,
+  ticks = [],
+  onHover,
 }: {
   scores: readonly (Score | undefined)[];
   current: number;
   onSelect: (ply: number) => void;
+  ticks?: readonly GraphTick[];
+  /** The position under the pointer, `null` when it leaves. */
+  onHover?: (ply: number | null) => void;
 }) {
   const n = scores.length;
   if (n < 2) return null;
@@ -70,20 +86,41 @@ export function EvalGraph({
   const x = (i: number) => (i / (n - 1)) * W;
   const y = (s: Score | undefined) => H - ((s ? winPercent(s) : 50) / 100) * H;
   const points = scores.map((s, i) => `${x(i).toFixed(1)},${y(s).toFixed(1)}`).join(" ");
+  const plyAt = (e: { clientX: number; currentTarget: SVGSVGElement }) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const ply = Math.round(((e.clientX - rect.left) / rect.width) * (n - 1));
+    return Math.max(0, Math.min(n - 1, ply));
+  };
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
-      className="h-20 w-full cursor-pointer rounded-ui-md bg-fill"
+      className="h-20 w-full cursor-pointer touch-none rounded-ui-md bg-fill"
       role="img"
       aria-label="Evaluation over the game"
       onPointerDown={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const ply = Math.round(((e.clientX - rect.left) / rect.width) * (n - 1));
-        onSelect(Math.max(0, Math.min(n - 1, ply)));
+        e.currentTarget.setPointerCapture(e.pointerId);
+        onSelect(plyAt(e));
       }}
+      onPointerMove={(e) => {
+        const ply = plyAt(e);
+        onHover?.(ply);
+        if (e.buttons === 1) onSelect(ply);
+      }}
+      onPointerLeave={() => onHover?.(null)}
     >
       <polygon points={`0,${H} ${points} ${W},${H}`} fill={WHITE_FILL} fillOpacity={0.85} />
       <line x1={0} y1={H / 2} x2={W} y2={H / 2} stroke="currentColor" strokeOpacity={0.25} />
+      {ticks.map((t) => (
+        <circle
+          key={t.ply}
+          cx={x(t.ply)}
+          cy={y(scores[t.ply])}
+          r={3.5}
+          fill={t.color}
+          stroke={BLACK_FILL}
+          strokeWidth={1}
+        />
+      ))}
       <line
         x1={x(current)}
         y1={0}

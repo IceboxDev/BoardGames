@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { colourSwap } from "./Chess";
+import { colourSwap } from "./colour-swap";
 
 const setup = { strategy: "sf-1400", color: "random" as const, timeControl: null, takebacks: true };
 const human = { kind: "human" as const };

@@ -25,6 +25,13 @@ export const BOARD_COLORS = {
   arrowPick: "rgb(251 191 36)",
   arrowEngine: "rgb(56 189 248)",
   arrowPopular: "rgb(52 211 153)",
+  // A move's grade on its square (= Tailwind emerald-400 / amber-300 /
+  // orange-400 / rose-400, the move list's marks).
+  gradeBest: "rgb(52 211 153)",
+  gradeInaccuracy: "rgb(252 211 77)",
+  gradeMistake: "rgb(251 146 60)",
+  gradeBlunder: "rgb(251 113 133)",
+  gradeInk: "rgb(23 20 18)",
   pickerScrim: "rgb(0 0 0 / 0.55)",
   pickerTile: "#f4ecdc",
 } as const;

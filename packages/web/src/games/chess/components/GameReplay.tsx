@@ -1,78 +1,33 @@
-import { applyMove } from "@boardgames/core/games/chess/engine/apply";
-import { parseFen, toFen } from "@boardgames/core/games/chess/engine/fen";
-import { legalMoves } from "@boardgames/core/games/chess/engine/movegen";
-import { toSan } from "@boardgames/core/games/chess/engine/san";
-import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
-import { replayGame } from "@boardgames/core/games/chess/game";
+import type { Color } from "@boardgames/core/games/chess/engine/types";
 import { CHESS_STRATEGIES } from "@boardgames/core/games/chess/manifest";
-import {
-  type ChessPlayerView,
-  type ChessReplayLog,
-  ChessReplayLogSchema,
-} from "@boardgames/core/games/chess/schemas";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { ReplayControls } from "../../../components/replay/ReplayControls";
-import { useReplayPlayback } from "../../../components/replay/useReplayPlayback";
-import { Button, EmptyState, ProgressBar, StatTile } from "../../../components/ui";
+import { type ChessReplayLog, ChessReplayLogSchema } from "@boardgames/core/games/chess/schemas";
+import type { MatchSummary } from "@boardgames/core/protocol";
+import { useMemo, useState } from "react";
+import { EmptyState } from "../../../components/ui";
 import type { ReplayProps } from "../../types";
-import { EvalBar, EvalGraph } from "../analysis/EvalBar";
-import { formatScore, type PositionEval, reviewGame } from "../analysis/grade";
-import { useAnalysis } from "../analysis/useAnalysis";
-import { resultText } from "../logic/result-text";
-import type { BoardArrow } from "./board/ChessBoard";
-import GameBoard from "./GameBoard";
-import { PgnButtons } from "./PgnButtons";
+import { ReviewBoard } from "./review/ReviewBoard";
 
-function nameOf(strategy: string | null | undefined, fallback: string): string {
-  if (!strategy) return fallback;
-  return CHESS_STRATEGIES.find((s) => s.id === strategy)?.label ?? strategy;
-}
+const SIDES: readonly Color[] = ["w", "b"];
 
-/** A replay log as the board's view: the final position with the whole history. */
-function toView(log: ChessReplayLog, finalFen: string): ChessPlayerView {
-  return {
-    fen: finalFen,
-    startFen: log.startFen,
-    color: null,
-    seatColors: ["w", "b"],
-    aiSeats: log.strategies.flatMap((s, i) => (s ? [i] : [])),
-    history: log.moves,
-    clock: null,
-    drawOffer: null,
-    takebackRequest: null,
-    claimableDraw: null,
-    disconnected: [],
-    abandoned: [],
-    aiThinking: false,
-    result: log.result,
-    timeControl: log.timeControl,
+/** Each side's name: the person's, or the AI's label; the colour when neither is known. */
+function namesOf(log: ChessReplayLog, match: MatchSummary | undefined): Record<Color, string> {
+  const name = (seat: number, fallback: string) => {
+    const s = match?.seats.find((x) => x.seat === seat);
+    if (s?.kind === "human" && s.name) return s.isViewer ? `${s.name} (you)` : s.name;
+    const strategy = log.strategies[seat];
+    if (strategy) return CHESS_STRATEGIES.find((x) => x.id === strategy)?.label ?? strategy;
+    return fallback;
   };
-}
-
-/** A PV as SAN text, played out from `fen`. */
-function pvSan(fen: string, pv: readonly string[], max = 6): string {
-  try {
-    let pos = parseFen(fen);
-    const out: string[] = [];
-    for (const uci of pv.slice(0, max)) {
-      const legal = legalMoves(pos);
-      const move = legal.find((m) => moveToUci(m) === uci);
-      if (!move) break;
-      out.push(toSan(pos, move, legal));
-      pos = applyMove(pos, move);
-    }
-    return out.join(" ");
-  } catch {
-    return "";
-  }
+  return { w: name(0, "White"), b: name(1, "Black") };
 }
 
 /**
- * A finished game, move by move, with Stockfish analysis on request: an eval
- * bar and graph, the best move as an arrow, every move graded (?! ? ??), each
- * side's accuracy, and the engine's top three lines for the shown position.
+ * A finished game from Match History, on the review board the game ended on:
+ * from the viewer's side (seat 0 plays White), with their names, analysed by
+ * Stockfish in the browser — at once from the cache when the game was
+ * reviewed here before.
  */
-export default function GameReplay({ game }: ReplayProps) {
+export default function GameReplay({ game, match, onBack }: ReplayProps) {
   const parsed = useMemo(() => ChessReplayLogSchema.safeParse(game), [game]);
   if (!parsed.success) {
     return (
@@ -82,159 +37,35 @@ export default function GameReplay({ game }: ReplayProps) {
       />
     );
   }
-  return <Replay log={parsed.data} />;
+  return <Replay log={parsed.data} match={match} onBack={onBack} />;
 }
 
-function Replay({ log }: { log: ChessReplayLog }) {
-  const ucis = useMemo(() => log.moves.map((m) => m.uci), [log.moves]);
-  const analysis = useAnalysis(log.startFen, ucis);
-  // The board's "live" position is the game's last one; browsing goes back from it.
-  const view = useMemo(() => {
-    let finalFen = log.startFen;
-    try {
-      finalFen = toFen(replayGame(log.startFen, log.moves).position);
-    } catch {
-      // A log that doesn't replay shows its start position.
-    }
-    return toView(log, finalFen);
-  }, [log]);
-  return <ReplayBoard log={log} view={view} analysis={analysis} />;
-}
-
-function ReplayBoard({
+function Replay({
   log,
-  view: baseView,
-  analysis,
+  match,
+  onBack,
 }: {
   log: ChessReplayLog;
-  view: ChessPlayerView;
-  analysis: ReturnType<typeof useAnalysis>;
+  match: MatchSummary | undefined;
+  onBack?: () => void;
 }) {
-  const n = log.moves.length;
-  const playback = useReplayPlayback(n + 1, 900);
-  const viewing = playback.stepIndex >= n ? null : playback.stepIndex;
-  const [shown, setShown] = useState<{ ply: number; fen: string }>({ ply: n, fen: "" });
-  const [lines, setLines] = useState<PositionEval[]>([]);
-
-  const names = { w: nameOf(log.strategies[0], "White"), b: nameOf(log.strategies[1], "Black") };
-  const review = useMemo(() => reviewGame(log.moves, analysis.evals), [log.moves, analysis.evals]);
-  const analysed = analysis.evals.length > 0;
-
-  // The engine's top lines for the position on screen, once the game is analysed.
-  const { explore } = analysis;
-  useEffect(() => {
-    if (!analysed || analysis.running || !shown.fen) return;
-    let live = true;
-    explore(shown.fen)
-      .then((l) => live && setLines(l))
-      .catch(() => live && setLines([]));
-    return () => {
-      live = false;
-    };
-  }, [analysed, analysis.running, explore, shown.fen]);
-
-  const shownEval = analysis.evals[shown.ply];
-  const arrows: BoardArrow[] = lines.slice(0, 3).flatMap((line, i) => {
-    const best = line.pv[0];
-    if (!best || best.includes("@")) return [];
-    return [
-      {
-        from: best.slice(0, 2),
-        to: best.slice(2, 4),
-        tone: i === 0 ? ("best" as const) : ("alt" as const),
-      },
-    ];
-  });
-
-  const onShownChange = useCallback((s: { ply: number; fen: string }) => {
-    setShown((prev) => (prev.ply === s.ply && prev.fen === s.fen ? prev : s));
-  }, []);
-
-  const summary = (
-    <div className="flex flex-col gap-3">
-      <p className="text-sm text-fg-secondary">{resultText(log.result)}</p>
-      {!analysed && !analysis.running && (
-        <Button
-          size="sm"
-          variant="primary"
-          onClick={analysis.start}
-          title="Run Stockfish over every move"
-        >
-          Analyse with Stockfish
-        </Button>
-      )}
-      {analysis.running && (
-        <ProgressBar value={analysis.progress * 100} label="Analysis progress" size="sm" />
-      )}
-      {analysis.error && <p className="text-xs text-rose-300">{analysis.error}</p>}
-      {analysed && (
-        <>
-          <EvalGraph
-            scores={analysis.evals.map((e) => e?.score)}
-            current={shown.ply}
-            onSelect={(ply) => playback.goTo(ply)}
-          />
-          <div className="grid grid-cols-2 gap-2">
-            {(["w", "b"] as const).map((c) => (
-              <StatTile
-                key={c}
-                size="sm"
-                label={`${names[c]} accuracy`}
-                value={review.accuracy[c] === null ? "–" : `${review.accuracy[c]}%`}
-                sub={`${review.counts[c].inaccuracy} ?! · ${review.counts[c].mistake} ? · ${review.counts[c].blunder} ??`}
-              />
-            ))}
-          </div>
-          {lines.length > 0 && (
-            <ol className="flex flex-col gap-1 text-xs" aria-label="Engine lines">
-              {lines.map((line, i) => (
-                <li key={line.pv.join(" ") || i} className="flex gap-2">
-                  <span className="w-10 shrink-0 font-mono font-semibold text-fg-strong">
-                    {formatScore(line.score)}
-                  </span>
-                  <span className="truncate text-fg-secondary">{pvSan(shown.fen, line.pv)}</span>
-                </li>
-              ))}
-            </ol>
-          )}
-        </>
-      )}
-    </div>
-  );
-
+  const viewer: Color | null = match?.viewerSeat === 0 ? "w" : match?.viewerSeat === 1 ? "b" : null;
+  const [orientation, setOrientation] = useState<Color>(viewer ?? "w");
   return (
-    <GameBoard
-      view={baseView}
-      color={null}
-      names={names}
-      legal={[]}
-      send={() => {}}
-      viewing={viewing}
-      onViewingChange={(ply) => playback.goTo(ply ?? n)}
-      onShownChange={onShownChange}
-      grades={analysed ? review.grades : undefined}
-      arrows={analysed ? arrows : undefined}
-      besideBoard={
-        analysed
-          ? (size) => <EvalBar score={shownEval?.score ?? null} orientation="w" height={size} />
-          : undefined
+    <ReviewBoard
+      startFen={log.startFen}
+      moves={log.moves}
+      result={log.result}
+      timeControl={log.timeControl}
+      names={namesOf(log, match)}
+      aiColors={SIDES.filter((_, seat) => log.strategies[seat] != null)}
+      viewer={viewer}
+      date={match ? new Date(match.createdAt) : new Date()}
+      endActions={
+        onBack ? [{ label: "Back to history", variant: "secondary", onClick: onBack }] : []
       }
-      sidebarExtra={summary}
-      actionExtra={
-        <div className="flex flex-wrap items-center gap-2">
-          <ReplayControls playback={playback} />
-          <PgnButtons
-            input={{
-              startFen: log.startFen,
-              moves: log.moves,
-              result: log.result,
-              timeControl: log.timeControl,
-              white: names.w,
-              black: names.b,
-            }}
-          />
-        </div>
-      }
+      orientation={orientation}
+      onOrientationChange={setOrientation}
     />
   );
 }

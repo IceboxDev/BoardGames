@@ -33,3 +33,39 @@ export function resultText(result: ChessResult): string {
       return "Draw by agreement";
   }
 }
+
+const WON_BY: Partial<Record<ChessResult["termination"], { won: string; lost: string }>> = {
+  checkmate: { won: "Won · checkmate", lost: "Checkmated" },
+  resign: { won: "Won · resignation", lost: "Resigned" },
+  timeout: { won: "Won · on time", lost: "Out of time" },
+  abandon: { won: "Won · opponent left", lost: "Left" },
+};
+
+const DRAWN_BY: Record<ChessResult["termination"], string> = {
+  checkmate: "",
+  resign: "",
+  timeout: "",
+  "timeout-vs-insufficient": "time out, no mate",
+  abandon: "abandoned",
+  stalemate: "stalemate",
+  insufficient: "no mating material",
+  threefold: "repetition",
+  fivefold: "repetition",
+  "fifty-move": "50 moves",
+  "seventy-five-move": "75 moves",
+  agreement: "agreed",
+};
+
+/** What each player strip says about the result: "Won · checkmate" / "Checkmated", or "½ · stalemate". */
+export function resultBadges(
+  result: ChessResult,
+): Record<"w" | "b", { text: string; tone: "emerald" | "rose" | "neutral" }> {
+  if (result.winner === null) {
+    const badge = { text: `½ · ${DRAWN_BY[result.termination]}`, tone: "neutral" as const };
+    return { w: badge, b: badge };
+  }
+  const words = WON_BY[result.termination] ?? { won: "Won", lost: "Lost" };
+  const won = { text: words.won, tone: "emerald" as const };
+  const lost = { text: words.lost, tone: "rose" as const };
+  return result.winner === "w" ? { w: won, b: lost } : { w: lost, b: won };
+}

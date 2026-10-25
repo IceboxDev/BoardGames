@@ -68,6 +68,12 @@ export interface ChessBoardProps {
    * board while you browse back through the moves uses it to return to now.
    */
   readonly onInertPress?: () => void;
+  /** A move's grade drawn on its square's corner (the review board). */
+  readonly squareBadge?: {
+    readonly square: string;
+    readonly text: string;
+    readonly tone: "best" | "inaccuracy" | "mistake" | "blunder";
+  } | null;
   readonly "aria-label"?: string;
   readonly className?: string;
 }
@@ -174,6 +180,7 @@ export default function ChessBoard({
   bughouse = false,
   keyboard = true,
   onInertPress,
+  squareBadge = null,
   "aria-label": ariaLabel = "Chess board",
   className,
 }: ChessBoardProps) {
@@ -617,6 +624,8 @@ export default function ChessBoard({
         })}
       </BoardLayer>
 
+      {squareBadge && <SquareBadge badge={squareBadge} orientation={orientation} />}
+
       {focused && usingKeys && (
         <rect
           {...corner(cursor, orientation)}
@@ -669,6 +678,51 @@ export default function ChessBoard({
         />
       )}
     </BoardSurface>
+  );
+}
+
+const BADGE_FILL = {
+  best: BOARD_COLORS.gradeBest,
+  inaccuracy: BOARD_COLORS.gradeInaccuracy,
+  mistake: BOARD_COLORS.gradeMistake,
+  blunder: BOARD_COLORS.gradeBlunder,
+} as const;
+
+/** A grade mark in a square's top-right corner, over the piece. */
+function SquareBadge({
+  badge,
+  orientation,
+}: {
+  badge: NonNullable<ChessBoardProps["squareBadge"]>;
+  orientation: Color;
+}) {
+  const sq = parseSquare(badge.square);
+  if (sq === null) return null;
+  const { x, y } = corner(sq, orientation);
+  const cx = x + SQUARE - 18;
+  const cy = y + 18;
+  return (
+    <g pointerEvents="none" aria-hidden>
+      <circle
+        cx={cx}
+        cy={cy}
+        r={17}
+        fill={BADGE_FILL[badge.tone]}
+        stroke={BOARD_COLORS.gradeInk}
+        strokeWidth={2}
+      />
+      <text
+        x={cx}
+        y={cy + 6}
+        textAnchor="middle"
+        fontSize={badge.text.length > 1 ? 15 : 18}
+        fontWeight={800}
+        fontFamily="ui-sans-serif, system-ui"
+        fill={BOARD_COLORS.gradeInk}
+      >
+        {badge.text}
+      </text>
+    </g>
   );
 }
 
