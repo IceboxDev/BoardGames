@@ -14,6 +14,17 @@ import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 import SetupScreen, { type ChessSetup } from "./components/SetupScreen";
 
+/** "Play as Black" after a game as White, and the reverse — the human's seat 0 is White. */
+export function colourSwap(setup: ChessSetup, start: SoloStart) {
+  const wasWhite = start.seats[0]?.kind === "human";
+  return [
+    {
+      label: wasWhite ? "Play as Black" : "Play as White",
+      setup: { ...setup, color: wasWhite ? ("b" as const) : ("w" as const) },
+    },
+  ];
+}
+
 /** Seat 0 plays White, so "Black" puts the AI first. */
 function toSoloStart(setup: ChessSetup): SoloStart {
   const color = setup.color === "random" ? (Math.random() < 0.5 ? "w" : "b") : setup.color;
@@ -56,6 +67,7 @@ export default function Chess({ source }: GameComponentProps) {
 function ChessGame({ source }: GameComponentProps) {
   const flow = useSessionFlow<unknown, ChessAction, ChessResult, ChessSetup>(source, {
     toSoloStart,
+    soloRematches: colourSwap,
   });
 
   // The view crosses the wire as `unknown`; parse it rather than trust it.

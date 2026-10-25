@@ -17,6 +17,8 @@ export default {
   extraModePath: "solo/trainer",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./ChessLobbyConfig")),
+  // Two seats: rotating by one swaps White and Black.
+  rematchRotations: [{ label: "Rematch · swap colours", by: 1 }],
   replayComponent,
   tournamentResults: () => import("./tournament-results.generated"),
 } satisfies PlayableModule;

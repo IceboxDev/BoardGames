@@ -96,6 +96,14 @@ export interface SessionFlowOptions<TSetup> {
    * it always makes. It begins at once and offers no "Change Setup".
    */
   readonly autoStart?: () => SoloStart;
+  /**
+   * Solo: other ways to play again after a game, each a changed setup (chess:
+   * "Play as Black"). They follow Play Again among the game-over buttons.
+   */
+  readonly soloRematches?: (
+    setup: TSetup,
+    start: SoloStart,
+  ) => readonly { readonly label: string; readonly setup: TSetup }[];
 }
 
 /**
@@ -105,7 +113,7 @@ export interface SessionFlowOptions<TSetup> {
  */
 export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
   source: GameSource,
-  { toSoloStart, autoStart }: SessionFlowOptions<TSetup> = {},
+  { toSoloStart, autoStart, soloRematches }: SessionFlowOptions<TSetup> = {},
 ): SessionFlow<TView, TAction, TResult, TSetup> {
   const navigate = useNavigate();
   const { def, game, mp } = useGameShell<TView, TAction, TResult>();
@@ -113,6 +121,8 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
   const active = source === "mp" ? mp : game;
 
   const [lastStart, setLastStart] = useState<SoloStart | null>(null);
+  // The setup behind it: Play Again re-runs it, so a random choice is drawn again.
+  const [lastSetup, setLastSetup] = useState<{ value: TSetup } | null>(null);
   // The error showing when a start was sent — a start is in flight until the
   // game arrives or a *new* error (the server refusing it) replaces that one.
   const [starting, setStarting] = useState<{ errorBefore: string | null } | null>(null);
@@ -150,6 +160,7 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
     (setup: TSetup) => {
       if (!toSoloStart) throw new Error(`${def.slug} has no solo game to start`);
       gameHistory.enterGame();
+      setLastSetup({ value: setup });
       launch(toSoloStart(setup));
     },
     [toSoloStart, def.slug, launch, gameHistory.enterGame],
@@ -206,13 +217,32 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
       ? () => navigate(`/play/${def.slug}/match-history/${active.replayId}`)
       : null;
 
-  const playAgain = source === "solo" && lastStart ? () => launch(lastStart) : null;
+  const replay = (setup: TSetup) => {
+    if (!toSoloStart) return;
+    setLastSetup({ value: setup });
+    launch(toSoloStart(setup));
+  };
+  const playAgain =
+    source !== "solo" || !lastStart
+      ? null
+      : lastSetup && toSoloStart
+        ? () => replay(lastSetup.value)
+        : () => launch(lastStart);
+  const rematches =
+    source === "solo" && lastSetup && lastStart && soloRematches
+      ? soloRematches(lastSetup.value, lastStart).map((r) => ({
+          label: r.label,
+          variant: "secondary" as const,
+          onClick: () => replay(r.setup),
+        }))
+      : [];
   const endActions: GameOverAction[] = [
     ...(source === "solo"
       ? [
           ...(playAgain
             ? [{ label: "Play Again", variant: "primary" as const, onClick: playAgain }]
             : []),
+          ...rematches,
           ...(autoStart
             ? [{ label: "Back to Menu", variant: "secondary" as const, onClick: backToMenu }]
             : [

@@ -63,6 +63,11 @@ export interface ChessBoardProps {
    * the line and nothing else.
    */
   readonly keyboard?: boolean;
+  /**
+   * A left press on a board with nothing to play or premove — the live game
+   * board while you browse back through the moves uses it to return to now.
+   */
+  readonly onInertPress?: () => void;
   readonly "aria-label"?: string;
   readonly className?: string;
 }
@@ -168,6 +173,7 @@ export default function ChessBoard({
   onDropKeyChange,
   bughouse = false,
   keyboard = true,
+  onInertPress,
   "aria-label": ariaLabel = "Chess board",
   className,
 }: ChessBoardProps) {
@@ -288,6 +294,10 @@ export default function ChessBoard({
 
   const onPointerDown = (e: PointerEvent<SVGRectElement>) => {
     setUsingKeys(false);
+    if (e.button === 0 && onInertPress && !playing && !(premoveColor && onPremove)) {
+      onInertPress();
+      return;
+    }
     const p = toLocal(e);
     if (!p) return;
     const sq = squareAtPoint(p.x, p.y, orientation);
@@ -426,6 +436,11 @@ export default function ChessBoard({
               onKeyDown,
               onFocus: () => setFocused(true),
               onBlur: () => setFocused(false),
+              // Only Tab focuses the board: a mouse press leaves the page's own
+              // keys (← → through the moves, F to flip) working.
+              onMouseDown: (e) => e.preventDefault(),
+              // The page's keys stand aside while the square cursor is in use.
+              "data-board-keys": focused && usingKeys ? "on" : "off",
             }
           : {}),
         onContextMenu: (e) => e.preventDefault(),

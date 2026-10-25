@@ -114,6 +114,8 @@ export const ChessPlayerViewSchema = z.object({
   disconnected: z.array(z.number().int()),
   /** Seats whose opponent may now claim the game because they left. */
   abandoned: z.array(z.number().int()),
+  /** Per seat: when its opponent may claim the game if it stays away (ms), or `null`. */
+  claimAtMs: z.array(z.number().nullable()).optional(),
   aiThinking: z.boolean(),
   result: ChessResultSchema.nullable(),
   timeControl: TimeControlSchema.nullable(),

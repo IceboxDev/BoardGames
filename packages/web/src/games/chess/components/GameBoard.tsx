@@ -2,12 +2,15 @@ import type { Color } from "@boardgames/core/games/chess/engine/types";
 import type { ChessAction, ChessPlayerView } from "@boardgames/core/games/chess/schemas";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { GameScreen } from "../../../components/game-layout";
+import { useTurnAlert } from "../../../hooks/useTurnAlert";
 import { useMuted } from "../../../lib/sound/useMuted";
 import { positionAt, useSquareFit } from "../logic/board-view";
 import { material } from "../logic/moves";
 import { CHESS_MUTE_KEY, playSound, soundForSan } from "../logic/sound";
 import { LOW_TIME_MS, useClockMs } from "../logic/useClockMs";
+import { useOfferNotices } from "../logic/useOfferNotices";
 import { ActionBar } from "./ActionBar";
+import { BrowseChip } from "./BrowseChip";
 import ChessBoard, { type BoardArrow } from "./board/ChessBoard";
 import { type MoveGrade, MoveList } from "./MoveList";
 import { PlayerStrip } from "./PlayerStrip";
@@ -43,7 +46,7 @@ export default function GameBoard({
   color,
   names,
   legal,
-  send,
+  send: sendRaw,
   actionExtra,
   arrows,
   grades,
@@ -79,6 +82,11 @@ export default function GameBoard({
   const over = view.result !== null;
   const toMove: Color = view.fen.split(" ")[1] === "b" ? "b" : "w";
   const myTurn = color !== null && toMove === color && !over;
+  const opponentIsAi =
+    color !== null && view.aiSeats.includes(view.seatColors.indexOf(color === "w" ? "b" : "w"));
+  const notices = useOfferNotices(view, color, opponentIsAi, sendRaw);
+  const send = notices.send;
+  useTurnAlert(myTurn ? "Your move" : null);
 
   // A queued premove plays the moment it becomes legal — or is dropped.
   useEffect(() => {
@@ -117,6 +125,12 @@ export default function GameBoard({
     if (myMs >= LOW_TIME_MS) warned.current = false;
   }, [myMs, color, view.clock, muted]);
 
+  // A move that arrived while browsing: the chip says so.
+  const browsedAt = useRef<number | null>(null);
+  if (live) browsedAt.current = null;
+  else browsedAt.current ??= view.history.length;
+  const fresh = !live && view.history.length > (browsedAt.current ?? view.history.length);
+
   const step = useCallback(
     (delta: number) => {
       const total = view.history.length;
@@ -130,7 +144,8 @@ export default function GameBoard({
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement | null;
-      if (target?.closest("input, textarea, [contenteditable=true], svg")) return;
+      if (target?.closest('input, textarea, [contenteditable=true], [data-board-keys="on"]'))
+        return;
       if (e.key === "ArrowLeft") step(-1);
       else if (e.key === "ArrowRight") step(1);
       else if (e.key === "Home") setViewing(view.history.length === 0 ? null : 0);
@@ -158,6 +173,8 @@ export default function GameBoard({
       clock={view.clock}
       disconnected={view.disconnected.includes(seatOf(c))}
       toMove={!over && toMove === c}
+      status={notices.status[c]}
+      highlightTurn
     />
   );
 
@@ -183,6 +200,7 @@ export default function GameBoard({
           legal={legal}
           send={send}
           onFlip={() => setOrientation((o) => (o === "w" ? "b" : "w"))}
+          onStep={step}
           muted={muted}
           onToggleMute={toggleMuted}
           extra={actionExtra}
@@ -196,7 +214,15 @@ export default function GameBoard({
           {besideBoard?.(size)}
           <div className="flex flex-col gap-1" style={{ width: size }}>
             {strip(top)}
-            <div style={{ width: size, height: size }}>
+            <div className="relative" style={{ width: size, height: size }}>
+              {!live && !over && (
+                <BrowseChip
+                  ply={shownPly}
+                  total={view.history.length}
+                  fresh={fresh}
+                  onLive={() => setViewing(null)}
+                />
+              )}
               {size > 0 && (
                 <ChessBoard
                   className="size-full overflow-hidden rounded-card-md shadow-lg"
@@ -209,6 +235,7 @@ export default function GameBoard({
                   onPremove={setPremove}
                   lastMove={shownLast}
                   arrows={arrows}
+                  onInertPress={!live && !over ? () => setViewing(null) : undefined}
                   aria-label={`Chess board, ${toMove === "w" ? "White" : "Black"} to move`}
                 />
               )}

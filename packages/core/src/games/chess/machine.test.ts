@@ -167,7 +167,9 @@ describe("chess machine", () => {
   it("lets a player claim the game once the opponent has been gone a minute", async () => {
     const a = start(HUMANS);
     move(a, 0, "e2e4");
+    const dropped = Date.now();
     a.send({ type: "SEAT_CONNECTION", seat: 1, connected: false });
+    expect(view(a).claimAtMs).toEqual([null, dropped + ABANDON_MS]);
     await vi.advanceTimersByTimeAsync(ABANDON_MS - 1_000);
     expect(kinds(a, 0)).not.toContain("claim-win");
     await vi.advanceTimersByTimeAsync(2_000);
@@ -185,6 +187,7 @@ describe("chess machine", () => {
     await vi.advanceTimersByTimeAsync(60_000);
     expect(view(a).abandoned).toEqual([]);
     expect(view(a).disconnected).toEqual([]);
+    expect(view(a).claimAtMs).toEqual([null, null]);
   });
 
   it("gives nothing to an idle snapshot", () => {

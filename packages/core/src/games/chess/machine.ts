@@ -82,6 +82,8 @@ export interface ChessContext {
   disconnected: number[];
   /** Seats gone for `ABANDON_MS` — their opponent may claim the game. */
   abandoned: number[];
+  /** When each disconnected seat dropped (ms), for the opponent's claim countdown. */
+  droppedAt: Readonly<Record<number, number>>;
 }
 
 export type ChessEvent =
@@ -197,6 +199,7 @@ export const chessMachine = setup({
         config: event.config,
         disconnected: [],
         abandoned: [],
+        droppedAt: {},
       }));
     }),
 
@@ -230,12 +233,17 @@ export const chessMachine = setup({
       const others = context.disconnected.filter((s) => s !== event.seat);
       if (event.connected) {
         enqueue.cancel(id);
+        const { [event.seat]: _back, ...stillDropped } = context.droppedAt;
         enqueue.assign({
           disconnected: others,
           abandoned: context.abandoned.filter((s) => s !== event.seat),
+          droppedAt: stillDropped,
         });
       } else {
-        enqueue.assign({ disconnected: [...others, event.seat] });
+        enqueue.assign({
+          disconnected: [...others, event.seat],
+          droppedAt: { ...context.droppedAt, [event.seat]: Date.now() },
+        });
         enqueue.raise({ type: "ABANDON_READY", seat: event.seat }, { id, delay: ABANDON_MS });
       }
     }),
@@ -257,6 +265,7 @@ export const chessMachine = setup({
     config: { timeControl: null, takebacks: true },
     disconnected: [],
     abandoned: [],
+    droppedAt: {},
   },
 
   states: {
@@ -430,6 +439,10 @@ function buildView(snapshot: ChessSnapshot, seat: number): ChessPlayerView {
     claimableDraw: game ? claimableDraw(game) : null,
     disconnected: [...ctx.disconnected],
     abandoned: [...ctx.abandoned],
+    claimAtMs: [0, 1].map((s) => {
+      const at = ctx.droppedAt[s];
+      return at === undefined ? null : at + ABANDON_MS;
+    }),
     aiThinking: snapshot.matches({ active: "aiTurn" }),
     result: game?.result ?? null,
     timeControl: game?.timeControl ?? null,

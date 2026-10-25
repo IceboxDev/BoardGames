@@ -1,11 +1,14 @@
 import type { ChessAction } from "@boardgames/core/games/chess/schemas";
 import { SoundToggle } from "../../../components/game-layout";
 import { Button, Surface, useConfirm } from "../../../components/ui";
+import { useMediaQuery, WIDE_BOARD_QUERY } from "../../../hooks/useMediaQuery";
 
 interface Props {
   legal: readonly ChessAction[];
   send: (action: ChessAction) => void;
   onFlip: () => void;
+  /** Step through the moves — buttons on phones, where there are no arrow keys. */
+  onStep?: (delta: number) => void;
   muted: boolean;
   onToggleMute: () => void;
   /** After the game: the extra buttons the game-over view offers. */
@@ -20,8 +23,9 @@ const has = (legal: readonly ChessAction[], kind: ChessAction["kind"]) =>
  * answers, claims, resign) plus Flip and sound. Whose turn it is shows on the
  * player strips; guidance lives in tooltips.
  */
-export function ActionBar({ legal, send, onFlip, muted, onToggleMute, extra }: Props) {
+export function ActionBar({ legal, send, onFlip, onStep, muted, onToggleMute, extra }: Props) {
   const { confirm, confirmDialog } = useConfirm();
+  const wide = useMediaQuery(WIDE_BOARD_QUERY);
   const takeback = has(legal, "takeback");
   const requestTakeback = has(legal, "request-takeback");
   const acceptTakeback = has(legal, "accept-takeback");
@@ -55,6 +59,16 @@ export function ActionBar({ legal, send, onFlip, muted, onToggleMute, extra }: P
         <Button size="xs" variant="ghost" onClick={onFlip} title="Turn the board around (F)">
           ⇅ Flip
         </Button>
+        {onStep && !wide && (
+          <>
+            <Button size="xs" variant="ghost" onClick={() => onStep(-1)} aria-label="Previous move">
+              ‹
+            </Button>
+            <Button size="xs" variant="ghost" onClick={() => onStep(1)} aria-label="Next move">
+              ›
+            </Button>
+          </>
+        )}
         <SoundToggle muted={muted} onToggle={onToggleMute} />
       </div>
 
@@ -77,8 +91,7 @@ export function ActionBar({ legal, send, onFlip, muted, onToggleMute, extra }: P
         {acceptTakeback && (
           <Button
             size="xs"
-            variant="tinted"
-            tone="sky"
+            variant="primary"
             onClick={() => send(acceptTakeback)}
             title="Your opponent asks to take their last move back"
           >

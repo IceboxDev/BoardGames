@@ -27,6 +27,8 @@ export interface PvAISetupScreenProps {
   playerCounts?: number[];
   /** Default player count (defaults to the smallest on offer). */
   defaultPlayerCount?: number;
+  /** The AI picked at first (a remembered choice); defaults to the manifest's. */
+  initialStrategy?: string;
   /** Called when user clicks Start, with an AI the game offers at that size. */
   onStart: (playerCount: number, strategyId: string) => void;
   /** Optional extra controls (e.g. an expansion toggle) shown above Start. */
@@ -59,6 +61,7 @@ export function PvAISetupScreen({
   defaultPlayerCount,
   onStart,
   extraControls,
+  initialStrategy,
 }: PvAISetupScreenProps) {
   const playerCounts = useMemo(
     () =>
@@ -78,7 +81,7 @@ export function PvAISetupScreen({
   );
 
   const [selectedId, setSelectedId] = useState(
-    manifest.defaultStrategy ?? currentStrategies[0]?.id ?? "",
+    initialStrategy ?? manifest.defaultStrategy ?? currentStrategies[0]?.id ?? "",
   );
 
   // Reset selection when strategy list changes and current selection is no longer valid
