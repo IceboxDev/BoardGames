@@ -13,13 +13,16 @@ pnpm lint                     # biome check (lint + format check)
 pnpm lint:fix                 # biome check --write (auto-fix)
 pnpm format                   # biome format --write
 pnpm typecheck                # typecheck all packages
-pnpm test                     # run vitest across core, server, and web
+pnpm test                     # run vitest across core, server, and web (default tier)
+pnpm test:heavy               # AI-strength / convergence tests (*.heavy.test.ts) — their own CI job
 pnpm -r --filter @boardgames/web typecheck   # typecheck single package
 ```
 
 Scripts in individual packages can be run with `pnpm --filter <pkg> <script>`, e.g. `pnpm --filter @boardgames/server dev`.
 
 Pre-commit hook (lefthook): runs `biome check` on staged files and the style guard, then `scripts/pre-commit-checks.mjs` — two lanes (typechecks one at a time beside test suites one at a time), only for the packages the staged files can break (core or root config → all three; web or server → itself). Never all suites at once: that was ~40 vitest workers and starved the machine.
+
+Test tiers: a test that proves an AI plays *well* (seeded games against a weaker bot) or that a sampler *converges* goes in a `*.heavy.test.ts` file. The default suites, the pre-commit hook and the per-package CI jobs exclude them; `pnpm test:heavy` (`packages/core/vitest.heavy.config.ts`, one file at a time, one tier-wide timeout) and the "Heavy tests" CI job run them. Correctness tests stay in the default tier however slow. CI runs one package per job and warns on any default-tier test over 10 s (`scripts/ci-slow-tests.mjs`). Don't add per-test timeouts.
 
 Pre-push hook: `scripts/check-live-games.mjs` reads production `/api/health` (`liveGames`) and refuses the push while a Blood on the Clocktower room game is live — a deploy ends every live game (sessions are process memory). `ALLOW_LIVE_DEPLOY=1 git push` overrides; an unreachable health check never blocks.
 

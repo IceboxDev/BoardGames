@@ -1,7 +1,15 @@
 import "@testing-library/jest-dom/vitest";
 
-import { cleanup } from "@testing-library/react";
+import { cleanup, configure } from "@testing-library/react";
 import { afterEach, beforeEach, vi } from "vitest";
+
+// `findBy*` / `waitFor` give up after testing-library's 1 s default. Work a
+// test really waits on (Connect 4's solver grading a game) takes longer than
+// that on a CI runner or under the pre-commit hook, and failed CI three times
+// with nothing broken. Same busy rule as vitest.config.ts's timeouts; a quiet
+// local run keeps the 1 s default so a real stall still shows quickly.
+const busy = Boolean(process.env.CI || process.env.LEFTHOOK);
+configure({ asyncUtilTimeout: busy ? 10_000 : 1_000 });
 
 function makeStorage(): Storage {
   const store = new Map<string, string>();

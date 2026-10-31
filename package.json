@@ -24,6 +24,7 @@
     "format": "biome format --write packages/",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r --parallel --filter './packages/*' test",
+    "test:heavy": "pnpm --filter @boardgames/core test:heavy",
     "geography-import": "tsx scripts/geography-import.ts",
     "quiz-ingest": "tsx scripts/quiz-ingest/cli.ts",
     "quiz-evidence": "tsx scripts/quiz-evidence/cli.ts"

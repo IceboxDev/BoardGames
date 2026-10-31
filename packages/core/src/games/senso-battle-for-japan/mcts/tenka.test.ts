@@ -3,7 +3,6 @@ import { canonicalEquals } from "../../../machines/action-validation";
 import { pickAiActionTimed } from "../ai-strategies";
 import { applyAction, createInitialState, settleTrick } from "../game-engine";
 import { getActivePlayer, getLegalActions } from "../rules";
-import { simulateGame } from "../tournament-runner";
 import type { Action, GameState } from "../types";
 import {
   DEFAULT_TENKA,
@@ -236,21 +235,4 @@ describe("Tenka", () => {
     }
     expect(rewardDecisions).toBeGreaterThan(10);
   }, 60_000);
-
-  it("beats Daimyō in seeded 2-player games", () => {
-    // Observed 2026-09-07 with iterations 400 (deterministic): 15/16 — threshold two below.
-    const live = { ...DEFAULT_TENKA };
-    Object.assign(DEFAULT_TENKA, { timeMs: 0, iterations: 400, rootSolveDets: 8 });
-    let wins = 0;
-    try {
-      for (let i = 0; i < 16; i++) {
-        const seats = i % 2 === 0 ? ["tenka", "heuristic-v1"] : ["heuristic-v1", "tenka"];
-        const winner = simulateGame(seats as never, i);
-        if (winner >= 0 && seats[winner] === "tenka") wins++;
-      }
-    } finally {
-      Object.assign(DEFAULT_TENKA, live);
-    }
-    expect(wins).toBeGreaterThanOrEqual(13);
-  }, 120_000);
 });

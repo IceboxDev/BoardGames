@@ -1,18 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { createRng } from "../../lib/rng";
 import { canonicalEquals } from "../../machines/action-validation";
-import {
-  configureSearch,
-  determinize,
-  pickPlaySearch,
-  pickRewardSearch,
-  tierTable,
-  voidsOf,
-} from "./ai-search";
+import { determinize, pickPlaySearch, pickRewardSearch, tierTable, voidsOf } from "./ai-search";
 import { applyAction, createInitialState, settleTrick } from "./game-engine";
 import { getLegalActions } from "./rules";
-import { seatPattern, simulateGame } from "./tournament-runner";
-import type { AIStrategyId, GameState } from "./types";
+import type { GameState } from "./types";
 
 function afterTrick(): GameState {
   // Seat 0 leads takeda, seat 1 (holding no takeda) sloughs an oda card.
@@ -101,16 +93,4 @@ describe("search decisions", () => {
     // Focus is worth at least a single Aggression.
     expect(table[0][4]).toBeGreaterThanOrEqual(table[0][3]);
   });
-
-  it("beats the one-card heuristic clearly over a fixed set of seeded games", () => {
-    configureSearch({ determinizations: 6, rewardCandidates: 8 });
-    let wins = 0;
-    const games = 16;
-    for (let i = 0; i < games; i++) {
-      const seats = seatPattern<AIStrategyId>("shogun", "heuristic-v1", 2, i);
-      const winner = simulateGame(seats, i);
-      if (winner >= 0 && seats[winner] === "shogun") wins++;
-    }
-    expect(wins).toBeGreaterThanOrEqual(10);
-  }, 60_000);
 });

@@ -58,6 +58,7 @@
   "scripts": {
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",
+    "test:heavy": "vitest run --config vitest.heavy.config.ts",
     "bench": "tsx src/games/senso-battle-for-japan/bench.ts",
     "tournament": "tsx src/tournament/cli.ts",
     "bench:hunger": "tsx src/games/the-hunger/bench.ts",

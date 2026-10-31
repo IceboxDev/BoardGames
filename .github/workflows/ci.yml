@@ -4,8 +4,8 @@ name: CI
 # `git commit -n` skips and which nothing server-side re-runs. Vercel and
 # Railway build straight from a push, so untested code could ship.
 #
-# To make this an actual gate rather than a report, mark `verify`, `migrations`,
-# `codegen-drift` and `cpp` as REQUIRED STATUS CHECKS on `master`
+# To make this an actual gate rather than a report, mark `verify`, `test`, `heavy`,
+# `migrations`, `codegen-drift` and `cpp` as REQUIRED STATUS CHECKS on `master`
 # (Settings → Branches → Branch protection) and require a PR to merge. Both
 # hosts deploy on push to master, so a protected master is what keeps a red
 # build out of production.
@@ -25,9 +25,9 @@ env:
 
 jobs:
   verify:
-    name: Lint, typecheck, test
+    name: Lint, typecheck
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
         with:
@@ -51,8 +51,60 @@ jobs:
       - name: Typecheck
         run: pnpm -r typecheck
 
+  # One package per runner. `pnpm test` ran all three suites at once on one
+  # 4-vCPU runner (12 vitest workers on 4 cores), and every heavy test timed
+  # out at roughly 7× its local time — CI was red on every push for weeks.
+  test:
+    name: Test (${{ matrix.package }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        package: [core, server, web]
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: false
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
       - name: Test
-        run: pnpm test
+        run: >-
+          pnpm --filter @boardgames/${{ matrix.package }} test
+          --reporter=default --reporter=json
+          --outputFile.json=${{ runner.temp }}/vitest-${{ matrix.package }}.json
+
+      # Warns (never fails) on any test over 10 s here, so a test drifting
+      # towards a timeout is seen before it turns CI red. Slow tests that
+      # measure strength or convergence belong in *.heavy.test.ts.
+      - name: Slow tests
+        if: always()
+        run: node scripts/ci-slow-tests.mjs ${{ runner.temp }}/vitest-${{ matrix.package }}.json 10
+
+  # AI-strength and statistical tests (`*.heavy.test.ts`): seconds to minutes
+  # each, run one file at a time with the tier's own timeout
+  # (packages/core/vitest.heavy.config.ts). Kept out of the pre-commit hook.
+  heavy:
+    name: Heavy tests (AI strength)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: false
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Heavy tests
+        run: pnpm test:heavy
 
   migrations:
     name: Migration safety
