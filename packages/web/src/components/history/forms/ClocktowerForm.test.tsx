@@ -126,3 +126,46 @@ describe("ClocktowerForm — Travellers", () => {
     expect(teams?.[1].members.map((m) => m.role)).toEqual(["Imp"]);
   });
 });
+
+describe("ClocktowerForm — edition", () => {
+  it("writes the edition as the scenario when the roster changes", () => {
+    let latest: MatchOutcomeTeams | null = null;
+    render(
+      <Harness
+        initial={{
+          kind: "teams",
+          teams: [{ members: [member(0, "Empath"), member(1)] }, { members: [member(2, "Imp")] }],
+          winnerTeamIndices: [0],
+        }}
+        onValue={(v) => {
+          latest = v;
+        }}
+      />,
+    );
+    pickCharacter("Paul", "Chef");
+    expect((latest as MatchOutcomeTeams | null)?.scenario).toBe("Trouble Brewing");
+    expect((latest as MatchOutcomeTeams | null)?.winnerTeamIndices).toEqual([0]);
+  });
+
+  it("keeps a stored edition through an edit", () => {
+    let latest: MatchOutcomeTeams | null = null;
+    render(
+      <Harness
+        initial={{
+          kind: "teams",
+          teams: [
+            { members: [member(0, "Gossip"), member(1, "Moonchild")] },
+            { members: [member(2, "Shabaloth")] },
+          ],
+          winnerTeamIndices: [1],
+          scenario: "Bad Moon Rising",
+        }}
+        onValue={(v) => {
+          latest = v;
+        }}
+      />,
+    );
+    pickCharacter("Mantas", "Minstrel");
+    expect((latest as MatchOutcomeTeams | null)?.scenario).toBe("Bad Moon Rising");
+  });
+});

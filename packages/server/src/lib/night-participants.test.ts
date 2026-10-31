@@ -162,3 +162,34 @@ describe("deriveNightParticipants — private night", () => {
     expect(groupMode.canReact("a", false)).toBe(true);
   });
 });
+
+describe("deriveNightParticipants — admins' picks count", () => {
+  const ADMIN = "u-admin";
+  const seatedYes = [yes("a", "2026-09-01 10:00:00")];
+
+  it("host picks: the host and every admin are the pickers", () => {
+    const p = deriveNightParticipants(privateLock({ adminUserIds: [ADMIN] }), seatedYes, []);
+    expect([...p.voters].sort()).toEqual([ADMIN, HOST].sort());
+    expect(p.canReact(ADMIN, true)).toBe(true);
+    expect(p.canReact("a", false)).toBe(false);
+  });
+
+  it("group voting: the seated players plus the admins", () => {
+    const p = deriveNightParticipants(
+      privateLock({ pickMode: "group", adminUserIds: [ADMIN] }),
+      seatedYes,
+      [],
+    );
+    expect([...p.voters].sort()).toEqual([ADMIN, "a", HOST].sort());
+  });
+
+  it("admin picks: only the admins — never the host, even an admin host", () => {
+    const p = deriveNightParticipants(
+      privateLock({ pickMode: "admin", adminUserIds: [ADMIN, HOST] }),
+      seatedYes,
+      [],
+    );
+    expect([...p.voters]).toEqual([ADMIN]);
+    expect(p.canReact("a", false)).toBe(false);
+  });
+});

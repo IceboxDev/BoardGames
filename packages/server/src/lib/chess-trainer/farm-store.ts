@@ -304,8 +304,22 @@ export async function claimJobs(
     `${FARM_HEAVY_PREFIX}%`,
   ];
 
+  // A worker claims only when it has nothing on, so a job still leased to it
+  // is one an earlier run never gave back (killed mid-search): that one first,
+  // as the heavy lane does — else it sits "running" until the lease runs out.
+  const own = await db.execute({
+    sql: `SELECT id FROM chess_eval_jobs WHERE status = 'running' AND worker = ? AND ${claimable}
+          ORDER BY id LIMIT ?`,
+    args: [worker, ...claimableArgs, max],
+  });
+  const ownIds = parseRows(z.object({ id: z.number() }), own.rows, "chess_eval_jobs.own").map(
+    (r) => r.id,
+  );
+
   let pick: { sql: string; args: (string | number)[] };
-  if (order === "deep") {
+  if (ownIds.length > 0) {
+    pick = { sql: ownIds.map(() => "?").join(", "), args: ownIds };
+  } else if (order === "deep") {
     const res = await db.execute({
       sql: `SELECT id, fen_key, fen, reach FROM chess_eval_jobs WHERE ${claimable}`,
       args: claimableArgs,

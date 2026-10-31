@@ -20,7 +20,7 @@ export type LockHost = z.infer<typeof LockHostSchema>;
 // automatically. Outsiders get a redacted lock (see `LockedDateSchema`).
 
 /** Who decides the games: the host alone, or the seated group voting as usual. */
-export const PickModeSchema = z.enum(["group", "host"]);
+export const PickModeSchema = z.enum(["group", "host", "admin"]);
 export type PickMode = z.infer<typeof PickModeSchema>;
 
 /** Seat tally of a private night. `total` includes the host's own seat. */

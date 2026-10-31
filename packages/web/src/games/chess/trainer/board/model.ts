@@ -30,6 +30,9 @@ export interface LineStep extends Position {
 
 export const START: Position = { fen: START_FEN, key: positionKey(parseFen(START_FEN)) };
 
+/** The position `moves` lead to from the start (the start itself for no moves). */
+export const lineEnd = (moves: readonly string[]): Position => walkLine(moves).at(-1) ?? START;
+
 /** The positions along `moves` from the start, stopping at the first illegal move. */
 export function walkLine(moves: readonly string[]): LineStep[] {
   const steps: LineStep[] = [];

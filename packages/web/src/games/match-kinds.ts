@@ -56,6 +56,9 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // co-op like Just One — no binary win/loss).
   "medical-mysteries-nyc": "coop",
   "medical-mysteries-miami": "coop",
+  // Bomb Busters: the team defuses one numbered mission together — win or the
+  // bomb goes off. The mission is the variant (match-variants.ts).
+  "bomb-busters": "coop",
   pandemic: "coop",
   quiztopia: "coop",
   "sky-team": "coop",
@@ -92,6 +95,24 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   "scotland-yard": "one-vs-many",
   "tortuga-1667": "one-vs-many",
 };
+
+/**
+ * Games whose variant decides the match kind: picking the variant switches the
+ * form (Dobble Connect: Speed is every player for themselves, the rulebook's
+ * Standard game is played in teams).
+ */
+const VARIANT_KIND: Record<string, Record<string, MatchKind>> = {
+  "dobble-connect": { Speed: "free-for-all", Standard: "teams" },
+};
+
+/** The kind a game's picked variant implies, or null when the variant doesn't decide it. */
+export function kindForVariant(
+  slug: string | null,
+  scenario: string | undefined,
+): MatchKind | null {
+  if (!slug || !scenario) return null;
+  return VARIANT_KIND[slug]?.[scenario] ?? null;
+}
 
 export function defaultKindForSlug(slug: string | null): MatchKind | null {
   if (!slug) return null;

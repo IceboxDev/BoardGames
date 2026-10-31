@@ -5,6 +5,9 @@ import {
   type ClocktowerEdition,
   charactersByCategory,
   clocktowerAlignment,
+  clocktowerEditionFromLabel,
+  clocktowerEditionLabel,
+  clocktowerSetupProblems,
   detectClocktowerEdition,
   fabledByGroup,
   findClocktowerCharacter,
@@ -50,11 +53,12 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
   const selectedIds = roster.map((s) => s.userId);
   const allRoles = roster.map((s) => s.role);
 
-  // Edition is implied by the assigned characters whenever possible. Local
-  // state only matters before any roles are assigned, or after a reset.
+  // Edition is implied by the assigned characters whenever possible, then by
+  // the stored `scenario`. Local state only matters before any roles are
+  // assigned, or after a reset.
   const detected = detectClocktowerEdition(allRoles);
   const [editionState, setEditionState] = useState<ClocktowerEdition>(
-    detected ?? "trouble-brewing",
+    detected ?? clocktowerEditionFromLabel(value.scenario) ?? "trouble-brewing",
   );
   const edition: ClocktowerEdition = detected ?? editionState;
 
@@ -70,9 +74,14 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
     {
       winnerTeamIndices = value.winnerTeamIndices,
       moderator = value.moderator,
-    }: { winnerTeamIndices?: number[]; moderator?: MatchOutcomeTeams["moderator"] } = {},
+      nextEdition = edition,
+    }: {
+      winnerTeamIndices?: number[];
+      moderator?: MatchOutcomeTeams["moderator"];
+      nextEdition?: ClocktowerEdition;
+    } = {},
   ) {
-    onChange(projectToOutcome(next, winnerTeamIndices, moderator));
+    onChange(projectToOutcome(value, next, winnerTeamIndices, moderator, nextEdition));
   }
 
   function setPlayers(participants: Participant[]) {
@@ -115,11 +124,15 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
     // roles that no longer appear in the dropdown. The Storyteller's Fabled
     // pick is edition-agnostic, so it survives the switch.
     const cleared = roster.map((s) => ({ userId: s.userId, displayName: s.displayName }));
-    commitRoster(cleared, { winnerTeamIndices: [] });
+    commitRoster(cleared, { winnerTeamIndices: [], nextEdition: next });
   }
 
   function setWinner(side: "good" | "evil") {
-    onChange({ ...value, winnerTeamIndices: [side === "good" ? GOOD_INDEX : EVIL_INDEX] });
+    onChange({
+      ...value,
+      winnerTeamIndices: [side === "good" ? GOOD_INDEX : EVIL_INDEX],
+      scenario: clocktowerEditionLabel(edition),
+    });
   }
 
   function setStoryteller(user: User | null) {
@@ -152,6 +165,7 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
   const evilCount = residents.filter((s) => alignmentOf(s) === "evil").length;
   const travellerCount = roster.length - residents.length;
   const unassignedCount = roster.filter((s) => !findClocktowerCharacter(s.role)).length;
+  const setupProblems = clocktowerSetupProblems(allRoles);
 
   const playerUsers = value.moderator
     ? users.filter((u) => u.id !== value.moderator?.userId)
@@ -197,6 +211,13 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
               )}
             </span>
           </div>
+          {setupProblems.length > 0 && (
+            <ul className="flex flex-col gap-0.5 text-2xs text-amber-300">
+              {setupProblems.map((problem) => (
+                <li key={problem}>{problem}</li>
+              ))}
+            </ul>
+          )}
           <div className="flex flex-col gap-1.5">
             {roster.map((slot) => (
               <CharacterRow
@@ -482,10 +503,17 @@ function flattenRoster(value: MatchOutcomeTeams): Slot[] {
   return flat;
 }
 
+/**
+ * The wire outcome for a roster. Starts from the current value so fields this
+ * form doesn't edit survive a save, and always writes the edition as
+ * `scenario` — the card's subtitle reads it.
+ */
 function projectToOutcome(
+  value: MatchOutcomeTeams,
   roster: Slot[],
   winnerTeamIndices: number[],
   moderator: MatchOutcomeTeams["moderator"],
+  edition: ClocktowerEdition,
 ): MatchOutcomeTeams {
   const good: MatchOutcomeTeams["teams"][number]["members"] = [];
   const evil: MatchOutcomeTeams["teams"][number]["members"] = [];
@@ -497,10 +525,13 @@ function projectToOutcome(
         : { userId: s.userId, displayName: s.displayName },
     );
   }
+  const { moderator: _moderator, ...rest } = value;
   return {
+    ...rest,
     kind: "teams",
     teams: [{ members: good }, { members: evil }],
     winnerTeamIndices,
     ...(moderator ? { moderator } : {}),
+    scenario: clocktowerEditionLabel(edition),
   };
 }

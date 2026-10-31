@@ -2,6 +2,7 @@
 // evidence, tags, backlog, article retirement, regrouping, runs, the seal,
 // the ref rewrite, and the extra check-bank passes.
 
+import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import {
@@ -36,6 +37,7 @@ import {
   lastChain,
 } from "../../packages/core/src/quiz/history.ts";
 import { tagProblems } from "../../packages/core/src/quiz/tags.ts";
+import { writeSnapshot } from "../quiz-evidence/store.ts";
 import { DOMAIN_SLUGS } from "../../packages/core/src/quiz/taxonomy.ts";
 import {
   closeBacklogItem,
@@ -62,6 +64,12 @@ import {
   rewriteRefs,
   sealHistories,
 } from "../quiz/lib/history-io.ts";
+import {
+  ARCHIVE_DIR,
+  archiveReport,
+  reportRef,
+  withReportSource,
+} from "../quiz/lib/research-report-io.ts";
 import { parseRegroupRules, regroupReasons, simulateRegroup } from "../quiz/lib/regroup.ts";
 import { closeRun, openRun, RUN_KINDS } from "../quiz/lib/runs-io.ts";
 import { editTags, readTagRegistry } from "../quiz/lib/tags-io.ts";
@@ -231,6 +239,67 @@ function evidenceAdd() {
     console.warn("[quiz-ingest] warning: no --quote, so this source doesn't count towards a grade");
   console.log(
     `[quiz-ingest] ${a.id}/${res.assessmentId} added (${res.newSource ? "new" : "known"} source ${res.sourceId}); ${target.startsWith("f") ? `${target} is now grade ${factGrade(target, res.ledger).grade}` : ""}`,
+  );
+}
+
+// ── research reports ─────────────────────────────────────────────────────
+
+/** `report add <file.pdf> --backlog=bNNNNN [--title=] [--producer=] [--received=] [--pages=] [--text=file.txt]` */
+export function reportCmd() {
+  const [sub, pdf] = positionals();
+  if (sub !== "add" || !pdf)
+    die("usage: quiz-ingest report add <file.pdf> --backlog=bNNNNN [--producer=…] [--title=…]");
+  const backlogId = argValue("backlog");
+  if (!backlogId) die("--backlog=bNNNNN is required");
+  const item = readBacklog().find((b) => b.id === backlogId);
+  if (!item) die(`${backlogId} is not in the backlog`);
+  const bank = readBank();
+  const a = articleOf(bank, item.target.split(":")[0]);
+  if (!a) die(`${backlogId}'s target ${item.target} is not in the bank`);
+  const tool = (cmd: string, args: string[]) => {
+    try {
+      return execFileSync(cmd, args, { encoding: "utf8", maxBuffer: 64 << 20 });
+    } catch {
+      return null;
+    }
+  };
+  const textFile = argValue("text");
+  const text = textFile ? readFileSync(textFile, "utf8") : tool("pdftotext", ["-layout", pdf, "-"]);
+  if (!text?.trim()) die("no text: install poppler (pdftotext) or pass --text=<extracted.txt>");
+  const info = tool("pdfinfo", [pdf]) ?? "";
+  const pages = Number(argValue("pages") ?? /^Pages:\s+(\d+)/m.exec(info)?.[1]);
+  if (!Number.isInteger(pages) || pages < 1) die("page count unknown: pass --pages=N");
+  const title =
+    argValue("title") ?? /^Title:\s+(.+)$/m.exec(info)?.[1]?.trim() ?? `Research report ${backlogId}`;
+  const creator = /^Creator:\s+(.+)$/m.exec(info)?.[1]?.trim();
+  const producer = argValue("producer") ?? (creator ? `${creator} deep research` : undefined);
+  const textSnapshot = writeSnapshot(`${ARCHIVE_DIR}snapshots`, text);
+  const manifest = archiveReport({
+    pdfPath: pdf,
+    item,
+    article: a.id,
+    title,
+    pages,
+    ...(producer ? { producer } : {}),
+    receivedAt: argValue("received") ?? today(),
+    textSnapshot,
+  });
+  let res: ReturnType<typeof withReportSource>;
+  try {
+    res = withReportSource(a, readEvidence(a.id), manifest, reportRef(manifest));
+  } catch (err) {
+    die(`report not registered: ${(err as Error).message}`);
+  }
+  writeEvidence(res.ledger);
+  const items = readBacklog().map((b) =>
+    b.id === item.id && !b.links.includes(`quiz-archive/${manifest.file}`)
+      ? { ...b, links: [...b.links, `quiz-archive/${manifest.file}`] }
+      : b,
+  );
+  writeBacklog(items);
+  console.log(
+    `[quiz-ingest] ${manifest.file} (${pages} pages, sha256 ${manifest.sha256.slice(0, 12)}…) → ${a.id}/${res.sourceId}${res.newSource ? "" : " (already registered)"}\n` +
+      `  cite it: quiz-ingest evidence add --fact=${item.target} --url=${manifest.url} --kind=research-report --lang=en --quote="…" --verbatim --verdict=… --confidence=… --by=…`,
   );
 }
 

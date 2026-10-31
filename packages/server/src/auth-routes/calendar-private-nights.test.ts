@@ -427,6 +427,51 @@ describe("private nights", () => {
     expect(body?.topSlugs).toHaveLength(3);
   });
 
+  it("an admin's picks count beside the host's; admin picks drops the host's", async () => {
+    await lockPrivate();
+    await rsvp(A, "yes", "2020-01-01 10:00:00");
+    const react = (viewer: Hono<AppEnv>, slug: string) =>
+      post(viewer, "/api/calendar/games/reaction", {
+        date: DATE,
+        slug,
+        reaction: "hype",
+        on: true,
+      });
+    const stamp = (id: string, slug: string, at: string) =>
+      client.execute({
+        sql: "UPDATE game_requests SET created_at = ? WHERE user_id = ? AND game_slug = ?",
+        args: [at, id, slug],
+      });
+    expect((await react(as(HOST), "azul")).status).toBe(200);
+    await stamp(HOST, "azul", "2999-01-01 09:00:00");
+    expect((await react(admin(), "wingspan")).status).toBe(200);
+    await stamp(ADMIN, "wingspan", "2999-01-01 09:00:01");
+
+    // Host picks: the admin's pick joins the lineup, in pick order.
+    expect((await games(as(HOST))).body?.topSlugs).toEqual(["azul", "wingspan"]);
+
+    // Admin picks: only the admins' picks count; the host may no longer pick.
+    const flip = await post(as(HOST), "/api/calendar/private-night", {
+      date: DATE,
+      pickMode: "admin",
+    });
+    expect(flip.status).toBe(200);
+    const { rows } = await client.execute({
+      sql: "SELECT pick_mode, admin_picks FROM locked_dates WHERE date_key = ?",
+      args: [DATE],
+    });
+    expect(rows[0]).toMatchObject({ pick_mode: "host", admin_picks: 1 });
+    const body = (await games(as(A))).body;
+    expect(body?.pickMode).toBe("admin");
+    expect(body?.topSlugs).toEqual(["wingspan"]);
+    expect((await locks(as(A)))[DATE]?.pickMode).toBe("admin");
+    expect(await code(await react(as(HOST), "catan"))).toBe("CANNOT_REACT");
+
+    // Back to host picks clears the flag.
+    await post(as(HOST), "/api/calendar/private-night", { date: DATE, pickMode: "host" });
+    expect((await games(as(A))).body?.pickMode).toBe("host");
+  });
+
   it("has no second lock: a private night is sealed from lock-in and the padlock is refused", async () => {
     await lockPrivate();
     const res = await post(as(HOST), "/api/calendar/lock-picks", { date: DATE, on: true });

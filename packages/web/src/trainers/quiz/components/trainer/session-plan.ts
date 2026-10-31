@@ -11,7 +11,7 @@ export interface StudyAllPlan {
   learningDue: number;
   /** …of which scheduled reviews of known cards. */
   reviewDue: number;
-  /** New facts the day's budget still allows (whole articles; an estimate). */
+  /** New facts of the day's batch still to come (whole articles, 15 a day). */
   newFacts: number;
   /** Facts left over from articles begun on an earlier sitting — dealt on top. */
   leftover: number;
@@ -29,8 +29,8 @@ export function studyAllPlan(overview: TrainerOverview): StudyAllPlan {
   const included = overview.domains.filter((d) => !settings.excludeFromAll.includes(d.domain));
   const due = sum(included.map((d) => d.due));
   const learningDue = sum(included.map((d) => d.learningDue));
-  const available = sum(included.map((d) => d.newAvailable));
-  const newFacts = Math.min(overview.newRemainingToday, available);
+  // The server packs the day's batch for "Study all" itself: exact.
+  const newFacts = overview.newRemainingToday;
   const leftover = overview.leftoverToday;
   const summary = [
     due > 0 ? `${due} due` : null,

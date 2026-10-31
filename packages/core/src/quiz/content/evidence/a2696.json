@@ -40,6 +40,31 @@
    "lang": "en",
    "retrievedAt": "2026-10-23T12:49:36.312Z",
    "snapshot": "26fdda68479c6354f4244b83185bb4740c4b3178ef964b95fea22a2e3746c165"
+  },
+  "s6": {
+   "url": "https://media.githubusercontent.com/media/IceboxDev/BoardGames/master/packages/quiz-archive/research-reports/b00327.pdf",
+   "title": "Settling the Gutenberg Bible “Complete Copies” Count",
+   "publisher": "ChatGPT deep research",
+   "kind": "research-report",
+   "lang": "en",
+   "retrievedAt": "2026-10-25",
+   "snapshot": "e8e58adb9a3429dc3230298f9105d8d926faffe18417f10c6b07897f253eb2af",
+   "report": {
+    "file": "research-reports/b00327.pdf",
+    "sha256": "6e05f6ffe7fb797fa12a884e1d410d722d1cc1f4d6b2dcdd9c4d6c68dc1e7a07",
+    "pages": 8,
+    "backlog": "b00327",
+    "receivedAt": "2026-10-25",
+    "producer": "ChatGPT deep research"
+   }
+  },
+  "s7": {
+   "url": "https://webs.uab.cat/aurelialabert/wp-content/uploads/sites/108/2024/08/34.Rangel-Alabert2022JPHS3.pdf",
+   "title": "The increase in the print-run of the 42-line Bible with two corrections to recent censuses",
+   "publisher": "Luz María Rangel & Aureli Alabert, Journal of the Printing Historical Society, 3rd ser. 3 (2022), pp. 101–113",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-25T12:44:43Z"
   }
  },
  "assessments": [
@@ -370,6 +395,44 @@
    "by": "crawler",
    "run": "evidence-verify-2026-10-24",
    "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-25T12:44:42Z",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Card answer: 21. Modern White/Rangel census answer: 20 = 4 vellum + 16 paper.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "owner",
+   "run": "research-reports-2026-10-25",
+   "note": "White's 2017 census (Editio princeps), called the best current reference by Rangel & Alabert 2022: twenty complete copies; LoC FAQ: four complete vellum copies (LoC, Göttingen, BnF, British Library), so 16 paper. 21 = older tradition (older LoC exhibit: 21, 3 vellum), still in Wikipedia's lead; 25 = stale 2009 Wikipedia table. 48 reasonably intact (36 paper + 12 vellum) + the dispersed Noble Fragments = 49."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-25T12:44:43Z",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "one of the twenty complete copies known",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "owner",
+   "run": "research-reports-2026-10-25",
+   "note": "Quoted via research report b00327 (not machine-verified on the paper): Harvard's paper copy p24 is one of the twenty complete copies; the Huntington vellum copy v2 lacks only two leaves."
   }
  ]
 }

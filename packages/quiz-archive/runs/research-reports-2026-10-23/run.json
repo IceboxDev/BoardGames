@@ -1,0 +1,36 @@
+{
+ "id": "research-reports-2026-10-23",
+ "title": "Deep-research PDF reports b00316/b00318/b00320/b00323 integrated",
+ "startedAt": "2026-10-23T15:19:41Z",
+ "endedAt": "2026-10-23T15:20:56Z",
+ "kind": "research",
+ "by": [
+  "coordinator (claude-opus-5-5)",
+  "owner (commissioned the reports)"
+ ],
+ "brief": "Integrate four commissioned deep-research PDF reports (ChatGPT deep research) answering backlog items b00316, b00318, b00320 and b00323; research reports rank above every other source.",
+ "inputs": [
+  "research-reports/b00316.pdf",
+  "research-reports/b00318.pdf",
+  "research-reports/b00320.pdf",
+  "research-reports/b00323.pdf",
+  "research-prompts/b00316-f12504.md",
+  "research-prompts/b00318-f13122.md",
+  "research-prompts/b00320-f13224.md",
+  "research-prompts/b00323-f13242.md"
+ ],
+ "outputs": [
+  "content/articles/a2393.json",
+  "content/articles/a1273.json",
+  "content/articles/a0947.json",
+  "content/articles/a2497.json",
+  "content/evidence (a2393 e15–e16, a1273 e18, a0947 e19–e20, a2497 e20)",
+  "backlog b00316/b00318/b00320/b00323 closed"
+ ],
+ "archivedFrom": [],
+ "archivedAt": "2026-10-23",
+ "counts": {
+  "historyEntries": 21
+ },
+ "notes": "f12504 42→40 sworn depositions; f13122 reworded to George Martin's account (Paul McCartney; Lennon accepted); f13224 'about 2,000'→'about 3,000 cocoons' (MAFF), 2,000–3,000 accepted; f13242 reworded to 'traditional upper estimate' (50 years; documented >20). All four now grade A. reasons.json = the log's reasons; content-edits.py = the exact edit script. Note: the split 'spans' entries of f12504 and f13224 say 'the answer itself is unchanged' — the answer did change, see each fact's 'corrected' entry just before."
+}

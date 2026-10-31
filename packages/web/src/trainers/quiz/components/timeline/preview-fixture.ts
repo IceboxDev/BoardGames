@@ -1,7 +1,7 @@
 import type { TimelineEvent, TimelineKind } from "@boardgames/core/quiz/timeline";
 import { type TimelineItem, toTimelineItem } from "../../logic/timeline-layout";
 
-// Forty pinned moments for `/dev/quiztopia-preview?scene=timeline`: deep
+// Forty pinned moments for the timeline's tests: deep
 // time, BC dates, day-precision events, lifespans (one of a living person),
 // wars and reigns across twelve domains, a mix of known and still
 // learning — enough to judge the river without a member's real pins.

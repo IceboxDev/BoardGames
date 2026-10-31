@@ -73,8 +73,13 @@ export interface NodeEval {
 export interface TreeProviders {
   /** The engine's best `multipv` lines from this position, best first. */
   engineLines(fen: string, multipv: number, depth: number): Promise<EngineLine[]>;
-  /** The database's moves from this position, most played first. */
-  popularMoves(fen: string): Promise<PopularMove[]>;
+  /**
+   * The database's moves from this position, most played first; `null` when
+   * they can't be known right now (no lichess connection and nobody has
+   * fetched the position): the position is padded by the engine alone and
+   * asked about again on the next build.
+   */
+  popularMoves(fen: string): Promise<PopularMove[] | null>;
   /**
    * The deep evaluation under `settings.evalSpec`, or throw `EvalPending`
    * while the farm works on it. Used instead of `engineLines` when the
@@ -293,7 +298,9 @@ export async function buildTree(
   const popularFor = async (w: Work): Promise<PopularMove[]> => {
     if (w.node.popular) return w.node.popular;
     popularCalls++;
-    const moves = (await providers.popularMoves(w.node.fen)).slice(0, 12);
+    const found = await providers.popularMoves(w.node.fen);
+    if (found === null) return [];
+    const moves = found.slice(0, 12);
     w.node.popular = moves;
     return moves;
   };

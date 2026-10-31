@@ -366,9 +366,14 @@ function buildDescription(opts: {
   if (topPickTitles.length > 0) {
     const head = topPickTitles.slice(0, 3).join(", ");
     const more = topPickTitles.length > 3 ? ` (${topPickTitles.length - 3} more)` : "";
-    // A host-curated private night has a lineup, not a vote result.
-    const label =
-      view.lock.isPrivate && view.lock.pickMode === "host" ? "Host's lineup" : "Top picks";
+    // A curated private night (host or admin picks) has a lineup, not a vote result.
+    const label = !view.lock.isPrivate
+      ? "Top picks"
+      : view.lock.pickMode === "host"
+        ? "Host's lineup"
+        : view.lock.pickMode === "admin"
+          ? "Admins' lineup"
+          : "Top picks";
     lines.push(`${label}: ${head}${more}`);
   }
   if (bringingTitles.length > 0) {

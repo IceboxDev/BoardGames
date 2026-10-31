@@ -1,114 +1,147 @@
 # shelf-packer
 
-Offline optimizer that packs the group's board game boxes into a flush,
-front-facing rectangle on a shelf — the "how do I fill 85×25 cm perfectly"
-problem. Self-contained C++17, no dependencies (its own PNG encoder).
+Offline optimizer that packs the group's board game boxes into flush,
+front-facing rectangles on shelves — the "how do I fill 85×25 cm perfectly"
+problem. C++20, no dependencies, plain Makefile (same layout as
+`cpp/the-hunger`).
+
+```bash
+make                 # build/shelf-packer
+make test            # unit tests (ASan + UBSan where installed) + CLI scenarios
+make run             # the canonical runs, each re-checked with --verify:
+make fill            #   one shelf / two shelves filled / the strict variant
+make ultimate
+build/shelf-packer --help
+```
+
+On the laptop g++ lives in the `cxx` toolbox: `toolbox run -c cxx make test`.
+For sanitized unit tests there, install the runtime once:
+`toolbox run -c cxx sudo dnf install libasan libubsan` (without it the
+Makefile says so and builds the tests unsanitized).
 
 ## Model
 
-- Every box (`width × length × height`, mm) shows a **front face** of either
-  `width×height` or `length×height`, optionally rotated 90° — so a box can
-  also stand on its edge, spine-out like a book. The remaining dimension goes
-  **into** the shelf and must fit `--depth-max`. Pass `--flat` to forbid the
-  rotated (spine-out) placements: every box then lies flat with its own
-  height staying vertical.
-- The packing is a row of **piles** standing flush on the floor. A pile is a
-  stack of layers; a layer is 1–3 side-by-side UNITS whose heights match
-  within tolerance — a unit is a single box or a 2-box COLUMN (upper box no
-  wider than its support), so A+B and C+D with matching totals form a flush
-  2-story block. After layout, GRAVITY settles every box to its true
-  resting height — the tallest settled top it overlaps, or the floor — so
-  nothing ever floats over a tolerance dip; boxes stay level (a box on
-  unequal supporters rests on the taller one). Cluster contact, long-edge
-  rules, standing-box tops, and the hole metric are all evaluated on the
-  settled geometry. Every layer in a pile shares the pile width (± tolerance),
-  so all vertical seams are flush.
-- Piles must reach the nominal height; the overflow allowances (30 mm per
-  side, 35 mm up top) are RESERVE, not budget — spilling into them is allowed
-  but penalized: each spilled mm² of front face costs `--spill-cost`% (default
-  50) of what that area could hold at full shelf depth, so a spill only wins
-  when it packs denser than that bar. Measurement tolerance (±1 mm/box) is
-  applied per layer, never banked across a whole pile.
-- Objective: **maximize packed volume minus the spill penalty**, tie-broken by
-  depth used (deeper boxes waste less shelf). Emitted solutions are
-  diversified — two solutions must differ by at least 6 boxes.
-- `--require NAME` (repeatable, `PREFIX*` globs) marks must-pack boxes that
-  additionally have to form ONE touching cluster (side or corner contact).
-- `--vert-inside` allows rotated (spine-out) placements only where the
-  standing box's top stays inside the nominal rectangle; such cells are
-  forced to the pile bottom and re-verified on the final geometry.
-- `--pin-a NAME/GLOB` (repeatable, fill-all only) restricts boxes to shelf A.
-- `--exclude NAME/GLOB` (repeatable) drops boxes from the pool entirely.
-- `--long-edge NAME` (repeatable): this box's cluster contacts only count
-  along its LONG edge with positive overlap (corner contact never counts).
-- `--requires DEP,PROV` (repeatable): DEP may only be packed if PROV is too
-  (PROV alone is fine), on the same shelf, touching along BOTH long edges.
-- `--stack A,B[,C…]` (repeatable): all-or-none like `--together`, but the
-  group must form a strict RUN: a vertical tower (equal face widths, each box
-  directly on the previous) or a standing side-by-side row. Piles carrying a
-  proper subset of a stack group are pruned outright, and canonical tower
-  piles (group + near-width cap cells) are injected directly so enumeration
-  caps can never starve them.
-- `--use-all` (fill-all only) demands EVERY box be placed; when that is
-  infeasible the run reports the closest width-complete attempt and which
-  boxes stayed out, instead of emitting solutions.
-- `--pair A,B[,C…]` (repeatable): the direct "these games must sit
-  together" demand — like `--together`, but presence is MANDATORY, so the
-  optimizer cannot satisfy it by leaving the group out.
-- `--together A,B[,C…]` (repeatable) declares a companion group — one game
-  shipped as several boxes: either NONE of them is packed, or ALL are, and
-  they must touch each other.
-  For both, the arranger places cluster-carrying piles consecutively, sinks
-  cluster cells to the pile bottoms, and permutes pile order + side-by-side
-  box order until a geometric connectivity check passes for every cluster;
-  solutions that can't be arranged are dropped.
+- Every box (`width × length × height`, mm) shows a **front face** of
+  `width×height` or `length×height`, each optionally turned 90° so the box
+  stands on its edge, spine out. The remaining dimension goes **into** the
+  shelf and must fit the shelf's depth. `--flat` forbids the standing faces.
+- A shelf is a row of **piles** standing on the floor. A pile is a stack of
+  **cells** sharing one width (each cell at most `2·tol + --width-slack`
+  narrower than the pile, the gap counted as holes). A cell is one or more
+  side-by-side **units** whose heights match within `2·tol`; a unit is one
+  box or a column of boxes, each no wider than the box below (+`2·tol`).
+- Every pile reaches the nominal height (`--height`, less `--height-slack`)
+  and stays inside the top reserve; tolerance is applied per layer, never
+  banked across a pile. The row may overhang the nominal width into the
+  side reserves.
+- After layout, **gravity** settles every box onto the highest box below it
+  that it overlaps (boxes stay level). Every contact rule, the standing-top
+  rule and the hole metric are judged on the settled geometry.
+- `--vert-inside`: standing boxes keep their tops under the nominal height.
+  Without it they may reach into the top reserve like any box.
 
-Search: exhaustive layer/pile enumeration (deduped by box-set), then several
-beam-search passes over pile candidates plus 20k density-biased greedy
-restarts. Runs in ~2 s for ~46 boxes.
+## Objectives
 
-## Usage
+- **Default — most volume.** Maximize packed volume minus the reserve-spill
+  penalty: every spilled mm² of front face costs `--spill-cost`% (default
+  50) of what it could hold at full shelf depth, so a spill only wins when
+  it packs denser than that. Ties: deeper boxes first.
+- **`--fill-all`** — every shelf rectangle completely filled (total width ≥
+  nominal, every pile at nominal height); rank by the holes left **inside
+  the nominal windows** after choosing pile order, slack side and window
+  position (edge slack that escapes into the reserve costs nothing), then
+  by spill. Needs one `--shelf DEPTH` per shelf.
 
-```bash
-make                       # builds ./shelf-packer
-./shelf-packer boxes.csv --out out --require 'exit-*' --together publish,campus
-make fill                  # two-shelf double-fill mode (below)
-```
+Both objectives work with 1–4 shelves (`--shelf`, repeatable; without it one
+shelf of `--depth-max`, default 325).
 
-### Double-fill mode (`--fill-all`)
+## Rules
 
-`--fill-all --shelf 325 --shelf 470` packs TWO shelves of the same front
-rectangle (different depths) at once, with a different objective: both
-rectangles must be completely filled (every pile reaches nominal height,
-total width >= nominal), and the ranking minimizes **holes inside the nominal rectangle**: raw pile
-slack is only the search heuristic — the final pass re-ranks by the holes
-that remain after choosing the pile order, the per-pile slack side, and the
-window position along the overhang, so edge slack that escapes into the
-overflow allowance costs nothing. Reserve spill is the tie-break. Volume no longer matters and boxes that
-don't help simply stay out (fitting EVERY box is provably impossible: of the
-five 297x297 boxes only three can ever complete a pile). Clusters must sit
-wholly on one shelf. Output: `solution_NN_A.png` / `solution_NN_B.png` per
-solution. `--width-slack MM` / `--height-slack MM` optionally legalize larger
-mismatches as counted holes — required for `--flat` double-fills: strict
-flat-only tops out ~35 mm short of filling both rectangles, while
-`--flat --width-slack 6 --height-slack 15` completes them at ~30 cm2 of
-holes (vs ~6.4 cm2 unrestricted). Expect ~7 min runtime with width slack.
+| Flag | Presence | Contact once all placed |
+|---|---|---|
+| `--require PAT` (repeatable) | all matches **must** be packed, as one group | touching (side or corner) |
+| `--pair A,B[,…]` | **must** be packed | touching |
+| `--together A,B[,…]` | all or none | touching |
+| `--stack A,B[,…]` | all or none | a strict run: a **tower** (equal face widths, each box directly on the previous) or a **row of standing boxes** (equal heights, side by side, nothing between) |
+| `--requires DEP,PROV` | DEP only with PROV (PROV alone is fine) | DEP and PROV meet along the long edges of **both** |
 
-Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution:
-front view with floor line, shelf outline, and dashed reserve bounds; every
-box is numbered, and a legend below the diagram lists each number with the
-full name, placed face (`W×H dDEPTH`), and the raw box dimensions.
+A group, once fully placed, is always on one shelf. `--long-edge PAT`: in
+touching groups, that box's contacts only count along its long edge with a
+positive overlap. `--pin-a PAT`: only on the first shelf. `--use-all`: every
+box must be placed. `--exclude PAT`: drop boxes entirely. A PAT is a box
+name or `PREFIX*`; every PAT must match at least one box.
 
-Flags (all mm): `--width 850 --height 250 --over-left 30 --over-right 30
---over-top 35 --depth-max 325 --tol 1 --spill-cost 50 --solutions 8
---out DIR`. Raise `--spill-cost` toward 100 to keep packings inside the
-nominal window unless a spill is nearly free volume.
+## Output
+
+- `OUT/solutions.txt` (also on stdout) — per packing: holes, volume, spill,
+  each shelf's piles left to right in the pile text form, boxes left out,
+  and which search phase found it.
+- `OUT/solution_NN.svg` (`solution_NN_A.svg`… with several shelves) — front
+  view: numbered boxes, nominal window, dashed reserve, floor, legend.
+- `OUT/packings.txt` — the machine-readable result (format in
+  `include/sp/packings_file.hpp`): every pile and every box's settled
+  position. `--warm` and `--verify` read it.
+
+Packings differ from each other by at least 4 moved boxes; boxes of
+identical dimensions count as interchangeable.
+
+## Checking a result: `--verify DIR`
+
+Re-checks `DIR/packings.txt` against `boxes.csv` and the flags given, from
+the written geometry alone: every box known, placed once, in a legal
+orientation for that shelf; no overlaps; nothing floating; inside the
+reserve; piles at height (fill-all); `--vert-inside`; every group's presence
+and contact rule. Exit 1 if anything is wrong. The Makefile runs it after
+every canonical run.
+
+## Carrying work between runs
+
+- `--warm DIR` re-injects `DIR/packings.txt`: its piles join the candidates
+  and its packings compete in the ranking, so a run never ranks below what
+  an earlier run found **under the same rules**.
+- `--library FILE` loads a persistent column library before the search and
+  rewrites it afterwards (the cleanest columns per box and per touching box
+  pair, plus every column of an arranged packing). `columns.lib` is the
+  checked-in one.
+
+Both go through the same admission check as enumerated piles: a column that
+no longer fits the current `boxes.csv` (a re-measured box), shelf depth,
+flags (`--flat`, `--vert-inside`, slack) or group rules is rejected and the
+reasons are counted on stderr — never silently packed.
 
 ## Input
 
-`boxes.csv`: `name,width_mm,length_mm,height_mm`, one physical box per line,
-`#` comments allowed. Multi-box games are separate lines (pandemic-1/-2, the
-7 Wonders expansions box, …). The checked-in file mirrors the measured
-collection in the Games Manager — regenerate it from
-`/u/<id>/collection` → Export CSV (primary dims + the "Extra boxes" column)
-when measurements change.
+`boxes.csv`: `name,width_mm,length_mm,height_mm`, one physical box per line;
+blank lines and `#` comments allowed. Names are unique and use only letters,
+digits, `.`, `_`, `-`. Multi-box games are separate lines (pandemic-1/-2, the
+7 Wonders expansions box, …). It is maintained by hand from the Games
+Manager (`/u/<id>/collection` → Export CSV): one line per game from the
+Width/Length/Height columns, plus one line per entry of its "Extra boxes"
+column. The export itself is not in this format and is rejected on line 1.
+
+## Exit status
+
+0 packings written (or `--verify` found nothing wrong) · 1 nothing found /
+problems found · 2 bad input (flag, CSV, file) · 3 internal error.
+
+## Code
+
+| Path | What |
+|---|---|
+| `include/sp/problem.hpp` | the resolved problem: geometry, shelves, objective, groups |
+| `include/sp/rules.hpp` | what is legal: contact predicates, presence rules |
+| `include/sp/model.hpp` | orientations, cells, piles — built only through `makeCell` / `composePile` |
+| `include/sp/candidates.hpp` | per-shelf enumeration and **`checkPile`**, the one admission check |
+| `include/sp/search.hpp` | beam passes + randomized greedy over piles, lexicographic scores |
+| `include/sp/arrange.hpp` | pile / cell / unit order and gravity until every contact rule holds |
+| `include/sp/tuning.hpp` | every search heuristic (none changes what is legal) |
+| `include/sp/pile_text.hpp`, `packings_file.hpp`, `library.hpp` | the text formats |
+| `include/sp/verify.hpp`, `report.hpp`, `cli.hpp`, `driver.hpp` | `--verify`, outputs, flags, the run |
+| `tests/` | unit tests (`tinytest.hpp`) and `scenarios.sh` on `tests/scenarios/` |
+
+Search: per shelf, exhaustive layer/pile enumeration (deduplicated by box
+set), then beam passes over several pile orders and randomized greedy
+restarts; states that can never become legal are dropped on the spot and the
+rest are compared by priority (mandatory boxes, then the objective's
+measure) instead of by penalty weights. `--seed N` explores other packings;
+the same seed and flags give the same result.

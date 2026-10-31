@@ -10,6 +10,7 @@
 //   pnpm --filter @boardgames/web card-art --strict   # exit 1 on orphans / budget
 //   pnpm --filter @boardgames/web card-art --game=hunger   # The Hunger's blocks instead
 //   pnpm --filter @boardgames/web card-art --game=relics   # campaign-night relics
+//   pnpm --filter @boardgames/web card-art --game=quiz-domains   # quiz trainer section icons
 //
 // Why: the raw PNGs are 1–3 MB each and never enter git (`packages/web/art-src`
 // is gitignored; *.png is LFS-tracked and LFS bandwidth has already blocked a
@@ -43,6 +44,10 @@ const GAMES = {
   // per headcount per campaign game plus the un-numbered relic, drawn at most
   // 112 px wide (the RSVP hero). Not a game's: they live under src/assets.
   relics: { src: "campaign-relics", outDir: "assets/campaign-relics", budgetKb: 3 * 1024 },
+  // The quiz trainer's domain icons (trainers/quiz/DOMAIN-ICON-PROMPTS.md): the
+  // newspaper's printer's cuts, drawn at most 56 px (a section kicker on the
+  // front page), so 128 px covers 2× DPR with room to spare.
+  "quiz-domains": { src: "quiz-domains", outDir: "trainers/quiz/assets/domains", budgetKb: 512 },
 };
 
 const args = process.argv.slice(2);

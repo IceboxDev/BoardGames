@@ -23,7 +23,10 @@ import { jsonColumn, parseRow, parseRows } from "./db-rows.ts";
 export const NIGHT_LOCK_COLUMNS =
   "date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, " +
   "event_time, address, picks_locked_at, host_at_home, unlocked_at, private, seat_count, " +
-  "pick_mode, title";
+  "pick_mode, admin_picks, title, " +
+  // Admins may pick on every private night (see `derivePrivate`), so each
+  // lock carries the current admin list — one subquery, no extra round trip.
+  `(SELECT json_group_array(id) FROM "user" WHERE role = 'admin') AS admin_ids_json`;
 
 export const NightLockRowSchema = z.object({
   date_key: z.string(),
@@ -40,7 +43,9 @@ export const NightLockRowSchema = z.object({
   private: z.union([z.number(), z.boolean()]),
   seat_count: z.number().nullable(),
   pick_mode: z.enum(["group", "host"]),
+  admin_picks: z.union([z.number(), z.boolean()]),
   title: z.string().nullable(),
+  admin_ids_json: jsonColumn(z.array(z.string())),
 });
 
 export type NightLock = {
@@ -60,6 +65,8 @@ export type NightLock = {
   seatCount: number | null;
   pickMode: PickMode;
   title: string | null;
+  /** Every admin's user id: they may pick on any private night. */
+  adminUserIds: string[];
 };
 
 /**
@@ -90,8 +97,10 @@ export function nightLockFromRow(row: z.infer<typeof NightLockRowSchema>): Night
     unlockedAt: row.unlocked_at,
     isPrivate: row.private === true || row.private === 1,
     seatCount: row.seat_count,
-    pickMode: row.pick_mode,
+    // 'admin' is stored as pick_mode 'host' + the admin_picks flag (0066).
+    pickMode: row.admin_picks === true || row.admin_picks === 1 ? "admin" : row.pick_mode,
     title: row.title,
+    adminUserIds: row.admin_ids_json,
   };
 }
 
@@ -155,7 +164,7 @@ export type NightParticipants = {
 type LockInputs = Pick<
   NightLock,
   "isPrivate" | "seatCount" | "pickMode" | "hostUserId" | "expectedUserIds"
->;
+> & { adminUserIds?: readonly string[] };
 
 export function deriveNightParticipants(
   lock: LockInputs,
@@ -235,7 +244,16 @@ function derivePrivate(lock: LockInputs, rsvps: readonly NightRsvpRow[]): NightP
   const seatedSet = new Set(seated);
   const waitSet = new Set(waitlisted);
   const declinedSet = new Set(declined);
-  const voters = lock.pickMode === "host" ? new Set(host ? [host] : []) : seatedSet;
+  // Whose picks count. Admins may always pick, and their picks count in every
+  // mode: with the seated players (group), beside the host (host picks), or
+  // on their own — the host's own picks left out — in admin picks.
+  const admins = lock.adminUserIds ?? [];
+  const voters =
+    lock.pickMode === "admin"
+      ? new Set(admins.filter((id) => id !== host))
+      : lock.pickMode === "host"
+        ? new Set([...(host ? [host] : []), ...admins])
+        : new Set([...seatedSet, ...admins]);
 
   return {
     isPrivate: true,

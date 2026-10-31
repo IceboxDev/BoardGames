@@ -94,17 +94,14 @@ Look at either for:
 - `geometry.ts` — the only file with numeric coordinates.
 - `CockpitSlot.tsx` — the per-game wrapper around `<BoardSlot>`.
 
-A standalone iteration view lives at `packages/web/src/labs/sky-team/Lab.tsx`,
-mounted at `/dev/sky-team-lab`. It renders the production `<Cockpit>` against
-a mock `SkyTeamPlayerView`, so the lab and the live game share `geometry.ts`
-by construction — no parallel coordinate system, no drift.
+Iterate on the real game page (`/play/sky-team`) against the dev server.
 
 ## Verification workflow for intricate-board games
 
 When porting or building a new intricate-board game:
 
-1. Add a lab route at `packages/web/src/labs/<slug>/Lab.tsx` that mounts the
-   game's board component against a mock player view. Iterate there.
+1. Iterate on the game's real page against the dev server; no separate
+   lab or preview routes.
 2. Put all numeric coordinates in `games/<slug>/components/board/geometry.ts`.
    Components import from it; never inline coordinates.
 3. Use the primitives from `components/board/` to build region components.

@@ -90,6 +90,23 @@
    "lang": "en",
    "retrievedAt": "2026-10-23T12:47:43.695Z",
    "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s12": {
+   "url": "https://media.githubusercontent.com/media/IceboxDev/BoardGames/master/packages/quiz-archive/research-reports/b00323.pdf",
+   "title": "Termite queen longevity: what is actually documented behind the “50 years” answer?",
+   "publisher": "ChatGPT deep research",
+   "kind": "research-report",
+   "lang": "en",
+   "retrievedAt": "2026-10-23",
+   "snapshot": "b0f82d4c8d267ec1a9e32d58728c59b671eeba10038407be799c91c8357c608e",
+   "report": {
+    "file": "research-reports/b00323.pdf",
+    "sha256": "c1e13b9aa4714092d1e89e0384ae614e72cc86866163d8e4706baddac42a5dda",
+    "pages": 10,
+    "backlog": "b00323",
+    "receivedAt": "2026-10-23",
+    "producer": "ChatGPT deep research"
+   }
   }
  },
  "assessments": [
@@ -467,6 +484,25 @@
    "by": "crawler",
    "run": "evidence-verify-2026-10-24",
    "note": "quote check: the quote of e14 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T15:19:48Z",
+   "target": "f13242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Answer: Up to 50 years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "owner",
+   "run": "research-reports-2026-10-23",
+   "note": "For the wording 'according to the traditional upper estimate'. Documented known-age reproductives: >20 years (Prorhinotermes simplex, Pangrácová et al. 2025); 50 years is a historical estimate partly from colony age (Thorne et al. 2002; Sabrosky 1952/53)."
   }
  ]
 }

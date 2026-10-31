@@ -3,7 +3,6 @@ import { Reorder, useDragControls } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import type { LockedDate } from "../../lib/calendar-locks";
 import { GripVerticalIcon } from "../icons";
-import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 import { MatchCard } from "./MatchCard";
 
@@ -39,23 +38,23 @@ export function NightCard({
   const subtitleBits: string[] = [];
   if (lock?.host?.name) subtitleBits.push(lock.host.name);
   if (lock?.eventTime) subtitleBits.push(lock.eventTime);
+  if (!dateKey) subtitleBits.push("No game night");
 
   return (
-    <section className="rounded-card-xl border border-line-soft bg-surface-900/30 p-2.5">
-      <header className="mb-1.5 flex items-baseline justify-between gap-3 px-1">
-        <div className="flex min-w-0 flex-col items-start gap-y-0.5 sm:flex-row sm:items-baseline sm:gap-2">
-          <h3 className="max-w-full truncate text-sm font-semibold text-fg-primary">{dayLabel}</h3>
+    <section>
+      {/* The night's bar stays pinned under the top nav while its matches
+          scroll past, so a long night never loses its date. */}
+      <header className="sticky top-below-nav z-raised flex min-h-12 items-center justify-between gap-3 bg-surface-950/90 px-1 backdrop-blur">
+        <div className="flex min-w-0 items-baseline gap-2">
+          <h3 className="shrink-0 text-sm font-bold text-fg-strong">{dayLabel}</h3>
           {subtitleBits.length > 0 && (
-            <span className="max-w-full truncate text-xs text-fg-muted">
-              {subtitleBits.join(" · ")}
-            </span>
+            <span className="truncate text-xs text-fg-muted">{subtitleBits.join(" · ")}</span>
           )}
-          {!dateKey && <Badge className="text-fg-muted">standalone</Badge>}
         </div>
         {isAdmin && onAddMatch && (
           <Button
             variant="ghost"
-            size="xs"
+            size="sm"
             onClick={onAddMatch}
             className="shrink-0 text-accent-300 hover:bg-accent-500/10"
           >
@@ -63,33 +62,31 @@ export function NightCard({
           </Button>
         )}
       </header>
-      {/* Reorder is admin-only. A single match can't actually move, but it still
-          renders through ReorderableMatches so its grip column keeps it aligned
-          with multi-match nights (a lone standalone game looked indented before).
-          Non-admins get the plain list with no grip. */}
-      {isAdmin && onReorder && matches.length >= 1 ? (
-        <ReorderableMatches
-          matches={matches}
-          isAdmin={isAdmin}
-          currentUserId={currentUserId}
-          onEditMatch={onEditMatch}
-          onDeleteMatch={onDeleteMatch}
-          onReorder={onReorder}
-        />
-      ) : (
-        <div className="flex flex-col gap-1">
-          {matches.map((m) => (
-            <MatchCard
-              key={m.id}
-              match={m}
-              isAdmin={isAdmin}
-              currentUserId={currentUserId}
-              onEdit={onEditMatch}
-              onDelete={onDeleteMatch}
-            />
-          ))}
-        </div>
-      )}
+      <div className="overflow-hidden rounded-card-lg border border-line-soft bg-surface-900">
+        {isAdmin && onReorder ? (
+          <ReorderableMatches
+            matches={matches}
+            isAdmin={isAdmin}
+            currentUserId={currentUserId}
+            onEditMatch={onEditMatch}
+            onDeleteMatch={onDeleteMatch}
+            onReorder={onReorder}
+          />
+        ) : (
+          <div className="flex flex-col divide-y divide-line-soft">
+            {matches.map((m) => (
+              <MatchCard
+                key={m.id}
+                match={m}
+                isAdmin={isAdmin}
+                currentUserId={currentUserId}
+                onEdit={onEditMatch}
+                onDelete={onDeleteMatch}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   );
 }
@@ -148,15 +145,27 @@ function ReorderableMatches({
     onReorder(ids);
   }
 
+  // The touch-friendly path (and the keyboard one): swap with a neighbour.
+  function move(index: number, by: -1 | 1) {
+    const to = index + by;
+    const current = orderRef.current;
+    if (to < 0 || to >= current.length) return;
+    const next = [...current];
+    [next[index], next[to]] = [next[to], next[index]];
+    orderRef.current = next;
+    setOrder(next);
+    commit();
+  }
+
   return (
     <Reorder.Group
       as="div"
       axis="y"
       values={order}
       onReorder={setOrder}
-      className="flex flex-col gap-1"
+      className="flex flex-col divide-y divide-line-soft"
     >
-      {order.map((m) => (
+      {order.map((m, i) => (
         <ReorderableRow
           key={m.id}
           match={m}
@@ -165,6 +174,8 @@ function ReorderableMatches({
           onEdit={onEditMatch}
           onDelete={onDeleteMatch}
           onCommit={commit}
+          onMoveEarlier={i > 0 ? () => move(i, -1) : undefined}
+          onMoveLater={i < order.length - 1 ? () => move(i, 1) : undefined}
         />
       ))}
     </Reorder.Group>
@@ -178,6 +189,8 @@ function ReorderableRow({
   onEdit,
   onDelete,
   onCommit,
+  onMoveEarlier,
+  onMoveLater,
 }: {
   match: MatchRecord;
   isAdmin: boolean;
@@ -185,6 +198,8 @@ function ReorderableRow({
   onEdit?: (m: MatchRecord) => void;
   onDelete?: (m: MatchRecord) => void;
   onCommit: () => void;
+  onMoveEarlier?: () => void;
+  onMoveLater?: () => void;
 }) {
   const controls = useDragControls();
   return (
@@ -194,15 +209,17 @@ function ReorderableRow({
       dragListener={false}
       dragControls={controls}
       onDragEnd={onCommit}
-      className="flex items-stretch gap-1"
+      className="flex items-stretch bg-surface-900"
     >
+      {/* Drag is a pointer nicety for wide screens; on a phone the row's
+          Earlier / Later buttons reorder instead, so no grip eats the width. */}
       {/* biome-ignore lint/correctness/noRestrictedElements: bespoke pointer-driven drag handle — not a click/keyboard Button */}
       <button
         type="button"
         aria-label="Drag to reorder"
         // `touch-none` stops a touch-drag on the handle from scrolling the page.
         onPointerDown={(e) => controls.start(e)}
-        className="flex w-6 shrink-0 touch-none cursor-grab items-center justify-center rounded-ui-md text-fg-disabled transition-colors hover:bg-fill hover:text-fg-muted active:cursor-grabbing"
+        className="hidden w-6 shrink-0 touch-none cursor-grab items-center justify-center text-fg-disabled transition-colors hover:bg-fill hover:text-fg-muted active:cursor-grabbing sm:flex"
       >
         <GripVerticalIcon className="h-4 w-4" />
       </button>
@@ -213,6 +230,8 @@ function ReorderableRow({
           currentUserId={currentUserId}
           onEdit={onEdit}
           onDelete={onDelete}
+          onMoveEarlier={onMoveEarlier}
+          onMoveLater={onMoveLater}
         />
       </div>
     </Reorder.Item>

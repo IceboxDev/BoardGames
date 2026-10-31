@@ -8,6 +8,12 @@
    (≤ ~950px) all sit far below 1600px, so they are untouched. */
 @custom-variant tall (@media (min-height: 1600px));
 
+/* Roomy-height variant for screen-filling pages (the quiz trainer's front
+   page): a laptop with its browser chrome leaves ~700–760px, a monitor
+   900px+. Below 52rem the page drops its extras (the lead photo) and steps
+   its display type down so the fold still holds the whole page. */
+@custom-variant roomy (@media (min-height: 52rem));
+
 /* ── The PALETTE ─────────────────────────────────────────────────────────
    `@theme static` (not plain `@theme`) on purpose. Tailwind v4 tree-shakes a
    theme block down to the tokens some utility actually references — and the
@@ -90,6 +96,25 @@
   --color-fill-soft: color-mix(in srgb, var(--color-fg-primary) 4%, transparent);
   --color-fill: color-mix(in srgb, var(--color-fg-primary) 6%, transparent);
   --color-fill-strong: color-mix(in srgb, var(--color-fg-primary) 10%, transparent);
+  /* ── Quiz domains ──────────────────────────────────────────────────────
+     One colour per quiz domain (core quiz/taxonomy.ts slugs), the colour its
+     printer's-cut icon leads with (trainers/quiz/DOMAIN-ICON-PROMPTS.md).
+     Identities, not themeable meanings: a domain keeps its colour on every
+     theme, like a game's accent. Consumed through trainers/quiz/domains.ts. */
+  --color-domain-music-stage: #e0505f;
+  --color-domain-literature: #8a64e0;
+  --color-domain-art: #e8794a;
+  --color-domain-film-media: #e5c84a;
+  --color-domain-sport-games: #a3c43e;
+  --color-domain-belief: #b05fd6;
+  --color-domain-everyday: #ec6fa8;
+  --color-domain-history: #d9a03a;
+  --color-domain-society: #7d93b0;
+  --color-domain-science: #3fb3cf;
+  --color-domain-earth-space: #5468e0;
+  --color-domain-nature: #4fae5e;
+  --color-domain-technology: #3dbf9a;
+  --color-domain-geography: #4a93e0;
   /* ── SEMANTIC + ART tokens ────────────────────────────────────────────
      Colors that carry a MEANING rather than an identity: the "connected"
      green, the "maybe" yellow, the calendar's fire, and a sealed night's
@@ -151,8 +176,11 @@
   /* Tailwind's default 2xl is 1536px — exactly the laptop viewport at 200%
      scale — so adding a 3xl above it lets us scale type up for genuinely
      huge displays (4K monitors at 150% scale weigh in around 2560px) while
-     laptop and below stay at the 2xl rules. */
-  --breakpoint-3xl: 1920px;
+     laptop and below stay at the 2xl rules. In rem like the defaults:
+     Tailwind orders breakpoint rules by value only within one unit, and as
+     1920px every 3xl rule was emitted BEFORE the 2xl ones, so a 2xl class
+     beside it always won. */
+  --breakpoint-3xl: 120rem;
   /* Named small breakpoint at 420px — where a view-tab strip + a sibling
      switch (RSVP Going/Not-going) and the admin online-mode picker widen out
      of their ultra-tight phone layout. Replaces ad-hoc `min-[420px]:`. */
@@ -206,6 +234,14 @@
      copy-pasted into 18 files and applied inline 90 times; it is a role, so it
      is a token. */
   --font-serif-body: ui-serif, Georgia, serif;
+  /* The quiz trainer's newspaper ("Reading Room"): the blackletter nameplate,
+     the headline serif and the reading serif. Loaded by the trainer's lazy
+     chunk only (trainers/quiz/QuizTrainer.tsx); the nameplate face has no
+     Cyrillic and is only ever set on the Latin nameplate. Playfair and Source
+     Serif carry Cyrillic, so RU questions stay in the same faces. */
+  --font-masthead: "UnifrakturMaguntia", "Playfair Display Variable", ui-serif, Georgia, serif;
+  --font-headline: "Playfair Display Variable", ui-serif, Georgia, serif;
+  --font-news: "Source Serif 4 Variable", ui-serif, Georgia, serif;
   /* ── D&D tool palette ──────────────────────────────────────────────────
      The crimson-and-ash range the DM tool paints its panels with. These were
      32 raw `from-[#2a0808]` / `bg-[#1a0606]/70` brackets across 20 files, and
@@ -384,6 +420,52 @@
 }
 @utility h-actions {
   height: var(--layout-actions-h);
+}
+
+/* Newspaper columns (quiz trainer's Reading Room): balanced text columns
+   divided by a hairline in the theme's line colour. */
+@utility cols-news-2 {
+  column-count: 2;
+  column-gap: 1.75rem;
+  column-rule: 1px solid var(--color-line-strong);
+}
+@utility cols-news-3 {
+  column-count: 3;
+  column-gap: 1.75rem;
+  column-rule: 1px solid var(--color-line-strong);
+}
+/* Columns filled top to bottom before the next one starts: in a fixed-height
+   box the text runs to the foot of each column, and what doesn't fit flows
+   into overflow columns off to the side (clip them with overflow-hidden). */
+@utility cols-fill-auto {
+  column-fill: auto;
+}
+/* A news photo printed in one ink: greyscale with a little contrast; the
+   accent tint above it (mix-blend-color) supplies the ink's colour. */
+@utility news-photo {
+  filter: grayscale(1) contrast(1.15) brightness(0.95);
+}
+/* The halftone screen over a printed photo: a fine grid of ink dots. */
+@utility halftone {
+  background-image: radial-gradient(circle at center, rgb(0 0 0 / 0.5) 0.6px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+}
+/* The darkened edges of an old print. */
+@utility photo-vignette {
+  box-shadow: inset 0 0 2.5rem rgb(0 0 0 / 0.45);
+}
+/* A drop cap on the element's first letter. */
+@utility drop-cap {
+  &::first-letter {
+    float: left;
+    font-family: var(--font-headline);
+    font-weight: 900;
+    font-size: 4.1em;
+    line-height: 0.82;
+    padding: 0.1em 0.12em 0 0;
+    color: var(--color-fg-strong);
+  }
 }
 
 /* Theme-engine fallbacks that are NOT Tailwind theme tokens (no utility

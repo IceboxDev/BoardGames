@@ -11,7 +11,7 @@ import { DOMAINS } from "../../../trainers/quiz/domains";
 import type { QuizDeskApi } from "./api";
 import { filterBacklog, filterRetired, page, SHAPE_TARGET } from "./logic";
 
-// Fixture data for `/dev/quiz-desk` and the desk's tests — every payload
+// Fixture data for the desk's tests — every payload
 // parsed with the protocol's own schemas, so a fixture that drifts from the
 // wire shape fails loudly. `fixtureQuizDeskApi` answers like the server
 // (filters, order, pagination) from these lists.
@@ -459,6 +459,7 @@ const PROVENANCE_A0001 = QuizDeskProvenanceSchema.parse({
         verbatim: 2,
         primary: 1,
         contested: false,
+        researchReport: false,
         latestConfidence: "high",
       },
       sources: [
@@ -574,6 +575,7 @@ const PROVENANCE_A0001 = QuizDeskProvenanceSchema.parse({
         verbatim: 0,
         primary: 0,
         contested: false,
+        researchReport: false,
         latestConfidence: "low",
       },
       sources: [
@@ -649,6 +651,7 @@ const PROVENANCE_A0001 = QuizDeskProvenanceSchema.parse({
         verbatim: 0,
         primary: 0,
         contested: false,
+        researchReport: false,
         latestConfidence: null,
       },
       sources: [],
@@ -740,6 +743,7 @@ const PROVENANCE_A0042 = QuizDeskProvenanceSchema.parse({
         verbatim: 0,
         primary: 0,
         contested: false,
+        researchReport: false,
         latestConfidence: null,
       },
       sources: [],

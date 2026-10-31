@@ -20,6 +20,8 @@ type Props = {
   /** Show the event's label after the date (default true). */
   withLabel?: boolean;
   to?: string;
+  /** The paper's small-caps date line instead of a pill. */
+  print?: boolean;
   className?: string;
 };
 
@@ -30,6 +32,7 @@ export function TimelineChip({
   caption,
   withLabel = true,
   to,
+  print = false,
   className,
 }: Props) {
   const date = formatTimelineDate(event, lang);
@@ -49,12 +52,14 @@ export function TimelineChip({
       </span>
     </>
   );
-  const cls = cn(
-    // A pill, not a panel: shape and fill in separate strings.
-    "inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-2xs",
-    "bg-fill-soft",
-    className,
-  );
+  const cls = print
+    ? cn("inline-flex min-w-0 max-w-full items-center gap-1.5 font-news text-xs", className)
+    : cn(
+        // A pill, not a panel: shape and fill in separate strings.
+        "inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-2xs",
+        "bg-fill-soft",
+        className,
+      );
   if (!to) {
     return (
       <span className={cls} title={withLabel ? `${date} — ${label}` : date} lang={lang}>
@@ -69,7 +74,9 @@ export function TimelineChip({
       lang={lang}
       className={cn(
         cls,
-        "transition-colors hover:border-line-strong hover:bg-fill focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60",
+        print
+          ? "hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60"
+          : "transition-colors hover:border-line-strong hover:bg-fill focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60",
       )}
     >
       {body}

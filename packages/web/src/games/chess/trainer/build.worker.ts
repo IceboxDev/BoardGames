@@ -49,7 +49,13 @@ export type ToWorker =
   | { type: "folders"; id: number; folders: { fen: string; moves: string[] }[] }
   /** How many of the games at a position got there by another move order than `moves`. */
   | { type: "transposed"; id: number; fen: string; moves: string[] }
-  | { type: "answer"; id: number; lines?: EngineLine[]; popular?: PopularMove[]; error?: string };
+  | {
+      type: "answer";
+      id: number;
+      lines?: EngineLine[];
+      popular?: PopularMove[] | null;
+      error?: string;
+    };
 
 export type FromWorker =
   | { type: "loaded"; hit: boolean }
@@ -149,10 +155,10 @@ async function engineLines(fen: string, multipv: number, depth: number): Promise
   return a.lines ?? [];
 }
 
-async function popularMoves(fen: string): Promise<PopularMove[]> {
+async function popularMoves(fen: string): Promise<PopularMove[] | null> {
   const a = await ask({ type: "ask-popular", id: nextId++, fen });
   if (a.error) throw new Error(a.error);
-  return a.popular ?? [];
+  return a.popular === undefined ? [] : a.popular;
 }
 
 scope.onmessage = async (e: MessageEvent<ToWorker>) => {

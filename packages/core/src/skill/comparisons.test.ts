@@ -122,6 +122,28 @@ describe("matchEvidence — teams", () => {
     for (const c of ev?.comparisons ?? []) expect(c.weight).toBeCloseTo(2 / 3);
   });
 
+  it("gives the Codenames Spymaster half the team and splits the rest", () => {
+    const sm = (id: string) => ({ ...p(id), role: "Spymaster" });
+    const op = (id: string) => ({ ...p(id), role: "Operative" });
+    const outcome: MatchOutcome = {
+      kind: "teams",
+      teams: [{ members: [sm("a"), op("b")] }, { members: [op("c"), sm("d"), op("e")] }],
+      winnerTeamIndices: [0],
+    };
+    const [c] = matchEvidence("codenames-pictures", outcome)?.comparisons ?? [];
+    expect(c?.aShares).toEqual([0.5, 0.5]);
+    expect(c?.bShares).toEqual([0.25, 0.5, 0.25]);
+    // Other team games, and a Codenames team without exactly one Spymaster, share equally.
+    expect(matchEvidence("decrypto", outcome)?.comparisons[0]?.aShares).toBeUndefined();
+    const noLead: MatchOutcome = {
+      ...outcome,
+      teams: [{ members: [op("a"), op("b")] }, outcome.teams[1]],
+    };
+    const [d] = matchEvidence("codenames", noLead)?.comparisons ?? [];
+    expect(d?.aShares).toBeUndefined();
+    expect(d?.bShares).toEqual([0.25, 0.5, 0.25]);
+  });
+
   it("excludes the moderator from competitors", () => {
     const outcome: MatchOutcome = {
       kind: "teams",

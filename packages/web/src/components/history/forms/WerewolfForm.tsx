@@ -25,10 +25,17 @@ type Props = {
   onChange: (next: MatchOutcomeTeams) => void;
 };
 
+/**
+ * A player's final allegiance. The Minion sits on the werewolf team but wins
+ * and loses by its own rule (voting it out doesn't kill a Werewolf), so the
+ * form keeps it apart from the team until the outcome is written.
+ */
+type Side = WerewolfTeam | "minion";
+
 type Slot = {
   userId: string;
   displayName: string;
-  team: WerewolfTeam;
+  team: Side;
   eliminated: boolean;
 };
 
@@ -37,7 +44,8 @@ const TEAM_ORDER: readonly WerewolfTeam[] = ["village", "werewolf", "tanner"];
 /**
  * Match-history form for One Night Ultimate Werewolf. Cards swap so much that
  * tracking per-player *roles* is noise; what matters for win-state is which
- * **team** each player ended up on plus who got voted out. The scenario picker
+ * **team** each player ended up on plus who got voted out — with the Minion
+ * picked on its own, since its win rule differs from a Werewolf's. The scenario picker
  * + pool counts stay around purely as a record of what cards were potentially
  * in play that night.
  */
@@ -63,7 +71,8 @@ export function WerewolfForm({ users, value, onChange }: Props) {
   // wasn't dealt. A currently-selected team stays clickable so the user can
   // always undo a stale assignment after editing the pool.
   const tannerInPool = (pool.tanner ?? 0) > 0;
-  const werewolfInPool = (pool.werewolf ?? 0) + (pool.minion ?? 0) > 0;
+  const werewolfInPool = (pool.werewolf ?? 0) > 0;
+  const minionInPool = (pool.minion ?? 0) > 0;
 
   // Resolves to the scenario label that should be persisted, or null when
   // we're in Custom mode (no scenario to remember).
@@ -73,16 +82,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
   }
 
   function commit(next: Slot[], nextScenarioId: ScenarioId = scenarioId) {
-    // Winner computation works role-agnostically: use synthetic role ids so
-    // the existing helper can be reused (`werewolf` = werewolf team,
-    // `tanner` = tanner, anything else falls into village).
-    const winners = computeWerewolfWinners(
-      next.map((s) => ({
-        roleId: s.team === "werewolf" ? "werewolf" : s.team === "tanner" ? "tanner" : "villager",
-        eliminated: s.eliminated,
-      })),
-    );
-    onChange(projectToOutcome(next, winners, scenarioLabel(nextScenarioId)));
+    onChange(projectToOutcome(next, winnersOf(next), scenarioLabel(nextScenarioId)));
   }
 
   function setPlayers(participants: Participant[]) {
@@ -99,7 +99,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
     commit(next);
   }
 
-  function setTeam(userId: string, team: WerewolfTeam) {
+  function setTeam(userId: string, team: Side) {
     const next = roster.map((s) => (s.userId === userId ? { ...s, team } : s));
     commit(next);
   }
@@ -134,12 +134,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
 
   const totalPool = poolSize(pool);
   const expectedPool = roster.length + 3;
-  const winners = computeWerewolfWinners(
-    roster.map((s) => ({
-      roleId: s.team === "werewolf" ? "werewolf" : s.team === "tanner" ? "tanner" : "villager",
-      eliminated: s.eliminated,
-    })),
-  );
+  const winners = winnersOf(roster);
 
   return (
     <OutcomeFormShell>
@@ -177,6 +172,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
                 slot={slot}
                 tannerAvailable={tannerInPool}
                 werewolfAvailable={werewolfInPool}
+                minionAvailable={minionInPool}
                 onTeamChange={(team) => setTeam(slot.userId, team)}
               />
             ))}
@@ -306,12 +302,14 @@ function TeamRow({
   slot,
   tannerAvailable,
   werewolfAvailable,
+  minionAvailable,
   onTeamChange,
 }: {
   slot: Slot;
   tannerAvailable: boolean;
   werewolfAvailable: boolean;
-  onTeamChange: (team: WerewolfTeam) => void;
+  minionAvailable: boolean;
+  onTeamChange: (team: Side) => void;
 }) {
   return (
     <PlayerRow
@@ -328,6 +326,12 @@ function TeamRow({
             active={slot.team === "werewolf"}
             disabled={!werewolfAvailable && slot.team !== "werewolf"}
             onClick={() => onTeamChange("werewolf")}
+          />
+          <TeamButton
+            team="minion"
+            active={slot.team === "minion"}
+            disabled={!minionAvailable && slot.team !== "minion"}
+            onClick={() => onTeamChange("minion")}
           />
           <TeamButton
             team="tanner"
@@ -363,13 +367,13 @@ function TeamButton({
   disabled,
   onClick,
 }: {
-  team: WerewolfTeam;
+  team: Side;
   active: boolean;
   disabled?: boolean;
   onClick: () => void;
 }) {
-  const label = team === "village" ? "Village" : team === "werewolf" ? "Wolf" : "Tanner";
-  const tone = team === "village" ? "emerald" : team === "werewolf" ? "rose" : "amber";
+  const label = SIDE_LABEL[team] === "Werewolf" ? "Wolf" : SIDE_LABEL[team];
+  const tone = team === "village" ? "emerald" : team === "tanner" ? "amber" : "rose";
   return (
     <Chip
       pressed={active}
@@ -420,6 +424,30 @@ function TeamDot({ team }: { team: WerewolfTeam }) {
 
 // ── Helpers ────────────────────────────────────────────────────────────
 
+/** The stored `role` of each side — also how a saved record is read back. */
+const SIDE_LABEL: Record<Side, string> = {
+  village: "Village",
+  werewolf: "Werewolf",
+  minion: "Minion",
+  tanner: "Tanner",
+};
+
+/** The werewolf team counts the Minion; everything else is its own team. */
+function teamOfSide(side: Side): WerewolfTeam {
+  return side === "minion" ? "werewolf" : side;
+}
+
+function winnersOf(roster: readonly Slot[]): WerewolfTeam[] {
+  // The rules engine takes role ids; one stand-in role per side is enough,
+  // since within a side the win rule doesn't depend on the card.
+  return computeWerewolfWinners(
+    roster.map((s) => ({
+      roleId: s.team === "village" ? "villager" : s.team,
+      eliminated: s.eliminated,
+    })),
+  );
+}
+
 function clampPlayers(n: number, sc: Scenario): number {
   const min = sc.players[0];
   const max = sc.players[sc.players.length - 1];
@@ -440,7 +468,7 @@ function flattenRoster(value: MatchOutcomeTeams): Slot[] {
       flat.push({
         userId: m.userId,
         displayName: m.displayName,
-        team: teamLabel,
+        team: teamLabel === "werewolf" && m.role === SIDE_LABEL.minion ? "minion" : teamLabel,
         eliminated: m.eliminated === true,
       });
     }
@@ -458,7 +486,7 @@ function readEmittedTeams(value: MatchOutcomeTeams): WerewolfTeam[] {
   return value.teams.map((team) => {
     const tag = (team.members[0]?.role ?? "").toLowerCase();
     if (tag === "tanner") return "tanner";
-    if (tag === "werewolf" || tag === "werewolves") return "werewolf";
+    if (tag === "werewolf" || tag === "werewolves" || tag === "minion") return "werewolf";
     return "village";
   });
 }
@@ -473,17 +501,19 @@ function projectToOutcome(
     werewolf: [],
     tanner: [],
   };
-  // Stamp every member with the team label as their `role`. It both gives
-  // MatchCard a useful tooltip ("Alice — Werewolf") and is the signal
-  // `readEmittedTeams` uses to recover the team identity on the next read,
-  // since empty teams are dropped from the wire shape.
-  for (const s of roster) {
-    const teamLabel =
-      s.team === "village" ? "Village" : s.team === "werewolf" ? "Werewolf" : "Tanner";
-    buckets[s.team].push({
+  // Stamp every member with their side as their `role` ("Minion" on the
+  // werewolf team). It both gives MatchCard a useful tooltip ("Alice —
+  // Werewolf") and is the signal `readEmittedTeams` uses to recover the team
+  // identity on the next read, since empty teams are dropped from the wire
+  // shape. Werewolves go before the Minion, so a team leads with its own name.
+  const ordered = [...roster].sort(
+    (a, b) => Number(a.team === "minion") - Number(b.team === "minion"),
+  );
+  for (const s of ordered) {
+    buckets[teamOfSide(s.team)].push({
       userId: s.userId,
       displayName: s.displayName,
-      role: teamLabel,
+      role: SIDE_LABEL[s.team],
       ...(s.eliminated ? { eliminated: true } : {}),
     });
   }

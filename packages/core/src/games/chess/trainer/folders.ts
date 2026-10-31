@@ -612,6 +612,126 @@ const THIRD_MOVES: readonly {
       ["f7f5", "3…f5 Countergambit", "lichess: Philidor Defense: Philidor Countergambit."],
     ],
   },
+  {
+    at: ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "a7a6", "b5a4", "g8f6"],
+    pick: "e1g1",
+    name: "5.O-O Castles",
+    note: "Named from the literature: 5.O-O is the book move, after which Black chooses between the Closed (5…Be7) and the Open (5…Nxe4) Ruy. lichess files the position under the Morphy Defense itself.",
+    replies: [
+      ["f8e7", "5…Be7 Closed", "lichess: Ruy Lopez: Closed."],
+      ["f6e4", "5…Nxe4 Open", "lichess: Ruy Lopez: Open."],
+      ["f8c5", "5…Bc5 Møller", "lichess: Ruy Lopez: Morphy Defense, Møller Variation."],
+      ["d7d6", "5…d6 Steinitz Deferred"],
+      ["d7d5", "5…d5 Central Countergambit"],
+      [
+        "b7b5",
+        "5…b5 Late Caro",
+        "Coined: no name found. 4…b5 is the Caro Variation; here it comes a move later, after 5.O-O.",
+      ],
+      [
+        "f8d6",
+        "5…Bd6 Late Self-Block",
+        "Coined: no name found. As 2…Bd6 Self-Block, the bishop stands in front of the d-pawn, here three moves later.",
+      ],
+      [
+        "f8b4",
+        "5…Bb4 Pin to Nowhere",
+        "Coined: no name found. As 2…Bb4 Pin to Nowhere: the bishop goes where it would pin a knight on c3, and none stands there.",
+      ],
+      ["a6a5", "5…a5 Late Ware", LATE("a5", "Ware Defence", "four moves")],
+      ["h7h6", "5…h6 Late Carr", LATE("h6", "Carr Defence", "four moves")],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "g8f6"],
+    pick: "e1g1",
+    name: "4.O-O Castles",
+    note: "Named from the literature: 4.O-O is the main line against the Berlin, leaving e4 to be taken (4…Nxe4). lichess files the position under the Berlin Defense itself.",
+    replies: [
+      ["f6e4", "4…Nxe4 Rio Gambit", "lichess: Ruy Lopez: Berlin Defense, Rio Gambit Accepted."],
+      ["f8c5", "4…Bc5 Beverwijk", "lichess: Ruy Lopez: Berlin Defense, Beverwijk Variation."],
+      ["d7d6", "4…d6 Improved Steinitz"],
+      ["f6g4", "4…Ng4 Fishing Pole"],
+      [
+        "a7a6",
+        "4…a6 Late Morphy",
+        "Coined: no name found. 3…a6 is the Morphy Defence; here it comes a move later, after …Nf6 and 4.O-O.",
+      ],
+      [
+        "c6d4",
+        "4…Nd4 Late Bird",
+        "Coined: no name found. 3…Nd4 is Bird's Defence; here it comes a move later, after …Nf6 and 4.O-O.",
+      ],
+      [
+        "f8d6",
+        "4…Bd6 Blocked Bishop",
+        "Coined: no name found. As 3…Bd6 Blocked Bishop, the bishop guards e5 but shuts in the c8 bishop.",
+      ],
+      [
+        "d7d5",
+        "4…d5 Centre Strike",
+        "Coined: no name found. Black hits e4 at once, as in the Petrov's 3…d5 Centre Strike.",
+      ],
+      [
+        "f8e7",
+        "4…Be7 Quiet Bishop",
+        "Coined: no name found. The bishop develops modestly to e7, ready to castle.",
+      ],
+      [
+        "f8b4",
+        "4…Bb4 Pin to Nowhere",
+        "Coined: no name found. As 2…Bb4 Pin to Nowhere: the bishop goes where it would pin a knight on c3, and none stands there.",
+      ],
+      [
+        "d8e7",
+        "4…Qe7 Late Vinogradov",
+        "Coined: no name found. 3…Qe7 is the Vinogradov Variation; here it comes a move later, after …Nf6 and 4.O-O.",
+      ],
+      ["a7a5", "4…a5 Late Ware", LATE("a5", "Ware Defence", "three moves")],
+      ["h7h6", "4…h6 Late Carr", LATE("h6", "Carr Defence", "three moves")],
+    ],
+  },
+  {
+    at: ["e2e4", "d7d5", "e4d5", "d8d5"],
+    pick: "b1c3",
+    name: "3.Nc3 Queen Chase",
+    note: "Coined: no name in the lichess list for this exact position. The knight develops with tempo on the queen; every main line of the Mieses-Kotroc starts here.",
+    replies: [
+      ["d5a5", "3…Qa5 Main Line", "lichess: Scandinavian Defense: Main Line."],
+      ["d5d8", "3…Qd8 Valencian"],
+      ["d5d6", "3…Qd6 Gubinsky-Melts"],
+      [
+        "d5e6",
+        "3…Qe6+ Spite Check",
+        "Coined: no name found. A check that gains nothing: Be2 or Qe2 blocks it, and the queen shuts in Black's e-pawn and c8 bishop.",
+      ],
+      [
+        "d5e5",
+        "3…Qe5+ Central Check",
+        "Coined: no name found. The queen checks from the centre; Be2 blocks it and Nf3 then hits the queen with tempo.",
+      ],
+      [
+        "d5d7",
+        "3…Qd7 Bishop Block",
+        "Coined: no name found. The queen retreats to d7, in the way of the c8 bishop.",
+      ],
+      [
+        "d5f5",
+        "3…Qf5 Kingside Queen",
+        "Coined: no name found. The queen steps aside to f5, where d3 or Bd3 can hit it again.",
+      ],
+      [
+        "d5d4",
+        "3…Qd4 Stubborn Queen",
+        "Coined: no name found. The queen stays in the centre, where Nf3 hits it again.",
+      ],
+      [
+        "e8d8",
+        "3…Kd8 Bongcloud",
+        "Coined from the Bongcloud, the famous nickname for an early king walk: the king steps off e8 with the queen still out.",
+      ],
+    ],
+  },
 ];
 
 const deeper = (moves: readonly string[]): TrainerFolder[] =>
@@ -636,46 +756,6 @@ export const FARM_FOCUS: Readonly<Record<"w" | "b", readonly (readonly string[])
   w: [[]],
   b: [[]],
 };
-
-/** Your moves fixed by hand, applied to the tree: position (moves from the start) → your move. */
-export const FIXED_CHOICES: Readonly<
-  Record<"w" | "b", readonly { moves: readonly string[]; uci: string }[]>
-> = {
-  w: [
-    { moves: [], uci: "e2e4" },
-    { moves: ["e2e4", "e7e5"], uci: "g1f3" },
-    // Your moves into the folders the farm started with (Caro-Kann, Ruy Lopez,
-    // Petrov, Philidor): fixed, so widening the farm never hands them to the engine.
-    { moves: ["e2e4", "c7c6"], uci: "d2d4" },
-    { moves: ["e2e4", "e7e5", "g1f3", "b8c6"], uci: "f1b5" },
-    { moves: ["e2e4", "e7e5", "g1f3", "g8f6"], uci: "f3e5" },
-    { moves: ["e2e4", "e7e5", "g1f3", "d7d6"], uci: "d2d4" },
-  ],
-  b: [],
-};
-
-/**
- * Every move of yours the tree takes as given: `FIXED_CHOICES`, plus your
- * moves on the way into each of the farm's folders (`FARM_FOCUS`). Those
- * folders are named for your move into them ("3.Bb5 Ruy Lopez"), so it is
- * your repertoire; and the position before it lies outside every focus folder,
- * so the farm would never be asked about it and the tree could never grow
- * into the folder.
- */
-export function fixedChoices(
-  color: "w" | "b",
-): readonly { moves: readonly string[]; uci: string }[] {
-  const out = [...FIXED_CHOICES[color]];
-  const yours = color === "w" ? 0 : 1;
-  for (const root of FARM_FOCUS[color]) {
-    root.forEach((uci, ply) => {
-      if (ply % 2 !== yours) return;
-      const moves = root.slice(0, ply);
-      if (!out.some((o) => o.moves.join(" ") === moves.join(" "))) out.push({ moves, uci });
-    });
-  }
-  return out;
-}
 
 /** White's first moves, as Black meets them: move, folder name (lichess list, shortened). */
 const WHITE_FIRST_MOVES: readonly [uci: string, name: string][] = [
@@ -983,6 +1063,44 @@ const BLACK_MOVES: readonly {
         "f1b5",
         "4.Bb5+ Spite Check",
         "Coined: no name found. A check that achieves little: …c6 or …Bd7 blocks it with tempo.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e6", "d2d4", "d7d5", "e4d5", "e6d5", "g1f3"],
+    pick: "f8d6",
+    name: "4…Bd6 Mirror Bishop",
+    note: "Coined: no name in the lichess list. The bishop takes d6, mirroring the Bd3 White usually plays in the symmetrical Exchange structure.",
+    replies: [
+      [
+        "c2c4",
+        "5.c4 Monte Carlo",
+        "Named by analogy: lichess calls the same c4 strike in the Exchange Variation the Monte Carlo Variation.",
+      ],
+      [
+        "f1d3",
+        "5.Bd3 Symmetrical",
+        "Named from the literature: bishops on d3 and d6 make the fully symmetrical Exchange French.",
+      ],
+      [
+        "b1c3",
+        "5.Nc3 Queen's Knight",
+        "Named by analogy: the French Queen's Knight (2.Nc3), here after the exchange.",
+      ],
+      [
+        "c2c3",
+        "5.c3 Carlsbad Chain",
+        "Named by analogy: c3 backing d4 builds the pawn chain known from the Carlsbad structure of the Queen's Gambit Exchange.",
+      ],
+      [
+        "c1e3",
+        "5.Be3 Bishop Guard",
+        "Coined: no name found. The dark bishop guards d4 from e3 before the knights come out.",
+      ],
+      [
+        "h2h3",
+        "5.h3 Waiting Move",
+        "Coined: no name found. A quiet pawn move that keeps …Bg4 out before developing, as 4.h3 Waiting Move a move earlier.",
       ],
     ],
   },

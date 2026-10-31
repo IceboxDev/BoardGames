@@ -68,6 +68,7 @@ import {
   evidenceCmd,
   gradeReport,
   regroupCmd,
+  reportCmd,
   retireArticleCmd,
   retirementCode,
   rewriteRefsCmd,
@@ -760,6 +761,7 @@ if (command === "check-bank") {
 }
 const provenanceCommands: Record<string, () => void> = {
   evidence: evidenceCmd,
+  report: reportCmd,
   tag: tagCmd,
   backlog: backlogCmd,
   "retire-article": () => retireArticleCmd(true),

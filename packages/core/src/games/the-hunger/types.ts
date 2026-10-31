@@ -242,7 +242,7 @@ export interface SpaceDef {
 export type BoardId = "A" | "B" | "test";
 
 /**
- * One board side, as saved by the dev board editor (`/dev/hunger-board`):
+ * One board side, as mapped on the board art (`content/boards/board-a.json`):
  * space coordinates are pixels on the board image, `width` × `height`.
  */
 export interface BoardDef {

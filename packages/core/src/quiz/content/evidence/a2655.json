@@ -102,6 +102,23 @@
    "lang": "de",
    "retrievedAt": "2026-10-23T12:49:18.764Z",
    "snapshot": "7a9465d7924b4b3cf1748639cb6896fa78f393ed9640872b12fcb7cc60646c20"
+  },
+  "s14": {
+   "url": "https://media.githubusercontent.com/media/IceboxDev/BoardGames/master/packages/quiz-archive/research-reports/b00326.pdf",
+   "title": "Trabant production total: research verdict for the Trivial Pursuit card",
+   "publisher": "ChatGPT deep research",
+   "kind": "research-report",
+   "lang": "en",
+   "retrievedAt": "2026-10-25",
+   "snapshot": "dce9ebe89e2ef9fe61c0f09b75d8a3613840d9c34a140c859e468ba6e5954a7d",
+   "report": {
+    "file": "research-reports/b00326.pdf",
+    "sha256": "46f1c1c5f2e1fcdc4c2c8ed1a529f6d508ffb5fcd4c89aa8dea3269c95abb3fe",
+    "pages": 10,
+    "backlog": "b00326",
+    "receivedAt": "2026-10-25",
+    "producer": "ChatGPT deep research"
+   }
   }
  },
  "assessments": [
@@ -516,6 +533,25 @@
    "by": "crawler",
    "run": "evidence-verify-2026-10-24",
    "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-25T12:44:41Z",
+   "target": "f14383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Answer: 3,096,099 (about 3.1 million).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "owner",
+   "run": "research-reports-2026-10-25",
+   "note": "Zwickau official gazette 9/2021: 3,096,099; = P50 131,450 + P60 106,628 + P601 2,818,547 + Trabant 1.1 39,474. MDR's 3.6 million ('with predecessor models') cannot be rebuilt (all 36,151 P70 give 3,132,250); en.wikipedia's 3.7 million has no breakdown and DW's attribution is unverified. Beetle: 21,529,464 worldwide, about 15.8 million from German production (VW)."
   }
  ]
 }

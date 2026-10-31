@@ -13,12 +13,22 @@ export const PICK_MODE_OPTIONS: SegmentedOption<PickMode>[] = [
     tone: "accent",
     title: "Seated players vote as usual",
   },
+  {
+    value: "admin",
+    label: "Admin picks",
+    tone: "sky",
+    title: "The admins curate the lineup; the host's own picks don't count",
+  },
 ];
 
 export function pickModeHint(mode: PickMode): string {
-  return mode === "host"
-    ? "You choose the games; guests see your lineup and what to bring."
-    : "Everyone with a seat hypes and ranks games, like an open night.";
+  if (mode === "host") {
+    return "The host chooses the games (admins can add to the lineup); guests see it and what to bring.";
+  }
+  if (mode === "admin") {
+    return "The admins choose the games — the host's picks don't count; guests see the lineup.";
+  }
+  return "Everyone with a seat hypes and ranks games, like an open night.";
 }
 
 /** The invitation as text — for the group chat, the only push we have. */

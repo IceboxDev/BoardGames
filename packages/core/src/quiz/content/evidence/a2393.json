@@ -41,6 +41,31 @@
    "lang": "en",
    "retrievedAt": "2026-10-23T12:47:04.993Z",
    "snapshot": "3bd7a481250c64f916188689ce325089fa9836383decc25cfa5ddaf8c5c88326"
+  },
+  "s6": {
+   "url": "https://media.githubusercontent.com/media/IceboxDev/BoardGames/master/packages/quiz-archive/research-reports/b00316.pdf",
+   "title": "James II’s Whitehall inquiry into the birth of the Prince of Wales",
+   "publisher": "ChatGPT deep research",
+   "kind": "research-report",
+   "lang": "en",
+   "retrievedAt": "2026-10-23",
+   "snapshot": "3f4ded54f3c4cbe05e37a26d0122a771cd3947bb8e2c1f3c706b3f07240ee22a",
+   "report": {
+    "file": "research-reports/b00316.pdf",
+    "sha256": "37f61204b22dc9cc7c69a98bf5384926ecc6ff40121116d49f1d9cce554e46e4",
+    "pages": 9,
+    "backlog": "b00316",
+    "receivedAt": "2026-10-23",
+    "producer": "ChatGPT deep research"
+   }
+  },
+  "s7": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_several_declarations%2C_together_with_the_several_depositions_made_in_council_on_Monday%2C_the_22d_of_October%2C_1688._-_Concerning_the_birth_of_the_Prince_of_Wales_%28IA_b31971246%29.pdf",
+   "title": "The Several Declarations, Together with the Several Depositions Made in Council on Monday, the 22d of October, 1688",
+   "publisher": "By royal command, 1688",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T15:19:43Z"
   }
  },
  "assessments": [
@@ -316,6 +341,44 @@
    "by": "crawler",
    "run": "evidence-verify-2026-10-24",
    "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T15:19:42Z",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "40 sworn deponents were examined at the Whitehall Council meeting of 22 October 1688 — not 42.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "owner",
+   "run": "research-reports-2026-10-23",
+   "note": "Counted from the 1688 print: 40 sworn depositions at the council; 42 adds two written depositions sworn in Chancery on 27 Oct; the ODNB's 'over seventy' is not supported."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T15:19:43Z",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "had not been Examined at the Council Board",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "owner",
+   "run": "research-reports-2026-10-23",
+   "note": "Quoted via research report b00316 (not machine-verified on the scan): Huntingdon and Peterborow, the 41st and 42nd deponents, were not examined at the council."
   }
  ]
 }

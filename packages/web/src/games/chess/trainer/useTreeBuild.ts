@@ -24,7 +24,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ApiError, apiFetch } from "../../../lib/api-fetch";
 import { chessKeys, fetchAllGames, saveRepertoire } from "./api";
-import { walkLine } from "./board/model";
+import { lineEnd } from "./board/model";
 import type { FromWorker, PendingEval, ToWorker } from "./build.worker";
 import { TrainerProviders } from "./engine-provider";
 import { FarmEvals, type FarmState } from "./farm-evals";
@@ -32,7 +32,7 @@ import { reachableFrom } from "./tree-nav";
 
 /** The tree positions in the farm's focus folders for this colour. */
 function focusKeys(tree: RepertoireTree, color: "w" | "b"): Set<string> {
-  const roots = FARM_FOCUS[color].map((moves) => walkLine(moves).at(-1)?.key ?? "");
+  const roots = FARM_FOCUS[color].map((moves) => lineEnd(moves).key);
   return reachableFrom(tree, roots);
 }
 
@@ -53,7 +53,7 @@ export interface TreeBuild {
   readonly build: (tree?: RepertoireTree | null) => void;
   readonly stop: () => void;
   /** The engine/explorer the build uses, for the decision panel's suggestions. */
-  readonly providers: TrainerProviders | null;
+  readonly providers: TrainerProviders;
   /** The analysis farm's queue, while this tree waits for it. */
   readonly farm: FarmState | null;
   /** A build between passes, fetching the farm's results for the positions it parked. */
@@ -90,9 +90,10 @@ export function useTreeBuild(
   const [indexing, setIndexing] = useState<{ done: number; total: number } | null>(null);
   const [tree, setTree] = useState<RepertoireTree | null>(rep?.tree ?? null);
   const [error, setError] = useState<string | null>(null);
-  // Made with the token, in the same render: a build started the moment the
-  // token appears must find them (an effect would set them a render late).
-  const providers = useMemo(() => (token ? new TrainerProviders(token) : null), [token]);
+  // Made in the same render: a build started the moment the token appears
+  // must find them (an effect would set them a render late). Without a token
+  // they build from our shared caches and this browser's engine.
+  const providers = useMemo(() => new TrainerProviders(token), [token]);
   const [farm, setFarm] = useState<FarmState | null>(null);
   const [askingFarm, setAskingFarm] = useState(false);
   const farmRef = useRef(new FarmEvals());
@@ -129,7 +130,7 @@ export function useTreeBuild(
     setTree(rep.tree);
   }
 
-  useEffect(() => () => providers?.dispose(), [providers]);
+  useEffect(() => () => providers.dispose(), [providers]);
 
   // Close the worker when the page really goes away — not on React's dev-mode
   // unmount-and-remount, which would kill a worker an index or build already
@@ -405,10 +406,6 @@ export function useTreeBuild(
   const build = useCallback(
     (from?: RepertoireTree | null) => {
       if (!repRef.current) return;
-      if (!providers) {
-        setError("Connect lichess in this browser to build trees.");
-        return;
-      }
       setError(null);
       if (pollRef.current) clearTimeout(pollRef.current);
       wantRef.current = { from };

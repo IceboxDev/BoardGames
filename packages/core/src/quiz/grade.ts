@@ -3,8 +3,8 @@
 // every language edition of Wikipedia and its mirrors are one source, and a
 // source marked `cloneOf` joins the family of what it copies.
 //
-//   A  ≥2 independent sources, all verbatim-verified, ≥1 primary / official /
-//      scholarly, nothing contested
+//   A  a research report confirms it verbatim; or ≥2 independent sources, all
+//      verbatim-verified, ≥1 primary / official / scholarly, nothing contested
 //   B  ≥2 independent verbatim-verified sources, or 1 primary verbatim-verified
 //   C  1 source with the answer verbatim-verified on its page
 //   D  a source is given, but the answer wasn't verified on it (or it has no
@@ -16,6 +16,12 @@
 // `verifiedAt`. A source counts with its LATEST answer assessment; the claim
 // is contested when the latest decisive (non-`unverified`) assessment of the
 // answer or premise contests or refutes it — a later confirmation resolves it.
+//
+// A research report (`research-report`: a commissioned deep-research PDF in
+// quiz-archive) is the deepest research we can do and outranks everything:
+// once one has judged the answer or premise, only reports decide whether the
+// fact is contested, and a report that confirms the answer verbatim (its text
+// is snapshotted) makes the fact A on its own.
 
 import {
   type ArticleEvidence,
@@ -23,6 +29,7 @@ import {
   type EvidenceSource,
   type EvidenceSupport,
   PRIMARY_KINDS,
+  RESEARCH_REPORT_KIND,
 } from "./evidence-types.ts";
 import type { Confidence } from "./history-schema.ts";
 
@@ -135,6 +142,8 @@ export interface FactGrade {
   primary: number;
   /** An unresolved contest or refutation of the answer or premise. */
   contested: boolean;
+  /** A research report confirms the answer, verbatim-verified. */
+  researchReport: boolean;
   /** The confidence of the fact's latest assessment, null without one. */
   latestConfidence: Confidence | null;
 }
@@ -157,6 +166,7 @@ export function factGrade(
     verbatim: 0,
     primary: 0,
     contested: false,
+    researchReport: false,
     latestConfidence: null,
   };
   if (!evidence) return none;
@@ -168,11 +178,12 @@ export function factGrade(
     .map(({ a }) => a);
   if (mine.length === 0) return none;
 
-  let contested = false;
-  for (const a of mine) {
-    if (!CONTEST_CLAIMS.has(a.claim) || a.verdict === "unverified") continue;
-    contested = a.verdict !== "confirmed";
-  }
+  const byReport = (a: Assessment) =>
+    a.support.some((sup) => evidence.sources[sup.source]?.kind === RESEARCH_REPORT_KIND);
+  const decisive = mine.filter((a) => CONTEST_CLAIMS.has(a.claim) && a.verdict !== "unverified");
+  const reportDecisive = decisive.filter(byReport);
+  const judges = reportDecisive.length > 0 ? reportDecisive : decisive;
+  const contested = judges.length > 0 && judges[judges.length - 1].verdict !== "confirmed";
 
   // Latest answer assessment per source.
   const latest = new Map<string, { a: Assessment; sup: EvidenceSupport }>();
@@ -182,9 +193,11 @@ export function factGrade(
   }
 
   const families = new Map<string, { verbatim: boolean; primary: boolean }>();
+  let researchReport = false;
   for (const [id, { a, sup }] of latest) {
     if (a.verdict !== "confirmed") continue;
     const s = evidence.sources[id];
+    if (s?.kind === RESEARCH_REPORT_KIND && verified(s, sup)) researchReport = true;
     const fam = sourceFamily(id, evidence.sources, cloneDomains);
     const cur = families.get(fam) ?? { verbatim: false, primary: false };
     const v = verified(s, sup);
@@ -199,6 +212,7 @@ export function factGrade(
 
   let grade: Grade;
   if (contested || !anySource) grade = "E";
+  else if (researchReport) grade = "A";
   else if (verbatim >= 2 && verbatim === independentSources && primary >= 1) grade = "A";
   else if (verbatim >= 2 || primary >= 1) grade = "B";
   else if (verbatim >= 1) grade = "C";
@@ -210,6 +224,7 @@ export function factGrade(
     verbatim,
     primary,
     contested,
+    researchReport,
     latestConfidence: mine[mine.length - 1].confidence,
   };
 }

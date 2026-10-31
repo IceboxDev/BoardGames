@@ -58,6 +58,7 @@ export const queueQuery = (opts: {
   domain?: string;
   limit?: number;
   includeLeeches?: boolean;
+  more?: boolean;
 }) => jsonQuery(`${BASE}/trainer/queue${qs(opts)}`, TrainerQueueResponseSchema);
 
 export const statesQuery = (ids: readonly string[]) =>

@@ -6,12 +6,17 @@
  * Stockfish in this browser (`BrowserEngine`). "Best move" is just the top
  * line at the tree's depth for now; its definition comes later.
  * Popular: the lichess opening explorer, every rating and speed.
+ *
+ * Without a lichess connection in this browser (`token` null) the trees
+ * still build: evals come from this browser's Stockfish, and the explorer
+ * from our shared cache alone (`sharedExplorerMoves`) — a position nobody
+ * has fetched has no popular moves until a connected build asks lichess.
  */
 import type { TreeProviders } from "@boardgames/core/games/chess/trainer/builder";
 import type { EngineLine } from "@boardgames/core/games/chess/trainer/tree";
 import { BrowserEngine } from "../analysis/engine";
 import { cloudEval, type ExplorerMove, type LichessPriority } from "./lichess/client";
-import { cachedExplorerMoves } from "./lichess/explorer-store";
+import { cachedExplorerMoves, sharedExplorerMoves } from "./lichess/explorer-store";
 import { legalUcis } from "./tree-nav";
 
 /** An evaluation with its lines' continuations and where it came from. */
@@ -43,11 +48,11 @@ export function normalizeUcis<T extends { uci: string }>(fen: string, moves: rea
 export class TrainerProviders implements TreeProviders {
   private engine: BrowserEngine | null = null;
 
-  constructor(private readonly token: string) {}
+  constructor(private readonly token: string | null) {}
 
   async engineLines(fen: string, multipv: number, depth: number): Promise<EngineLine[]> {
     const move = Number(fen.split(" ")[5] ?? "1");
-    if (move <= CLOUD_MAX_MOVE) {
+    if (this.token && move <= CLOUD_MAX_MOVE) {
       const cloud = await cloudEval(fen, multipv, this.token).catch(() => null);
       if (cloud && cloud.length >= multipv && (cloud[0]?.depth ?? 0) >= depth) {
         return normalizeUcis(fen, cloud);
@@ -78,6 +83,7 @@ export class TrainerProviders implements TreeProviders {
    */
   /** lichess's cloud evaluation alone (cheap — for prefetching), or null when it has none. */
   async cloudLines(fen: string): Promise<QuickEval | null> {
+    if (!this.token) return null;
     const cloud = await cloudEval(fen, 5, this.token).catch(() => null);
     return cloud && cloud.length > 0
       ? { lines: normalizeUcis(fen, cloud), source: "lichess cloud" }
@@ -85,7 +91,7 @@ export class TrainerProviders implements TreeProviders {
   }
 
   async quickLines(fen: string, depth: number): Promise<QuickEval> {
-    const cloud = await cloudEval(fen, 5, this.token).catch(() => null);
+    const cloud = this.token ? await cloudEval(fen, 5, this.token).catch(() => null) : null;
     if (cloud && cloud.length > 0) {
       return { lines: normalizeUcis(fen, cloud), source: "lichess cloud" };
     }
@@ -115,11 +121,15 @@ export class TrainerProviders implements TreeProviders {
   /**
    * The lichess database here, with results; asked once per position, from
    * the server's shared cache when anyone has fetched it (`explorer-store.ts`).
+   * Without a connection a position the cache lacks reads as no moves.
    */
   explorer(fen: string, priority: LichessPriority = "now"): Promise<ExplorerMove[]> {
     let hit = this.explorerCache.get(fen);
     if (!hit) {
-      hit = cachedExplorerMoves(fen, this.token, priority).then((m) => normalizeUcis(fen, m));
+      const moves = this.token
+        ? cachedExplorerMoves(fen, this.token, priority)
+        : sharedExplorerMoves(fen).then((m) => m ?? []);
+      hit = moves.then((m) => normalizeUcis(fen, m));
       hit.catch(() => this.explorerCache.delete(fen));
       this.explorerCache.set(fen, hit);
     }
@@ -127,7 +137,10 @@ export class TrainerProviders implements TreeProviders {
   }
 
   async popularMoves(fen: string) {
-    return (await this.explorer(fen, "build")).map(({ uci, games }) => ({ uci, games }));
+    const moves = this.token
+      ? await this.explorer(fen, "build")
+      : await sharedExplorerMoves(fen).then((m) => m && normalizeUcis(fen, m));
+    return moves?.map(({ uci, games }) => ({ uci, games })) ?? null;
   }
 
   dispose(): void {

@@ -1,19 +1,7 @@
 import type { MyReport, ReportStatus } from "@boardgames/core/protocol";
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import {
-  Badge,
-  Button,
-  EmptyState,
-  ErrorAlert,
-  LoadingState,
-  MicroLabel,
-  PageHeader,
-  PageMain,
-  SegmentedControl,
-  Surface,
-  useConfirm,
-} from "../../../../components/ui";
+import { Link } from "react-router-dom";
+import { ErrorAlert, LoadingState, useConfirm } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { cn } from "../../../../lib/cn";
 import { errorMessageOf } from "../../../../lib/error-message";
@@ -21,11 +9,22 @@ import { findDomain } from "../../domains";
 import { useMyReports, useReportMutations } from "../../hooks/useMyReports";
 import { relativeDays } from "../../logic/time";
 import { type TrainerPaths, useTrainerPaths } from "../../paths";
+import {
+  Headline,
+  JumpLine,
+  Kicker,
+  PaperNote,
+  PaperTabs,
+  PrintButton,
+  Stamp,
+} from "../paper/Paper";
+import { PaperPage } from "../paper/PaperPage";
+import { KICKER } from "../paper/paper-style";
 import { ISSUE_COPY, STATUS_COPY } from "../report/issues";
 import { ReportDialog } from "../report/ReportDialog";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 
-// Your reports: every problem you flagged, newest first, with what came of
+// Letters to the editor (your reports): every problem you flagged, newest first, with what came of
 // it — under review, fixed or declined, and the reviewer's note. A
 // resolution you haven't seen yet is highlighted for this visit; opening
 // the page marks it seen (which clears the dot on the archive and the hub).
@@ -35,7 +34,6 @@ type Filter = "all" | ReportStatus;
 
 export default function WikiReports() {
   useDocumentTitle("Your reports · Quiz");
-  const navigate = useNavigate();
   const paths = useTrainerPaths();
   const { query, reports } = useMyReports();
   const { seen, withdraw } = useReportMutations();
@@ -74,33 +72,31 @@ export default function WikiReports() {
 
   return (
     <TrainerScreen>
-      <PageMain width="3xl" className="flex flex-col gap-5 pb-16">
-        <PageHeader
-          size="lg"
-          eyebrow="The Archive"
-          title="Your reports"
-          subtitle="Problems you've flagged in questions and articles, and what came of them."
-          actions={
-            <Button variant="link" onClick={() => navigate(paths.wiki)}>
-              ← Archive
-            </Button>
-          }
-        />
+      <PaperPage pageLabel="Letters to the editor" folio="B5" current="archive" className="gap-4">
+        <header className="flex flex-col gap-1">
+          <Link to={paths.wiki} className={cn(KICKER, "text-fg-muted hover:text-fg-strong")}>
+            ◂ The Archive
+          </Link>
+          <Headline as="h1" size="lg">
+            Letters to the editor
+          </Headline>
+          <p className="font-news text-sm italic text-fg-secondary">
+            Problems you've flagged in questions and articles, and what the editor made of them.
+          </p>
+        </header>
 
         {reports.length > 0 && (
-          <SegmentedControl
-            options={[
-              { value: "all" as const, label: `All ${reports.length}` },
-              { value: "open" as const, label: `Under review ${counts.open}` },
-              { value: "fixed" as const, label: `Fixed ${counts.fixed}` },
-              { value: "declined" as const, label: `Declined ${counts.declined}` },
-            ]}
+          <PaperTabs<Filter>
+            label="Show"
             value={filter}
             onChange={setFilter}
-            size="sm"
-            shape="pill"
-            selectionMode="toggle"
-            aria-label="Show"
+            className="border-b border-line-strong pb-2"
+            options={[
+              { value: "all", label: `All ${reports.length}` },
+              { value: "open", label: `Under review ${counts.open}` },
+              { value: "fixed", label: `Fixed ${counts.fixed}` },
+              { value: "declined", label: `Declined ${counts.declined}` },
+            ]}
           />
         )}
 
@@ -108,24 +104,18 @@ export default function WikiReports() {
         {withdraw.error && (
           <ErrorAlert message={errorMessageOf(withdraw.error, "Couldn't withdraw it.")} />
         )}
-        {query.isPending && <LoadingState label="Fetching your reports…" />}
+        {query.isPending && <LoadingState label="Fetching your letters…" />}
 
         {query.data && reports.length === 0 && (
-          <EmptyState
-            titleAs="h2"
-            title="No reports yet"
-            description="Spot a mistake in a question or an article? Use the flag beside it — it lands here, and so does the outcome."
-            action={
-              <Button variant="secondary" onClick={() => navigate(paths.wiki)}>
-                Back to the archive
-              </Button>
-            }
-          />
+          <PaperNote>
+            No letters yet. Spot a mistake in a question or an article? Use the flag beside it — it
+            lands here, and so does the editor's reply.
+          </PaperNote>
         )}
 
-        <ul className="flex flex-col gap-3">
+        <ul className="grid gap-x-8 lg:grid-cols-2">
           {shown.map((r) => (
-            <ReportCard
+            <Letter
               key={r.id}
               report={r}
               fresh={fresh?.has(r.id) ?? false}
@@ -135,7 +125,7 @@ export default function WikiReports() {
             />
           ))}
         </ul>
-      </PageMain>
+      </PaperPage>
 
       {editing && (
         <ReportDialog
@@ -164,7 +154,9 @@ function targetHref(r: MyReport, paths: TrainerPaths): string | null {
     : paths.wikiArticle(r.articleId);
 }
 
-function ReportCard({
+const STAMP_OF = { open: "sky", fixed: "emerald", declined: "neutral" } as const;
+
+function Letter({
   report: r,
   fresh,
   paths,
@@ -178,97 +170,74 @@ function ReportCard({
   onWithdraw: () => void;
 }) {
   const d = findDomain(r.domain);
-  const status = STATUS_COPY[r.status];
   const href = targetHref(r, paths);
   const snap = r.snapshot;
   return (
-    <Surface
-      as="li"
-      variant="tile"
-      padding="md"
-      className={cn("flex flex-col gap-3", fresh && "border-emerald-400/50")}
+    <li
+      className={cn(
+        "flex flex-col gap-2 border-b border-line-strong py-4",
+        fresh && "border-l-2 border-l-accent-300 pl-3",
+      )}
     >
       <div className="flex flex-wrap items-center gap-2">
-        <Badge tone={status.tone} size="xs">
-          {status.label}
-        </Badge>
-        {fresh && (
-          <Badge tone="emerald" size="xs" ring>
-            New
-          </Badge>
-        )}
-        <span className="text-sm font-semibold text-fg-strong">{ISSUE_COPY[r.issue].label}</span>
-        {d && (
-          <Badge tone={d.tone} size="xs">
-            {d.label} · {d.en}
-          </Badge>
-        )}
-        <MicroLabel className="ml-auto">
-          reported {relativeDays(r.createdAt)}
-          {r.resolvedAt ? ` · resolved ${relativeDays(r.resolvedAt)}` : ""}
-        </MicroLabel>
+        {d && <Kicker domain={d.slug} icon={24} />}
+        <span className={cn(KICKER, "ml-auto text-fg-muted")}>
+          To the editor · {relativeDays(r.createdAt)}
+        </span>
+      </div>
+      <div className="flex items-start justify-between gap-3">
+        <p className="font-headline text-lg font-bold leading-snug text-fg-strong">
+          {ISSUE_COPY[r.issue].label}
+        </p>
+        <span className="flex shrink-0 gap-1.5">
+          {fresh && <Stamp tone="accent">New</Stamp>}
+          <Stamp tone={STAMP_OF[r.status]}>{STATUS_COPY[r.status].label}</Stamp>
+        </span>
       </div>
 
-      <div className="flex flex-col gap-1 border-l-2 border-line-strong pl-3">
-        <MicroLabel>{r.target.kind === "question" ? "The question" : "The article"}</MicroLabel>
+      <blockquote className="border-l border-fg-primary/50 pl-3 font-news text-sm">
+        <span className={cn(KICKER, "text-fg-muted")}>
+          {r.target.kind === "question" ? "Concerning the question" : "Concerning the article"}
+        </span>
         {snap.kind === "question" ? (
           <>
-            <p className="text-sm text-fg-primary">{r.language === "de" ? snap.de : snap.en}</p>
-            <p className="text-sm text-fg-secondary">
+            <p className="text-fg-primary">{r.language === "de" ? snap.de : snap.en}</p>
+            <p className="text-fg-secondary">
               Answer: {r.language === "de" ? snap.answerDe : snap.answerEn}
             </p>
           </>
         ) : (
-          <p className="text-sm text-fg-primary">
-            {r.language === "de" ? snap.titleDe : snap.titleEn}
-          </p>
+          <p className="text-fg-primary">{r.language === "de" ? snap.titleDe : snap.titleEn}</p>
         )}
-      </div>
+      </blockquote>
 
-      {r.message && (
-        <p className="text-sm text-fg-secondary">
-          <span className="text-fg-muted">You wrote: </span>
-          {r.message}
-        </p>
-      )}
+      {r.message && <q className="font-news text-sm italic text-fg-secondary">{r.message}</q>}
 
       {r.status !== "open" && (
-        <div
-          className={cn(
-            "rounded-card-md px-3 py-2 text-sm",
-            r.status === "fixed" ? "bg-emerald-500/10 text-emerald-100" : "bg-fill text-fg-primary",
-          )}
-        >
-          {r.resolutionNote ? (
-            <>
-              <span className="font-semibold">Reviewer: </span>
-              {r.resolutionNote}
-            </>
-          ) : r.status === "fixed" ? (
-            "Fixed — thanks for spotting it."
-          ) : (
-            "Reviewed and left as it is."
-          )}
+        <div className="ml-4 border-t border-dotted border-line-strong pt-2 font-news text-sm text-fg-primary">
+          <span className={cn(KICKER, r.status === "fixed" ? "text-emerald-300" : "text-fg-muted")}>
+            The editor replies{r.resolvedAt ? ` · ${relativeDays(r.resolvedAt)}` : ""}
+          </span>
+          <p>
+            {r.resolutionNote ??
+              (r.status === "fixed"
+                ? "Fixed — thanks for spotting it."
+                : "Reviewed and left as it is.")}
+          </p>
         </div>
       )}
 
-      <div className="flex flex-wrap items-center gap-2">
-        {href && (
-          <Link to={href} className="text-xs font-medium text-accent-300 hover:text-accent-200">
-            Open in the wiki →
-          </Link>
-        )}
+      <div className="flex flex-wrap items-center gap-4">
+        {href && <JumpLine to={href}>Open in the archive</JumpLine>}
         {r.status === "open" && (
-          <span className="ml-auto flex gap-2">
-            <Button variant="secondary" size="xs" onClick={onEdit}>
-              Edit
-            </Button>
-            <Button variant="ghost" tone="rose" size="xs" onClick={onWithdraw}>
+          <span className="ml-auto flex gap-4">
+            <PrintButton onClick={onEdit}>Edit</PrintButton>
+            <PrintButton onClick={onWithdraw} className="text-rose-300 hover:text-rose-200">
               Withdraw
-            </Button>
+            </PrintButton>
           </span>
         )}
       </div>
-    </Surface>
+    </li>
   );
 }

@@ -1,6 +1,6 @@
 import type { RepertoireTree, TreeNode } from "@boardgames/core/games/chess/trainer/tree";
 import { describe, expect, it } from "vitest";
-import { explorerRows, START, walkLine } from "./model";
+import { explorerRows, lineEnd, START, walkLine } from "./model";
 
 const node = (over: Partial<TreeNode>): TreeNode => ({
   fen: START.fen,
@@ -18,6 +18,13 @@ describe("walkLine", () => {
     const steps = walkLine(["e2e4", "c7c5", "c2c3", "e2e4", "d7d5"]);
     expect(steps.map((s) => s.san)).toEqual(["e4", "c5", "c3"]);
     expect(steps[2]?.fen.split(" ")[1]).toBe("b");
+  });
+});
+
+describe("lineEnd", () => {
+  it("is the start for no moves (the farm's whole-tree focus), else the last position", () => {
+    expect(lineEnd([]).key).toBe(START.key);
+    expect(lineEnd(["e2e4", "c7c5"]).key).toBe(walkLine(["e2e4", "c7c5"])[1]?.key);
   });
 });
 

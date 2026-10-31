@@ -1,6 +1,6 @@
 import { isCatalogSlug } from "@boardgames/core/games/catalog";
 import { describe, expect, it } from "vitest";
-import { defaultKindForSlug, MATCH_KIND_BY_SLUG } from "./match-kinds";
+import { defaultKindForSlug, kindForVariant, MATCH_KIND_BY_SLUG } from "./match-kinds";
 
 describe("defaultKindForSlug", () => {
   it("returns null when slug is null", () => {
@@ -14,6 +14,7 @@ describe("defaultKindForSlug", () => {
   it.each([
     ["pandemic", "coop"],
     ["just-one", "coop"],
+    ["bomb-busters", "coop"],
     ["sky-team", "coop"],
     ["gloomhaven", "coop"],
     ["codenames", "teams"],
@@ -49,5 +50,18 @@ describe("defaultKindForSlug", () => {
     for (const slug of Object.keys(MATCH_KIND_BY_SLUG)) {
       expect(isCatalogSlug(slug), `"${slug}" is not in the catalog`).toBe(true);
     }
+  });
+});
+
+describe("kindForVariant", () => {
+  it("lets Dobble Connect's mode pick the kind", () => {
+    expect(kindForVariant("dobble-connect", "Speed")).toBe("free-for-all");
+    expect(kindForVariant("dobble-connect", "Standard")).toBe("teams");
+  });
+
+  it("is null where the variant doesn't decide the kind", () => {
+    expect(kindForVariant("codenames", "German")).toBeNull();
+    expect(kindForVariant("dobble-connect", undefined)).toBeNull();
+    expect(kindForVariant(null, "Speed")).toBeNull();
   });
 });

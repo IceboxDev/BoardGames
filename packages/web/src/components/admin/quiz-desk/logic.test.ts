@@ -69,6 +69,7 @@ describe("grades", () => {
       verbatim: 1,
       primary: 0,
       contested: false,
+      researchReport: false,
       latestConfidence: "medium",
     });
     expect(tip).toContain("Grade C: 1 source with the answer verbatim-verified on its page.");
@@ -84,6 +85,7 @@ describe("grades", () => {
       verbatim: 2,
       primary: 1,
       contested: true,
+      researchReport: false,
       latestConfidence: null,
     });
     expect(contested).toContain("contested or refuted (unresolved)");
@@ -95,6 +97,7 @@ describe("grades", () => {
       verbatim: 3,
       primary: 1,
       contested: false,
+      researchReport: false,
       latestConfidence: "high",
     });
     expect(a).toContain("3 independent sources");

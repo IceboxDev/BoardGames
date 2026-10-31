@@ -17,7 +17,6 @@ vi.mock("../../hooks/useQuizSettings", () => ({
   useQuizSettings: () => ({
     settings: {
       language: { primary: "en", secondary: null },
-      newFactsPerDay: 15,
       includeLeeches: false,
       gameReviewsAffectSrs: false,
       sources: ["quiztopia", "trivial-pursuit"],
@@ -110,10 +109,9 @@ describe("TimelineView", () => {
       "href",
       "https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen",
     );
-    expect(await within(detail).findByRole("link", { name: /Read in the wiki/ })).toHaveAttribute(
-      "href",
-      "/trainer/quiz/wiki/article/a0433#f02162",
-    );
+    expect(
+      await within(detail).findByRole("link", { name: /Read in the archive/ }),
+    ).toHaveAttribute("href", "/trainer/quiz/wiki/article/a0433#f02162");
     const at = PREVIEW_TIMELINE.findIndex((it) => it.questionId === "f02162");
     await user.keyboard("{ArrowRight}");
     expect(focusedPinId()).toBe(`tl-${PREVIEW_TIMELINE[at + 1].questionId}`);
@@ -126,12 +124,12 @@ describe("TimelineView", () => {
   it("filters by domain and by known / learning", async () => {
     const user = userEvent.setup();
     renderView();
-    await user.click(screen.getByRole("button", { name: /^Music/ }));
+    await user.click(screen.getByRole("button", { name: /^Only Music/ }));
     const stage = pinButtons();
     expect(stage.length).toBe(PREVIEW_TIMELINE.filter((it) => it.domain === "music-stage").length);
-    await user.click(screen.getByRole("button", { name: "All domains" }));
+    await user.click(screen.getByRole("button", { name: "All sections" }));
     expect(pinButtons()).toHaveLength(PREVIEW_TIMELINE.length);
-    await user.click(screen.getByRole("tab", { name: "Learning" }));
+    await user.click(screen.getByRole("button", { name: "Learning" }));
     expect(pinButtons()).toHaveLength(PREVIEW_TIMELINE.filter((it) => !it.known).length);
   });
 
@@ -140,7 +138,7 @@ describe("TimelineView", () => {
     const learning = PREVIEW_TIMELINE.find((it) => !it.known);
     renderView({ initial: learning?.questionId ?? null });
     expect(screen.getByRole("dialog")).toBeInTheDocument();
-    await user.click(screen.getByRole("tab", { name: "Known" }));
+    await user.click(screen.getByRole("button", { name: "Known" }));
     expect(pinButtons()).toHaveLength(PREVIEW_TIMELINE.filter((it) => it.known).length);
     expect(screen.queryByRole("dialog")).toBeNull();
   });

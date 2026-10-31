@@ -1,16 +1,9 @@
-import { createContext, useContext, useMemo } from "react";
-
 // Every trainer / wiki URL in one place. The routes hang off `/trainer/quiz`
 // (`QuizTrainer`), so a screen never spells a path by hand and a link from
 // the study card into the archive is the same string the router matches.
-// Dev previews render trainer screens elsewhere and swap the base through
-// `TrainerBaseProvider`.
 
 /** Where the trainer's routes are mounted (`QuizTrainer`). */
 export const TRAINER_BASE = "/trainer/quiz";
-
-const TrainerBaseContext = createContext<string>(TRAINER_BASE);
-export const TrainerBaseProvider = TrainerBaseContext.Provider;
 
 export interface StudyParams {
   /** Domain slug — that domain's due queue. */
@@ -21,6 +14,8 @@ export interface StudyParams {
   ids?: readonly string[];
   /** Cap the queue ("Quick 10"). */
   limit?: number;
+  /** Another batch of 15 new facts once the day's are done. */
+  more?: boolean;
 }
 
 export interface TrainerPaths {
@@ -39,6 +34,8 @@ export interface TrainerPaths {
   reports: string;
   /** The personal timeline; `q` focuses one pinned question. */
   timeline: (q?: string) => string;
+  /** The record: streak, figures, study days, the sections' standings, corrections. */
+  record: string;
 }
 
 export function trainerPaths(base: string): TrainerPaths {
@@ -50,6 +47,7 @@ export function trainerPaths(base: string): TrainerPaths {
       else if (params.ids && params.ids.length > 0) sp.set("ids", params.ids.join(","));
       else if (params.domain) sp.set("domain", params.domain);
       if (params.limit !== undefined) sp.set("limit", String(params.limit));
+      if (params.more) sp.set("more", "1");
       const qs = sp.toString();
       return `${base}/study${qs ? `?${qs}` : ""}`;
     },
@@ -62,10 +60,12 @@ export function trainerPaths(base: string): TrainerPaths {
     journal: `${base}/wiki/journal`,
     reports: `${base}/wiki/reports`,
     timeline: (q) => `${base}/timeline${q ? `?q=${encodeURIComponent(q)}` : ""}`,
+    record: `${base}/record`,
   };
 }
 
+const PATHS = trainerPaths(TRAINER_BASE);
+
 export function useTrainerPaths(): TrainerPaths {
-  const base = useContext(TrainerBaseContext);
-  return useMemo(() => trainerPaths(base), [base]);
+  return PATHS;
 }

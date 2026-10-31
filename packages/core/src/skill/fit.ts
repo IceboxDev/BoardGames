@@ -71,6 +71,11 @@ export type SkillFitResult = {
   players: Record<string, PlayerSkillFit>;
   /** Fitted co-op baseline strength per game (higher = harder game). */
   coopDifficulty: Record<string, number>;
+  /**
+   * Rated matches per game — each match once, however many people played it
+   * (a scored co-op session counts once, like any other match).
+   */
+  matchesByGame: Record<string, number>;
   /** Matches dropped because their slug has no catalog skill vector. */
   skippedOffCatalog: number;
   /**
@@ -312,14 +317,14 @@ export function fitSkillRatings(
   for (const m of prepared) {
     for (const c of m.comparisons) {
       const coefs = new Map<number, number>();
-      const addSide = (members: string[] | null, sign: number) => {
+      const addSide = (members: string[] | null, sign: number, shares?: number[]) => {
         if (members === null) {
           const di = coopIdx.get(m.slug);
           if (di !== undefined) coefs.set(di, (coefs.get(di) ?? 0) + sign);
           return;
         }
-        const share = sign / members.length;
-        for (const id of members) {
+        for (const [k, id] of members.entries()) {
+          const share = sign * (shares?.[k] ?? 1 / members.length);
           const pi = playerIdx.get(id);
           if (pi === undefined) continue;
           for (let t = 0; t < T; t++) {
@@ -330,8 +335,8 @@ export function fitSkillRatings(
           if (gi !== undefined) coefs.set(gi, (coefs.get(gi) ?? 0) + share);
         }
       };
-      addSide(c.a, 1);
-      addSide(c.b, -1);
+      addSide(c.a, 1, c.aShares);
+      addSide(c.b, -1, c.bShares);
       const entries = [...coefs.entries()].sort((a, b) => a[0] - b[0]);
       terms.push({
         idx: entries.map((e) => e[0]),
@@ -429,7 +434,11 @@ export function fitSkillRatings(
   const exposure = new Map<string, number[]>();
   const ratedMatches = new Map<string, number>();
   const gamesPlayed = new Map<string, Map<string, number>>();
+  const matchesByGame: Record<string, number> = {};
   for (const m of prepared) {
+    // The scored co-op pool's synthetic comparison entry has no competitors;
+    // its sessions were each counted through their own accounting entry.
+    if (m.competitors.length > 0) matchesByGame[m.slug] = (matchesByGame[m.slug] ?? 0) + 1;
     for (const id of new Set(m.competitors)) {
       const exp = exposure.get(id) ?? SKILL_TRAIT_IDS.map(() => 0);
       for (let t = 0; t < T; t++) exp[t] += m.lambda * m.w[t];
@@ -481,6 +490,7 @@ export function fitSkillRatings(
   return {
     players,
     coopDifficulty,
+    matchesByGame,
     skippedOffCatalog,
     skippedNoEvidence,
     newestPlayedAt,

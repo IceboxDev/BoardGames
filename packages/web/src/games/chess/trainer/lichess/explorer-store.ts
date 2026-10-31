@@ -130,3 +130,17 @@ export function cachedExplorerMoves(
   next.catch(() => memo.delete(fen));
   return next;
 }
+
+/**
+ * The shared cache alone, without lichess (no connection in this browser):
+ * the moves when anyone has fetched the position, else `null`.
+ */
+export async function sharedExplorerMoves(fen: string): Promise<ExplorerMove[] | null> {
+  const hit = memo.get(fen);
+  if (hit) return hit;
+  const cached = await lookup(fen);
+  if (!cached) return null;
+  const moves = toMoves(cached);
+  memo.set(fen, Promise.resolve(moves));
+  return moves;
+}

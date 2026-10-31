@@ -35,7 +35,7 @@ export type SkillConfig = {
   minExposure: number;
   /** A trait leaderboard renders only with this many exposure-cleared players. */
   minLeaderboardPlayers: number;
-  /** A per-game leaderboard renders only with this many rated plays of it. */
+  /** A per-game leaderboard renders only with this many rated matches of it. */
   minGameBoardPlays: number;
   /**
    * Hardcoded θ that maps to a display score of 0. Deliberately a little
@@ -52,7 +52,7 @@ export type SkillConfig = {
 };
 
 export const SKILL_CONFIG_V1: SkillConfig = Object.freeze({
-  version: 6,
+  version: 10,
   scoreFloorTheta: -0.35,
   kTheta: 1.0,
   kGame: 0.25,

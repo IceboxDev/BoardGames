@@ -9,6 +9,7 @@ import {
   interleaveSiblings,
   isLeech,
   newState,
+  packDailyArticles,
   type SrsGrade,
   type SrsState,
 } from "./srs.ts";
@@ -244,6 +245,69 @@ describe("buildDailyQueue", () => {
       expect(a).toEqual(fresh({ newRemaining: 15, shuffleSeed: 7 }));
       expect([...a].sort()).toEqual([...facts("a1", 5), ...facts("a2", 8)].sort());
     });
+  });
+});
+
+describe("packDailyArticles", () => {
+  const arts = (...sizes: number[]) => sizes.map((size, i) => ({ id: `a${i}`, size }));
+  const total = (ids: string[], list: { id: string; size: number }[]) =>
+    ids.reduce((n, id) => n + (list.find((a) => a.id === id)?.size ?? 0), 0);
+
+  it("makes 7+8, 5+5+5 and 4+5+6", () => {
+    expect(packDailyArticles(arts(7, 8))).toEqual(["a0", "a1"]);
+    expect(packDailyArticles(arts(5, 5, 5))).toEqual(["a0", "a1", "a2"]);
+    expect(packDailyArticles(arts(6, 4, 5))).toEqual(["a0", "a1", "a2"]);
+  });
+
+  it("takes the combination that completes earliest in the member's order", () => {
+    // 5,5 wait for a third 5 or a 4+6; the 8 waits for a 7 — the 6 at index 3
+    // completes 4+5+6 first (4 at 2, 5 at 0).
+    expect(packDailyArticles(arts(5, 8, 4, 6, 5, 7))).toEqual(["a0", "a2", "a3"]);
+  });
+
+  it("is always exactly 15 when some shape can be made", () => {
+    const shapeable = (sizes: number[]) => {
+      const n = (k: number) => sizes.filter((x) => x === k).length;
+      return (n(7) && n(8)) || n(5) >= 3 || (n(4) && n(5) && n(6));
+    };
+    let seed = 7;
+    const next = () => {
+      seed = (seed * 1103515245 + 12345) % 2147483648;
+      return seed;
+    };
+    for (let round = 0; round < 500; round++) {
+      const list = Array.from({ length: 2 + (next() % 10) }, (_, i) => ({
+        id: `a${i}`,
+        size: 4 + (next() % 5),
+      }));
+      const ids = packDailyArticles(list);
+      if (shapeable(list.map((a) => a.size))) expect(total(ids, list)).toBe(15);
+      else expect(total(ids, list)).toBeLessThanOrEqual(Math.max(15, list[0].size));
+      expect(ids.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("falls back to whole articles under 15, never to nothing", () => {
+    expect(packDailyArticles(arts(8, 8, 4))).toEqual(["a0", "a2"]);
+    expect(packDailyArticles(arts(4, 4))).toEqual(["a0", "a1"]);
+    expect(packDailyArticles(arts(8))).toEqual(["a0"]);
+    expect(packDailyArticles([])).toEqual([]);
+  });
+});
+
+describe("buildDailyQueue — chosen fresh articles", () => {
+  it("deals every unseen card of the chosen articles and nothing else new", () => {
+    const q = buildDailyQueue({
+      due: [],
+      seenIds: new Set(),
+      newOrder: ["x1", "x2", "y1", "z1", "z2"],
+      newRemaining: 0,
+      limit: 99,
+      includeLeeches: false,
+      articleOf: (id) => id[0],
+      freshArticles: new Set(["x", "z"]),
+    });
+    expect(q.map((i) => i.questionId)).toEqual(["x1", "x2", "z1", "z2"]);
   });
 });
 

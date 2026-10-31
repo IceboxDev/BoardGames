@@ -21,9 +21,8 @@ import { TraitBreakdown } from "./TraitBreakdown.tsx";
 import { ordinal, TRAIT_COPY } from "./trait-copy.ts";
 
 // Presentational body of the skill/stats page — everything below the
-// PageHeader, pure props so the dev preview (/dev/skill-preview) can render
-// the exact production layout with fixtures. Data derivations stay
-// server-side; this file only formats.
+// PageHeader, pure props. Data derivations stay server-side; this file only
+// formats.
 
 /** Locked state: exact progress toward the unlock thresholds — factual, and
  *  framed as "how close" rather than "not good enough". */

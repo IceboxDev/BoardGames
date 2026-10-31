@@ -6,8 +6,9 @@
 // west→east chain of regions runs top→bottom. Each region is a paper card
 // placed on the painting by a `NodePlacement` — a top-left corner, a uniform
 // scale, and whether its squares stack (column) or sit side by side (row).
-// The placements below were fixed by hand in the dev adjust mode
-// (`/dev/senso-preview?adjust`): drag, resize, copy, paste here.
+// The placements below were fixed by hand in the dev adjust mode (a game
+// board with `?adjust` in the URL, dev builds only): drag, resize, copy,
+// paste here.
 //
 // Components import from this file and never inline a number.
 

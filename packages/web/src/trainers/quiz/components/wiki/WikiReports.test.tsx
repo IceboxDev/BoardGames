@@ -14,6 +14,7 @@ let mine: MyReports;
 
 vi.mock("../../api", () => ({
   myReportsQuery: () => async () => mine,
+  todayKey: () => "2026-10-24",
   markReportsSeen: (body: { ids: number[] }) => seenMock(body),
   withdrawReport: (id: number) => withdrawMock(id),
   createReport: vi.fn(),
@@ -116,6 +117,6 @@ describe("WikiReports", () => {
   it("explains how to report when there's nothing yet", async () => {
     mine = { reports: [], unread: 0 };
     renderPage();
-    expect(await screen.findByText("No reports yet")).toBeInTheDocument();
+    expect(await screen.findByText(/^No letters yet\./)).toBeInTheDocument();
   });
 });

@@ -1,29 +1,21 @@
 import type { SearchResponse } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import {
-  Badge,
-  Button,
-  EmptyState,
-  ErrorAlert,
-  InteractiveCard,
-  LoadingState,
-  MicroLabel,
-  PageHeader,
-  PageMain,
-  SearchInput,
-  Section,
-  TONE_TEXT,
-} from "../../../../components/ui";
+import { Link, useSearchParams } from "react-router-dom";
+import { ErrorAlert, LoadingState } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
+import { cn } from "../../../../lib/cn";
 import { errorMessageOf } from "../../../../lib/error-message";
 import { qk } from "../../../../lib/query-keys";
 import { searchQuery } from "../../api";
-import { coreToneOf, DOMAINS } from "../../domains";
+import { DOMAINS } from "../../domains";
 import { usePrimaryLanguage } from "../../hooks/useQuestionLanguage";
 import { useTrainerPaths } from "../../paths";
+import { DomainIcon } from "../common/DomainIcon";
 import { PrimaryLanguageToggle } from "../common/LanguageToggle";
+import { Headline, PaperNote, PaperSearch, SectionHead } from "../paper/Paper";
+import { PaperPage } from "../paper/PaperPage";
+import { KICKER } from "../paper/paper-style";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 import { hasMatch, highlight, searchTokens } from "./highlight";
 
@@ -43,11 +35,14 @@ function hitKind(hit: Hit, tokens: readonly string[]): HitKind {
   return "question";
 }
 
-const KIND_TONE = { answer: "emerald", title: "sky", question: "neutral" } as const;
+const KIND_LABEL: Record<HitKind, string> = {
+  answer: "In the answer",
+  title: "In the title",
+  question: "In the question",
+};
 
 export default function WikiSearch() {
   useDocumentTitle("Search · The Archive");
-  const navigate = useNavigate();
   const paths = useTrainerPaths();
   const [params, setParams] = useSearchParams();
   const urlQ = params.get("q") ?? "";
@@ -95,104 +90,97 @@ export default function WikiSearch() {
 
   return (
     <TrainerScreen>
-      <PageMain width="3xl" className="flex flex-col gap-5 pb-12">
-        <PageHeader
-          size="md"
-          eyebrow="The Archive"
-          title="Search"
-          actions={
-            <Button variant="link" onClick={() => navigate(paths.wiki)}>
-              ← Archive
-            </Button>
-          }
-        />
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-          <SearchInput
-            autoFocus
-            containerClassName="flex-1"
-            aria-label="Search the archive"
-            placeholder="A word from a question, an answer or a title"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
-          <PrimaryLanguageToggle value={language} onChange={setPrimary} size="sm" />
-        </div>
+      <PaperPage pageLabel="Search the archive" folio="B4" current="archive" className="gap-4">
+        <header className="flex flex-col gap-3">
+          <Link to={paths.wiki} className={cn(KICKER, "text-fg-muted hover:text-fg-strong")}>
+            ◂ The Archive
+          </Link>
+          <Headline as="h1" size="lg">
+            Search the archive
+          </Headline>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
+            <PaperSearch
+              autoFocus
+              className="flex-1"
+              label="Search the archive"
+              placeholder="A word from a question, an answer or a title"
+              value={text}
+              onChange={setText}
+            />
+            <PrimaryLanguageToggle value={language} onChange={setPrimary} size="sm" />
+          </div>
+        </header>
 
         {!enabled && (
-          <p className="text-sm text-fg-muted">
+          <PaperNote className="text-left">
             Type at least {MIN_LENGTH} letters. Searching in{" "}
             {{ en: "English", de: "German", ru: "Russian" }[language]}
             {" — "}the toggle switches the language of the texts searched.
-          </p>
+          </PaperNote>
         )}
         {enabled && errorMessage && <ErrorAlert message={errorMessage} />}
         {enabled && results.isPending && <LoadingState label="Searching…" />}
         {enabled && results.data && hitCount === 0 && (
-          <EmptyState
-            title={`No hits for “${q}”`}
-            description={
-              language === "en"
-                ? "Try the German spelling — names and titles differ between the languages."
-                : "Try the English spelling — names and titles differ between the languages."
-            }
-          />
+          <PaperNote>
+            No hits for “{q}”.{" "}
+            {language === "en"
+              ? "Try the German spelling — names and titles differ between the languages."
+              : "Try the English spelling — names and titles differ between the languages."}
+          </PaperNote>
         )}
 
         {groups.length > 0 && (
           <div className="flex flex-col gap-6">
-            <MicroLabel className="tabular-nums">
+            <p className={cn(KICKER, "tabular-nums text-accent-300")}>
               {hitCount} hit{hitCount === 1 ? "" : "s"}
               {hitCount >= 50 ? " · showing the first 50" : ""}
-            </MicroLabel>
+            </p>
             {groups.map(({ domain: d, hits }) => (
-              <Section
-                key={d.slug}
-                title={d.en}
-                count={hits.length}
-                icon={
-                  <span
-                    className={`text-2xs font-bold tabular-nums ${TONE_TEXT[coreToneOf(d.tone)]}`}
-                  >
-                    {d.label}
+              <section key={d.slug} aria-label={d.en} className="flex flex-col gap-1">
+                <SectionHead right={<span className="tabular-nums">{hits.length}</span>}>
+                  <span className="flex items-center gap-2">
+                    <DomainIcon domain={d.slug} size={28} />
+                    <span className={d.ink}>{d.en}</span>
                   </span>
-                }
-              >
-                <ul className="flex flex-col gap-2">
+                </SectionHead>
+                <ul className="grid gap-x-8 md:grid-cols-2">
                   {hits.map((hit) => {
                     const kind = hitKind(hit, tokens);
                     return (
-                      <li key={hit.questionId}>
-                        <InteractiveCard
-                          as={Link}
+                      <li
+                        key={hit.questionId}
+                        className="border-b border-dotted border-line-strong"
+                      >
+                        <Link
                           to={paths.wikiArticle(hit.articleId, hit.questionId)}
-                          padding="sm"
-                          className="flex flex-col gap-1"
+                          className="group flex flex-col gap-0.5 py-2.5 focus-visible:outline-2 focus-visible:outline-accent-400"
                         >
-                          <div className="flex items-center gap-2">
-                            <Badge tone={KIND_TONE[kind]} size="xs">
-                              {kind}
-                            </Badge>
-                          </div>
-                          <p className="text-sm text-fg-primary" lang={language}>
-                            {highlight(hit.question, tokens)}
-                          </p>
-                          <p className="text-xs text-fg-secondary" lang={language}>
-                            <span className="text-fg-muted">→ </span>
-                            {highlight(hit.answer, tokens)}
-                          </p>
-                          <p className="text-2xs text-fg-muted" lang={language}>
+                          <span className={cn(KICKER, "text-fg-muted")}>{KIND_LABEL[kind]}</span>
+                          <span
+                            className="font-headline text-base font-bold leading-snug text-fg-strong group-hover:text-accent-200"
+                            lang={language}
+                          >
                             {highlight(hit.title, tokens)}
-                          </p>
-                        </InteractiveCard>
+                          </span>
+                          <span className="font-news text-sm text-fg-primary" lang={language}>
+                            {highlight(hit.question, tokens)}
+                          </span>
+                          <span
+                            className={cn("font-news text-sm font-semibold", d.ink)}
+                            lang={language}
+                          >
+                            {highlight(hit.answer, tokens)}
+                          </span>
+                        </Link>
                       </li>
                     );
                   })}
                 </ul>
-              </Section>
+              </section>
             ))}
           </div>
         )}
-      </PageMain>
+      </PaperPage>
     </TrainerScreen>
   );
 }

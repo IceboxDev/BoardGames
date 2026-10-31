@@ -50,13 +50,13 @@ export function ConnectionBar({ link, token, importer, builds }: Props) {
   }
 
   const busy = importer.running || builds.w?.phase !== "idle" || builds.b?.phase !== "idle";
-  const dot = !token ? "bg-amber-400" : busy ? "bg-sky-400 animate-pulse" : "bg-emerald-400";
-  const dotTitle = !token
-    ? "lichess isn't connected in this browser"
-    : importer.running
-      ? "Pulling new games"
-      : busy
-        ? "Building your trees"
+  const dot = busy ? "bg-sky-400 animate-pulse" : !token ? "bg-amber-400" : "bg-emerald-400";
+  const dotTitle = importer.running
+    ? "Pulling new games"
+    : busy
+      ? "Building your trees"
+      : !token
+        ? "lichess isn't connected in this browser — needed only to pull new games"
         : "Connected";
 
   return (

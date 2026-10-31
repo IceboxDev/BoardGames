@@ -70,6 +70,7 @@ import { quizReportsRussian } from "./0062-quiz-reports-russian.ts";
 import { quizFactRedirects } from "./0063-quiz-fact-redirects.ts";
 import { chessExplorerCache } from "./0064-chess-explorer-cache.ts";
 import { quizReportLinks } from "./0065-quiz-report-links.ts";
+import { adminPicks } from "./0066-admin-picks.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -138,6 +139,7 @@ export const migrations: readonly Migration[] = [
   quizFactRedirects,
   chessExplorerCache,
   quizReportLinks,
+  adminPicks,
 ];
 
 /**

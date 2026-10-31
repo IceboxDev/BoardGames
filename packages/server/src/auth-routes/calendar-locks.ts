@@ -12,6 +12,7 @@ import {
   LockInResponseSchema,
   nightDate,
   OkResponseSchema,
+  type PickMode,
   PicksLockBodySchema,
   PrivateNightUpdateBodySchema,
   ResetGameVotesBodySchema,
@@ -36,6 +37,14 @@ import {
   sealedAt,
 } from "../lib/night-participants.ts";
 import { RSVP_NOW } from "./calendar-rsvps.ts";
+
+/**
+ * `pick_mode` as stored: admin picks is the 'host' row plus `admin_picks = 1`
+ * (migration 0066 — the CHECK on `pick_mode` predates it).
+ */
+function storedPickMode(mode: PickMode): "group" | "host" {
+  return mode === "admin" ? "host" : mode;
+}
 
 export const calendarLocksRoutes = authedApp();
 
@@ -319,9 +328,17 @@ calendarLocksRoutes.post("/private-night", zJsonBody(PrivateNightUpdateBodySchem
   const stmts: { sql: string; args: (string | number | null)[] }[] = [
     {
       sql: `UPDATE locked_dates
-                SET expected_user_ids_json = ?, seat_count = ?, pick_mode = ?, title = ?
+                SET expected_user_ids_json = ?, seat_count = ?, pick_mode = ?, admin_picks = ?,
+                    title = ?
               WHERE date_key = ? AND unlocked_at IS NULL`,
-      args: [JSON.stringify(nextExpected), seatCount, pickMode, title, date],
+      args: [
+        JSON.stringify(nextExpected),
+        seatCount,
+        storedPickMode(pickMode),
+        pickMode === "admin" ? 1 : 0,
+        title,
+        date,
+      ],
     },
   ];
   const actuallyRemoved = lock.expectedUserIds.filter((id) => removals.has(id));
@@ -644,8 +661,8 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
       sql: `INSERT INTO locked_dates
               (date_key, locked_by, locked_at, expected_user_ids_json,
                host_user_id, host_name, event_time, address, host_at_home,
-               private, seat_count, pick_mode, title)
-            VALUES (?, ?, datetime('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+               private, seat_count, pick_mode, admin_picks, title)
+            VALUES (?, ?, datetime('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(date_key) DO UPDATE SET
               locked_by = excluded.locked_by,
               locked_at = excluded.locked_at,
@@ -658,6 +675,7 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
               private = excluded.private,
               seat_count = excluded.seat_count,
               pick_mode = excluded.pick_mode,
+              admin_picks = excluded.admin_picks,
               title = excluded.title,
               unlocked_at = NULL`,
       args: [
@@ -671,7 +689,8 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
         hostAtHomeFlag,
         isPrivate ? 1 : 0,
         isPrivate ? (body.seatCount ?? null) : null,
-        body.pickMode ?? "group",
+        storedPickMode(body.pickMode ?? "group"),
+        body.pickMode === "admin" ? 1 : 0,
         isPrivate ? body.title || null : null,
       ],
     },

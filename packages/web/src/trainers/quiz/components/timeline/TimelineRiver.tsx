@@ -2,13 +2,15 @@ import { formatTimelineDate } from "@boardgames/core/quiz/timeline";
 import { gapLabel } from "@boardgames/core/quiz/timeline-blocks";
 import { type CSSProperties, memo } from "react";
 import { MinusIcon, PlusIcon } from "../../../../components/icons";
-import { IconButton, MicroLabel } from "../../../../components/ui";
+import { IconButton } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import { domainOf } from "../../domains";
 import type { LaidOutBlock, LaidOutGap, TimelineLayout } from "../../logic/timeline-layout";
+import { DomainIcon } from "../common/DomainIcon";
+import { KICKER } from "../paper/paper-style";
 import { blockDomId, DOT_OFFSET, pinDomId } from "./dom-ids";
 import { chainLabel, chainTitle } from "./era-copy";
-import { BAR, BAR_ACTIVE, CARD_EDGE, DATE_INK, DOT_FILL, DOT_RING } from "./tones";
+import { inkDot } from "./tones";
 
 // The river: time flows down a central axis (≥ lg) or a left-hand one
 // (phones), cut into the layout's blocks — millennia, and wherever pins
@@ -85,7 +87,7 @@ function TimelineRiverImpl({
       {/* Axis */}
       <div
         aria-hidden="true"
-        className="absolute inset-y-0 w-px -translate-x-1/2 bg-gradient-to-b from-line via-line-strong to-line"
+        className="absolute inset-y-0 w-px -translate-x-1/2 bg-fg-primary/50"
         style={{ left: axis }}
       />
 
@@ -98,11 +100,15 @@ function TimelineRiverImpl({
             key={`bar-${s.item.questionId}`}
             aria-hidden="true"
             className={cn(
-              "absolute w-1 -translate-x-1/2 rounded-full transition-[top,height] duration-300 motion-reduce:transition-none",
-              active ? BAR_ACTIVE[d.tone] : BAR[d.tone],
-              !s.item.known && !active && "opacity-60",
+              "absolute w-1 -translate-x-1/2 transition-[top,height] duration-300 motion-reduce:transition-none",
+              active ? "opacity-100" : s.item.known ? "opacity-50" : "opacity-30",
             )}
-            style={{ left: laneX(s.lane), top: s.y0, height: s.y1 - s.y0 }}
+            style={{
+              left: laneX(s.lane),
+              top: s.y0,
+              height: s.y1 - s.y0,
+              backgroundColor: d.color,
+            }}
           />
         );
       })}
@@ -139,17 +145,14 @@ function TimelineRiverImpl({
               aria-hidden="true"
               className={cn(
                 "absolute h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 transition-[top] duration-300 motion-reduce:transition-none",
-                item.known ? DOT_FILL[d.tone] : DOT_RING[d.tone],
                 focused && "scale-150",
               )}
-              style={{ top: y, left: axis }}
+              style={{ top: y, left: axis, ...inkDot(d.color, item.known) }}
             >
               {focused && (
                 <span
-                  className={cn(
-                    "absolute inset-0 rounded-full opacity-60 motion-safe:animate-ping",
-                    DOT_FILL[d.tone],
-                  )}
+                  className="absolute inset-0 rounded-full opacity-60 motion-safe:animate-ping"
+                  style={inkDot(d.color, true)}
                 />
               )}
             </span>
@@ -162,37 +165,36 @@ function TimelineRiverImpl({
               lang={lang}
               title={`${date} — ${label}`}
               className={cn(
-                "group absolute flex scroll-my-32 flex-col justify-center gap-0.5 overflow-hidden rounded-card-md border border-l-4 px-2.5 text-left transition-[top,box-shadow,background-color] duration-300 motion-reduce:transition-none",
+                "group absolute flex scroll-my-32 flex-col justify-center gap-0.5 overflow-hidden border border-l-4 bg-surface-900 px-2.5 text-left transition-[top,background-color] duration-300 motion-reduce:transition-none",
                 "focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/70",
-                CARD_EDGE[d.tone],
                 item.known
-                  ? "border-line bg-surface-900/80 hover:bg-surface-800"
-                  : "border-dashed border-line-strong bg-surface-950/80 hover:bg-surface-900",
-                focused && "ring-2 ring-accent-400/70 shadow-glow-accent",
+                  ? "border-line-strong hover:bg-surface-800"
+                  : "border-dashed border-line-strong hover:bg-surface-800",
+                focused && "border-3 border-double border-accent-300 border-l-4",
               )}
-              style={{ top: cardY - DOT_OFFSET, height: cardHeight - 8, ...cardBox(side) }}
+              style={{
+                top: cardY - DOT_OFFSET,
+                height: cardHeight - 8,
+                borderLeftColor: d.color,
+                ...cardBox(side),
+              }}
             >
               <span className="flex min-w-0 items-center gap-1.5">
+                <DomainIcon domain={item.domain} size={20} />
                 <span
-                  className={cn(
-                    "h-2 w-2 shrink-0 rounded-full border",
-                    item.known ? DOT_FILL[d.tone] : DOT_RING[d.tone],
-                  )}
-                />
-                <span
-                  className={cn("truncate text-2xs font-semibold tabular-nums", DATE_INK[d.tone])}
+                  className={cn("truncate font-headline text-xs font-bold tabular-nums", d.ink)}
                 >
                   {date}
                 </span>
                 {!item.known && (
-                  <span className="ml-auto shrink-0 text-3xs text-fg-muted">
+                  <span className="ml-auto shrink-0 font-news text-3xs italic text-fg-muted">
                     {lang === "de" ? "lernt noch" : "learning"}
                   </span>
                 )}
               </span>
               <span
                 className={cn(
-                  "line-clamp-2 text-xs leading-snug",
+                  "line-clamp-2 font-news text-xs leading-snug",
                   item.known ? "text-fg-primary" : "text-fg-secondary",
                 )}
               >
@@ -216,12 +218,11 @@ function TimelineRiverImpl({
         >
           <span
             className={cn(
-              "flex items-center gap-1.5 rounded-full border border-accent-400/60 px-2 py-0.5 shadow-glow-accent",
-              "bg-surface-950",
+              KICKER,
+              "flex items-center gap-1.5 border-3 border-double border-accent-300 bg-surface-900 px-2 py-0.5 text-accent-300",
             )}
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-accent-400" />
-            <MicroLabel className="text-accent-300">{lang === "de" ? "Heute" : "Today"}</MicroLabel>
+            {lang === "de" ? "Heute" : "Today"}
           </span>
         </div>
       )}
@@ -312,33 +313,30 @@ function BlockBand({
           aria-expanded={false}
           title={de ? "Aufklappen" : "Unfold"}
           className={cn(
-            "absolute inset-y-1.5 flex items-center gap-2 rounded-card-md border border-dashed border-line-strong bg-surface-900/90 px-2.5 text-left transition-colors hover:bg-surface-800",
+            "absolute inset-y-1.5 flex items-center gap-2 border border-dashed border-line-strong bg-surface-900 px-2.5 text-left transition-colors hover:bg-surface-800",
             "focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60",
             wide ? "left-1/2 w-full max-w-lg -translate-x-1/2" : "right-0",
           )}
           style={textLeft}
         >
           <PlusIcon className="h-3 w-3 shrink-0 text-fg-muted" />
-          <span className="shrink-0 whitespace-nowrap text-2xs font-semibold text-fg-strong">
+          <span className="shrink-0 whitespace-nowrap font-headline text-sm font-bold text-fg-strong">
             {label}
           </span>
-          {title && <span className="min-w-0 truncate text-2xs text-fg-muted">{title}</span>}
+          {title && (
+            <span className="min-w-0 truncate font-news text-xs italic text-fg-muted">{title}</span>
+          )}
           <span aria-hidden="true" className="relative ml-auto h-2.5 w-20 shrink-0 sm:w-32">
             <span className="absolute inset-x-0 top-1/2 h-px bg-line-strong" />
             {b.strip.map(({ at, item }) => (
               <span
                 key={item.questionId}
-                className={cn(
-                  "absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full border",
-                  item.known
-                    ? DOT_FILL[domainOf(item.domain).tone]
-                    : DOT_RING[domainOf(item.domain).tone],
-                )}
-                style={{ left: `${at * 100}%` }}
+                className="absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full border"
+                style={{ left: `${at * 100}%`, ...inkDot(domainOf(item.domain).color, item.known) }}
               />
             ))}
           </span>
-          <span className="shrink-0 text-3xs tabular-nums text-fg-muted">{b.count}</span>
+          <span className="shrink-0 font-news text-xs tabular-nums text-fg-muted">{b.count}</span>
         </button>
       </section>
     );
@@ -351,7 +349,7 @@ function BlockBand({
       aria-label={`${label}${title ? ` — ${title}` : ""}, ${pinned}`}
       className={cn(
         "absolute inset-x-0 scroll-mt-24",
-        top ? "border-t border-line-soft" : "border-t border-dashed border-line-soft",
+        top ? "border-t border-line-strong" : "border-t border-dotted border-line-soft",
         shaded && "bg-fill-soft",
       )}
       style={{ top: b.y, height: b.bottom - b.y }}
@@ -367,7 +365,7 @@ function BlockBand({
       <div
         className={cn(
           // Opaque, so the axis and bars pass behind the words.
-          "absolute flex max-w-full min-w-0 items-center gap-1.5 rounded-full bg-surface-950 pr-1",
+          "absolute z-lift flex max-w-full min-w-0 items-center gap-1.5 bg-surface-900 px-1.5",
           top ? "top-2" : "top-1.5",
           wide ? "left-1/2 -translate-x-1/2 justify-center" : "right-0",
         )}
@@ -375,13 +373,12 @@ function BlockBand({
       >
         <span
           className={cn(
-            "min-w-0 truncate whitespace-nowrap rounded-full border",
-            "bg-surface-950",
+            "min-w-0 truncate whitespace-nowrap font-headline",
             top
-              ? "border-line px-2.5 py-0.5 text-2xs font-semibold text-fg-strong"
+              ? "text-base font-black text-fg-strong"
               : b.depth === 1
-                ? "border-line-soft px-2 py-px text-2xs font-semibold text-fg-primary"
-                : "border-line-soft px-1.5 py-px text-3xs font-semibold text-fg-secondary",
+                ? "text-sm font-bold text-fg-primary"
+                : "text-xs font-bold text-fg-secondary",
           )}
         >
           {label}
@@ -389,21 +386,22 @@ function BlockBand({
         {title && (
           <span
             className={cn(
-              "min-w-0 truncate whitespace-nowrap",
+              "min-w-0 truncate whitespace-nowrap font-news italic",
               top ? "text-xs text-fg-secondary" : "text-2xs text-fg-muted",
             )}
           >
             {title}
           </span>
         )}
-        <MicroLabel className="shrink-0 whitespace-nowrap tabular-nums">{b.count}</MicroLabel>
+        <span className={cn(KICKER, "shrink-0 whitespace-nowrap tabular-nums text-fg-muted")}>
+          {b.count}
+        </span>
         {b.mode === "leaf" && b.canSplit && (
           <IconButton
             icon={<PlusIcon className="h-3 w-3" />}
             aria-label={de ? `${label} aufteilen` : `Split ${label}`}
             title={de ? "Feiner aufteilen" : "Split into finer blocks"}
             size="xs"
-            shape="pill"
             onClick={() => onOverride(b.id, "split")}
           />
         )}
@@ -413,7 +411,6 @@ function BlockBand({
           aria-expanded={true}
           title={de ? "Zuklappen" : "Fold"}
           size="xs"
-          shape="pill"
           onClick={() => onOverride(b.chain[0].id, "fold")}
         />
       </div>
@@ -443,8 +440,8 @@ function GapBand({
       )}
       style={{ top: g.y, height: g.bottom - g.y, ...(wide ? {} : { paddingLeft: textLeft?.left }) }}
     >
-      <span className="bg-surface-950 px-1.5 text-3xs italic text-fg-disabled">
-        {gapLabel(g.gap, lang)}
+      <span className="relative z-lift bg-surface-900 px-1.5 font-news text-xs italic text-fg-muted">
+        · · · {gapLabel(g.gap, lang)} · · ·
       </span>
     </div>
   );

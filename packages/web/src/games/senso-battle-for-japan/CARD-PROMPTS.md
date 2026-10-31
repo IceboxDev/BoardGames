@@ -17,8 +17,7 @@ pnpm --filter @boardgames/web card-art          # trims, shrinks, writes assets/
 pnpm --filter @boardgames/web card-art --strict # also fails on orphans / over budget
 ```
 
-and commit the webp files. Art can arrive in any order: every layer has a drawn fallback,
-and `/dev/senso-cards` lists what is still missing.
+and commit the webp files. Art can arrive in any order: every layer has a drawn fallback.
 
 **Status (2026-09-13):** every block below is generated and converted except
 `kanji-ninja.png` — the Ninja ribbon draws its text fallback until it lands. The

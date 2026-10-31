@@ -201,6 +201,7 @@ describe("QuizDeskProvenanceSchema", () => {
       verbatim: 1,
       primary: 0,
       contested: false,
+      researchReport: false,
       latestConfidence: "high",
     },
     sources: [

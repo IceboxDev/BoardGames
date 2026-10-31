@@ -29,6 +29,9 @@
  *   4. Self-highlight — a tiny white arrow tucked below the bubble pointing
  *      up at it. Sits outside the ring so it never crowds the team colour and
  *      reads as "this is you" regardless of tone or team.
+ *   5. Crossed — a small rose ✗ badge on the top-left corner (One Night
+ *      Werewolf: voted out). Top-left because each bubble overlaps its LEFT
+ *      neighbour's right edge, so a left badge is never covered.
  */
 
 import { initialsFromName } from "../../lib/names.ts";
@@ -99,6 +102,8 @@ type Props = {
   isMe?: boolean;
   /** Team-alignment colour applied to the ring + a tint in the background. */
   accent?: Accent;
+  /** Marks the player with a ✗ badge; the text is read out (e.g. "voted out"). */
+  crossed?: string;
 };
 
 export function AvatarBubble({
@@ -108,6 +113,7 @@ export function AvatarBubble({
   title,
   isMe = false,
   accent = "neutral",
+  crossed,
 }: Props) {
   const bg = tone === "winner" ? WINNER_BG[accent] : tone === "loser" ? LOSER_BG[accent] : MUTED_BG;
   const ring = accent !== "neutral" ? TEAM_RING[accent] : TONE_RING_FALLBACK[tone];
@@ -115,10 +121,25 @@ export function AvatarBubble({
     <span
       title={isMe ? `${title ?? name} (you)` : (title ?? name)}
       role="img"
-      aria-label={isMe ? `${name} (you)` : name}
+      aria-label={[name, isMe ? " (you)" : "", crossed ? `, ${crossed}` : ""].join("")}
       className={`relative inline-grid shrink-0 place-items-center rounded-full font-bold ${SIZE_CLASS[size]} ${bg} ${ring} ${TONE_TEXT[tone]}`}
     >
       <span aria-hidden="true">{initialsFromName(name)}</span>
+      {crossed && (
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-1 -top-1 grid h-3 w-3 place-items-center rounded-full bg-rose-500 text-white ring-1 ring-surface-900"
+        >
+          <svg aria-hidden="true" viewBox="0 0 8 8" className="h-1.5 w-1.5" fill="none">
+            <path
+              d="M1 1l6 6M7 1L1 7"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+            />
+          </svg>
+        </span>
+      )}
       {isMe && (
         // Small white caret sitting just below the bubble, pointing up at it.
         // SVG (not unicode) so its size and stroke stay consistent across

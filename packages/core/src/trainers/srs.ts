@@ -234,6 +234,11 @@ export interface QueueInput {
    * always dealt, outside `newRemaining`.
    */
   startedArticles?: ReadonlySet<string>;
+  /**
+   * The day's new articles, already chosen (`packDailyArticles`): every
+   * unseen card of these is dealt and `newRemaining` is not consulted.
+   */
+  freshArticles?: ReadonlySet<string>;
 }
 
 /**
@@ -270,7 +275,9 @@ export function buildDailyQueue(input: QueueInput): QueueItem[] {
   const budget = Math.max(0, input.newRemaining);
   for (const [art, ids] of groups) {
     if (input.startedArticles?.has(art)) leftover.push(...ids);
-    else if (fresh.length + ids.length <= budget || (fresh.length === 0 && budget > 0)) {
+    else if (input.freshArticles) {
+      if (input.freshArticles.has(art)) fresh.push(...ids);
+    } else if (fresh.length + ids.length <= budget || (fresh.length === 0 && budget > 0)) {
       fresh.push(...ids);
     }
   }
@@ -284,6 +291,66 @@ export function buildDailyQueue(input: QueueInput): QueueItem[] {
       ? groupSiblings(items, (it) => input.articleOf(it.questionId))
       : shuffle(items, createRng(input.shuffleSeed));
   return ordered.slice(0, Math.max(0, input.limit));
+}
+
+/** New facts in one day's batch. */
+export const DAILY_NEW_FACTS = 15;
+
+/** The article sizes a batch of 15 is made of, in any order. */
+export const DAILY_SHAPES: readonly (readonly number[])[] = [
+  [7, 8],
+  [5, 5, 5],
+  [4, 5, 6],
+];
+
+/**
+ * One batch of new articles: walk `candidates` (unread articles in the
+ * member's order, `size` = facts) and return the first combination that
+ * matches a shape — the one whose last article comes earliest, the others
+ * as early as they can — so a batch is always exactly 15 facts. When no
+ * shape can be made (the end of the bank, a narrow scope), articles are
+ * taken in order while they fit under `target`, and never nothing while
+ * anything is left. Ids come back in `candidates` order.
+ */
+export function packDailyArticles(
+  candidates: readonly { id: string; size: number }[],
+  target: number = DAILY_NEW_FACTS,
+  shapes: readonly (readonly number[])[] = DAILY_SHAPES,
+): string[] {
+  const bySize = new Map<number, number[]>();
+  for (let i = 0; i < candidates.length; i++) {
+    const size = candidates[i].size;
+    for (const shape of shapes) {
+      const k = shape.indexOf(size);
+      if (k < 0) continue;
+      const rest = [...shape.slice(0, k), ...shape.slice(k + 1)];
+      const used = new Map<number, number>();
+      const picked: number[] = [];
+      for (const need of rest) {
+        const pool = bySize.get(need) ?? [];
+        const at = used.get(need) ?? 0;
+        if (at >= pool.length) break;
+        picked.push(pool[at]);
+        used.set(need, at + 1);
+      }
+      if (picked.length === rest.length) {
+        return [...picked, i].sort((a, b) => a - b).map((j) => candidates[j].id);
+      }
+    }
+    const pool = bySize.get(size);
+    if (pool) pool.push(i);
+    else bySize.set(size, [i]);
+  }
+  const out: string[] = [];
+  let total = 0;
+  for (const c of candidates) {
+    if (total + c.size <= target) {
+      out.push(c.id);
+      total += c.size;
+    }
+  }
+  if (out.length === 0 && candidates.length > 0) out.push(candidates[0].id);
+  return out;
 }
 
 /** A deterministic shuffle (same seed, same order) for the day's study mix. */

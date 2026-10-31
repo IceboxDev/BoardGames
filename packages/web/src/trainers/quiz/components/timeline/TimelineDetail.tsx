@@ -1,6 +1,6 @@
 import { formatTimelineDate } from "@boardgames/core/quiz/timeline";
 import { ChevronLeftIcon, ChevronRightIcon, XIcon } from "../../../../components/icons";
-import { Badge, Button, Eyebrow, IconButton, Kbd, MicroLabel } from "../../../../components/ui";
+import { IconButton, Kbd } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import { findFact } from "../../content";
 import { domainOf } from "../../domains";
@@ -10,10 +10,10 @@ import { questionOf } from "../../hooks/useTrainerSession";
 import type { TimelineItem, TimelineText } from "../../logic/timeline-layout";
 import type { TrainerPaths } from "../../paths";
 import { SourceLink } from "../common/SourceLink";
-import { TextLink } from "../common/TextLink";
+import { Headline, JumpLine, Kicker, PrintButton, Stamp } from "../paper/Paper";
+import { KICKER } from "../paper/paper-style";
 import { ReportButton } from "../report/ReportButton";
 import { kindLabel } from "./era-copy";
-import { DATE_INK } from "./tones";
 
 // One pinned moment, opened: the full date, what happened, the question it
 // came from and its answer, the source to cross-check it, and the way back
@@ -93,12 +93,10 @@ export function TimelineDetail({
   return (
     <div className="flex flex-col gap-4" lang={lang}>
       <div className="flex items-center gap-2">
-        <Badge tone={d.tone} size="sm" title={`${d.label} · ${d.en} / ${d.de}`}>
-          {de ? d.de : d.en}
-        </Badge>
-        <Badge tone={item.known ? "emerald" : "amber"} size="xs">
+        <Kicker domain={item.domain} icon={20} className="min-w-0" />
+        <Stamp tone={item.known ? "emerald" : "accent"}>
           {item.known ? (de ? "Sitzt" : "Known") : de ? "Lernt noch" : "Still learning"}
-        </Badge>
+        </Stamp>
         {!embedded && (
           <IconButton
             variant="ghost"
@@ -113,52 +111,52 @@ export function TimelineDetail({
       </div>
 
       <div className="flex flex-col gap-1">
-        <MicroLabel>
+        <span className={cn(KICKER, "text-fg-muted")}>
           {kindLabel(item.event.kind, lang)}
           {item.event.approx ? (de ? " · ungefähr" : " · approximate") : ""}
-        </MicroLabel>
-        <p className={cn("text-2xl font-bold leading-tight tabular-nums", DATE_INK[d.tone])}>
+        </span>
+        <Headline as="p" size="lg" className="tabular-nums">
           {date}
-        </p>
-        <p className="text-base font-medium leading-snug text-fg-strong">{label}</p>
+        </Headline>
+        <p className="font-news text-base italic leading-snug text-fg-secondary">{label}</p>
       </div>
 
-      <div className="flex flex-col gap-3 border-t border-line-soft pt-3">
+      <div className="flex flex-col gap-3 border-t border-line-strong pt-3">
         {text ? (
           <>
             <div className="flex flex-col gap-1">
-              <Eyebrow size="sm">{de ? "Frage" : "Question"}</Eyebrow>
-              <p className="text-sm leading-relaxed text-fg-secondary">{de ? text.de : text.en}</p>
+              <span className={cn(KICKER, "text-fg-muted")}>{de ? "Frage" : "Question"}</span>
+              <p className="font-news text-sm leading-relaxed text-fg-primary">
+                {de ? text.de : text.en}
+              </p>
             </div>
             <div className="flex flex-col gap-1">
-              <Eyebrow size="sm" className={DATE_INK[d.tone]}>
-                {de ? "Antwort" : "Answer"}
-              </Eyebrow>
-              <p className={cn("text-lg font-semibold leading-snug", DATE_INK[d.tone])}>
+              <span className={cn(KICKER, d.ink)}>{de ? "Antwort" : "Answer"}</span>
+              <p className={cn("font-headline text-xl font-bold leading-snug", d.ink)}>
                 {de ? text.answerDe : text.answerEn}
               </p>
             </div>
             {text.source && (
               <div className="flex flex-col gap-1">
-                <Eyebrow size="sm">{de ? "Quelle" : "Source"}</Eyebrow>
+                <span className={cn(KICKER, "text-fg-muted")}>{de ? "Quelle" : "Source"}</span>
                 <SourceLink source={text.source} variant="full" />
               </div>
             )}
           </>
         ) : pending ? (
-          <p className="text-sm text-fg-muted">
+          <p className="font-news text-sm italic text-fg-muted">
             {de ? "Lade die Frage…" : "Loading the question…"}
           </p>
         ) : null}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
           {articleId && (
             <>
-              <TextLink to={paths.wikiArticle(articleId, item.questionId)}>
-                {de ? "Im Wiki lesen →" : "Read in the wiki →"}
-              </TextLink>
-              <TextLink tone="muted" to={paths.study({ article: articleId })}>
+              <JumpLine to={paths.wikiArticle(articleId, item.questionId)}>
+                {de ? "Im Archiv lesen" : "Read in the archive"}
+              </JumpLine>
+              <JumpLine to={paths.study({ article: articleId })}>
                 {de ? "Artikel üben" : "Study this article"}
-              </TextLink>
+              </JumpLine>
             </>
           )}
           <ReportButton
@@ -176,16 +174,14 @@ export function TimelineDetail({
           />
         </div>
         {studied && (
-          <p className="text-2xs text-fg-muted">
+          <p className="font-news text-xs italic text-fg-muted">
             {de ? `Zuletzt geübt am ${studied}` : `Last studied ${studied}`}
           </p>
         )}
       </div>
 
-      <div className="flex items-center justify-between gap-2 border-t border-line-soft pt-3">
-        <Button
-          size="sm"
-          variant="secondary"
+      <div className="flex items-center justify-between gap-2 border-t border-line-strong pt-3">
+        <PrintButton
           onClick={onPrev ?? undefined}
           disabled={!onPrev}
           title={de ? "Früher (←)" : "Earlier (←)"}
@@ -193,13 +189,11 @@ export function TimelineDetail({
           <ChevronLeftIcon className="h-3.5 w-3.5" />
           {de ? "Früher" : "Earlier"}
           <Kbd className="hidden sm:inline-flex">←</Kbd>
-        </Button>
-        <MicroLabel className="tabular-nums">
-          {position.index + 1} / {position.total}
-        </MicroLabel>
-        <Button
-          size="sm"
-          variant="secondary"
+        </PrintButton>
+        <span className={cn(KICKER, "tabular-nums text-fg-muted")}>
+          {position.index + 1} of {position.total}
+        </span>
+        <PrintButton
           onClick={onNext ?? undefined}
           disabled={!onNext}
           title={de ? "Später (→)" : "Later (→)"}
@@ -207,7 +201,7 @@ export function TimelineDetail({
           <Kbd className="hidden sm:inline-flex">→</Kbd>
           {de ? "Später" : "Later"}
           <ChevronRightIcon className="h-3.5 w-3.5" />
-        </Button>
+        </PrintButton>
       </div>
     </div>
   );

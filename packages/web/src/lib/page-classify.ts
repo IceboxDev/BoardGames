@@ -38,6 +38,7 @@ const TRAINER_SUBROUTES: Readonly<Record<string, PageViewPage>> = {
   study: "trainer-study",
   wiki: "trainer-wiki",
   timeline: "trainer-timeline",
+  record: "trainer-record",
   explore: "trainer-explore",
 };
 
@@ -120,9 +121,9 @@ export function classifyRoute(pathname: string, search: string): ClassifiedView 
       const page = PROFILE_SUBPAGES[sub];
       return page ? { page, detail: second } : null;
     }
-    // Deliberately not logged: /login and /reset-password (signed out),
-    // /dev/* previews (dev builds only) and `/play/quiztopia/solo/*` (a
-    // redirect into `/trainer/quiz`, which logs itself).
+    // Deliberately not logged: /login and /reset-password (signed out) and
+    // `/play/quiztopia/solo/*` (a redirect into `/trainer/quiz`, which logs
+    // itself).
     default:
       return null;
   }

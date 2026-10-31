@@ -12,6 +12,7 @@ import type {
   MatchOutcomeTeams,
   MatchRecord,
 } from "@boardgames/core/history/types";
+import { useId, useMemo, useState } from "react";
 import {
   CLOCKTOWER_EDITIONS,
   detectClocktowerEdition,
@@ -25,9 +26,10 @@ import {
   lowScoreWinsForSlug,
 } from "../../games/score-config";
 import { artsWedgeForScenario } from "../../games/trivial-pursuit/palette";
-import { BookIcon, EditIcon, XIcon } from "../icons";
+import { cn } from "../../lib/cn";
+import { BookIcon, ChevronDownIcon, EditIcon, XIcon } from "../icons";
 import { Badge } from "../ui/Badge";
-import { IconButton } from "../ui/IconButton";
+import { Button } from "../ui/Button";
 import { MicroLabel } from "../ui/Label";
 import { AvatarBubble } from "./AvatarBubble";
 import { conditionMeta, isDndSlug, resolutionOf } from "./dnd";
@@ -37,6 +39,12 @@ import {
   sensoFfaStandings,
   sensoTeamsStandings,
 } from "./forms/senso-standings";
+import {
+  type MatchLead,
+  type MatchStandings,
+  matchStandings,
+  type StandingGroup,
+} from "./standings";
 import { WedgePie } from "./WedgePie";
 
 type Props = {
@@ -46,71 +54,254 @@ type Props = {
   currentUserId: string | null;
   onEdit?: (m: MatchRecord) => void;
   onDelete?: (m: MatchRecord) => void;
+  /** Admin: move this match one place earlier / later within its night. */
+  onMoveEarlier?: () => void;
+  onMoveLater?: () => void;
 };
 
 const THUMB_BY_SLUG = new Map(games.map((g) => [g.slug, g.thumbnail] as const));
 
-export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: Props) {
+/**
+ * One match in a night's list. The row reads at a glance — thumb, title,
+ * variant, and the result: on a phone the winner on the right and the next
+ * three under the title (`standings.ts`), from `sm` the full inline result.
+ * Tapping the row opens the full standings and, for admins, the match's
+ * actions (edit, move, delete) — which therefore work on touch too.
+ */
+export function MatchCard({
+  match,
+  isAdmin,
+  currentUserId,
+  onEdit,
+  onDelete,
+  onMoveEarlier,
+  onMoveLater,
+}: Props) {
+  const [open, setOpen] = useState(false);
+  const detailsId = useId();
   const thumb = match.gameSlug ? THUMB_BY_SLUG.get(match.gameSlug) : undefined;
   const subtitle = deriveTitleSubtitle(match.outcome, match.gameSlug);
+  const standings = useMemo(
+    () => matchStandings(match.outcome, match.gameSlug),
+    [match.outcome, match.gameSlug],
+  );
+  const hasActions = isAdmin && (onEdit || onDelete || onMoveEarlier || onMoveLater);
   return (
-    <article className="group relative flex flex-col gap-1.5 rounded-card-lg bg-surface-900/40 px-2.5 py-1.5 text-sm transition hover:bg-surface-900/70 sm:flex-row sm:items-center sm:gap-3">
-      {/* Thumb + title share one row on phone; `sm:contents` dissolves this
-          wrapper at sm+ so they rejoin the article's single-row flow. */}
-      <div className="flex min-w-0 items-center gap-3 sm:contents">
+    <article className="text-sm">
+      <div className="relative flex min-h-16 items-center gap-3 px-3 py-2.5 transition-colors hover:bg-fill-soft">
+        {/* biome-ignore lint/correctness/noRestrictedElements: the whole row is the disclosure — an invisible stretched control over the row's own layout, not a styled button */}
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={detailsId}
+          aria-label={`${match.gameTitle}: ${open ? "hide" : "show"} standings`}
+          onClick={() => setOpen((o) => !o)}
+          className="absolute inset-0 z-lift cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-400/60"
+        />
         {thumb ? (
           <img
             src={thumb}
             alt=""
             loading="lazy"
             decoding="async"
-            className="h-10 w-10 shrink-0 rounded-card-md object-cover"
+            className="h-11 w-11 shrink-0 rounded-card-md object-cover"
           />
         ) : (
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-3xs font-semibold uppercase tracking-label text-fg-muted">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-3xs font-semibold uppercase tracking-label text-fg-muted">
             {match.gameTitle.slice(0, 2)}
           </div>
         )}
 
-        {/* Fills the row beside the thumb on phone; fixed-width column at sm+ so
-            long names like "One Night Ultimate Werewolf" stop truncating. */}
+        {/* Fills the row on phone; a fixed column at sm+ so long names like
+            "One Night Ultimate Werewolf" stop truncating. */}
         <div className="min-w-0 flex-1 sm:w-56 sm:flex-none">
-          <div className="truncate text-sm font-medium text-fg-primary">{match.gameTitle}</div>
-          {subtitle && <div className="truncate text-3xs italic text-fg-muted">{subtitle}</div>}
+          <div className="truncate font-semibold text-fg-primary">{match.gameTitle}</div>
+          {subtitle && <div className="truncate text-2xs italic text-fg-muted">{subtitle}</div>}
+          <PreviewLine standings={standings} currentUserId={currentUserId} />
         </div>
-      </div>
 
-      <div className="min-w-0 flex-1">
-        <CompactOutcome
-          outcome={match.outcome}
-          gameSlug={match.gameSlug}
-          currentUserId={currentUserId}
+        <div className="hidden min-w-0 flex-1 sm:block">
+          <CompactOutcome
+            outcome={match.outcome}
+            gameSlug={match.gameSlug}
+            currentUserId={currentUserId}
+          />
+        </div>
+
+        <div className="shrink-0 sm:hidden">
+          <LeadView lead={standings.lead} currentUserId={currentUserId} />
+        </div>
+        <ChevronDownIcon
+          aria-hidden="true"
+          className={cn(
+            "h-4 w-4 shrink-0 text-fg-disabled transition-transform",
+            open && "rotate-180",
+          )}
         />
       </div>
 
-      {isAdmin && (onEdit || onDelete) && (
-        <div className="absolute right-1.5 top-1.5 flex items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100 sm:static sm:shrink-0">
-          {onEdit && (
-            <IconButton
-              variant="subtle"
-              size="xs"
-              aria-label="Edit"
-              onClick={() => onEdit(match)}
-              icon={<EditIcon className="h-3.5 w-3.5" />}
-            />
-          )}
-          {onDelete && (
-            <IconButton
-              tone="rose"
-              size="xs"
-              aria-label="Delete"
-              onClick={() => onDelete(match)}
-              icon={<XIcon className="h-3.5 w-3.5" />}
-            />
+      {open && (
+        <div id={detailsId} className="flex flex-col gap-3 px-3 pb-3 sm:pl-17">
+          <StandingsList groups={standings.groups} currentUserId={currentUserId} />
+          {hasActions && (
+            <div className="flex flex-wrap gap-2">
+              {onEdit && (
+                <Button variant="secondary" size="sm" onClick={() => onEdit(match)}>
+                  <EditIcon className="h-3.5 w-3.5" /> Edit
+                </Button>
+              )}
+              {onMoveEarlier && (
+                <Button variant="secondary" size="sm" onClick={onMoveEarlier}>
+                  ↑ Earlier
+                </Button>
+              )}
+              {onMoveLater && (
+                <Button variant="secondary" size="sm" onClick={onMoveLater}>
+                  ↓ Later
+                </Button>
+              )}
+              {onDelete && (
+                <Button variant="danger" size="sm" onClick={() => onDelete(match)}>
+                  <XIcon className="h-3.5 w-3.5" /> Delete
+                </Button>
+              )}
+            </div>
           )}
         </div>
       )}
     </article>
+  );
+}
+
+// ── Phone summary: the leader on the right, the next three under the title ──
+
+function LeadView({ lead, currentUserId }: { lead: MatchLead; currentUserId: string | null }) {
+  if (lead.kind === "badge") return <Badge tone={lead.tone}>{lead.text}</Badge>;
+  if (lead.rows.length === 0) return null;
+  if (lead.rows.length === 1) {
+    const [p] = lead.rows;
+    return (
+      <span className="inline-flex items-center gap-2">
+        <AvatarBubble name={p.name} tone="winner" isMe={p.userId === currentUserId} />
+        {lead.value && (
+          <span className="min-w-5 text-right text-sm font-bold tabular-nums text-fg-strong">
+            {lead.value}
+          </span>
+        )}
+      </span>
+    );
+  }
+  // A winning team (or a shared win): a short stack, the rest counted.
+  const shown = lead.rows.slice(0, 3);
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      <span className="inline-flex -space-x-1.5">
+        {shown.map((p) => (
+          <AvatarBubble
+            key={p.userId}
+            name={p.name}
+            tone="winner"
+            size="sm"
+            isMe={p.userId === currentUserId}
+          />
+        ))}
+      </span>
+      {lead.rows.length > shown.length && (
+        <span className="text-2xs tabular-nums text-fg-muted">
+          +{lead.rows.length - shown.length}
+        </span>
+      )}
+      {lead.value && (
+        <span className="text-sm font-bold tabular-nums text-fg-strong">{lead.value}</span>
+      )}
+    </span>
+  );
+}
+
+function PreviewLine({
+  standings,
+  currentUserId,
+}: {
+  standings: MatchStandings;
+  currentUserId: string | null;
+}) {
+  if (standings.preview.length === 0) return null;
+  return (
+    <div className="mt-0.5 truncate text-xs tabular-nums text-fg-secondary sm:hidden">
+      {standings.previewLead && <span className="text-fg-muted">{standings.previewLead} </span>}
+      {standings.preview.map((e, i) => (
+        <span key={e.userId}>
+          {i > 0 && <span className="text-fg-disabled"> · </span>}
+          <span
+            className={e.userId === currentUserId ? "font-semibold text-accent-300" : undefined}
+          >
+            {e.text}
+          </span>
+        </span>
+      ))}
+      {standings.more > 0 && <span className="text-fg-muted"> +{standings.more}</span>}
+    </div>
+  );
+}
+
+// ── Expanded: the full standings ──────────────────────────────────────
+
+function StandingsList({
+  groups,
+  currentUserId,
+}: {
+  groups: StandingGroup[];
+  currentUserId: string | null;
+}) {
+  const ranked = groups.some((g) => g.rows.some((r) => r.place !== undefined));
+  return (
+    <div className="flex flex-col gap-2">
+      {groups.map((g, gi) => (
+        // biome-ignore lint/suspicious/noArrayIndexKey: groups are positional and never reorder in place.
+        <div key={gi} className="flex flex-col">
+          {g.label && (
+            <MicroLabel as="p" className="pb-1">
+              {g.label}
+            </MicroLabel>
+          )}
+          {g.rows.map((r) => (
+            <div key={r.userId} className="flex min-h-9 items-center gap-2.5 py-0.5">
+              {ranked && (
+                <span className="w-5 shrink-0 text-right text-2xs tabular-nums text-fg-muted">
+                  {r.place ?? ""}
+                </span>
+              )}
+              <AvatarBubble
+                name={r.name}
+                size="sm"
+                tone={r.tone}
+                isMe={r.userId === currentUserId}
+              />
+              <span className="flex min-w-0 flex-1 flex-wrap items-center gap-x-2 gap-y-0.5">
+                <span
+                  className={cn(
+                    "truncate",
+                    r.userId === currentUserId
+                      ? "font-semibold text-accent-300"
+                      : "text-fg-primary",
+                  )}
+                >
+                  {r.name}
+                </span>
+                {r.notes.map((n) => (
+                  <MicroLabel key={n}>{n}</MicroLabel>
+                ))}
+              </span>
+              {r.value && (
+                <span className="shrink-0 text-sm font-semibold tabular-nums text-fg-strong">
+                  {r.value}
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -172,7 +363,7 @@ function teamAccents(outcome: MatchOutcomeTeams, gameSlug: string | null): Accen
   if (gameSlug === "one-night-ultimate-werewolf") {
     return outcome.teams.map((t) => {
       const first = (t.members[0]?.role ?? "").toLowerCase();
-      if (first === "werewolf" || first === "werewolves") return "wolf";
+      if (first === "werewolf" || first === "werewolves" || first === "minion") return "wolf";
       if (first === "tanner") return "tanner";
       return "village";
     });
@@ -461,11 +652,13 @@ function TeamsInline({
                   tone={isWinner ? "winner" : "loser"}
                   accent={accent}
                   isMe={m.userId === currentUserId}
-                  title={
+                  crossed={m.eliminated ? "voted out" : undefined}
+                  title={[
                     m.role
                       ? `${m.displayName} — ${m.role}${isClocktowerTraveller(m.role) ? " (Traveller)" : ""}`
-                      : m.displayName
-                  }
+                      : m.displayName,
+                    m.eliminated ? " (voted out)" : "",
+                  ].join("")}
                 />
               ))}
             </span>

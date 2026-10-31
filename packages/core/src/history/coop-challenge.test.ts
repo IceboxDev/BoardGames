@@ -57,6 +57,20 @@ describe("coopScorePoolValue / coopScorePoolKey", () => {
     expect(coopScorePoolValue(QUIZTOPIA_SLUG, {})).toBeNull();
   });
 
+  it("pools Just One by ruleset, a missing one counting as Standard", () => {
+    const standard = coopScorePoolKey("just-one", { scenario: "Standard", score: 7 });
+    expect(coopScorePoolKey("just-one", { score: 7 })).toBe(standard);
+    expect(coopScorePoolKey("just-one", { scenario: "Discardless", score: 7 })).not.toBe(standard);
+  });
+
+  it("pools Medical Mysteries by patient, a missing one counting as the first case", () => {
+    const first = coopScorePoolKey("medical-mysteries-nyc", { scenario: "Shyla Patel", score: 45 });
+    expect(coopScorePoolKey("medical-mysteries-nyc", { score: 45 })).toBe(first);
+    expect(
+      coopScorePoolKey("medical-mysteries-nyc", { scenario: "Pete Johnson", score: 45 }),
+    ).not.toBe(first);
+  });
+
   it("splits margin pools by tier and mode; plain scored co-ops pool by slug", () => {
     const normal = coopScorePoolKey(QUIZTOPIA_SLUG, { difficulty: "Normal", score: 9 });
     const wahnsinn = coopScorePoolKey(QUIZTOPIA_SLUG, { difficulty: "Wahnsinn", score: 9 });
@@ -67,7 +81,9 @@ describe("coopScorePoolValue / coopScorePoolKey", () => {
     });
     expect(normal).not.toBe(wahnsinn);
     expect(normal).not.toBe(expert);
-    expect(coopScorePoolKey("just-one", { score: 11 })).toBe("just-one");
+    expect(coopScorePoolKey("medical-mysteries-miami", { score: 11 })).toBe(
+      "medical-mysteries-miami",
+    );
   });
 });
 

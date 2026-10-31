@@ -68,6 +68,7 @@ export const PAGE_LABELS: Readonly<Record<PageViewPage, PageLabel>> = {
   "trainer-study": (deck) => `Started studying ${trainerName(deck)}`,
   "trainer-wiki": (deck) => `Read the ${trainerName(deck)} wiki`,
   "trainer-timeline": (deck) => `Opened their ${trainerName(deck)} timeline`,
+  "trainer-record": (deck) => `Read their ${trainerName(deck)} record`,
   "trainer-explore": (deck) => `Explored the ${trainerName(deck)} globe`,
 
   "go-review": (id) => (id ? `Opened Go review #${id}` : "Opened Go game reviews"),

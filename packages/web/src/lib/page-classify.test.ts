@@ -61,6 +61,7 @@ describe("classifyRoute", () => {
     expect(at("/trainer/quiz/wiki/reports")).toEqual({ page: "trainer-wiki", detail: "quiz" });
     expect(at("/trainer/quiz/wiki/journal")).toEqual({ page: "trainer-wiki", detail: "quiz" });
     expect(at("/trainer/quiz/timeline")).toEqual({ page: "trainer-timeline", detail: "quiz" });
+    expect(at("/trainer/quiz/record")).toEqual({ page: "trainer-record", detail: "quiz" });
     expect(at("/play/quiztopia/solo")).toBeNull();
     expect(at("/play/quiztopia/solo/wiki/history/c12")).toBeNull();
     // The table game is still the game.
@@ -84,9 +85,8 @@ describe("classifyRoute", () => {
     expect(at("/trainer/other")).toBeNull();
   });
 
-  it("skips signed-out and dev pages", () => {
+  it("skips signed-out pages", () => {
     expect(at("/login")).toBeNull();
     expect(at("/reset-password")).toBeNull();
-    expect(at("/dev/ui")).toBeNull();
   });
 });

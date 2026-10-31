@@ -249,12 +249,18 @@ type LineupReactionRow = {
 
 /**
  * The night's lineup from raw reaction rows. Only `voters` count (see
- * `deriveNightParticipants`). Host-pick mode ignores the popularity ranking:
- * the lineup is the host's hyped games in the order they were picked.
+ * `deriveNightParticipants`). The curated modes — host picks, admin picks —
+ * ignore the popularity ranking: the lineup is the pickers' hyped games in
+ * the order they were picked (the host and the admins, or the admins alone).
  * Everything else — open nights and group-pick private nights — ranks with
  * `rankTopSlugs`. Shared by `/locks` (`topGameSlug`) and the per-date payload
  * (`topSlugs`) so the two can never disagree.
  */
+/** Host picks and admin picks: a pick order, not a vote. */
+export function isCuratedPickMode(mode: PickMode): boolean {
+  return mode === "host" || mode === "admin";
+}
+
 export function rankNightLineup(
   opts: {
     pickMode: PickMode;
@@ -276,11 +282,11 @@ export function rankNightLineup(
     }
     agg[r.reaction] += 1;
   }
-  if (opts.isPrivate && opts.pickMode === "host") {
+  if (opts.isPrivate && isCuratedPickMode(opts.pickMode)) {
     const picks = reactions
       .filter(
         (r) =>
-          r.user_id === opts.hostUserId &&
+          opts.voters.has(r.user_id) &&
           r.reaction === "hype" &&
           opts.playableSlugs.has(r.game_slug),
       )
@@ -502,7 +508,7 @@ export async function computeAvailableGamesPayload(opts: {
   // The games that just missed the cut — an admin's view of what's close.
   // A host-pick lineup is a pick order, not a ranking, so it has none.
   const runnerUpSlugs =
-    viewerIsAdmin && !(lock.isPrivate && lock.pickMode === "host")
+    viewerIsAdmin && !(lock.isPrivate && isCuratedPickMode(lock.pickMode))
       ? lineup.topSlugs.slice(TOP_PICKS)
       : [];
 

@@ -140,19 +140,18 @@ export type GameStanding = {
 
 /**
  * Per-game "Best at …" boards. A board exists when the game has at least
- * `minGameBoardPlays` rated plays overall; entries need ≥2 plays (a single
- * play is pure prior) and the board needs ≥2 entries to be a comparison.
+ * `minGameBoardPlays` rated matches (each match once, not once per player);
+ * entries need ≥2 plays (a single play is pure prior) and the board needs ≥2
+ * entries to be a comparison.
  */
 export function gameLeaderboards(
   fit: SkillFitResult,
   visibleIds: ReadonlySet<string>,
   config: SkillConfig = SKILL_CONFIG_V1,
 ): Record<string, GameStanding[]> {
-  const totalPlays = new Map<string, number>();
   const entries = new Map<string, { userId: string; rating: number; matches: number }[]>();
   for (const [id, p] of Object.entries(fit.players)) {
     for (const [slug, game] of Object.entries(p.games)) {
-      totalPlays.set(slug, (totalPlays.get(slug) ?? 0) + game.matches);
       if (!visibleIds.has(id) || !p.eligible || game.matches < 2) continue;
       const list = entries.get(slug) ?? [];
       list.push({ userId: id, rating: game.rating, matches: game.matches });
@@ -162,7 +161,7 @@ export function gameLeaderboards(
 
   const out: Record<string, GameStanding[]> = {};
   for (const slug of [...entries.keys()].sort()) {
-    if ((totalPlays.get(slug) ?? 0) < config.minGameBoardPlays) continue;
+    if ((fit.matchesByGame[slug] ?? 0) < config.minGameBoardPlays) continue;
     const list = entries.get(slug) ?? [];
     if (list.length < 2) continue;
     list.sort((a, b) => {

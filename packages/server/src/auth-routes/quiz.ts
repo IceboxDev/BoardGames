@@ -136,14 +136,14 @@ quizRoutes.get("/trainer/overview", zQuery(TrainerOverviewQuerySchema), async (c
 
 quizRoutes.get("/trainer/queue", zQuery(TrainerQueueQuerySchema), async (c) => {
   const user = c.get("user");
-  const { today, domain, limit, includeLeeches } = c.req.valid("query");
+  const { today, domain, limit, includeLeeches, more } = c.req.valid("query");
   const db = getDb();
   const store = getContentStore();
   const settings = await readSettings(db, user.id);
   const queue = await trainerQueue(
     db,
     user.id,
-    { today, domain, limit, includeLeeches },
+    { today, domain, limit, includeLeeches, more },
     store,
     settings,
   );

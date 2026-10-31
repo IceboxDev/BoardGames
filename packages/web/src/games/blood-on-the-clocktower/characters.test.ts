@@ -3,6 +3,9 @@ import { describe, expect, it } from "vitest";
 import {
   charactersByCategory,
   clocktowerAlignment,
+  clocktowerEditionFromLabel,
+  clocktowerEditionLabel,
+  clocktowerSetupProblems,
   detectClocktowerEdition,
   findClocktowerCharacter,
   isFabled,
@@ -48,5 +51,55 @@ describe("the match-history catalog agrees with the companion's", () => {
     });
     expect(isFabled("Djinn")).toBe(true);
     expect(findClocktowerCharacter("Djinn")).toBeNull();
+  });
+});
+
+describe("clocktowerSetupProblems", () => {
+  const tb8 = ["Undertaker", "Washerwoman", "Fortune Teller", "Monk", "Slayer"];
+
+  it("accepts a roster that matches the setup sheet", () => {
+    expect(clocktowerSetupProblems([...tb8, "Drunk", "Scarlet Woman", "Imp"])).toEqual([]);
+  });
+
+  it("asks about the Drunk when an Outsider is missing", () => {
+    expect(clocktowerSetupProblems([...tb8, "Investigator", "Scarlet Woman", "Imp"])).toEqual([
+      "6 Townsfolk and 0 Outsiders — 8 players start with 5 and 1. Was one of them the Drunk?",
+    ]);
+  });
+
+  it("applies the Baron's +2 Outsiders", () => {
+    const nine = ["Chef", "Empath", "Librarian", "Saint", "Recluse", "Drunk", "Butler"];
+    expect(clocktowerSetupProblems([...nine, "Baron", "Imp"])).toEqual([]);
+    expect(clocktowerSetupProblems([...nine, "Spy", "Imp"])).toEqual([
+      "3 Townsfolk and 4 Outsiders — 9 players start with 5 and 2.",
+    ]);
+  });
+
+  it("allows either Godfather adjustment", () => {
+    const base = ["Grandmother", "Gossip", "Chambermaid", "Minstrel"];
+    expect(clocktowerSetupProblems([...base, "Moonchild", "Godfather", "Shabaloth"])).toEqual([]);
+  });
+
+  it("flags a second Demon", () => {
+    expect(clocktowerSetupProblems(["Chef", "Empath", "Monk", "Imp", "Imp"])).toEqual([
+      "2 Demons — a game starts with 1. Record the character each player started as.",
+      "0 Minions — 5 players start with 1.",
+    ]);
+  });
+
+  it("stays quiet while roles are missing, and ignores Travellers", () => {
+    expect(clocktowerSetupProblems([...tb8, undefined, "Scarlet Woman", "Imp"])).toEqual([]);
+    expect(
+      clocktowerSetupProblems([...tb8, "Drunk", "Scarlet Woman", "Imp", "Bureaucrat"]),
+    ).toEqual([]);
+  });
+});
+
+describe("edition labels", () => {
+  it("round-trip through the stored scenario", () => {
+    expect(clocktowerEditionFromLabel(clocktowerEditionLabel("bad-moon-rising"))).toBe(
+      "bad-moon-rising",
+    );
+    expect(clocktowerEditionFromLabel("Standard")).toBeNull();
   });
 });

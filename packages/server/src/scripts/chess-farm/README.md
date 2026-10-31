@@ -22,11 +22,19 @@ posts results into the shared cache (`chess_position_evals`).
 ## Two machines, one queue
 
 - **ws21** (`FARM_KINDS=user`) searches only your positions: single-PV to depth 50 on every tier (`policy.json`, cap 6× the calibrated median nodes), candidates via `searchmoves`, Lc0 tie-breaks.
-- **The AWS fleet** (`FARM_KINDS=opp`, `aws/`) searches only opponent positions: MultiPV 3 to depth 40 (`aws-policy.json`), 2 threads, no Lc0. Free-plan `c7i-flex.large` instances, at most 8 (16-vCPU quota).
+- **The AWS fleet** (`aws/`) runs the same worker as ws21: one single-threaded lane per vCPU, both kinds (`FARM_KINDS=user,opp`), deepest line first (`FARM_ORDER=deep`), Lc0 through ws21. Free-plan `c7i-flex.large` instances, at most 8 per account (16-vCPU quota), about $0.095 a machine-hour all in (instance, public IPv4, 8 GB disk).
 - **Claim order:** the position most played on lichess first. `chess_eval_jobs.popularity` (migration 0060) is the explorer's game count, every rating and speed, filled in the background by the API server that has `LICHESS_TOKEN` (`lib/chess-trainer/farm-popularity.ts`). Ties go to reach (your games), then oldest first. Positions not counted yet wait behind every counted one.
 - **Database:** since 2026-10-17 the farm's API on ws21 (`boardgames-server` user unit) runs on the **production** database through a systemd drop-in, `prod-db.conf` → `~/chess-farm/prod-db.env`. A staging refresh once wiped every job and result. A claim older than `LEASE_MS` (7 days) may be taken by another lane; a stopped lane releases its job.
 - They feed each other through follow-ups: a finished position of yours queues the opponent position after your move (for the fleet), a finished opponent position queues your replies after its engine moves (for ws21).
-- **Fleet:** `aws/fleet.sh up 8` on the laptop (AWS profile `boardgames`; builds Stockfish at boot), then on ws21 `~/chess-farm/aws-attach.sh $(…ips)`. Each instance reaches ws21's API through a reverse SSH tunnel ws21 opens (`farm-tunnel@<ip>` user unit); nothing on ws21 is exposed. An instance stops itself after an idle hour (`fleet.sh start` + attach again — the IPs change); `fleet.sh down` removes everything.
+- **Fleet:** `aws/fleet.sh up 8` on the laptop (AWS profile `boardgames`; builds Stockfish at boot), then on ws21 `~/chess-farm/aws-attach.sh $(…ips)`. Each instance reaches ws21's API through a reverse SSH tunnel ws21 opens (`farm-tunnel@<ip>` user unit); nothing on ws21 is exposed. An instance stops itself after an idle hour (`fleet.sh start` + attach again — the IPs change; `start` and `up` also swap the firewall rule to ws21's current address, which a reboot can change); `fleet.sh down` removes everything.
+
+## AWS accounts
+
+The fleet runs on Free-plan credits, one account at a time; any account works. `fleet.sh` takes the account from `AWS_PROFILE` (default `boardgames`) and the region from that profile, and `up` creates what it needs in it (key pair from ws21's `chess_farm_ed25519`, a firewall group open to ws21's address only, the region's Amazon Linux image).
+
+1. **Budget:** `AWS_PROFILE=<p> aws/fleet.sh hours 8` reads the Free-plan credits (`credits`) and says how many hours N machines can run, keeping `RESERVE` (default $5: on the Free plan, running out of credit can close the account). The figure trails real usage by up to a day, so take off whatever the fleet ran since.
+2. **Run with a deadline:** `aws/fleet.sh up 8` (or `start` for a stopped fleet), then on ws21 `FLEET_HOURS=<h> ~/chess-farm/aws-attach.sh $(aws/fleet.sh ips)`. `DRAIN_HOURS` (3) before the deadline every lane stops claiming and finishes its job; a machine stops once its lanes are done, and at the deadline regardless. Nothing is cut short except a job still running at the deadline.
+3. **Swap accounts:** when the first account is spent, `aws/fleet.sh down` there (terminates everything, no disks left to pay for), stop its tunnels on ws21 (`systemctl --user stop 'farm-tunnel@*'`), and free the jobs its lanes still held: `pnpm --filter @boardgames/server exec tsx src/scripts/chess-farm/release-lanes.ts --worker=aws- --prod --apply`. Then `aws login --profile <next>` and step 1–2 with `AWS_PROFILE=<next>`. Lane names come from the machines' IPs, so two accounts never share one.
 
 ## Running on ws21 (no repo checkout needed)
 
@@ -108,8 +116,11 @@ never cut short; those jobs move to one lane with a whole core and most of the m
   still deterministic; its results name the hash in their engine label.
 - **Handing over:** a normal lane hands the heavy lane (1) a position of yours whose pre-pass is
   ±7 or more (`HEAVY_SCREEN_CP`; 0.36 % of normal jobs, measured on the history) before its
-  deep search, and (2) any job it has spent `FARM_HANDOVER_HOURS` (12) on, counted over the
-  whole job — a your-move job is up to three d50 searches. The job's `error` carries
+  deep search, and (2) any job it has spent `FARM_HANDOVER_HOURS` (9, since 2026-10-27; was 12)
+  on, counted over the whole job — a your-move job is up to three d50 searches — unless by then
+  its last deep search is within 2 depths of its target (d48 of 50, `nearlyDone`): that one
+  finishes on its lane, however long. (Logs: a d50 search reaches d48 at ~0.7× the time it
+  reaches d49, so d48 at 9 h ≈ d49 at 12 h.) The job's `error` carries
   `heavyMark(estimate, why)` until it is done; normal lanes never claim it.
 - **Backlog:** least bad first (since 2026-10-22: worst-first would sit for months on one job
   while quick ones wait), by the estimated normal-lane hours (`handoverEstimate`: hours so far

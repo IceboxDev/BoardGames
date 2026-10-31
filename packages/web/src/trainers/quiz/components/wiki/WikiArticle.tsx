@@ -6,24 +6,11 @@ import { leadWording, printedSources } from "@boardgames/core/quiz/wordings";
 import { type ReactNode, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from "../../../../components/icons";
-import {
-  Badge,
-  Button,
-  Chip,
-  ErrorAlert,
-  Eyebrow,
-  Kbd,
-  LoadingState,
-  MicroLabel,
-  PageHeader,
-  PageMain,
-  Surface,
-  TONE_TEXT,
-} from "../../../../components/ui";
+import { ErrorAlert, Kbd, LoadingState } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { cn } from "../../../../lib/cn";
 import { bodyIn } from "../../content";
-import { coreToneOf, domainOf, subName, TONE_LIT, TONE_STRIP } from "../../domains";
+import { domainOf, subName } from "../../domains";
 import { useArticle, useQuizIndex } from "../../hooks/useContent";
 import { usePinnedIds } from "../../hooks/usePinnedTimeline";
 import { usePrimaryLanguage } from "../../hooks/useQuestionLanguage";
@@ -32,14 +19,24 @@ import { useWikiRead } from "../../hooks/useWikiRead";
 import { isScreenShortcut } from "../../keys";
 import { fieldIn, inLang, say } from "../../logic/text";
 import { useTrainerPaths } from "../../paths";
-import { ArticleImage } from "../common/ArticleImage";
 import { PrimaryLanguageToggle } from "../common/LanguageToggle";
 import { SourceLink } from "../common/SourceLink";
-import { TextLink } from "../common/TextLink";
+import { FEATURE_HEADLINE, FEATURE_WIDTH, FeatureBody } from "../paper/FeatureBody";
+import {
+  Byline,
+  Headline,
+  JumpLine,
+  Kicker,
+  PaperButton,
+  PrintButton,
+  SectionHead,
+} from "../paper/Paper";
+import { PaperPage } from "../paper/PaperPage";
+import { KICKER, RULE_DOUBLE_TOP } from "../paper/paper-style";
+import { ReadingProgress } from "../paper/ReadingProgress";
 import { ReportButton } from "../report/ReportButton";
 import { TimelineChip } from "../timeline/TimelineChip";
 import { TrainerScreen } from "../trainer/TrainerScreen";
-import { ArticleBody } from "./ArticleBody";
 import { ArticleHistory, CardTextHint, RetiredQuestions } from "./ArticleHistory";
 import { type ArticleBlock, markedQuestions, segmentArticle } from "./article-segments";
 import { EditorNote } from "./EditorNote";
@@ -55,6 +52,7 @@ import { QuestionDots } from "./QuestionDots";
 // Reading 80 % of the article marks it read.
 
 const READ_SENTINEL_SHARE = 0.8;
+const WORDS_PER_MINUTE = 220;
 
 /** A fact as its row shows it: the wording the member's sources prefer. */
 interface FactRow {
@@ -234,28 +232,28 @@ function ArticleScreen({ articleId }: { articleId: string }) {
   const loading = !failed && !article;
   const sub = entry ? subName(d, entry.sub, language) : null;
 
+  const minutes = article
+    ? Math.max(1, Math.round(bodyIn(article, language).body.split(/\s+/).length / WORDS_PER_MINUTE))
+    : 0;
+
   return (
     <TrainerScreen>
-      <PageMain width="3xl" className="flex flex-col gap-5 pb-28">
-        <span
-          className={cn("block h-1 w-full rounded-full", TONE_STRIP[d.tone])}
-          aria-hidden="true"
-        />
+      <PaperPage pageLabel={d.en} folio="B3" current="archive" className="gap-4 pb-24">
+        <ReadingProgress color={d.color} />
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <Eyebrow tone={coreToneOf(d.tone)}>
-            <Link to={paths.wikiDomain(d.slug)} className="hover:underline">
-              {d.label} · {inLang(language, d)}
-            </Link>
-            {sub && ` · ${sub}`}
-          </Eyebrow>
-          <nav aria-label="Article navigation" className="flex items-center gap-1">
+          <Link to={paths.wikiDomain(d.slug)} className="min-w-0 hover:underline">
+            <Kicker domain={d.slug} icon={24}>
+              {sub && ` · ${sub}`}
+            </Kicker>
+          </Link>
+          <nav aria-label="Article navigation" className={cn(KICKER, "flex items-center gap-1")}>
             <CardNavLink to={prevId ? paths.wikiArticle(prevId) : null} label="Previous article">
               <ChevronLeftIcon className="h-4 w-4" />
             </CardNavLink>
             {position >= 0 && (
-              <MicroLabel className="tabular-nums">
+              <span className="tabular-nums text-fg-muted">
                 {position + 1} of {siblings.length}
-              </MicroLabel>
+              </span>
             )}
             <CardNavLink to={nextId ? paths.wikiArticle(nextId) : null} label="Next article">
               <ChevronRightIcon className="h-4 w-4" />
@@ -268,214 +266,197 @@ function ArticleScreen({ articleId }: { articleId: string }) {
 
         {article && (
           <>
-            <PageHeader
-              size="lg"
-              title={<span lang={language}>{title}</span>}
-              badge={
-                isRead ? (
-                  <Badge tone="emerald" size="sm" icon={<CheckIcon className="h-3 w-3" />}>
-                    Read
-                  </Badge>
-                ) : undefined
-              }
-              subtitle={<QuestionDots questionIds={factIds} />}
-              actions={
-                <div className="flex flex-wrap items-center gap-2">
-                  <ReportButton
-                    variant="labelled"
-                    context={{
-                      target: { kind: "article", id: articleId },
-                      title,
-                      domain: d.slug,
-                      surface: "wiki",
-                      language,
-                    }}
-                  />
-                  <PrimaryLanguageToggle value={language} onChange={setPrimary} />
-                </div>
-              }
-            />
+            <header className={cn(FEATURE_WIDTH, "flex flex-col gap-2")}>
+              <Headline as="h1" size="xl" className={FEATURE_HEADLINE}>
+                <span lang={language}>{title}</span>
+              </Headline>
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                <ReportButton
+                  variant="labelled"
+                  context={{
+                    target: { kind: "article", id: articleId },
+                    title,
+                    domain: d.slug,
+                    surface: "wiki",
+                    language,
+                  }}
+                />
+                <PrimaryLanguageToggle value={language} onChange={setPrimary} />
+              </div>
+              <Byline
+                left={
+                  <span className="flex items-center gap-3">
+                    <span className={isRead ? d.ink : undefined}>
+                      {isRead ? "✓ Read" : "Unread"}
+                    </span>
+                    <QuestionDots questionIds={factIds} />
+                  </span>
+                }
+                right={
+                  <span className="tabular-nums">
+                    {questions.length} {questions.length === 1 ? "question" : "questions"} ·{" "}
+                    {minutes} min read
+                  </span>
+                }
+              />
+            </header>
 
             <EditorNote
+              className={FEATURE_WIDTH}
+              print
               language={{ primary: language, secondary: null }}
               notesEn={article.notesEn}
               notesDe={article.notesDe}
               notesRu={article.notesRu}
             />
 
-            {article.images.length > 0 && (
-              <div className="flex flex-col gap-3">
-                <ArticleImage image={article.images[0]} lang={language} />
-                {article.images.length > 1 && (
-                  <div className="flex flex-wrap items-start justify-center gap-3">
-                    {article.images.slice(1).map((img) => (
-                      <ArticleImage
-                        key={img.url}
-                        image={img}
-                        lang={language}
-                        className="max-w-60 [&_img]:max-h-40"
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-
-            <article
+            <FeatureBody
+              as="article"
+              domain={d.slug}
+              images={article.images}
               lang={language}
-              className="flex flex-col gap-4 text-base leading-relaxed text-fg-primary"
-            >
-              <ArticleBody
-                blocks={paragraphs}
-                tone={d.tone}
-                anchorOf={(q) => factIds[q] ?? `fact-${q}`}
-                questionText={questionText}
-                shown={shown}
-                onOpen={openRow}
-                sentinelAfter={sentinelAfter}
-                setSentinel={setSentinel}
-              />
-            </article>
+              blocks={paragraphs}
+              tone={d.tone}
+              anchorOf={(q) => factIds[q] ?? `fact-${q}`}
+              questionText={questionText}
+              shown={shown}
+              onOpen={openRow}
+              sentinelAfter={sentinelAfter}
+              setSentinel={setSentinel}
+            />
 
             <section aria-labelledby={factsId} className="flex flex-col gap-2">
-              <h2 id={factsId} className="text-sm font-semibold text-fg-strong">
-                {questions.length === 1 ? "One question" : `${questions.length} questions`}
-              </h2>
-              <ol className="flex flex-col gap-2">
+              <SectionHead
+                right={<span className="hidden sm:inline">keys 1–9 show an answer</span>}
+              >
+                <span id={factsId}>
+                  {questions.length === 1 ? "The question" : `The ${questions.length} questions`}
+                </span>
+              </SectionHead>
+              <ol className="grid gap-x-8 lg:grid-cols-2">
                 {questions.map((question, q) => (
                   <li
                     key={question.id}
                     ref={(el) => {
                       rowRefs.current[q] = el;
                     }}
+                    className={cn(
+                      "flex gap-3 border-b border-line-strong py-3",
+                      shown[q] && "border-b-fg-primary",
+                    )}
                   >
-                    <Surface
-                      variant="tile"
-                      padding="md"
+                    <span
+                      aria-hidden="true"
                       className={cn(
-                        "transition-colors",
-                        shown[q] && cn("border", TONE_LIT[d.tone]),
+                        "w-8 shrink-0 font-headline text-2xl font-black leading-none",
+                        shown[q] ? d.ink : "text-fg-muted",
                       )}
                     >
-                      <div className="flex items-start gap-3">
-                        <Badge tone={d.tone} size="sm" className="mt-0.5">
-                          Q{q + 1}
-                        </Badge>
-                        <div className="min-w-0 flex-1">
-                          <p className="text-sm text-fg-primary" lang={language}>
-                            {questionText(q)}
-                          </p>
-                          <CardTextHint
-                            wordings={article.facts[q]?.wordings ?? []}
-                            lang={language}
-                          />
-                          <PrintedIn wordings={article.facts[q]?.wordings ?? []} />
-                          {shown[q] && (
-                            <p
-                              className={cn(
-                                "mt-1 text-base font-semibold",
-                                TONE_TEXT[coreToneOf(d.tone)],
-                              )}
-                            >
-                              {answerText(q)}
-                            </p>
-                          )}
-                          <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5">
-                            <TimelineChip
-                              event={question.timeline}
-                              lang={language}
-                              tone={d.tone}
-                              withLabel={shown[q] === true}
-                            />
-                            <SourceLink
-                              source={question.source}
-                              titleTooltip={shown[q] === true}
-                              label={say(language, { en: "Source", de: "Quelle", ru: "Источник" })}
-                            />
-                            {pinned.has(question.id) && (
-                              <TextLink to={paths.timeline(question.id)}>
-                                {say(language, {
-                                  en: "Show on timeline →",
-                                  de: "Auf der Zeitleiste →",
-                                  ru: "На шкале времени →",
-                                })}
-                              </TextLink>
-                            )}
-                          </div>
-                          <div className="mt-2 flex flex-wrap items-center gap-2">
-                            <Button
-                              size="xs"
-                              variant="secondary"
-                              onClick={() => toggle(q)}
-                              aria-expanded={shown[q] === true}
-                            >
-                              {shown[q] ? "Hide answer" : "Show answer"}
-                              {q < 9 && <Kbd className="hidden sm:inline-flex">{q + 1}</Kbd>}
-                            </Button>
-                            <Button
-                              size="xs"
-                              variant="ghost"
-                              onClick={() => jump(q)}
-                              disabled={!marked.has(q)}
-                              title={
-                                marked.has(q)
-                                  ? undefined
-                                  : "This answer shares its passage with another"
-                              }
-                            >
-                              Jump to passage
-                            </Button>
-                            <ReportButton
-                              className="ml-auto"
-                              context={{
-                                target: { kind: "question", id: question.id },
-                                title: questionText(q),
-                                domain: d.slug,
-                                surface: "wiki",
-                                // A hidden answer stays hidden: no answer-giving issues yet.
-                                hideSpoilers: !shown[q],
-                                language,
-                              }}
-                            />
-                          </div>
-                        </div>
+                      {q + 1}
+                    </span>
+                    <div className="flex min-w-0 flex-1 flex-col gap-1">
+                      <p className="font-news text-base text-fg-primary" lang={language}>
+                        {questionText(q)}
+                      </p>
+                      <CardTextHint wordings={article.facts[q]?.wordings ?? []} lang={language} />
+                      <PrintedIn wordings={article.facts[q]?.wordings ?? []} />
+                      {shown[q] && (
+                        <p className={cn("font-headline text-xl font-bold", d.ink)}>
+                          {answerText(q)}
+                        </p>
+                      )}
+                      <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1.5">
+                        <PrintButton onClick={() => toggle(q)} aria-expanded={shown[q] === true}>
+                          {shown[q] ? "Hide answer" : "Show answer"}
+                          {q < 9 && <Kbd className="hidden sm:inline-flex">{q + 1}</Kbd>}
+                        </PrintButton>
+                        <PrintButton
+                          onClick={() => jump(q)}
+                          disabled={!marked.has(q)}
+                          className="text-fg-muted"
+                          title={
+                            marked.has(q)
+                              ? undefined
+                              : "This answer shares its passage with another"
+                          }
+                        >
+                          Passage
+                        </PrintButton>
+                        <TimelineChip
+                          print
+                          event={question.timeline}
+                          lang={language}
+                          tone={d.tone}
+                          withLabel={shown[q] === true}
+                        />
+                        <SourceLink
+                          source={question.source}
+                          titleTooltip={shown[q] === true}
+                          label={say(language, { en: "Source", de: "Quelle", ru: "Источник" })}
+                        />
+                        {pinned.has(question.id) && (
+                          <JumpLine to={paths.timeline(question.id)}>
+                            {say(language, {
+                              en: "Show on timeline",
+                              de: "Auf der Zeitleiste",
+                              ru: "На шкале времени",
+                            })}
+                          </JumpLine>
+                        )}
+                        <ReportButton
+                          className="ml-auto"
+                          context={{
+                            target: { kind: "question", id: question.id },
+                            title: questionText(q),
+                            domain: d.slug,
+                            surface: "wiki",
+                            // A hidden answer stays hidden: no answer-giving issues yet.
+                            hideSpoilers: !shown[q],
+                            language,
+                          }}
+                        />
                       </div>
-                    </Surface>
+                    </div>
                   </li>
                 ))}
               </ol>
             </section>
 
-            <RetiredQuestions article={article} lang={language} />
-
-            <ArticleSources id={sourcesId} questions={questions} language={language} />
-
-            <ArticleHistory article={article} lang={language} />
+            <div className="flex flex-col gap-3 border-t border-line-strong pt-3">
+              <RetiredQuestions article={article} lang={language} />
+              <ArticleSources id={sourcesId} questions={questions} language={language} />
+              <ArticleHistory article={article} lang={language} />
+            </div>
           </>
         )}
-      </PageMain>
+      </PaperPage>
 
-      <div className="sticky bottom-0 z-lift border-t border-line bg-surface-950/90 px-4 py-3 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-3xl items-center justify-between gap-3">
-          <Chip
-            pressed={isRead}
-            tone="emerald"
-            size="sm"
-            icon={<CheckIcon className="h-3.5 w-3.5" />}
+      <div
+        className={cn(
+          RULE_DOUBLE_TOP,
+          "sticky bottom-0 z-lift bg-surface-900/95 px-4 py-2.5 backdrop-blur md:px-6 xl:px-10",
+        )}
+      >
+        <div className="flex w-full items-center justify-between gap-3">
+          <PrintButton
+            aria-pressed={isRead}
             onClick={() => setRead(!isRead)}
             disabled={!wikiRead.loaded || !article}
             title={isRead ? "Read — click to mark it unread" : "Mark this article as read"}
             aria-label={isRead ? "Read. Mark as unread" : "Mark as read"}
+            className={isRead ? d.ink : undefined}
           >
+            <CheckIcon className="h-3.5 w-3.5" />
             {isRead ? "Read" : "Mark read"}
-          </Chip>
-          <Button
-            variant="primary"
+          </PrintButton>
+          <PaperButton
+            primary
             onClick={() => navigate(paths.study({ article: articleId }))}
             disabled={!article}
           >
-            Study this article ({factIds.length})
-          </Button>
+            <span className="hidden sm:inline">Study this article</span>
+            <span className="sm:hidden">Study it</span> ({factIds.length})
+          </PaperButton>
         </div>
       </div>
     </TrainerScreen>
@@ -516,7 +497,7 @@ function CardNavLink({
 function PrintedIn({ wordings }: { wordings: Parameters<typeof printedSources>[0] }) {
   const games = printedSources(wordings).map((s) => sourceById(s)?.title ?? s);
   if (games.length === 0) return null;
-  return <MicroLabel className="mt-1">Printed in {games.join(" · ")}</MicroLabel>;
+  return <span className={cn(KICKER, "text-fg-muted")}>Printed in {games.join(" · ")}</span>;
 }
 
 /** The article foot: every question's source once, with the questions it backs. */
@@ -540,20 +521,23 @@ function ArticleSources({
   }, [questions]);
   if (sources.length === 0) return null;
   return (
-    <section aria-labelledby={id} className="flex flex-col gap-2">
-      <h2 id={id} className="text-sm font-semibold text-fg-strong">
+    <section aria-labelledby={id} className="flex flex-col gap-1">
+      <h2 id={id} className={cn(KICKER, "text-fg-primary")}>
         {say(language, { en: "Sources", de: "Quellen", ru: "Источники" })}
       </h2>
-      <ol className="flex flex-col divide-y divide-line-soft">
+      <ol className="flex flex-col font-news text-xs">
         {sources.map(({ source, qs }) => (
-          <li key={source.url} className="flex items-center gap-3 py-2">
-            <MicroLabel className="w-16 shrink-0 tabular-nums">
+          <li
+            key={source.url}
+            className="flex items-center gap-3 border-b border-dotted border-line-strong py-1"
+          >
+            <span className="w-16 shrink-0 tabular-nums text-fg-muted">
               {qs.map((q) => `Q${q + 1}`).join(" · ")}
-            </MicroLabel>
+            </span>
             <SourceLink source={source} variant="full" className="min-w-0 flex-1" />
-            <MicroLabel className="hidden shrink-0 sm:block">
+            <span className="hidden shrink-0 text-fg-muted sm:block">
               {source.lang.toUpperCase()}
-            </MicroLabel>
+            </span>
           </li>
         ))}
       </ol>

@@ -69,12 +69,6 @@ export type SrsStateWire = z.infer<typeof SrsStateSchema>;
 
 export const QuizSettingsSchema = z.object({
   language: QuizLanguagesSchema,
-  /**
-   * The day's budget of new facts, across every session. They arrive a
-   * whole article at a time (an article holds 1–8 facts): articles are
-   * taken while they fit, and the first one even when it alone is bigger.
-   */
-  newFactsPerDay: z.number().int().min(0).max(60).default(15),
   includeLeeches: z.boolean().default(false),
   gameReviewsAffectSrs: z.boolean().default(false),
   /** Games whose questions are studied; an article joins when one of them prints it. */
@@ -95,7 +89,6 @@ export type QuizSettings = z.infer<typeof QuizSettingsSchema>;
 
 export const DEFAULT_QUIZ_SETTINGS: QuizSettings = {
   language: { primary: "en", secondary: null },
-  newFactsPerDay: 15,
   includeLeeches: false,
   gameReviewsAffectSrs: false,
   sources: [...SOURCE_IDS],
@@ -149,8 +142,13 @@ export const TrainerOverviewResponseSchema = z.object({
     again: z.number().int().nonnegative(),
     newIntroduced: z.number().int().nonnegative(),
   }),
-  /** New facts the day's budget still allows (whole articles). */
+  /**
+   * New facts "Study all" deals today: the day's batch of 15 as whole
+   * articles (`packDailyArticles`), 0 once it is begun or done.
+   */
   newRemainingToday: z.number().int().nonnegative(),
+  /** Today's batch is done and unread articles remain: "Another 15" can be asked for. */
+  moreAvailable: z.boolean(),
   /** Unseen facts of articles already begun — dealt on top of the budget. */
   leftoverToday: z.number().int().nonnegative(),
   domains: z.array(DomainOverviewSchema).length(DOMAIN_COUNT),
@@ -163,8 +161,10 @@ export type TrainerOverview = z.infer<typeof TrainerOverviewResponseSchema>;
 export const TrainerQueueQuerySchema = z.object({
   today: DateKeyStringSchema,
   domain: QuizDomainSchema.optional(),
-  limit: z.coerce.number().int().min(1).max(200).default(60),
+  limit: z.coerce.number().int().min(1).max(1000).default(1000),
   includeLeeches: z.stringbool().default(false),
+  /** Deal another batch of 15 new facts once today's batch is done. */
+  more: z.stringbool().default(false),
 });
 
 export const QueueTierSchema = z.enum(["learning", "review", "new"]);

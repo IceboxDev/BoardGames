@@ -3,42 +3,30 @@ import { type BlockOverride, blockPath } from "@boardgames/core/quiz/timeline-bl
 import { useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BookIcon, PinIcon } from "../../../../components/icons";
-import type { CoreTone } from "../../../../components/ui";
-import {
-  Button,
-  Chip,
-  Drawer,
-  EmptyState,
-  PageHeader,
-  SegmentedControl,
-  Surface,
-} from "../../../../components/ui";
+import { Drawer } from "../../../../components/ui";
 import { useMediaQuery, WIDE_BOARD_QUERY } from "../../../../hooks/useMediaQuery";
 import { cn } from "../../../../lib/cn";
-import { DOMAINS, type DomainTone } from "../../domains";
+import { DOMAINS } from "../../domains";
 import { usePrimaryLanguage } from "../../hooks/useQuestionLanguage";
 import { isScreenShortcut } from "../../keys";
 import { layoutTimeline, type TimelineItem } from "../../logic/timeline-layout";
 import type { TrainerPaths } from "../../paths";
 import { PrimaryLanguageToggle } from "../common/LanguageToggle";
+import {
+  Headline,
+  PaperButton,
+  PaperNote,
+  PaperTabs,
+  PrintButton,
+  SectionToggles,
+} from "../paper/Paper";
+import { KICKER } from "../paper/paper-style";
 import { BlockRail } from "./BlockRail";
 import { DOT_OFFSET, pinDomId } from "./dom-ids";
 import { TimelineDetail } from "./TimelineDetail";
 import { TimelineInspector } from "./TimelineInspector";
 import { type OverrideChange, TimelineRiver } from "./TimelineRiver";
-import { DOT_FILL, DOT_RING } from "./tones";
-
-function isCoreTone(tone: DomainTone): tone is CoreTone {
-  return (
-    tone === "accent" || tone === "amber" || tone === "sky" || tone === "emerald" || tone === "rose"
-  );
-}
-
-/** A filter chip's tone: the domain's own when chips support it, else the accent. */
-function chipTone(tone: DomainTone): CoreTone {
-  return isCoreTone(tone) ? tone : "accent";
-}
+import { inkDot } from "./tones";
 
 // "Your timeline": every question the member has studied pins its moment
 // to one chronological river, so wandering between domains builds a
@@ -216,54 +204,44 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
         : `${items.length} ${items.length === 1 ? "moment" : "moments"} pinned across ${formatSpan(span, lang)} · ${knownCount} known`;
 
   const header = (
-    <PageHeader
-      size="lg"
-      eyebrow={de ? "Trainer" : "Trainer"}
-      title={de ? "Deine Zeitleiste" : "Your timeline"}
-      subtitle={subtitle}
-      actions={
-        <>
-          <PrimaryLanguageToggle value={lang} onChange={setPrimary} />
-          <Button variant="secondary" size="sm" onClick={() => navigate(paths.wiki)}>
-            <BookIcon className="h-3.5 w-3.5" />
-            Wiki
-          </Button>
-        </>
-      }
-    />
+    <header className="flex flex-wrap items-end justify-between gap-3">
+      <div className="flex min-w-0 flex-col gap-1">
+        <Headline as="h1" size="lg">
+          {de ? "Deine Zeitleiste" : "Your timeline"}
+        </Headline>
+        <p className="font-news text-sm italic text-fg-secondary">{subtitle}</p>
+      </div>
+      <PrimaryLanguageToggle value={lang} onChange={setPrimary} />
+    </header>
   );
 
   if (totalPins === 0 || items.length === 0) {
     return (
       <div className="flex flex-col gap-6">
         {header}
-        <EmptyState
-          titleAs="h2"
-          icon={<PinIcon className="h-6 w-6" />}
-          title={
-            totalPins === 0
+        <div className="flex flex-col items-center gap-3 py-10 text-center">
+          <Headline as="h2" size="md">
+            {totalPins === 0
               ? de
                 ? "Noch nichts angepinnt"
                 : "Nothing pinned yet"
               : de
                 ? "Noch keine Daten"
-                : "No dates yet"
-          }
-          description={
-            totalPins === 0
+                : "No dates yet"}
+          </Headline>
+          <p className="max-w-lg font-news text-sm italic text-fg-secondary">
+            {totalPins === 0
               ? de
                 ? "Jede Frage trägt einen Moment der Geschichte — ein Datum, eine Lebensspanne, eine Epoche. Sobald du eine Frage im Trainer bewertest, landet ihr Moment hier, und Bereich für Bereich wächst ein einziges Bild der Zeit."
-                : "Every question carries one moment in history — a date, a lifespan, an era. Grade a question in the trainer and its moment lands here; domain by domain, one picture of time grows."
+                : "Every question carries one moment in history — a date, a lifespan, an era. Grade a question in the trainer and its moment lands here; section by section, one picture of time grows."
               : de
                 ? `Du hast ${totalPins} Fragen geübt, aber ihre Daten sind in dieser Inhaltsversion noch nicht enthalten. Sie erscheinen mit dem nächsten Update von selbst.`
-                : `You have studied ${totalPins} questions, but their dates aren't in this version of the content yet. They will appear on their own with the next update.`
-          }
-          action={
-            <Button variant="primary" onClick={() => navigate(paths.study())}>
-              {de ? "Jetzt üben" : "Start studying"}
-            </Button>
-          }
-        />
+                : `You have studied ${totalPins} questions, but their dates aren't in this version of the content yet. They will appear on their own with the next update.`}
+          </p>
+          <PaperButton primary onClick={() => navigate(paths.study())}>
+            {de ? "Jetzt üben" : "Start studying"}
+          </PaperButton>
+        </div>
       </div>
     );
   }
@@ -289,29 +267,25 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
     <div className="flex flex-col gap-4">
       {header}
 
-      <div className="flex flex-col gap-2">
-        <fieldset className="flex flex-wrap items-center gap-1.5">
-          <legend className="sr-only">{de ? "Bereiche" : "Domains"}</legend>
-          <Chip pressed={allDomains} size="xs" shape="pill" onClick={() => setDomains(new Set())}>
-            {de ? "Alle Bereiche" : "All domains"}
-          </Chip>
-          {pinnedDomains.map((d) => (
-            <Chip
-              key={d.slug}
-              pressed={domains.has(d.slug)}
-              tone={chipTone(d.tone)}
-              size="xs"
-              shape="pill"
-              icon={<span className={cn("h-2 w-2 rounded-full border", DOT_FILL[d.tone])} />}
-              onClick={() => toggleDomain(d.slug)}
-              title={`${d.label} · ${d.en} / ${d.de}`}
-            >
-              {lang === "en" ? d.en : d[lang]}
-            </Chip>
-          ))}
-        </fieldset>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <SegmentedControl<Status>
+      <div className="flex flex-col gap-3 border-y border-line-strong py-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <PrintButton
+            aria-pressed={allDomains}
+            onClick={() => setDomains(new Set())}
+            className={allDomains ? undefined : "text-fg-muted"}
+          >
+            {de ? "Alle Bereiche" : "All sections"}
+          </PrintButton>
+          <SectionToggles
+            domains={pinnedDomains}
+            selected={domains}
+            onToggle={toggleDomain}
+            withNames
+          />
+        </div>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <PaperTabs<Status>
+            label={de ? "Stand" : "Status"}
             options={[
               { value: "all", label: de ? "Alle" : "All" },
               { value: "known", label: de ? "Sitzt" : "Known" },
@@ -319,24 +293,20 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
             ]}
             value={status}
             onChange={setStatus}
-            shape="pill"
-            size="xs"
           />
           <Legend lang={lang} />
           {Object.keys(overrides).length > 0 && (
-            <Button
-              variant="ghost"
-              size="xs"
+            <PrintButton
               onClick={() => {
                 setOverrides({});
                 saveOverrides({});
               }}
             >
               {de ? "Automatisch einteilen" : "Reset blocks"}
-            </Button>
+            </PrintButton>
           )}
           {undated > 0 && (
-            <p className="text-2xs text-fg-muted">
+            <p className="font-news text-xs italic text-fg-muted">
               {de
                 ? `${undated} geübte ${undated === 1 ? "Frage" : "Fragen"} noch ohne Datum`
                 : `${undated} studied ${undated === 1 ? "question" : "questions"} not dated yet`}
@@ -346,19 +316,15 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
       </div>
 
       {unknownFocus && (
-        <Surface
-          variant="tile"
-          padding="md"
-          className="border-amber-500/30 text-xs text-fg-secondary"
-        >
+        <p className="border-y border-amber-300/50 py-2 font-news text-sm italic text-fg-secondary">
           {de
             ? "Diese Frage ist noch nicht auf deiner Zeitleiste — sie wird angepinnt, sobald du sie im Trainer bewertet hast."
             : "That question isn't on your timeline yet — it pins itself once you've graded it in the trainer."}
-        </Surface>
+        </p>
       )}
 
       {!wide && (
-        <div className="sticky top-0 z-lift -mx-4 border-b border-line-soft bg-surface-950/90 px-4 py-2 backdrop-blur">
+        <div className="sticky top-0 z-lift -mx-4 border-b border-line-strong bg-surface-900/95 px-4 py-2 backdrop-blur">
           <BlockRail blocks={layout.blocks} lang={lang} orientation="horizontal" />
         </div>
       )}
@@ -376,26 +342,21 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
         )}
         <div>
           {visible.length === 0 ? (
-            <EmptyState
-              title={de ? "Keine Momente in dieser Auswahl" : "No moments in this selection"}
-              description={
-                de
-                  ? "Wähle andere Bereiche oder zeige alle."
-                  : "Pick other domains, or show them all."
-              }
-              action={
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  onClick={() => {
-                    setDomains(new Set());
-                    setStatus("all");
-                  }}
-                >
-                  {de ? "Filter zurücksetzen" : "Clear filters"}
-                </Button>
-              }
-            />
+            <div className="flex flex-col items-center gap-2">
+              <PaperNote>
+                {de
+                  ? "Keine Momente in dieser Auswahl. Wähle andere Bereiche oder zeige alle."
+                  : "No moments in this selection. Pick other sections, or show them all."}
+              </PaperNote>
+              <PrintButton
+                onClick={() => {
+                  setDomains(new Set());
+                  setStatus("all");
+                }}
+              >
+                {de ? "Filter zurücksetzen" : "Clear filters"}
+              </PrintButton>
+            </div>
           ) : (
             <TimelineRiver
               layout={layout}
@@ -440,23 +401,25 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
 function Legend({ lang }: { lang: "en" | "de" | "ru" }) {
   const de = lang === "de";
   return (
-    <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 text-2xs text-fg-muted">
+    <ul className={cn(KICKER, "flex flex-wrap items-center gap-x-3 gap-y-1 text-fg-muted")}>
       <li className="flex items-center gap-1.5">
         <span
           aria-hidden="true"
-          className={cn("h-2.5 w-2.5 rounded-full border-2", DOT_FILL.sky)}
+          className="h-2.5 w-2.5 rounded-full border-2"
+          style={inkDot("var(--color-fg-primary)", true)}
         />
         {de ? "sitzt" : "known"}
       </li>
       <li className="flex items-center gap-1.5">
         <span
           aria-hidden="true"
-          className={cn("h-2.5 w-2.5 rounded-full border-2", DOT_RING.sky)}
+          className="h-2.5 w-2.5 rounded-full border-2"
+          style={inkDot("var(--color-fg-primary)", false)}
         />
         {de ? "lernt noch" : "still learning"}
       </li>
       <li className="flex items-center gap-1.5">
-        <span aria-hidden="true" className="h-3 w-1 rounded-full bg-sky-400/45" />
+        <span aria-hidden="true" className="h-3 w-1 bg-fg-primary/50" />
         {de ? "Leben · Kriege · Herrschaften" : "lifespans · wars · reigns"}
       </li>
     </ul>

@@ -27,8 +27,9 @@
  *   FARM_LANE           `normal` (default) or `heavy`. A normal lane hands the heavy lane a
  *                       decided position of yours (±7 at the pre-pass, `HEAVY_SCREEN_CP`)
  *                       before its deep search, and any job it has spent
- *                       FARM_HANDOVER_HOURS on (default 12), with an estimate of what the job
- *                       would take here. The heavy lane takes only those, least bad first, and
+ *                       FARM_HANDOVER_HOURS on (default 9), with an estimate of what the job
+ *                       would take here — unless its last deep search is by then within 2
+ *                       depths of its target (`nearlyDone`): that one finishes here. The heavy lane takes only those, least bad first, and
  *                       searches them to the full depth however long it takes.
  *   FARM_HASH_MB        the heavy lane's hash (every normal lane runs core's `SEARCH`); its
  *                       results name it in their engine label
@@ -69,6 +70,7 @@ import {
   type JobControl,
   Lc0Lane,
   type Lc0Source,
+  nearlyDone,
   SCREENED_EST_HOURS,
   Screened,
   ShortSearch,
@@ -97,16 +99,49 @@ const ORDER = process.env.FARM_ORDER === "deep" ? "deep" : "reach";
 const HEAVY = process.env.FARM_LANE === "heavy";
 const HASH_MB = HEAVY ? Number(need("FARM_HASH_MB")) : SEARCH.hashMb;
 if (!Number.isInteger(HASH_MB) || HASH_MB < 1) throw new Error("FARM_HASH_MB must be a whole MB");
-const HANDOVER_MS = Number(process.env.FARM_HANDOVER_HOURS ?? 12) * 3600_000;
+const HANDOVER_MS = Number(process.env.FARM_HANDOVER_HOURS ?? 9) * 3600_000;
 
+/** "fetch failed" says nothing: the socket error is in `cause`. */
+function fetchError(err: unknown): string {
+  if (!(err instanceof Error)) return String(err);
+  const cause = err.cause as { code?: string; message?: string } | undefined;
+  return cause ? `${err.message} (${cause.code ?? ""} ${cause.message ?? ""})`.trim() : err.message;
+}
+
+const FARM_TRIES = 3;
+
+/**
+ * A call to the farm API. A request that fails before any answer is sent again
+ * on a fresh connection: building a games index blocks this process for
+ * seconds, long enough for the server to close the idle keep-alive connection
+ * unnoticed, and the next request then dies on it. Every call is safe to repeat
+ * (a lane's claim gets its own running job back, enqueueing is idempotent), and a
+ * repeated `/complete` refused as no longer leased means the first one landed.
+ */
 async function farm<T>(path: string, body: unknown, schema: z.ZodType<T>): Promise<T> {
-  const res = await fetch(`${FARM_URL}/api/chess-farm${path}`, {
-    ...(body === undefined ? { method: "GET" } : { method: "POST", body: JSON.stringify(body) }),
-    headers: { "content-type": "application/json", authorization: `Bearer ${TOKEN}` },
-    signal: AbortSignal.timeout(60_000),
-  });
-  if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text().catch(() => "")}`);
-  return schema.parse(await res.json());
+  for (let attempt = 1; ; attempt++) {
+    let res: Response;
+    try {
+      res = await fetch(`${FARM_URL}/api/chess-farm${path}`, {
+        ...(body === undefined
+          ? { method: "GET" }
+          : { method: "POST", body: JSON.stringify(body) }),
+        headers: { "content-type": "application/json", authorization: `Bearer ${TOKEN}` },
+        signal: AbortSignal.timeout(60_000),
+      });
+    } catch (err) {
+      const timedOut = err instanceof DOMException && err.name === "TimeoutError";
+      if (timedOut || attempt >= FARM_TRIES) throw new Error(`${path}: ${fetchError(err)}`);
+      log(`${path}: ${fetchError(err)} — sending again`);
+      await new Promise((r) => setTimeout(r, 1000 * attempt));
+      continue;
+    }
+    if (res.status === 409 && attempt > 1 && path === "/complete") {
+      return schema.parse({ ok: true });
+    }
+    if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text().catch(() => "")}`);
+    return schema.parse(await res.json());
+  }
 }
 
 /** A member's games as one colour, indexed; re-read after an hour (new imports). */
@@ -341,18 +376,32 @@ async function main() {
       chain = chain.filter((f) => positionKey(parseFen(f)) !== key);
       // A normal lane's clock runs over the whole job, every deep search in it.
       const started = Date.now();
-      let searching = { target: 0, left: 1 };
+      let searching = {
+        target: 0,
+        left: 1,
+        leftIf: undefined as ((best: string) => number) | undefined,
+      };
       let halt = null as { depth: number; at: number } | null;
       const control: JobControl = {
         halted: () => halt !== null,
-        searching: (target, left) => {
-          searching = { target, left };
+        searching: (target, left, leftIf) => {
+          searching = { target, left, leftIf };
         },
       };
       const handover = HEAVY
         ? null
         : setTimeout(() => {
-            halt = { depth: sf.progress?.depth ?? 0, at: Date.now() };
+            const depth = sf.progress?.depth ?? 0;
+            // The main search's count from the move it prefers now: at d48 nearly always its pick.
+            const best = sf.progress?.latest?.pv[0];
+            if (best && searching.leftIf) searching.left = searching.leftIf(best);
+            if (nearlyDone(depth, searching.target, searching.left)) {
+              log(
+                `#${job.id} ${job.kind} reach ${job.reach}: ${HANDOVER_MS / 3600_000} h at d${depth}/${searching.target}, last search — finishing here`,
+              );
+              return;
+            }
+            halt = { depth, at: Date.now() };
             log(
               `#${job.id} ${job.kind} reach ${job.reach}: ${HANDOVER_MS / 3600_000} h — handing over`,
             );

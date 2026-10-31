@@ -248,6 +248,15 @@ describe("chess analysis farm", () => {
     expect(deep.map((j) => j.fen)).toEqual([START_FEN, AFTER_E4_E5, AFTER_D4]);
   });
 
+  it("hands a restarted worker the job it never gave back before any other", async () => {
+    await ask([{ fen: START_FEN, kind: "user", reach: 1 }]);
+    const [old] = await claim("ws21", 1);
+    await ask([{ fen: AFTER_E4, kind: "user", reach: 50 }]);
+    const again = await claim("ws21", 1);
+    expect(again.map((j) => [j.id, j.attempts])).toEqual([[old?.id, 2]]);
+    expect((await claim("ws21-b", 1)).map((j) => j.fen)).toEqual([AFTER_E4]);
+  });
+
   it("doesn't count a stopped worker's release as an attempt", async () => {
     await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
     for (let i = 0; i < 4; i++) {

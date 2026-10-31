@@ -2,6 +2,7 @@ import type { QuizLanguages } from "@boardgames/core/protocol";
 import { Eyebrow } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import { notesIn, say } from "../../logic/text";
+import { KICKER } from "../paper/paper-style";
 
 // The editor's note on an article — a misprint on the card, a fact that has
 // since changed, an accepted variant. Amber, because it qualifies the answer
@@ -17,12 +18,39 @@ type Props = {
   notesDe: string | undefined;
   notesRu?: string | undefined;
   size?: "sm" | "xs";
+  /** The paper's boxed italic note. */
+  print?: boolean;
   className?: string;
 };
 
-export function EditorNote({ language, notesEn, notesDe, notesRu, size = "sm", className }: Props) {
+export function EditorNote({
+  language,
+  notesEn,
+  notesDe,
+  notesRu,
+  size = "sm",
+  print = false,
+  className,
+}: Props) {
   const notes = notesIn(language, { en: notesEn, de: notesDe, ru: notesRu });
   if (notes.length === 0) return null;
+  const title = say(language.primary, {
+    en: "Editor's note",
+    de: "Anmerkung der Redaktion",
+    ru: "Примечание редакции",
+  });
+  if (print) {
+    return (
+      <aside className={cn("border-y border-amber-300/50 py-2", className)}>
+        <span className={cn(KICKER, "text-amber-300")}>{title}</span>
+        {notes.map((n) => (
+          <p key={n.lang} lang={n.lang} className="font-news text-sm italic text-fg-secondary">
+            {n.text}
+          </p>
+        ))}
+      </aside>
+    );
+  }
   return (
     <div
       className={cn(
@@ -32,11 +60,7 @@ export function EditorNote({ language, notesEn, notesDe, notesRu, size = "sm", c
       )}
     >
       <Eyebrow tone="amber" size="sm">
-        {say(language.primary, {
-          en: "Editor's note",
-          de: "Anmerkung der Redaktion",
-          ru: "Примечание редакции",
-        })}
+        {title}
       </Eyebrow>
       {notes.map((n) => (
         <p

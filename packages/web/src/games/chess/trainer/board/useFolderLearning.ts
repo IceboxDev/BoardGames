@@ -25,7 +25,7 @@ import { useMemo } from "react";
 import { dateKey } from "../../../../lib/offline-availability";
 import { reachableFrom } from "../tree-nav";
 import { flatten, type Placed, usePositionOwners } from "./folder-tree";
-import { walkLine } from "./model";
+import { lineEnd, walkLine } from "./model";
 
 export interface FolderLearning {
   readonly all: readonly Placed[];
@@ -73,7 +73,7 @@ export function useFolderLearning(
   // Waiting positions inside the farm's folders are being analysed; the rest are never asked.
   const [pending, unasked] = useMemo(() => {
     if (!tree) return [[], []];
-    const roots = FARM_FOCUS[color].map((moves) => walkLine(moves).at(-1)?.key ?? "");
+    const roots = FARM_FOCUS[color].map((moves) => lineEnd(moves).key);
     const focus = reachableFrom(tree, roots);
     const waiting = pendingKeys(tree);
     return [waiting.filter((k) => focus.has(k)), waiting.filter((k) => !focus.has(k))];
@@ -96,7 +96,7 @@ export function useFolderLearning(
   const blocked = useMemo(() => {
     const out = new Map<string, Blocked>();
     if (!tree) return out;
-    const roots = FARM_FOCUS[color].map((moves) => walkLine(moves).at(-1)?.key ?? "");
+    const roots = FARM_FOCUS[color].map((moves) => lineEnd(moves).key);
     const focus = reachableFrom(tree, roots);
     for (const p of all) {
       const steps = walkLine(p.folder.moves);

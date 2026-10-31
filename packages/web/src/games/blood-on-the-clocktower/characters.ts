@@ -18,6 +18,11 @@ import type {
   Edition,
 } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import { charactersOfType } from "@boardgames/core/games/blood-on-the-clocktower/characters";
+import {
+  baseDistribution,
+  MAX_PLAYERS,
+  MIN_PLAYERS,
+} from "@boardgames/core/games/blood-on-the-clocktower/setup";
 
 export type ClocktowerEdition = Edition | "sects-and-violets";
 
@@ -48,6 +53,18 @@ export const CLOCKTOWER_CATEGORY_LABELS: Record<ClocktowerCategory, string> = {
   demon: "Demons",
   traveller: "Travellers",
 };
+
+/** The edition's display name — also what `scenario` stores on a match. */
+export function clocktowerEditionLabel(edition: ClocktowerEdition): string {
+  return CLOCKTOWER_EDITIONS.find((e) => e.id === edition)?.label ?? edition;
+}
+
+/** The edition a stored `scenario` names, or null for anything else. */
+export function clocktowerEditionFromLabel(
+  label: string | undefined | null,
+): ClocktowerEdition | null {
+  return CLOCKTOWER_EDITIONS.find((e) => e.label === label)?.id ?? null;
+}
 
 const CATEGORY_ORDER: ClocktowerCategory[] = [
   "townsfolk",
@@ -209,4 +226,71 @@ export function fabledByGroup(): ReadonlyArray<{
     label: FABLED_GROUP_LABELS[group],
     names: FABLED_BY_GROUP[group],
   }));
+}
+
+// ── Setup check ───────────────────────────────────────────────────────
+// A recorded game should start from the setup sheet's distribution for its
+// player count, after the orange-flower adjustments of the characters in
+// play. A mismatch usually means a character was recorded as what someone
+// believed or became (a Drunk as their Townsfolk, a Scarlet Woman as the
+// Demon) — the form warns, never blocks.
+
+/** Outsider-count adjustments by character: each entry is one allowed shift. */
+const OUTSIDER_SHIFTS: Record<string, readonly number[]> = {
+  Baron: [2],
+  Godfather: [-1, 1],
+  "Fang Gu": [1],
+  Vigormortis: [-1],
+};
+
+/**
+ * What is wrong with a fully assigned roster's character counts, as one
+ * sentence each — empty when it matches the setup sheet, when a role is
+ * missing or unknown, or when the resident count is outside 5–15.
+ */
+export function clocktowerSetupProblems(roles: ReadonlyArray<string | undefined>): string[] {
+  const chars = roles.map(findClocktowerCharacter);
+  if (chars.some((c) => c === null)) return [];
+  const residents = chars.filter(
+    (c): c is ClocktowerCharacter => c !== null && c.category !== "traveller",
+  );
+  const n = residents.length;
+  if (n < MIN_PLAYERS || n > MAX_PLAYERS) return [];
+  const count = (category: ClocktowerCategory) =>
+    residents.filter((c) => c.category === category).length;
+  const base = baseDistribution(n);
+  const problems: string[] = [];
+
+  const demons = count("demon");
+  if (demons !== base.demons) {
+    problems.push(
+      `${demons} Demons — a game starts with ${base.demons}. Record the character each player started as.`,
+    );
+  }
+  const minions = count("minion");
+  if (minions !== base.minions) {
+    problems.push(
+      `${minions} ${minions === 1 ? "Minion" : "Minions"} — ${n} players start with ${base.minions}.`,
+    );
+  }
+
+  let allowed = [base.outsiders];
+  for (const c of residents) {
+    const shifts = OUTSIDER_SHIFTS[c.name];
+    if (shifts) allowed = allowed.flatMap((o) => shifts.map((s) => o + s));
+  }
+  const good = n - base.minions - base.demons;
+  allowed = [...new Set(allowed)].filter((o) => o >= 0 && o <= good).sort((a, b) => a - b);
+  const outsiders = count("outsider");
+  if (minions === base.minions && demons === base.demons && !allowed.includes(outsiders)) {
+    const expected = allowed.map((o) => `${good - o} and ${o}`).join(" or ");
+    const drunkHint =
+      outsiders < Math.min(...allowed) && !residents.some((c) => c.name === "Drunk")
+        ? " Was one of them the Drunk?"
+        : "";
+    problems.push(
+      `${count("townsfolk")} Townsfolk and ${outsiders} ${outsiders === 1 ? "Outsider" : "Outsiders"} — ${n} players start with ${expected}.${drunkHint}`,
+    );
+  }
+  return problems;
 }

@@ -19,5 +19,6 @@ export function specFromSearch(search: string): SessionSpec {
     if (list.length > 0) return { kind: "ids", ids: list };
   }
   const domain = findDomain(sp.get("domain"));
-  return { kind: "due", domain: domain?.slug ?? null, limit };
+  const more = sp.get("more") === "1";
+  return { kind: "due", domain: domain?.slug ?? null, limit, ...(more ? { more } : {}) };
 }

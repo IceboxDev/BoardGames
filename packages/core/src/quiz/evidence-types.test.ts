@@ -104,4 +104,31 @@ describe("evidence ledger", () => {
     expect(parseEvidenceRef("a0042/e3", "a0001")).toEqual({ article: "a0042", id: "e3" });
     expect(parseEvidenceRef("s1", "a0001")).toBeNull();
   });
+
+  it("requires a report file exactly on research-report sources", () => {
+    const e = structuredClone(good);
+    e.sources.s3 = {
+      url: "https://media.githubusercontent.com/media/x/y/master/r/b00316.pdf",
+      kind: "research-report",
+      lang: "en",
+      retrievedAt: "2026-10-24",
+    };
+    expect(evidenceProblems(article, e)).toEqual([
+      "evidence/a0001/s3: a research-report source needs its report file, and only it",
+    ]);
+    e.sources.s3.report = {
+      file: "research-reports/b00316.pdf",
+      sha256: "b".repeat(64),
+      pages: 9,
+      backlog: "b00316",
+      receivedAt: "2026-10-24",
+    };
+    expect(ArticleEvidenceSchema.safeParse(e).success).toBe(true);
+    expect(evidenceProblems(article, e)).toEqual([]);
+    e.sources.s1.report = e.sources.s3.report;
+    expect(evidenceProblems(article, e)).toHaveLength(1);
+    e.sources.s1.report = undefined;
+    e.sources.s3.report = { ...e.sources.s3.report, file: "photos/x.pdf" };
+    expect(ArticleEvidenceSchema.safeParse(e).success).toBe(false);
+  });
 });

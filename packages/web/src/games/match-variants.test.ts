@@ -39,7 +39,28 @@ describe("variantConfigForSlug", () => {
   it("returns the 7 Wonders edition config (multi-select)", () => {
     const config = variantConfigForSlug("7-wonders");
     expect(config?.mode).toBe("multi");
-    expect(config?.options.length).toBeGreaterThanOrEqual(2);
+    expect(config?.default).toBe("Base");
+    expect(config?.options.map((o) => o.value)).toEqual([
+      "Base",
+      "Leaders",
+      "Cities",
+      "Armada",
+      "Edifice",
+    ]);
+  });
+
+  it("lists Bomb Busters missions by number, #1 first, within the wire's scenario limit", () => {
+    const config = variantConfigForSlug("bomb-busters");
+    expect(config?.label).toBe("Mission");
+    expect(config?.options).toHaveLength(8);
+    expect(defaultVariantValue("bomb-busters")).toBe("#1 Training, Day 1");
+    for (const o of config?.options ?? []) expect(o.value.length).toBeLessThanOrEqual(64);
+  });
+
+  it("offers Dobble Connect's two modes, Speed first", () => {
+    const config = variantConfigForSlug("dobble-connect");
+    expect(config?.options.map((o) => o.value)).toEqual(["Speed", "Standard"]);
+    expect(defaultVariantValue("dobble-connect")).toBe("Speed");
   });
 
   // Publish or Perish: base game plus three expansion packs, recorded like

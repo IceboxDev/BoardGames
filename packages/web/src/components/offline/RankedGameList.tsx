@@ -26,11 +26,12 @@ type Props = {
   onResetVotes?: () => void;
   resettingVotes?: boolean;
   /**
-   * Private night in host-pick mode: the list is the host's lineup in pick
-   * order, not a vote result — no counts, one "in the lineup" toggle, and the
-   * bringer's face on each row (from `attendees[].bringing`).
+   * Private night in host- or admin-pick mode: the list is the pickers'
+   * lineup in pick order, not a vote result — no counts, one "in the lineup"
+   * toggle, and the bringer's face on each row (from `attendees[].bringing`).
+   * `title` names whose lineup it is ("Mantas's lineup", "Admins' lineup").
    */
-  lineup?: { hostName: string | null; attendees: Attendee[]; viewerCanPick: boolean };
+  lineup?: { title: string; attendees: Attendee[]; viewerCanPick: boolean };
   /** The viewer's reactions don't count on this night — render read-only. */
   reactionsDisabled?: boolean;
 };
@@ -114,11 +115,7 @@ export default function RankedGameList({
       {/* Fixed height so the row is the same with or without the admin's
           reset button — the list never shifts between viewers. */}
       <div className="flex h-7 items-center justify-between gap-2 px-2">
-        <Eyebrow tone="amber">
-          {lineup
-            ? `${lineup.hostName ? `${lineup.hostName}'s` : "Host's"} lineup`
-            : "Tonight's picks"}
-        </Eyebrow>
+        <Eyebrow tone="amber">{lineup ? lineup.title : "Tonight's picks"}</Eyebrow>
         {onResetVotes && !lineup && (
           <Button
             variant="ghost"

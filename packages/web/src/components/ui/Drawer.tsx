@@ -39,6 +39,14 @@ type DrawerProps = {
   subheader?: ReactNode;
   /** Disable backdrop-click-to-close. Defaults to true (closes). */
   closeOnBackdrop?: boolean;
+  /**
+   * `bare`: no header row — the content draws its own heading and close
+   * control (a surface with its own typographic identity, like the quiz
+   * trainer's newspaper settings). Label it with `ariaLabel`.
+   */
+  chrome?: "default" | "bare";
+  /** Extra panel classes (a wider panel, another surface colour). */
+  panelClassName?: string;
   children: ReactNode;
 };
 
@@ -70,6 +78,8 @@ export function Drawer({
   ariaLabel,
   subheader,
   closeOnBackdrop = true,
+  chrome = "default",
+  panelClassName,
   children,
 }: DrawerProps) {
   const panelRef = useRef<HTMLDivElement>(null);
@@ -101,36 +111,40 @@ export function Drawer({
           aria-label={labelledBy ? undefined : ariaLabel}
           tabIndex={-1}
           data-side={side}
-          className={cn(PANEL_BASE, geometry.panel)}
+          className={cn(PANEL_BASE, geometry.panel, panelClassName)}
           initial={geometry.hidden}
           animate={geometry.shown}
           exit={geometry.hidden}
           transition={{ type: "spring", stiffness: 260, damping: 30 }}
         >
-          <header className="flex shrink-0 items-start justify-between gap-3 border-b border-line-soft px-5 py-4">
-            <div className="min-w-0">
-              {eyebrow && (
-                // Shared Eyebrow primitive at its `sm` density — same slot as
-                // Modal's, one type ramp between them.
-                <Eyebrow size="sm">{eyebrow}</Eyebrow>
-              )}
-              {title && (
-                <h2 id={titleId} className="mt-1 truncate text-base font-semibold text-fg-strong">
-                  {title}
-                </h2>
-              )}
-              {subheader}
-            </div>
-            <IconButton
-              variant="ghost"
-              size="sm"
-              aria-label="Close"
-              onClick={onClose}
-              icon={<XIcon />}
-            />
-          </header>
+          {chrome === "default" && (
+            <header className="flex shrink-0 items-start justify-between gap-3 border-b border-line-soft px-5 py-4">
+              <div className="min-w-0">
+                {eyebrow && (
+                  // Shared Eyebrow primitive at its `sm` density — same slot as
+                  // Modal's, one type ramp between them.
+                  <Eyebrow size="sm">{eyebrow}</Eyebrow>
+                )}
+                {title && (
+                  <h2 id={titleId} className="mt-1 truncate text-base font-semibold text-fg-strong">
+                    {title}
+                  </h2>
+                )}
+                {subheader}
+              </div>
+              <IconButton
+                variant="ghost"
+                size="sm"
+                aria-label="Close"
+                onClick={onClose}
+                icon={<XIcon />}
+              />
+            </header>
+          )}
 
-          <div className={geometry.body}>{children}</div>
+          <div className={chrome === "bare" ? "flex min-h-0 flex-1 flex-col" : geometry.body}>
+            {children}
+          </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>

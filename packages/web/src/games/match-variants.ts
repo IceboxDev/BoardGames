@@ -143,18 +143,19 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "The Plot Thickens", label: "The Plot Thickens" },
     ],
   },
+  // The group plays the 2nd edition and owns its Leaders, Cities, Armada and
+  // Edifice expansions (all 2nd edition too, so the edition isn't spelled out). The
+  // base game is always in play, so pre-check it; expansions stay opt-in.
   "7-wonders": {
     label: "Edition",
     mode: "multi",
-    // The base game is always in play, so pre-check it; expansions stay opt-in.
     default: "Base",
     options: [
       { value: "Base", label: "Base game" },
       { value: "Leaders", label: "Leaders" },
       { value: "Cities", label: "Cities" },
-      { value: "Wonder Pack", label: "Wonder Pack" },
-      { value: "Babel", label: "Babel" },
       { value: "Armada", label: "Armada" },
+      { value: "Edifice", label: "Edifice" },
     ],
   },
   // Publish or Perish's three expansion packs (the group owns the All-in
@@ -221,13 +222,54 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     options: [{ value: "Standard", label: "Standard" }],
   },
   // Just One: a cooperative game with two rulesets — Standard, or Discardless
-  // (the harder variant). Shown as the MatchCard subtitle.
+  // (the easier variant: a wrong guess costs no extra card). Shown as the
+  // MatchCard subtitle; the rating engine only compares scores within one.
   "just-one": {
     label: "Mode",
     mode: "single",
     options: [
       { value: "Standard", label: "Standard" },
       { value: "Discardless", label: "Discardless" },
+    ],
+  },
+  // Bomb Busters: a co-op campaign of numbered missions that get harder as the
+  // number rises — record which one. The number leads the stored value
+  // ("#4 Training: First Day in the Field") so missions sort and stay
+  // comparable once the rest of the 66 are added. Mission #1 is the default.
+  "bomb-busters": {
+    label: "Mission",
+    mode: "single",
+    options: [
+      { value: "#1 Training, Day 1", label: "#1 Training, Day 1" },
+      { value: "#2 Training, Day 2", label: "#2 Training, Day 2" },
+      { value: "#3 Training, Day 3", label: "#3 Training, Day 3" },
+      {
+        value: "#4 Training: First Day in the Field",
+        label: "#4 Training: First Day in the Field",
+      },
+      {
+        value: "#5 Training: Second Day in the Field",
+        label: "#5 Training: Second Day in the Field",
+      },
+      {
+        value: "#6 Training: Third Day in the Field",
+        label: "#6 Training: Third Day in the Field",
+      },
+      { value: "#7 Training: Last Day of Class", label: "#7 Training: Last Day of Class" },
+      { value: "#8 Final Exam", label: "#8 Final Exam" },
+    ],
+  },
+  // Dobble Connect: the rulebook game is played in teams (connect 4 cards of
+  // your colour); the group also plays a free-for-all speed mode — spot the
+  // matching symbol, every player for themselves, scored per player. The mode
+  // picks the match kind too (`VARIANT_KIND` in match-kinds.ts). Speed first:
+  // it's what the group usually plays.
+  "dobble-connect": {
+    label: "Mode",
+    mode: "single",
+    options: [
+      { value: "Speed", label: "Speed (free-for-all)" },
+      { value: "Standard", label: "Standard (teams)" },
     ],
   },
   // Medical Mysteries: each session solves one patient's case — record which.

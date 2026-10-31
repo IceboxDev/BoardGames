@@ -133,6 +133,23 @@ describe("fitSkillRatings — outcome kinds", () => {
     expect(r.players.c.traits.soph.theta).toBeLessThan(0);
   });
 
+  it("credits a Codenames Spymaster as much as all their Operatives together", () => {
+    const sm = (id: string) => ({ ...p(id), role: "Spymaster" });
+    const op = (id: string) => ({ ...p(id), role: "Operative" });
+    const outcome: MatchOutcome = {
+      kind: "teams",
+      teams: [{ members: [sm("a"), op("b"), op("c")] }, { members: [sm("d"), op("e"), op("f")] }],
+      winnerTeamIndices: [0],
+    };
+    const r = fitSkillRatings(
+      repeat(8, () => ({ slug: "codenames", playedAt: "2026-08-01T17:00:00.000Z", outcome })),
+    );
+    const rating = (id: string) => r.players[id]?.games.codenames?.rating ?? 0;
+    expect(rating("a")).toBeGreaterThan(rating("b"));
+    expect(rating("b")).toBeCloseTo(rating("c"), 8);
+    expect(rating("d")).toBeLessThan(rating("e"));
+  });
+
   it("handles an all-wins co-op without blowing up the baseline", () => {
     const outcome: MatchOutcome = {
       kind: "coop",

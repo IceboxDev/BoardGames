@@ -1,33 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
 import { Fragment, useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { CheckIcon } from "../../../../components/icons";
-import {
-  Eyebrow,
-  InteractiveCard,
-  MicroLabel,
-  PageHeader,
-  PageMain,
-  ProgressBar,
-  QueryBoundary,
-  SearchInput,
-  Select,
-} from "../../../../components/ui";
+import { QueryBoundary } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { cn } from "../../../../lib/cn";
 import { qk } from "../../../../lib/query-keys";
 import { wikiReadsQuery } from "../../api";
-import { coreToneOf, type Domain, findDomain, subName, TONE_STRIP } from "../../domains";
+import { type Domain, findDomain, subName } from "../../domains";
 import { useQuizIndex } from "../../hooks/useContent";
 import { usePrimaryLanguage } from "../../hooks/useQuestionLanguage";
 import { fieldIn, inLang } from "../../logic/text";
 import { useTrainerPaths } from "../../paths";
+import { DomainIcon } from "../common/DomainIcon";
 import { PrimaryLanguageToggle } from "../common/LanguageToggle";
+import { Headline, InkMeter, PaperNote, PaperSearch, PaperTabs } from "../paper/Paper";
+import { PaperPage } from "../paper/PaperPage";
+import { KICKER } from "../paper/paper-style";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 import { foldText } from "./highlight";
 
-// One domain's articles as a list, grouped by sub-category: title in the
-// chosen language, how many facts it covers, read marker. Filter as you
+// One section's page of the archive: its articles as a newspaper index in
+// columns, grouped by sub-category: title in the chosen language, a dotted
+// leader to how many facts it covers, read tick. Filter as you
 // type; sort by sub-category, title or unread first. Per-row progress dots
 // are deliberately absent — hundreds of rows would mean hundreds of state
 // requests; the article page shows them instead.
@@ -96,96 +90,104 @@ function DomainScreen({ domain: d }: { domain: Domain }) {
 
   return (
     <TrainerScreen>
-      <PageMain width="3xl" className="flex flex-col gap-5 pb-12">
-        <div className="flex flex-col gap-3">
-          <span
-            className={cn("block h-1 w-full rounded-full", TONE_STRIP[d.tone])}
-            aria-hidden="true"
-          />
-          <Eyebrow tone={coreToneOf(d.tone)}>{d.label} · The Archive</Eyebrow>
-          <PageHeader
-            size="md"
-            title={inLang(language, d)}
-            subtitle={`${articles.length} articles · ${readCount} read`}
-            actions={<PrimaryLanguageToggle value={language} onChange={setPrimary} />}
-          />
-          <ProgressBar
-            value={articles.length > 0 ? readCount / articles.length : 0}
-            tone={coreToneOf(d.tone)}
-            label="Articles read"
-            animate={false}
-          />
-        </div>
+      <PaperPage pageLabel={d.en} folio="B2" current="archive" className="gap-4">
+        <header className="flex flex-col gap-3">
+          <div className="flex items-start gap-4">
+            <DomainIcon domain={d.slug} size={56} />
+            <div className="flex min-w-0 flex-1 flex-col gap-1">
+              <Link to={paths.wiki} className={cn(KICKER, "text-fg-muted hover:text-fg-strong")}>
+                The Archive · Section {d.label}
+              </Link>
+              <Headline as="h1" size="lg">
+                {inLang(language, d)}
+              </Headline>
+              <p className="font-news text-sm italic text-fg-secondary">
+                {articles.length} articles · {readCount} read
+              </p>
+            </div>
+            <PrimaryLanguageToggle value={language} onChange={setPrimary} />
+          </div>
+          <InkMeter value={articles.length > 0 ? readCount / articles.length : 0} domain={d.slug} />
+        </header>
 
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-          <SearchInput
-            containerClassName="flex-1"
-            aria-label="Filter articles"
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <PaperSearch
+            className="sm:w-96"
+            label="Filter articles"
             placeholder="Filter by title"
             value={filter}
-            onChange={(e) => setFilter(e.target.value)}
+            onChange={setFilter}
           />
-          <Select
-            aria-label="Sort articles"
-            size="sm"
-            block={false}
-            chevron
+          <PaperTabs<Sort>
+            label="Sort articles"
             value={sort}
-            onChange={(e) => setSort(e.target.value as Sort)}
-          >
-            <option value="sub">Topic</option>
-            <option value="title">Title</option>
-            <option value="unread">Unread first</option>
-          </Select>
+            onChange={setSort}
+            options={[
+              { value: "sub", label: "Topic" },
+              { value: "title", label: "Title" },
+              { value: "unread", label: "Unread first" },
+            ]}
+          />
         </div>
 
         <QueryBoundary query={index} loadingLabel="Opening the index…">
-          {() => (
-            <ol className="flex flex-col gap-1.5" aria-label={`${d.en} articles`}>
-              {rows.map((r, i) => (
-                <Fragment key={r.id}>
-                  {sort === "sub" && rows[i - 1]?.sub !== r.sub && (
-                    <li className={cn(i > 0 && "pt-3")}>
-                      <MicroLabel>{subName(d, r.sub, language)}</MicroLabel>
-                    </li>
-                  )}
-                  <li>
-                    <InteractiveCard
-                      as={Link}
-                      to={paths.wikiArticle(r.id)}
-                      padding="none"
-                      className="flex items-center gap-3 px-3 py-2"
-                    >
-                      <span className="min-w-0 flex-1 truncate text-sm text-fg-primary group-hover:text-fg-strong">
-                        {r.title}
-                      </span>
-                      <MicroLabel className="shrink-0 tabular-nums" title="Facts it covers">
-                        {r.facts}
-                      </MicroLabel>
-                      {r.read ? (
-                        <span className="inline-flex shrink-0 items-center gap-1 text-2xs font-medium text-emerald-300">
-                          <CheckIcon className="h-3.5 w-3.5" />
-                          <span className="sr-only">Read</span>
-                        </span>
-                      ) : (
+          {() =>
+            rows.length === 0 ? (
+              <PaperNote>No article matches “{filter.trim()}”.</PaperNote>
+            ) : (
+              <ol
+                className="font-news text-sm md:cols-news-2 xl:cols-news-3"
+                aria-label={`${d.en} articles`}
+              >
+                {rows.map((r, i) => (
+                  <Fragment key={r.id}>
+                    {sort === "sub" && rows[i - 1]?.sub !== r.sub && (
+                      <li
+                        className={cn(
+                          KICKER,
+                          d.ink,
+                          "break-after-avoid border-b border-fg-primary pb-0.5",
+                          i > 0 && "mt-4",
+                        )}
+                      >
+                        {subName(d, r.sub, language)}
+                      </li>
+                    )}
+                    <li className="break-inside-avoid">
+                      <Link
+                        to={paths.wikiArticle(r.id)}
+                        className="group flex items-baseline gap-1.5 py-1 text-fg-primary hover:text-fg-strong focus-visible:outline-2 focus-visible:outline-accent-400"
+                      >
+                        <span className="min-w-0 truncate group-hover:underline">{r.title}</span>
                         <span
-                          className="block h-1.5 w-1.5 shrink-0 rounded-full border border-line-strong"
-                          title="Unread"
+                          aria-hidden="true"
+                          className="min-w-4 flex-1 border-b border-dotted border-line-strong"
                         />
-                      )}
-                    </InteractiveCard>
-                  </li>
-                </Fragment>
-              ))}
-              {rows.length === 0 && (
-                <li className="py-6 text-center text-sm text-fg-muted">
-                  No article matches “{filter.trim()}”.
-                </li>
-              )}
-            </ol>
-          )}
+                        <span
+                          className="shrink-0 tabular-nums text-fg-muted"
+                          title="Facts it covers"
+                        >
+                          {r.facts}
+                        </span>
+                        <span
+                          className={cn(
+                            "w-3 shrink-0 text-center",
+                            r.read ? d.ink : "text-fg-disabled",
+                          )}
+                          title={r.read ? "Read" : "Unread"}
+                        >
+                          {r.read ? "✓" : "○"}
+                          <span className="sr-only">{r.read ? "Read" : "Unread"}</span>
+                        </span>
+                      </Link>
+                    </li>
+                  </Fragment>
+                ))}
+              </ol>
+            )
+          }
         </QueryBoundary>
-      </PageMain>
+      </PaperPage>
     </TrainerScreen>
   );
 }

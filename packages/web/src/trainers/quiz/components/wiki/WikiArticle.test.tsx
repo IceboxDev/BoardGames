@@ -181,7 +181,6 @@ vi.mock("../../hooks/useQuizSettings", () => ({
   useQuizSettings: () => ({
     settings: {
       language: { primary: "en", secondary: null },
-      newFactsPerDay: 15,
       includeLeeches: false,
       gameReviewsAffectSrs: false,
       sources: ["quiztopia", "trivial-pursuit"],
@@ -236,6 +235,7 @@ const historyMock = vi.fn(async (_id: string) => HISTORY);
 const deleteWikiReadMock = vi.fn(async (_body: { articleId: string }) => ({ reads: [] }));
 vi.mock("../../api", () => ({
   myReportsQuery: () => async () => ({ reports: [], unread: 0 }),
+  todayKey: () => "2026-10-24",
   statesQuery: () => async () => ({ states: [] }),
   wikiReadsQuery: () => async () => ({ reads: [] }),
   articleHistoryQuery: (id: string) => () => historyMock(id),
@@ -465,7 +465,7 @@ describe("WikiArticle", () => {
     renderArticle();
     await screen.findByRole("article");
     expect(historyMock).not.toHaveBeenCalled();
-    await user.click(screen.getByRole("button", { name: "History" }));
+    await user.click(screen.getByRole("button", { name: "Corrections & amendments" }));
     expect(historyMock).toHaveBeenCalledWith("a0002");
 
     const q1 = await screen.findByRole("region", { name: /^Q1 · / });
@@ -499,7 +499,7 @@ describe("WikiArticle", () => {
     const user = userEvent.setup();
     renderArticle();
     await screen.findByRole("article");
-    await user.click(screen.getByRole("button", { name: "History" }));
+    await user.click(screen.getByRole("button", { name: "Corrections & amendments" }));
     const q1 = await screen.findByRole("region", { name: /^Q1 · / });
     expect(
       within(q1).getByRole("link", { name: /transcripts\/quiztopia\/c001\.json/ }),
@@ -521,7 +521,7 @@ describe("WikiArticle", () => {
       const user = userEvent.setup();
       renderArticle();
       await screen.findByRole("article");
-      await user.click(screen.getByRole("button", { name: "History" }));
+      await user.click(screen.getByRole("button", { name: "Corrections & amendments" }));
       const q1 = await screen.findByRole("region", { name: /^Q1 · / });
       expect(await within(q1).findByText(/^Grade A:/)).toBeInTheDocument();
       expect(within(q1).getByRole("link", { name: /Card photo c001/ })).toHaveAttribute(

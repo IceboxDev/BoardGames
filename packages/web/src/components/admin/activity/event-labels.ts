@@ -199,7 +199,7 @@ export const EVENT_LABELS: EventLabels = {
     tone: "night",
     describe: ({ date, pickMode }) =>
       `Switched ${day(date) ?? "a private night"} to ${
-        pickMode === "host" ? "host picks" : "group voting"
+        pickMode === "host" ? "host picks" : pickMode === "admin" ? "admin picks" : "group voting"
       }`,
   },
   "calendar-feed-subscribe": { tone: "profile", describe: () => "Connected the calendar feed" },

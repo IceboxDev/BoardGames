@@ -162,7 +162,11 @@ export default function StudySession() {
         articles={newArticles}
         index={readIndex}
         language={language}
+        onLanguage={setLanguage}
         cardCount={session.items.length}
+        questionsOf={(id) => session.items.filter((it) => it.articleId === id).length}
+        onClose={() => navigate(paths.hub)}
+        homeTo={paths.hub}
         onNext={() => {
           if (readIndex + 1 >= newArticles.length) setReadingDone(true);
           else setReadIndex(readIndex + 1);
@@ -195,6 +199,9 @@ export default function StudySession() {
   }
 
   const showGradeBar = !loadError && status === "ready" && !session.empty && !complete && !reading;
+
+  // The reading pages are whole newspaper pages of their own (A2–A4).
+  if (reading) return <TrainerScreen>{body}</TrainerScreen>;
 
   return (
     <TrainerScreen className="flex flex-col">

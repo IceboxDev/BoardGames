@@ -163,6 +163,23 @@ describe("buildTree", () => {
     expect(again).toEqual(tree);
   });
 
+  it("pads by the engine alone where the database is unknown, and asks again next build", async () => {
+    const index = PositionIndex.build(whiteGames);
+    const opts = settings({ handpickMoves: 0 });
+    const offline: TreeProviders = { ...fakeProviders([], E4), popularMoves: async () => null };
+    const tree = await buildTree(index, "w", opts, null, offline);
+    const padded = movesAt(tree, "e4 e5 Nf3") ?? [];
+    expect(padded).toHaveLength(3);
+    expect(padded.slice(0, 2)).toEqual(["Nc6:played", "Nf6:played"]);
+    expect(padded.slice(2).every((m) => m.endsWith(":engine"))).toBe(true);
+    expect(tree.nodes[keyAfter("e4 e5 Nf3")]?.popular).toBeUndefined();
+    // Connected again: the database is asked and the padding becomes the popular move.
+    const log: string[] = [];
+    const again = await buildTree(index, "w", opts, tree, fakeProviders(log, E4));
+    expect(log).toContain("popular");
+    expect(movesAt(again, "e4 e5 Nf3")).toEqual(["Nc6:played", "Nf6:played", "d6:popular"]);
+  });
+
   it("covers every first move White played against you", async () => {
     const games = [game("b1", "e4 c5"), game("b2", "d4 Nf6"), game("b3", "e4 e5")];
     const tree = await buildTree(

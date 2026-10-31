@@ -84,8 +84,24 @@ export class Halted extends Error {
 export interface JobControl {
   /** True once the worker wants the job stopped; checked after every search. */
   halted(): boolean;
-  /** A deep search starts: its target depth and the deep searches left, this one included. */
-  searching(target: number, left: number): void;
+  /**
+   * A deep search starts: its target depth and the deep searches left, this one
+   * included — the most there can be. The main search's count hangs on the move
+   * it picks; `leftIf` gives it for a move (the one the search prefers so far).
+   */
+  searching(target: number, left: number, leftIf?: (best: string) => number): void;
+}
+
+/**
+ * At the hand-over time, a search this close to the end keeps its lane until
+ * it finishes: the job's last deep search, at most 2 depths short of its target
+ * (d48 of 50). In the logs, a d50 search reaches d48 at ~0.7× the time it
+ * reaches d49, and one that reached d49 finished at ~1.3× that time.
+ */
+export const HANDOVER_NEAR_DEPTHS = 2;
+
+export function nearlyDone(depth: number, target: number, left: number): boolean {
+  return target > 0 && left <= 1 && depth >= target - HANDOVER_NEAR_DEPTHS;
 }
 
 /**
@@ -313,7 +329,11 @@ export async function analyse(
   const others = (best: string | undefined) =>
     cands.filter((u) => u !== best).slice(0, policy.maxCandidates);
   // Before the main search its best isn't known: at most every candidate besides one.
-  control.searching(target, 1 + Math.min(cands.length, policy.maxCandidates));
+  control.searching(
+    target,
+    1 + Math.min(cands.length, policy.maxCandidates),
+    (best) => 1 + others(best).length,
+  );
   const main = await sfLines(engines, job.fen, `depth ${target}`, 1, control);
   if (main.length === 0) throw new Error("Stockfish gave no line");
   const lines: FarmLine[] = [main[0] as FarmLine];

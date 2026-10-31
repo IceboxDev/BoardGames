@@ -14,7 +14,13 @@ Nothing at runtime reads it.
 photos/<source>/<card>.jpg         the card's photo (LFS)
 photos/<source>/<card>.dupN.jpg    a re-photographed copy of the same card (LFS)
 manifest/<source>.json             one entry per card, in the source file's order
+research-reports/<bNNNNN>.pdf      a commissioned deep-research report on a backlog item (LFS)
+research-reports/<bNNNNN>.json     its manifest: backlog, target, sha256, pages, text snapshot, url
+research-prompts/                  the prompts those reports answer, with a checklist
 ```
+
+Research reports are the highest-ranking evidence in the bank (`scripts/quiz-ingest/README.md`
+§ 7.4): `pnpm quiz-ingest report add <file.pdf> --backlog=bNNNNN` files one.
 
 `<source>` and `<card>` are the ids in `packages/core/src/quiz/content/sources/<source>.json`,
 and that file's `image` is the photo's original name.
@@ -56,7 +62,7 @@ phone.
 
 ## Git LFS
 
-`.gitattributes` routes `photos/**` and `snapshots/**` to LFS. The full archive is about 3 GB.
+`.gitattributes` routes `photos/**`, `snapshots/**` and every `*.pdf` to LFS. The full archive is about 3 GB.
 Vercel's build runs `git lfs pull --exclude="packages/quiz-archive/**"`, so deploys never
 download it. To fetch it locally, run `git lfs pull --include="packages/quiz-archive/**"`.
 

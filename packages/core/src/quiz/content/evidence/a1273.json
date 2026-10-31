@@ -69,6 +69,23 @@
    "kind": "encyclopedia",
    "lang": "en",
    "retrievedAt": "2026-10-23T08:14:16Z"
+  },
+  "s10": {
+   "url": "https://media.githubusercontent.com/media/IceboxDev/BoardGames/master/packages/quiz-archive/research-reports/b00318.pdf",
+   "title": "The Beatles’ “Dog Whistle” at the End of *Sgt. Pepper*: Attribution Research",
+   "publisher": "ChatGPT deep research",
+   "kind": "research-report",
+   "lang": "en",
+   "retrievedAt": "2026-10-23",
+   "snapshot": "f2d10949206594ab0add7c002ec4bdbc564f22fe03f767d92306817554e7ca9c",
+   "report": {
+    "file": "research-reports/b00318.pdf",
+    "sha256": "72a75b7b23ac80e811f03784812ac1e338486773f74b09924f1c9e7172603724",
+    "pages": 8,
+    "backlog": "b00318",
+    "receivedAt": "2026-10-23",
+    "producer": "ChatGPT deep research"
+   }
   }
  },
  "assessments": [
@@ -401,6 +418,25 @@
    "by": "crawler",
    "run": "evidence-verify-2026-10-24",
    "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T15:19:44Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Answer: Paul McCartney. This wording has one defensible answer because it asks specifically for George",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "owner",
+   "run": "research-reports-2026-10-23",
+   "note": "For the wording attributed to George Martin (Summer of Love, p. 157: Paul, with his dog Martha). The attribution itself stays disputed: Lewisohn (1988, p. 109) and Emerick (2006, p. 188) name John Lennon; the tone was added at disc cutting."
   }
  ]
 }

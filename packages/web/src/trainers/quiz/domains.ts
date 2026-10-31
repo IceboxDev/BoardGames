@@ -1,7 +1,10 @@
 // The quiz platform's domains as the app draws them: the core taxonomy
-// (`@boardgames/core/quiz/taxonomy`) plus a display tone and a two-digit
-// label. Tones repeat — there are more domains than hues — and every class
-// is a full literal so Tailwind sees it.
+// (`@boardgames/core/quiz/taxonomy`) plus a two-digit label, the domain's own
+// colour (`--color-domain-<slug>`, index.css), its printer's-cut icon
+// (assets/domains, from DOMAIN-ICON-PROMPTS.md) and a legacy display tone.
+// Tones repeat — there are more domains than hues — and are only kept for
+// the screens not yet on the newspaper look. Every class is a full literal
+// so Tailwind sees it.
 
 import { QUIZ_DOMAINS, type QuizDomain } from "@boardgames/core/quiz/taxonomy";
 import type { CoreTone, Tone } from "../../components/ui";
@@ -25,19 +28,57 @@ const TONES: Record<string, DomainTone> = {
   geography: "accent",
 };
 
+/** The domain's own ink, one literal per slug (`text-domain-*` from index.css). */
+const INK: Record<string, string> = {
+  "music-stage": "text-domain-music-stage",
+  literature: "text-domain-literature",
+  art: "text-domain-art",
+  "film-media": "text-domain-film-media",
+  "sport-games": "text-domain-sport-games",
+  history: "text-domain-history",
+  society: "text-domain-society",
+  belief: "text-domain-belief",
+  science: "text-domain-science",
+  "earth-space": "text-domain-earth-space",
+  nature: "text-domain-nature",
+  technology: "text-domain-technology",
+  geography: "text-domain-geography",
+  everyday: "text-domain-everyday",
+};
+
+const ICONS = import.meta.glob<string>("./assets/domains/cut-*.webp", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 export interface Domain extends QuizDomain {
   /** Two-digit label printed in the domain's bubble ("07"). */
   label: string;
   tone: DomainTone;
+  /** Text class in the domain's own colour. */
+  ink: string;
+  /** The domain colour as a CSS value, for borders / fills set inline. */
+  color: string;
+  /** URL of the domain's printer's-cut icon. */
+  icon: string;
 }
 
 export const DOMAINS: readonly Domain[] = QUIZ_DOMAINS.map((d) => ({
   ...d,
   label: String(d.n).padStart(2, "0"),
   tone: TONES[d.slug] ?? "accent",
+  ink: INK[d.slug] ?? "text-accent-300",
+  color: `var(--color-domain-${d.slug})`,
+  icon: ICONS[`./assets/domains/cut-${d.slug}.webp`] ?? "",
 }));
 
 const FALLBACK: Domain = { ...DOMAINS[0], tone: "accent" };
+
+/** Every domain has an ink and an icon (checked by domains.test.ts). */
+export const DOMAIN_SLUGS_WITH_ART = DOMAINS.filter((d) => d.icon && INK[d.slug]).map(
+  (d) => d.slug,
+);
 
 export function domainOf(slug: string | null | undefined): Domain {
   return DOMAINS.find((d) => d.slug === slug) ?? FALLBACK;

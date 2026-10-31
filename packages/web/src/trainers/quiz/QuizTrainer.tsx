@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import "./components/paper/fonts";
 import { RouteFallback } from "../../components/RouteFallback";
 import TimelinePage from "./components/timeline/TimelinePage";
+import RecordPage from "./components/trainer/RecordPage";
 import StudySession from "./components/trainer/StudySession";
 import TrainerHub from "./components/trainer/TrainerHub";
 import WikiArticle from "./components/wiki/WikiArticle";
@@ -17,9 +19,10 @@ import { useQuizOutbox } from "./review-outbox";
 // Trivial Pursuit, …), studied by domain. Nested routes under
 // `/trainer/quiz/*` — the top nav's back button unwinds screen by screen:
 //
-//   .                          — the hub (today, the domains)
-//   study?domain|article|ids   — a study session
+//   .                          — the front page (today's edition)
+//   study?domain|article|ids|more — a study session
 //   timeline?q=                — the personal timeline of every studied fact
+//   record                     — The Record: figures, study days, standings, corrections
 //   wiki                       — the archive's domains
 //   wiki/search?q=             — full-text search
 //   wiki/journal               — every day's studied facts and reads
@@ -39,6 +42,7 @@ export default function QuizTrainer() {
       <Route index element={<TrainerHub />} />
       <Route path="study" element={<StudySession />} />
       <Route path="timeline" element={<TimelinePage />} />
+      <Route path="record" element={<RecordPage />} />
       <Route path="wiki" element={<WikiIndex />} />
       <Route path="wiki/search" element={<WikiSearch />} />
       <Route path="wiki/journal" element={<WikiJournal />} />

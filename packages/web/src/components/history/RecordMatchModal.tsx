@@ -15,7 +15,7 @@ import type {
 import { nightDate } from "@boardgames/core/protocol";
 import { type InfiniteData, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { defaultKindForSlug } from "../../games/match-kinds";
+import { defaultKindForSlug, kindForVariant } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
@@ -191,11 +191,11 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     if (state.mode === "edit") return;
     if (lastSlugRef.current === gameSlug) return;
     lastSlugRef.current = gameSlug;
-    const guess = defaultKindForSlug(gameSlug);
     // Seed the variant default ("Standard", "Base", …) so a new match starts
     // with a value instead of an empty subtitle. Replaces any scenario carried
     // over from the previously-picked game — undefined here clears it.
     const scenario = defaultVariantValue(gameSlug);
+    const guess = kindForVariant(gameSlug, scenario) ?? defaultKindForSlug(gameSlug);
     if (guess) setKind(guess);
     setOutcome((prev) => {
       const next = applyScenario(
@@ -254,6 +254,18 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     if (attendees.length === 0) return;
     setOutcome((prev) => applyParticipants(prev.kind, prev, attendees));
   }, [standaloneDayKey, state.mode, queryClient]);
+
+  // A variant that decides the kind (Dobble Connect: Speed = free-for-all,
+  // Standard = teams) switches the form with it, keeping the roster.
+  function changeVariant(next: MatchOutcome) {
+    const implied = kindForVariant(gameSlug, getScenario(next));
+    if (!implied || implied === kind) {
+      setOutcome(next);
+      return;
+    }
+    setKind(implied);
+    setOutcome(applyScenario(carryOverParticipants(implied, next), getScenario(next)));
+  }
 
   function changeKind(nextKind: MatchKind) {
     setKind(nextKind);
@@ -376,7 +388,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
         </Field>
 
         {variantConfigForSlug(gameSlug) && (
-          <GameVariantPicker gameSlug={gameSlug} outcome={outcome} onChange={setOutcome} />
+          <GameVariantPicker gameSlug={gameSlug} outcome={outcome} onChange={changeVariant} />
         )}
 
         <Surface variant="tile" padding="md">

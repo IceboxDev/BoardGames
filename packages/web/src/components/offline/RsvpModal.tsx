@@ -84,7 +84,14 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   const canTogglePicksLock = !!lock && !isPrivate && (isAdmin || isHost);
   const picksLocked = !!lock?.picksLockedAt;
   const pickMode = gamesQuery.data?.pickMode ?? lock?.pickMode ?? "group";
-  const hostPicks = isPrivate && pickMode === "host";
+  // Host picks and admin picks are both a curated lineup, not a vote.
+  const hostPicks = isPrivate && (pickMode === "host" || pickMode === "admin");
+  const lineupTitle =
+    pickMode === "admin"
+      ? "Admins' lineup"
+      : lock?.host?.name
+        ? `${lock.host.name}'s lineup`
+        : "Host's lineup";
 
   // Opening the card is the physical interaction we care about (the user
   // has now seen the location, time, and game picks), so we promote the
@@ -313,8 +320,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
             )}
           </span>
         )}
-        {isPrivate && hostPicks && lock.host && (
+        {isPrivate && pickMode === "host" && lock.host && (
           <span className="text-fg-muted">{lock.host.name} picks the games</span>
+        )}
+        {isPrivate && pickMode === "admin" && (
+          <span className="text-fg-muted">The admins pick the games</span>
         )}
       </div>
     ) : null;
@@ -482,7 +492,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               resettingVotes={resetVotesMutation.isPending}
               lineup={
                 hostPicks
-                  ? { hostName: lock?.host?.name ?? null, attendees, viewerCanPick: viewerCanReact }
+                  ? { title: lineupTitle, attendees, viewerCanPick: viewerCanReact }
                   : undefined
               }
               reactionsDisabled={!viewerCanReact}
@@ -600,7 +610,7 @@ function SeatSwitch({
 // p-6 modal panel. Title attribute + sr-only span keep the button
 // accessible to screen readers and tooltip-on-hover when the visible label
 // is hidden.
-// Exported for the /dev/rsvp-preview page.
+// Exported for the onboarding cards.
 export const RSVP_OPTIONS: SegmentedOption<RsvpStatus>[] = [
   {
     value: "yes",

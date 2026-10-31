@@ -145,7 +145,7 @@ export const ActivityMetaSchemas = {
   "night-invited": z.object({ date: Night, userIds: z.array(z.string()) }),
   "night-uninvited": z.object({ date: Night, userIds: z.array(z.string()) }),
   "night-seats": z.object({ date: Night, seatCount: z.number().int().nullable() }),
-  "night-pick-mode": z.object({ date: Night, pickMode: z.enum(["host", "group"]) }),
+  "night-pick-mode": z.object({ date: Night, pickMode: z.enum(["host", "group", "admin"]) }),
   "calendar-feed-subscribe": z.object({}),
   "calendar-feed-unsubscribe": z.object({}),
 
@@ -356,6 +356,7 @@ export const PAGE_VIEW_PAGES = [
   "trainer-study",
   "trainer-wiki",
   "trainer-timeline",
+  "trainer-record",
   "trainer-explore",
   // Go reviews (detail: review id, absent on the list)
   "go-review",

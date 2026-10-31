@@ -1,9 +1,10 @@
 import { useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { ChevronRightIcon } from "../../../../components/icons";
-import { Chip } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import type { LaidOutBlock, TimelineLayout } from "../../logic/timeline-layout";
+import { PrintButton } from "../paper/Paper";
+import { KICKER, RULE_DOUBLE_TOP } from "../paper/paper-style";
 import { blockDomId } from "./dom-ids";
 import { chainLabel, chainTitle } from "./era-copy";
 
@@ -83,7 +84,7 @@ export function BlockRail({ blocks: all, lang, orientation, className }: Props) 
     return (
       <nav
         aria-label={nav}
-        className={cn("scrollbar-hide flex items-center gap-1 overflow-x-auto", className)}
+        className={cn("scrollbar-hide flex items-center gap-3 overflow-x-auto", className)}
       >
         {crumbs.map((b, i) => {
           const last = path.length > 0 && i === crumbs.length - 1;
@@ -93,20 +94,17 @@ export function BlockRail({ blocks: all, lang, orientation, className }: Props) 
               {path.length > 0 && i > 0 && (
                 <ChevronRightIcon aria-hidden="true" className="h-3 w-3 text-fg-disabled" />
               )}
-              <Chip
-                pressed={last}
-                size="xs"
-                shape="pill"
+              <PrintButton
                 onClick={() => jump(b.id)}
                 aria-current={last ? "location" : undefined}
-                className="shrink-0"
+                className={cn("shrink-0", last ? "text-fg-strong" : "text-fg-muted")}
               >
                 {chainLabel(b.chain, lang)}
                 {title && <span className="text-fg-muted"> · {title}</span>}
                 {path.length === 0 && (
                   <span className="tabular-nums text-fg-muted"> {b.count}</span>
                 )}
-              </Chip>
+              </PrintButton>
             </span>
           );
         })}
@@ -128,7 +126,12 @@ export function BlockRail({ blocks: all, lang, orientation, className }: Props) 
 
   return (
     <nav aria-label={nav} className={cn("flex flex-col", className)}>
-      <ol className="flex flex-col border-l border-line">
+      <p
+        className={cn(KICKER, RULE_DOUBLE_TOP, "border-b border-b-fg-primary py-1 text-fg-primary")}
+      >
+        {lang === "de" ? "Epochen" : "Eras"}
+      </p>
+      <ol className="flex flex-col">
         {rows.map((b) => {
           const on = active === b.id;
           const title = chainTitle(b.chain, lang);
@@ -141,16 +144,16 @@ export function BlockRail({ blocks: all, lang, orientation, className }: Props) 
                 aria-current={on ? "location" : undefined}
                 title={title ?? undefined}
                 className={cn(
-                  "-ml-px flex w-full items-baseline justify-between gap-2 border-l-2 py-1 pr-1 text-left transition-colors",
+                  "flex w-full items-baseline justify-between gap-2 border-b border-dotted border-line-strong py-1 pr-1 text-left font-news transition-colors",
                   "focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60",
-                  b.depth === 0 ? "text-xs" : "text-2xs",
+                  b.depth === 0 ? "text-sm" : "text-xs",
                   on
-                    ? "border-accent-400 font-semibold text-fg-strong"
+                    ? "font-semibold text-accent-300"
                     : onPath.has(b.id)
-                      ? "border-line-strong text-fg-secondary"
-                      : "border-transparent text-fg-muted hover:text-fg-secondary",
+                      ? "text-fg-primary"
+                      : "text-fg-muted hover:text-fg-strong",
                 )}
-                style={{ paddingLeft: 12 + b.depth * 10 }}
+                style={{ paddingLeft: b.depth * 10 }}
               >
                 <span className="truncate">
                   {chainLabel(
@@ -158,7 +161,7 @@ export function BlockRail({ blocks: all, lang, orientation, className }: Props) 
                     lang,
                   )}
                 </span>
-                <span className="text-2xs tabular-nums">{b.count}</span>
+                <span className="text-xs tabular-nums">{b.count}</span>
               </button>
             </li>
           );

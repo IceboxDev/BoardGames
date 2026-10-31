@@ -42,7 +42,7 @@ import { useQuizSettings } from "./useQuizSettings";
 // ── Spec ──────────────────────────────────────────────────────────────
 
 export type SessionSpec =
-  | { kind: "due"; domain: string | null; limit?: number }
+  | { kind: "due"; domain: string | null; limit?: number; more?: boolean }
   | { kind: "article"; articleId: string }
   | { kind: "ids"; ids: readonly string[] };
 
@@ -301,7 +301,15 @@ function tierOf(state: SrsState | null): QueueTier {
 // shape is `{ states }`, not `{ items, states }`).
 function sourceKey(spec: SessionSpec, today: string) {
   if (spec.kind === "due") {
-    return ["quiz", "session", "due", spec.domain, today, spec.limit ?? null] as const;
+    return [
+      "quiz",
+      "session",
+      "due",
+      spec.domain,
+      today,
+      spec.limit ?? null,
+      spec.more ?? false,
+    ] as const;
   }
   if (spec.kind === "article") return ["quiz", "session", "article", spec.articleId] as const;
   return ["quiz", "session", "ids", spec.ids.join(",")] as const;
@@ -318,6 +326,7 @@ async function fetchSource(
       today,
       domain: spec.domain ?? undefined,
       limit: spec.limit,
+      more: spec.more,
     })(ctx);
     const states: Record<string, SrsState | null> = {};
     const items = res.items.map((i) => {

@@ -165,7 +165,13 @@ function SourceRow({ source }: { source: QuizDeskEvidenceSource }) {
     <li className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs">
       <MicroLabel className="tabular-nums">{source.id}</MicroLabel>
       <Badge
-        tone={["primary", "official", "scholarly"].includes(source.kind) ? "emerald" : "neutral"}
+        tone={
+          source.kind === "research-report"
+            ? "accent"
+            : ["primary", "official", "scholarly"].includes(source.kind)
+              ? "emerald"
+              : "neutral"
+        }
         size="xs"
       >
         {source.kind}
@@ -176,6 +182,14 @@ function SourceRow({ source }: { source: QuizDeskEvidenceSource }) {
         {source.publisher ? ` · ${source.publisher}` : ""}
       </ExternalLink>
       {source.archiveUrl && <ExternalLink href={source.archiveUrl}>archive</ExternalLink>}
+      {source.report && (
+        <span
+          className="text-fg-muted"
+          title={`${source.report.file} · sha256 ${source.report.sha256}`}
+        >
+          PDF · {source.report.pages} pages · {source.report.backlog}
+        </span>
+      )}
       {source.snapshot && (
         <span className="text-fg-muted" title={`snapshot ${source.snapshot}`}>
           snapshot ✓

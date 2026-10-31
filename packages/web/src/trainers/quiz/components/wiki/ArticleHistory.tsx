@@ -29,6 +29,7 @@ import {
 import { fieldIn, inLang, say } from "../../logic/text";
 import { useTrainerPaths } from "../../paths";
 import { TextLink } from "../common/TextLink";
+import { PrintButton } from "../paper/Paper";
 
 // The article's record, for a reader who wonders why a question reads the
 // way it does: what each card printed ("On the card: …"), the questions
@@ -138,10 +139,7 @@ export function RetiredQuestions({ article, lang }: { article: Article; lang: Qu
   const factNumber = new Map(article.facts.map((f, q) => [f.id, q]));
   return (
     <section className="flex flex-col gap-2">
-      <Button
-        size="xs"
-        variant="ghost"
-        align="start"
+      <PrintButton
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={listId}
@@ -154,12 +152,12 @@ export function RetiredQuestions({ article, lang }: { article: Article; lang: Qu
           ru: "Снятые вопросы",
         })}{" "}
         ({retired.length})
-      </Button>
+      </PrintButton>
       {open && (
         <ul id={listId} className="flex flex-col divide-y divide-line-soft">
           {retired.map((f) => (
             <li key={f.id} className="flex flex-col gap-1 py-2">
-              <p className="text-sm text-fg-secondary line-through decoration-fg-muted/60">
+              <p className="font-news text-sm text-fg-secondary line-through decoration-fg-muted/60">
                 {inLang(lang, f.wordings[0])}
               </p>
               <p className="text-xs text-fg-muted">
@@ -486,7 +484,7 @@ function HistoryBody({
           aria-label={groupTitle(g, article, lang)}
           className="flex flex-col gap-2"
         >
-          <h3 className="truncate text-xs font-semibold text-fg-strong">
+          <h3 className="truncate font-headline text-sm font-bold text-fg-strong">
             {groupTitle(g, article, lang)}
           </h3>
           <DeskFactFor factId={g.factId} desk={desk} />
@@ -527,18 +525,19 @@ export function ArticleHistory({ article, lang }: { article: Article; lang: Quiz
   );
   return (
     <section className="flex flex-col gap-2">
-      <Button
-        size="xs"
-        variant="ghost"
-        align="start"
+      <PrintButton
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={panelId}
         className="self-start"
       >
         <ChevronRightIcon className={cn("h-3.5 w-3.5 transition-transform", open && "rotate-90")} />
-        {say(lang, { en: "History", de: "Verlauf", ru: "История" })}
-      </Button>
+        {say(lang, {
+          en: "Corrections & amendments",
+          de: "Berichtigungen & Änderungen",
+          ru: "Исправления и правки",
+        })}
+      </PrintButton>
       {open && (
         <div id={panelId}>
           <QueryBoundary

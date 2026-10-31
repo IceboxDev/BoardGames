@@ -114,7 +114,7 @@ describe("WikiJournal", () => {
     expect(screen.getByText("Bertolt Brecht")).toBeInTheDocument();
     // The other answer stays hidden.
     expect(screen.queryByText("Das Lied der Deutschen")).not.toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Passage in the article →" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Passage in the article/ })).toHaveAttribute(
       "href",
       "/trainer/quiz/wiki/article/a0001#f00001",
     );
@@ -156,7 +156,7 @@ describe("WikiJournal", () => {
     const user = userEvent.setup();
     renderJournal();
     await screen.findByRole("heading", { name: "Today" });
-    await user.click(screen.getByRole("button", { name: "Load older days" }));
+    await user.click(screen.getByRole("button", { name: "Earlier issues" }));
     await waitFor(() =>
       expect(journalMock).toHaveBeenLastCalledWith({
         before: TODAY,
@@ -165,12 +165,12 @@ describe("WikiJournal", () => {
       }),
     );
     expect(await screen.findByRole("link", { name: "Brecht 2026-10-01" })).toBeInTheDocument();
-    expect(screen.getByText("That's where your journal begins.")).toBeInTheDocument();
+    expect(screen.getByText(/that's where your journal begins\./)).toBeInTheDocument();
   });
 
   it("says so when there is nothing yet", async () => {
     journalMock.mockImplementation(async () => ({ days: [], nextBefore: null }));
     renderJournal();
-    expect(await screen.findByText("Your journal is empty")).toBeInTheDocument();
+    expect(await screen.findByText("No back issues yet")).toBeInTheDocument();
   });
 });

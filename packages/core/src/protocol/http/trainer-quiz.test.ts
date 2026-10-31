@@ -73,7 +73,17 @@ describe("quiz trainer protocol", () => {
       limit: "25",
       includeLeeches: "true",
     });
-    expect(q).toEqual({ today: "2026-09-19", domain: "history", limit: 25, includeLeeches: true });
+    expect(q).toEqual({
+      today: "2026-09-19",
+      domain: "history",
+      limit: 25,
+      includeLeeches: true,
+      more: false,
+    });
+    expect(TrainerQueueQuerySchema.parse({ today: "2026-09-19", more: "true" })).toMatchObject({
+      limit: 1000,
+      more: true,
+    });
     expect(TrainerQueueQuerySchema.safeParse({ today: "2026-09-19", domain: "x" }).success).toBe(
       false,
     );
@@ -103,14 +113,16 @@ describe("quiz trainer protocol", () => {
   it("fills settings defaults", () => {
     expect(QuizSettingsSchema.parse({ language: "de" })).toEqual({
       language: { primary: "de", secondary: null },
-      newFactsPerDay: 15,
       includeLeeches: false,
       gameReviewsAffectSrs: false,
       sources: ["quiztopia", "trivial-pursuit", "publish-or-perish", "publish-or-perish-mge"],
       sourcesKnown: ["quiztopia", "trivial-pursuit", "publish-or-perish", "publish-or-perish-mge"],
       excludeFromAll: [],
     });
-    expect(() => QuizSettingsSchema.parse({ language: "de", newFactsPerDay: 61 })).toThrow();
+    // The old daily budget setting is gone: a stored value is dropped.
+    expect(QuizSettingsSchema.parse({ language: "de", newFactsPerDay: 40 })).not.toHaveProperty(
+      "newFactsPerDay",
+    );
     expect(() => QuizSettingsSchema.parse({ language: "de", excludeFromAll: ["x"] })).toThrow();
     expect(() => QuizSettingsSchema.parse({ language: "de", sources: [] })).toThrow();
   });

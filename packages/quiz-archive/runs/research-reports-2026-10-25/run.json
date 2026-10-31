@@ -1,0 +1,30 @@
+{
+ "id": "research-reports-2026-10-25",
+ "title": "Deep-research PDF reports b00326/b00327 integrated",
+ "startedAt": "2026-10-25T12:44:20Z",
+ "endedAt": "2026-10-25T12:47:51Z",
+ "kind": "research",
+ "by": [
+  "coordinator (claude-opus-5-5)",
+  "owner (commissioned the reports)"
+ ],
+ "brief": "Integrate two commissioned deep-research PDF reports (ChatGPT deep research) answering backlog items b00326 (Trabant production total) and b00327 (complete Gutenberg Bibles); research reports rank above every other source.",
+ "inputs": [
+  "research-reports/b00326.pdf",
+  "research-reports/b00327.pdf",
+  "research-prompts/b00326-f14383.md",
+  "research-prompts/b00327-f14701.md"
+ ],
+ "outputs": [
+  "content/articles/a2655.json",
+  "content/articles/a2696.json",
+  "content/evidence (a2655 e21, a2696 e18–e19)",
+  "backlog b00326/b00327 closed"
+ ],
+ "archivedFrom": [],
+ "archivedAt": "2026-10-25",
+ "counts": {
+  "historyEntries": 14
+ },
+ "notes": "f14383 answer about 3.1 million confirmed (3,096,099), reworded to the report's question (P50 pilot series Nov 1957 → last Trabant 1.1 30 Apr 1991, excluding the AWZ P70); 3.6/3.7 million explained in the body. f14701 21 → 20 copies (White 2017 census: 4 vellum + 16 paper), reworded to name White's census; 21 accepted in the notes. Both grade A. reasons.json = the log's reasons; content-edits.py = the exact edit script."
+}

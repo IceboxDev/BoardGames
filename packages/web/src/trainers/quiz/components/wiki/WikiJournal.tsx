@@ -6,27 +6,13 @@ import type {
 } from "@boardgames/core/protocol";
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { CheckIcon } from "../../../../components/icons";
-import {
-  Badge,
-  Button,
-  Chip,
-  EmptyState,
-  ErrorAlert,
-  LoadingState,
-  PageHeader,
-  PageMain,
-  SearchInput,
-  SegmentedControl,
-  Surface,
-  TONE_TEXT,
-} from "../../../../components/ui";
+import { ErrorAlert, LoadingState } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { cn } from "../../../../lib/cn";
 import { errorMessageOf } from "../../../../lib/error-message";
 import { todayKey } from "../../api";
 import { articleSnippet, bodyIn, findFact } from "../../content";
-import { coreToneOf, DOMAINS, type Domain, domainOf } from "../../domains";
+import { DOMAINS, type Domain, domainOf } from "../../domains";
 import { useArticle } from "../../hooks/useContent";
 import { useJournal } from "../../hooks/useJournal";
 import { useQuestionLanguage } from "../../hooks/useQuestionLanguage";
@@ -37,15 +23,29 @@ import {
   type JournalMode,
   studyIds,
 } from "../../logic/journal-filter";
-import { inLang, inLangs, reportLanguageOf } from "../../logic/text";
+import { inLangs, reportLanguageOf } from "../../logic/text";
 import { dayLabel } from "../../logic/time";
 import { type TrainerPaths, useTrainerPaths } from "../../paths";
 import { AnswerMark } from "../common/AnswerMark";
-import { TextLink } from "../common/TextLink";
+import {
+  Headline,
+  JumpLine,
+  Kicker,
+  PaperButton,
+  PaperNote,
+  PaperSearch,
+  PaperTabs,
+  PrintButton,
+  SectionToggles,
+  Stamp,
+} from "../paper/Paper";
+import { PaperPage } from "../paper/PaperPage";
+import { editionNumber, KICKER, longDate, RULE_DOUBLE_TOP } from "../paper/paper-style";
 import { ReportButton } from "../report/ReportButton";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 
-// The journal: every day you studied or read, newest first. Each day lists
+// Back issues (the journal): every day you studied or read, newest first,
+// each day set as an issue with its articles as clippings. Each day lists
 // the articles it touched, and under each article the questions you were
 // asked, with how you did (✓ / ✗ per grade, in order). Answers stay hidden
 // until clicked — scrolling back is a chance to quiz yourself — and a
@@ -95,59 +95,42 @@ export default function WikiJournal() {
 
   return (
     <TrainerScreen>
-      <PageMain width="3xl" className="flex flex-col gap-5 pb-16">
-        <PageHeader
-          size="lg"
-          eyebrow="The Archive"
-          title="Your journal"
-          subtitle="Everything you studied and read, day by day. Answers stay hidden until you ask."
-          actions={
-            <Button variant="link" onClick={() => navigate(paths.wiki)}>
-              ← Archive
-            </Button>
-          }
-        />
+      <PaperPage pageLabel="Back issues" folio="C1" current="journal" className="gap-4">
+        <header className="flex flex-col gap-1">
+          <Headline as="h1" size="lg">
+            Back issues
+          </Headline>
+          <p className="font-news text-sm italic text-fg-secondary">
+            Everything you studied and read, issue by issue. Answers stay hidden until you ask.
+          </p>
+        </header>
 
         {!empty && (
-          <section aria-label="Filter the journal" className="flex flex-col gap-3">
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-              <SearchInput
-                containerClassName="flex-1"
-                aria-label="Search your journal"
-                placeholder="Search questions, answers and articles you've seen"
+          <section
+            aria-label="Filter the back issues"
+            className="flex flex-col gap-3 border-y border-line-strong py-3"
+          >
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <PaperSearch
+                className="md:w-96"
+                label="Search your journal"
+                placeholder="Questions, answers and articles you've seen"
                 value={text}
-                onChange={(e) => setText(e.target.value)}
+                onChange={setText}
               />
-              <SegmentedControl
+              <PaperTabs<JournalMode>
+                label="Show"
                 options={MODES}
                 value={mode}
                 onChange={setMode}
-                size="sm"
-                shape="pill"
-                selectionMode="toggle"
-                aria-label="Show"
               />
             </div>
-            <div className="flex flex-wrap items-center gap-1.5">
-              {DOMAINS.map((d) => (
-                <Chip
-                  key={d.slug}
-                  pressed={domains.has(d.slug)}
-                  tone={coreToneOf(d.tone)}
-                  size="xs"
-                  shape="pill"
-                  onClick={() => toggleDomain(d.slug)}
-                  aria-label={`Only ${d.en}`}
-                  title={`${d.label} · ${d.en}`}
-                >
-                  {d.label}
-                </Chip>
-              ))}
-              <span className="ml-auto flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-3">
+              <SectionToggles domains={DOMAINS} selected={domains} onToggle={toggleDomain} />
+              <span className="ml-auto flex items-center gap-4">
                 {isFiltering(filter) && (
-                  <Button
-                    variant="link"
-                    size="xs"
+                  <PrintButton
+                    className="text-fg-muted"
                     onClick={() => {
                       setText("");
                       setMode("all");
@@ -155,47 +138,46 @@ export default function WikiJournal() {
                     }}
                   >
                     Clear filters
-                  </Button>
+                  </PrintButton>
                 )}
-                <Chip
-                  pressed={showAll}
-                  tone="accent"
-                  size="xs"
-                  shape="pill"
+                <PrintButton
+                  aria-pressed={showAll}
                   onClick={() => setShowAll((v) => !v)}
                   title="Reveal every answer at once"
                 >
                   Show all answers
-                </Chip>
+                </PrintButton>
               </span>
             </div>
           </section>
         )}
 
         {loadError && <ErrorAlert message={loadError} />}
-        {journal.isPending && <LoadingState label="Opening your journal…" />}
+        {journal.isPending && <LoadingState label="Fetching the back issues…" />}
 
         {empty && (
-          <EmptyState
-            titleAs="h2"
-            title="Your journal is empty"
-            description="Study a session or read an article and it shows up here, day by day — ready to look back at."
-            action={
-              <Button variant="primary" onClick={() => navigate(paths.hub)}>
-                Back to the city
-              </Button>
-            }
-          />
+          <div className="flex flex-col items-center gap-3 py-10 text-center">
+            <Headline as="h2" size="md">
+              No back issues yet
+            </Headline>
+            <p className="max-w-md font-news text-sm italic text-fg-secondary">
+              Study a session or read an article and it is filed here, day by day — ready to look
+              back at.
+            </p>
+            <PaperButton primary onClick={() => navigate(paths.hub)}>
+              To the front page
+            </PaperButton>
+          </div>
         )}
 
         {!empty && !journal.isPending && shown.length === 0 && (
-          <p className="rounded-card-md border border-line-soft p-6 text-center text-sm text-fg-muted">
+          <PaperNote>
             Nothing in the loaded days matches.
-            {journal.hasNextPage ? " Load older days to search further back." : ""}
-          </p>
+            {journal.hasNextPage ? " Fetch earlier issues to search further back." : ""}
+          </PaperNote>
         )}
 
-        <ol className="flex flex-col gap-6">
+        <ol className="flex flex-col gap-8">
           {shown.map((day) => (
             <JournalDayBlock
               key={day.date}
@@ -210,22 +192,19 @@ export default function WikiJournal() {
 
         {journal.hasNextPage ? (
           <div className="flex justify-center">
-            <Button
-              variant="secondary"
+            <PaperButton
               onClick={() => void journal.fetchNextPage()}
               loading={journal.isFetchingNextPage}
             >
-              Load older days
-            </Button>
+              Earlier issues
+            </PaperButton>
           </div>
         ) : (
           journal.days.length > 0 && (
-            <p className="text-center text-2xs text-fg-disabled">
-              That's where your journal begins.
-            </p>
+            <PaperNote className="py-2">First issue — that's where your journal begins.</PaperNote>
           )
         )}
-      </PageMain>
+      </PaperPage>
     </TrainerScreen>
   );
 }
@@ -265,36 +244,35 @@ function JournalDayBlock({
   const headingId = `journal-${day.date}`;
   return (
     <li aria-labelledby={headingId} className="flex flex-col gap-3">
-      <div className="sticky top-0 z-lift -mx-1 flex flex-col gap-2 bg-surface-950/90 px-1 py-2 backdrop-blur sm:flex-row sm:items-center sm:gap-3">
-        <div className="min-w-0 flex-1">
-          <h2 id={headingId} className="text-base font-semibold text-fg-strong">
+      <div
+        className={cn(
+          RULE_DOUBLE_TOP,
+          "sticky top-0 z-lift flex flex-col gap-2 border-b border-b-fg-primary bg-surface-900/95 py-2 backdrop-blur sm:flex-row sm:items-center sm:gap-4",
+        )}
+      >
+        <div className="flex min-w-0 flex-1 flex-wrap items-baseline gap-x-3 gap-y-0.5">
+          <h2 id={headingId} className="font-headline text-xl font-bold text-fg-strong">
             {dayLabel(day.date, today)}
           </h2>
-          <p className="text-2xs tabular-nums text-fg-muted">{dayFacts(day)}</p>
+          <span className={cn(KICKER, "text-accent-300")}>
+            No. {editionNumber(day.date)} · {longDate(day.date)}
+          </span>
+          <span className={cn(KICKER, "tabular-nums text-fg-muted")}>{dayFacts(day)}</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {missed.length > 0 && (
-            <Button
-              variant="tinted"
-              tone="rose"
-              size="xs"
-              onClick={() => navigate(paths.study({ ids: missed }))}
-            >
+            <PaperButton size="xs" onClick={() => navigate(paths.study({ ids: missed }))}>
               Study {missed.length} missed
-            </Button>
+            </PaperButton>
           )}
           {all.length > 0 && (
-            <Button
-              variant="secondary"
-              size="xs"
-              onClick={() => navigate(paths.study({ ids: all }))}
-            >
+            <PaperButton size="xs" onClick={() => navigate(paths.study({ ids: all }))}>
               {all.length === 1 ? "Study it again" : `Study these ${all.length} again`}
-            </Button>
+            </PaperButton>
           )}
         </div>
       </div>
-      <ul className="flex flex-col gap-3">
+      <ul className="gap-x-7 md:cols-news-2 2xl:cols-news-3">
         {day.articles.map((set) => (
           <JournalArticleCard
             key={set.articleId}
@@ -332,41 +310,31 @@ function JournalArticleCard({
   const d = domainOf(set.domain);
   const titles = inLangs(language, { en: set.titleEn, de: set.titleDe, ru: set.titleRu });
   return (
-    <Surface as="li" variant="tile" padding="none" className="overflow-hidden">
-      <div className="flex flex-col gap-1.5 border-b border-line-soft px-4 py-3">
+    <li className="mb-5 break-inside-avoid border-b border-line-strong pb-3">
+      <div className="flex flex-col gap-1">
         <div className="flex flex-wrap items-center gap-2">
-          <Badge tone={d.tone} size="xs" title={`${d.label} · ${d.en}`}>
-            {d.label} · {inLang(language.primary, d)}
-          </Badge>
-          <span className="ml-auto flex items-center gap-2">
-            {set.readAt && (
-              <Badge tone="emerald" size="xs" icon={<CheckIcon className="h-3 w-3" />}>
-                Read {readTime(set.readAt)}
-              </Badge>
-            )}
-            <ReportButton
-              context={{
-                target: { kind: "article", id: set.articleId },
-                title: titles[0] ?? set.titleEn,
-                domain: set.domain,
-                surface: "journal",
-                language: reportLanguageOf(language),
-              }}
-            />
-          </span>
+          <Kicker domain={set.domain} icon={28} className="min-w-0 flex-1" />
+          {set.readAt && <Stamp tone="emerald">✓ Read {readTime(set.readAt)}</Stamp>}
+          <ReportButton
+            context={{
+              target: { kind: "article", id: set.articleId },
+              title: titles[0] ?? set.titleEn,
+              domain: set.domain,
+              surface: "journal",
+              language: reportLanguageOf(language),
+            }}
+          />
         </div>
-        <div className="min-w-0">
-          <Link
-            to={paths.wikiArticle(set.articleId)}
-            className="text-sm font-semibold text-fg-strong hover:underline"
-          >
-            {titles[0]}
-          </Link>
-          {titles[1] && <p className="text-2xs text-fg-muted">{titles[1]}</p>}
-        </div>
+        <Link
+          to={paths.wikiArticle(set.articleId)}
+          className="font-headline text-lg font-bold leading-snug text-fg-strong hover:text-accent-200"
+        >
+          {titles[0]}
+        </Link>
+        {titles[1] && <p className="font-news text-xs italic text-fg-muted">{titles[1]}</p>}
       </div>
       {set.questions.length > 0 ? (
-        <ol className="divide-y divide-line-soft">
+        <ol className="mt-1 flex flex-col">
           {set.questions.map((q) => (
             <JournalQuestionRow
               key={q.questionId}
@@ -380,12 +348,17 @@ function JournalArticleCard({
           ))}
         </ol>
       ) : (
-        <p className="px-4 py-3 text-xs text-fg-muted">
+        <p className="mt-1 font-news text-sm italic text-fg-muted">
           Read only — no questions from this article that day.{" "}
-          <TextLink to={paths.wikiArticle(set.articleId)}>Read it again →</TextLink>
+          <Link
+            to={paths.wikiArticle(set.articleId)}
+            className="not-italic text-accent-300 hover:underline"
+          >
+            Read it again
+          </Link>
         </p>
       )}
-    </Surface>
+    </li>
   );
 }
 
@@ -407,8 +380,10 @@ function GradeMarks({ grades }: { grades: JournalQuestion["grades"] }) {
           key={i}
           aria-hidden="true"
           className={cn(
-            "inline-flex h-4 w-4 items-center justify-center rounded-full text-3xs font-bold",
-            g === "good" ? "bg-emerald-500/20 text-emerald-300" : "bg-rose-500/20 text-rose-300",
+            "inline-flex h-4 w-4 items-center justify-center border font-news text-3xs font-bold",
+            g === "good"
+              ? "border-emerald-300/60 text-emerald-300"
+              : "border-rose-300/60 text-rose-300",
           )}
         >
           {g === "good" ? "✓" : "✗"}
@@ -438,26 +413,18 @@ function JournalQuestionRow({
   const questions = inLangs(language, q);
   const answers = inLangs(language, { en: q.answerEn, de: q.answerDe, ru: q.answerRu });
   return (
-    <li className="flex gap-3 px-4 py-3">
+    <li className="flex gap-3 border-t border-dotted border-line-strong py-2.5">
       <GradeMarks grades={q.grades} />
-      <div className="flex min-w-0 flex-1 flex-col gap-1.5">
+      <div className="flex min-w-0 flex-1 flex-col gap-1">
         <div className="flex flex-wrap items-start gap-x-2 gap-y-1">
-          <p className="min-w-0 flex-1 text-sm text-fg-primary">
+          <p className="min-w-0 flex-1 font-news text-sm text-fg-primary">
             {questions[0]}
             {questions[1] && (
-              <span className="mt-0.5 block text-xs text-fg-muted">{questions[1]}</span>
+              <span className="mt-0.5 block text-xs italic text-fg-muted">{questions[1]}</span>
             )}
           </p>
-          {q.firstSeen && (
-            <Badge tone="sky" size="xs">
-              New
-            </Badge>
-          )}
-          {q.fromGame && (
-            <Badge tone="purple" size="xs">
-              Table game
-            </Badge>
-          )}
+          {q.firstSeen && <Stamp tone="sky">New</Stamp>}
+          {q.fromGame && <Stamp>Table game</Stamp>}
           <ReportButton
             context={{
               target: { kind: "question", id: q.questionId },
@@ -471,10 +438,12 @@ function JournalQuestionRow({
         </div>
         {revealed ? (
           <div className="flex flex-col gap-1">
-            <p className={cn("text-base font-semibold", TONE_TEXT[coreToneOf(d.tone)])}>
+            <p className={cn("font-headline text-lg font-bold", d.ink)}>
               {answers[0]}
               {answers[1] && (
-                <span className="ml-2 text-sm font-normal text-fg-secondary">{answers[1]}</span>
+                <span className="ml-2 font-news text-sm font-normal text-fg-secondary">
+                  {answers[1]}
+                </span>
               )}
             </p>
             <AnswerPassage
@@ -483,20 +452,18 @@ function JournalQuestionRow({
               domain={d}
               language={language}
             />
-            <TextLink to={paths.wikiArticle(articleId, q.questionId)} className="self-start">
-              Passage in the article →
-            </TextLink>
+            <JumpLine to={paths.wikiArticle(articleId, q.questionId)}>
+              Passage in the article
+            </JumpLine>
           </div>
         ) : (
-          <Button
-            variant="ghost"
-            size="xs"
+          <PrintButton
             className="self-start"
             onClick={() => setOpened(true)}
             aria-label={`Show the answer to: ${questions[0]}`}
           >
             Show answer
-          </Button>
+          </PrintButton>
         )}
       </div>
     </li>
@@ -526,9 +493,14 @@ function AnswerPassage({
   }, [article.data, factId, lang]);
   if (!snippet) return null;
   return (
-    <p className="text-xs leading-relaxed text-fg-secondary" lang={lang}>
+    <p
+      className="border-l border-fg-primary/50 pl-3 font-news text-sm italic leading-relaxed text-fg-secondary"
+      lang={lang}
+    >
       {snippet.before}
-      <AnswerMark tone={d.tone}>{snippet.match}</AnswerMark>
+      <AnswerMark tone={d.tone} variant="print" domain={d.slug}>
+        {snippet.match}
+      </AnswerMark>
       {snippet.after}
     </p>
   );

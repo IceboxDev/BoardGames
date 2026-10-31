@@ -150,12 +150,34 @@ them. `--actor-kind` defaults to `human`; a run without a `run.json` yet only wa
   [--claim=answer|premise|body-number|card-says] [--title=… --publisher=… --archive-url=…]
   [--quote=… --quote-lang=xx --verbatim] [--note=…] [--run=…] [--at=…]` appends one
   assessment (`e1`, `e2` … counting up). The source is reused when the ledger already cites that
-  URL, else added as the next `sN` with `retrievedAt` now. Source kinds: primary, official,
-  scholarly, reference, encyclopedia, press, book, fan, other. Without `--quote` the assessment
+  URL, else added as the next `sN` with `retrievedAt` now. Source kinds: research-report, primary,
+  official, scholarly, reference, encyclopedia, press, book, fan, other. Without `--quote` the assessment
   cites nothing, so it doesn't count towards the grade. A verbatim quote counts as verified only
   once the crawler has a snapshot or a `verifiedAt` (`scripts/quiz-evidence/`).
 - `check-bank --grades` prints the grade distribution of the active facts per domain; a fact
   without evidence is E.
+
+**Research reports — the highest level of evidence.** A deep-research report we commissioned on
+a backlog item (a PDF, usually from a `research-prompts/` prompt) is the deepest research we will
+ever do on a topic, so it outranks every other source: once a report has judged a fact's answer
+or premise, only reports decide whether it is contested, and a report that confirms the answer
+verbatim makes the fact A on its own (`grade.ts`). Act on everything a report covers — answer,
+question wording, body, notes, timeline, sources — and log it citing the report.
+
+- `report add <file.pdf> --backlog=bNNNNN [--producer=…] [--title=…] [--received=YYYY-MM-DD]
+  [--pages=N] [--text=<extracted.txt>]` archives the PDF byte-exact as
+  `quiz-archive/research-reports/<bNNNNN>.pdf` (LFS; a second report on the same item becomes
+  `-2`) with a `<bNNNNN>.json` manifest, stores its text (`pdftotext -layout`, poppler) as a
+  snapshot so quotes from it verify, registers it in the target article's ledger as a
+  `research-report` source (with `report: {file, sha256, pages, backlog, receivedAt, producer}`,
+  served from GitHub's LFS media URL) and links it on the backlog item. Re-running is a no-op.
+- Then cite it per claim: `evidence add --fact=… --url=<the printed url> --kind=research-report
+  --lang=en --quote="<a line of the report>" --verbatim --verdict=… --confidence=…`. Primary
+  sources the report quotes can be added too (`--kind=primary|official|scholarly`, note "quoted
+  via research report bNNNNN"); without a snapshot of their own they don't count yet.
+- Edit the bank, `log --reasons` with `ref: quiz-archive/research-reports/<bNNNNN>.pdf` and the
+  evidence ids, `backlog close <bNNNNN> --by-ref=<aNNNN#seq>`, and tick the item in
+  `quiz-archive/research-prompts/README.md`.
 
 ### 7.5 Tags
 

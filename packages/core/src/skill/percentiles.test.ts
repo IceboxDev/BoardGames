@@ -131,6 +131,25 @@ describe("gameLeaderboards", () => {
     // wizard has 2 rated plays < minGameBoardPlays (5) → no board.
     expect(gameLeaderboards(sparse, VISIBLE).wizard).toBeUndefined();
   });
+
+  it("counts a match once, however many played it", () => {
+    const table = (winner: string) => ({
+      slug: "wizard",
+      playedAt: "2026-01-01T00:00:00Z",
+      outcome: {
+        kind: "free-for-all" as const,
+        players: ["a", "b", "c", "d", "e"].map((userId) => ({
+          userId,
+          displayName: userId,
+          score: userId === winner ? 1 : 0,
+        })),
+      },
+    });
+    // Two 5-player matches are 10 appearances but only 2 matches → no board.
+    const sparse = fitSkillRatings([...poolFixture(), table("a"), table("b")]);
+    expect(sparse.matchesByGame.wizard).toBe(2);
+    expect(gameLeaderboards(sparse, VISIBLE).wizard).toBeUndefined();
+  });
 });
 
 describe("highlightsFor", () => {

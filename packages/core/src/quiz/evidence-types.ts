@@ -13,6 +13,7 @@ import { ConfidenceSchema, RunIdSchema } from "./history-schema.ts";
 import { ASSESSMENT_ID_RE, EVIDENCE_SOURCE_ID_RE, FACT_ID_RE } from "./ids.ts";
 
 export const SOURCE_KINDS = [
+  "research-report",
   "primary",
   "official",
   "scholarly",
@@ -26,6 +27,12 @@ export const SOURCE_KINDS = [
 export type SourceKind = (typeof SOURCE_KINDS)[number];
 /** Kinds that make a source authoritative for grade A. */
 export const PRIMARY_KINDS: ReadonlySet<SourceKind> = new Set(["primary", "official", "scholarly"]);
+/**
+ * A deep-research report we commissioned on one backlog item (a PDF kept in
+ * `quiz-archive/research-reports/`): the deepest research we can do on a
+ * topic, so it outranks every other source (`grade.ts`).
+ */
+export const RESEARCH_REPORT_KIND = "research-report" satisfies SourceKind;
 
 export const CLAIMS = ["answer", "premise", "body-number", "card-says"] as const;
 export type Claim = (typeof CLAIMS)[number];
@@ -44,6 +51,22 @@ const Sha256Schema = z.string().regex(/^[0-9a-f]{64}$/);
 /** A bare host name (`wikiwand.com`). */
 const DomainSchema = z.string().regex(/^(?:[a-z0-9-]+\.)+[a-z]{2,}$/);
 
+/** The archived file behind a `research-report` source. */
+export const ResearchReportRefSchema = z.object({
+  /** Path inside `packages/quiz-archive/` (`research-reports/b00316.pdf`). */
+  file: z.string().regex(/^research-reports\/b\d{5,}(?:-\d+)?\.pdf$/),
+  /** sha256 of the PDF's bytes. */
+  sha256: Sha256Schema,
+  pages: z.number().int().positive(),
+  /** The backlog item the report answers. */
+  backlog: z.string().regex(/^b\d{5,}$/),
+  /** When we received it. */
+  receivedAt: WhenSchema,
+  /** The tool that wrote it ("ChatGPT deep research"). */
+  producer: z.string().min(1).optional(),
+});
+export type ResearchReportRef = z.infer<typeof ResearchReportRefSchema>;
+
 export const EvidenceSourceSchema = z.object({
   url: z.url({ protocol: /^https?$/ }),
   title: z.string().min(1).optional(),
@@ -58,6 +81,8 @@ export const EvidenceSourceSchema = z.object({
   snapshot: Sha256Schema.optional(),
   /** Copies another source of this ledger (`s3`) or a site (`wikipedia.org`): not independent. */
   cloneOf: z.union([EvidenceSourceIdSchema, DomainSchema]).optional(),
+  /** Set exactly when `kind` is `research-report`. */
+  report: ResearchReportRefSchema.optional(),
 });
 export type EvidenceSource = z.infer<typeof EvidenceSourceSchema>;
 
@@ -123,7 +148,8 @@ interface ArticleLike {
  * The ledger's own invariants: it is the article's, assessment ids are
  * unique, assessments are in order of `at` (append-only), every target is
  * one of the article's facts (retired included) or its body, every quote
- * names a known source, and `cloneOf` names a known source (not itself).
+ * names a known source, `cloneOf` names a known source (not itself), and a
+ * source carries a report file exactly when it is a research report.
  */
 export function evidenceProblems(article: ArticleLike, evidence: ArticleEvidence): string[] {
   const where = `evidence/${article.id}`;
@@ -131,6 +157,8 @@ export function evidenceProblems(article: ArticleLike, evidence: ArticleEvidence
   if (evidence.article !== article.id) problems.push(`${where}: file is for ${evidence.article}`);
   const facts = new Set([...article.facts, ...(article.retired ?? [])].map((f) => f.id));
   for (const [id, s] of Object.entries(evidence.sources)) {
+    if ((s.kind === RESEARCH_REPORT_KIND) !== (s.report !== undefined))
+      problems.push(`${where}/${id}: a research-report source needs its report file, and only it`);
     if (s.cloneOf && EVIDENCE_SOURCE_ID_RE.test(s.cloneOf)) {
       if (s.cloneOf === id) problems.push(`${where}/${id}: a clone of itself`);
       else if (!evidence.sources[s.cloneOf])

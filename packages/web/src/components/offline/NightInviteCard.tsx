@@ -35,7 +35,9 @@ export function NightInviteCard({
   const pickLine =
     greeting.pickMode === "host"
       ? `${hostName} is picking the games.`
-      : "Everyone seated votes on the games.";
+      : greeting.pickMode === "admin"
+        ? "The admins are picking the games."
+        : "Everyone seated votes on the games.";
 
   return (
     <GreetingShell

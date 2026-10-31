@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
-// The printed board, as mapped in the dev board editor (`/dev/hunger-board`,
-// which publishes `boards/board-a.json`), plus the fixed test layout.
+// The printed board, as mapped on the board art (`boards/board-a.json`), plus
+// the fixed test layout.
 //
 // Side A (Rookie) and side B (Elder) are the same map: they differ only in
 // the Mountains — on A a Vampire there at sunrise survives (losing any VP the

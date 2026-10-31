@@ -11,11 +11,7 @@
  * Both colours' trees build in the background as soon as the screen opens.
  */
 import { emptyLearning, learnable } from "@boardgames/core/games/chess/trainer/drill";
-import {
-  fixedChoices,
-  TRAINER_FOLDERS,
-  type TrainerFolder,
-} from "@boardgames/core/games/chess/trainer/folders";
+import { TRAINER_FOLDERS, type TrainerFolder } from "@boardgames/core/games/chess/trainer/folders";
 import {
   type RepertoireTree,
   type UserChoice,
@@ -87,31 +83,21 @@ export function BoardScreen({ builds, link, token, importer, notice }: Props) {
     };
   }, [token]);
 
-  useAutoBuild(builds, !!token);
-  useFixedChoices(builds);
+  useAutoBuild(builds);
   const { choose, busy } = useChoices(builds);
 
   const prevKey = pos.ply >= 2 ? pos.line[pos.ply - 2]?.key : pos.ply === 1 ? START.key : null;
   const prevNode = prevKey ? tree?.nodes[prevKey] : null;
   const last = pos.last;
-  // Moves fixed in code (1.e4, 2.Nf3) aren't changed from the board.
-  const fixedAt = (moves: readonly { uci: string }[]) =>
-    fixedChoices(pos.color).some((f) => f.moves.join(" ") === moves.map((m) => m.uci).join(" "));
-  const fixedHere = fixedAt(pos.line.slice(0, pos.ply));
   const makeMine =
-    tree &&
-    last &&
-    prevKey &&
-    prevNode?.side === "user" &&
-    prevNode.moves[0]?.uci !== last.uci &&
-    !fixedAt(pos.line.slice(0, pos.ply - 1))
+    tree && last && prevKey && prevNode?.side === "user" && prevNode.moves[0]?.uci !== last.uci
       ? {
           san: last.san,
           run: () => choose(pos.color, prevKey, { source: "handpicked", uci: last.uci }),
         }
       : null;
   const engineBest =
-    tree && node?.side === "user" && node.choice?.source === "handpicked" && !fixedHere
+    tree && node?.side === "user" && node.choice?.source === "handpicked"
       ? () => choose(pos.color, pos.here.key, null)
       : null;
 
@@ -498,9 +484,9 @@ export function BoardScreen({ builds, link, token, importer, notice }: Props) {
             waitingIn={learning.waitingIn}
             farmQueue={farmQueue}
             loading={
-              // A tree on its way (stored, or building with lichess connected), or
-              // the schedule still loading: never "nothing to study" meanwhile.
-              (!!build && !!token && !trees[pos.color]) || (!schedule.states && !schedule.error)
+              // A tree on its way (stored, or building), or the schedule still
+              // loading: never "nothing to study" meanwhile.
+              (!!build && !trees[pos.color]) || (!schedule.states && !schedule.error)
             }
           />
         ) : pos.view === "map" ? (
@@ -545,40 +531,15 @@ function useSettledTree(build: TreeBuild | null): RepertoireTree | null {
 }
 
 /** Start each colour's build once when the screen opens, unless it's complete. */
-function useAutoBuild(builds: Record<Color, TreeBuild | null>, canBuild: boolean) {
+function useAutoBuild(builds: Record<Color, TreeBuild | null>) {
   const started = useRef<Record<Color, boolean>>({ w: false, b: false });
   useEffect(() => {
-    if (!canBuild) return;
     for (const c of ["w", "b"] as const) {
       const b = builds[c];
       if (!b || started.current[c] || b.phase !== "idle") continue;
       const status = b.tree?.status;
       started.current[c] = true;
       if (!b.tree || status === "generating" || status === "analysing") b.build();
-    }
-  }, [builds, canBuild]);
-}
-
-/**
- * Your moves fixed in code (`fixedChoices`: 1.e4 as White, and your moves into the
- * farm's folders such as 3.Bb5 into the Ruy Lopez): set on the
- * tree once it exists and the build is idle, then rebuilt from there.
- */
-function useFixedChoices(builds: Record<Color, TreeBuild | null>) {
-  useEffect(() => {
-    for (const c of ["w", "b"] as const) {
-      const b = builds[c];
-      const tree = b?.tree;
-      if (!b || !tree || b.phase !== "idle" || !b.providers) continue;
-      let next = tree;
-      for (const fixed of fixedChoices(c)) {
-        const key = walkLine(fixed.moves).at(-1)?.key ?? START.key;
-        const node = next.nodes[key];
-        if (!node || node.side !== "user") continue;
-        if (node.choice?.source === "handpicked" && node.choice.uci === fixed.uci) continue;
-        next = withChoice(next, key, { source: "handpicked", uci: fixed.uci });
-      }
-      if (next !== tree) b.build(next);
     }
   }, [builds]);
 }

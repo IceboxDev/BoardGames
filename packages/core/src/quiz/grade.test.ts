@@ -100,6 +100,7 @@ describe("factGrade", () => {
       verbatim: 0,
       primary: 0,
       contested: false,
+      researchReport: false,
       latestConfidence: null,
     });
     expect(grade(ledger({ s1: src(WP) }, [assess([{ s: "s1" }], { target: "f00002" })]))).toBe("E");
@@ -245,5 +246,32 @@ describe("factGrade", () => {
     const e = ledger({ s1: src(WP) }, [assess([{ s: "s1" }], { at: "2026-10-01" }), a]);
     expect(factGrade("f00001", e).latestConfidence).toBe("medium");
     expect(gradeDistribution(["A", "C", "C", "E"])).toEqual({ A: 1, B: 0, C: 2, D: 0, E: 1 });
+  });
+
+  it("a verbatim research report makes the fact A alone and outranks every contest", () => {
+    const REPORT = "https://media.githubusercontent.com/media/x/y/master/r/b00001.pdf";
+    const report = src(REPORT, "research-report", {
+      report: {
+        file: "research-reports/b00001.pdf",
+        sha256: SNAP,
+        pages: 9,
+        backlog: "b00001",
+        receivedAt: "2026-10-24",
+      },
+    });
+    const contestedByWeb = assess([{ s: "s1" }], { verdict: "contested", at: "2026-10-23" });
+    const confirmedByReport = assess([{ s: "s2" }], { at: "2026-10-24" });
+    const e = ledger({ s1: src(WP), s2: report }, [contestedByWeb, confirmedByReport]);
+    expect(factGrade("f00001", e)).toMatchObject({ grade: "A", researchReport: true });
+    // A later web contest can't overturn the report.
+    const later = assess([{ s: "s1" }], { verdict: "refuted", at: "2026-10-25" });
+    expect(grade(ledger(e.sources, [...e.assessments, later]))).toBe("A");
+    // A report that contests the answer stands even against later web confirmations.
+    const reportSays = assess([{ s: "s2" }], { verdict: "contested", at: "2026-10-24" });
+    const webAfter = assess([{ s: "s1" }], { at: "2026-10-26" });
+    expect(grade(ledger(e.sources, [reportSays, webAfter]))).toBe("E");
+    // Unverified (no snapshot, no verifiedAt): no shortcut to A.
+    const noSnap = { ...report, snapshot: undefined };
+    expect(grade(ledger({ s2: noSnap }, [confirmedByReport]))).toBe("D");
   });
 });

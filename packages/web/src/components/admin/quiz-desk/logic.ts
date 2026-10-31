@@ -93,7 +93,7 @@ export const GRADE_FILL: Record<QuizGrade, string> = {
 
 /** What each grade needs (`core/quiz/grade.ts`). */
 export const GRADE_RULE: Record<QuizGrade, string> = {
-  A: "≥2 independent sources, all verbatim-verified, ≥1 primary / official / scholarly, nothing contested",
+  A: "a research report confirms it verbatim, or ≥2 independent sources, all verbatim-verified, ≥1 primary / official / scholarly, nothing contested",
   B: "≥2 independent verbatim-verified sources, or 1 primary source verbatim-verified",
   C: "1 source with the answer verbatim-verified on its page",
   D: "a source is given, but the answer wasn't verified on it (or it has no snapshot)",
@@ -128,6 +128,8 @@ export function gradeTooltip(g: QuizFactGrade): string {
     `Grade ${g.grade}: ${GRADE_RULE[g.grade]}.`,
     `This fact: ${plural(g.independentSources, "independent source")}, ${g.verbatim} verbatim-verified, ${g.primary} primary / official / scholarly${g.contested ? ", contested or refuted (unresolved)" : ""}.`,
   ];
+  if (g.researchReport)
+    lines.push("Confirmed by a commissioned research report (outranks every other source).");
   if (g.latestConfidence) lines.push(`Latest assessment confidence: ${g.latestConfidence}.`);
   const next = nextStep(g);
   if (next) lines.push(`Next: ${next}.`);

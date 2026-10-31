@@ -1,19 +1,20 @@
 import { useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
-import { PageMain, QueryBoundary } from "../../../../components/ui";
+import { QueryBoundary } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { usePinnedTimeline } from "../../hooks/usePinnedTimeline";
 import { useTrainerPaths } from "../../paths";
+import { PaperPage } from "../paper/PaperPage";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 import { TimelineView } from "./TimelineView";
 
-// `/play/quiztopia/solo/timeline[?q=<questionId>]` — the member's pins
+// `/trainer/quiz/timeline[?q=<questionId>]` — the member's pins
 // joined with the content's event index. The focused pin lives in the URL,
 // so a chip on a study card or in the wiki deep-links straight to it; walking
 // the river replaces the entry, so Back leaves the timeline in one step.
 
 export default function TimelinePage() {
-  useDocumentTitle("Your timeline · Quiztopia");
+  useDocumentTitle("Your timeline · Quiz");
   const paths = useTrainerPaths();
   const [params, setParams] = useSearchParams();
   const focusId = params.get("q");
@@ -35,7 +36,7 @@ export default function TimelinePage() {
 
   return (
     <TrainerScreen>
-      <PageMain width="7xl" className="flex flex-col gap-6 pb-16">
+      <PaperPage pageLabel="The Timeline" folio="D1" current="timeline" className="gap-4 pb-12">
         <QueryBoundary query={pins} loadingLabel="Gathering your pins…">
           {(data) => (
             <QueryBoundary query={index} loadingLabel="Unrolling the timeline…">
@@ -52,7 +53,7 @@ export default function TimelinePage() {
             </QueryBoundary>
           )}
         </QueryBoundary>
-      </PageMain>
+      </PaperPage>
     </TrainerScreen>
   );
 }

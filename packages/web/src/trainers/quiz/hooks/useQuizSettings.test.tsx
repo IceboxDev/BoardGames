@@ -9,7 +9,7 @@ import { qk } from "../../../lib/query-keys";
 // go out one at a time in order, and an earlier reply never paints over a
 // later optimistic change.
 
-const STORED: QuizSettings = { ...DEFAULT_QUIZ_SETTINGS, newFactsPerDay: 7 };
+const STORED: QuizSettings = { ...DEFAULT_QUIZ_SETTINGS, includeLeeches: true };
 
 const putMock = vi.fn<(body: QuizSettings) => Promise<QuizSettings>>();
 const getMock = vi.fn<() => Promise<QuizSettings>>();
@@ -91,7 +91,7 @@ describe("useQuizSettings", () => {
     ]);
     await waitFor(() => expect(putMock).toHaveBeenCalledTimes(2));
     expect(putMock.mock.calls[1][0]).toMatchObject({
-      newFactsPerDay: 7,
+      includeLeeches: true,
       excludeFromAll: ["history", "art"],
     });
 

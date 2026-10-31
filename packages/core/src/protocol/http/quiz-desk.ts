@@ -63,6 +63,8 @@ export const QuizFactGradeSchema = z.object({
   verbatim: Count,
   primary: Count,
   contested: z.boolean(),
+  /** A research report confirms the answer (it alone makes the fact A). */
+  researchReport: z.boolean(),
   latestConfidence: ConfidenceSchema.nullable(),
 });
 export type QuizFactGrade = z.infer<typeof QuizFactGradeSchema>;

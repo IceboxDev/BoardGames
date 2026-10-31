@@ -3,9 +3,11 @@
 //
 // A member's whole schedule is one `trainer_srs` read (≤ one row per fact)
 // grouped by domain in memory — the domain lives in the content, not the
-// row. New facts arrive a whole article at a time under the day's fact
-// budget (`buildDailyQueue`); an article begun on an earlier day finishes on
-// top of it. Only articles printed by one of the member's sources count.
+// row. New facts arrive as a batch of exactly 15 in whole articles
+// (`packDailyArticles`: 7+8, 5+5+5 or 4+5+6); one batch a day, and another
+// only when the member asks for more once it is done. An article begun
+// earlier finishes on top. Only articles printed by one of the member's
+// sources count.
 
 import { hashSeed } from "@boardgames/core/lib/rng";
 import type {
@@ -20,6 +22,7 @@ import {
   addDays,
   buildDailyQueue,
   isLeech,
+  packDailyArticles,
   SRS,
   type SrsState,
   seededShuffle,
@@ -64,17 +67,67 @@ async function readSchedule(db: Client, userId: string, store: ContentStore): Pr
   return { states, seen, started };
 }
 
-const CountRowSchema = z.object({ n: z.number().int() });
+const CardIdRowSchema = z.object({ card_id: z.string() });
 
-/** New facts introduced on `today` by the trainer (applied reviews graded from `new`). */
-async function introducedToday(db: Client, userId: string, today: string): Promise<number> {
+/** Facts introduced on `today` by the trainer (applied reviews graded from `new`). */
+async function introducedToday(db: Client, userId: string, today: string): Promise<Set<string>> {
   const { rows } = await db.execute({
-    sql: `SELECT COUNT(DISTINCT card_id) AS n FROM trainer_reviews
+    sql: `SELECT DISTINCT card_id FROM trainer_reviews
            WHERE user_id = ? AND deck = ? AND local_date = ? AND prev_state = 'new'
              AND applied = 1 AND source = 'trainer'`,
     args: [userId, QUIZ_DECK, today],
   });
-  return parseRow(CountRowSchema, rows[0], "trainer_reviews.new-today").n;
+  return new Set(
+    parseRows(CardIdRowSchema, rows, "trainer_reviews.new-today").map((r) => r.card_id),
+  );
+}
+
+/**
+ * Today's new articles in one scope. The batches are packed from the
+ * articles that were unread when the day began (unread now, or begun today:
+ * every fact of it seen was introduced today), so a reload or a later
+ * sitting re-derives the same batches. The first batch is always dealt —
+ * its articles not yet begun; a begun one's unseen facts come as leftovers —
+ * and each batch the member has begun today too. The next one is dealt only
+ * when `more` is asked for and every article of the batches before is done.
+ */
+function planFresh(
+  articles: readonly ArticleMeta[],
+  sched: Schedule,
+  introduced: ReadonlySet<string>,
+  userId: string,
+  more: boolean,
+): { fresh: Set<string>; moreAvailable: boolean } {
+  const begunToday = new Set<string>();
+  const finished = new Set<string>();
+  let remaining: { id: string; size: number }[] = [];
+  for (const a of seededShuffle(articles, hashSeed(`${userId}:quiz`))) {
+    if (sched.started.has(a.id)) {
+      const seen = a.factIds.filter((id) => sched.seen.has(id));
+      if (!seen.every((id) => introduced.has(id))) continue; // begun on an earlier day
+      begunToday.add(a.id);
+      if (seen.length === a.factIds.length) finished.add(a.id);
+    }
+    remaining.push({ id: a.id, size: a.factIds.length });
+  }
+  const fresh = new Set<string>();
+  let allDone = true;
+  for (let first = true; ; first = false) {
+    const batch = packDailyArticles(remaining);
+    if (batch.length === 0) return { fresh, moreAvailable: false };
+    if (!first && !batch.some((id) => begunToday.has(id))) {
+      if (!allDone) return { fresh, moreAvailable: false };
+      if (!more) return { fresh, moreAvailable: true };
+      for (const id of batch) fresh.add(id);
+      return { fresh, moreAvailable: false };
+    }
+    for (const id of batch) {
+      if (!begunToday.has(id)) fresh.add(id);
+      if (!finished.has(id)) allDone = false;
+    }
+    const taken = new Set(batch);
+    remaining = remaining.filter((c) => !taken.has(c.id));
+  }
 }
 
 /** Unseen facts of articles already begun — dealt on top of the budget. */
@@ -179,7 +232,10 @@ export async function trainerOverview(
   }
 
   const leftoverToday = leftovers(eligible, sched);
-  const newAvailable = agg.reduce((n, d) => n + Math.max(0, d.total - d.seen), 0);
+  const studyAll = eligible.filter((a) => !settings.excludeFromAll.includes(a.domain));
+  const batch = planFresh(studyAll, sched, introduced, userId, false);
+  const factsIn = new Map(studyAll.map((a) => [a.id, a.factIds.length]));
+  const batchFacts = [...batch.fresh].reduce((n, id) => n + (factsIn.get(id) ?? 0), 0);
   const domains = agg.map((d) => ({
     domain: d.domain,
     total: d.total,
@@ -205,10 +261,8 @@ export async function trainerOverview(
       again: todayCounts.again,
       newIntroduced: todayCounts.new_introduced,
     },
-    newRemainingToday: Math.max(
-      0,
-      Math.min(newAvailable - leftoverToday, settings.newFactsPerDay - introduced),
-    ),
+    newRemainingToday: batchFacts,
+    moreAvailable: batch.moreAvailable,
     leftoverToday,
     domains,
     settings,
@@ -263,14 +317,14 @@ export interface QueueOptions {
   domain?: QuizDomainSlug;
   limit: number;
   includeLeeches: boolean;
+  /** Another batch of 15 once today's is done. */
+  more?: boolean;
 }
-
-const CardRowSchema = z.object({ card_id: z.string() });
 
 /**
  * Today's queue — one domain, or "Study all" (every domain the member did
- * not leave out): learning → review → new under the day's fact budget,
- * new facts a whole article at a time, then the day mixed in one seeded
+ * not leave out): learning → review → today's batch of new articles
+ * (`planFresh`), then the day mixed in one seeded
  * shuffle (stable for the member and the day, so a reload keeps it).
  */
 export async function trainerQueue(
@@ -297,17 +351,19 @@ export async function trainerQueue(
   // A per-member order of the articles: random across members, stable for one.
   const newOrder = seededShuffle(articles, hashSeed(`${userId}:quiz`)).flatMap((a) => a.factIds);
   const articleOf = (id: string) => store.getFact(id)?.articleId ?? id;
+  const { fresh } = planFresh(articles, sched, introduced, userId, opts.more ?? false);
 
   const queue = buildDailyQueue({
     due: sched.states.filter((s) => s.dueDate <= opts.today && scopeFacts.has(s.questionId)),
     seenIds: sched.seen,
     newOrder,
-    newRemaining: settings.newFactsPerDay - introduced,
+    newRemaining: 0,
     limit: Number.MAX_SAFE_INTEGER,
     includeLeeches,
     articleOf,
     shuffleSeed: hashSeed(`${userId}:${opts.today}:${opts.domain ?? "all"}`),
     startedArticles: sched.started,
+    freshArticles: fresh,
   });
   const counts = { learning: 0, review: 0, new: 0 };
   for (const it of queue) counts[it.tier]++;
@@ -329,7 +385,7 @@ export async function trainerQueue(
   // again later in the day counts on from them, not from zero.
   const queued = new Set(queue.map((it) => it.questionId));
   const doneToday = parseRows(
-    CardRowSchema,
+    CardIdRowSchema,
     reviewedRows.rows,
     "trainer_reviews.done-today",
   ).filter((r) => !queued.has(r.card_id) && scopeFacts.has(r.card_id)).length;

@@ -497,8 +497,7 @@ describe("/api/trainers/quiz", () => {
       for (const it of untouched) expect(it.articleStarted).toBe(false);
     });
 
-    it("finishes begun articles on top of the day's fact budget", async () => {
-      await call("PUT", "/settings", { language: "en", newFactsPerDay: 5 });
+    it("finishes begun articles on top of the day's batch", async () => {
       for (const id of ["f00001", "f00002", "f00003", "f00004"]) {
         await seedState(client, id, { state: "review", intervalDays: 4, dueDate: TOMORROW });
         await seedReview(client, {
@@ -510,21 +509,18 @@ describe("/api/trainers/quiz", () => {
       }
       const before = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&${MUSIC}`);
       const news = before.body.items.filter((it) => it.tier === "new").map((it) => it.questionId);
-      // Yesterday's leftover plus the one new article the budget allows.
+      // Yesterday's leftover plus music's one unread article (no shape fits one 5).
       expect(news.sort()).toEqual(["f00005", ...factsOf("a0013")]);
       const ov = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
-      expect(ov.body).toMatchObject({ newRemainingToday: 5, leftoverToday: 1 });
+      expect(ov.body).toMatchObject({ newRemainingToday: 15, leftoverToday: 1 });
 
-      // Every fact introduced today counts against the budget.
+      // Finishing yesterday's article doesn't touch today's batch…
       await post(review({ questionId: "f00005", grade: "good" }));
       expect(
         (await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`)).body,
-      ).toMatchObject({ newRemainingToday: 4, leftoverToday: 0 });
+      ).toMatchObject({ newRemainingToday: 15, leftoverToday: 0 });
+      // …and a begun article's remaining facts still come.
       await post(review({ questionId: "f00061", grade: "good" }));
-      expect(
-        (await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`)).body,
-      ).toMatchObject({ newRemainingToday: 3, leftoverToday: 4 });
-      // The begun article's remaining facts still come.
       const after = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&${MUSIC}`);
       expect(
         after.body.items
@@ -534,34 +530,29 @@ describe("/api/trainers/quiz", () => {
       ).toEqual(["f00062", "f00063", "f00064", "f00065"]);
     });
 
-    it("budgets new facts by today's applied trainer introductions only", async () => {
-      await call("PUT", "/settings", { language: "en", newFactsPerDay: 5 });
-      const first = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
-      // Five facts a day = one whole article.
-      expect(first.body.counts).toEqual({ learning: 0, review: 0, new: 5 });
+    it("deals one batch of exactly 15 and keeps it across sittings", async () => {
+      const first = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}`);
+      // Fifteen facts = three whole five-fact articles.
+      expect(first.body.counts).toEqual({ learning: 0, review: 0, new: 15 });
+      const batch = [...new Set(first.body.items.map((it) => it.articleId))];
+      expect(batch).toHaveLength(3);
       const opened = first.body.items[0]?.articleId ?? "";
-      expect(new Set(first.body.items.map((it) => it.articleId))).toEqual(new Set([opened]));
       const [knew, missed, ...rest] = factsOf(opened);
       expect(first.body.doneToday).toBe(0);
 
       await post(review({ questionId: knew, grade: "good" }));
       await post(review({ questionId: missed, grade: "again" }));
-      const elsewhere = getContentStore().articles.find((a) => a.id !== opened)?.factIds ?? [];
+      const elsewhere =
+        getContentStore().articles.find((a) => !batch.includes(a.id))?.factIds ?? [];
       // A game answer without the opt-in is logged applied = 0: not an introduction.
       await recordGame({ questionId: elsewhere[0], grade: "again", roomCode: "R1" });
-      // Yesterday's introductions do not eat into today's budget.
-      await seedReview(client, {
-        questionId: elsewhere[1],
-        grade: "good",
-        prevState: "new",
-        localDate: YESTERDAY,
-      });
 
-      const second = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
+      const second = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}`);
       const fresh = second.body.items.filter((it) => it.tier === "new");
-      // The opened article's three leftovers, then — two of five spent — the
-      // first article that fits nothing is still taken whole (5).
-      expect(second.body.counts).toEqual({ learning: 1, review: 0, new: 8 });
+      // The same batch: the opened article's three leftovers and the two
+      // articles not begun yet — no new articles because one was begun.
+      expect(second.body.counts).toEqual({ learning: 1, review: 0, new: 13 });
+      expect(new Set(fresh.map((it) => it.articleId))).toEqual(new Set(batch));
       expect(second.body.items.find((it) => it.tier === "learning")?.questionId).toBe(missed);
       expect(
         fresh
@@ -574,13 +565,43 @@ describe("/api/trainers/quiz", () => {
       expect(second.body.doneToday).toBe(1);
 
       const overview = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
-      expect(overview.body.newRemainingToday).toBe(3);
+      expect(overview.body).toMatchObject({
+        newRemainingToday: 10,
+        leftoverToday: 3,
+        moreAvailable: false,
+      });
       expect(overview.body.todayCounts).toEqual({
         reviews: 2,
         good: 1,
         again: 1,
         newIntroduced: 2,
       });
+    });
+
+    it("deals another 15 only when asked, once the day's batch is done", async () => {
+      const first = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}`);
+      const batch = new Set(first.body.items.map((it) => it.articleId));
+      // Asking for more before the batch is done changes nothing.
+      const early = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&more=true`);
+      expect(early.body.counts.new).toBe(15);
+      for (const it of first.body.items) await post(review({ questionId: it.questionId }));
+
+      const done = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
+      expect(done.body).toMatchObject({ newRemainingToday: 0, moreAvailable: true });
+      const none = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}`);
+      expect(none.body.counts.new).toBe(0);
+      const more = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&more=true`);
+      expect(more.body.counts.new).toBe(15);
+      const next = new Set(more.body.items.filter((i) => i.tier === "new").map((i) => i.articleId));
+      expect(next.size).toBe(3);
+      for (const id of next) expect(batch.has(id)).toBe(false);
+      // Once begun, the second batch carries on without asking again.
+      const opened = more.body.items.find((i) => i.tier === "new");
+      await post(review({ questionId: opened?.questionId ?? "" }));
+      const resumed = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}`);
+      expect(
+        new Set(resumed.body.items.filter((i) => i.tier === "new").map((i) => i.articleId)),
+      ).toEqual(next);
     });
 
     it("keeps the day's order stable across requests", async () => {
@@ -683,7 +704,6 @@ describe("/api/trainers/quiz", () => {
         leeches: 0,
       });
       expect(today.body.domains.find((d) => d.domain === "literature")?.seen).toBe(0);
-      expect(today.body.settings.newFactsPerDay).toBe(15);
 
       const yesterday = await call<TrainerOverview>("GET", `/trainer/overview?today=${YESTERDAY}`);
       expect(yesterday.body.streak).toEqual({ current: 1, longest: 1, studiedToday: true });
@@ -796,7 +816,6 @@ describe("/api/trainers/quiz", () => {
       expect(initial.status).toBe(200);
       expect(initial.body).toEqual({
         language: { primary: "en", secondary: null },
-        newFactsPerDay: 15,
         includeLeeches: false,
         gameReviewsAffectSrs: false,
         sources: ["quiztopia", "trivial-pursuit", "publish-or-perish", "publish-or-perish-mge"],
@@ -810,7 +829,6 @@ describe("/api/trainers/quiz", () => {
       });
       const saved = await call("PUT", "/settings", {
         language: "de",
-        newFactsPerDay: 8,
         includeLeeches: true,
         gameReviewsAffectSrs: true,
         sources: ["quiztopia"],
@@ -820,7 +838,6 @@ describe("/api/trainers/quiz", () => {
       expect(await call("GET", "/settings")).toEqual({ status: 200, body: saved.body });
       expect(saved.body).toEqual({
         language: { primary: "de", secondary: null },
-        newFactsPerDay: 8,
         includeLeeches: true,
         gameReviewsAffectSrs: true,
         sources: ["quiztopia"],
@@ -832,15 +849,12 @@ describe("/api/trainers/quiz", () => {
         ],
         excludeFromAll: ["history"],
       });
-      const partial = await call("PUT", "/settings", { language: "both", newFactsPerDay: 0 });
+      const partial = await call("PUT", "/settings", { language: "both" });
       expect(partial.body).toMatchObject({
         includeLeeches: false,
         sources: ["quiztopia", "trivial-pursuit", "publish-or-perish", "publish-or-perish-mge"],
         excludeFromAll: [],
       });
-      expect((await call("PUT", "/settings", { language: "en", newFactsPerDay: 61 })).status).toBe(
-        400,
-      );
       expect((await call("PUT", "/settings", { language: "fr" })).status).toBe(400);
       expect(
         (await call("PUT", "/settings", { language: { primary: "ru", secondary: "ru" } })).status,
@@ -864,7 +878,6 @@ describe("/api/trainers/quiz", () => {
             from: { primary: "de", secondary: null },
             to: { primary: "en", secondary: "de" },
           },
-          newFactsPerDay: { from: 8, to: 0 },
           includeLeeches: { from: true, to: false },
           gameReviewsAffectSrs: { from: true, to: false },
           sources: {
@@ -875,9 +888,7 @@ describe("/api/trainers/quiz", () => {
         },
       });
       // …and a save that changes nothing is not activity.
-      expect((await call("PUT", "/settings", { language: "both", newFactsPerDay: 0 })).status).toBe(
-        200,
-      );
+      expect((await call("PUT", "/settings", { language: "both" })).status).toBe(200);
       await new Promise((r) => setTimeout(r, 20));
       expect(
         await count(client, "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiz-settings'"),
@@ -893,7 +904,6 @@ describe("/api/trainers/quiz", () => {
       });
       expect((await call("GET", "/settings")).body).toMatchObject({
         language: { primary: "de", secondary: null },
-        newFactsPerDay: 15,
       });
       const ov = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
       expect(ov.body.newRemainingToday).toBe(15);
@@ -902,7 +912,7 @@ describe("/api/trainers/quiz", () => {
 
   describe("POST /trainer/reset", () => {
     it("wipes the caller's schedule, history and reads, keeps settings and other users", async () => {
-      await call("PUT", "/settings", { language: "de", newFactsPerDay: 7 });
+      await call("PUT", "/settings", { language: "de" });
       await post(review({ questionId: "f00001", grade: "good" }));
       await post(review({ questionId: "f00002", grade: "again" }));
       await call("POST", "/wiki/reads", { articleId: "a0001" });
@@ -919,7 +929,6 @@ describe("/api/trainers/quiz", () => {
       expect((await call<WikiReads>("GET", "/wiki/reads")).body.reads).toEqual([]);
       expect((await call("GET", "/settings")).body).toMatchObject({
         language: { primary: "de", secondary: null },
-        newFactsPerDay: 7,
       });
       // Someone else's progress is untouched.
       expect(

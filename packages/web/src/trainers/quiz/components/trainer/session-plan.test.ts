@@ -42,6 +42,7 @@ describe("studyAllPlan", () => {
     streak: { current: 0, longest: 0, studiedToday: false },
     todayCounts: { reviews: 0, good: 0, again: 0, newIntroduced: 0 },
     newRemainingToday: 15,
+    moreAvailable: false,
     leftoverToday: 0,
     domains: QUIZ_DOMAINS.map((d, i) => ({
       domain: d.slug,
