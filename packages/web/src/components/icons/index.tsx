@@ -458,6 +458,21 @@ export function TrophyIcon({ className = "h-4 w-4" }: IconProps) {
 }
 
 /** Pencil edit icon used by row-level inline-edit `<IconButton>` actions. */
+/** Speech bubble: a comment or note left on something (a match's notes). */
+export function ChatIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M21 12a8 8 0 01-11.6 7.14L4 20.5l1.36-4.6A8 8 0 1121 12z" />
+    </svg>
+  );
+}
+
 export function EditIcon({ className = "h-3.5 w-3.5" }: IconProps) {
   return (
     <svg

@@ -27,7 +27,7 @@ import {
 } from "../../games/score-config";
 import { artsWedgeForScenario } from "../../games/trivial-pursuit/palette";
 import { cn } from "../../lib/cn";
-import { BookIcon, ChevronDownIcon, EditIcon, XIcon } from "../icons";
+import { BookIcon, ChatIcon, ChevronDownIcon, EditIcon, XIcon } from "../icons";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 import { MicroLabel } from "../ui/Label";
@@ -86,9 +86,10 @@ export function MatchCard({
     [match.outcome, match.gameSlug],
   );
   const hasActions = isAdmin && (onEdit || onDelete || onMoveEarlier || onMoveLater);
+  const note = match.notes?.trim() || null;
   return (
     <article className="text-sm">
-      <div className="relative flex min-h-16 items-center gap-3 px-3 py-2.5 transition-colors hover:bg-fill-soft">
+      <div className="relative px-3 py-2.5 transition-colors hover:bg-fill-soft">
         {/* biome-ignore lint/correctness/noRestrictedElements: the whole row is the disclosure — an invisible stretched control over the row's own layout, not a styled button */}
         <button
           type="button"
@@ -98,46 +99,49 @@ export function MatchCard({
           onClick={() => setOpen((o) => !o)}
           className="absolute inset-0 z-lift cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-400/60"
         />
-        {thumb ? (
-          <img
-            src={thumb}
-            alt=""
-            loading="lazy"
-            decoding="async"
-            className="h-11 w-11 shrink-0 rounded-card-md object-cover"
-          />
-        ) : (
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-3xs font-semibold uppercase tracking-label text-fg-muted">
-            {match.gameTitle.slice(0, 2)}
-          </div>
-        )}
-
-        {/* Fills the row on phone; a fixed column at sm+ so long names like
-            "One Night Ultimate Werewolf" stop truncating. */}
-        <div className="min-w-0 flex-1 sm:w-56 sm:flex-none">
-          <div className="truncate font-semibold text-fg-primary">{match.gameTitle}</div>
-          {subtitle && <div className="truncate text-2xs italic text-fg-muted">{subtitle}</div>}
-          <PreviewLine standings={standings} currentUserId={currentUserId} />
-        </div>
-
-        <div className="hidden min-w-0 flex-1 sm:block">
-          <CompactOutcome
-            outcome={match.outcome}
-            gameSlug={match.gameSlug}
-            currentUserId={currentUserId}
-          />
-        </div>
-
-        <div className="shrink-0 sm:hidden">
-          <LeadView lead={standings.lead} currentUserId={currentUserId} />
-        </div>
-        <ChevronDownIcon
-          aria-hidden="true"
-          className={cn(
-            "h-4 w-4 shrink-0 text-fg-disabled transition-transform",
-            open && "rotate-180",
+        <div className="flex min-h-11 items-center gap-3">
+          {thumb ? (
+            <img
+              src={thumb}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              className="h-11 w-11 shrink-0 rounded-card-md object-cover"
+            />
+          ) : (
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-3xs font-semibold uppercase tracking-label text-fg-muted">
+              {match.gameTitle.slice(0, 2)}
+            </div>
           )}
-        />
+
+          {/* Fills the row on phone; a fixed column at sm+ so long names like
+            "One Night Ultimate Werewolf" stop truncating. */}
+          <div className="min-w-0 flex-1 sm:w-56 sm:flex-none">
+            <div className="truncate font-semibold text-fg-primary">{match.gameTitle}</div>
+            {subtitle && <div className="truncate text-2xs italic text-fg-muted">{subtitle}</div>}
+            <PreviewLine standings={standings} currentUserId={currentUserId} />
+          </div>
+
+          <div className="hidden min-w-0 flex-1 sm:block">
+            <CompactOutcome
+              outcome={match.outcome}
+              gameSlug={match.gameSlug}
+              currentUserId={currentUserId}
+            />
+          </div>
+
+          <div className="shrink-0 sm:hidden">
+            <LeadView lead={standings.lead} currentUserId={currentUserId} />
+          </div>
+          <ChevronDownIcon
+            aria-hidden="true"
+            className={cn(
+              "h-4 w-4 shrink-0 text-fg-disabled transition-transform",
+              open && "rotate-180",
+            )}
+          />
+        </div>
+        {note && <MatchNote note={note} open={open} />}
       </div>
 
       {open && (
@@ -170,6 +174,31 @@ export function MatchCard({
         </div>
       )}
     </article>
+  );
+}
+
+// ── The match's comment ───────────────────────────────────────────────
+
+/**
+ * The comment recorded with the match, under the title column on every
+ * screen. Closed, it is a quiet preview — two lines on a phone, one on wider
+ * screens — so a long note never pushes the list apart; opening the row shows
+ * it whole, line breaks kept. It sits inside the row, so tapping it opens the
+ * row too.
+ */
+function MatchNote({ note, open }: { note: string; open: boolean }) {
+  return (
+    <p className="mt-1.5 ml-14 flex min-w-0 gap-1.5 text-xs leading-snug text-fg-secondary">
+      <ChatIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-fg-muted" />
+      <span
+        className={cn(
+          "min-w-0 whitespace-pre-line break-words",
+          !open && "line-clamp-2 sm:line-clamp-1",
+        )}
+      >
+        {note}
+      </span>
+    </p>
   );
 }
 
