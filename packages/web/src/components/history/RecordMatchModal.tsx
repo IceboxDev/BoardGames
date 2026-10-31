@@ -12,11 +12,13 @@ import type {
   MatchRecord,
   Participant,
 } from "@boardgames/core/history/types";
+import { campaignNightFor } from "@boardgames/core/ical/campaign";
 import { nightDate } from "@boardgames/core/protocol";
 import { type InfiniteData, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug, kindForVariant } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
+import { games } from "../../games/registry";
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
@@ -213,6 +215,26 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     });
   }, [gameSlug, state.mode]);
 
+  // A campaign night (picks locked on a campaign game) plays that one game, so
+  // recording a match for it starts with the game filled in. Once per night,
+  // only when the picker is still empty — a game already chosen is never
+  // replaced. The picker keeps its own text, so it is remounted to show it.
+  const [gamePickerKey, setGamePickerKey] = useState(0);
+  const campaignFillRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (state.mode === "edit" || !dateKey) return;
+    const lock = locksQuery.data?.[dateKey];
+    if (!lock) return; // wait for the night's lock to load
+    if (campaignFillRef.current === dateKey) return;
+    campaignFillRef.current = dateKey;
+    const slug = lock.topGameSlug;
+    if (!slug || !campaignNightFor(lock.picksLockedAt, slug)) return;
+    if (gameSlug !== null || gameTitle.trim() !== "") return;
+    setGameSlug(slug);
+    setGameTitle(games.find((g) => g.slug === slug)?.title ?? slug);
+    setGamePickerKey((k) => k + 1);
+  }, [dateKey, locksQuery.data, state.mode, gameSlug, gameTitle]);
+
   // Whenever the user picks a different game night, replace the participant
   // list with that night's RSVP=yes set. Switching nights without the players
   // refreshing is confusing — the previous night's people aren't relevant any
@@ -318,6 +340,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
       <ModalBody>
         <Field label="Game" htmlFor="rmm-game">
           <GamePicker
+            key={gamePickerKey}
             slug={gameSlug}
             title={gameTitle}
             onChange={({ slug, title }) => {
