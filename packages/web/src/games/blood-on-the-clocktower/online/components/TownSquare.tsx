@@ -23,7 +23,8 @@ export interface SquareSeat {
   readonly alive: boolean;
   readonly ghostVote: boolean;
   readonly left?: boolean;
-  readonly connected: boolean;
+  /** Online: whether the player is connected (a dot on the token). The table companion has none. */
+  readonly connected?: boolean;
   /** The token on the seat, when this screen may show one. */
   readonly character?: CharacterId;
   /** Small notes under the name (Grimoire reminders, "You"). */
@@ -35,10 +36,40 @@ export interface SquareSeat {
   readonly disabled?: boolean;
 }
 
-/** Where chair `i` of `n` sits: the first at the top, then clockwise. */
-function seatPoint(i: number, n: number): { x: number; y: number } {
-  const angle = -Math.PI / 2 + (2 * Math.PI * i) / Math.max(1, n);
+/**
+ * Where chair `i` of `n` sits, clockwise. Online the first chair is at the
+ * top; at a real table (`storytellerAtBottom`) the Storyteller's own place —
+ * between the last chair and the first — is at the bottom of the screen, so
+ * the circle on the phone is the circle in front of them.
+ */
+function seatPoint(i: number, n: number, storytellerAtBottom = false): { x: number; y: number } {
+  const step = (2 * Math.PI) / Math.max(1, n);
+  const angle = storytellerAtBottom ? Math.PI / 2 + step * (i + 0.5) : -Math.PI / 2 + step * i;
   return { x: CENTER + RADIUS * Math.cos(angle), y: CENTER + RADIUS * Math.sin(angle) };
+}
+
+/** A line from one token's edge to the other's, with its head as a triangle. */
+function arrowBetween(a: { x: number; y: number }, b: { x: number; y: number }) {
+  const dx = b.x - a.x;
+  const dy = b.y - a.y;
+  const len = Math.hypot(dx, dy) || 1;
+  const [ux, uy] = [dx / len, dy / len];
+  const gap = TOKEN * 0.62;
+  const start = { x: a.x + ux * gap, y: a.y + uy * gap };
+  const tip = { x: b.x - ux * gap, y: b.y - uy * gap };
+  const head = 34;
+  const base = { x: tip.x - ux * head, y: tip.y - uy * head };
+  const wing = { x: -uy * head * 0.55, y: ux * head * 0.55 };
+  return {
+    start,
+    end: base,
+    head: `${tip.x},${tip.y} ${base.x + wing.x},${base.y + wing.y} ${base.x - wing.x},${base.y - wing.y}`,
+  };
+}
+
+/** A token's box: room for a name a little wider than the token, while the chairs allow it. */
+function slotWidth(n: number): number {
+  return Math.max(TOKEN, Math.min(TOKEN * 1.75, (2 * Math.PI * RADIUS) / Math.max(1, n)));
 }
 
 const TONE_RING: Record<NonNullable<SeatTone>, string> = {
@@ -49,12 +80,22 @@ const TONE_RING: Record<NonNullable<SeatTone>, string> = {
   picked: "ring-4 ring-emerald-400/80",
 };
 
-function Token({ s, onClick }: { s: SquareSeat; onClick?: (() => void) | undefined }) {
+function Token({
+  s,
+  discWidth,
+  onClick,
+}: {
+  s: SquareSeat;
+  /** The token's share of its slot, so the name below may run wider. */
+  discWidth: string;
+  onClick?: (() => void) | undefined;
+}) {
   const body = (
     <>
       <span
+        style={{ width: discWidth }}
         className={cn(
-          "relative flex aspect-square w-full items-center justify-center rounded-full border-2 bg-surface-900/90 transition",
+          "relative flex aspect-square items-center justify-center rounded-full border-2 bg-surface-900/90 transition",
           s.alive ? "border-line-strong" : "border-line grayscale",
           s.tone ? TONE_RING[s.tone] : null,
           s.disabled && "opacity-40",
@@ -94,38 +135,44 @@ function Token({ s, onClick }: { s: SquareSeat; onClick?: (() => void) | undefin
             ✋
           </span>
         )}
-        <span
-          aria-hidden
-          className={cn(
-            "absolute right-1 bottom-1 h-3 w-3 rounded-full border border-surface-900",
-            s.connected ? "bg-emerald-400" : "bg-fg-disabled",
-          )}
-        />
+        {s.connected !== undefined && (
+          <span
+            aria-hidden
+            className={cn(
+              "absolute right-1 bottom-1 h-3 w-3 rounded-full border border-surface-900",
+              s.connected ? "bg-emerald-400" : "bg-fg-disabled",
+            )}
+          />
+        )}
       </span>
-      <span className="mt-1 block max-w-full truncate text-center text-sm font-semibold text-fg-strong">
-        {s.name}
-        {s.left ? " (gone)" : ""}
-      </span>
-      {s.notes?.map((n) => (
-        <span key={n} className="block max-w-full truncate text-center text-xs text-fg-muted">
-          {n}
+      {/* Out of the token's box, so the box — and every line drawn to a
+          seat (the clock hand, a nomination) — is centred on the token. */}
+      <span className="absolute inset-x-0 top-full mt-1 flex flex-col items-center">
+        <span className="block max-w-full truncate text-center text-sm font-semibold text-fg-strong">
+          {s.name}
+          {s.left ? " (gone)" : ""}
         </span>
-      ))}
+        {s.notes?.map((n) => (
+          <span key={n} className="block max-w-full truncate text-center text-xs text-fg-muted">
+            {n}
+          </span>
+        ))}
+      </span>
     </>
   );
-  const label = `${s.name}${s.alive ? "" : ", dead"}${s.connected ? "" : ", away"}`;
+  const label = `${s.name}${s.alive ? "" : ", dead"}${s.connected === false ? ", away" : ""}`;
   return onClick && !s.disabled ? (
     // biome-ignore lint/correctness/noRestrictedElements: a seat token on the board is a game piece
     <button
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="flex w-full flex-col items-center rounded-ui-md focus-visible:outline-2 focus-visible:outline-accent-400"
+      className="relative flex w-full flex-col items-center rounded-ui-md focus-visible:outline-2 focus-visible:outline-accent-400"
     >
       {body}
     </button>
   ) : (
-    <figure aria-label={label} className="m-0 flex w-full flex-col items-center">
+    <figure aria-label={label} className="relative m-0 flex w-full flex-col items-center">
       {body}
     </figure>
   );
@@ -137,6 +184,8 @@ export function TownSquare({
   onSeatClick,
   clockAt,
   night = false,
+  storytellerAtBottom = false,
+  arrow = null,
   ariaLabel = "Town square",
 }: {
   seats: readonly SquareSeat[];
@@ -147,10 +196,20 @@ export function TownSquare({
   clockAt?: number | null;
   /** The town sleeps: the square goes dark. */
   night?: boolean;
+  /** Seat the circle from the Storyteller's place at the bottom (the table companion). */
+  storytellerAtBottom?: boolean;
+  /** A nomination drawn across the square: who points (`from`) at whom (`to`), by `seat`. */
+  arrow?: { from: number; to: number } | null;
   ariaLabel?: string;
 }) {
   const n = seats.length;
-  const hand = clockAt !== null && clockAt !== undefined && n > 0 ? seatPoint(clockAt, n) : null;
+  const at = (i: number) => seatPoint(i, n, storytellerAtBottom);
+  const hand = clockAt !== null && clockAt !== undefined && n > 0 ? at(clockAt) : null;
+  const slot = slotWidth(n);
+  const discWidth = `${(TOKEN / slot) * 100}%`;
+  const from = arrow ? seats.findIndex((s) => s.seat === arrow.from) : -1;
+  const to = arrow ? seats.findIndex((s) => s.seat === arrow.to) : -1;
+  const pointing = from >= 0 && to >= 0 && from !== to ? arrowBetween(at(from), at(to)) : null;
   return (
     <div className="flex min-h-0 flex-1 items-center justify-center">
       <BoardSurface
@@ -160,8 +219,12 @@ export function TownSquare({
         overlays={
           <>
             {seats.map((s, i) => (
-              <BoardOverlay key={s.seat} at={seatPoint(i, n)} width={TOKEN}>
-                <Token s={s} onClick={onSeatClick ? () => onSeatClick(s.seat) : undefined} />
+              <BoardOverlay key={s.seat} at={at(i)} width={slot}>
+                <Token
+                  s={s}
+                  discWidth={discWidth}
+                  onClick={onSeatClick ? () => onSeatClick(s.seat) : undefined}
+                />
               </BoardOverlay>
             ))}
             {center && (
@@ -205,6 +268,20 @@ export function TownSquare({
               strokeLinecap="round"
               className="text-amber-300 transition-all duration-300"
             />
+          )}
+          {pointing && (
+            <g className="text-sky-300">
+              <line
+                x1={pointing.start.x}
+                y1={pointing.start.y}
+                x2={pointing.end.x}
+                y2={pointing.end.y}
+                stroke="currentColor"
+                strokeWidth={9}
+                strokeLinecap="round"
+              />
+              <polygon points={pointing.head} fill="currentColor" />
+            </g>
           )}
         </BoardLayer>
       </BoardSurface>

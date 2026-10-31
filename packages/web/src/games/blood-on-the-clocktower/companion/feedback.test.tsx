@@ -1,6 +1,6 @@
 // The five upgrades from the 2026-09 playtest, pinned at the React level:
 // seating a traveller anywhere, undo / back to the night, the vote tally
-// assistant, recording what was told, and icons + hand-over mode.
+// stepper, recording what was told, and icons + hand-over mode.
 
 import type { CharacterId } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
@@ -17,7 +17,7 @@ import {
 import type { GameSetup } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import { useState } from "react";
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { HistoryActions } from "./Companion";
 import CompanionGame from "./CompanionGame";
 import { SeatPicker } from "./common";
@@ -28,6 +28,23 @@ import { PrivacyProvider } from "./privacy";
 vi.mock("../../../hooks/useCurrentUser.ts", () => ({
   useCurrentUser: () => ({ user: null, isLoading: false, isAdmin: false }),
 }));
+
+// The town square places its seats once its surface is measured. jsdom
+// measures nothing, so the observer reports a phone-sized square.
+beforeEach(() => {
+  window.ResizeObserver = class {
+    readonly #report: ResizeObserverCallback;
+    constructor(report: ResizeObserverCallback) {
+      this.#report = report;
+    }
+    observe() {
+      const entry = { contentRect: { width: 360, height: 360 } } as ResizeObserverEntry;
+      this.#report([entry], this as unknown as ResizeObserver);
+    }
+    unobserve() {}
+    disconnect() {}
+  } as unknown as typeof ResizeObserver;
+});
 
 const NAMES = ["Alice", "Bob", "Cara", "Dan", "Eve", "Finn", "Gwen", "Hana"];
 
@@ -112,55 +129,72 @@ describe("2 · undo and back to the night", () => {
   });
 });
 
-describe("3 · the vote tally assistant", () => {
-  it("lists hands clockwise from the nominee, greys the voteless, and books the tally with tokens spent", () => {
+describe("3 · nominating on the table and counting hand by hand", () => {
+  const up = () => fireEvent.click(screen.getByRole("button", { name: "✋ Hand up" }));
+  const down = () => fireEvent.click(screen.getByRole("button", { name: "Hand down" }));
+  const back = () => fireEvent.click(screen.getByRole("button", { name: "← Back one hand" }));
+
+  it("counts one hand at a time clockwise from the nominee, and books the tally with tokens spent", () => {
     let s = dawn(tb());
     s = kill(s, 5, "storyteller"); // Finn is dead with a ghost vote
     s = setButlerMaster(s, 3, 2); // Dan the Butler follows Cara
     render(<Host initial={s} />);
-    fireEvent.click(screen.getByRole("button", { name: /^Alice/ })); // nominator
-    fireEvent.click(screen.getByRole("button", { name: /^Bob/ })); // nominee
+    fireEvent.click(screen.getByRole("button", { name: "Alice" })); // nominator
+    fireEvent.click(screen.getByRole("button", { name: "Bob" })); // nominee
+    fireEvent.click(screen.getByRole("button", { name: "Start the count →" }));
+    // The vote has the screen: the day's other panels step aside.
+    expect(screen.queryByRole("button", { name: /night falls/ })).toBeNull();
     // Clockwise from Bob's left: Cara, Dan, Eve, Finn, Gwen, Alice, Bob.
-    const hands = screen
-      .getAllByRole("button", { name: /^\d\. / })
-      .map((b) => b.querySelector("span span span")?.textContent);
-    expect(hands).toEqual([
-      "1. Cara",
-      "2. Dan",
-      "3. Eve",
-      "4. Finn",
-      "5. Gwen",
-      "6. Alice",
-      "7. Bob",
-    ]);
-    // Dan's hand alone counts nothing (the Butler needs Cara).
-    fireEvent.click(screen.getByRole("button", { name: /^2\. Dan/ }));
-    expect(screen.getByText(/Dan is the Butler/)).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Record 0 votes/ })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: /^1\. Cara/ }));
-    fireEvent.click(screen.getByRole("button", { name: /^4\. Finn/ })); // ghost vote
-    fireEvent.click(screen.getByRole("button", { name: /^3\. Eve/ }));
-    expect(screen.getByRole("button", { name: /Record 4 votes on Bob/ })).toBeInTheDocument();
+    const strip = screen.getByRole("list", { name: "Counting order" });
+    expect(
+      within(strip)
+        .getAllByRole("listitem")
+        .map((li) => li.textContent),
+    ).toEqual(["Cara", "Dan", "Eve", "Finn", "Gwen", "Alice", "Bob"]);
+    expect(screen.getByText("Hand 1 of 7")).toBeInTheDocument();
+    down(); // Cara
+    // Dan's hand alone counts nothing: the Butler needs Cara.
+    expect(screen.getByText("Butler · counts only if Cara voted")).toBeInTheDocument();
+    up(); // Dan
+    expect(within(strip).getByLabelText("Dan: hand up")).toBeInTheDocument();
+    back();
+    back();
+    up(); // Cara
+    up(); // Dan
+    up(); // Eve
+    expect(screen.getByText("Ghost vote: raising it spends it")).toBeInTheDocument();
+    up(); // Finn
+    down(); // Gwen
+    down(); // Alice
+    expect(screen.getByText("The nominee, counted last")).toBeInTheDocument();
+    down(); // Bob
     fireEvent.click(screen.getByRole("button", { name: /Record 4 votes on Bob/ }));
     expect(screen.getByText(/is about to die with 4 votes/)).toBeInTheDocument();
-    // Finn's ghost vote is spent: on the next nomination they can't vote.
-    fireEvent.click(screen.getByRole("button", { name: /^Cara/ }));
-    fireEvent.click(screen.getByRole("button", { name: /^Eve/ }));
-    expect(screen.getByRole("button", { name: /Finn/ })).toBeDisabled();
-    expect(screen.getByText("no vote (ghost vote spent)")).toBeInTheDocument();
+    // Finn's ghost vote is spent: the next count skips them.
+    fireEvent.click(screen.getByRole("button", { name: "Cara" }));
+    fireEvent.click(screen.getByRole("button", { name: "Eve" }));
+    fireEvent.click(screen.getByRole("button", { name: "Start the count →" }));
+    expect(screen.getByLabelText("Finn: no vote")).toBeInTheDocument();
+    expect(screen.getByText("Hand 1 of 6")).toBeInTheDocument();
+    // A laptop at the table answers with the arrow keys.
+    fireEvent.keyDown(window, { key: "ArrowRight" });
+    expect(screen.getByText("Hand 2 of 6")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Cancel the count" }));
+    expect(screen.getByRole("button", { name: /night falls/ })).toBeInTheDocument();
   });
 
   it("can still be counted by hand", () => {
     render(<Host initial={dawn(tb())} />);
-    fireEvent.click(screen.getByRole("button", { name: /^Alice/ }));
-    fireEvent.click(screen.getByRole("button", { name: /^Bob/ }));
+    fireEvent.click(screen.getByRole("button", { name: "Alice" }));
+    fireEvent.click(screen.getByRole("button", { name: "Bob" }));
     fireEvent.click(screen.getByRole("button", { name: "Count by hand" }));
     fireEvent.click(screen.getByRole("button", { name: "One vote more" }));
     fireEvent.click(screen.getByRole("button", { name: "One vote more" }));
     fireEvent.click(screen.getByRole("button", { name: /Record 2 votes on Bob/ }));
     // Booked: Bob can no longer be nominated today.
-    fireEvent.click(screen.getByRole("button", { name: /^Cara/ }));
-    expect(screen.getByRole("button", { name: /^Bob/ })).toBeDisabled();
+    fireEvent.click(screen.getByRole("button", { name: "Cara" }));
+    expect(screen.queryByRole("button", { name: "Bob" })).toBeNull();
+    expect(screen.getByRole("figure", { name: "Bob" })).toBeInTheDocument();
   });
 });
 
@@ -213,9 +247,13 @@ describe("5 · icons and hand-over mode", () => {
     render(<Host initial={s} handOver />);
     fireEvent.click(screen.getByRole("button", { name: "Alice" }));
     fireEvent.click(screen.getByRole("button", { name: "Bob" }));
-    // Dan's chip carries no "Butler · needs Cara" caption and no Butler hint.
-    fireEvent.click(screen.getByRole("button", { name: /^2\. Dan/ }));
-    expect(screen.queryByText(/Dan is the Butler|Butler · needs/)).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Start the count →" }));
+    // No token art in the strip, and Dan's turn names no Butler rule.
+    expect(screen.getByRole("list", { name: "Counting order" }).querySelector("img")).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Hand down" })); // Cara
+    expect(screen.getByText("Hand 2 of 7")).toBeInTheDocument(); // Dan
+    expect(screen.queryByText(/Butler/)).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Cancel the count" }));
     expect(screen.queryByText(/Judge's ruling|may make one public statement/)).toBeNull();
   });
 

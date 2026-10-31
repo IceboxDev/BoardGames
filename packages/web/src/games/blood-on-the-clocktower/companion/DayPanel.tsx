@@ -1,5 +1,4 @@
 import type {
-  CompanionPlayer,
   CompanionState,
   Protection,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
@@ -35,15 +34,16 @@ import {
   slayerShot,
   virginNomination,
 } from "@boardgames/core/games/blood-on-the-clocktower/decisions";
-import { recordVote, tallyVotes } from "@boardgames/core/games/blood-on-the-clocktower/voting";
-import { useState } from "react";
+import { recordVote } from "@boardgames/core/games/blood-on-the-clocktower/voting";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../../../components/ui";
+import { type SquareSeat, TownSquare } from "../online/components/TownSquare";
 import type { HistoryActions } from "./Companion";
-import { CharacterIcon, Panel, SeatPicker } from "./common";
+import { Panel, SeatPicker } from "./common";
 import { useHandOver } from "./privacy-context";
 import type { UpdateState } from "./store";
-import { Callout, Hint, Inset, useSeatPick } from "./ui";
-import { VoteTally } from "./VoteTally";
+import { Callout, Hint, useSeatPick } from "./ui";
+import { VoteCount } from "./VoteCount";
 
 /**
  * Day tracker: dawn recap, nomination + vote referee (threshold, about-to-die,
@@ -69,18 +69,21 @@ export default function DayPanel({
   // Panels that name a secret role stay off the screen while the phone is
   // in a player's hands.
   const handOver = useHandOver();
+  // While hands are counted, the vote is the only thing on the day screen.
+  const [counting, setCounting] = useState(false);
+  const rest = !counting;
 
   return (
     <>
-      <DawnRecap state={state} history={history} />
-      {state.mastermindExtraDay && (
+      {rest && <DawnRecap state={state} history={history} />}
+      {rest && state.mastermindExtraDay && (
         <Callout tone="rose">
           MASTERMIND DAY (say nothing!): the Demon is secretly dead. If a GOOD player is executed
           today — even surviving it — evil wins. If an EVIL player is executed, or nobody is, good
           wins at dusk.
         </Callout>
       )}
-      {minstrelActive(state) && !handOver && (
+      {rest && minstrelActive(state) && !handOver && (
         <Panel tone="gold">
           <p className="text-sm font-semibold text-fg-primary">
             The Minstrel plays on: EVERYONE except Travellers (and the Minstrel) is drunk until dusk
@@ -89,54 +92,56 @@ export default function DayPanel({
         </Panel>
       )}
 
-      <Panel title={`Voting today — ${alive} alive`} tone="day">
-        {voudon ? (
-          <p className="text-sm text-fg-primary">
-            The VOUDON holds court: only the Voudon and the DEAD may vote (no vote tokens spent,
-            vote as often as they like — the living keep their hands down). No 50% floor: whoever
-            has the most votes today is executed
-            {state.day.highestVotes > 0 && (
-              <>
-                {" "}
-                (current best <b>{state.day.highestVotes}</b>, must be beaten)
-              </>
-            )}
-            .
-          </p>
-        ) : (
-          <p className="text-sm text-fg-primary">
-            Execution needs <b>{required}+ votes</b> (half of {alive}, rounded up)
-            {state.day.highestVotes > 0 && (
-              <>
-                {" "}
-                and must beat today's best of <b>{state.day.highestVotes}</b>
-              </>
-            )}
-            . Dead players vote with their one ghost vote
-            {tb && "; the Butler only votes if their master does"}.
-          </p>
-        )}
-        {bishop && (
-          <Hint tone="purple" className="mt-1">
-            The BISHOP presides: only YOU (the Storyteller) may nominate — and you must nominate at
-            least one player of the {isEvilPlayer(bishop) ? "GOOD" : "EVIL"} team today (the
-            opposite of the Bishop's alignment).
-          </Hint>
-        )}
-        {state.players
-          .filter((p) => p.tripleVote || p.negativeVote)
-          .map((p) => (
-            <Hint key={p.seat} tone="purple" className="mt-1">
-              {p.name}'s vote counts {p.tripleVote ? "as 3 votes" : "NEGATIVELY (−1)"} today — count
-              it aloud accordingly.
+      {rest && (
+        <Panel title={`Voting today — ${alive} alive`} tone="day">
+          {voudon ? (
+            <p className="text-sm text-fg-primary">
+              The VOUDON holds court: only the Voudon and the DEAD may vote (no vote tokens spent,
+              vote as often as they like — the living keep their hands down). No 50% floor: whoever
+              has the most votes today is executed
+              {state.day.highestVotes > 0 && (
+                <>
+                  {" "}
+                  (current best <b>{state.day.highestVotes}</b>, must be beaten)
+                </>
+              )}
+              .
+            </p>
+          ) : (
+            <p className="text-sm text-fg-primary">
+              Execution needs <b>{required}+ votes</b> (half of {alive}, rounded up)
+              {state.day.highestVotes > 0 && (
+                <>
+                  {" "}
+                  and must beat today's best of <b>{state.day.highestVotes}</b>
+                </>
+              )}
+              . Dead players vote with their one ghost vote
+              {tb && "; the Butler only votes if their master does"}.
+            </p>
+          )}
+          {bishop && (
+            <Hint tone="purple" className="mt-1">
+              The BISHOP presides: only YOU (the Storyteller) may nominate — and you must nominate
+              at least one player of the {isEvilPlayer(bishop) ? "GOOD" : "EVIL"} team today (the
+              opposite of the Bishop's alignment).
             </Hint>
-          ))}
-      </Panel>
+          )}
+          {state.players
+            .filter((p) => p.tripleVote || p.negativeVote)
+            .map((p) => (
+              <Hint key={p.seat} tone="purple" className="mt-1">
+                {p.name}'s vote counts {p.tripleVote ? "as 3 votes" : "NEGATIVELY (−1)"} today —
+                count it aloud accordingly.
+              </Hint>
+            ))}
+        </Panel>
+      )}
 
-      <MoonchildPanel state={state} update={update} />
+      {rest && <MoonchildPanel state={state} update={update} />}
 
       {executed === undefined ? (
-        <NominationComposer state={state} update={update} />
+        <NominationComposer state={state} update={update} onCountingChange={setCounting} />
       ) : (
         <Panel tone="danger" title="Execution done">
           <p className="text-sm text-fg-primary">
@@ -146,12 +151,12 @@ export default function DayPanel({
         </Panel>
       )}
 
-      {!handOver && <JudgePanel state={state} update={update} />}
-      {!handOver && <GossipPanel state={state} update={update} />}
-      <GunslingerPanel state={state} update={update} />
-      <BeggarPanel state={state} update={update} />
-      {tb && <SlayerPanel state={state} update={update} />}
-      <EndDayPanel state={state} update={update} />
+      {rest && !handOver && <JudgePanel state={state} update={update} />}
+      {rest && !handOver && <GossipPanel state={state} update={update} />}
+      {rest && <GunslingerPanel state={state} update={update} />}
+      {rest && <BeggarPanel state={state} update={update} />}
+      {rest && tb && <SlayerPanel state={state} update={update} />}
+      {rest && <EndDayPanel state={state} update={update} />}
     </>
   );
 }
@@ -428,72 +433,115 @@ function BeggarPanel({ state, update }: { state: CompanionState; update: UpdateS
 }
 
 /**
- * A confirmed pick, collapsed to one 44px row so the panel never stacks two
- * identical seat grids and the counter stays inside the viewport.
+ * The nomination ritual on the town square, seated from the Storyteller's
+ * place: tap who nominates, then who they nominate — the arrow drawn between
+ * them is the finger pointing across the table, and the circle never moves.
+ * The count then runs one hand at a time (`VoteCount`); "Count by hand" keeps
+ * a plain number for a Storyteller who counted themselves. The about-to-die
+ * resolution renders INSIDE this panel too: content swaps, position doesn't.
  */
-function ChosenRow({
-  label,
-  player,
-  onChange,
+function NominationComposer({
+  state,
+  update,
+  onCountingChange,
 }: {
-  label: string;
-  player: CompanionPlayer;
-  onChange: () => void;
+  state: CompanionState;
+  update: UpdateState;
+  /** The count has the screen to itself: the day's other panels step aside. */
+  onCountingChange: (counting: boolean) => void;
 }) {
-  const handOver = useHandOver();
-  return (
-    <Inset className="flex min-h-11 items-center gap-2 py-0">
-      <span className="w-20 shrink-0 text-3xs font-bold uppercase tracking-pill text-fg-muted">
-        {label}
-      </span>
-      {!handOver && <CharacterIcon character={player.character} size="sm" decorative />}
-      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-fg-primary">
-        {player.name}
-      </span>
-      <Button variant="ghost" size="xs" onClick={onChange}>
-        Change
-      </Button>
-    </Inset>
-  );
-}
-
-/**
- * One stable panel for the whole nomination ritual. Each pick collapses to a
- * ChosenRow, so exactly one seat grid is ever visible and the vote counter
- * renders in the freed space — on a 390×844 phone the full flow (pick, pick,
- * tally, record) fits without scrolling. The about-to-die resolution renders
- * INSIDE this panel too: content swaps, position doesn't.
- */
-function NominationComposer({ state, update }: { state: CompanionState; update: UpdateState }) {
   const [nominator, setNominator] = useState<number | undefined>();
   const [nominee, setNominee] = useState<number | undefined>();
-  // The raised hands (the assistant's tally) — or a hand-counted number when
-  // the Storyteller switches to counting by themselves.
-  const [voters, setVoters] = useState<number[]>([]);
+  const [counting, setCounting] = useState(false);
+  // A hand-counted number, when the Storyteller counts by themselves.
   const [manual, setManual] = useState<number | undefined>();
+  const handOver = useHandOver();
+  const panelRef = useRef<HTMLDivElement>(null);
   const required = votesRequired(state);
   const aboutToDie = state.day.aboutToDie;
-  const tally = tallyVotes(state, voters).total;
-  const votes = manual ?? tally;
+  const step = nominator === undefined ? "nominator" : nominee === undefined ? "nominee" : "ready";
 
   const virgin =
     nominator !== undefined && nominee !== undefined
       ? virginNomination(state, nominator, nominee)
       : undefined;
 
+  function setCount(on: boolean) {
+    setCounting(on);
+    onCountingChange(on);
+  }
   function reset() {
     setNominator(undefined);
     setNominee(undefined);
-    setVoters([]);
     setManual(undefined);
+    setCount(false);
   }
 
-  const nominatorDisabled = state.players
-    .filter((p) => !canNominate(state, p.seat))
-    .map((p) => p.seat);
-  const nomineeDisabled = state.players
-    .filter((p) => !canBeNominated(state, p.seat) || p.seat === nominator)
-    .map((p) => p.seat);
+  // The count starts at the top of the screen, whatever was scrolled above it.
+  useEffect(() => {
+    if (counting) panelRef.current?.scrollIntoView?.({ block: "start" });
+  }, [counting]);
+
+  if (counting && nominator !== undefined && nominee !== undefined) {
+    return (
+      <div ref={panelRef} className="scroll-mt-2">
+        <Panel title="The vote" tone="day">
+          <VoteCount
+            key={`${nominator}-${nominee}`}
+            state={state}
+            nominator={nominator}
+            nominee={nominee}
+            onRecord={(voters) => {
+              update((s) => recordVote(s, nominator, nominee, voters));
+              reset();
+            }}
+            onCancel={() => setCount(false)}
+          />
+        </Panel>
+      </div>
+    );
+  }
+
+  const seats: SquareSeat[] = state.players
+    .filter((p) => !p.left)
+    .map((p) => {
+      const disabled =
+        step === "nominator"
+          ? !canNominate(state, p.seat)
+          : step === "nominee"
+            ? p.seat !== nominator && !canBeNominated(state, p.seat)
+            : p.seat !== nominator && p.seat !== nominee;
+      const note =
+        step === "nominator" && p.alive && state.day.nominatorsUsed.includes(p.seat)
+          ? "has nominated"
+          : step === "nominee" && state.day.nomineesUsed.includes(p.seat)
+            ? "was nominated"
+            : undefined;
+      return {
+        seat: p.seat,
+        name: p.name,
+        alive: p.alive,
+        ghostVote: p.ghostVote,
+        character: handOver ? undefined : p.character,
+        tone: p.seat === nominator ? "nominator" : p.seat === nominee ? "nominee" : null,
+        disabled,
+        notes: note ? [note] : undefined,
+      };
+    });
+
+  function pick(seat: number) {
+    if (step === "nominator") {
+      if (canNominate(state, seat)) setNominator(seat);
+    } else if (step === "nominee") {
+      if (seat === nominator) setNominator(undefined);
+      else if (canBeNominated(state, seat)) setNominee(seat);
+    } else if (seat === nominee) {
+      setNominee(undefined);
+      setManual(undefined);
+    } else if (seat === nominator) {
+      reset();
+    }
+  }
 
   return (
     <Panel title="Nomination" tone="day">
@@ -507,62 +555,44 @@ function NominationComposer({ state, update }: { state: CompanionState; update: 
           />
         )}
 
-        {nominator === undefined ? (
-          <div>
-            <p className="mb-1.5 text-xs font-semibold text-fg-secondary">
-              Nominator (alive, one nomination each)
-            </p>
-            <SeatPicker
-              state={state}
-              selected={[]}
-              disabledSeats={nominatorDisabled}
-              onToggle={(seat) => {
-                setNominator(seat);
-                // A player can't nominate themself — a stale nominee pick
-                // that matches the new nominator is cleared.
-                if (seat === nominee) setNominee(undefined);
-              }}
-            />
-          </div>
-        ) : (
-          <ChosenRow
-            label="Nominator"
-            player={playerAt(state, nominator)}
-            onChange={() => {
-              setNominator(undefined);
-              setVoters([]);
-              setManual(undefined);
-            }}
+        {/* Room under the circle for the bottom seats' names and notes. */}
+        <div className="mx-auto w-full max-w-md pb-8">
+          <TownSquare
+            seats={seats}
+            storytellerAtBottom
+            arrow={
+              nominator !== undefined && nominee !== undefined
+                ? { from: nominator, to: nominee }
+                : null
+            }
+            onSeatClick={pick}
+            ariaLabel="The table, from your seat"
+            center={
+              step === "nominator" ? (
+                <>
+                  <span className="text-lg font-bold text-fg-strong">Tap who nominates</span>
+                  <span className="text-xs text-fg-muted">{required}+ votes to execute</span>
+                </>
+              ) : step === "nominee" ? (
+                <>
+                  <span className="text-xs text-fg-muted">
+                    {nameAt(state, nominator ?? 0)} nominates…
+                  </span>
+                  <span className="text-lg font-bold text-fg-strong">Tap who</span>
+                </>
+              ) : (
+                <>
+                  <span className="text-xs text-fg-muted">{nameAt(state, nominator ?? 0)} →</span>
+                  <span className="text-2xl font-black text-fg-strong">
+                    {nameAt(state, nominee ?? 0)}
+                  </span>
+                </>
+              )
+            }
           />
-        )}
+        </div>
 
-        {nominator !== undefined &&
-          (nominee === undefined ? (
-            <div>
-              <p className="mb-1.5 text-xs font-semibold text-fg-secondary">
-                Nominee (each player nominated once per day — the dead may be nominated)
-              </p>
-              <SeatPicker
-                state={state}
-                selected={[]}
-                disabledSeats={nomineeDisabled}
-                deadSelectable
-                onToggle={(seat) => setNominee(seat)}
-              />
-            </div>
-          ) : (
-            <ChosenRow
-              label="Nominee"
-              player={playerAt(state, nominee)}
-              onChange={() => {
-                setNominee(undefined);
-                setVoters([]);
-                setManual(undefined);
-              }}
-            />
-          ))}
-
-        {virgin && nominator !== undefined && nominee !== undefined && (
+        {virgin && nominator !== undefined && nominee !== undefined ? (
           <VirginIntercept
             state={state}
             update={update}
@@ -571,86 +601,70 @@ function NominationComposer({ state, update }: { state: CompanionState; update: 
             outcome={virgin}
             onDone={reset}
           />
-        )}
-
-        {!virgin && nominator !== undefined && nominee !== undefined && (
+        ) : manual !== undefined && nominator !== undefined && nominee !== undefined ? (
           <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between gap-2">
-              <p className="text-xs font-semibold text-fg-secondary">
-                {manual === undefined
-                  ? "Tap each raised hand, clockwise from the nominee."
-                  : "Hand-counted total."}{" "}
-                {required}+ needed.
-              </p>
+            <div className="flex items-center justify-center gap-3">
               <Button
-                variant="ghost"
-                size="xs"
-                onClick={() => (manual === undefined ? setManual(tally) : setManual(undefined))}
+                variant="secondary"
+                size="lg"
+                aria-label="One vote fewer"
+                onClick={() => setManual(Math.max(0, manual - 1))}
               >
-                {manual === undefined ? "Count by hand" : "Tap hands instead"}
+                −
               </Button>
-            </div>
-            {manual === undefined ? (
-              <VoteTally
-                state={state}
-                nominee={nominee}
-                voters={voters}
-                onToggle={(seat) =>
-                  setVoters((prev) =>
-                    prev.includes(seat) ? prev.filter((v) => v !== seat) : [...prev, seat],
-                  )
-                }
-              />
-            ) : (
-              <div className="flex items-center justify-center gap-3">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  aria-label="One vote fewer"
-                  onClick={() => setManual(Math.max(0, manual - 1))}
-                >
-                  −
-                </Button>
-                <span
-                  className={`w-16 text-center text-4xl font-bold tabular-nums ${
-                    manual >= required ? "text-rose-300" : "text-fg-strong"
-                  }`}
-                >
-                  {manual}
-                </span>
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  aria-label="One vote more"
-                  onClick={() => setManual(manual + 1)}
-                >
-                  +
-                </Button>
-              </div>
-            )}
-            {manual === undefined && (
-              <p
-                className={`text-center text-4xl font-bold tabular-nums ${
-                  tally >= required ? "text-rose-300" : "text-fg-strong"
+              <span
+                className={`w-16 text-center text-4xl font-bold tabular-nums ${
+                  manual >= required ? "text-rose-300" : "text-fg-strong"
                 }`}
               >
-                {tally}
-              </p>
-            )}
+                {manual}
+              </span>
+              <Button
+                variant="secondary"
+                size="lg"
+                aria-label="One vote more"
+                onClick={() => setManual(manual + 1)}
+              >
+                +
+              </Button>
+            </div>
             <Button
               variant="primary"
               size="lg"
               block
               onClick={() => {
-                update((s) =>
-                  manual === undefined
-                    ? recordVote(s, nominator, nominee, voters)
-                    : recordNomination(s, nominator, nominee, manual),
-                );
+                update((s) => recordNomination(s, nominator, nominee, manual));
                 reset();
               }}
             >
-              Record {votes} vote{votes === 1 ? "" : "s"} on {nameAt(state, nominee)}
+              Record {manual} vote{manual === 1 ? "" : "s"} on {nameAt(state, nominee)}
+            </Button>
+            <Button variant="ghost" size="xs" onClick={() => setManual(undefined)}>
+              Count hand by hand instead
+            </Button>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-1">
+            <div className="grid grid-cols-[auto_1fr] gap-2">
+              <Button variant="ghost" size="lg" disabled={step === "nominator"} onClick={reset}>
+                Clear
+              </Button>
+              <Button
+                variant="primary"
+                size="lg"
+                disabled={step !== "ready"}
+                onClick={() => setCount(true)}
+              >
+                Start the count →
+              </Button>
+            </div>
+            <Button
+              variant="ghost"
+              size="xs"
+              disabled={step !== "ready"}
+              onClick={() => setManual(0)}
+            >
+              Count by hand
             </Button>
           </div>
         )}

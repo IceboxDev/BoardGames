@@ -48,6 +48,7 @@ const NOT_AN_ACTION = new Set([
   "lunaticAttacksWanted",
   "voudonActive",
   "votesRequired",
+  "voteResult",
   "canNominate",
   "canBeNominated",
   "evilSeats",

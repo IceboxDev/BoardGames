@@ -2050,10 +2050,24 @@ export function canBeNominated(state: CompanionState, seat: number): boolean {
 }
 
 /**
- * Resolve a completed vote tally. The threshold is half the alive players
- * (rounded up); a later nominee must EXCEED the current best to go up for
- * execution; matching it exactly ties, and nobody is about to die.
+ * What `votes` would do to the nomination being counted. The threshold is
+ * half the alive players (rounded up); a later nominee must EXCEED the
+ * current best to go up for execution; matching it exactly ties, and nobody
+ * is about to die.
  */
+export function voteResult(state: CompanionState, votes: number): VoteResult {
+  const required = votesRequired(state);
+  const best = state.day.highestVotes;
+  return votes < required
+    ? "failed"
+    : votes > best
+      ? "about-to-die"
+      : votes === best
+        ? "tied"
+        : "failed";
+}
+
+/** Resolve a completed vote tally (see `voteResult`). */
 export function recordNomination(
   state: CompanionState,
   nominator: number,
@@ -2062,14 +2076,7 @@ export function recordNomination(
 ): CompanionState {
   const required = votesRequired(state);
   const best = state.day.highestVotes;
-  const result: VoteResult =
-    votes < required
-      ? "failed"
-      : votes > best
-        ? "about-to-die"
-        : votes === best
-          ? "tied"
-          : "failed";
+  const result = voteResult(state, votes);
 
   const nomination: Nomination = { nominator, nominee, votes, required, result };
   let next: CompanionState = {
