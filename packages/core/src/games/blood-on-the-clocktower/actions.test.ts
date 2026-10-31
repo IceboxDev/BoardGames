@@ -17,6 +17,7 @@ const NOT_AN_ACTION = new Set([
   "createGame",
   // selectors
   "apparentCharacter",
+  "dealtCharacter",
   "isTraveller",
   "isEvilPlayer",
   "minstrelActive",

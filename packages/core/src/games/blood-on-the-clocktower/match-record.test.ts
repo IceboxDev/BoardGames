@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { CompanionRecordSchema } from "../../protocol/http/companion-records.ts";
 import type { CharacterId } from "./characters.ts";
-import { beginNight, createGame, endGame } from "./companion.ts";
+import { beginNight, changeCharacter, createGame, endGame } from "./companion.ts";
 import { botcMatchRecord, daysReached } from "./match-record.ts";
 import type { GameSetup } from "./setup.ts";
 
@@ -31,6 +31,16 @@ function game() {
 }
 
 describe("botcMatchRecord", () => {
+  it("records what each player was dealt, not what they became", () => {
+    // The Poisoner takes over as the Imp (a starpass): the record — and so
+    // Match History — remembers the Poisoner, still on the evil team.
+    let state = changeCharacter(game(), 1, "imp");
+    state = changeCharacter(state, 1, "imp");
+    state = endGame(state, "evil", "two players remain");
+    const bob = botcMatchRecord(state, ENDED)?.players[1];
+    expect(bob).toMatchObject({ name: "Bob", character: "poisoner", alignment: "evil" });
+  });
+
   it("is null while the game is running", () => {
     expect(botcMatchRecord(game(), ENDED)).toBeNull();
   });

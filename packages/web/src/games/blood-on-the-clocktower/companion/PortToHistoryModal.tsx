@@ -3,7 +3,10 @@ import {
   EDITION_NAME,
 } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
-import { isEvilPlayer } from "@boardgames/core/games/blood-on-the-clocktower/companion";
+import {
+  dealtCharacter,
+  isEvilPlayer,
+} from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import type { MatchOutcomeTeams } from "@boardgames/core/history/types";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
@@ -77,7 +80,7 @@ export default function PortToHistoryModal({
         (isEvilPlayer(p) ? evil : good).push({
           userId,
           displayName: nameOf(userId),
-          role: CHARACTERS[p.character].name,
+          role: CHARACTERS[dealtCharacter(p)].name,
         });
       }
       const outcome: MatchOutcomeTeams = {
@@ -127,13 +130,20 @@ export default function PortToHistoryModal({
             {state.players.map((p) => (
               <div key={p.seat} className="flex min-h-11 items-center gap-2">
                 <span className="flex min-w-0 flex-1 items-center gap-1.5 text-sm">
-                  <CharacterIcon character={p.character} size="sm" />
+                  <CharacterIcon character={dealtCharacter(p)} size="sm" />
                   {/* Name over character: each line truncates with an ellipsis
-                      instead of raw-clipping against the fixed-width select. */}
+                      instead of raw-clipping against the fixed-width select.
+                      The dealt character is what's saved; a mid-game change
+                      (Scarlet Woman → Imp) follows it. */}
                   <span className="flex min-w-0 flex-col leading-tight">
                     <span className="truncate text-fg-primary">{p.name}</span>
-                    <span className={`truncate text-xs ${TYPE_TEXT[CHARACTERS[p.character].type]}`}>
-                      {CHARACTERS[p.character].name}
+                    <span
+                      className={`truncate text-xs ${TYPE_TEXT[CHARACTERS[dealtCharacter(p)].type]}`}
+                    >
+                      {CHARACTERS[dealtCharacter(p)].name}
+                      {dealtCharacter(p) !== p.character && (
+                        <span className="text-fg-muted"> → {CHARACTERS[p.character].name}</span>
+                      )}
                     </span>
                   </span>
                 </span>

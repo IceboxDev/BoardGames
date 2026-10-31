@@ -91,6 +91,12 @@ export const CompanionPlayerSchema = z.object({
   /** Apprentice only: the Townsfolk/Minion ability they gained. */
   apprenticeAbility: CharacterIdSchema.optional(),
   /**
+   * The character dealt at setup, kept once the character changes mid-game
+   * (a Scarlet Woman or a starpassed Minion becoming the Imp). Unset while
+   * the player still holds the dealt one — read it through `dealtCharacter`.
+   */
+  startingCharacter: CharacterIdSchema.optional(),
+  /**
    * What the Storyteller actually told this player at their night step —
    * one entry per night — next to the true answer, so a poisoned Empath's
    * "2" or a shuffled Washerwoman pair can be read back later.

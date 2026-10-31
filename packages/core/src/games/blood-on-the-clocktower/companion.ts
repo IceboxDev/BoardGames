@@ -131,6 +131,14 @@ export function isTraveller(p: CompanionPlayer): boolean {
  * BMR Goon's alignment flips mid-game — an explicit `alignment` always wins
  * over the character type.
  */
+/**
+ * The character this player was dealt — what the game is remembered by
+ * (Match History, records) — even after becoming the Imp mid-game.
+ */
+export function dealtCharacter(p: CompanionPlayer): CharacterId {
+  return p.startingCharacter ?? p.character;
+}
+
 export function isEvilPlayer(p: CompanionPlayer): boolean {
   if (p.alignment) return p.alignment === "evil";
   if (isTraveller(p)) return false;
@@ -1340,6 +1348,7 @@ export function changeCharacter(
   let next = mapPlayer(state, seat, (x) => ({
     ...x,
     character,
+    startingCharacter: x.startingCharacter ?? x.character,
     believedCharacter: undefined,
     usedAbility: false,
   }));

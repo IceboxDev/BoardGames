@@ -1,9 +1,10 @@
 // A finished companion game as the Storyteller's Match History keeps it:
-// who sat where, what they truly were, which team they ended on, who won.
+// who sat where, what they were dealt (a Scarlet Woman who became the Imp is
+// remembered as the Scarlet Woman), which team they ended on, who won.
 // The wire shape is `BotcRecordSchema` (protocol/http/companion-records.ts).
 
 import type { BotcRecordInput } from "../../protocol/http/companion-records.ts";
-import { isEvilPlayer } from "./companion.ts";
+import { dealtCharacter, isEvilPlayer } from "./companion.ts";
 import type { CompanionState } from "./schema.ts";
 
 /** The last day the town reached, read from the log's phase labels. */
@@ -31,7 +32,7 @@ export function botcMatchRecord(state: CompanionState, endedAt: string): BotcRec
     players: state.players.map((p) => ({
       seat: p.seat,
       name: p.name.trim().slice(0, 60) || `Seat ${p.seat + 1}`,
-      character: p.character,
+      character: dealtCharacter(p),
       alignment: isEvilPlayer(p) ? "evil" : "good",
       alive: p.alive,
     })),
