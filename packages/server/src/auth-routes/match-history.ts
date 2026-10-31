@@ -121,15 +121,18 @@ matchHistoryRoutes.get("/", async (c) => {
   const limit =
     Number.isFinite(rawLimit) && rawLimit > 0 ? Math.min(rawLimit, MAX_LIMIT) : DEFAULT_LIMIT;
   const before = c.req.query("before");
+  // `?game=<slug>`: one game's matches only (a campaign's sessions).
+  const game = c.req.query("game")?.slice(0, 100) || null;
 
   const after = before ? matchCursorFilter(before) : null;
+  const where = [after?.sql, game ? "game_slug = ?" : null].filter(Boolean);
   const sql = `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
               recorded_by, recorded_at, updated_at, sort_order
          FROM match_results
-         ${after ? `WHERE ${after.sql}` : ""}
+         ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
          ORDER BY played_at DESC, id DESC
          LIMIT ?`;
-  const args = [...(after?.args ?? []), limit + 1];
+  const args = [...(after?.args ?? []), ...(game ? [game] : []), limit + 1];
 
   const db = getDb();
   const { rows } = await db.execute({ sql, args });

@@ -411,6 +411,8 @@ export type MatchUpdateInput = MatchCreateInput;
 export const HistoryListQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(200).optional(),
   before: z.string().optional(),
+  /** Only this game's matches (a campaign's sessions). */
+  game: z.string().min(1).max(100).optional(),
 });
 export type HistoryListQuery = z.infer<typeof HistoryListQuerySchema>;
 

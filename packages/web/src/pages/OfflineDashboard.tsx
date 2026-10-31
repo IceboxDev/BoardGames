@@ -38,6 +38,7 @@ import {
   type LockInForm,
 } from "../lib/calendar-locks";
 import type { RsvpStatus } from "../lib/calendar-rsvps";
+import { resolveGame } from "../lib/games-by-slug.ts";
 import {
   type Availability,
   type AvailabilityMap,
@@ -150,7 +151,11 @@ export default function OfflineDashboard() {
     kind: "private";
     inviteeIds: string[];
     seatCount: number;
+    fixedGameSlug: string | null;
   } | null>(null);
+  // "Find the next session" from a campaign night: the group is the party and
+  // the night locks with the campaign's game set (no vote).
+  const [findCampaign, setFindCampaign] = useState<string | null>(null);
   const wide = useMediaQuery(WIDE_BOARD_QUERY);
   const [debugAsPlayer, setDebugAsPlayer] = useState(false);
   const inAdminView = isAdmin && !debugAsPlayer;
@@ -220,6 +225,10 @@ export default function OfflineDashboard() {
     locks,
     members,
   });
+  const campaignGame = findCampaign ? resolveGame(findCampaign) : undefined;
+  const campaignBanner = findCampaign
+    ? { title: campaignGame?.title ?? findCampaign, thumbnail: campaignGame?.thumbnail }
+    : null;
   const groupOverlay = useMemo(
     () => ({ ids: group.ids, byDate: group.byDate, names: group.names }),
     [group.ids, group.byDate, group.names],
@@ -324,6 +333,7 @@ export default function OfflineDashboard() {
     unlockMutation.reset();
     setFindOpen(false);
     group.clear();
+    setFindCampaign(null);
     setMode("view");
   }
 
@@ -347,10 +357,20 @@ export default function OfflineDashboard() {
             kind: "private",
             inviteeIds: [...group.ids],
             seatCount: Math.min(MAX_SEAT_COUNT, Math.max(MIN_SEAT_COUNT, group.ids.size + 1)),
+            fixedGameSlug: findCampaign,
           }
         : null,
     );
     setLockingDate(date);
+  }
+
+  /** From a campaign night: find a date for its next session with this party. */
+  function findNextSession(campaignSlug: string, partyIds: string[]) {
+    setRsvpDate(null);
+    enterLockMode();
+    group.replace(partyIds);
+    setFindCampaign(campaignSlug);
+    setFindOpen(true);
   }
 
   /** A ranked night from the panel: on phones the sheet makes way for the dialog. */
@@ -525,6 +545,8 @@ export default function OfflineDashboard() {
                 ranked={group.ranked}
                 names={group.names}
                 onPickNight={pickGroupNight}
+                campaign={campaignBanner}
+                onDropCampaign={() => setFindCampaign(null)}
               />
             </aside>
           )}
@@ -559,7 +581,12 @@ export default function OfflineDashboard() {
             onClose={() => setRsvpDate(null)}
           />
         ) : (
-          <RsvpModal date={rsvpDate} locks={locks} onClose={() => setRsvpDate(null)} />
+          <RsvpModal
+            date={rsvpDate}
+            locks={locks}
+            onClose={() => setRsvpDate(null)}
+            onFindNextSession={inAdminView ? findNextSession : undefined}
+          />
         ))}
 
       {mode === "lock" && findOpen && !wide && (
@@ -577,6 +604,8 @@ export default function OfflineDashboard() {
             ranked={group.ranked}
             names={group.names}
             onPickNight={pickGroupNight}
+            campaign={campaignBanner}
+            onDropCampaign={() => setFindCampaign(null)}
           />
         </Drawer>
       )}

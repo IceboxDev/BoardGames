@@ -23,7 +23,7 @@ import { jsonColumn, parseRow, parseRows } from "./db-rows.ts";
 export const NIGHT_LOCK_COLUMNS =
   "date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, " +
   "event_time, address, picks_locked_at, host_at_home, unlocked_at, private, seat_count, " +
-  "pick_mode, admin_picks, title, " +
+  "pick_mode, admin_picks, title, fixed_game_slug, " +
   // Admins may pick on every private night (see `derivePrivate`), so each
   // lock carries the current admin list — one subquery, no extra round trip.
   `(SELECT json_group_array(id) FROM "user" WHERE role = 'admin') AS admin_ids_json`;
@@ -45,6 +45,7 @@ export const NightLockRowSchema = z.object({
   pick_mode: z.enum(["group", "host"]),
   admin_picks: z.union([z.number(), z.boolean()]),
   title: z.string().nullable(),
+  fixed_game_slug: z.string().nullable(),
   admin_ids_json: jsonColumn(z.array(z.string())),
 });
 
@@ -67,6 +68,8 @@ export type NightLock = {
   title: string | null;
   /** Every admin's user id: they may pick on any private night. */
   adminUserIds: string[];
+  /** The game set in advance (migration 0067), or null when the night votes. */
+  fixedGameSlug: string | null;
 };
 
 /**
@@ -77,9 +80,14 @@ export type NightLock = {
  * bring-list prefix) sees it that way.
  */
 export function sealedAt(
-  lock: Pick<NightLock, "isPrivate" | "picksLockedAt" | "lockedAt">,
+  lock: Pick<NightLock, "isPrivate" | "picksLockedAt" | "lockedAt"> & {
+    fixedGameSlug?: string | null;
+  },
 ): string | null {
-  return lock.isPrivate ? (lock.picksLockedAt ?? lock.lockedAt) : lock.picksLockedAt;
+  // A night whose game is set in advance has nothing to vote on either.
+  return lock.isPrivate || lock.fixedGameSlug
+    ? (lock.picksLockedAt ?? lock.lockedAt)
+    : lock.picksLockedAt;
 }
 
 export function nightLockFromRow(row: z.infer<typeof NightLockRowSchema>): NightLock {
@@ -101,6 +109,7 @@ export function nightLockFromRow(row: z.infer<typeof NightLockRowSchema>): Night
     pickMode: row.admin_picks === true || row.admin_picks === 1 ? "admin" : row.pick_mode,
     title: row.title,
     adminUserIds: row.admin_ids_json,
+    fixedGameSlug: row.fixed_game_slug,
   };
 }
 

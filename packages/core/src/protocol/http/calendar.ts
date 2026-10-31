@@ -80,6 +80,13 @@ export const LockedDateSchema = z.object({
    */
   topGameSlug: z.string().nullable().default(null),
   /**
+   * The game set for this night in advance (a campaign's next session),
+   * or null when the night votes. While set, `topGameSlug` is this game, the
+   * night is sealed from lock-in and nobody votes. Null for outsiders to a
+   * private night.
+   */
+  fixedGameSlug: z.string().nullable().default(null),
+  /**
    * Private night: invitation-only, seat-capped, host-curated. Every field
    * below is defaulted so lock payloads from before private nights parse.
    */
@@ -147,6 +154,11 @@ const lockInFields = {
   inviteeIds: z.array(z.string().min(1)).max(MAX_INVITEES).optional(),
   pickMode: PickModeSchema.optional(),
   title: z.string().trim().max(MAX_NIGHT_TITLE).nullable().optional(),
+  /**
+   * Set the night's game in advance (a campaign's next session): no vote,
+   * sealed from lock-in. Null clears it; omitted keeps what the night has.
+   */
+  fixedGameSlug: z.string().min(1).max(100).nullable().optional(),
 };
 
 function refinePrivateLockIn(
@@ -443,6 +455,8 @@ export function mkOptimisticLock(
   // list is host + invitees when the form carries one, else whatever the
   // row already had; the host holds seat 1 from the first paint.
   const isPrivate = form.isPrivate ?? existing?.isPrivate ?? false;
+  const fixedGameSlug =
+    form.fixedGameSlug !== undefined ? form.fixedGameSlug : (existing?.fixedGameSlug ?? null);
   const hostUserId = form.hostUserId ?? null;
   const expectedUserIds =
     isPrivate && form.inviteeIds
@@ -465,12 +479,14 @@ export function mkOptimisticLock(
     host: form.hostUserId ? { userId: form.hostUserId, name: form.hostName ?? "" } : null,
     eventTime: eventTime ? TimeOfDaySchema.parse(eventTime) : null,
     address: form.address ?? null,
-    picksLockedAt: existing?.picksLockedAt ?? null,
+    // A game set in advance seals the night at once.
+    picksLockedAt: existing?.picksLockedAt ?? (fixedGameSlug ? new Date().toISOString() : null),
     hostAtHome,
     attendance: existing?.attendance ?? { definite: 0, tentative: 0 },
     // Locking a date doesn't change the vote winner — carry the existing
     // value (a fresh lock has none yet; the server recomputes on next read).
-    topGameSlug: existing?.topGameSlug ?? null,
+    topGameSlug: fixedGameSlug ?? existing?.topGameSlug ?? null,
+    fixedGameSlug,
     isPrivate,
     title: isPrivate ? (form.title ?? existing?.title ?? null) : null,
     pickMode: form.pickMode ?? existing?.pickMode ?? "group",

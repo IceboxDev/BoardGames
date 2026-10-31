@@ -6,6 +6,7 @@ import { Button } from "../ui/Button";
 import { MicroLabel } from "../ui/Label";
 import { MemberPicker } from "../ui/MemberPicker";
 import { SelectableCard } from "../ui/SelectableCard";
+import { Surface } from "../ui/Surface";
 import { fitLine } from "./group-fit";
 
 // Lock mode's "Find a date": pick the people, see the nights that suit them.
@@ -25,6 +26,12 @@ type Props = {
   names: ReadonlyMap<string, string>;
   /** Lock the night (its free slot's key) for the group. */
   onPickNight: (nightKey: string) => void;
+  /**
+   * Finding a campaign's next session: the night locks with this game set
+   * (no vote). Dropping it turns the panel back into a plain find-a-date.
+   */
+  campaign?: { title: string; thumbnail?: string } | null;
+  onDropCampaign?: () => void;
   className?: string;
 };
 
@@ -36,6 +43,8 @@ export function GroupDatePanel({
   ranked,
   names,
   onPickNight,
+  campaign = null,
+  onDropCampaign,
   className,
 }: Props) {
   const rows = members.map((m) => ({
@@ -49,6 +58,28 @@ export function GroupDatePanel({
 
   return (
     <div className={cn("flex min-h-0 flex-col gap-4", className)}>
+      {campaign && (
+        <Surface variant="raised" padding="none" className="flex shrink-0 items-center gap-3 p-2.5">
+          {campaign.thumbnail && (
+            <img
+              src={campaign.thumbnail}
+              alt=""
+              className="h-10 w-10 shrink-0 rounded-card-md object-cover"
+            />
+          )}
+          <div className="min-w-0 flex-1">
+            <MicroLabel as="p">Next {campaign.title} session</MicroLabel>
+            <p className="text-2xs text-fg-secondary">
+              The night is set to {campaign.title} — no game vote.
+            </p>
+          </div>
+          {onDropCampaign && (
+            <Button variant="ghost" size="sm" onClick={onDropCampaign}>
+              Drop
+            </Button>
+          )}
+        </Surface>
+      )}
       <MemberPicker
         members={rows}
         selectedIds={selectedIds}

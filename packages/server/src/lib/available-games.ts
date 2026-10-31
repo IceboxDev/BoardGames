@@ -504,11 +504,12 @@ export async function computeAvailableGamesPayload(opts: {
       }
     }
   }
-  const topSlugs = lineup.topSlugs.slice(0, TOP_PICKS);
+  // A night with its game set in advance has that one game, whatever was hyped.
+  const topSlugs = lock.fixedGameSlug ? [lock.fixedGameSlug] : lineup.topSlugs.slice(0, TOP_PICKS);
   // The games that just missed the cut — an admin's view of what's close.
   // A host-pick lineup is a pick order, not a ranking, so it has none.
   const runnerUpSlugs =
-    viewerIsAdmin && !(lock.isPrivate && isCuratedPickMode(lock.pickMode))
+    viewerIsAdmin && !lock.fixedGameSlug && !(lock.isPrivate && isCuratedPickMode(lock.pickMode))
       ? lineup.topSlugs.slice(TOP_PICKS)
       : [];
 
@@ -689,7 +690,7 @@ export async function computeAvailableGamesPayload(opts: {
       pickMode: lock.pickMode,
       seatCount: lock.isPrivate ? (participants.seats?.total ?? null) : null,
       playerWindow: lock.isPrivate ? participants.window : null,
-      viewerCanReact: participants.canReact(viewerId, viewerIsAdmin),
+      viewerCanReact: !lock.fixedGameSlug && participants.canReact(viewerId, viewerIsAdmin),
     },
     viewer: {
       inExpectedSet: expectedUserIds.includes(viewerId),

@@ -24,11 +24,18 @@ export async function fetchDndOpenCampaigns(signal?: AbortSignal): Promise<strin
 }
 
 export async function fetchHistory(
-  opts: { limit?: number; before?: string | null; signal?: AbortSignal } = {},
+  opts: {
+    limit?: number;
+    before?: string | null;
+    /** Only this game's matches. */
+    game?: string;
+    signal?: AbortSignal;
+  } = {},
 ): Promise<HistoryListResponse> {
   const params = new URLSearchParams();
   if (opts.limit) params.set("limit", String(opts.limit));
   if (opts.before) params.set("before", opts.before);
+  if (opts.game) params.set("game", opts.game);
   const qs = params.toString();
   return apiFetch(`/api/history${qs ? `?${qs}` : ""}`, {
     response: HistoryListResponseSchema,

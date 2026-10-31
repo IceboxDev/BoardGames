@@ -22,6 +22,7 @@ export const qk = {
   adminAwayDays: () => ["admin", "away-days"] as const,
   history: () => ["history"] as const,
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
+  historyByGame: (slug: string) => ["history", "by-game", slug] as const,
   dndOpenCampaigns: () => ["history", "dnd-campaigns"] as const,
   gameReplays: (gameSlug: string) => ["game-replays", gameSlug] as const,
   companionRecords: (gameSlug: string) => ["companion-records", gameSlug] as const,

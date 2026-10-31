@@ -257,3 +257,56 @@
   color: var(--cn-accent);
   background-color: color-mix(in srgb, var(--cn-glow) 20%, transparent);
 }
+
+/* The campaign's thread (CampaignNightPanel): past sessions above tonight,
+   planned ones below, one line through them all in the campaign's colours. */
+.campaign-thread::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 14px;
+  bottom: 18px;
+  width: 2px;
+  background: linear-gradient(
+    color-mix(in srgb, var(--cn-glow) 45%, transparent),
+    color-mix(in srgb, var(--cn-glow) 45%, transparent) 70%,
+    transparent
+  );
+}
+.campaign-pin {
+  border: 2px solid color-mix(in srgb, var(--cn-glow) 70%, black);
+}
+.campaign-pin-past {
+  background: color-mix(in srgb, var(--cn-glow) 70%, black);
+}
+.campaign-pin-tonight {
+  border-color: var(--cn-accent);
+  background: var(--cn-base);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--cn-glow) 55%, transparent);
+}
+.campaign-pin-upcoming {
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--cn-rim) 40%, transparent);
+}
+.campaign-now {
+  background: var(--cn-base);
+  border-color: color-mix(in srgb, var(--cn-rim) 35%, transparent);
+  box-shadow: 0 0 40px -16px color-mix(in srgb, var(--cn-glow) 60%, transparent);
+}
+.campaign-now-bloom {
+  background-image: radial-gradient(
+    ellipse 70% 80% at 85% 0%,
+    color-mix(in srgb, var(--cn-glow) 35%, transparent),
+    transparent 70%
+  );
+}
+.campaign-chip-ink {
+  background: color-mix(in srgb, var(--cn-ink) 60%, transparent);
+}
+.campaign-dashed {
+  border-color: color-mix(in srgb, var(--cn-rim) 45%, transparent);
+  color: var(--cn-accent);
+}
+.campaign-dashed:hover {
+  background: color-mix(in srgb, var(--cn-glow) 10%, transparent);
+}

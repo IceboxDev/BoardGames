@@ -15,6 +15,7 @@ import {
   sortHostCandidates,
 } from "../../lib/calendar-locks";
 import { formatDayKey } from "../../lib/date-format.ts";
+import { resolveGame } from "../../lib/games-by-slug.ts";
 import { Button } from "../ui/Button";
 import { Checkbox } from "../ui/Checkbox";
 import { ErrorAlert } from "../ui/ErrorAlert";
@@ -25,6 +26,7 @@ import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
 import { SegmentedControl, type SegmentedOption } from "../ui/SegmentedControl";
 import { Select } from "../ui/Select";
 import { Stepper } from "../ui/Stepper";
+import { Surface } from "../ui/Surface";
 import AddressAutocomplete from "./AddressAutocomplete";
 import { PICK_MODE_OPTIONS, pickModeHint } from "./private-night-copy";
 
@@ -51,9 +53,15 @@ type Props = {
   /**
    * A fresh night's starting point when the admin came from "Find a date":
    * private, the picked group invited, seats sized to fit. Ignored when
-   * editing an existing night.
+   * editing an existing night. `fixedGameSlug`: a campaign's next session —
+   * the night's game is set, so nobody votes.
    */
-  prefill?: { kind: NightKind; inviteeIds: readonly string[]; seatCount: number } | null;
+  prefill?: {
+    kind: NightKind;
+    inviteeIds: readonly string[];
+    seatCount: number;
+    fixedGameSlug?: string | null;
+  } | null;
   /** Per-user hosting history (total + last date), keyed by userId. */
   hostStats?: HostStatsMap | null;
   busy?: boolean;
@@ -109,6 +117,11 @@ export default function LockInModal({
     initialLock?.isPrivate ? initialLock.pickMode : "host",
   );
   const [title, setTitle] = useState<string>(initialLock?.title ?? "");
+  // The game set in advance (a campaign's next session): no vote on the night.
+  const [fixedGameSlug, setFixedGameSlug] = useState<string | null>(
+    initialLock?.fixedGameSlug ?? start?.fixedGameSlug ?? null,
+  );
+  const fixedGame = fixedGameSlug ? resolveGame(fixedGameSlug) : undefined;
   const [invitees, setInvitees] = useState<ReadonlySet<string>>(
     () =>
       new Set(
@@ -162,6 +175,7 @@ export default function LockInModal({
       // bringing rules don't branch on it anyway.
       hostAtHome: host ? hostAtHome : null,
       isPrivate,
+      fixedGameSlug,
       ...(isPrivate
         ? {
             seatCount,
@@ -199,6 +213,32 @@ export default function LockInModal({
             options={KIND_OPTIONS}
             disabled={busy}
           />
+
+          {fixedGameSlug && (
+            <Surface variant="raised" padding="none" className="flex items-center gap-3 p-2.5">
+              {fixedGame?.thumbnail && (
+                <img
+                  src={fixedGame.thumbnail}
+                  alt=""
+                  className="h-10 w-10 shrink-0 rounded-card-md object-cover"
+                />
+              )}
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-sm font-semibold text-fg-strong">
+                  {fixedGame?.title ?? fixedGameSlug}
+                </p>
+                <p className="text-2xs text-fg-secondary">The night's game is set — no voting.</p>
+              </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setFixedGameSlug(null)}
+                disabled={busy}
+              >
+                Remove
+              </Button>
+            </Surface>
+          )}
 
           <Field
             label={isPrivate ? "Host (required)" : "Host"}
@@ -280,18 +320,20 @@ export default function LockInModal({
                 />
               </FieldGroup>
 
-              <FieldGroup label="Games" hint={pickModeHint(pickMode)}>
-                <SegmentedControl
-                  shape="pill"
-                  size="sm"
-                  fullWidth
-                  aria-label="How games get picked"
-                  value={pickMode}
-                  onChange={setPickMode}
-                  options={PICK_MODE_OPTIONS}
-                  disabled={busy}
-                />
-              </FieldGroup>
+              {!fixedGameSlug && (
+                <FieldGroup label="Games" hint={pickModeHint(pickMode)}>
+                  <SegmentedControl
+                    shape="pill"
+                    size="sm"
+                    fullWidth
+                    aria-label="How games get picked"
+                    value={pickMode}
+                    onChange={setPickMode}
+                    options={PICK_MODE_OPTIONS}
+                    disabled={busy}
+                  />
+                </FieldGroup>
+              )}
 
               <Field label="Title (optional)" htmlFor={titleId}>
                 <Input

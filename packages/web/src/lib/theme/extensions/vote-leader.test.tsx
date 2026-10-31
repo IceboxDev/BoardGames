@@ -51,6 +51,7 @@ function mkLock(overrides: Partial<LockedDate> = {}): LockedDate {
     hostAtHome: true,
     attendance: { definite: 0, tentative: 0 },
     topGameSlug: null,
+    fixedGameSlug: null,
     isPrivate: false,
     title: null,
     pickMode: "group",

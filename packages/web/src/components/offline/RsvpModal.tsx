@@ -34,11 +34,16 @@ type Props = {
   date: string;
   locks: CalendarLocks | undefined;
   onClose: () => void;
+  /**
+   * Admin, on a campaign night: find a date for the campaign's next session
+   * with this party (the dashboard opens find-a-date with the game set).
+   */
+  onFindNextSession?: (campaignSlug: string, partyIds: string[]) => void;
 };
 
 type View = "pick" | "results" | "attendees";
 
-export default function RsvpModal({ date, locks, onClose }: Props) {
+export default function RsvpModal({ date, locks, onClose, onFindNextSession }: Props) {
   const { user, isAdmin } = useCurrentUser();
   const userId = user?.id ?? null;
 
@@ -448,8 +453,15 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
           ) : campaign ? (
             <CampaignNightPanel
               campaign={campaign}
+              date={date}
               attendees={attendees}
               partyCount={definiteCount}
+              locks={locks}
+              onFindNextSession={
+                onFindNextSession
+                  ? (partyIds) => onFindNextSession(campaign.slug, partyIds)
+                  : undefined
+              }
             />
           ) : isExit ? (
             <ExitNightPanel date={date} attendees={attendees} partyCount={definiteCount} />

@@ -57,6 +57,8 @@ export function useGroupMatch({
     ranked,
     names,
     toggle,
+    /** Pick exactly these people (a campaign's party). */
+    replace: (next: readonly string[]) => setIds(new Set(next)),
     clear: () => setIds(new Set()),
   };
 }

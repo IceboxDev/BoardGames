@@ -1,4 +1,4 @@
-import { isNightGame } from "@boardgames/core/games/catalog";
+import { isCatalogSlug, isNightGame } from "@boardgames/core/games/catalog";
 import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
 import {
   AdminNightGuestBodySchema,
@@ -200,6 +200,11 @@ calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), a
   const lock = await loadNightLock(getDb(), date);
   if (!lock) {
     return errorResponse(c, 400, "date is not locked");
+  }
+  // The game is set in advance (a campaign session): nothing to vote on.
+  // Taking an old vote back stays allowed.
+  if (lock.fixedGameSlug && on) {
+    return errorResponse(c, 409, "this night's game is already set", "GAME_FIXED");
   }
   // On a private night the lineup belongs to its pickers: the host alone in
   // host-pick mode, the seated players in group mode. (Admins always may.)
@@ -454,6 +459,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
     }
     const { lo, hi } = participants.window;
     const topGameSlug =
+      lock.fixedGameSlug ??
       rankNightLineup(
         {
           pickMode: lock.pickMode,
@@ -464,7 +470,8 @@ calendarLocksRoutes.get("/locks", async (c) => {
         },
         reactionsByDate.get(lock.dateKey) ?? [],
         1,
-      ).topSlugs[0] ?? null;
+      ).topSlugs[0] ??
+      null;
 
     const host = lock.hostUserId ? { userId: lock.hostUserId, name: lock.hostName ?? "" } : null;
     const seats = participants.seats;
@@ -485,6 +492,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
         hostAtHome: lock.hostAtHome,
         attendance: { definite: seats?.taken ?? 0, tentative: 0 },
         topGameSlug: null,
+        fixedGameSlug: null,
         isPrivate: true,
         title: null,
         pickMode: lock.pickMode,
@@ -525,6 +533,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
         tentative: participants.tentative.length,
       },
       topGameSlug,
+      fixedGameSlug: lock.fixedGameSlug,
       isPrivate: lock.isPrivate,
       title: lock.title,
       pickMode: lock.pickMode,
@@ -578,6 +587,9 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
   // false is the only way to land in the capped-host branch.
   const hostAtHomeFlag: number | null =
     body.hostAtHome === true ? 1 : body.hostAtHome === false ? 0 : null;
+  if (body.fixedGameSlug && !isCatalogSlug(body.fixedGameSlug)) {
+    return errorResponse(c, 400, "unknown game", "UNKNOWN_GAME");
+  }
 
   // Snapshot the set of users who marked can/maybe at lock time so we can
   // decide "fully RSVPed" against a frozen baseline. Track cans separately
@@ -661,8 +673,10 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
       sql: `INSERT INTO locked_dates
               (date_key, locked_by, locked_at, expected_user_ids_json,
                host_user_id, host_name, event_time, address, host_at_home,
-               private, seat_count, pick_mode, admin_picks, title)
-            VALUES (?, ?, datetime('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+               private, seat_count, pick_mode, admin_picks, title, fixed_game_slug,
+               picks_locked_at)
+            VALUES (?, ?, datetime('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+                    CASE WHEN ? IS NOT NULL THEN datetime('now') END)
             ON CONFLICT(date_key) DO UPDATE SET
               locked_by = excluded.locked_by,
               locked_at = excluded.locked_at,
@@ -677,6 +691,11 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
               pick_mode = excluded.pick_mode,
               admin_picks = excluded.admin_picks,
               title = excluded.title,
+              -- Omitted on an edit (flag 0): the night keeps its fixed game.
+              fixed_game_slug = CASE WHEN ? THEN excluded.fixed_game_slug
+                                     ELSE locked_dates.fixed_game_slug END,
+              -- Setting a game seals the night; an existing seal stays.
+              picks_locked_at = COALESCE(locked_dates.picks_locked_at, excluded.picks_locked_at),
               unlocked_at = NULL`,
       args: [
         date,
@@ -692,6 +711,9 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
         storedPickMode(body.pickMode ?? "group"),
         body.pickMode === "admin" ? 1 : 0,
         isPrivate ? body.title || null : null,
+        body.fixedGameSlug ?? null,
+        body.fixedGameSlug ?? null,
+        body.fixedGameSlug !== undefined ? 1 : 0,
       ],
     },
     // Re-locking the same date invalidates any tombstone — the night is
