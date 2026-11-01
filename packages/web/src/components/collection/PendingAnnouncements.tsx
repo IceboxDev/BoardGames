@@ -8,10 +8,11 @@ import { Badge } from "../ui/Badge.tsx";
 import { Button } from "../ui/Button.tsx";
 import { Surface } from "../ui/Surface.tsx";
 import { useConfirm } from "../ui/useConfirm.tsx";
+import { visibleAnnouncements } from "./announcements.ts";
 
 // Amber strip above the collection table: the owner's announcements awaiting
-// an admin. Pending rows can be retracted; recently-resolved rows show their
-// outcome for a while (server returns the latest 25).
+// an admin. Pending rows can be retracted; a resolved row shows its outcome
+// for two weeks, then the strip forgets it (server returns the latest 25).
 
 function announcementTitle(a: Announcement): string {
   if (a.slug) return resolveInventoryEntry(a.slug).title;
@@ -33,8 +34,7 @@ export function PendingAnnouncements({
     onSuccess: () => void queryClient.invalidateQueries({ queryKey: qk.collection(userId) }),
   });
 
-  const pending = announcements.filter((a) => a.status === "pending");
-  const resolved = announcements.filter((a) => a.status !== "pending").slice(0, 3);
+  const { pending, resolved } = visibleAnnouncements(announcements);
   if (pending.length === 0 && resolved.length === 0) return null;
 
   return (

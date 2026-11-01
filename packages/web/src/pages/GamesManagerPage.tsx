@@ -25,7 +25,9 @@ import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
 import { SegmentedControl } from "../components/ui/SegmentedControl.tsx";
 import { Select } from "../components/ui/Select.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchCollection, upsertCollectionItem } from "../lib/collection.ts";
+import { adminSetInventoryNew } from "../lib/inventory.ts";
 import { fetchProfile } from "../lib/profile.ts";
 import { qk } from "../lib/query-keys.ts";
 
@@ -90,6 +92,21 @@ export default function GamesManagerPage() {
     },
   });
 
+  // Admins say what's new in a member's library: the New badge here, the
+  // frame on their profile and in the night's game picker. Marking dates the
+  // copy today; it stays new until the member records a match of it.
+  const { isAdmin } = useCurrentUser();
+  const newMutation = useMutation({
+    mutationFn: async ({ slugs, value }: { slugs: string[]; value: boolean }) => {
+      for (const slug of slugs) await adminSetInventoryNew(userId as string, slug, value);
+    },
+    onSuccess: () => {
+      setSelection(new Set());
+      void queryClient.invalidateQueries({ queryKey: qk.collection(userId as string) });
+      void queryClient.invalidateQueries({ queryKey: qk.profile(userId) });
+    },
+  });
+
   const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
   const firstName = profileQuery.data?.user.name.split(" ")[0] ?? "This player";
   const tabBar = (
@@ -138,6 +155,10 @@ export default function GamesManagerPage() {
     const playedThroughCount = rows.filter((r) => r.playedThrough).length;
     const filtered = applyViewState(rows, viewState);
     const editable = collection.editable;
+    // The selected copies an admin can mark: catalog boxes still owned.
+    const markableSlugs = rows
+      .filter((r) => selection.has(r.key) && r.slug !== null && !r.playedThrough)
+      .map((r) => r.slug as string);
     const ownedCount = rows.length - playedThroughCount;
     const packedCount = rows.filter((r) => r.item?.containerKey != null).length;
     // Any owned, un-destroyed, un-packed game can host others in its box.
@@ -247,6 +268,29 @@ export default function GamesManagerPage() {
                   >
                     Pack together
                   </Button>
+                  {isAdmin && (
+                    <>
+                      <span aria-hidden className="h-5 w-px bg-line" />
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        disabled={markableSlugs.length === 0 || newMutation.isPending}
+                        loading={newMutation.isPending && newMutation.variables?.value === true}
+                        onClick={() => newMutation.mutate({ slugs: markableSlugs, value: true })}
+                      >
+                        Mark as new
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        disabled={markableSlugs.length === 0 || newMutation.isPending}
+                        loading={newMutation.isPending && newMutation.variables?.value === false}
+                        onClick={() => newMutation.mutate({ slugs: markableSlugs, value: false })}
+                      >
+                        Not new
+                      </Button>
+                    </>
+                  )}
                   <Button variant="ghost" size="sm" onClick={() => setSelection(new Set())}>
                     Clear
                   </Button>
