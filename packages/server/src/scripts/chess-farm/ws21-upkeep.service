@@ -1,0 +1,7 @@
+[Unit]
+Description=Chess farm upkeep: keep the checkout on master (API restart, worker rebuild) and wake idle-stopped lanes when work is queued
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/chess-farm/farm-upkeep.sh

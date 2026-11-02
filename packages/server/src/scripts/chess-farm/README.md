@@ -96,7 +96,24 @@ ws21 never sleeps, so it also runs the API the worker talks to: the user unit
 staging database from `packages/server/.env`, which has `CHESS_FARM_TOKEN`), and
 `FARM_URL=http://localhost:3001`. Members' browsers queue positions through whichever server
 they use — the database is shared. The server refuses to start on a database migrated past
-its code, so pull ws21's checkout when a migration lands.
+its code (so does the refill), so ws21's checkout must follow master.
+
+**Upkeep** (since 2026-11-02; `ws21-upkeep.sh` → `~/chess-farm/farm-upkeep.sh`, units
+`ws21-upkeep.{service,timer}` → `chess-farm-upkeep.*`, every 15 min):
+- fast-forwards the checkout to GitHub's master, only on a clean tree (untracked files are
+  fine) and without LFS files (`GIT_LFS_SKIP_SMUDGE=1`: they cost GitHub LFS budget);
+- runs `pnpm install` when the lockfile moved;
+- restarts `boardgames-server` when server or core code moved, and goes back to the old commit
+  if it doesn't come up healthy;
+- rebuilds `~/chess-farm/worker.mjs` when the bundle comes out different (the old one stays as
+  `worker.mjs.prev`). Lanes switch at their next claim, so farm code reaches ws21 by landing on
+  master; a hand-copied bundle lasts only until the next master change.
+
+**Idle lanes stop themselves:** drop-in `chess-farm@.service.d/idle-exit.conf` sets
+`FARM_IDLE_EXIT_MIN=5` (exit 0, not restarted), except lane 1, which serves Lc0 to the others
+(`lane-1.env`: `FARM_IDLE_EXIT_MIN=0`). Upkeep wakes stopped lanes when normal work is queued:
+one per waiting job, as many as memory allows (1.5 GB each, 3 GB kept free, so a heavy lane's
+hash is never squeezed). After a reboot every enabled lane starts, and the idle ones stop again.
 
 The worker is the user unit `chess-farm.service` (`~/.config/systemd/user/`; lingering is on):
 `systemctl --user start chess-farm`, logs with `journalctl --user -u chess-farm -f`.
