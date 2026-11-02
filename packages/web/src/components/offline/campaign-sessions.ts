@@ -60,7 +60,9 @@ export function campaignSessions(
       partyIds: partyOf(lock),
       matches: matches
         .filter((m) => m.dateKey === k && m.gameSlug === slug)
-        .sort((a, b) => a.sortOrder - b.sortOrder || a.playedAt.localeCompare(b.playedAt)),
+        // sortOrder runs newest first (a new match takes the lowest), so play
+        // order is the reverse.
+        .sort((a, b) => b.sortOrder - a.sortOrder || a.playedAt.localeCompare(b.playedAt)),
     };
   });
 }

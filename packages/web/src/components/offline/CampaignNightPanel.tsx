@@ -250,13 +250,16 @@ function SessionNode({
           </p>
           <p className="text-xs text-fg-muted">{meta.join(" · ")}</p>
         </div>
-        {/* Phones show three faces and a count, so the title keeps its line. */}
-        <ul
-          className="flex shrink-0 items-center -space-x-1.5"
-          aria-label={`Session ${session.n} party`}
-        >
+        {/* Phones show three faces and a count, so the title keeps its line. Each
+            face overlaps the one before it (not space-x: the hidden count would
+            be the last child and push the last face past the panel's edge). */}
+        <ul className="flex shrink-0 items-center" aria-label={`Session ${session.n} party`}>
           {party.map((p, i) => (
-            <li key={p.id} title={p.name} className={cn(i >= PHONE_FACES && "hidden sm:block")}>
+            <li
+              key={p.id}
+              title={p.name}
+              className={cn(i > 0 && "-ml-1.5", i >= PHONE_FACES && "hidden sm:block")}
+            >
               <Avatar name={p.name} image={p.image} accentHex={p.accentHex} size="xs" />
             </li>
           ))}

@@ -78,7 +78,8 @@ describe("campaignSessions", () => {
     const m2 = match("2026-10-02", "#2 Training, Day 2", "loss", 1);
     const s = campaignSessions(BB, { "2026-10-02": lock() }, "2026-10-02", [m1, m2]);
     expect(s).toHaveLength(1);
-    expect(s[0]?.matches.map((m) => m.id)).toEqual([m2.id, m1.id]);
+    // sortOrder is newest first: #1 (2) was played before #2 (1).
+    expect(s[0]?.matches.map((m) => m.id)).toEqual([m1.id, m2.id]);
   });
 });
 
