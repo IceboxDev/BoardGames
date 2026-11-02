@@ -270,11 +270,14 @@ export function NewArticlesIntro({
           </BoxedPanel>
 
           <div className="flex flex-col gap-1.5">
-            <PaperButton primary size="lg" block onClick={next} disabled={!article}>
-              {turn}
-            </PaperButton>
-            <span className="hidden items-center justify-center gap-1.5 font-news text-xs italic text-fg-muted sm:flex">
-              or press <Kbd>Enter</Kbd>
+            {/* Below lg the sticky bar under the story is the one page-turn button. */}
+            <span className="hidden flex-col gap-1.5 lg:flex">
+              <PaperButton primary size="lg" block onClick={next} disabled={!article}>
+                {turn}
+              </PaperButton>
+              <span className="flex items-center justify-center gap-1.5 font-news text-xs italic text-fg-muted">
+                or press <Kbd>Enter</Kbd>
+              </span>
             </span>
             <PrintButton onClick={onSkip} className="self-center text-fg-muted">
               Skip to the Quiz Page
