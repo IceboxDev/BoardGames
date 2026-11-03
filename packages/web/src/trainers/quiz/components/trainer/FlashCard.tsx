@@ -121,7 +121,8 @@ export function FlashCard({
   const [backUp, setBackUp] = useState(revealed);
   useMotionValueEvent(rotation, "change", (deg) => setBackUp(deg >= 90));
 
-  const face = "flex min-h-64 min-w-0 flex-col";
+  // A phone sizes the card to its text; a bigger screen gives it room to breathe.
+  const face = "flex min-h-64 min-w-0 flex-col md:min-h-96";
   const shown = "col-start-1 row-start-1";
   const laidOver = "absolute inset-0 overflow-hidden";
   const hiddenBackface = {
@@ -151,7 +152,7 @@ export function FlashCard({
             {/* The text lays out as ordinary flow; the tap target is a
                 full-card overlay, so no button's intrinsic sizing (which
                 iOS Safari lets grow past the screen) ever reaches it. */}
-            <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
+            <div className="flex min-w-0 flex-1 flex-col gap-4 p-5 md:p-8">
               <CardHeader
                 card={card}
                 domain={d}
@@ -168,8 +169,8 @@ export function FlashCard({
                     className={cn(
                       "hyphens-auto break-words",
                       i === 0
-                        ? "text-lg font-semibold leading-snug text-fg-strong sm:text-xl"
-                        : "text-sm text-fg-secondary",
+                        ? "text-lg font-semibold leading-snug text-fg-strong sm:text-xl lg:text-3xl"
+                        : "text-sm text-fg-secondary lg:text-base",
                     )}
                   >
                     {text}
@@ -284,7 +285,7 @@ function BackFace({
       className="flex min-w-0 flex-1 flex-col overflow-hidden break-words"
     >
       <span className={cn("block h-1 w-full", TONE_STRIP[d.tone])} aria-hidden="true" />
-      <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
+      <div className="flex min-w-0 flex-1 flex-col gap-4 p-5 md:p-8">
         <CardHeader
           card={card}
           domain={d}
@@ -293,7 +294,7 @@ function BackFace({
           language={language}
           revealed
         />
-        <p className="text-sm text-fg-secondary" lang={primary}>
+        <p className="text-sm text-fg-secondary lg:text-lg" lang={primary}>
           {questions[0]}
         </p>
         <div className="flex flex-col gap-1">
@@ -305,8 +306,11 @@ function BackFace({
               key={text}
               className={
                 i === 0
-                  ? cn("text-2xl font-bold leading-tight", TONE_TEXT[coreToneOf(d.tone)])
-                  : "text-base font-medium text-fg-secondary"
+                  ? cn(
+                      "text-2xl font-bold leading-tight lg:text-4xl",
+                      TONE_TEXT[coreToneOf(d.tone)],
+                    )
+                  : "text-base font-medium text-fg-secondary lg:text-lg"
               }
             >
               {text}
@@ -314,7 +318,7 @@ function BackFace({
           ))}
         </div>
         {snippet ? (
-          <p className="text-sm leading-relaxed text-fg-secondary" lang={primary}>
+          <p className="text-sm leading-relaxed text-fg-secondary lg:text-base" lang={primary}>
             <span className="text-fg-muted">
               {say(primary, {
                 en: "From the article: ",

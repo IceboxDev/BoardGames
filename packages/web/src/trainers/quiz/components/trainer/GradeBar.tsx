@@ -47,7 +47,7 @@ export function GradeBar({
         className,
       )}
     >
-      <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-2">
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-2 lg:max-w-4xl">
         {revealed ? (
           <div className="grid w-full grid-cols-2 gap-3">
             <Button

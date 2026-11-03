@@ -107,7 +107,8 @@ export function ArticleBody({
             <div className={cn("-mx-1 overflow-x-auto", print && "mb-4 clear-both")}>
               <table
                 className={cn(
-                  "w-full min-w-[24rem] border-collapse text-sm",
+                  // The article's own size: a fixed small one shrank tables on wide pages.
+                  "w-full min-w-[24rem] border-collapse leading-snug",
                   print && "font-news tabular-nums",
                 )}
               >

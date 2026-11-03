@@ -1,8 +1,8 @@
 import type { QuizLanguages, WikiReads } from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useMemo, useRef } from "react";
+import { type ReactNode, useEffect, useMemo, useRef } from "react";
 import { XIcon } from "../../../../components/icons";
-import { IconButton, Kbd, LoadingState } from "../../../../components/ui";
+import { Button, IconButton, Kbd, LoadingState } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import { qk } from "../../../../lib/query-keys";
 import { postWikiRead, todayKey } from "../../api";
@@ -51,6 +51,8 @@ type Props = {
   /** Questions each article brings to today's Quiz Page. */
   questionsOf: (articleId: string) => number;
   onNext: () => void;
+  /** Turn back to an article already read on this edition. */
+  onBack: (index: number) => void;
   onSkip: () => void;
   onClose: () => void;
   homeTo: string;
@@ -64,6 +66,7 @@ export function NewArticlesIntro({
   cardCount,
   questionsOf,
   onNext,
+  onBack,
   onSkip,
   onClose,
   homeTo,
@@ -110,15 +113,20 @@ export function NewArticlesIntro({
     top.current?.scrollIntoView({ block: "start" });
   }, [index]);
 
-  // Enter / → turn the page; the flash-card keys are off while reading.
+  // Enter / → turn the page, ← turn back one; the flash-card keys are off while reading.
   const nextRef = useRef(next);
   nextRef.current = next;
+  const backRef = useRef(() => index > 0 && onBack(index - 1));
+  backRef.current = () => index > 0 && onBack(index - 1);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (!isScreenShortcut(e)) return;
       if (e.key === "Enter" || e.key === "ArrowRight") {
         e.preventDefault();
         nextRef.current();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        backRef.current();
       }
     };
     window.addEventListener("keydown", onKey);
@@ -208,49 +216,56 @@ export function NewArticlesIntro({
               {articles.map((a, i) => {
                 const entry = contents.data?.article(a.articleId);
                 const state = i < index ? "read" : i === index ? "now" : "next";
+                // Back to any page read, or on to the next one; later pages
+                // wait their turn.
+                const go = i < index ? () => onBack(i) : i === index + 1 ? next : undefined;
                 return (
                   <li
                     key={a.articleId}
                     aria-current={state === "now" ? "page" : undefined}
                     className={cn(
-                      "flex items-center gap-3 border-b border-dotted border-line-strong py-2",
-                      state === "next" && "opacity-60",
+                      "border-b border-dotted border-line-strong",
+                      state === "next" && !go && "opacity-60",
                     )}
                   >
-                    <DomainIcon domain={a.domain} size={40} />
-                    <span className="flex min-w-0 flex-1 flex-col">
-                      <span
-                        className={cn(
-                          KICKER,
-                          state === "now" ? "text-accent-300" : "text-fg-muted",
-                        )}
-                      >
-                        Page {page(i)}
-                        {state === "read" ? " · ✓ read" : state === "now" ? " · reading" : ""}
+                    <EditionRow onClick={go} label={`Turn to page ${page(i)}`}>
+                      <DomainIcon domain={a.domain} size={40} />
+                      <span className="flex min-w-0 flex-1 flex-col">
+                        <span
+                          className={cn(
+                            KICKER,
+                            state === "now" ? "text-accent-300" : "text-fg-muted",
+                          )}
+                        >
+                          Page {page(i)}
+                          {state === "read" ? " · ✓ read" : state === "now" ? " · reading" : ""}
+                        </span>
+                        <span className="line-clamp-2 font-headline text-sm font-bold leading-snug text-fg-strong">
+                          {entry ? fieldIn(entry, "title", lang) : "…"}
+                        </span>
+                        <span className="font-news text-xs italic text-fg-muted">
+                          {questionsOf(a.articleId)} questions
+                        </span>
                       </span>
-                      <span className="line-clamp-2 font-headline text-sm font-bold leading-snug text-fg-strong">
-                        {entry ? fieldIn(entry, "title", lang) : "…"}
-                      </span>
-                      <span className="font-news text-xs italic text-fg-muted">
-                        {questionsOf(a.articleId)} questions
-                      </span>
-                    </span>
+                    </EditionRow>
                   </li>
                 );
               })}
-              <li className="flex items-center gap-3 py-2">
-                <span className="flex size-10 shrink-0 items-center justify-center border-3 border-double border-line-strong font-headline text-lg font-black text-fg-strong">
-                  ?
-                </span>
-                <span className="flex min-w-0 flex-col">
-                  <span className={cn(KICKER, "text-sky-300")}>Page {quizPage}</span>
-                  <span className="font-headline text-sm font-bold text-fg-strong">
-                    The Quiz Page
+              <li>
+                <EditionRow onClick={onSkip} label="Go to the Quiz Page">
+                  <span className="flex size-10 shrink-0 items-center justify-center border-3 border-double border-line-strong font-headline text-lg font-black text-fg-strong">
+                    ?
                   </span>
-                  <span className="font-news text-xs italic text-fg-muted">
-                    {cardCount} questions, new and due, shuffled
+                  <span className="flex min-w-0 flex-col">
+                    <span className={cn(KICKER, "text-sky-300")}>Page {quizPage}</span>
+                    <span className="font-headline text-sm font-bold text-fg-strong">
+                      The Quiz Page
+                    </span>
+                    <span className="font-news text-xs italic text-fg-muted">
+                      {cardCount} questions, new and due, shuffled
+                    </span>
                   </span>
-                </span>
+                </EditionRow>
               </li>
             </ol>
           </section>
@@ -295,5 +310,30 @@ export function NewArticlesIntro({
 
       <Folio page={page(index)} right={`article ${index + 1} of ${articles.length}`} />
     </div>
+  );
+}
+
+/** A row of "In today's edition": a button when that page can be turned to. */
+function EditionRow({
+  onClick,
+  label,
+  children,
+}: {
+  onClick?: () => void;
+  label: string;
+  children: ReactNode;
+}) {
+  const row = "flex w-full items-center gap-3 py-2 text-left";
+  if (!onClick) return <div className={row}>{children}</div>;
+  return (
+    <Button
+      variant="plain"
+      bleed
+      onClick={onClick}
+      title={label}
+      className={cn(row, "justify-start rounded-ui-md hover:bg-fill-soft")}
+    >
+      {children}
+    </Button>
   );
 }

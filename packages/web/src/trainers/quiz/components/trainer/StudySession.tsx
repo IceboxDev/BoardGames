@@ -171,6 +171,7 @@ export default function StudySession() {
           if (readIndex + 1 >= newArticles.length) setReadingDone(true);
           else setReadIndex(readIndex + 1);
         }}
+        onBack={setReadIndex}
         onSkip={() => setReadingDone(true)}
       />
     );
@@ -206,7 +207,7 @@ export default function StudySession() {
   return (
     <TrainerScreen className="flex flex-col">
       <header className="sticky top-0 z-lift border-b border-line bg-surface-950/80 px-4 py-2.5 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-2xl items-center gap-2 sm:gap-3">
+        <div className="mx-auto flex w-full max-w-2xl items-center gap-2 sm:gap-3 lg:max-w-4xl">
           <div className="min-w-0 flex-1">
             <Eyebrow
               tone={scopeDomain ? coreToneOf(scopeDomain.tone) : "accent"}
@@ -245,7 +246,7 @@ export default function StudySession() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full min-w-0 max-w-2xl flex-1 flex-col justify-center gap-3 px-4 py-6">
+      <main className="mx-auto flex w-full min-w-0 max-w-2xl flex-1 flex-col justify-center gap-3 px-4 py-6 lg:max-w-4xl">
         {(session.notice || session.offlinePending > 0 || session.offlineRejected > 0) && (
           <div className="flex flex-wrap items-center gap-2" role="status">
             {session.offlinePending > 0 && (
