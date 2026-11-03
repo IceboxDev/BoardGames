@@ -246,7 +246,7 @@ export default function StudySession() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full min-w-0 max-w-2xl flex-1 flex-col justify-center gap-3 px-4 py-6 lg:max-w-4xl">
+      <main className="mx-auto flex w-full min-w-0 max-w-2xl flex-1 flex-col justify-center gap-3 px-4 py-4 lg:max-w-4xl">
         {(session.notice || session.offlinePending > 0 || session.offlineRejected > 0) && (
           <div className="flex flex-wrap items-center gap-2" role="status">
             {session.offlinePending > 0 && (
