@@ -16,11 +16,25 @@ export function SourceLabel({ source, className }: { source: string; className?:
         className,
       )}
     >
-      {mark.icon && (
-        <img src={mark.icon} alt="" aria-hidden width={16} height={16} className="size-4" />
-      )}
+      <SourceMarkIcon source={source} className="size-4" />
       <span className="sr-only">Source: </span>
       {mark.short}
     </span>
+  );
+}
+
+/** A source's square stamp alone (decorative: its name is always beside it). */
+export function SourceMarkIcon({ source, className }: { source: string; className?: string }) {
+  const icon = sourceMarkOf(source).icon;
+  if (!icon) return null;
+  return (
+    <img
+      src={icon}
+      alt=""
+      aria-hidden
+      width={32}
+      height={32}
+      className={cn("shrink-0 object-contain", className)}
+    />
   );
 }

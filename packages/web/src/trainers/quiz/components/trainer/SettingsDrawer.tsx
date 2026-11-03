@@ -12,6 +12,7 @@ import { DOMAINS } from "../../domains";
 import { useQuizSettings } from "../../hooks/useQuizSettings";
 import { quizReviewOutbox } from "../../review-outbox";
 import { DomainIcon } from "../common/DomainIcon";
+import { SourceMarkIcon } from "../common/SourceLabel";
 import { Headline, PaperTabs, SectionHead } from "../paper/Paper";
 import { KICKER } from "../paper/paper-style";
 
@@ -162,7 +163,8 @@ export function SettingsDrawer({ onClose }: Props) {
                       }))
                     }
                   >
-                    <span className="font-headline text-base font-bold text-fg-strong">
+                    <span className="flex items-center gap-2 font-headline text-base font-bold text-fg-strong">
+                      <SourceMarkIcon source={src.id} className="size-6" />
                       {src.title}
                     </span>
                   </TickRow>

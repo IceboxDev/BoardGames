@@ -351,7 +351,9 @@ describe("WikiArticle", () => {
       "href",
       "/trainer/quiz/wiki/article/a0002",
     );
-    expect(screen.getAllByText("Printed in Quiztopia")).toHaveLength(1);
+    // One fact Quiztopia prints, named with its stamp; the rest are our own.
+    expect(screen.getAllByText(/^Printed in/)).toHaveLength(1);
+    expect(screen.getAllByTitle("Quiztopia")).toHaveLength(1);
   });
 
   it("shows each question's date and source, links pinned ones to the timeline, and lists sources", async () => {

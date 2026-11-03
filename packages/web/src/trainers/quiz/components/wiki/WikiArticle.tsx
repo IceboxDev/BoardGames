@@ -1,7 +1,6 @@
 import type { QuizLang } from "@boardgames/core/protocol";
 import type { Fact, SourceLink as SourceLinkData } from "@boardgames/core/quiz/content-types";
 import { ARTICLE_ID_RE } from "@boardgames/core/quiz/ids";
-import { sourceById } from "@boardgames/core/quiz/sources";
 import { leadWording, printedSources } from "@boardgames/core/quiz/wordings";
 import { type ReactNode, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
@@ -19,7 +18,9 @@ import { useWikiRead } from "../../hooks/useWikiRead";
 import { isScreenShortcut } from "../../keys";
 import { fieldIn, inLang, say } from "../../logic/text";
 import { useTrainerPaths } from "../../paths";
+import { HOMEBREW } from "../../source-marks";
 import { PrimaryLanguageToggle } from "../common/LanguageToggle";
+import { SourceLabel } from "../common/SourceLabel";
 import { SourceLink } from "../common/SourceLink";
 import { FEATURE_HEADLINE, FEATURE_WIDTH, FeatureBody } from "../paper/FeatureBody";
 import {
@@ -493,11 +494,20 @@ function CardNavLink({
   );
 }
 
-/** "Printed in Quiztopia · Trivial Pursuit" — the games that ask this fact. */
+/**
+ * "Printed in [Quiztopia] [Trivial Pursuit]" — the games that ask this fact,
+ * each with its stamp; Homebrew when no game prints it yet.
+ */
 function PrintedIn({ wordings }: { wordings: Parameters<typeof printedSources>[0] }) {
-  const games = printedSources(wordings).map((s) => sourceById(s)?.title ?? s);
-  if (games.length === 0) return null;
-  return <span className={cn(KICKER, "text-fg-muted")}>Printed in {games.join(" · ")}</span>;
+  const games = printedSources(wordings);
+  return (
+    <span className={cn(KICKER, "flex flex-wrap items-center gap-x-2 gap-y-1 text-fg-muted")}>
+      {games.length > 0 ? "Printed in" : "Not printed yet"}
+      {(games.length > 0 ? games : [HOMEBREW]).map((g) => (
+        <SourceLabel key={g} source={g} className="normal-case tracking-normal" />
+      ))}
+    </span>
+  );
 }
 
 /** The article foot: every question's source once, with the questions it backs. */
