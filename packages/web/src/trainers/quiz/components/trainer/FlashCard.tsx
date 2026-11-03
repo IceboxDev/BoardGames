@@ -1,7 +1,14 @@
 import type { QuizLang, QuizLanguages } from "@boardgames/core/protocol";
 import { isLeech, type SrsState } from "@boardgames/core/quiz/srs";
-import { animate, motion, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import {
+  animate,
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useReducedMotion,
+  useTransform,
+} from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { boardSpring } from "../../../../components/board/motion";
 import {
   Badge,
@@ -18,7 +25,7 @@ import { coreToneOf, type Domain, TONE_STRIP } from "../../domains";
 import type { CurrentCard } from "../../hooks/useTrainerSession";
 import { inLang, inLangs, reportLanguageOf, say } from "../../logic/text";
 import { AnswerMark } from "../common/AnswerMark";
-import { ArticleImage } from "../common/ArticleImage";
+import { SourceLabel } from "../common/SourceLabel";
 import { SourceLink } from "../common/SourceLink";
 import { TextLink } from "../common/TextLink";
 import { ReportButton } from "../report/ReportButton";
@@ -30,10 +37,12 @@ import { EditorNote } from "../wiki/EditorNote";
 // the question's moment on the member's timeline and its source, and the
 // editor's note when the card has one. The reveal is a real flip
 // (rotateY on a preserve-3d stack); with reduced motion the faces swap
-// without turning. Both faces share one grid cell, so the card's height is the
-// taller face and the grade bar never jumps. The back holds the card it
-// was revealed on while it turns away, so grading never flashes the next
-// card's answer mid-flip.
+// without turning. Only the face showing takes up room (the other is laid
+// over it, clipped), so a long answer never stretches the question past the
+// screen; the two swap at the half-turn, when the card is edge-on. The back
+// holds the card it was revealed on while it turns away, so grading never
+// flashes the next card's answer mid-flip. The card carries no picture: an
+// article's photos illustrate the article, not each question it asks.
 
 type Props = {
   card: CurrentCard;
@@ -109,8 +118,12 @@ export function FlashCard({
   const frontVisibility = useTransform(rotation, (deg) => (deg < 90 ? "visible" : "hidden"));
   const backVisibility = useTransform(rotation, (deg) => (deg >= 90 ? "visible" : "hidden"));
   const turn = useTransform(rotation, (deg) => (flip ? deg : 0));
+  const [backUp, setBackUp] = useState(revealed);
+  useMotionValueEvent(rotation, "change", (deg) => setBackUp(deg >= 90));
 
-  const face = "col-start-1 row-start-1 flex min-h-64 min-w-0 flex-col";
+  const face = "flex min-h-64 min-w-0 flex-col";
+  const shown = "col-start-1 row-start-1";
+  const laidOver = "absolute inset-0 overflow-hidden";
   const hiddenBackface = {
     backfaceVisibility: "hidden",
     WebkitBackfaceVisibility: "hidden",
@@ -119,12 +132,12 @@ export function FlashCard({
   return (
     <div className={cn("w-full min-w-0", className)} style={{ perspective: 1400 }}>
       <motion.div
-        className="grid grid-cols-1"
+        className="relative grid grid-cols-1"
         style={{ transformStyle: flip ? "preserve-3d" : undefined, rotateY: turn }}
       >
         {/* Front */}
         <motion.div
-          className={face}
+          className={cn(face, backUp ? laidOver : shown)}
           style={{ ...hiddenBackface, visibility: frontVisibility }}
           inert={revealed}
           aria-hidden={revealed}
@@ -180,7 +193,7 @@ export function FlashCard({
 
         {/* Back */}
         <motion.div
-          className={face}
+          className={cn(face, backUp ? shown : laidOver)}
           style={{
             ...hiddenBackface,
             visibility: backVisibility,
@@ -223,9 +236,7 @@ function CardHeader({
   revealed: boolean;
 }) {
   const tier = tierBadge(state);
-  const ref = `${card.item.articleId} · ${card.index + 1}/${card.article.facts.length}${
-    card.question.printed ? " · printed" : ""
-  }`;
+  const ref = `${card.item.articleId} · ${card.index + 1}/${card.article.facts.length}`;
   return (
     <div className="flex flex-wrap items-center gap-2">
       <Badge tone={d.tone} size="sm" title={`${d.label} · ${d.en} / ${d.de}`}>
@@ -234,6 +245,7 @@ function CardHeader({
       <Badge tone={tier.tone} size="xs">
         {tier.label}
       </Badge>
+      <SourceLabel source={card.question.wordingSource} />
       <MicroLabel className="ml-auto">{ref}</MicroLabel>
       <ReportButton
         context={{
@@ -265,7 +277,6 @@ function BackFace({
     de: card.question.answerDe,
     ru: card.question.answerRu,
   });
-  const image = card.article.images[0];
   return (
     <Surface
       variant="raised"
@@ -303,21 +314,18 @@ function BackFace({
           ))}
         </div>
         {snippet ? (
-          <div className="flex items-start gap-3">
-            <p className="min-w-0 flex-1 text-sm leading-relaxed text-fg-secondary" lang={primary}>
-              <span className="text-fg-muted">
-                {say(primary, {
-                  en: "From the article: ",
-                  de: "Aus dem Artikel: ",
-                  ru: "Из статьи: ",
-                })}
-              </span>
-              {snippet.before}
-              <AnswerMark tone={d.tone}>{snippet.match}</AnswerMark>
-              {snippet.after}
-            </p>
-            {image && <ArticleImage image={image} lang={primary} variant="thumb" />}
-          </div>
+          <p className="text-sm leading-relaxed text-fg-secondary" lang={primary}>
+            <span className="text-fg-muted">
+              {say(primary, {
+                en: "From the article: ",
+                de: "Aus dem Artikel: ",
+                ru: "Из статьи: ",
+              })}
+            </span>
+            {snippet.before}
+            <AnswerMark tone={d.tone}>{snippet.match}</AnswerMark>
+            {snippet.after}
+          </p>
         ) : snippetPending ? (
           <p className="text-sm text-fg-muted">Finding the passage…</p>
         ) : null}

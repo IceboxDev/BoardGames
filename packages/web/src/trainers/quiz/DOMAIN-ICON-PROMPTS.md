@@ -10,6 +10,8 @@ The quiz trainer's 14 domains (`packages/core/src/quiz/taxonomy.ts`) get an icon
 | 4 · Daily Deck | deck fronts on dark stock and the cream deck face | 20–40 px | [suit pips](#set-pip) | yes, 14 |
 | 5 · The Thread | the nodes on the thread line and the side rail | 16–40 px | [line glyphs drawn in code](#glyphs) | no |
 
+The question cards' **source marks** (which game a question comes from) are at the end: [Source marks](#set-source).
+
 **Generate only the set of the concept you pick**: the other sets stay here as the record of why each concept would look the way it does.
 
 Every domain keeps **its own colour** across all sets (it becomes the domain's colour in the trainer, replacing today's 8 shared colours):
@@ -395,3 +397,63 @@ No image generation. Cockpit is a dense, monospace instrument panel and The Thre
 | `nature` | leaf |
 | `technology` | cog |
 | `geography` | compass star |
+
+---
+
+<a id="set-source"></a>
+
+## Source marks · printer's stamps — which game a question comes from
+
+Every question card names the source of the wording it shows: one of the four games whose printed cards are in the bank (`packages/core/src/quiz/sources.ts`) or **Homebrew**, a question we wrote ourselves because no game prints it yet. The mark sits in the card header beside the source's short name (16–20 px), in the newspaper next to the domain's printer's cut, so it must never be mistaken for one: the domain cuts are **round**, the source marks are **square stamps** — a printer's device inked onto the page, the kind of square mark an 1890s publisher stamped on its own pages.
+
+Each source keeps one spot colour, chosen to tell the five apart on dark newsprint at 16 px:
+
+| Source id | File | Short name on the card | Colour |
+| --- | --- | --- | --- |
+| `quiztopia` | `src-quiztopia.png` | Quiztopia | burnt orange (#d9822b) |
+| `trivial-pursuit` | `src-trivial-pursuit.png` | Trivial Pursuit | royal blue (#3f6fd8) |
+| `publish-or-perish` | `src-publish-or-perish.png` | P/P | oxblood red (#b8323f) |
+| `publish-or-perish-mge` | `src-publish-or-perish-mge.png` | P/P MGE | violet (#8a64e0) |
+| `homebrew` | `src-homebrew.png` | Homebrew | ember gold (#c89b5e) |
+
+Save the raw PNGs as `packages/web/art-src/quiz-sources/<file>` (gitignored), then run `pnpm --filter @boardgames/web card-art --game=quiz-sources`; the webp files land in `packages/web/src/trainers/quiz/assets/sources/` and the cards pick each one up on its own (until a mark exists, the card shows the short name alone). Five marks, one image-generator conversation: paste the setup block, then the five item prompts in order. Every item prompt repeats the style, so it also works alone. A game's own logo or box art is never copied: each mark is an engraved picture of something the game is about.
+
+**Base style directive** (starts the setup block and every item prompt):
+
+> Antique printer's stamp: a small square wood-engraving device in the style of an 1890s publisher's mark, its square border with small clipped (chamfered) corners and a thin double rule just inside the bold outer line, drawn with confident engraved line work and cross-hatching in cream ink (#ece4d6) only, plus ONE flat spot colour — the colour this prompt names — printed as a solid tint filling one or two areas of the motif, slightly offset from the line work like a real two-colour press. Strong contrast and a heavy enough line that the motif still reads at 16 pixels; one simple motif, no small details. No letters, words, numbers or question marks anywhere; no signature or watermark. Fully transparent background, nothing outside the square border. Centred, the border filling about 92 percent of the canvas. Square 1:1 aspect ratio.
+
+**Setup block** — paste first:
+
+```text
+Antique printer's stamp: a small square wood-engraving device in the style of an 1890s publisher's mark, its square border with small clipped (chamfered) corners and a thin double rule just inside the bold outer line, drawn with confident engraved line work and cross-hatching in cream ink (#ece4d6) only, plus ONE flat spot colour — the colour this prompt names — printed as a solid tint filling one or two areas of the motif, slightly offset from the line work like a real two-colour press. Strong contrast and a heavy enough line that the motif still reads at 16 pixels; one simple motif, no small details. No letters, words, numbers or question marks anywhere; no signature or watermark. Fully transparent background, nothing outside the square border. Centred, the border filling about 92 percent of the canvas. Square 1:1 aspect ratio. This is a set of 5 sibling stamps for one quiz app, each marking which game a question comes from: identical square border, clipped corners, line weight, hatching density, ink colour and print offset on every stamp; only the motif and its spot colour change. I will describe each one in turn; reply to each with one image.
+```
+
+**`src-quiztopia.png`** — Quiztopia
+
+```text
+Antique printer's stamp: a small square wood-engraving device in the style of an 1890s publisher's mark, its square border with small clipped (chamfered) corners and a thin double rule just inside the bold outer line, drawn with confident engraved line work and cross-hatching in cream ink (#ece4d6) only, plus ONE flat spot colour — burnt orange (#d9822b) — printed as a solid tint filling one or two areas of the motif, slightly offset from the line work like a real two-colour press. Strong contrast and a heavy enough line that the motif still reads at 16 pixels; one simple motif, no small details. No letters, words, numbers or question marks anywhere; no signature or watermark. Fully transparent background, nothing outside the square border. Centred, the border filling about 92 percent of the canvas. Square 1:1 aspect ratio. The motif: a small round island with a single palm tree, a rising sun behind it and two lines of sea beneath; the sun is the spot colour. It marks questions from the quiz game "Quiztopia" — do not write that name anywhere.
+```
+
+**`src-trivial-pursuit.png`** — Trivial Pursuit
+
+```text
+Antique printer's stamp: a small square wood-engraving device in the style of an 1890s publisher's mark, its square border with small clipped (chamfered) corners and a thin double rule just inside the bold outer line, drawn with confident engraved line work and cross-hatching in cream ink (#ece4d6) only, plus ONE flat spot colour — royal blue (#3f6fd8) — printed as a solid tint filling one or two areas of the motif, slightly offset from the line work like a real two-colour press. Strong contrast and a heavy enough line that the motif still reads at 16 pixels; one simple motif, no small details. No letters, words, numbers or question marks anywhere; no signature or watermark. Fully transparent background, nothing outside the square border. Centred, the border filling about 92 percent of the canvas. Square 1:1 aspect ratio. The motif: a round game token seen from above, divided like a pie into six equal wedge-shaped slots, two of the wedges filled in the spot colour and the other four empty and hatched. It marks questions from the trivia board game "Trivial Pursuit" — do not write that name anywhere.
+```
+
+**`src-publish-or-perish.png`** — Publish or Perish
+
+```text
+Antique printer's stamp: a small square wood-engraving device in the style of an 1890s publisher's mark, its square border with small clipped (chamfered) corners and a thin double rule just inside the bold outer line, drawn with confident engraved line work and cross-hatching in cream ink (#ece4d6) only, plus ONE flat spot colour — oxblood red (#b8323f) — printed as a solid tint filling one or two areas of the motif, slightly offset from the line work like a real two-colour press. Strong contrast and a heavy enough line that the motif still reads at 16 pixels; one simple motif, no small details. No letters, words, numbers or question marks anywhere; no signature or watermark. Fully transparent background, nothing outside the square border. Centred, the border filling about 92 percent of the canvas. Square 1:1 aspect ratio. The motif: a small stack of bound academic journals with a quill pen stuck upright into the top one like a dagger; the quill's feather is the spot colour. It marks questions from the card game "Publish or Perish", about cut-throat academic publishing — do not write that name anywhere.
+```
+
+**`src-publish-or-perish-mge.png`** — Publish or Perish: Midterm Grading Extravaganza
+
+```text
+Antique printer's stamp: a small square wood-engraving device in the style of an 1890s publisher's mark, its square border with small clipped (chamfered) corners and a thin double rule just inside the bold outer line, drawn with confident engraved line work and cross-hatching in cream ink (#ece4d6) only, plus ONE flat spot colour — violet (#8a64e0) — printed as a solid tint filling one or two areas of the motif, slightly offset from the line work like a real two-colour press. Strong contrast and a heavy enough line that the motif still reads at 16 pixels; one simple motif, no small details. No letters, words, numbers or question marks anywhere; no signature or watermark. Fully transparent background, nothing outside the square border. Centred, the border filling about 92 percent of the canvas. Square 1:1 aspect ratio. The motif: a single exam sheet with a large bold check mark across it and a fountain pen lying diagonally over its corner; the check mark and the pen are the spot colour. It marks questions from "Midterm Grading Extravaganza", an expansion of an academic card game about grading exams — do not write that name anywhere.
+```
+
+**`src-homebrew.png`** — Homebrew (our own questions)
+
+```text
+Antique printer's stamp: a small square wood-engraving device in the style of an 1890s publisher's mark, its square border with small clipped (chamfered) corners and a thin double rule just inside the bold outer line, drawn with confident engraved line work and cross-hatching in cream ink (#ece4d6) only, plus ONE flat spot colour — ember gold (#c89b5e) — printed as a solid tint filling one or two areas of the motif, slightly offset from the line work like a real two-colour press. Strong contrast and a heavy enough line that the motif still reads at 16 pixels; one simple motif, no small details. No letters, words, numbers or question marks anywhere; no signature or watermark. Fully transparent background, nothing outside the square border. Centred, the border filling about 92 percent of the canvas. Square 1:1 aspect ratio. The motif: a small hand-cranked tabletop printing press with a sheet coming out of it, a warm glow from an oil lamp beside it; the lamp's flame and the fresh sheet are the spot colour. It marks questions the quiz's own editors wrote at home rather than printed by any game — do not write any name anywhere.
+```

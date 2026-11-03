@@ -132,6 +132,21 @@ describe("ReportButton", () => {
     expect(createMock).not.toHaveBeenCalled();
   });
 
+  it("files details written without a kind as 'Something else'", async () => {
+    const user = userEvent.setup();
+    renderButton(true);
+    await user.click(screen.getByRole("button", { name: "Report a problem with this question" }));
+    await user.click(screen.getByRole("button", { name: "Send report" }));
+    expect(screen.getByText("Pick what's wrong.")).toBeInTheDocument();
+    expect(createMock).not.toHaveBeenCalled();
+
+    await user.type(screen.getByRole("textbox"), "The question gives the answer away");
+    await user.click(screen.getByRole("button", { name: "Send report" }));
+    expect(createMock).toHaveBeenCalledWith(
+      expect.objectContaining({ issue: "other", message: "The question gives the answer away" }),
+    );
+  });
+
   it("reopens an open report for editing or withdrawal", async () => {
     mine = { reports: [openReport()], unread: 0 };
     const user = userEvent.setup();

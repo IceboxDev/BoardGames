@@ -21,7 +21,7 @@ export const ISSUE_COPY: Record<ReportIssue, IssueCopy> = {
   },
   "unclear-question": {
     label: "Unclear or wrong question",
-    hint: "Ambiguous, misleading, or asks about something untrue.",
+    hint: "Ambiguous, misleading, gives the answer away, or asks about something untrue.",
     placeholder: "What's confusing — or what should it ask?",
   },
   typo: {

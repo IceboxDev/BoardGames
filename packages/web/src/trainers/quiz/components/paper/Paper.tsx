@@ -570,8 +570,9 @@ export function PaperPhoto({
   data?: Record<`data-${string}`, string | number | undefined>;
   className?: string;
 }) {
-  const [broken, setBroken] = useState(false);
-  if (broken) return null;
+  // A failed file hides only itself: the next photo in this slot gets its chance.
+  const [broken, setBroken] = useState<string | null>(null);
+  if (broken === image.url) return null;
   // Not filling a box, the photo is set whole at its own proportions across
   // the width `className` gives the figure.
   return (
@@ -580,13 +581,16 @@ export function PaperPhoto({
         className={cn("relative isolate block overflow-hidden bg-fill", fill && "min-h-0 flex-1")}
       >
         <img
+          // A fresh element per file: reusing one would show the last photo
+          // until the next one has loaded.
+          key={image.url}
           src={image.url}
           alt={image.alt[lang]}
           loading="lazy"
           referrerPolicy="no-referrer"
           width={image.width}
           height={image.height}
-          onError={() => setBroken(true)}
+          onError={() => setBroken(image.url)}
           className={cn("news-photo block", fill ? "size-full object-cover" : "h-auto w-full")}
         />
         <span aria-hidden="true" className="absolute inset-0 bg-accent-300 mix-blend-color" />

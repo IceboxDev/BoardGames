@@ -21,6 +21,7 @@ import { queueQuery, statesQuery, submitReview, todayKey } from "../api";
 import { invalidateAfterReviews } from "../cache";
 import { articleSnippet, bodyIn, findFact, type Snippet } from "../content";
 import { useQuizOutbox } from "../review-outbox";
+import { HOMEBREW } from "../source-marks";
 import { articleQuery, indexQuery, prefetchArticle, useArticle } from "./useContent";
 import { useQuizSettings } from "./useQuizSettings";
 
@@ -67,6 +68,8 @@ export interface QuizQuestion {
   answerRu?: string;
   /** A game prints this fact (else it is one we wrote alongside). */
   printed: boolean;
+  /** Where the wording shown comes from: the source that prints it, or "homebrew". */
+  wordingSource: string;
   timeline: Fact["timeline"];
   source: Fact["source"];
 }
@@ -82,6 +85,7 @@ export function questionOf(fact: Fact, sources: readonly string[]): QuizQuestion
     answerDe: fact.answerDe,
     answerRu: fact.answerRu,
     printed: fact.wordings.some((w) => w.origin === "printed"),
+    wordingSource: wording.printed?.source ?? HOMEBREW,
     timeline: fact.timeline,
     source: fact.source,
   };

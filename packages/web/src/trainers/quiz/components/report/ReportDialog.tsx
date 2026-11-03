@@ -8,7 +8,7 @@ import {
   type ReportTarget,
   SPOILS_ANSWER,
 } from "@boardgames/core/protocol";
-import { useId, useMemo, useState } from "react";
+import { useId, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { CheckIcon } from "../../../../components/icons";
 import {
@@ -24,6 +24,7 @@ import {
   SelectableCard,
   Textarea,
 } from "../../../../components/ui";
+import { cn } from "../../../../lib/cn";
 import { errorMessageOf } from "../../../../lib/error-message";
 import { findDomain } from "../../domains";
 import { useMyReports, useReportMutations } from "../../hooks/useMyReports";
@@ -104,9 +105,12 @@ export function ReportDialog({ context, onClose }: Props) {
   };
 
   const trimmed = message.trim();
+  // Details written without a kind picked are filed as "Something else":
+  // what was written is the report.
+  const filedAs: ReportIssue | null = issue ?? (trimmed !== "" ? "other" : null);
   const needsMessage = issue !== null && MESSAGE_REQUIRED.has(issue);
   const problem =
-    issue === null
+    filedAs === null
       ? "Pick what's wrong."
       : needsMessage && trimmed === ""
         ? "Say what's wrong — it's the only way to know."
@@ -114,11 +118,18 @@ export function ReportDialog({ context, onClose }: Props) {
           ? `Keep it under ${REPORT_MESSAGE_MAX} characters.`
           : null;
 
+  // On a phone the kinds scroll out of sight under the details field: a send
+  // with nothing picked brings them back into view.
+  const kindsRef = useRef<HTMLUListElement | null>(null);
   const submit = () => {
     setTouched(true);
-    if (problem || issue === null) return;
+    if (filedAs === null) {
+      kindsRef.current?.scrollIntoView?.({ block: "center", behavior: "smooth" });
+      return;
+    }
+    if (problem) return;
     create.mutate(
-      { target, issue, language, message: trimmed, surface: context.surface },
+      { target, issue: filedAs, language, message: trimmed, surface: context.surface },
       { onSuccess: (res) => setSent(res.updated ? "updated" : "sent") },
     );
   };
@@ -222,7 +233,16 @@ export function ReportDialog({ context, onClose }: Props) {
         )}
 
         <FieldGroup label="What's wrong?">
-          <ul className="grid gap-1.5 sm:grid-cols-2" aria-label="Kind of problem">
+          <ul
+            ref={kindsRef}
+            className={cn(
+              "grid gap-1.5 rounded-ui-md sm:grid-cols-2",
+              touched &&
+                filedAs === null &&
+                "ring-2 ring-rose-400/70 ring-offset-4 ring-offset-surface-900",
+            )}
+            aria-label="Kind of problem"
+          >
             {issues.map((i) => {
               const already = open.some((r) => r.issue === i);
               return (
@@ -231,7 +251,7 @@ export function ReportDialog({ context, onClose }: Props) {
                     variant="tile"
                     orientation="horizontal"
                     padding="sm"
-                    className="h-full"
+                    className="h-full w-full"
                     selected={issue === i}
                     onClick={() => pick(i)}
                     title={ISSUE_COPY[i].label}
@@ -271,7 +291,9 @@ export function ReportDialog({ context, onClose }: Props) {
             rows={4}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder={issue ? ISSUE_COPY[issue].placeholder : "Pick what's wrong first."}
+            placeholder={
+              issue ? ISSUE_COPY[issue].placeholder : "Pick a kind above, or just describe it."
+            }
             invalid={touched && problem !== null && issue !== null}
             maxLength={REPORT_MESSAGE_MAX + 200}
           />
