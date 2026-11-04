@@ -671,7 +671,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: null,
     slug: "hell-of-a-deal",
     kind: "crowdfunding",
-    status: "shipping",
+    status: "delivered",
     platform: "Kickstarter",
     campaignUrl: "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal",
     pledgeManagerUrl: null, // BackerKit; closed May 15 '26, addresses locked July 18 '26
@@ -679,11 +679,11 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     // internal goal was July/August). The EU vessel was due in Rotterdam
     // Sep 12 for a ~Sep 28 fulfilment start; the games only reached the
     // fulfilment centre Oct 15 and this order left Meeples' Dronten
-    // warehouse Oct 19 (Maersk) — delivery expected in October.
+    // warehouse Oct 19 (Maersk), delivered Oct 29.
     originalEtaMonth: "2026-09",
     currentEtaMonth: "2026-10",
     pledgedOn: "2026-03-25",
-    deliveredOn: null,
+    deliveredOn: "2026-10-29",
     currency: "USD",
     pledgeCents: 8500, // $65.00 base game + $20.00 Deluxe Foil Poker Deck dual pack, collected
     shippingCents: null, // shipping + VAT charged separately via BackerKit; amount not recorded
@@ -694,7 +694,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       "stretch goals (incl. solo mode and 44 bosses, added late campaign). Add-on: Deluxe " +
       "Foil Poker Deck dual pack ($20.00, gold + red). Total $85.00 collected; shipping and " +
       "VAT went through the BackerKit pledge manager. EU copies fulfil via Meeples " +
-      "Distributie (Dronten, NL) — order MF122479, shipped Oct 19 '26 via Maersk 8669301001.",
+      "Distributie (Dronten, NL) — order MF122479, shipped Oct 19 '26 via Maersk 8669301001, delivered by DHL Oct 29 '26.",
     events: [
       {
         id: "hell-of-a-deal-e01",
@@ -807,6 +807,16 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "Meeples Distributie shipped the order from its Dronten, Netherlands warehouse via " +
           "Maersk (tracking 8669301001). Listed contents: Hell of a Deal ×1 and Hell of a " +
           "Deal: Foil Poker Deck 2-Pack ×1.",
+        sourceUrl: null,
+      },
+      {
+        id: "hell-of-a-deal-e10",
+        occurredOn: "2026-10-29",
+        type: "status-change",
+        title: "Delivered — handed over in Haar (DHL 00340433919540387698)",
+        details:
+          "The Maersk shipment went into DHL's network (announced Oct 26, Bremen GVZ Oct 27–28, " +
+          "Aschheim Oct 29) and was delivered to the recipient in Haar on Oct 29 at 18:37.",
         sourceUrl: null,
       },
     ],
