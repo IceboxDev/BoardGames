@@ -17,6 +17,10 @@
 // And only the packages the staged files can break: web and server both build
 // on core, so a core change (or a root config — lockfile, base tsconfig,
 // biome…) checks all three; a web-only change checks web alone (~65 s).
+//
+// The tests go through scripts/test-run.mjs: workers sized to the memory free
+// right now, and a failure only counts if it reproduces with the file run
+// alone — a busy laptop makes the hook slower, never red (docs/testing.md).
 
 import { spawn } from "node:child_process";
 
@@ -46,16 +50,18 @@ console.log(`pre-commit: checking ${targets.join(", ")}`);
 const running = new Set();
 let failed = false;
 
-/** One pnpm script; resolves to its exit code. `quiet` buffers the output for a failure. */
+/** The command for one job: the typecheck script, or the arbitrated test run. */
+const COMMANDS = {
+  typecheck: (pkg) => ["nice", "-n", "10", "pnpm", "--filter", `@boardgames/${pkg}`, "typecheck"],
+  test: (pkg) => ["node", "scripts/test-run.mjs", pkg],
+};
+
+/** One job; resolves to its exit code. `quiet` buffers the output for a failure. */
 function run(script, pkg, { quiet }) {
   return new Promise((resolve) => {
     const started = Date.now();
-    const child = spawn("pnpm", ["--filter", `@boardgames/${pkg}`, script], {
-      stdio: quiet ? ["ignore", "pipe", "pipe"] : "inherit",
-      // LEFTHOOK=1 gives the tests their roomier timeouts (vitest configs, the
-      // AI tests' load factor): the laptop may be busy besides.
-      env: { ...process.env, LEFTHOOK: "1" },
-    });
+    const [cmd, ...args] = COMMANDS[script](pkg);
+    const child = spawn(cmd, args, { stdio: quiet ? ["ignore", "pipe", "pipe"] : "inherit" });
     let output = "";
     child.stdout?.on("data", (d) => (output += d));
     child.stderr?.on("data", (d) => (output += d));

@@ -50,7 +50,7 @@ describe("posterior deal sampler", () => {
       expect(sampler.stats.accepted).toBeGreaterThan(100);
       if (voids > 0) expect(sampler.stats.voidRejects).toBeGreaterThan(0);
     }
-  }, 20_000);
+  });
 
   it("emits identical deals for the same seed and different ones otherwise", () => {
     const { root, hist } = midRound(5, 8, 33);

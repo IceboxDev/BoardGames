@@ -1,9 +1,10 @@
 import type { Article } from "@boardgames/core/quiz/content-types";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { testQueryClient } from "../../../../test/query-client";
 
 // The article page's contract: every fact's answer comes from its span
 // (never from text search), each mark is a button that opens its question
@@ -219,7 +220,6 @@ vi.mock("../../../../hooks/useCurrentUser", () => ({
 }));
 
 const provenanceMock = vi.fn(async (id: string) => {
-  const { FIXTURE_PROVENANCE } = await import("../../../../components/admin/quiz-desk/fixtures");
   const base = FIXTURE_PROVENANCE.a0001;
   if (!base) throw new Error("fixture missing");
   // Pin the fixture's first fact onto this article's Q1.
@@ -254,10 +254,11 @@ vi.mock("../../api", () => ({
   deleteWikiRead: (body: { articleId: string }) => deleteWikiReadMock(body),
 }));
 
+import { FIXTURE_PROVENANCE } from "../../../../components/admin/quiz-desk/fixtures";
 import WikiArticle from "./WikiArticle";
 
 function renderArticle(path = "/trainer/quiz/wiki/article/a0002") {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   return render(
     <QueryClientProvider client={qc}>
       <MemoryRouter initialEntries={[path]}>

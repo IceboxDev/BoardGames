@@ -9,6 +9,7 @@ import {
   gradeGame,
   nearBestMoves,
   solverFor,
+  solverInReach,
   solverSupport,
   type Verdict,
 } from "./analysis";
@@ -328,9 +329,10 @@ describe("grades", () => {
   });
 
   it("marks 8×7's opening unknown without searching it", () => {
-    const started = performance.now();
+    // No position of this opening is in the solver's reach, so `solveAt`
+    // returns before searching any of them, whatever the budget.
+    expect([0, 1, 2, 3, 4].some((discs) => solverInReach(8, 7, discs))).toBe(false);
     const grades = gradeGame(8, 7, drops([3, 4, 3, 4]), 50_000_000);
     expect(grades.every((g) => g.grade === "unknown")).toBe(true);
-    expect(performance.now() - started).toBeLessThan(500);
   });
 });

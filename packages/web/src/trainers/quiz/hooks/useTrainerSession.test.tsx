@@ -1,11 +1,12 @@
 import { DEFAULT_QUIZ_SETTINGS } from "@boardgames/core/protocol";
 import type { Article } from "@boardgames/core/quiz/content-types";
 import { addDays, newState } from "@boardgames/core/quiz/srs";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { ApiError } from "../../../lib/api-fetch";
+import { testQueryClient } from "../../../test/query-client";
 
 // The session owns its queue: a grade applies `applyReview` locally at once
 // (the server's reply only reconciles), an "again" card comes back a few
@@ -127,7 +128,7 @@ import {
 } from "./useTrainerSession";
 
 function withClient() {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   return ({ children }: { children: ReactNode }) => (
     <QueryClientProvider client={qc}>{children}</QueryClientProvider>
   );

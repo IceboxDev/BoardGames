@@ -22,16 +22,28 @@ const { handleCreateRoom, handleJoinRoom, handleStartRoom, handleToggleReady, re
 interface Sock {
   ws: WSContext;
   sent: { type: string; [key: string]: unknown }[];
+  /** Resolves with the first frame of this type the socket receives (or already has). */
+  frame: (type: string) => Promise<Sock["sent"][number]>;
 }
 
 function socket(userId: string): Sock {
   const sent: Sock["sent"] = [];
+  const waiting: { type: string; resolve: (m: Sock["sent"][number]) => void }[] = [];
   const ws = {
     readyState: 1,
-    send: (data: string) => sent.push(JSON.parse(data)),
+    send: (data: string) => {
+      const msg = JSON.parse(data);
+      sent.push(msg);
+      for (const w of waiting.filter((w) => w.type === msg.type)) w.resolve(msg);
+    },
   } as unknown as WSContext;
   wsAuth.set(ws, userId);
-  return { ws, sent };
+  const frame = (type: string) => {
+    const had = sent.find((m) => m.type === type);
+    if (had) return Promise.resolve(had);
+    return new Promise<Sock["sent"][number]>((resolve) => waiting.push({ type, resolve }));
+  };
+  return { ws, sent, frame };
 }
 
 /** The newest view this socket received. */
@@ -115,7 +127,14 @@ describe("an online Clocktower room", () => {
 
     stAct({ kind: "dawn" });
     stAct({ kind: "nominations", open: true });
-    const [a, b] = players as [Sock, Sock];
+    // The deal is random, and three characters turn this ordinary day into
+    // something else: a Saint or the Imp executed ends the game, and a Virgin
+    // nominated executes the nominator. Nominate someone who is none of them.
+    const truthOf = (p: Sock) =>
+      stView.companion?.players.find((x) => x.roomSeat === view(p).you)?.character;
+    const b = players.find((p) => !["saint", "virgin", "imp"].includes(truthOf(p) ?? ""));
+    const a = players.find((p) => p !== b);
+    if (!a || !b) throw new Error("six players always include an ordinary nominee");
     act(a, { kind: "nominate", nominee: view(b).you });
     const vote = view(st).day.vote;
     expect(vote?.nominee).toBe(view(b).you);
@@ -130,8 +149,7 @@ describe("an online Clocktower room", () => {
 
     stAct({ kind: "end-game", winner: "good", reason: "the Demon was executed" });
     // The match is saved before the game-over frame goes out.
-    await vi.waitFor(() => expect(a.sent.some((m) => m.type === "game-over")).toBe(true));
-    const over = [...a.sent].reverse().find((m) => m.type === "game-over");
+    const over = await a.frame("game-over");
     expect(over?.outcome).toMatchObject({ kind: "teams", winningTeam: 0, moderatorSeats: [0] });
     const reveal = view(a);
     expect(reveal.role === "player" && reveal.reveal?.grimoire.players).toHaveLength(6);

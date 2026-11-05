@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -32,10 +32,11 @@ vi.mock("../../lib/profile.ts", () => ({
   fetchAvatarJob: vi.fn(),
 }));
 
+import { testQueryClient } from "../../test/query-client";
 import { GenerateAvatarModal } from "./GenerateAvatarModal";
 
 function renderModal() {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   return render(
     <QueryClientProvider client={qc}>
       <GenerateAvatarModal userId="u1" onClose={() => {}} />

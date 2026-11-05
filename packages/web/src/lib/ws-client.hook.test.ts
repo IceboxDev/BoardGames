@@ -18,18 +18,21 @@ beforeEach(() => {
   });
   // mock-socket exposes its own WebSocket class; route the global through it.
   vi.stubGlobal("WebSocket", MockWebSocket);
+  // mock-socket delivers `onopen` / `onmessage` on 4–50 ms timers. On a fake
+  // clock those land when the test moves time on, never by how fast the
+  // machine happens to be (docs/testing.md).
+  vi.useFakeTimers({ toFake: ["setTimeout", "clearTimeout", "setInterval", "clearInterval"] });
 });
 
 afterEach(() => {
+  vi.useRealTimers();
   vi.unstubAllGlobals();
 });
 
-// mock-socket schedules `onopen` / `onmessage` via setTimeouts with ~4–50ms
-// delays — not microtasks. Tests poll for the expected condition through
-// RTL's `waitFor` instead of relying on a fixed yield count.
+/** Move the fake clock past mock-socket's delivery delays. */
 async function tick(ms = 60) {
   await act(async () => {
-    await new Promise((resolve) => setTimeout(resolve, ms));
+    await vi.advanceTimersByTimeAsync(ms);
   });
 }
 

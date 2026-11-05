@@ -11,6 +11,7 @@ import { type Client, createClient } from "@libsql/client";
 import { Hono } from "hono";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
+import { activityWritesSettled } from "../lib/activity-log.ts";
 import { companionRecords } from "../migrations/0053-companion-records.ts";
 
 const db = vi.hoisted(() => ({ current: null as Client | null }));
@@ -130,7 +131,8 @@ describe("companion records", () => {
     expect(entries).toHaveLength(1);
     expect(entries[0]).toMatchObject({ id: result.id, clientId: "game-0001", record: botc });
 
-    await vi.waitFor(async () => expect(await activityRows()).toHaveLength(1));
+    await activityWritesSettled();
+    expect(await activityRows()).toHaveLength(1);
     expect((await activityRows())[0]).toEqual({
       user: "u1",
       type: "companion-recorded",
@@ -151,7 +153,7 @@ describe("companion records", () => {
     expect(entries).toHaveLength(1);
     expect(entries[0]?.record).toMatchObject({ winner: "evil" });
     // Only the first save is an activity.
-    await new Promise((r) => setTimeout(r, 20));
+    await activityWritesSettled();
     expect(await activityRows()).toHaveLength(1);
   });
 

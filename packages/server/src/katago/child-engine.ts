@@ -5,6 +5,7 @@
  */
 import { type ChildProcessWithoutNullStreams, spawn } from "node:child_process";
 import { createInterface } from "node:readline";
+import { liveDeadline } from "../lib/live-deadline.ts";
 import {
   type KataGoEngine,
   type KataGoQuery,
@@ -118,7 +119,7 @@ export function createChildEngine(opts: ChildEngineOptions): KataGoEngine {
             `${JSON.stringify({ id: `t${id}`, action: "terminate", terminateId: id })}\n`,
           );
           reject(new Error("KataGo query timed out"));
-        }, timeoutMs);
+        }, liveDeadline(timeoutMs));
         pending.set(id, { turns, got: [], resolve, reject, timer });
         proc?.stdin.write(`${JSON.stringify({ ...q, id })}\n`);
       });

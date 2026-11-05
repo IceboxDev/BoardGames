@@ -1,15 +1,19 @@
 import "@testing-library/jest-dom/vitest";
 
 import { cleanup, configure } from "@testing-library/react";
+import { MotionGlobalConfig } from "framer-motion";
 import { afterEach, beforeEach, vi } from "vitest";
 
-// `findBy*` / `waitFor` give up after testing-library's 1 s default. Work a
-// test really waits on (Connect 4's solver grading a game) takes longer than
-// that on a CI runner or under the pre-commit hook, and failed CI three times
-// with nothing broken. Same busy rule as vitest.config.ts's timeouts; a quiet
-// local run keeps the 1 s default so a real stall still shows quickly.
-const busy = Boolean(process.env.CI || process.env.LEFTHOOK);
-configure({ asyncUtilTimeout: busy ? 10_000 : 1_000 });
+// `findBy*` / `waitFor` give up after this long — the only way "it never
+// appeared" can be seen. One value in every mode (docs/testing.md): when a
+// file fails, scripts/test-run.mjs reruns it alone with
+// VITEST_ARBITRATION=1, where the wait is the whole hang guard, so a slow
+// machine can never be the reason a find fails.
+configure({ asyncUtilTimeout: process.env.VITEST_ARBITRATION ? 120_000 : 10_000 });
+
+// Animations add nothing to what a test checks, and the never-ending ones
+// (`repeat: Infinity` pulses) keep a worker's CPU busy for the whole file.
+MotionGlobalConfig.skipAnimations = true;
 
 function makeStorage(): Storage {
   const store = new Map<string, string>();
@@ -72,32 +76,4 @@ afterEach(() => {
   vi.useRealTimers();
   // localStorage / sessionStorage get replaced fresh in the next beforeEach,
   // so no explicit clear is needed here.
-});
-
-// jsdom doesn't ship ResizeObserver; several primitives (BoardSurface,
-// framer-motion measurements) reach for it on mount. A no-op stub is
-// enough — none of the tests assert on observed sizes.
-beforeEach(() => {
-  if (typeof window.ResizeObserver === "undefined") {
-    window.ResizeObserver = class {
-      observe() {}
-      unobserve() {}
-      disconnect() {}
-    } as unknown as typeof ResizeObserver;
-  }
-  if (typeof window.matchMedia === "undefined") {
-    Object.defineProperty(window, "matchMedia", {
-      writable: true,
-      value: (query: string) => ({
-        matches: false,
-        media: query,
-        onchange: null,
-        addListener: () => {},
-        removeListener: () => {},
-        addEventListener: () => {},
-        removeEventListener: () => {},
-        dispatchEvent: () => false,
-      }),
-    });
-  }
 });

@@ -88,7 +88,7 @@ describe("the-hunger wasm bridge", () => {
     // Not vacuous: the search overrules Nosferatu on some of these.
     expect(beyondNosferatu).toBeGreaterThan(0);
     // Real TS Strigoi searches: slow when the whole suite runs in parallel.
-  }, 30_000);
+  });
 
   it("Dracula returns one of the legal actions", () => {
     const { state, seat, legal } = samples.find((x) => x.legal.length > 2) ?? samples[0];

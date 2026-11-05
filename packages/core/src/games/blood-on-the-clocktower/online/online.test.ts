@@ -439,7 +439,6 @@ describe("payload budget", () => {
       if (!r.ok) throw new Error(r.reason);
       game = r.game;
     }
-    const started = performance.now();
     let largest = 0;
     for (let seat = 0; seat < game.names.length; seat++) {
       const size = JSON.stringify(
@@ -447,10 +446,9 @@ describe("payload budget", () => {
       ).length;
       if (seat > 0) largest = Math.max(largest, size);
     }
-    const elapsed = performance.now() - started;
+    // The chat cap and the payload size are what keep 21 projections per
+    // transition cheap; both are counted here, not timed (docs/testing.md).
     expect(game.chat.length).toBeLessThanOrEqual(1000);
     expect(largest).toBeLessThan(64 * 1024);
-    // Generous: 21 projections per transition must stay far from blocking the server.
-    expect(elapsed).toBeLessThan(500);
   });
 });

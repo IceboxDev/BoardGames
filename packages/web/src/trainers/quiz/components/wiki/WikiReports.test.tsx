@@ -1,9 +1,10 @@
 import type { MyReport, MyReports } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { testQueryClient } from "../../../../test/query-client";
 
 // Your reports: outcomes with the reviewer's note, new ones highlighted and
 // marked seen on the visit, and open ones withdrawable after a confirm.
@@ -52,7 +53,7 @@ function report(id: number, over: Partial<MyReport>): MyReport {
 }
 
 function renderPage() {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   return render(
     <QueryClientProvider client={qc}>
       <MemoryRouter>

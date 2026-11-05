@@ -75,7 +75,7 @@ describe.skipIf(!installed("stockfish"))("Stockfish", () => {
       seed: 1,
     });
     expect(legalMoves(parseFen(fen)).map(moveToUci)).toContain(uci);
-  }, 30_000);
+  });
 });
 
 describe.skipIf(!installed("fairy-stockfish-nnue.wasm"))("Fairy-Stockfish bughouse", () => {
@@ -92,5 +92,5 @@ describe.skipIf(!installed("fairy-stockfish-nnue.wasm"))("Fairy-Stockfish bughou
       seed: 1,
     });
     expect(legalMoves(parseFen(fen, { bughouse: true })).map(moveToUci)).toContain(uci);
-  }, 40_000);
+  });
 });

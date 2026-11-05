@@ -1,8 +1,9 @@
 import type { CalendarLocks, LockedDate, SessionUser } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { renderHook, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { testQueryClient } from "../../../test/query-client";
 
 // Mock the session hook and the locks fetcher BEFORE importing the
 // extension. Tests drive the hook purely from a seeded QueryClient — the
@@ -23,6 +24,12 @@ import { useCurrentUser } from "../../../hooks/useCurrentUser.ts";
 import { dateKey } from "../../offline-availability.ts";
 import { qk } from "../../query-keys.ts";
 import voteLeaderExtension from "./vote-leader.ts";
+
+// A fixed noon: the days and windows below must not depend on when the test
+// runs (docs/testing.md). Only Date is faked — timers stay real.
+beforeEach(() => {
+  vi.useFakeTimers({ toFake: ["Date"], now: new Date(2026, 5, 15, 12) });
+});
 
 const mockUseCurrentUser = vi.mocked(useCurrentUser);
 
@@ -71,7 +78,7 @@ function keyFor(daysFromToday: number): string {
 }
 
 function renderAccent(seed?: CalendarLocks, active = true) {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   if (seed) qc.setQueryData(qk.calendarLocks(), seed);
   const wrapper = ({ children }: { children: ReactNode }) => (
     <QueryClientProvider client={qc}>{children}</QueryClientProvider>

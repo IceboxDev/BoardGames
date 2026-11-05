@@ -63,6 +63,6 @@ describe("perft", () => {
       all.forEach((expected, i) => {
         expect(perft(pos, i + 1), `depth ${i + 1}`).toBe(expected);
       });
-    }, 60_000);
+    });
   }
 });

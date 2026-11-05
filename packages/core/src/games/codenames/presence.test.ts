@@ -97,7 +97,7 @@ describe("presence in the machine", () => {
     });
     expect(validated.ok).toBe(true);
     if (validated.ok) actor.send(validated.event);
-    await waitFor(actor, (s) => phaseOf(s) === "guessing", { timeout: 2000 });
+    await waitFor(actor, (s) => phaseOf(s) === "guessing");
     const view = codenamesSpec.getPlayerView(actor.getSnapshot(), other);
     expect(view.seats[team]).toMatchObject({ standIn: true, ai: true });
     expect(view.clue).not.toBeNull();
@@ -116,7 +116,7 @@ describe("presence in the machine", () => {
     expect(actor.getSnapshot().context.game.aiThinking).toBe(team);
     actor.send({ type: "SEAT_CONNECTION", seat: team, connected: true });
     expect(actor.getSnapshot().context.game.reclaims).toEqual([team]);
-    await waitFor(actor, (s) => phaseOf(s) === "guessing", { timeout: 2000 });
+    await waitFor(actor, (s) => phaseOf(s) === "guessing");
     const game = actor.getSnapshot().context.game;
     expect(game.ai[team]).toBeNull();
     expect(game.standIns).toEqual([]);

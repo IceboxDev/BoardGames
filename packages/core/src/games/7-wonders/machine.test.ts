@@ -156,18 +156,18 @@ describe("sevenWondersMachine", () => {
         action: { type: "discard", cardId: gs.hands[i][0] },
       });
     }
-    await waitFor(actor, (s) => s.context.gameState.turn === 2, { timeout: 2000 });
+    await waitFor(actor, (s) => s.context.gameState.turn === 2);
     const next = actor.getSnapshot().context.gameState;
     expect(next.players.every((p) => p.coins === 6)).toBe(true);
     actor.stop();
-  }, 10000);
+  });
 
   it("plays a full all-AI game to completion with a valid result", async () => {
     const actor = createActor(fastMachine);
     actor.start();
     actor.send({ type: "START", strategies: ["random", "random", "random"], seed: 99 });
 
-    await waitFor(actor, (s) => s.matches("gameOver"), { timeout: 30000 });
+    await waitFor(actor, (s) => s.matches("gameOver"));
 
     const snapshot = actor.getSnapshot();
     expect(sevenWondersSpec.isGameOver(snapshot)).toBe(true);
@@ -189,7 +189,7 @@ describe("sevenWondersMachine", () => {
       expect(p.coins).toBeGreaterThanOrEqual(0);
     }
     actor.stop();
-  }, 40000);
+  });
 
   it("plays a 7-player all-AI game to completion", async () => {
     const actor = createActor(fastMachine);
@@ -199,9 +199,9 @@ describe("sevenWondersMachine", () => {
       strategies: ["random", "random", "random", "random", "random", "random", "random"],
       seed: 123,
     });
-    await waitFor(actor, (s) => s.matches("gameOver"), { timeout: 30000 });
+    await waitFor(actor, (s) => s.matches("gameOver"));
     const result = sevenWondersSpec.getResult(actor.getSnapshot());
     expect(result?.totals).toHaveLength(7);
     actor.stop();
-  }, 40000);
+  });
 });

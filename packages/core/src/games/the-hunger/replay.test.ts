@@ -27,5 +27,5 @@ describe("rebuildReplay", () => {
     expect(seats).toHaveLength(3);
     expect(seats.reduce((sum, b) => sum + b.won, 0)).toBeCloseTo(1);
     expect(seats.every((b) => b.hunts > 0)).toBe(true);
-  }, 60_000);
+  });
 });

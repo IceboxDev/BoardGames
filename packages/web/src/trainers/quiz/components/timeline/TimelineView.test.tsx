@@ -1,9 +1,10 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { testQueryClient } from "../../../../test/query-client";
 import { trainerPaths } from "../../paths";
 import { PREVIEW_TIMELINE } from "./preview-fixture";
 import { TimelineView } from "./TimelineView";
@@ -46,7 +47,7 @@ function Harness({ initial = null, empty = false }: { initial?: string | null; e
 }
 
 function renderView(props: { initial?: string | null; empty?: boolean } = {}) {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   return render(
     <QueryClientProvider client={qc}>
       <MemoryRouter>

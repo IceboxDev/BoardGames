@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { AdminUser } from "../types";
@@ -19,6 +19,7 @@ vi.mock("../../../hooks/useAdminUsers", () => ({
 }));
 
 import { qk } from "../../../lib/query-keys";
+import { testQueryClient } from "../../../test/query-client";
 import { ActivityDrawer } from "./ActivityDrawer";
 
 const USER: AdminUser = {
@@ -34,7 +35,7 @@ function entry(id: number) {
 }
 
 function renderDrawer() {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   const invalidate = vi.spyOn(qc, "invalidateQueries");
   render(
     <QueryClientProvider client={qc}>

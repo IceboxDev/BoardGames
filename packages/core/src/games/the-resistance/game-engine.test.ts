@@ -105,7 +105,7 @@ describe("engine", () => {
         ).toBe(true);
       }
     }
-  }, 60_000);
+  });
 });
 
 describe("player view", () => {

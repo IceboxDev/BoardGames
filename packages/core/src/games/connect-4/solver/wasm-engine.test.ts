@@ -50,22 +50,16 @@ describe("the WebAssembly engine", () => {
     }
   });
 
-  it("agrees on 7×6 middle games too, and searches faster", () => {
+  it("agrees on 7×6 middle games too", () => {
+    // How much faster it is depends on the machine, so that is measured in
+    // the browser and on the farm, never asserted here (docs/testing.md).
     const [js, wasm] = pair(7, 6);
-    let jsMs = 0;
-    let wasmMs = 0;
     for (let seed = 1; seed <= 8; seed++) {
       const line = randomLine(js, 7, 14 + (seed % 6), seed);
       js.setMoves(line);
       wasm.setMoves(line);
-      let t = performance.now();
-      const expected = js.solve();
-      jsMs += performance.now() - t;
-      t = performance.now();
-      expect(wasm.solve(), line.join("")).toBe(expected);
-      wasmMs += performance.now() - t;
+      expect(wasm.solve(), line.join("")).toBe(js.solve());
     }
-    console.info(`7×6 solves: JS ${jsMs.toFixed(0)} ms, WebAssembly ${wasmMs.toFixed(0)} ms`);
   });
 
   it("stops at its node budget, as the JS search does", () => {

@@ -320,6 +320,20 @@ async function playToEnd(slug: string, seatCount: number, seed: number): Promise
   actor.stop();
 }
 
+// Every AI thinks in this process, on the fake clock the loop below drives. A
+// worker thread or engine process would answer in REAL time, which a fake-time
+// stall check can't wait for — so whether a game finished would depend on how
+// fast the machine thinks (docs/testing.md).
+for (const pool of [
+  "GO_AI_WORKERS",
+  "CONNECT4_AI_WORKERS",
+  "HUNGER_AI_WORKERS",
+  "CHESS_AI_ENGINES",
+  "BUGHOUSE_AI_ENGINES",
+]) {
+  process.env[pool] = "0";
+}
+
 beforeAll(() => {
   // Quiztopia deals from the real content the server ships.
   setQuestionSource(getContentStore());
@@ -340,5 +354,5 @@ describe.each(getRegisteredSlugs())("%s plays to a well-formed end", (slug) => {
 
   it.each(sizes)("at %i seats", async (seats) => {
     await playToEnd(slug, seats, 1_000 + seats);
-  }, 120_000);
+  });
 });

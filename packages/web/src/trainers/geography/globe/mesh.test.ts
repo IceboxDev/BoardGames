@@ -45,5 +45,5 @@ describe("land mesh", () => {
       if (vertices.has(mid)) tJunctions++;
     }
     expect(tJunctions).toBe(0);
-  }, 30000);
+  });
 });

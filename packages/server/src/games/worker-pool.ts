@@ -12,6 +12,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { Worker } from "node:worker_threads";
+import { liveDeadline } from "../lib/live-deadline.ts";
 
 const MAX_RESPAWNS = 5;
 
@@ -135,7 +136,7 @@ export function createWorkerPool<TJob, TResult>(options: {
         // A timed-out job may still be running; its slot frees when it answers.
         for (const slot of slots) slot.pending.delete(id);
         reject(new Error("AI decision timed out"));
-      }, timeoutMs);
+      }, liveDeadline(timeoutMs));
       queue.push({ id, job, p: { resolve, reject, timer } });
       drain();
     });

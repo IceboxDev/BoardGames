@@ -1,10 +1,11 @@
 import type { RepertoireTree } from "@boardgames/core/games/chess/trainer/tree";
 import { TreeSettingsSchema } from "@boardgames/core/games/chess/trainer/tree";
 import type { Repertoire } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { testQueryClient } from "../../../test/query-client";
 import type { FromWorker, ToWorker } from "./build.worker";
 import { useTreeBuild } from "./useTreeBuild";
 
@@ -66,7 +67,7 @@ afterEach(() => vi.unstubAllGlobals());
 
 describe("useTreeBuild", () => {
   it("runs one build at a time: a second ask stops the first and starts after it", async () => {
-    const client = new QueryClient();
+    const client = testQueryClient();
     const wrapper = ({ children }: { children: ReactNode }) => (
       <QueryClientProvider client={client}>{children}</QueryClientProvider>
     );

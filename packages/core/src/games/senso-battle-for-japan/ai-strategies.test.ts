@@ -64,7 +64,7 @@ describe("strategies", () => {
     configureSearch(live);
     configureTenka(liveTenka);
     configureKami(liveKami);
-  }, 60_000);
+  });
 
   it("falls back to a legal action when a strategy throws or returns garbage", () => {
     const error = vi.spyOn(console, "error").mockImplementation(() => {});

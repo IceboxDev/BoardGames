@@ -22,6 +22,7 @@ import { type ChildProcessWithoutNullStreams, spawn } from "node:child_process";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { createInterface } from "node:readline";
+import { liveDeadline } from "../lib/live-deadline.ts";
 
 const require = createRequire(import.meta.url);
 
@@ -136,7 +137,7 @@ class UciEngine {
       const timer = setTimeout(() => {
         this.waiter = null;
         reject(new Error(`chess engine timed out waiting for ${match}`));
-      }, timeoutMs);
+      }, liveDeadline(timeoutMs));
       this.waiter = {
         match,
         resolve: (line) => {

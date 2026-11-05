@@ -107,6 +107,15 @@ function startTable(human: ReturnType<typeof autoplayer>) {
   return started.sessionId;
 }
 
+/** A promise and the function that settles it: what a test waits on instead of a deadline. */
+function signal<T>() {
+  let resolve!: (value: T) => void;
+  const promise = new Promise<T>((r) => {
+    resolve = r;
+  });
+  return { promise, resolve };
+}
+
 let sessionId: string | null = null;
 
 afterEach(() => {
@@ -119,39 +128,36 @@ afterEach(() => {
 describe("afterGameOver", () => {
   it("runs once the players have their game-over frame, with the session's facts", async () => {
     const human = autoplayer();
-    const calls: { ended: EndedGame; frameSent: boolean }[] = [];
+    const called = signal<{ ended: EndedGame; frameSent: boolean }>();
     hook.impl = async (ended) => {
-      calls.push({ ended, frameSent: human.sent.some((m) => m.type === "game-over") });
+      called.resolve({ ended, frameSent: human.sent.some((m) => m.type === "game-over") });
     };
     sessionId = startTable(human);
 
-    await vi.waitFor(() => expect(calls.length).toBeGreaterThan(0), { timeout: 20_000 });
-    const [{ ended, frameSent }] = calls;
+    // However long the game takes to play out: the hook running is the signal.
+    const { ended, frameSent } = await called.promise;
     expect(frameSent).toBe(true);
     expect(ended.sessionId).toBe(sessionId);
     expect(ended.roomCode).toBe("TESTRM");
     expect(ended.seatUserIds).toEqual(["member-1", null]);
     expect(ended.replayLog).not.toBeNull();
     expect(ended.endedAt).toBeInstanceOf(Date);
-  }, 20_000);
+  });
 
   it("contains a throwing hook: it is logged and nothing else breaks", async () => {
-    const errors = vi.spyOn(console, "error").mockImplementation(() => {});
-    let ran = false;
+    const logged = signal<unknown[]>();
+    vi.spyOn(console, "error").mockImplementation((...args: unknown[]) => {
+      if (String(args[0]).includes("[afterGameOver]")) logged.resolve(args);
+    });
     hook.impl = async () => {
-      ran = true;
       throw new Error("follow-up write failed");
     };
     const human = autoplayer();
     sessionId = startTable(human);
 
-    await vi.waitFor(() => expect(ran).toBe(true), { timeout: 20_000 });
-    await vi.waitFor(() =>
-      expect(errors).toHaveBeenCalledWith(
-        expect.stringContaining("[afterGameOver] durak"),
-        expect.any(Error),
-      ),
-    );
+    const [message, error] = await logged.promise;
+    expect(message).toContain("[afterGameOver] durak");
+    expect(error).toBeInstanceOf(Error);
     expect(human.sent.some((m) => m.type === "game-over")).toBe(true);
-  }, 20_000);
+  });
 });

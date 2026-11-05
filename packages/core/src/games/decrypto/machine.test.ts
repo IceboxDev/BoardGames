@@ -64,11 +64,11 @@ function send(actor: Actor, player: number, action: unknown): { ok: boolean; rea
 }
 
 async function waitForPhase(actor: Actor, phase: string): Promise<void> {
-  await waitFor(actor, (s) => phaseOf(s) === phase, { timeout: 5000 });
+  await waitFor(actor, (s) => phaseOf(s) === phase);
 }
 
 async function waitForGameOver(actor: Actor): Promise<void> {
-  await waitFor(actor, (s) => decryptoSpec.isGameOver(s), { timeout: 10_000 });
+  await waitFor(actor, (s) => decryptoSpec.isGameOver(s));
 }
 
 afterEach(() => {
@@ -172,16 +172,14 @@ describe("decrypto machine — human flow", () => {
     expect(send(actor, 1, { kind: "submit-guess", purpose: "decode", code: wrong }).ok).toBe(false);
 
     // Black's transmission: seat 3 decodes it EXACTLY (test reads the code).
-    await waitFor(actor, (s) => s.context.txIdx === 1 && phaseOf(s) === "guessing", {
-      timeout: 5000,
-    });
+    await waitFor(actor, (s) => s.context.txIdx === 1 && phaseOf(s) === "guessing");
     ctx = actor.getSnapshot().context;
     const blackCode = [...(ctx.current[1]?.code as Code)] as Code;
     expect(send(actor, 3, { kind: "submit-guess", purpose: "decode", code: blackCode }).ok).toBe(
       true,
     );
 
-    await waitFor(actor, (s) => s.context.history.length === 1, { timeout: 5000 });
+    await waitFor(actor, (s) => s.context.history.length === 1);
     ctx = actor.getSnapshot().context;
     expect(ctx.teams[0].miscommunications).toBe(1); // White decoded wrong
     expect(ctx.teams[1].miscommunications).toBe(0);
@@ -301,7 +299,7 @@ describe("decrypto machine — AI encrypt failure", () => {
       guess: (input) => scriptedAgent.guess(input),
     });
     const actor = startActor({ humanPlayers: [] });
-    await waitFor(actor, (s) => s.context.history.length === 1, { timeout: 5000 });
+    await waitFor(actor, (s) => s.context.history.length === 1);
     const round1 = actor.getSnapshot().context.history[0];
     for (const t of round1?.transmissions ?? []) {
       expect(t.skipped).toBe(true);
@@ -321,7 +319,7 @@ describe("decrypto machine — AI encrypt failure", () => {
       guess: (input) => scriptedAgent.guess(input),
     });
     const actor = startActor({ humanPlayers: [] });
-    await waitFor(actor, (s) => s.context.history.length === 1, { timeout: 5000 });
+    await waitFor(actor, (s) => s.context.history.length === 1);
     const round1 = actor.getSnapshot().context.history[0];
     expect(round1?.transmissions.every((t) => t.skipped && t.skipReason === "ai")).toBe(true);
     actor.stop();
@@ -336,11 +334,11 @@ describe("decrypto machine — clue timer", () => {
 
     expect(send(actor, 0, { kind: "submit-clues", clues: ["one", "two", "three"] }).ok).toBe(true);
     // The timer armed against the remaining HUMAN encryptor (seat 2).
-    await waitFor(actor, (s) => s.context.clueTimerDeadlineTs !== null, { timeout: 5000 });
+    await waitFor(actor, (s) => s.context.clueTimerDeadlineTs !== null);
 
     // Let it expire; Black's transmission is skipped and resolves as a
     // miscommunication. White's own decode is AI-driven (seat 1).
-    await waitFor(actor, (s) => s.context.history.length === 1, { timeout: 5000 });
+    await waitFor(actor, (s) => s.context.history.length === 1);
     const ctx = actor.getSnapshot().context;
     const black = ctx.history[0]?.transmissions.find((t) => t.team === 1);
     expect(black?.skipped).toBe(true);
@@ -357,7 +355,7 @@ describe("decrypto machine — clue timer", () => {
     const sub = actor.subscribe((s) => {
       if (s.context.clueTimerDeadlineTs !== null) sawDeadline = true;
     });
-    await waitFor(actor, (s) => phaseOf(s) === "guessing", { timeout: 5000 });
+    await waitFor(actor, (s) => phaseOf(s) === "guessing");
     expect(sawDeadline).toBe(false);
     sub.unsubscribe();
     actor.stop();

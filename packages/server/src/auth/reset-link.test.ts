@@ -23,7 +23,8 @@ describe("withResetCapture", () => {
   it("keeps concurrent captures isolated", async () => {
     const [a, b] = await Promise.all([
       withResetCapture(async () => {
-        await new Promise((r) => setTimeout(r, 5));
+        // Yield, so B's capture runs while A's scope is still open.
+        await new Promise((r) => setTimeout(r, 0));
         captureResetToken("A");
       }),
       withResetCapture(async () => {

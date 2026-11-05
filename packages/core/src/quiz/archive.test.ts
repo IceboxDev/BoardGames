@@ -83,7 +83,7 @@ describe("quiz card archive", () => {
             expect(sha, f.file).toBe(f.sha256Stored);
           }
         }
-      }, 60_000); // ~1 GB a source: a cold disk cache can take seconds
+      });
     });
   }
 

@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -20,13 +20,14 @@ vi.mock("../../lib/inventory", () => ({
   adminSetInventoryNew: (...args: unknown[]) => setNewMock(...args),
 }));
 
+import { testQueryClient } from "../../test/query-client";
 import { InventoryPanel } from "./InventoryPanel";
 
 const WINGSPAN = resolveInventoryEntry("wingspan").title;
 const AZUL = resolveInventoryEntry("azul").title;
 
 function renderPanel() {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   return render(
     <QueryClientProvider client={qc}>
       <InventoryPanel userId="u1" />

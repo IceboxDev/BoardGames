@@ -12,10 +12,16 @@ import { viewFor } from "@boardgames/core/games/blood-on-the-clocktower/online/v
 import { bagCharacterReplacements } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { act, fireEvent, render, screen, within } from "@testing-library/react";
 import { useSyncExternalStore } from "react";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { type BotcOnlineApi, BotcOnlineContext, stamp } from "./context";
 import { PlayerScreen } from "./player/PlayerScreen";
 import { StorytellerScreen } from "./storyteller/StorytellerScreen";
+
+// A fixed noon: the days and windows below must not depend on when the test
+// runs (docs/testing.md). Only Date is faked — timers stay real.
+beforeEach(() => {
+  vi.useFakeTimers({ toFake: ["Date"], now: new Date(2026, 5, 15, 12) });
+});
 
 // The real reducer behind the real screens, in one process: a tiny "server"
 // the screens send to, and a seat switch to look through each player's eyes.

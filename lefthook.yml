@@ -12,6 +12,10 @@ pre-commit:
       priority: 2
       glob: "packages/web/src/**/*.{ts,tsx}"
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" node scripts/lint-styles.mjs
+    test-guard:
+      priority: 2
+      glob: "packages/*/src/**/*.test.{ts,tsx}"
+      run: node scripts/lint-tests.mjs
     typecheck-and-test:
       priority: 3
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" node scripts/pre-commit-checks.mjs {staged_files}

@@ -10,5 +10,5 @@ describe("Go AI worker pool", () => {
     expect(reply.degraded).toBe(false);
     expect(reply.point).not.toBeNull();
     expect(await ai.deadStones(game)).toEqual([]);
-  }, 30_000);
+  });
 });

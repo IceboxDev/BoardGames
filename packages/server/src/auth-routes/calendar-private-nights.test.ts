@@ -9,6 +9,7 @@ import { type Client, createClient } from "@libsql/client";
 import { Hono } from "hono";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
+import { activityWritesSettled } from "../lib/activity-log.ts";
 import { runMigrations } from "../migrations/migrator.ts";
 
 const db = vi.hoisted(() => ({ current: null as Client | null }));
@@ -692,7 +693,7 @@ describe("private nights", () => {
     // accent colour; logging it used to invent "Viewed X's profile" lines.
     const res = await as(OUT).request(`/api/profiles/${A}`);
     expect(res.status).toBe(200);
-    await new Promise((r) => setTimeout(r, 20));
+    await activityWritesSettled();
     const { rows } = await client.execute({
       sql: "SELECT type FROM activity_log WHERE user_id = ?",
       args: [OUT],

@@ -1,9 +1,10 @@
 import { DEFAULT_QUIZ_SETTINGS, type QuizSettings } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { qk } from "../../../lib/query-keys";
+import { testQueryClient } from "../../../test/query-client";
 
 // Saves never lose or revert a change: each builds on the latest cache, PUTs
 // go out one at a time in order, and an earlier reply never paints over a
@@ -32,7 +33,7 @@ function deferred<T>() {
 }
 
 function setup() {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   const wrapper = ({ children }: { children: ReactNode }) => (
     <QueryClientProvider client={qc}>{children}</QueryClientProvider>
   );

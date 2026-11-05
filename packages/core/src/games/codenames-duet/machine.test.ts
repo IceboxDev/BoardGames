@@ -26,7 +26,7 @@ function start(agent: CodenamesAiAgent | null, ai: (string | null)[] = [AI, AI])
 describe("duet machine", () => {
   it("the fallback pair plays a whole game to a result", async () => {
     const actor = start(null);
-    await waitFor(actor, (s) => duetSpec.isGameOver(s), { timeout: 10_000 });
+    await waitFor(actor, (s) => duetSpec.isGameOver(s));
     const outcome = duetSpec.getOutcome(actor.getSnapshot());
     expect(outcome?.kind).toBe("coop");
     expect(DuetReplayLogSchema.parse(duetSpec.getReplayLog(actor.getSnapshot()))).toBeTruthy();
@@ -42,7 +42,7 @@ describe("duet machine", () => {
       guess: async () => ({ picks: targets }),
     };
     const actor = start(agent);
-    await waitFor(actor, (s) => duetSpec.isGameOver(s), { timeout: 10_000 });
+    await waitFor(actor, (s) => duetSpec.isGameOver(s));
     expect(actor.getSnapshot().context.game.result).toMatchObject({ won: true });
   });
 

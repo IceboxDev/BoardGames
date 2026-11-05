@@ -1,7 +1,8 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { describe, expect, it, vi } from "vitest";
+import { querySettled, testQueryClient } from "../../test/query-client";
 import { RecordMatchModal } from "./RecordMatchModal";
 
 // A campaign night (picks locked on a campaign game) plays that one game, so
@@ -32,8 +33,10 @@ vi.mock("../../hooks/useAdminUsers", () => ({
   useAdminUsers: () => ({ data: [] }),
 }));
 
+let qc = testQueryClient();
+
 function wrap(children: ReactNode) {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  qc = testQueryClient();
   return <QueryClientProvider client={qc}>{children}</QueryClientProvider>;
 }
 
@@ -64,7 +67,7 @@ describe("RecordMatchModal — campaign nights", () => {
       ),
     );
     // Let the locks query settle before asserting nothing was filled in.
-    await new Promise((r) => setTimeout(r, 50));
+    await querySettled(qc);
     expect(gameInput().value).toBe("");
   });
 });

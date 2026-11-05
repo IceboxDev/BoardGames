@@ -1,5 +1,5 @@
 import type { SessionUser } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { type QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { act, render } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -18,6 +18,7 @@ vi.mock("../lib/query-persister", () => ({
 }));
 
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
+import { testQueryClient } from "../test/query-client";
 
 const mockUseCurrentUser = vi.mocked(useCurrentUser);
 
@@ -43,7 +44,7 @@ beforeEach(() => {
 describe("AuthInvalidator", () => {
   it("does nothing while the session is still loading (first paint)", () => {
     mockUseCurrentUser.mockReturnValue({ user: null, isLoading: true, isAdmin: false } as Result);
-    const qc = new QueryClient();
+    const qc = testQueryClient();
     const Wrapper = withClient(qc);
     qc.setQueryData(["x"], "hello");
     render(
@@ -64,7 +65,7 @@ describe("AuthInvalidator", () => {
       isLoading: false,
       isAdmin: false,
     } as Result);
-    const qc = new QueryClient();
+    const qc = testQueryClient();
     qc.setQueryData(["x"], "hello");
     const Wrapper = withClient(qc);
     render(
@@ -79,7 +80,7 @@ describe("AuthInvalidator", () => {
   it("wipes the cache + persister when the user id changes (sign-out → sign-in as someone else)", () => {
     let result: Result = { user: userWithId("u1"), isLoading: false, isAdmin: false } as Result;
     mockUseCurrentUser.mockImplementation(() => result);
-    const qc = new QueryClient();
+    const qc = testQueryClient();
     qc.setQueryData(["x"], "hello");
     const Wrapper = withClient(qc);
     const { rerender } = render(
@@ -104,7 +105,7 @@ describe("AuthInvalidator", () => {
   it("wipes when the user signs out (user id goes from set to null)", () => {
     let result: Result = { user: userWithId("u1"), isLoading: false, isAdmin: false } as Result;
     mockUseCurrentUser.mockImplementation(() => result);
-    const qc = new QueryClient();
+    const qc = testQueryClient();
     qc.setQueryData(["x"], "hello");
     const Wrapper = withClient(qc);
     const { rerender } = render(
@@ -130,7 +131,7 @@ describe("AuthInvalidator", () => {
       isLoading: false,
       isAdmin: false,
     } as Result);
-    const qc = new QueryClient();
+    const qc = testQueryClient();
     qc.setQueryData(["x"], "hello");
     const Wrapper = withClient(qc);
     const { rerender } = render(

@@ -76,7 +76,7 @@ describe("sensoMachine — all-AI games", () => {
     expect(result?.scores).toHaveLength(2);
     expect(result?.placements).toHaveLength(2);
     actor.stop();
-  }, 30_000);
+  });
 
   it("plays a 5-player game with an Emperor seat that moves as a clan and strikes as nobody", async () => {
     const actor = start(["heuristic-v1", "aggressive", "random", "random", "heuristic-v1"], 8);
@@ -93,7 +93,7 @@ describe("sensoMachine — all-AI games", () => {
     }
     expect(sensoSpec.getResult(snapshot)?.scores).toHaveLength(5);
     actor.stop();
-  }, 30_000);
+  });
 
   it("produces the same final board for the same seed", async () => {
     const a = start(["heuristic-v1", "aggressive", "random"], 99);
@@ -106,7 +106,7 @@ describe("sensoMachine — all-AI games", () => {
     expect(sensoSpec.getResult(a.getSnapshot())).toEqual(sensoSpec.getResult(b.getSnapshot()));
     a.stop();
     b.stop();
-  }, 30_000);
+  });
 });
 
 describe("sensoMachine — a human seat", () => {
@@ -163,7 +163,7 @@ describe("sensoMachine — a human seat", () => {
     }
     expect(actor.getSnapshot().matches("gameOver")).toBe(true);
     actor.stop();
-  }, 30_000);
+  });
 });
 
 describe("sensoSpec — replay log", () => {
@@ -181,5 +181,5 @@ describe("sensoSpec — replay log", () => {
     expect(outcome?.kind).toBe("ranked");
     expect(outcome?.kind === "ranked" && outcome.placements).toEqual(log?.placements);
     actor.stop();
-  }, 30_000);
+  });
 });

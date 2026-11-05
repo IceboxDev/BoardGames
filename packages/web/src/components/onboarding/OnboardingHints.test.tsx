@@ -1,5 +1,5 @@
 import type { HintId } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useEffect } from "react";
@@ -27,6 +27,7 @@ vi.mock("../../lib/greetings", () => ({
   fetchGreeting: async () => ({ greeting: null, players: {} }),
 }));
 
+import { querySettled, testQueryClient } from "../../test/query-client";
 import { OnboardingHintsProvider, useOnboardingHint } from "./OnboardingHints";
 
 function Control({ hint: id }: { hint: HintId }) {
@@ -52,7 +53,7 @@ function Control({ hint: id }: { hint: HintId }) {
   return <span data-tour={id}>{id}</span>;
 }
 
-function renderWith(qc = new QueryClient({ defaultOptions: { queries: { retry: false } } })) {
+function renderWith(qc = testQueryClient()) {
   return render(
     <QueryClientProvider client={qc}>
       <OnboardingHintsProvider>
@@ -87,16 +88,17 @@ describe("onboarding hints", () => {
 
   it("shows nothing when no hint is due", async () => {
     due = [];
-    renderWith();
-    await new Promise((r) => setTimeout(r, 30));
+    const qc = testQueryClient();
+    renderWith(qc);
+    await querySettled(qc);
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 
   it("waits while a popup greeting is up", async () => {
-    const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    const qc = testQueryClient();
     qc.setQueryData(qk.greetings(), { greeting: { kind: "onboarding" }, players: {} });
     renderWith(qc);
-    await new Promise((r) => setTimeout(r, 30));
+    await querySettled(qc);
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     qc.setQueryData(qk.greetings(), { greeting: null, players: {} });
     await waitFor(() =>

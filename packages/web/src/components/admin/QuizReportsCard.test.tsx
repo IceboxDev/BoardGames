@@ -1,5 +1,5 @@
 import type { AdminReports } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
@@ -20,6 +20,7 @@ vi.mock("../../trainers/quiz/api", () => ({
   reopenReport: (id: number) => reopenMock(id),
 }));
 
+import { testQueryClient } from "../../test/query-client";
 import { QuizReportsCard } from "./QuizReportsCard";
 
 const NOW = {
@@ -65,7 +66,7 @@ function baseQueue(): AdminReports {
 }
 
 function renderCard() {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const qc = testQueryClient();
   return render(
     <QueryClientProvider client={qc}>
       <MemoryRouter>

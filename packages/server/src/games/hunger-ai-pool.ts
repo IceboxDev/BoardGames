@@ -19,6 +19,7 @@ import { pathToFileURL } from "node:url";
 import { Worker } from "node:worker_threads";
 import type { AiOffload } from "@boardgames/core/games/the-hunger/ai-strategies";
 import type { Action, GameState } from "@boardgames/core/games/the-hunger/types";
+import { liveDeadline } from "../lib/live-deadline.ts";
 
 const TIMEOUT_MS = 15_000;
 /** Crashes tolerated before the pool gives up and search bots fall back for good. */
@@ -135,7 +136,7 @@ function createPool(size: number, file: { path: string; isDev: boolean }): AiOff
         if (idx !== -1) queue.splice(idx, 1);
         for (const slot of slots) slot.pending.delete(id);
         reject(new Error("AI decision timed out"));
-      }, TIMEOUT_MS);
+      }, liveDeadline(TIMEOUT_MS));
       queue.push({ id, state, p: { resolve, reject, timer } });
       drain();
     });

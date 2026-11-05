@@ -12,6 +12,7 @@ vi.mock("../db.ts", () => ({
 }));
 
 const {
+  activityWritesSettled,
   logActivity,
   markSeen,
   nextActivityStamp,
@@ -75,10 +76,9 @@ describe("activity rows", () => {
 
   /** Wait for fire-and-forget inserts to land. */
   async function settle(n: number): Promise<void> {
-    await vi.waitFor(async () => {
-      const { rows } = await client.execute("SELECT COUNT(*) AS n FROM activity_log");
-      expect(Number(rows[0]?.n)).toBe(n);
-    });
+    await activityWritesSettled();
+    const { rows } = await client.execute("SELECT COUNT(*) AS n FROM activity_log");
+    expect(Number(rows[0]?.n)).toBe(n);
   }
 
   it("stamps each row with the time it was handled, so the trail keeps that order", async () => {

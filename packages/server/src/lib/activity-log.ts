@@ -27,6 +27,18 @@ import { getDb } from "../db.ts";
 
 let lastStamp = 0;
 
+/** Inserts not yet settled — so a test can wait for them instead of polling. */
+const inFlight = new Set<Promise<void>>();
+
+/**
+ * Resolves once every activity insert started so far has landed (or failed
+ * and been logged) — for tests: a trail is asserted after it, never polled
+ * against a deadline (docs/testing.md).
+ */
+export async function activityWritesSettled(): Promise<void> {
+  while (inFlight.size > 0) await Promise.all(inFlight);
+}
+
 /**
  * Epoch ms for a new event, strictly increasing within this process: two
  * events handled in the same millisecond still sort in the order they were
@@ -38,7 +50,7 @@ export function nextActivityStamp(now: number = Date.now()): number {
 }
 
 function insert(userId: string, type: string, meta: object, stamp: number): Promise<void> {
-  return getDb()
+  const write = getDb()
     .execute({
       sql: "INSERT INTO activity_log (user_id, type, meta_json, logged_at_ms) VALUES (?, ?, ?, ?)",
       args: [userId, type, JSON.stringify(meta), stamp],
@@ -48,7 +60,10 @@ function insert(userId: string, type: string, meta: object, stamp: number): Prom
       (err: unknown) => {
         console.error(`[activity] failed to log ${type} for ${userId}:`, err);
       },
-    );
+    )
+    .finally(() => inFlight.delete(write));
+  inFlight.add(write);
+  return write;
 }
 
 /** The meta argument: optional when every field of the type's meta is. */
@@ -96,7 +111,7 @@ export function noteVisit(userId: string): void {
   // Stamp now, before the probe: the visit must sort ahead of whatever this
   // same request logs while the probe is in flight.
   const stamp = nextActivityStamp(now);
-  pendingProbe = getDb()
+  const probe = getDb()
     .execute({
       sql: "SELECT MAX(sort_ms) AS last FROM activity_log WHERE user_id = ? AND sort_ms < ?",
       args: [userId, stamp],
@@ -109,7 +124,10 @@ export function noteVisit(userId: string): void {
       },
       // Can't tell — err on the side of the old behaviour and log it.
       () => insert(userId, "visit", {}, stamp),
-    );
+    )
+    .finally(() => inFlight.delete(probe));
+  inFlight.add(probe);
+  pendingProbe = probe;
 }
 
 /**

@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { QueryClientProvider, useQuery } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -21,7 +21,14 @@ vi.mock("../../lib/offline-availability", async (importOriginal) => {
   };
 });
 
+import { testQueryClient } from "../../test/query-client";
 import { AvailabilityDrawer } from "./AvailabilityDrawer";
+
+// A fixed noon: the days and windows below must not depend on when the test
+// runs (docs/testing.md). Only Date is faked — timers stay real.
+beforeEach(() => {
+  vi.useFakeTimers({ toFake: ["Date"], now: new Date(2026, 5, 15, 12) });
+});
 
 const USER = { id: "u1", name: "Paul", email: "paul@example.com" } as AdminUser;
 
@@ -63,9 +70,7 @@ function DrawerHost() {
 }
 
 function renderDrawer(awayDays: string[]) {
-  const qc = new QueryClient({
-    defaultOptions: { queries: { retry: false, staleTime: Number.POSITIVE_INFINITY } },
-  });
+  const qc = testQueryClient({ staleTime: Number.POSITIVE_INFINITY });
   server.awayByUser = { [USER.id]: awayDays };
   qc.setQueryData(qk.adminAwayDays(), server.awayByUser);
   render(

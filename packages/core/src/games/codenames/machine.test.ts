@@ -51,7 +51,7 @@ const view = (actor: Actor, seat: number): CodenamesPlayerView =>
   codenamesSpec.getPlayerView(actor.getSnapshot(), seat);
 
 async function gameOver(actor: Actor): Promise<void> {
-  await waitFor(actor, (s) => codenamesSpec.isGameOver(s), { timeout: 10_000 });
+  await waitFor(actor, (s) => codenamesSpec.isGameOver(s));
 }
 
 /**
@@ -301,7 +301,7 @@ describe("codenames machine — timers", () => {
     const actor = startActor({ ai: [null, null, null, null], clueTimerSec: 0.05 });
     const first = actor.getSnapshot().context.game.currentTeam;
     expect(view(actor, 2).deadlineTs).not.toBeNull();
-    await waitFor(actor, (s) => s.context.game.currentTeam !== first, { timeout: 2000 });
+    await waitFor(actor, (s) => s.context.game.currentTeam !== first);
     expect(actor.getSnapshot().context.game.turns[0]?.end).toBe("clue-timeout");
   });
 
@@ -313,7 +313,7 @@ describe("codenames machine — timers", () => {
     const deadline = view(actor, 2 + team).deadlineTs;
     send(actor, 2 + team, { kind: "guess", card: game.key.indexOf(team) });
     expect(view(actor, 2 + team).deadlineTs).toBe(deadline);
-    await waitFor(actor, (s) => s.context.game.currentTeam !== team, { timeout: 2000 });
+    await waitFor(actor, (s) => s.context.game.currentTeam !== team);
     expect(actor.getSnapshot().context.game.turns[0]?.end).toBe("guess-timeout");
   });
 });
@@ -377,7 +377,7 @@ describe("codenames machine — clue questions", () => {
     const sm = actor.getSnapshot().context.game.currentTeam;
     const word = softWord(actor);
     send(actor, sm, { kind: "ask-clue", clue: { word, count: 1 } });
-    await waitFor(actor, (s) => phaseOf(s) === "guessing", { timeout: 2000 });
+    await waitFor(actor, (s) => phaseOf(s) === "guessing");
     expect(actor.getSnapshot().context.game.turns[0]?.appeals?.[0]?.ruling).toBe("unanswered");
   });
 
@@ -398,7 +398,7 @@ describe("codenames machine — clue questions", () => {
     ai[1 - sm] = AI;
     const allowed = startActor({ ai });
     send(allowed, sm, { kind: "ask-clue", clue: { word: softWord(allowed), count: 1 } });
-    await waitFor(allowed, (s) => phaseOf(s) === "guessing", { timeout: 2000 });
+    await waitFor(allowed, (s) => phaseOf(s) === "guessing");
     const record = allowed.getSnapshot().context.game.turns[0]?.appeals?.[0];
     expect(record).toMatchObject({ ruling: "allowed", judge: 1 - sm });
     expect(record?.reason).toBeTruthy();
@@ -406,9 +406,7 @@ describe("codenames machine — clue questions", () => {
     // A real compound (the table word plus four letters or more): the stand-in judge refuses.
     const refused = startActor({ ai });
     send(refused, sm, { kind: "ask-clue", clue: { word: softWord(refused, "zqzq"), count: 1 } });
-    await waitFor(refused, (s) => (s.context.game.turns[0]?.appeals?.length ?? 0) > 0, {
-      timeout: 2000,
-    });
+    await waitFor(refused, (s) => (s.context.game.turns[0]?.appeals?.length ?? 0) > 0);
     expect(phaseOf(refused.getSnapshot())).toBe("clue");
     expect(view(refused, sm).mustGiveClue).toBe(true);
   });
@@ -445,7 +443,7 @@ describe("codenames machine — clue questions", () => {
 
     it("and the person's refusal sends it to its next idea, without a second question", async () => {
       const { actor, judge } = aiAsks();
-      await waitFor(actor, () => view(actor, judge).mustRuleClue, { timeout: 2000 });
+      await waitFor(actor, () => view(actor, judge).mustRuleClue);
       expect(view(actor, judge).appeal?.word).toMatch(/zq$/);
       expect(send(actor, judge, { kind: "rule-clue", allow: false }).ok).toBe(true);
       const turn = actor.getSnapshot().context.game.turns[0];
@@ -455,7 +453,7 @@ describe("codenames machine — clue questions", () => {
 
     it("and an allowed question is its clue", async () => {
       const { actor, judge } = aiAsks();
-      await waitFor(actor, () => view(actor, judge).mustRuleClue, { timeout: 2000 });
+      await waitFor(actor, () => view(actor, judge).mustRuleClue);
       send(actor, judge, { kind: "rule-clue", allow: true });
       expect(actor.getSnapshot().context.game.turns[0]?.clue?.word).toMatch(/zq$/);
     });

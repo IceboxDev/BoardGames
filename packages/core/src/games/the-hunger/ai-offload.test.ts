@@ -39,9 +39,11 @@ describe("pickAiActionAsync", () => {
   });
 
   it("never searches on the caller's thread without an offload", async () => {
+    // Without a thread to search on, a search bot plays Nosferatu's quick move.
     const s = searchSeatWithChoice();
-    const t = performance.now();
-    await pickAiActionAsync(s, null);
-    expect(performance.now() - t).toBeLessThan(50);
+    const seat = getActivePlayer(s);
+    expect(await pickAiActionAsync(s, null)).toEqual(
+      heuristicPick(s, seat, getLegalActions(s, seat)),
+    );
   });
 });

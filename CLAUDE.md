@@ -9,20 +9,20 @@ pnpm install                  # install dependencies
 pnpm dev                      # run web frontend (Vite dev server at localhost:5173)
 pnpm dev:all                  # run both server and web concurrently
 pnpm build                    # build all packages
-pnpm lint                     # biome check (lint + format check)
+pnpm lint                     # biome check + style guard + test guard (scripts/lint-tests.mjs)
 pnpm lint:fix                 # biome check --write (auto-fix)
 pnpm format                   # biome format --write
 pnpm typecheck                # typecheck all packages
-pnpm test                     # run vitest across core, server, and web (default tier)
+pnpm test                     # core, server, web default tiers via scripts/test-run.mjs (see docs/testing.md)
 pnpm test:heavy               # AI-strength / convergence tests (*.heavy.test.ts) — their own CI job
 pnpm -r --filter @boardgames/web typecheck   # typecheck single package
 ```
 
 Scripts in individual packages can be run with `pnpm --filter <pkg> <script>`, e.g. `pnpm --filter @boardgames/server dev`.
 
-Pre-commit hook (lefthook): runs `biome check` on staged files and the style guard, then `scripts/pre-commit-checks.mjs` — two lanes (typechecks one at a time beside test suites one at a time), only for the packages the staged files can break (core or root config → all three; web or server → itself). Never all suites at once: that was ~40 vitest workers and starved the machine.
+Pre-commit hook (lefthook): runs `biome check` on staged files, the style guard and the test guard, then `scripts/pre-commit-checks.mjs` — two lanes (typechecks one at a time beside test suites one at a time), only for the packages the staged files can break (core or root config → all three; web or server → itself). Never all suites at once: that was ~40 vitest workers and starved the machine.
 
-Test tiers: a test that proves an AI plays *well* (seeded games against a weaker bot) or that a sampler *converges* goes in a `*.heavy.test.ts` file. The default suites, the pre-commit hook and the per-package CI jobs exclude them; `pnpm test:heavy` (`packages/core/vitest.heavy.config.ts`, one file at a time, one tier-wide timeout) and the "Heavy tests" CI job run them. Correctness tests stay in the default tier however slow. CI runs one package per job and warns on any default-tier test over 10 s (`scripts/ci-slow-tests.mjs`). Don't add per-test timeouts.
+Tests: a verdict never depends on the machine — **read [`docs/testing.md`](docs/testing.md) before writing or fixing a test**. One hang-guard timeout for every mode (`vitest.shared.ts`), waits on signals never durations (`activityWritesSettled`, `querySettled`, fake clocks), no real threads under a fake clock, `testQueryClient()` in web tests; `scripts/lint-tests.mjs` enforces it. Every run goes through `scripts/test-run.mjs` (hook, `pnpm test`, CI): workers sized to free memory, and a failure counts only if it fails again with its file run alone — a load-only failure is a LOAD-SENSITIVE warning logged to `scratch/test-flakes.jsonl` (`node scripts/test-flakes.mjs`), a test to make deterministic. Speed, AI-strength and convergence claims go in `*.heavy.test.ts` (`pnpm test:heavy`, `packages/core/vitest.heavy.config.ts`, the "Heavy tests" CI job), never in the default tier. `node scripts/test-stress.mjs` runs the suites with every core busy, to prove it.
 
 Pre-push hook: `scripts/check-live-games.mjs` reads production `/api/health` (`liveGames`) and refuses the push while a Blood on the Clocktower room game is live — a deploy ends every live game (sessions are process memory). `ALLOW_LIVE_DEPLOY=1 git push` overrides; an unreachable health check never blocks.
 

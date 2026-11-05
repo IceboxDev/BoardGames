@@ -1,10 +1,11 @@
 import { type CompanionRecordEntry, CompanionRecordListSchema } from "@boardgames/core/protocol";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { ReactNode } from "react";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
+import { testQueryClient } from "../../test/query-client";
 
 // The companions' Match History: the same list kit as online games, a row per
 // game the member ran, and the picked row's who-was-what dialog.
@@ -27,7 +28,7 @@ const { default: DndMatchHistory } = await import(
 );
 
 function wrap(node: ReactNode) {
-  const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const client = testQueryClient();
   return render(
     <MemoryRouter>
       <QueryClientProvider client={client}>{node}</QueryClientProvider>

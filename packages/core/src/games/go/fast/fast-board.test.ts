@@ -61,7 +61,7 @@ describe("FastBoard parity with board.ts", () => {
         }
       }
       expect(mismatches.slice(0, 5)).toEqual([]);
-    }, 30_000);
+    });
   }
 
   it("rebuilds chains and ko from a game", () => {

@@ -11,6 +11,7 @@ import { type Client, createClient } from "@libsql/client";
 import { Hono } from "hono";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
+import { activityWritesSettled } from "../lib/activity-log.ts";
 import { runMigrations } from "../migrations/migrator.ts";
 
 const db = vi.hoisted(() => ({ current: null as Client | null }));
@@ -395,16 +396,15 @@ describe("GET /api/greetings ladder", () => {
     const id = await arrival(closed, [{ slug: "azul", purchaser: M1 }]);
     const a = app({ id: M2, onlineMode: "both" });
     expect((await ack(a, { kind: "arrival", arrivalId: id, action: "cta" })).status).toBe(200);
-    await vi.waitFor(async () => {
-      const { rows } = await client.execute(
-        "SELECT user_id, meta_json FROM activity_log WHERE type = 'greeting-response'",
-      );
-      expect(rows).toHaveLength(1);
-      expect(JSON.parse(String(rows[0]?.meta_json))).toEqual({
-        kind: "arrival",
-        action: "cta",
-        arrivalId: id,
-      });
+    await activityWritesSettled();
+    const { rows } = await client.execute(
+      "SELECT user_id, meta_json FROM activity_log WHERE type = 'greeting-response'",
+    );
+    expect(rows).toHaveLength(1);
+    expect(JSON.parse(String(rows[0]?.meta_json))).toEqual({
+      kind: "arrival",
+      action: "cta",
+      arrivalId: id,
     });
     // Acking a retracted arrival is a harmless no-op, not an FK error.
     await client.execute({ sql: "DELETE FROM purchase_arrivals WHERE id = ?", args: [id] });
@@ -420,16 +420,15 @@ describe("GET /api/greetings ladder", () => {
     const id = Number(lastInsertRowid);
     const a = app({ id: M2, onlineMode: "both" });
     expect((await ack(a, { kind: "spotlight", id, action: "later" })).status).toBe(200);
-    await vi.waitFor(async () => {
-      const { rows } = await client.execute(
-        "SELECT meta_json FROM activity_log WHERE type = 'greeting-response'",
-      );
-      expect(JSON.parse(String(rows[0]?.meta_json))).toEqual({
-        kind: "spotlight",
-        action: "later",
-        greetingId: id,
-        subjectUserId: M1,
-      });
+    await activityWritesSettled();
+    const { rows } = await client.execute(
+      "SELECT meta_json FROM activity_log WHERE type = 'greeting-response'",
+    );
+    expect(JSON.parse(String(rows[0]?.meta_json))).toEqual({
+      kind: "spotlight",
+      action: "later",
+      greetingId: id,
+      subjectUserId: M1,
     });
   });
 

@@ -11,6 +11,7 @@ import { Hono } from "hono";
 import sharp from "sharp";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AdminEnv } from "../auth/types.ts";
+import { activityWritesSettled } from "../lib/activity-log.ts";
 import { runMigrations } from "../migrations/migrator.ts";
 
 const db = vi.hoisted(() => ({ current: null as Client | null }));
@@ -171,10 +172,9 @@ describe("/api/admin/arrivals", () => {
       expect([r.photo_w, r.photo_h]).toEqual([1280, 1600]);
     }
 
-    await vi.waitFor(async () => {
-      expect(await activity("arrival-published")).toHaveLength(1);
-      expect(await activity("arrival-received")).toHaveLength(2);
-    });
+    await activityWritesSettled();
+    expect(await activity("arrival-published")).toHaveLength(1);
+    expect(await activity("arrival-received")).toHaveLength(2);
     expect((await activity("arrival-published"))[0]).toMatchObject({
       user: ADMIN,
       meta: {
@@ -326,9 +326,8 @@ describe("/api/admin/arrivals", () => {
     expect((await a.request(`/api/admin/arrivals/${arrivalId}`, { method: "DELETE" })).status).toBe(
       404,
     );
-    await vi.waitFor(async () => {
-      expect(await activity("arrival-retracted")).toHaveLength(1);
-    });
+    await activityWritesSettled();
+    expect(await activity("arrival-retracted")).toHaveLength(1);
   });
 
   it("lists closed polls with what has been announced, and the arrivals with their votes", async () => {

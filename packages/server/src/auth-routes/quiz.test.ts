@@ -27,6 +27,7 @@ import { type Client, createClient, type InStatement } from "@libsql/client";
 import { Hono } from "hono";
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
+import { activityWritesSettled } from "../lib/activity-log.ts";
 import { FIXTURE_HISTORY, makeRetiredBank } from "../lib/quiz/__fixtures__/retired-bank.ts";
 import { __setContentStore, getContentStore, loadContentStore } from "../lib/quiz/content-store.ts";
 import { recordReview } from "../lib/quiz/srs-db.ts";
@@ -392,11 +393,10 @@ describe("/api/trainers/quiz", () => {
       await post(review());
       await post(review({ questionId: "f00002" }));
       await post(review({ questionId: "f00003", localDate: YESTERDAY }));
-      await vi.waitFor(async () => {
-        expect(
-          await count(client, "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiz-train'"),
-        ).toBe(2);
-      });
+      await activityWritesSettled();
+      expect(
+        await count(client, "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiz-train'"),
+      ).toBe(2);
     });
 
     it("scopes state to the member", async () => {
@@ -863,11 +863,10 @@ describe("/api/trainers/quiz", () => {
       expect(
         (await call("PUT", "/settings", { language: "en", excludeFromAll: ["nope"] })).status,
       ).toBe(400);
-      await vi.waitFor(async () => {
-        expect(
-          await count(client, "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiz-settings'"),
-        ).toBe(2);
-      });
+      await activityWritesSettled();
+      expect(
+        await count(client, "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiz-settings'"),
+      ).toBe(2);
       // Each row records only what that save changed…
       const { rows } = await client.execute(
         "SELECT meta_json FROM activity_log WHERE type = 'quiz-settings' ORDER BY sort_ms",
@@ -889,7 +888,7 @@ describe("/api/trainers/quiz", () => {
       });
       // …and a save that changes nothing is not activity.
       expect((await call("PUT", "/settings", { language: "both" })).status).toBe(200);
-      await new Promise((r) => setTimeout(r, 20));
+      await activityWritesSettled();
       expect(
         await count(client, "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiz-settings'"),
       ).toBe(2);
