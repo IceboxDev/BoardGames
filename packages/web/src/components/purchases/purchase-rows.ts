@@ -140,7 +140,12 @@ export function displayPurchaseTitle(p: Pick<Purchase, "title" | "shortTitle">):
   return p.shortTitle ?? compactTitle(p.title);
 }
 
-const CURRENCY_SYMBOL: Record<PurchaseCurrency, string> = { EUR: "€", USD: "$", GBP: "£" };
+const CURRENCY_SYMBOL: Record<PurchaseCurrency, string> = {
+  EUR: "€",
+  USD: "$",
+  GBP: "£",
+  SGD: "S$",
+};
 
 /**
  * EUR per unit of each currency — ECB reference rates, 2026-09-02
@@ -151,6 +156,7 @@ export const EUR_RATE: Record<PurchaseCurrency, number> = {
   EUR: 1,
   USD: 1 / 1.1578,
   GBP: 1 / 0.8587,
+  SGD: 1 / 1.4741,
 };
 
 /** Per-currency committed totals folded into one approximate EUR figure. */
@@ -439,7 +445,7 @@ export function applyPurchaseView(
   return groups.filter((g) => g.cards.length > 0);
 }
 
-const CURRENCIES: readonly PurchaseCurrency[] = ["EUR", "USD", "GBP"];
+const CURRENCIES: readonly PurchaseCurrency[] = ["EUR", "USD", "GBP", "SGD"];
 
 export interface PurchaseInsightsData {
   total: number;

@@ -1902,6 +1902,45 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "on-call",
+    title: "On Call — Full Workup Set: base game, New Wing expansion, Deluxe Components",
+    shortTitle: "On Call",
+    orderGroup: null,
+    slug: null, // not in the catalog yet
+    kind: "crowdfunding",
+    status: "production",
+    platform: "Kickstarter",
+    campaignUrl:
+      "https://www.kickstarter.com/projects/kingandthepawn/on-call-command-your-er-in-an-intense-co-op-strategy-game",
+    pledgeManagerUrl: null, // shipping, taxes and tariffs come through a pledge manager after the campaign
+    // Kickstarter's reward estimate at pledge time.
+    originalEtaMonth: "2027-08",
+    currentEtaMonth: "2027-08",
+    pledgedOn: null, // pledge day not recorded; collected when the campaign ended Oct 29 '26
+    deliveredOn: null,
+    currency: "SGD",
+    pledgeCents: 12800, // S$128.00 Full Workup Set, collected
+    shippingCents: null, // charged separately in the pledge manager
+    note:
+      "Full Workup Set (S$128.00, 25% off retail): On Call base game, New Wing expansion and " +
+      "Deluxe Components, plus all applicable stretch goals. Pledge collected; shipping, " +
+      "taxes and tariffs are charged separately in the pledge manager after the campaign.",
+    events: [
+      {
+        id: "on-call-e01",
+        occurredOn: "2026-10-29",
+        type: "status-change",
+        title: "Campaign funded — S$382,517 from 3,449 backers",
+        details:
+          "The 30-day campaign (Sep 29 – Oct 29 2026) ended successfully funded at S$382,517 " +
+          "against a S$6,000 goal; the Full Workup Set pledge was collected.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/kingandthepawn/on-call-command-your-er-in-an-intense-co-op-strategy-game",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
