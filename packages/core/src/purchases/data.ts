@@ -309,6 +309,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         sourceUrl:
           "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/24",
       },
+      {
+        id: "old-kings-crown-all-in-e06",
+        occurredOn: "2026-10-30",
+        type: "campaign-update",
+        title: "Non-English base games shipping; Annulet reveal pushed to next month",
+        details:
+          "Campaign copies in Spanish, French, Czech and Polish are delivering Oct–Nov; late " +
+          "pledges of any language arrive next year with the expansions, Annulet and upgrades. " +
+          "New Wandering/Abundance art and a playable Abundance build are on Discord; the " +
+          "Annulet and Songs of Home update moves to next month, with no change to the 2027 wave.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/25",
+      },
     ],
   },
   {
