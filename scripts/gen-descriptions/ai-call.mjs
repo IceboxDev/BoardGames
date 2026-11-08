@@ -1,11 +1,10 @@
-// Gateway AI wrapper. One call per game.
+// AI wrapper. One call per game.
 //
-// Model: AI_MODEL_DESCRIPTIONS ?? AI_MODEL ?? openai/gpt-5.2, with OpenAI's
-// hosted web_search tool attached — the pipeline's "browse the web before
-// writing" semantics, same as the pre-migration Responses setup, now routed
-// through the AI Gateway. If you override the model to a non-OpenAI slug,
-// pick one that can ground itself in live search results (e.g. a Perplexity
-// sonar model; the tool is only attached to openai/* slugs).
+// Model: AI_MODEL_DESCRIPTIONS ?? AI_MODEL ?? the AI_PROFILE's smart model,
+// with that provider's hosted web search attached (OpenAI's web_search, or
+// Anthropic's web_search_20260209) — the pipeline's "browse the web before
+// writing" semantics. A model without hosted search refuses to start: a
+// description written without research is worse than none.
 //
 // Retry policy (unchanged from the OpenAI era):
 //   - Transient (429 / 5xx / network): up to 2 retries with exponential
@@ -13,15 +12,17 @@
 //   - Schema validation failure: 1 retry with a reminder of the over-budget
 //     field. After that, hard fail — log and skip.
 
-import { openai } from "@ai-sdk/openai";
 import { generateText, jsonSchema, Output } from "ai";
 import { resolveScriptModel } from "../lib/ai.mjs";
 import { SYSTEM_PROMPT, buildUserPrompt } from "./prompt.mjs";
 import { GeneratedDescriptionsSchema, RESPONSE_JSON_SCHEMA } from "./schema.mjs";
 
-const MODEL = resolveScriptModel("AI_MODEL_DESCRIPTIONS", "openai/gpt-5.2");
-// OpenAI's provider-executed search tool — only attach it to openai/* slugs.
-const TOOLS = MODEL.startsWith("openai/") ? { web_search: openai.tools.webSearch() } : undefined;
+const SCRIPT_MODEL = resolveScriptModel("descriptions");
+const MODEL = SCRIPT_MODEL.ref.id;
+const TOOLS = SCRIPT_MODEL.webSearch();
+if (!TOOLS) {
+  throw new Error(`${MODEL} has no hosted web search — pin AI_MODEL_DESCRIPTIONS to one that does.`);
+}
 const TRANSIENT_BACKOFF_MS = [1000, 3000];
 
 /**
@@ -139,8 +140,8 @@ async function callOnce(userPrompt, schemaReminder) {
     : userPrompt;
 
   const result = await generateText({
-    model: MODEL,
-    instructions: SYSTEM_PROMPT,
+    model: SCRIPT_MODEL.model,
+    ...SCRIPT_MODEL.callOptions(SYSTEM_PROMPT),
     prompt,
     // Without this, gpt-5.2 barely plans (~150 reasoning tokens), overshoots
     // the prompt's soft char targets, and gets truncated mid-sentence by the
@@ -149,12 +150,11 @@ async function callOnce(userPrompt, schemaReminder) {
     // truncated twice in a row, so give the planner full headroom.
     reasoning: "high",
     maxRetries: 0, // the loop above owns retries; SDK retries just hammer the free-tier throttle
-    ...(TOOLS ? { tools: TOOLS } : {}),
+    tools: TOOLS,
     output: Output.object({
       schema: jsonSchema(RESPONSE_JSON_SCHEMA),
       name: "game_descriptions",
     }),
-    providerOptions: { gateway: { tags: ["feature:descriptions"] } },
   });
 
   // The zod schema stays the arbiter (char budgets etc.) so the

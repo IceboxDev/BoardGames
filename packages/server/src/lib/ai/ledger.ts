@@ -17,16 +17,23 @@ import { isDeployedServer } from "../origins.ts";
  *     surprising move can be read back later: grep the call id a game's notes
  *     carry.
  *
- * Cost is the gateway's own figure (`providerMetadata.gateway.cost`), not an
- * estimate; a transport that can't report it leaves it null.
+ * Cost is the gateway's own billed figure (`providerMetadata.gateway.cost`)
+ * where there is one (`costSource: "billed"`); a direct provider's call is
+ * priced from the list prices in pricing.ts (`"list"`); a model with neither
+ * leaves it null.
  */
 
 export interface AiCallUsage {
   inputTokens: number | null;
   outputTokens: number | null;
   reasoningTokens: number | null;
-  /** US dollars, as the gateway billed it. */
+  /** Prompt tokens read from / written to the provider's prompt cache. */
+  cacheReadTokens: number | null;
+  cacheWriteTokens: number | null;
+  /** US dollars. */
   costUsd: number | null;
+  /** Whether `costUsd` is the provider's bill or our list-price sum. */
+  costSource: "billed" | "list" | null;
   /** The model that actually answered (after gateway fallbacks). */
   resolvedModel: string | null;
   generationId: string | null;
@@ -45,6 +52,8 @@ export interface AiCallRecord {
   /** Summed over every attempt (retries are billed too). */
   usage: AiCallUsage;
   attempts: number;
+  /** An agent run's steps share one run id (agent.ts); single calls have none. */
+  runId?: string;
   system: string | null;
   user: string;
   output: unknown;
@@ -54,7 +63,10 @@ export const EMPTY_USAGE: AiCallUsage = {
   inputTokens: null,
   outputTokens: null,
   reasoningTokens: null,
+  cacheReadTokens: null,
+  cacheWriteTokens: null,
   costUsd: null,
+  costSource: null,
   resolvedModel: null,
   generationId: null,
 };
@@ -79,7 +91,10 @@ export function sumUsage(a: AiCallUsage, b: AiCallUsage): AiCallUsage {
     inputTokens: add(a.inputTokens, b.inputTokens),
     outputTokens: add(a.outputTokens, b.outputTokens),
     reasoningTokens: add(a.reasoningTokens, b.reasoningTokens),
+    cacheReadTokens: add(a.cacheReadTokens, b.cacheReadTokens),
+    cacheWriteTokens: add(a.cacheWriteTokens, b.cacheWriteTokens),
     costUsd: add(a.costUsd, b.costUsd),
+    costSource: b.costSource ?? a.costSource,
     resolvedModel: b.resolvedModel ?? a.resolvedModel,
     generationId: b.generationId ?? a.generationId,
   };
@@ -105,8 +120,9 @@ async function writeTrace(record: AiCallRecord): Promise<void> {
   }
 }
 
-function money(usd: number | null): string {
-  return usd === null ? "$?" : `$${usd.toFixed(4)}`;
+function money(usd: number | null, source: AiCallUsage["costSource"] = "billed"): string {
+  if (usd === null) return "$?";
+  return `${source === "list" ? "~" : ""}$${usd.toFixed(4)}`;
 }
 
 export function recordAiCall(record: AiCallRecord): void {
@@ -120,9 +136,11 @@ export function recordAiCall(record: AiCallRecord): void {
 
   if (!process.env.VITEST) {
     const u = record.usage;
-    const tokens = u.inputTokens === null ? "" : ` · ${u.inputTokens}→${u.outputTokens ?? "?"} tok`;
+    const cached = u.cacheReadTokens ? ` (${u.cacheReadTokens} cached)` : "";
+    const tokens =
+      u.inputTokens === null ? "" : ` · ${u.inputTokens}${cached}→${u.outputTokens ?? "?"} tok`;
     console.log(
-      `[ai] ${record.label} · ${u.resolvedModel ?? record.model}${tokens} · ${money(u.costUsd)} · ${(record.ms / 1000).toFixed(1)}s${record.ok ? "" : " · FAILED"} · ${record.id} · ${record.feature} total ${money(t.costUsd)}`,
+      `[ai] ${record.label} · ${u.resolvedModel ?? record.model}${tokens} · ${money(u.costUsd, u.costSource)} · ${(record.ms / 1000).toFixed(1)}s${record.ok ? "" : " · FAILED"} · ${record.id} · ${record.feature} total ${money(t.costUsd)}`,
     );
   }
   void writeTrace(record);

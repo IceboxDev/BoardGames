@@ -1,7 +1,9 @@
 import { generateText } from "ai";
 import { aiSuspended } from "../ai-suspend";
-import { gatewayKey, resolveModel } from "./config";
-import { AiConfigError, suspendedError } from "./errors";
+import { resolveModel } from "./config";
+import { suspendedError } from "./errors";
+import { languageModel, requireKey } from "./models";
+import { adapterFor } from "./providers";
 import { withTransientRetry } from "./retry";
 
 const AVATAR_BUDGET_MS = 3 * 60_000;
@@ -14,21 +16,20 @@ function qualityHint(): string {
 }
 
 /**
- * Gateway avatar generation: a multimodal image model (AI_MODEL_AVATAR)
+ * Avatar generation: a multimodal image model (the profile's `image` role,
+ * or AI_MODEL_AVATAR; a profile without one throws AiConfigError → 503)
  * receives the reference photo as an input image part and returns the
  * generated image in `result.files`. Returns raw image bytes; the sharp
  * pipeline in avatar-image.ts turns them into the stored webp data URI.
  */
-export async function generateGatewayAvatarImage(
-  referencePng: Buffer,
-  prompt: string,
-): Promise<Buffer> {
+export async function generateAvatarImage(referencePng: Buffer, prompt: string): Promise<Buffer> {
   if (aiSuspended()) throw suspendedError();
-  if (!gatewayKey()) throw new AiConfigError("AI is not configured (AI_GATEWAY_API_KEY).");
-  const model = resolveModel("avatar");
+  const ref = resolveModel("avatar");
+  requireKey(ref);
+  const providerOptions = adapterFor(ref).providerOptions({ feature: "avatar" });
   const result = await withTransientRetry("avatar", () =>
     generateText({
-      model,
+      model: languageModel(ref),
       messages: [
         {
           role: "user",
@@ -40,7 +41,7 @@ export async function generateGatewayAvatarImage(
       ],
       maxRetries: 0,
       timeout: { totalMs: AVATAR_BUDGET_MS },
-      providerOptions: { gateway: { tags: ["feature:avatar"] } },
+      ...(providerOptions ? { providerOptions } : {}),
     }),
   );
   const image = result.files.find((file) => file.mediaType?.startsWith("image/"));

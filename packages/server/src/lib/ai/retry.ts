@@ -8,7 +8,8 @@ import { AiBudgetError, causeChain } from "./errors";
 const TRANSIENT_ERROR =
   /premature close|invalid response body|econnreset|econnrefused|etimedout|socket hang up|terminated|fetch failed|network|aborted|connection error|timeout/i;
 
-const RETRYABLE_STATUS = new Set([408, 409, 429, 500, 502, 503, 504]);
+// 529 = Anthropic "overloaded".
+const RETRYABLE_STATUS = new Set([408, 409, 429, 500, 502, 503, 504, 529]);
 
 function transientMessage(err: unknown): string {
   if (!(err instanceof Error)) return "";
@@ -21,13 +22,19 @@ function transientMessage(err: unknown): string {
 const FREE_TIER_RESTRICTED =
   /free tier .* (rate-limited|do not have access)|upgrade to paid credits/i;
 
+// Anthropic's out-of-credit answer is a 400 with this wording.
+const ANTHROPIC_NO_CREDIT = /credit balance is too low/i;
+
 /**
- * Credit problems — gateway hard budget limit (402) or a free-tier model
- * restriction — are non-retryable and become a typed config error so routes
+ * Credit problems — gateway hard budget limit (402), a gateway free-tier
+ * model restriction, or an Anthropic account out of credit — are non-retryable and become a typed config error so routes
  * 503 with a clear message and game seats fall back deterministically.
  */
 export function classifyBudgetError(err: unknown): AiBudgetError | null {
   if (APICallError.isInstance(err) && err.statusCode === 402) return new AiBudgetError();
+  if (ANTHROPIC_NO_CREDIT.test(transientMessage(err))) {
+    return new AiBudgetError("The Anthropic account is out of credit — generation is paused.");
+  }
   if (FREE_TIER_RESTRICTED.test(transientMessage(err))) {
     return new AiBudgetError(
       "This model needs paid AI Gateway credits (or a free-tier model slug) — generation is paused.",

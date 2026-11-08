@@ -10,8 +10,8 @@
     "build": "pnpm -r build",
     "extract-accents": "node scripts/extract-accents.mjs",
     "bgg-sync": "node --env-file=packages/server/.env scripts/bgg-sync.mjs",
-    "gen-descriptions": "node --env-file=packages/server/.env scripts/gen-descriptions/index.mjs",
-    "gen-skills": "node --env-file=packages/server/.env scripts/gen-skills.mjs",
+    "gen-descriptions": "tsx --env-file=packages/server/.env scripts/gen-descriptions/index.mjs",
+    "gen-skills": "tsx --env-file=packages/server/.env scripts/gen-skills.mjs",
     "gen-cpp-7wonders": "tsx scripts/gen-cpp-7wonders.ts",
     "gen-cpp-hunger": "tsx scripts/gen-cpp-hunger.ts",
     "dump-hunger-parity": "tsx scripts/dump-hunger-parity.ts",
@@ -65,7 +65,6 @@
     }
   },
   "dependencies": {
-    "@ai-sdk/openai": "^4.0.57",
-    "ai": "^7.0.91"
+    "ai": "^7.0.165"
   }
 }

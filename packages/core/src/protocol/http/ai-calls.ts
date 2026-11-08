@@ -19,7 +19,12 @@ const UsageSchema = z.object({
   inputTokens: z.number().nullable(),
   outputTokens: z.number().nullable(),
   reasoningTokens: z.number().nullable(),
+  /** Prompt-cache reads / writes (optional: absent on calls recorded before they were kept). */
+  cacheReadTokens: z.number().nullable().optional(),
+  cacheWriteTokens: z.number().nullable().optional(),
   costUsd: z.number().nullable(),
+  /** "billed" = the provider's own figure; "list" = computed from list prices. */
+  costSource: z.enum(["billed", "list"]).nullable().optional(),
   resolvedModel: z.string().nullable(),
   generationId: z.string().nullable(),
 });
@@ -34,6 +39,8 @@ export const AiCallSummarySchema = z.object({
   ok: z.boolean(),
   error: z.string().nullable(),
   attempts: z.number().int(),
+  /** Set on every step of one agent run. */
+  runId: z.string().optional(),
   usage: UsageSchema,
 });
 export type AiCallSummary = z.infer<typeof AiCallSummarySchema>;

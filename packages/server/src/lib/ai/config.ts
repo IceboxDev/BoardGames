@@ -1,15 +1,22 @@
 import { aiSuspended } from "../ai-suspend";
+import { AiConfigError } from "./errors";
+import {
+  type AiRole,
+  activeProfile,
+  type ModelRef,
+  parseModelId,
+  providerKey,
+  roleModel,
+} from "./models";
 
-// Model/transport resolution for every AI-backed feature. This is the single
-// place the old scattered `?? "gpt-5.5"` defaults collapsed into. Model ids
-// are Vercel AI Gateway slugs ("provider/model", dots for versions); defaults
-// were pinned from https://ai-gateway.vercel.sh/v1/models on 2026-09-02.
+// Model/transport resolution for every AI-backed feature. A feature names a
+// role (models.ts); env vars can pin a feature to any model string — a
+// registry id (`anthropic:claude-opus-5-5`) or a legacy gateway slug
+// (`openai/gpt-5.2`, read as `gateway:openai/gpt-5.2`).
 //
-// The account runs on the gateway FREE TIER: $5/month of free credits,
-// usable on the dashboard's "Free Tier" model subset (most OpenAI models,
-// some others) under tighter rate limits; excluded models 403 and both
-// cases map to AiBudgetError. Defaults mirror the pre-migration OpenAI
-// setup; hopping provider or tier later is just an env override.
+// The gateway profile (the default) runs on the Vercel AI Gateway free tier:
+// $5/month of credits on the "Free Tier" model subset under tighter rate
+// limits; excluded models 403 and both cases map to AiBudgetError.
 
 export type AiFeature =
   | "codenames"
@@ -19,27 +26,22 @@ export type AiFeature =
   | "avatar"
   | "descriptions"
   | "skills"
-  | "probe";
+  | "probe"
+  | "agent";
 
 export type AiTransportId = "sync" | "stream" | "openai-background";
 
-const GLOBAL_DEFAULT_MODEL = "openai/gpt-5.2";
-
-/** Per-feature fallbacks when neither the feature var nor AI_MODEL is set. */
-const DEFAULT_MODELS: Record<AiFeature, string> = {
-  codenames: GLOBAL_DEFAULT_MODEL,
-  decrypto: GLOBAL_DEFAULT_MODEL,
-  // Everything text runs the strongest flagship on the gateway free tier
-  // (PDF-capable), like the single OPENAI_MODEL flagship pre-migration.
-  dnd: GLOBAL_DEFAULT_MODEL,
-  "dnd-extract": GLOBAL_DEFAULT_MODEL,
-  // Image-output model; deliberately NOT falling back to AI_MODEL (text-only).
-  // AI_MODEL_AVATAR=openai-image-tool selects the legacy direct-OpenAI path.
-  avatar: "google/gemini-3.1-flash-image",
-  // Runs with OpenAI's hosted web_search tool (see scripts/gen-descriptions).
-  descriptions: GLOBAL_DEFAULT_MODEL,
-  skills: GLOBAL_DEFAULT_MODEL,
-  probe: GLOBAL_DEFAULT_MODEL,
+/** The role each feature runs at when nothing pins it. Game features pass their tier's model. */
+const FEATURE_ROLES: Record<AiFeature, AiRole> = {
+  codenames: "smart",
+  decrypto: "smart",
+  dnd: "smart",
+  "dnd-extract": "smart",
+  avatar: "image",
+  descriptions: "smart",
+  skills: "smart",
+  probe: "fast",
+  agent: "smart",
 };
 
 const MODEL_ENV: Partial<Record<AiFeature, string>> = {
@@ -55,14 +57,37 @@ function env(name: string): string | undefined {
   return value ? value : undefined;
 }
 
-export function resolveModel(feature: AiFeature, override?: string): string {
-  if (override) return override;
+/** A feature's explicit model pin (its own env var, else AI_MODEL for text features). */
+export function featureModelPin(feature: AiFeature): string | undefined {
   const featureVar = MODEL_ENV[feature];
-  const featureModel = featureVar ? env(featureVar) : undefined;
-  if (featureModel) return featureModel;
-  // Avatar must stay on an image-output model — never the global text default.
-  if (feature === "avatar") return DEFAULT_MODELS.avatar;
-  return env("AI_MODEL") ?? DEFAULT_MODELS[feature];
+  const pinned = featureVar ? env(featureVar) : undefined;
+  if (pinned) return pinned;
+  // Avatar must stay on an image-output model — never the global text pin.
+  return feature === "avatar" ? undefined : env("AI_MODEL");
+}
+
+/** A role's model in the active profile; throws when the profile has none. */
+export function modelForRole(role: AiRole): ModelRef {
+  const ref = roleModel(role);
+  if (!ref) {
+    throw new AiConfigError(`The "${activeProfile()}" AI profile has no ${role} model.`);
+  }
+  return ref;
+}
+
+/**
+ * A game tier's model: its env pin (`CODENAMES_MODEL_EXPERT`, …) or the
+ * role's model in the active profile. Returns the registry id.
+ */
+export function tierModel(envVar: string, role: AiRole): string {
+  const pinned = env(envVar);
+  return pinned ? parseModelId(pinned).id : modelForRole(role).id;
+}
+
+/** override → feature pin → AI_MODEL → the feature's role in the active profile. */
+export function resolveModel(feature: AiFeature, override?: string): ModelRef {
+  const pinned = override ?? featureModelPin(feature);
+  return pinned ? parseModelId(pinned) : modelForRole(FEATURE_ROLES[feature]);
 }
 
 const TRANSPORTS: readonly AiTransportId[] = ["sync", "stream", "openai-background"];
@@ -97,15 +122,20 @@ export function resolveStreamIdleTimeoutMs(): number {
   return Number.isFinite(raw) && raw > 0 ? raw : 90_000;
 }
 
-export function gatewayKey(): string | undefined {
-  return env("AI_GATEWAY_API_KEY");
-}
-
 export function openAiKey(): string | undefined {
-  return env("OPENAI_API_KEY");
+  return providerKey("openai");
 }
 
-/** True when at least one AI path can run (gateway, or the OpenAI escape hatch). */
+/**
+ * True when the active profile's text models can run: not suspended and the
+ * profile's provider has its key. (Each call still checks the key of the
+ * model it actually resolves to.)
+ */
 export function aiAvailable(): boolean {
-  return !aiSuspended() && Boolean(gatewayKey() ?? openAiKey());
+  if (aiSuspended()) return false;
+  try {
+    return Boolean(providerKey(modelForRole("smart").provider));
+  } catch {
+    return false;
+  }
 }

@@ -10,7 +10,7 @@
 //
 // Required env (loaded from packages/server/.env via --env-file):
 //   AI_GATEWAY_API_KEY — Vercel AI Gateway key
-//   AI_MODEL_DESCRIPTIONS — optional gateway slug; defaults to openai/gpt-5.2
+//   AI_MODEL_DESCRIPTIONS — optional model pin; defaults to the AI_PROFILE's smart model
 //   with OpenAI's hosted web_search tool (the pipeline's "browse before
 //   writing" semantics, routed through the AI Gateway)
 //
@@ -127,7 +127,7 @@ async function main() {
   // Eagerly trip on missing/suspended env so we don't burn 30 minutes of
   // partial runs.
   const { ensureAiUsable } = await import("../lib/ai.mjs");
-  ensureAiUsable("gen-descriptions");
+  ensureAiUsable("gen-descriptions", "descriptions");
 
   // Lazy-import the AI wrapper so --help / --dry-run / missing-env paths
   // don't require the `ai` package to be installed.

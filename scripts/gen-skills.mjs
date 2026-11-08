@@ -7,7 +7,7 @@
 //   pnpm gen-skills --dry-run                         # log, don't write
 //
 // Required env (loaded from packages/server/.env via --env-file, same as
-// gen-descriptions): AI_GATEWAY_API_KEY (+ optional AI_MODEL_SKILLS / AI_MODEL).
+// gen-descriptions): the active AI_PROFILE's key (+ optional AI_MODEL_SKILLS / AI_MODEL).
 //
 // `bgg-sync --add` invokes this automatically after scaffolding, so new games
 // get a real editorial-quality vector instead of the placeholder — nobody
@@ -20,7 +20,9 @@ import { ensureAiUsable, resolveScriptModel, structuredScriptCall } from "./lib/
 
 const CATALOG_PATH = "packages/core/src/games/catalog.json";
 const SNAPSHOT_PATH = "packages/core/src/bgg/snapshot.json";
-const MODEL = resolveScriptModel("AI_MODEL_SKILLS", "openai/gpt-5.2");
+/** Resolved on first use, after ensureAiUsable has checked the key. */
+let model;
+const skillsModel = () => (model ??= resolveScriptModel("skills"));
 /** The exact vector `bgg-sync --add` scaffolds (no real entry uses it). */
 export const PLACEHOLDER = { int: 40, pln: 40, per: 20, soph: 0, soc: 0, dex: 0 };
 
@@ -119,7 +121,7 @@ async function generateWeights(entry, bgg) {
   const user = buildUserPrompt(entry, bgg);
   for (let attempt = 0; attempt < 2; attempt++) {
     const parsed = await structuredScriptCall({
-      model: MODEL,
+      model: skillsModel(),
       system,
       user:
         attempt === 0
@@ -161,7 +163,7 @@ async function main() {
     return;
   }
 
-  ensureAiUsable("gen-skills");
+  ensureAiUsable("gen-skills", "skills");
 
   let wrote = 0;
   let stoppedEarly = false;

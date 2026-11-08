@@ -1,29 +1,26 @@
 // Shared AI plumbing for the local generation scripts (gen-skills,
-// gen-descriptions). Calls go through the Vercel AI Gateway via the AI SDK —
-// model ids are gateway slugs ("provider/model"), auth is AI_GATEWAY_API_KEY,
-// both read from packages/server/.env via --env-file. The AI_SUSPENDED kill
-// switch from that same file applies here too.
+// gen-descriptions). They run under tsx and resolve models through the
+// server's own AI platform (packages/server/src/lib/ai/scripts.ts): the same
+// AI_PROFILE, model pins (AI_MODEL_<FEATURE>, AI_MODEL), provider keys and
+// AI_SUSPENDED kill switch, all read from packages/server/.env via --env-file.
 
 import { generateText, jsonSchema, Output } from "ai";
-
-export function aiSuspended() {
-  return /^(1|true|yes)$/i.test(process.env.AI_SUSPENDED ?? "");
-}
+import { scriptModel } from "../../packages/server/src/lib/ai/scripts.ts";
 
 /** Exit with a clear message when the scripts must not make billed calls. */
-export function ensureAiUsable(label) {
-  if (aiSuspended()) {
-    console.error(`[${label}] AI_SUSPENDED is set (packages/server/.env) — AI usage is suspended.`);
-    process.exit(1);
-  }
-  if (!process.env.AI_GATEWAY_API_KEY) {
-    console.error(`[${label}] AI_GATEWAY_API_KEY not set. Add it to packages/server/.env.`);
+export function ensureAiUsable(label, feature) {
+  try {
+    const { ref } = scriptModel(feature);
+    console.log(`[${label}] model ${ref.id}`);
+  } catch (err) {
+    console.error(`[${label}] ${err instanceof Error ? err.message : String(err)}`);
     process.exit(1);
   }
 }
 
-export function resolveScriptModel(featureVar, fallback) {
-  return process.env[featureVar] || process.env.AI_MODEL || fallback;
+/** The feature's model (ScriptModel: ref, model, callOptions, webSearch). */
+export function resolveScriptModel(feature) {
+  return scriptModel(feature);
 }
 
 /**
@@ -32,13 +29,12 @@ export function resolveScriptModel(featureVar, fallback) {
  */
 export async function structuredScriptCall({ model, system, user, schemaName, schema, tools }) {
   const result = await generateText({
-    model,
-    instructions: system,
+    model: model.model,
+    ...model.callOptions(system),
     prompt: user,
     maxRetries: 0, // callers own their retry loops; SDK retries just hammer the free-tier throttle
     output: Output.object({ schema: jsonSchema(schema), name: schemaName }),
     ...(tools ? { tools } : {}),
-    providerOptions: { gateway: { tags: [`feature:${schemaName}`] } },
   });
   return result.output;
 }

@@ -16,7 +16,7 @@
  *   TOURNAMENT_LLM=1 AI_GATEWAY_API_KEY=… \
  *     pnpm --filter @boardgames/core tournament codenames --games 10 --workers 1 --players 4
  *
- * (OPENAI_API_KEY also works; CODENAMES_MODEL_* / CODENAMES_*REASONING_EFFORT
+ * (AI_PROFILE=anthropic + ANTHROPIC_API_KEY runs it on Claude; CODENAMES_MODEL_* / CODENAMES_*REASONING_EFFORT
  * override tiers as on the server. The server's .env.local is not read here —
  * export the variables.) Each call is logged by the server's AI ledger.
  */
@@ -53,7 +53,9 @@ export function serverCodenamesAgent(): Promise<CodenamesAiAgent> {
     const mod = await importServerModule("games/codenames-agent.ts");
     const available = config.aiAvailable;
     if (typeof available !== "function" || !available()) {
-      throw new Error("TOURNAMENT_LLM=1 but no AI key (AI_GATEWAY_API_KEY / OPENAI_API_KEY)");
+      throw new Error(
+        "TOURNAMENT_LLM=1 but the AI_PROFILE's provider has no key (or AI_SUSPENDED)",
+      );
     }
     const found = mod.llmCodenamesAgent;
     if (!isAgent(found)) throw new Error("server codenames-agent has no llmCodenamesAgent");

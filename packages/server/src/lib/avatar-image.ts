@@ -1,6 +1,6 @@
 import OpenAI, { type ClientOptions } from "openai";
 import sharp from "sharp";
-import { AiConfigError, generateGatewayAvatarImage, resolveModel } from "./ai";
+import { AiConfigError, featureModelPin, generateAvatarImage } from "./ai";
 import { AI_SUSPENDED_MESSAGE, aiSuspended } from "./ai-suspend";
 import { dataUriToBuffer, toWebpDataUri } from "./data-uri.ts";
 
@@ -9,8 +9,8 @@ export { dataUriToBuffer };
 
 // AI image generation + sharp processing for avatars.
 //
-// Default path: a multimodal image model through the AI Gateway
-// (AI_MODEL_AVATAR, see lib/ai/image.ts) — reference photo in, image out.
+// Default path: the active AI profile's image model (the `image` role, or
+// AI_MODEL_AVATAR; see lib/ai/image.ts) — reference photo in, image out.
 // The pre-migration OpenAI path is kept selectable via
 // AI_MODEL_AVATAR=openai-image-tool until the gateway model passes the
 // likeness acceptance check: it mirrors how ChatGPT's web app does it — a
@@ -69,10 +69,10 @@ export async function toAvatarDataUri(input: Buffer): Promise<string> {
 
 /** Generate the avatar image bytes on whichever path AI_MODEL_AVATAR selects. */
 export async function runAvatarGeneration(referencePng: Buffer, prompt: string): Promise<Buffer> {
-  if (resolveModel("avatar") === OPENAI_IMAGE_TOOL) {
+  if (featureModelPin("avatar") === OPENAI_IMAGE_TOOL) {
     return runOpenAiAvatarGeneration(referencePng, prompt);
   }
-  return generateGatewayAvatarImage(referencePng, prompt);
+  return generateAvatarImage(referencePng, prompt);
 }
 
 /**

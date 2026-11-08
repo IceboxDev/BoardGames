@@ -22,6 +22,8 @@ afterEach(() => {
 
 function stubGatewayEnv() {
   vi.stubEnv("AI_SUSPENDED", "");
+  vi.stubEnv("AI_PROFILE", "");
+  vi.stubEnv("AI_MODEL", "");
   vi.stubEnv("AI_GATEWAY_API_KEY", "test-key");
   vi.stubEnv("AI_TRANSPORT", "sync");
 }
@@ -34,6 +36,7 @@ describe("structuredGenerate", () => {
 
   it("throws AiConfigError without a gateway key on gateway transports", async () => {
     vi.stubEnv("AI_SUSPENDED", "");
+    vi.stubEnv("AI_PROFILE", "");
     vi.stubEnv("AI_GATEWAY_API_KEY", "");
     vi.stubEnv("AI_TRANSPORT", "sync");
     await expect(structuredGenerate(BASE_ARGS)).rejects.toThrow(/AI_GATEWAY_API_KEY/);
@@ -51,9 +54,65 @@ describe("structuredGenerate", () => {
     });
     await expect(structuredGenerate(BASE_ARGS)).resolves.toEqual({ ok: true });
     expect(seen).toHaveLength(1);
-    expect(seen[0]?.model).toBe("test/model");
+    expect(seen[0]?.modelRef.id).toBe("gateway:test/model");
     expect(seen[0]?.schemaName).toBe("test_schema");
-    expect(seen[0]?.gatewayOptions?.tags).toEqual(["feature:dnd"]);
+    expect(seen[0]?.providerOptions?.gateway?.tags).toEqual(["feature:dnd"]);
+    expect(seen[0]?.system).toBe("sys");
+  });
+
+  it("runs on the anthropic profile: its key, its model, a cacheable system prompt", async () => {
+    vi.stubEnv("AI_SUSPENDED", "");
+    vi.stubEnv("AI_PROFILE", "anthropic");
+    vi.stubEnv("AI_MODEL", "");
+    vi.stubEnv("AI_MODEL_DND", "");
+    vi.stubEnv("AI_GATEWAY_API_KEY", "");
+    vi.stubEnv("ANTHROPIC_API_KEY", "test-key");
+    vi.stubEnv("AI_TRANSPORT", "sync");
+    const seen: AiTransportRequest[] = [];
+    setAiTransportsForTests({
+      sync: async (req) => {
+        seen.push(req);
+        return { ok: true };
+      },
+    });
+    await expect(structuredGenerate(BASE_ARGS)).resolves.toEqual({ ok: true });
+    expect(seen[0]?.modelRef).toEqual({
+      id: "anthropic:claude-opus-5-5",
+      provider: "anthropic",
+      model: "claude-opus-5-5",
+    });
+    expect(seen[0]?.providerOptions).toBeUndefined();
+    expect(seen[0]?.system).toEqual({
+      role: "system",
+      content: "sys",
+      providerOptions: { anthropic: { cacheControl: { type: "ephemeral" } } },
+    });
+  });
+
+  it("names the missing key of the profile's provider", async () => {
+    vi.stubEnv("AI_SUSPENDED", "");
+    vi.stubEnv("AI_PROFILE", "anthropic");
+    vi.stubEnv("AI_MODEL", "");
+    vi.stubEnv("AI_MODEL_DND", "");
+    vi.stubEnv("ANTHROPIC_API_KEY", "");
+    vi.stubEnv("AI_TRANSPORT", "sync");
+    await expect(structuredGenerate(BASE_ARGS)).rejects.toThrow(/ANTHROPIC_API_KEY/);
+  });
+
+  it("maps an Anthropic out-of-credit answer to AiBudgetError", async () => {
+    stubGatewayEnv();
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    setAiTransportsForTests({
+      sync: async () => {
+        throw new APICallError({
+          message: "Your credit balance is too low to access the Anthropic API.",
+          url: "https://api.anthropic.com/v1/messages",
+          requestBodyValues: {},
+          statusCode: 400,
+        });
+      },
+    });
+    await expect(structuredGenerate(BASE_ARGS)).rejects.toBeInstanceOf(AiBudgetError);
   });
 
   it("retries transient errors and succeeds", async () => {

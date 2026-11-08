@@ -1,9 +1,8 @@
-import type { JSONValue } from "ai";
 import { gateway, generateText } from "ai";
 import { aiSuspended } from "../ai-suspend";
 import type { AiFeature, AiTransportId } from "./config";
-import { gatewayKey, resolveFallbackModels, resolveModel, resolveTransport } from "./config";
-import { AiConfigError, causeChain, suspendedError } from "./errors";
+import { resolveModel, resolveTransport } from "./config";
+import { causeChain, suspendedError } from "./errors";
 import {
   type AiCallRecord,
   type AiCallUsage,
@@ -12,6 +11,16 @@ import {
   recordAiCall,
   sumUsage,
 } from "./ledger";
+import {
+  type AiRole,
+  activeProfile,
+  languageModel,
+  PROVIDER_KEY_ENV,
+  providerKey,
+  requireKey,
+  roleModel,
+} from "./models";
+import { adapterFor } from "./providers";
 import { withTransientRetry } from "./retry";
 import { openAiBackgroundTransport } from "./transports/openai-background";
 import { streamTransport } from "./transports/stream";
@@ -30,7 +39,7 @@ export interface StructuredGenerateArgs {
   /** Total budget for the call, ms. */
   budgetMs: number;
   reasoningEffort?: "low" | "medium" | "high";
-  /** Overrides env model resolution (Decrypto passes the resolved seat slug). */
+  /** Overrides env model resolution: a registry id or legacy gateway slug (game tiers pass theirs). */
   modelOverride?: string;
 }
 
@@ -47,14 +56,6 @@ export function setAiTransportsForTests(
   overrides: Partial<Record<AiTransportId, AiTransport>> | null,
 ): void {
   transportOverrides = overrides;
-}
-
-function gatewayOptions(feature: AiFeature): Record<string, JSONValue> {
-  const fallbacks = resolveFallbackModels();
-  return {
-    tags: [`feature:${feature}`],
-    ...(fallbacks ? { models: fallbacks } : {}),
-  };
 }
 
 function userText(user: AiUserContent): string {
@@ -91,22 +92,23 @@ export async function structuredGenerateTraced(
   if (aiSuspended()) throw suspendedError();
   const transportId = resolveTransport(args.feature);
   const transport = transportOverrides?.[transportId] ?? TRANSPORTS[transportId];
-  if (transportId !== "openai-background" && !gatewayKey()) {
-    throw new AiConfigError("AI is not configured (AI_GATEWAY_API_KEY).");
-  }
-  const model = resolveModel(args.feature, args.modelOverride);
+  const ref = resolveModel(args.feature, args.modelOverride);
+  // The background transport talks to OpenAI itself and checks its own key.
+  if (transportId !== "openai-background") requireKey(ref);
+  const adapter = adapterFor(ref);
   let usage: AiCallUsage = EMPTY_USAGE;
   let attempts = 0;
   const request = {
-    model,
+    model: languageModel(ref),
+    modelRef: ref,
     label: args.label,
-    system: args.system,
+    system: args.system === undefined ? undefined : adapter.instructions(args.system),
     user: args.user,
     schemaName: args.schemaName,
     jsonSchema: args.jsonSchema,
     budgetMs: args.budgetMs,
     reasoningEffort: args.reasoningEffort,
-    gatewayOptions: gatewayOptions(args.feature),
+    providerOptions: adapter.providerOptions({ feature: args.feature }),
     onUsage: (u: AiCallUsage) => {
       usage = sumUsage(usage, u);
     },
@@ -118,7 +120,7 @@ export async function structuredGenerateTraced(
       at: new Date(started).toISOString(),
       feature: args.feature,
       label: args.label,
-      model: typeof model === "string" ? model : "(model instance)",
+      model: ref.id,
       transport: transportId,
       ms: Date.now() - started,
       ok,
@@ -150,10 +152,39 @@ export async function structuredGenerateTraced(
   }
 }
 
+export interface AiStatus {
+  profile: string;
+  suspended: boolean;
+  /** Each role's model in the active profile (null = the profile has none). */
+  roles: Record<AiRole, string | null>;
+  /** Which provider keys are set (names only, never values). */
+  keys: Record<string, boolean>;
+}
+
+/** What the server would call right now — no request leaves. */
+export function aiStatus(): AiStatus {
+  const roles: AiRole[] = ["fast", "balanced", "smart", "image"];
+  return {
+    profile: activeProfile(),
+    suspended: aiSuspended(),
+    roles: Object.fromEntries(roles.map((r) => [r, roleModel(r)?.id ?? null])) as Record<
+      AiRole,
+      string | null
+    >,
+    keys: Object.fromEntries(
+      Object.entries(PROVIDER_KEY_ENV).map(([provider, name]) => [
+        name,
+        Boolean(providerKey(provider as keyof typeof PROVIDER_KEY_ENV)),
+      ]),
+    ),
+  };
+}
+
 /**
- * Reachability probe for `/api/health/ai`. Plain mode is an unbilled gateway
- * metadata call; `gen: true` runs a real one-word generation through the
- * configured transport path (admin-gated at the route — it bills).
+ * Reachability probe for `/api/health/ai`. Plain mode reports the profile and,
+ * on the gateway profile, makes the unbilled gateway model-list call; `gen:
+ * true` runs a real one-word generation on the `fast` role (admin-gated at
+ * the route — it bills).
  */
 export async function probeAi(
   gen: boolean,
@@ -161,21 +192,27 @@ export async function probeAi(
   const t0 = Date.now();
   try {
     if (aiSuspended()) throw suspendedError();
+    const ref = resolveModel("probe");
+    requireKey(ref);
     if (!gen) {
+      if (ref.provider !== "gateway") {
+        return { ok: true, detail: `profile ${activeProfile()}: ${ref.provider} key set` };
+      }
       const available = await gateway.getAvailableModels();
       return {
         ok: true,
         detail: `gateway models ok (${available.models.length} models, ${Date.now() - t0}ms)`,
       };
     }
+    const providerOptions = adapterFor(ref).providerOptions({ feature: "probe" });
     const result = await generateText({
-      model: resolveModel("probe"),
+      model: languageModel(ref),
       prompt: "Reply with exactly: OK",
       timeout: { totalMs: 60_000 },
-      providerOptions: { gateway: gatewayOptions("probe") },
+      ...(providerOptions ? { providerOptions } : {}),
     });
     const text = result.text.slice(0, 40);
-    return { ok: true, detail: `generation ok (${Date.now() - t0}ms): ${text}` };
+    return { ok: true, detail: `generation ok on ${ref.id} (${Date.now() - t0}ms): ${text}` };
   } catch (err) {
     return { ok: false, error: causeChain(err) };
   }

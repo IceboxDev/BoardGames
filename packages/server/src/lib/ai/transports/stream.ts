@@ -1,8 +1,8 @@
 import { jsonSchema, Output, streamText } from "ai";
 import { resolveStreamIdleTimeoutMs } from "../config";
+import { readUsage } from "../providers";
 import type { AiTransportRequest } from "./types";
 import { toUserMessages } from "./types";
-import { readUsage } from "./usage";
 
 /**
  * Streaming transport — the server default. Reasoning/text deltas keep bytes
@@ -23,7 +23,7 @@ export async function streamTransport(req: AiTransportRequest): Promise<unknown>
     ...(req.reasoningEffort ? { reasoning: req.reasoningEffort } : {}),
     maxRetries: 0, // retries live in withTransientRetry, one layer up
     timeout: { totalMs: req.budgetMs, firstChunkMs: idleMs, chunkMs: idleMs },
-    ...(req.gatewayOptions ? { providerOptions: { gateway: req.gatewayOptions } } : {}),
+    ...(req.providerOptions ? { providerOptions: req.providerOptions } : {}),
     onError: ({ error }) => {
       streamError ??= error;
     },
@@ -37,6 +37,6 @@ export async function streamTransport(req: AiTransportRequest): Promise<unknown>
     throw streamError instanceof Error ? streamError : new Error(String(streamError));
   }
   const output = await result.output;
-  req.onUsage?.(readUsage(await result.totalUsage, await result.providerMetadata));
+  req.onUsage?.(readUsage(req.modelRef, await result.totalUsage, await result.providerMetadata));
   return output;
 }

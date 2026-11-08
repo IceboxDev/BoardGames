@@ -1,7 +1,7 @@
 import { generateText, jsonSchema, Output } from "ai";
+import { readUsage } from "../providers";
 import type { AiTransportRequest } from "./types";
 import { toUserMessages } from "./types";
-import { readUsage } from "./usage";
 
 /**
  * Plain awaited call. Fine for local scripts and short generations; on
@@ -17,8 +17,8 @@ export async function syncTransport(req: AiTransportRequest): Promise<unknown> {
     ...(req.reasoningEffort ? { reasoning: req.reasoningEffort } : {}),
     maxRetries: 0, // retries live in withTransientRetry, one layer up
     timeout: { totalMs: req.budgetMs },
-    ...(req.gatewayOptions ? { providerOptions: { gateway: req.gatewayOptions } } : {}),
+    ...(req.providerOptions ? { providerOptions: req.providerOptions } : {}),
   });
-  req.onUsage?.(readUsage(result.totalUsage, result.providerMetadata));
+  req.onUsage?.(readUsage(req.modelRef, result.totalUsage, result.providerMetadata));
   return result.output;
 }

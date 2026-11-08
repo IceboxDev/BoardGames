@@ -37,7 +37,13 @@ import {
   MAX_CLUE_COUNT,
 } from "@boardgames/core/games/codenames/clue-rules";
 import { z } from "zod";
-import { causeChain, type StructuredGenerateArgs, structuredGenerateTraced } from "../lib/ai";
+import {
+  type AiRole,
+  causeChain,
+  type StructuredGenerateArgs,
+  structuredGenerateTraced,
+  tierModel,
+} from "../lib/ai";
 
 /**
  * LLM-backed Codenames / Duet agent, bound per session while AI is available
@@ -72,10 +78,11 @@ const JUDGE_BUDGET_MS = 15_000;
 /** Don't start a test read with less than this left of the clue step. */
 const MIN_READ_MS = 6_000;
 
-const TIER_MODELS: Record<CodenamesAiModel, { env: string; fallback: string }> = {
-  "codenames-medium": { env: "CODENAMES_MODEL_MEDIUM", fallback: "openai/gpt-5-nano" },
-  "codenames-hard": { env: "CODENAMES_MODEL_HARD", fallback: "openai/gpt-5.4-nano" },
-  "codenames-expert": { env: "CODENAMES_MODEL_EXPERT", fallback: "openai/gpt-5.2" },
+/** Tier → the AI profile's role (lib/ai/models.ts); the env var pins one tier to a model. */
+const TIER_MODELS: Record<CodenamesAiModel, { env: string; role: AiRole }> = {
+  "codenames-medium": { env: "CODENAMES_MODEL_MEDIUM", role: "fast" },
+  "codenames-hard": { env: "CODENAMES_MODEL_HARD", role: "balanced" },
+  "codenames-expert": { env: "CODENAMES_MODEL_EXPERT", role: "smart" },
 };
 
 /** The keyless reader the Mastermind checks its clues against. */
@@ -83,7 +90,7 @@ const READER_TIER: CodenamesAiModel = "codenames-hard";
 
 function modelForTier(tier: string): string {
   const entry = TIER_MODELS[codenamesModelOf(tier)];
-  return process.env[entry.env]?.trim() || entry.fallback;
+  return tierModel(entry.env, entry.role);
 }
 
 type Effort = "low" | "medium" | "high";

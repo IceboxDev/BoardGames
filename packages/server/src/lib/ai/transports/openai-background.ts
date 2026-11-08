@@ -8,8 +8,8 @@ import type { AiTransportRequest } from "./types";
  * Escape-hatch transport: the pre-migration OpenAI background+poll flow,
  * preserved verbatim because it is the one transport proven against
  * Railway's egress path severing long-lived connections. Requires a direct
- * `OPENAI_API_KEY` (bills OpenAI, not gateway credits) and an `openai/*`
- * model slug. The create call returns as soon as the job is queued;
+ * `OPENAI_API_KEY` (bills OpenAI, not gateway credits) and an OpenAI model
+ * (`openai:gpt-5.2`, or the legacy gateway slug `openai/gpt-5.2`). The create call returns as soon as the job is queued;
  * completion is fetched with short, individually-retried polls.
  */
 
@@ -24,13 +24,18 @@ function getClient(): OpenAI {
   return new OpenAI({ apiKey, fetch: globalThis.fetch as unknown as ClientOptions["fetch"] });
 }
 
-function openAiModel(slug: AiTransportRequest["model"]): string {
-  if (typeof slug !== "string" || !slug.startsWith("openai/")) {
-    throw new AiConfigError(
-      `openai-background transport only runs openai/* models, got "${String(slug)}".`,
-    );
+function openAiModel(ref: AiTransportRequest["modelRef"]): string {
+  if (ref.provider === "openai") return ref.model;
+  if (ref.provider === "gateway" && ref.model.startsWith("openai/")) {
+    return ref.model.slice("openai/".length);
   }
-  return slug.slice("openai/".length);
+  throw new AiConfigError(`openai-background transport only runs OpenAI models, got "${ref.id}".`);
+}
+
+function systemText(system: AiTransportRequest["system"]): string | undefined {
+  if (system === undefined || typeof system === "string") return system;
+  const messages = Array.isArray(system) ? system : [system];
+  return messages.map((m) => m.content).join("\n\n");
 }
 
 type InputContent =
@@ -63,9 +68,9 @@ function responseOutputText(res: OpenAI.Responses.Response): string {
 export async function openAiBackgroundTransport(req: AiTransportRequest): Promise<unknown> {
   const client = getClient();
   const params: Omit<OpenAI.Responses.ResponseCreateParamsNonStreaming, "stream"> = {
-    model: openAiModel(req.model),
+    model: openAiModel(req.modelRef),
     ...(req.reasoningEffort ? { reasoning: { effort: req.reasoningEffort } } : {}),
-    ...(req.system ? { instructions: req.system } : {}),
+    ...(req.system ? { instructions: systemText(req.system) } : {}),
     input: [{ role: "user", content: toInputContent(req.user) }],
     text: {
       format: {

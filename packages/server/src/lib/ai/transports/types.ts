@@ -1,5 +1,7 @@
-import type { JSONValue, LanguageModel, ModelMessage } from "ai";
+import type { Instructions, LanguageModel, ModelMessage } from "ai";
 import type { AiCallUsage } from "../ledger";
+import type { ModelRef } from "../models";
+import type { ProviderOptions } from "../providers";
 
 export interface AiTextPart {
   type: "text";
@@ -17,10 +19,13 @@ export interface AiFilePart {
 export type AiUserContent = string | (AiTextPart | AiFilePart)[];
 
 export interface AiTransportRequest {
-  /** Gateway slug ("provider/model"; a model instance only in tests); openai-background requires an openai/* slug. */
+  /** The AI SDK model to call. */
   model: LanguageModel;
+  /** Which model that is (registry id + provider) — the ledger's name for it, and its price. */
+  modelRef: ModelRef;
   label: string;
-  system?: string;
+  /** The system prompt, already shaped for the provider (providers.ts `instructions`). */
+  system?: Instructions;
   user: AiUserContent;
   schemaName: string;
   /** Raw strict JSON Schema (additionalProperties: false, all required). */
@@ -28,8 +33,8 @@ export interface AiTransportRequest {
   /** Total wall-clock budget for the call, ms. */
   budgetMs: number;
   reasoningEffort?: "low" | "medium" | "high";
-  /** providerOptions.gateway payload (tags, fallback models). */
-  gatewayOptions?: Record<string, JSONValue>;
+  /** The provider's extra request options (providers.ts). */
+  providerOptions?: ProviderOptions;
   /** Told the attempt's tokens and billed cost when it finishes (the ledger's source). */
   onUsage?: (usage: AiCallUsage) => void;
 }

@@ -14,9 +14,9 @@
  *   TOURNAMENT_LLM=1 AI_GATEWAY_API_KEY=… \
  *     pnpm --filter @boardgames/core tournament decrypto --games 4 --workers 1
  *
- * (`OPENAI_API_KEY` works instead of the gateway key; `DECRYPTO_MODEL_MEDIUM`
- * / `_HARD` / `_EXPERT` and `DECRYPTO_REASONING_EFFORT` pick the models as on
- * the server. Each call is also written to the AI ledger's local trace file.)
+ * (`AI_PROFILE=anthropic ANTHROPIC_API_KEY=…` runs it on Claude, as on the
+ * server; `DECRYPTO_MODEL_MEDIUM` / `_HARD` / `_EXPERT` and
+ * `DECRYPTO_REASONING_EFFORT` pin the models. Each call is also written to the AI ledger's local trace file.)
  */
 
 import type { GameOutcome } from "../../machines/outcome";
@@ -38,8 +38,10 @@ const useLlm = process.env.TOURNAMENT_LLM === "1";
  * on the server package (and nothing is loaded unless the run opted in).
  */
 async function loadLlmAgent(): Promise<DecryptoAiAgent> {
-  if (!process.env.AI_GATEWAY_API_KEY && !process.env.OPENAI_API_KEY) {
-    throw new Error("TOURNAMENT_LLM=1 needs AI_GATEWAY_API_KEY or OPENAI_API_KEY");
+  const config = await importServerModule("lib/ai/config.ts");
+  const available = config.aiAvailable;
+  if (typeof available !== "function" || !available()) {
+    throw new Error("TOURNAMENT_LLM=1 but the AI_PROFILE's provider has no key (or AI_SUSPENDED)");
   }
   const agent = (await importServerModule(SERVER_AGENT)).openAiDecryptoAgent;
   if (!isRecord(agent)) throw new Error(`${SERVER_AGENT} has no openAiDecryptoAgent`);

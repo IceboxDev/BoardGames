@@ -66,7 +66,7 @@ import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { probeDb } from "./db.ts";
 import { goReviewRoutes } from "./games/go-review-routes.ts";
 import { getRegisteredSlugs } from "./games/registry.ts";
-import { probeAi } from "./lib/ai/index.ts";
+import { aiStatus, probeAi } from "./lib/ai/index.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
 import { errorResponse } from "./lib/error-response.ts";
 import { allowedOrigins } from "./lib/origins.ts";
@@ -148,7 +148,7 @@ app.get("/api/auth-config", (c) =>
   c.json(AuthConfigSchema.parse({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) })),
 );
 
-// AI-gateway reachability from THIS host. `?gen=1` runs a REAL generation and
+// AI reachability from THIS host, on the active AI profile (lib/ai/models.ts). `?gen=1` runs a REAL generation and
 // therefore costs money on every call, so it is admin-only — it was previously
 // unauthenticated, i.e. anyone on the internet could bill the owner's account
 // in a loop. The free reachability check stays open so uptime probes work.
@@ -161,7 +161,15 @@ const aiHealthHandler = async (c: Context) => {
     }
   }
   const result = await probeAi(wantsGeneration);
-  return c.json(result, result.ok ? 200 : 502);
+  // Which profile and models answer (no key material — that stays in aiStatus().keys).
+  let models: { profile: string; roles: Record<string, string | null> } | null = null;
+  try {
+    const { profile, roles } = aiStatus();
+    models = { profile, roles };
+  } catch {
+    // a bad AI_PROFILE already shows in result.error
+  }
+  return c.json({ ...result, models }, result.ok ? 200 : 502);
 };
 app.get("/api/health/ai", aiHealthHandler);
 // Legacy alias — keep until uptime monitors are repointed at /api/health/ai.

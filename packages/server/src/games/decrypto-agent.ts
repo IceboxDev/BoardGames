@@ -13,7 +13,7 @@ import {
 import { checkClueLegality, isValidCode } from "@boardgames/core/games/decrypto/rules";
 import type { Code } from "@boardgames/core/games/decrypto/types";
 import { z } from "zod";
-import { causeChain, structuredGenerate } from "../lib/ai";
+import { type AiRole, causeChain, structuredGenerate, tierModel } from "../lib/ai";
 
 /**
  * LLM-backed Decrypto agent. Bound to each new session's machine while AI is
@@ -340,12 +340,11 @@ function guessUser(input: GuessInput, violation?: string): string {
 // Calls
 // ---------------------------------------------------------------------------
 
-/** Tier id → concrete gateway model slug (env-overridable per tier). */
-const TIER_MODELS: Record<string, { env: string; fallback: string }> = {
-  // Free-tier OpenAI ladder: nano → newer nano → flagship.
-  "decrypto-medium": { env: "DECRYPTO_MODEL_MEDIUM", fallback: "openai/gpt-5-nano" },
-  "decrypto-hard": { env: "DECRYPTO_MODEL_HARD", fallback: "openai/gpt-5.4-nano" },
-  "decrypto-expert": { env: "DECRYPTO_MODEL_EXPERT", fallback: "openai/gpt-5.2" },
+/** Tier id → the AI profile's role (lib/ai/models.ts); the env var pins one tier to a model. */
+const TIER_MODELS: Record<string, { env: string; role: AiRole }> = {
+  "decrypto-medium": { env: "DECRYPTO_MODEL_MEDIUM", role: "fast" },
+  "decrypto-hard": { env: "DECRYPTO_MODEL_HARD", role: "balanced" },
+  "decrypto-expert": { env: "DECRYPTO_MODEL_EXPERT", role: "smart" },
 };
 
 function modelForTier(raw: string): string {
@@ -354,7 +353,7 @@ function modelForTier(raw: string): string {
   const tier = canonicalDecryptoModel(raw || DEFAULT_DECRYPTO_MODEL);
   const entry = TIER_MODELS[tier] ?? TIER_MODELS["decrypto-expert"];
   if (!entry) throw new Error("decrypto tier table is empty");
-  return process.env[entry.env]?.trim() || entry.fallback;
+  return tierModel(entry.env, entry.role);
 }
 
 async function callEncrypt(

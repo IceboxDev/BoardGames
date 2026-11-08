@@ -19,6 +19,7 @@ const USAGE = {
 function request(model: AiTransportRequest["model"]): AiTransportRequest {
   return {
     model,
+    modelRef: { id: "gateway:test/model", provider: "gateway", model: "test/model" },
     label: "test",
     system: "sys",
     user: "hello",
