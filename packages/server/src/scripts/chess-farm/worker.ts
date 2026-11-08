@@ -1,7 +1,7 @@
 /**
  * The chess analysis farm worker (runs on ws21): claims evaluation jobs from
  * the server, analyses each by BEST_MOVE (`pipeline.ts`) and posts the
- * result. Jobs run one at a time on Stockfish with every thread; Lc0 searches
+ * result. Jobs run one at a time on single-thread Stockfish; Lc0 searches
  * the same position on the GPU meanwhile. After each one the worker queues its
  * follow-ups (`follow-ups.ts`) and claims them next, depth first, without
  * `ucinewgame`: the hash still holds most of their search.
@@ -12,8 +12,9 @@
  *   FARM_URL            server base, e.g. https://api.example.com (required)
  *   CHESS_FARM_TOKEN    bearer token (required)
  *   FARM_WORKER         worker name (default: hostname)
- *   SF_PATH             Stockfish binary (required). It always runs core's `SEARCH` (one
- *                       thread, the same hash) — a machine runs one worker per core instead
+ *   SF_PATH             Stockfish binary (required), always run as core's `SEARCH` (one
+ *                       thread, the same hash): a machine runs one worker per core. Every
+ *                       job is searched to its full depth however long it takes
  *   LC0_PATH, LC0_WEIGHTS, LC0_BACKEND (optional; without them ties fall back to Stockfish order)
  *   FARM_LOOKUPS=1      ask lichess / ChessDB first (off: every result is the farm's own search)
  *   FARM_FOLLOW_UPS=0   don't queue follow-ups (claim by reach only)
@@ -24,19 +25,10 @@
  *   FARM_ORDER          `reach` (default: most played on lichess first, then most of your
  *                       games) or `deep` (its own follow-ups, then the deepest waiting
  *                       position: finishes lines)
- *   FARM_LANE           `normal` (default) or `heavy`. A normal lane hands the heavy lane a
- *                       decided position of yours (±7 at the pre-pass, `HEAVY_SCREEN_CP`)
- *                       before its deep search, and any job it has spent
- *                       FARM_HANDOVER_HOURS on (default 9), with an estimate of what the job
- *                       would take here — unless its last deep search is by then within 2
- *                       depths of its target (`nearlyDone`): that one finishes here. The heavy lane takes only those, least bad first, and
- *                       searches them to the full depth however long it takes.
- *   FARM_HASH_MB        the heavy lane's hash (every normal lane runs core's `SEARCH`); its
- *                       results name it in their engine label
  *   LC0_SERVE_PORT      also serve this worker's Lc0 on 127.0.0.1 to the fleet (ws21: 3002)
  *   LC0_URL             use that remote Lc0 instead of a local one (fleet: http://localhost:3002/)
  */
-import { statSync } from "node:fs";
+import { mkdirSync, statSync, writeFileSync } from "node:fs";
 import { hostname } from "node:os";
 import { parseFen, positionKey } from "@boardgames/core/games/chess/engine/fen";
 import { SEARCH } from "@boardgames/core/games/chess/trainer/eval-policy";
@@ -64,15 +56,8 @@ import {
   analyse,
   defaultPolicy,
   type FarmEngines,
-  Halted,
-  HEAVY_SCREEN_CP,
-  handoverEstimate,
-  type JobControl,
   Lc0Lane,
   type Lc0Source,
-  nearlyDone,
-  SCREENED_EST_HOURS,
-  Screened,
   ShortSearch,
 } from "./pipeline.ts";
 import { progressText, UciEngine } from "./uci.ts";
@@ -96,10 +81,6 @@ const KINDS = (process.env.FARM_KINDS ?? "user,opp")
 if (KINDS.length === 0) throw new Error("FARM_KINDS must name user and/or opp");
 const IDLE_EXIT_MS = Number(process.env.FARM_IDLE_EXIT_MIN ?? 0) * 60_000;
 const ORDER = process.env.FARM_ORDER === "deep" ? "deep" : "reach";
-const HEAVY = process.env.FARM_LANE === "heavy";
-const HASH_MB = HEAVY ? Number(need("FARM_HASH_MB")) : SEARCH.hashMb;
-if (!Number.isInteger(HASH_MB) || HASH_MB < 1) throw new Error("FARM_HASH_MB must be a whole MB");
-const HANDOVER_MS = Number(process.env.FARM_HANDOVER_HOURS ?? 9) * 3600_000;
 
 /** "fetch failed" says nothing: the socket error is in `cause`. */
 function fetchError(err: unknown): string {
@@ -109,6 +90,20 @@ function fetchError(err: unknown): string {
 }
 
 const FARM_TRIES = 3;
+
+/** The farm API answered, with an error status. */
+class FarmHttpError extends Error {
+  constructor(
+    path: string,
+    readonly status: number,
+    body: string,
+  ) {
+    super(`${path}: ${status} ${body}`);
+  }
+}
+
+/** How long a finished result keeps being offered to an API that is down or failing. */
+const COMPLETE_RETRY_MS = 48 * 3600_000;
 
 /**
  * A call to the farm API. A request that fails before any answer is sent again
@@ -139,7 +134,7 @@ async function farm<T>(path: string, body: unknown, schema: z.ZodType<T>): Promi
     if (res.status === 409 && attempt > 1 && path === "/complete") {
       return schema.parse({ ok: true });
     }
-    if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text().catch(() => "")}`);
+    if (!res.ok) throw new FarmHttpError(path, res.status, await res.text().catch(() => ""));
     return schema.parse(await res.json());
   }
 }
@@ -238,10 +233,36 @@ async function queueFollowUps(
   return queued;
 }
 
+/**
+ * Post a finished result. A search can take days, so it is never thrown away
+ * for an API that is restarting or down: one over an hour is written to
+ * `results/` first, and every one is offered again every minute for up to two
+ * days. Only a refusal (4xx) ends it.
+ */
+async function complete(job: FarmJob, result: PositionEval): Promise<void> {
+  if (result.seconds >= 3600) {
+    mkdirSync("results", { recursive: true });
+    writeFileSync(`results/${job.id}.json`, JSON.stringify({ job, result }));
+  }
+  const until = Date.now() + COMPLETE_RETRY_MS;
+  for (;;) {
+    try {
+      await farm("/complete", { worker: WORKER, id: job.id, result }, FarmOkSchema);
+      return;
+    } catch (err) {
+      const refused = err instanceof FarmHttpError && err.status < 500;
+      if (refused || Date.now() > until) throw err;
+      log(
+        `#${job.id} complete failed (${err instanceof Error ? err.message : err}) — again in 1 min`,
+      );
+      await new Promise((r) => setTimeout(r, 60_000));
+    }
+  }
+}
+
 async function main() {
-  const threads = SEARCH.threads;
   const sf = new UciEngine(need("SF_PATH"), [], log);
-  await sf.init({ Threads: SEARCH.threads, Hash: HASH_MB, MultiPV: 1 });
+  await sf.init({ Threads: SEARCH.threads, Hash: SEARCH.hashMb, MultiPV: 1 });
   let lc0: Lc0Source | null = null;
   let lc0Engine: UciEngine | null = null;
   if (process.env.LC0_URL) {
@@ -263,22 +284,14 @@ async function main() {
   const label = [
     `stockfish ${process.env.SF_LABEL ?? need("SF_PATH").split("/").at(-1)}`,
     lc0 ? `lc0 ${process.env.LC0_LABEL ?? process.env.LC0_WEIGHTS?.split("/").at(-1)}` : null,
-    HEAVY ? `hash ${HASH_MB} MB` : null,
   ]
     .filter(Boolean)
     .join(" + ");
-  const policy = {
-    ...defaultPolicy(),
-    lookups: process.env.FARM_LOOKUPS === "1",
-    screenCp: HEAVY ? null : HEAVY_SCREEN_CP,
-  };
+  const policy = { ...defaultPolicy(), lookups: process.env.FARM_LOOKUPS === "1" };
   const engines: FarmEngines = { sf, lc0, label };
   log(
-    `worker ${WORKER} up: ${label}${process.env.LC0_URL ? " (remote)" : ""}, ${threads} threads,` +
-      ` takes ${KINDS.join(" + ")}, ` +
-      (HEAVY
-        ? "the heavy lane's jobs, least bad first"
-        : `${ORDER === "deep" ? "deepest" : "most reached"} first, hands over after ${HANDOVER_MS / 3600_000} h`),
+    `worker ${WORKER} up: ${label}${process.env.LC0_URL ? " (remote)" : ""}, ${SEARCH.threads} thread(s),` +
+      ` takes ${KINDS.join(" + ")}, ${ORDER === "deep" ? "deepest" : "most reached"} first`,
   );
   let idleSince = Date.now();
 
@@ -345,8 +358,7 @@ async function main() {
             max: 1,
             kinds: KINDS,
             order: ORDER,
-            lane: HEAVY ? "heavy" : "normal",
-            ...(prefer.length > 0 && !HEAVY ? { prefer } : {}),
+            ...(prefer.length > 0 ? { prefer } : {}),
           },
           FarmClaimResponseSchema,
         )
@@ -374,42 +386,9 @@ async function main() {
       const key = positionKey(parseFen(job.fen));
       const wasChained = chain.some((f) => positionKey(parseFen(f)) === key);
       chain = chain.filter((f) => positionKey(parseFen(f)) !== key);
-      // A normal lane's clock runs over the whole job, every deep search in it.
-      const started = Date.now();
-      let searching = {
-        target: 0,
-        left: 1,
-        leftIf: undefined as ((best: string) => number) | undefined,
-      };
-      let halt = null as { depth: number; at: number } | null;
-      const control: JobControl = {
-        halted: () => halt !== null,
-        searching: (target, left, leftIf) => {
-          searching = { target, left, leftIf };
-        },
-      };
-      const handover = HEAVY
-        ? null
-        : setTimeout(() => {
-            const depth = sf.progress?.depth ?? 0;
-            // The main search's count from the move it prefers now: at d48 nearly always its pick.
-            const best = sf.progress?.latest?.pv[0];
-            if (best && searching.leftIf) searching.left = searching.leftIf(best);
-            if (nearlyDone(depth, searching.target, searching.left)) {
-              log(
-                `#${job.id} ${job.kind} reach ${job.reach}: ${HANDOVER_MS / 3600_000} h at d${depth}/${searching.target}, last search — finishing here`,
-              );
-              return;
-            }
-            halt = { depth, at: Date.now() };
-            log(
-              `#${job.id} ${job.kind} reach ${job.reach}: ${HANDOVER_MS / 3600_000} h — handing over`,
-            );
-            sf.stop();
-          }, HANDOVER_MS);
       try {
-        const result: PositionEval = await analyse(job, engines, policy, control);
-        await farm("/complete", { worker: WORKER, id: job.id, result }, FarmOkSchema);
+        const result: PositionEval = await analyse(job, engines, policy);
+        await complete(job, result);
         log(
           `#${job.id} ${job.kind} reach ${job.reach}: ${result.best} d${result.depth} ${result.source}` +
             ` ${result.ties.length > 1 ? `ties ${result.ties.join(",")}` : ""}${result.contested ? " CONTESTED" : ""}` +
@@ -426,32 +405,6 @@ async function main() {
           );
         }
       } catch (err) {
-        const why =
-          err instanceof Screened
-            ? { estHours: SCREENED_EST_HOURS, why: `${WORKER}: ${err.message}` }
-            : halt !== null && (err instanceof Halted || err instanceof ShortSearch)
-              ? {
-                  estHours: handoverEstimate(
-                    halt.at - started,
-                    halt.depth,
-                    searching.target,
-                    searching.left,
-                  ),
-                  why: `${WORKER} at d${halt.depth}/${searching.target} after ${((halt.at - started) / 3600_000).toFixed(1)} h, ${searching.left} deep search(es) left`,
-                }
-              : null;
-        if (why) {
-          log(
-            `#${job.id} ${job.kind} reach ${job.reach}: to the heavy lane (~${why.estHours.toFixed(1)} h) — ${why.why}`,
-          );
-          await farm(
-            "/fail",
-            { worker: WORKER, id: job.id, error: why.why, retry: true, heavy: why },
-            FarmOkSchema,
-          ).catch((e) => log(`#${job.id} hand-over failed:`, e instanceof Error ? e.message : e));
-          current = null;
-          continue;
-        }
         if (err instanceof ShortSearch) {
           // Not stored, nothing queued below it; this worker won't take it again.
           log(`#${job.id} ${job.kind} reach ${job.reach}: ${err.message} — handed on`);
@@ -490,8 +443,6 @@ async function main() {
           { worker: WORKER, id: job.id, error: message, retry: true },
           FarmOkSchema,
         ).catch(() => {});
-      } finally {
-        if (handover) clearTimeout(handover);
       }
       current = null;
       idleSince = Date.now();

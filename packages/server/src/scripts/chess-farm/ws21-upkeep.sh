@@ -9,7 +9,7 @@
 #    code moved (rolled back to the old commit if it doesn't come up healthy), and
 #    ~/chess-farm/worker.mjs rebuilt when the bundle comes out different — each lane
 #    picks the new one up at its next claim, so no search is cut short.
-# 2. Wakes lanes the idle exit stopped (FARM_IDLE_EXIT_MIN) when normal work is queued:
+# 2. Wakes lanes the idle exit stopped (FARM_IDLE_EXIT_MIN) when work is queued:
 #    one per waiting job, as many as memory allows (1.5 GB each, 3 GB kept free).
 set -uo pipefail
 export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:/usr/bin:/bin"
@@ -17,7 +17,7 @@ export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:/usr/bin:/bin"
 export GIT_LFS_SKIP_SMUDGE=1
 REPO="$HOME/Documents/Projects/Personal/BoardGames"
 FARM="$HOME/chess-farm"
-LANES=22
+LANES=24
 log() { echo "upkeep: $*"; }
 healthy() {
   for _ in $(seq 1 40); do
@@ -90,12 +90,11 @@ rebuild_worker() {
 }
 
 wake_lanes() {
-  local status queued heavy want stopped=() mem room n
+  local status want stopped=() mem room n
   status=$(set -a; . "$FARM/farm.env"; set +a
     curl -sf -H "Authorization: Bearer $CHESS_FARM_TOKEN" "$FARM_URL/api/chess-farm/status") || return 0
-  queued=$(grep -oE '^\{"queued":[0-9]+' <<<"$status" | grep -oE '[0-9]+$')
-  heavy=$(grep -oE '"heavy":\{"queued":[0-9]+' <<<"$status" | grep -oE '[0-9]+$')
-  want=$(( ${queued:-0} - ${heavy:-0} ))
+  want=$(grep -oE '^\{"queued":[0-9]+' <<<"$status" | grep -oE '[0-9]+$')
+  want=${want:-0}
   [ "$want" -gt 0 ] || return 0
   for i in $(seq 1 $LANES); do
     systemctl --user is-active -q "chess-farm@$i" || stopped+=("$i")
@@ -106,9 +105,9 @@ wake_lanes() {
   n=$want
   [ "$n" -gt ${#stopped[@]} ] && n=${#stopped[@]}
   [ "$n" -gt "$room" ] && n=$room
-  [ "$n" -gt 0 ] || { log "$want normal jobs waiting, no memory to wake a lane (${mem} MB free)"; return 0; }
+  [ "$n" -gt 0 ] || { log "$want jobs waiting, no memory to wake a lane (${mem} MB free)"; return 0; }
   for i in "${stopped[@]:0:$n}"; do systemctl --user start "chess-farm@$i"; done
-  log "$want normal jobs waiting: woke lanes ${stopped[*]:0:$n}"
+  log "$want jobs waiting: woke lanes ${stopped[*]:0:$n}"
 }
 
 update_checkout

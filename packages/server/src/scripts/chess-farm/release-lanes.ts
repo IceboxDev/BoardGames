@@ -1,8 +1,7 @@
 /**
  * Put back in the queue the jobs held by lanes that are gone — a fleet stopped
  * or terminated before its searches finished (its machines come back under new
- * names, so their leases would otherwise hold the jobs for `LEASE_MS`). Jobs
- * handed to the heavy lane keep their mark and stay the heavy lane's.
+ * names, so their leases would otherwise hold the jobs for `LEASE_MS`).
  *
  *   pnpm --filter @boardgames/server exec tsx src/scripts/chess-farm/release-lanes.ts \
  *     --worker=aws- [--keep=aws-51-20-69-177-,…] [--idle-hours=1] [--prod] [--apply]

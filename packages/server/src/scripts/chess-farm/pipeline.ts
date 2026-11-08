@@ -37,13 +37,6 @@ export interface FarmPolicy {
   readonly maxCandidates: number;
   /** Ask lichess/ChessDB first (off for calibration runs). */
   readonly lookups: boolean;
-  /**
-   * Hand a position of yours to the heavy lane when the pre-pass's best line
-   * is at least this far from equal (centipawns, either side; a mate counts):
-   * a decided position, whose full-depth search may blow up. `null` (the heavy
-   * lane): never.
-   */
-  readonly screenCp: number | null;
 }
 
 export const defaultPolicy = (): FarmPolicy => ({
@@ -53,73 +46,7 @@ export const defaultPolicy = (): FarmPolicy => ({
   lc0Nodes: BEST_MOVE.lc0Nodes,
   maxCandidates: 2,
   lookups: false,
-  screenCp: null,
 });
-
-/**
- * The screen of a normal lane: ±7 at the pre-pass. Measured on the farm's
- * history (a depth-20 search of every finished job that could qualify): it
- * flags 0.36 % of the jobs that finished in under 5 h, and half of those that
- * took 24 h or more.
- */
-export const HEAVY_SCREEN_CP = 700;
-/** What a screened position would take on a normal lane: the mean of the ones the screen flags. */
-export const SCREENED_EST_HOURS = 14;
-
-/** The pre-pass found a decided position: the job goes to the heavy lane before its deep search. */
-export class Screened extends Error {
-  constructor(readonly cp: number | null) {
-    super(cp === null ? "decided at the pre-pass (mate)" : `decided at the pre-pass (${cp} cp)`);
-  }
-}
-
-/** The worker halted the job (`JobControl.halted`): the search was stopped part way. */
-export class Halted extends Error {
-  constructor() {
-    super("halted by the worker");
-  }
-}
-
-/** What the worker sees of a job while it runs, and its way to stop it. */
-export interface JobControl {
-  /** True once the worker wants the job stopped; checked after every search. */
-  halted(): boolean;
-  /**
-   * A deep search starts: its target depth and the deep searches left, this one
-   * included — the most there can be. The main search's count hangs on the move
-   * it picks; `leftIf` gives it for a move (the one the search prefers so far).
-   */
-  searching(target: number, left: number, leftIf?: (best: string) => number): void;
-}
-
-/**
- * At the hand-over time, a search this close to the end keeps its lane until
- * it finishes: the job's last deep search, at most 2 depths short of its target
- * (d48 of 50). In the logs, a d50 search reaches d48 at ~0.7× the time it
- * reaches d49, and one that reached d49 finished at ~1.3× that time.
- */
-export const HANDOVER_NEAR_DEPTHS = 2;
-
-export function nearlyDone(depth: number, target: number, left: number): boolean {
-  return target > 0 && left <= 1 && depth >= target - HANDOVER_NEAR_DEPTHS;
-}
-
-/**
- * What a job halted at `depth` of `target` after `elapsedMs` would have taken
- * on a normal lane: each depth still to go roughly doubles a blown-up search, and
- * every deep search left (a candidate's) costs about as much again.
- */
-export function handoverEstimate(
-  elapsedMs: number,
-  depth: number,
-  target: number,
-  left: number,
-): number {
-  const gap = Math.min(30, Math.max(0, target - depth));
-  return (elapsedMs / 3600_000) * 2 ** gap * Math.max(1, left);
-}
-
-const NO_CONTROL: JobControl = { halted: () => false, searching: () => {} };
 
 /**
  * The node limit stopped a search short of its target depth. Nothing is
@@ -204,14 +131,12 @@ async function sfLines(
   fen: string,
   go: string,
   multipv: number,
-  control: JobControl,
 ): Promise<FarmLine[]> {
   engines.sf.setOption("MultiPV", multipv);
   // No limit but the depth, however long it takes; a stuck engine shows as one
   // that stops answering `isready`.
   const r = await engines.sf.search(fen, go, { checkEveryMs: 5 * 60_000 });
   if (multipv !== 1) engines.sf.setOption("MultiPV", 1);
-  if (control.halted()) throw new Halted();
   return finalLines(r.infos).map(toLine);
 }
 
@@ -219,7 +144,6 @@ export async function analyse(
   job: FarmJob,
   engines: FarmEngines,
   policy: FarmPolicy,
-  control: JobControl = NO_CONTROL,
 ): Promise<PositionEval> {
   const start = Date.now();
   // Nothing carried over from the previous position: identical on every worker.
@@ -257,8 +181,7 @@ export async function analyse(
       }
     }
     const depth = policy.oppDepth;
-    control.searching(depth, 1);
-    const lines = await sfLines(engines, job.fen, `depth ${depth}`, want, control);
+    const lines = await sfLines(engines, job.fen, `depth ${depth}`, want);
     if (lines.length === 0) throw new Error("Stockfish gave no lines");
     final(lines, depth);
     return done({
@@ -317,30 +240,15 @@ export async function analyse(
       job.fen,
       `depth ${policy.prepassDepth}`,
       Math.min(3, legal.size),
-      control,
     );
-    const top = pre[0];
-    if (top && policy.screenCp !== null && Math.abs(scoreValue(top)) >= policy.screenCp) {
-      throw new Screened(top.mate === null ? top.cp : null);
-    }
     cands = candidates(pre.map((l) => ({ uci: l.uci, cp: l.cp, mate: l.mate })));
   }
 
-  const others = (best: string | undefined) =>
-    cands.filter((u) => u !== best).slice(0, policy.maxCandidates);
-  // Before the main search its best isn't known: at most every candidate besides one.
-  control.searching(
-    target,
-    1 + Math.min(cands.length, policy.maxCandidates),
-    (best) => 1 + others(best).length,
-  );
-  const main = await sfLines(engines, job.fen, `depth ${target}`, 1, control);
+  const main = await sfLines(engines, job.fen, `depth ${target}`, 1);
   if (main.length === 0) throw new Error("Stockfish gave no line");
   const lines: FarmLine[] = [main[0] as FarmLine];
-  const rest = others(main[0]?.uci);
-  for (const [i, c] of rest.entries()) {
-    control.searching(target, rest.length - i);
-    const alt = await sfLines(engines, job.fen, `depth ${target} searchmoves ${c}`, 1, control);
+  for (const c of cands.filter((u) => u !== main[0]?.uci).slice(0, policy.maxCandidates)) {
+    const alt = await sfLines(engines, job.fen, `depth ${target} searchmoves ${c}`, 1);
     if (alt[0]) lines.push(alt[0]);
   }
   // Every line to the full depth, or the comparison (and the move) isn't final.

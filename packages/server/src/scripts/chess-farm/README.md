@@ -24,7 +24,7 @@ posts results into the shared cache (`chess_position_evals`).
 - **ws21** (`FARM_KINDS=user`) searches only your positions: single-PV to depth 50 on every tier (`policy.json`, cap 6× the calibrated median nodes), candidates via `searchmoves`, Lc0 tie-breaks.
 - **The AWS fleet** (`aws/`) runs the same worker as ws21: one single-threaded lane per vCPU, both kinds (`FARM_KINDS=user,opp`), deepest line first (`FARM_ORDER=deep`), Lc0 through ws21. Free-plan `c7i-flex.large` instances, at most 8 per account (16-vCPU quota), about $0.095 a machine-hour all in (instance, public IPv4, 8 GB disk).
 - **Claim order:** the position most played on lichess first. `chess_eval_jobs.popularity` (migration 0060) is the explorer's game count, every rating and speed, filled in the background by the API server that has `LICHESS_TOKEN` (`lib/chess-trainer/farm-popularity.ts`). Ties go to reach (your games), then oldest first. Positions not counted yet wait behind every counted one.
-- **Database:** since 2026-10-17 the farm's API on ws21 (`boardgames-server` user unit) runs on the **production** database through a systemd drop-in, `prod-db.conf` → `~/chess-farm/prod-db.env`. A staging refresh once wiped every job and result. A claim older than `LEASE_MS` (7 days) may be taken by another lane; a stopped lane releases its job.
+- **Database:** since 2026-10-17 the farm's API on ws21 (`boardgames-server` user unit) runs on the **production** database through a systemd drop-in, `prod-db.conf` → `~/chess-farm/prod-db.env`. A staging refresh once wiped every job and result. A claim older than `LEASE_MS` (60 days) may be taken by another lane; a stopped lane releases its job.
 - They feed each other through follow-ups: a finished position of yours queues the opponent position after your move (for the fleet), a finished opponent position queues your replies after its engine moves (for ws21).
 - **Fleet:** `aws/fleet.sh up 8` on the laptop (AWS profile `boardgames`; builds Stockfish at boot), then on ws21 `~/chess-farm/aws-attach.sh $(…ips)`. Each instance reaches ws21's API through a reverse SSH tunnel ws21 opens (`farm-tunnel@<ip>` user unit); nothing on ws21 is exposed. An instance stops itself after an idle hour (`fleet.sh start` + attach again — the IPs change; `start` and `up` also swap the firewall rule to ws21's current address, which a reboot can change); `fleet.sh down` removes everything.
 
@@ -112,38 +112,28 @@ its code (so does the refill), so ws21's checkout must follow master.
 **Idle lanes stop themselves:** drop-in `chess-farm@.service.d/idle-exit.conf` sets
 `FARM_IDLE_EXIT_MIN=5` (exit 0, not restarted), except lane 1, which serves Lc0 to the others
 (`lane-1.env`: `FARM_IDLE_EXIT_MIN=0`). Upkeep wakes stopped lanes when normal work is queued:
-one per waiting job, as many as memory allows (1.5 GB each, 3 GB kept free, so a heavy lane's
-hash is never squeezed). After a reboot every enabled lane starts, and the idle ones stop again.
+one per waiting job, as many as memory allows (1.5 GB each, 3 GB kept free). After a reboot every enabled lane starts, and the idle ones stop again.
 
 The worker is the user unit `chess-farm.service` (`~/.config/systemd/user/`; lingering is on):
 `systemctl --user start chess-farm`, logs with `journalctl --user -u chess-farm -f`.
 
-### The heavy lane (since 2026-10-22)
+### No heavy lane (since 2026-11-05)
 
-A few searches blow up: nearly always a decided position (one side a queen or rook up), where
-Stockfish can't prune and each depth costs several times the last. Jobs of ±6 or more were
-5.7 % of the jobs and took 51 % of the farm's hours, some over 100 h on one lane. Results are
-never cut short; those jobs move to one lane with a whole core and most of the memory instead.
+Every job runs on a normal lane (one thread, core's `SEARCH` hash) to its full depth, however
+long it takes: nothing is handed over, screened or cut short. A few searches blow up (nearly
+always a decided position, one side a queen or rook up, where each depth costs several times
+the last) and hold their lane for days or weeks; the other lanes carry on meanwhile. Their
+claims last `LEASE_MS` (60 days), and a `/complete` of a search over an hour is also kept in
+`~/chess-farm/results/<id>.json` and offered again every minute for two days.
 
-- **Lanes:** `chess-farm@1…22` are pinned to CPUs 0–10 and 12–22 (drop-in `heavy-lane.conf`,
-  also on `boardgames-server`), with `OOMScoreAdjust=500` so a normal lane goes first if memory
-  runs out. `chess-farm-heavy.service` (`FARM_WORKER=ws21-heavy`, `~/chess-farm/heavy.env`:
-  `FARM_LANE=heavy`, `FARM_HASH_MB=23552`) owns core 11 (CPUs 11 + 23) and is never swapped (`MemorySwapMax=0`: ws21's swap is
-  zram, and a hash read at random from it crawls). Still one thread, so
-  still deterministic; its results name the hash in their engine label.
-- **Handing over:** a normal lane hands the heavy lane (1) a position of yours whose pre-pass is
-  ±7 or more (`HEAVY_SCREEN_CP`; 0.36 % of normal jobs, measured on the history) before its
-  deep search, and (2) any job it has spent `FARM_HANDOVER_HOURS` (9, since 2026-10-27; was 12)
-  on, counted over the whole job — a your-move job is up to three d50 searches — unless by then
-  its last deep search is within 2 depths of its target (d48 of 50, `nearlyDone`): that one
-  finishes on its lane, however long. (Logs: a d50 search reaches d48 at ~0.7× the time it
-  reaches d49, so d48 at 9 h ≈ d49 at 12 h.) The job's `error` carries
-  `heavyMark(estimate, why)` until it is done; normal lanes never claim it.
-- **Backlog:** least bad first (since 2026-10-22: worst-first would sit for months on one job
-  while quick ones wait), by the estimated normal-lane hours (`handoverEstimate`: hours so far
-  × 2 per depth still to go × deep searches left; a screened job 14 h). The heavy lane resumes
-  its own job first after a restart, and its claims never expire. The worst jobs may take months
-  and come last: `/api/chess-farm/status` counts `heavy.queued` / `heavy.running`.
+From 2026-10-22 to 2026-11-05 those searches went to a heavy lane instead (one core, a 23 GB
+hash; for a day every core and a 50 GB hash). It was the wrong trade: the target is a depth, a
+single thread reaches it with the fewest nodes, and one lane let one blow-up block ~500 jobs
+for days (on 24 threads a d40 job took 13× the nodes of one thread and was no faster). Its 11
+results were deleted and their jobs queued for the normal lanes (backup in
+`scratch/chess-farm/heavy-redo-production.json` and `~/chess-farm/`), so every result comes
+from the one setup. Once they are back, `redo-compare.ts --prod` sets old beside new; where a
+move of yours changed, `prune-off-tree.ts --prod --apply` deletes the line past the old one.
 
 ## Calibrate before a big run
 

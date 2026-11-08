@@ -4,13 +4,10 @@ import {
   EvalQueueResponseSchema,
   FarmClaimBodySchema,
   FarmEnqueueBodySchema,
-  FarmFailBodySchema,
   FarmGamesQuerySchema,
   FarmJobSchema,
   FarmPopularQuerySchema,
   FarmPopularResponseSchema,
-  heavyEstimate,
-  heavyMark,
 } from "./chess-farm.ts";
 
 const AFTER_E4 = "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1";
@@ -75,23 +72,5 @@ describe("queue places", () => {
         avgSeconds: null,
       }),
     ).toThrow();
-  });
-
-  it("marks a job for the heavy lane with its estimate, and reads it back", () => {
-    const mark = heavyMark(976.04, "ws21-6 at d37/40 after 122.0 h");
-    expect(mark).toBe("heavy lane: ~976.0 h · ws21-6 at d37/40 after 122.0 h");
-    expect(heavyEstimate(mark)).toBe(976);
-    expect(heavyEstimate("worker stopped")).toBeNull();
-    expect(heavyEstimate(null)).toBeNull();
-    const fail = { worker: "ws21-1", id: 1, error: "x", retry: true };
-    expect(
-      FarmFailBodySchema.parse({ ...fail, heavy: { estHours: 14, why: "screened" } }).heavy,
-    ).toEqual({ estHours: 14, why: "screened" });
-    expect(
-      FarmFailBodySchema.safeParse({ ...fail, heavy: { estHours: -1, why: "" } }).success,
-    ).toBe(false);
-    expect(FarmClaimBodySchema.safeParse({ worker: "h", max: 1, lane: "slow" }).success).toBe(
-      false,
-    );
   });
 });

@@ -1,9 +1,8 @@
 // Chess analysis farm — `/api/chess-farm/*`, for the worker on ws21.
 //
-//   POST /claim     lease up to `max` jobs (most reached first, or deepest first; the heavy
-//                   lane: its handed-over jobs, smallest estimate first)
+//   POST /claim     lease up to `max` jobs (most reached first, or deepest first)
 //   POST /complete  store a job's result (validated against the position)
-//   POST /fail      give a job back (retry), mark it failed, or hand it to the heavy lane
+//   POST /fail      give a job back (retry) or mark it failed
 //   POST /enqueue   queue a finished position's follow-ups (for the member who asked)
 //   GET  /games     a member's games, so the worker can work out those follow-ups
 //   GET  /popular   the lichess explorer's most played moves (pads opponent replies)
@@ -61,8 +60,8 @@ chessFarmRoutes.use("*", async (c, next) => {
 });
 
 chessFarmRoutes.post("/claim", zJsonBody(FarmClaimBodySchema), async (c) => {
-  const { worker, max, prefer, kinds, order, lane } = c.req.valid("json");
-  const jobs = await claimJobs(getDb(), worker, max, prefer, kinds, Date.now(), order, lane);
+  const { worker, max, prefer, kinds, order } = c.req.valid("json");
+  const jobs = await claimJobs(getDb(), worker, max, prefer, kinds, Date.now(), order);
   return c.json(FarmClaimResponseSchema.parse({ jobs, leaseSeconds: LEASE_MS / 1000 }));
 });
 
@@ -74,8 +73,8 @@ chessFarmRoutes.post("/complete", zJsonBody(FarmCompleteBodySchema), async (c) =
 });
 
 chessFarmRoutes.post("/fail", zJsonBody(FarmFailBodySchema), async (c) => {
-  const { worker, id, error, retry, released, heavy } = c.req.valid("json");
-  const r = await failJob(getDb(), worker, id, error, retry, Date.now(), released, heavy);
+  const { worker, id, error, retry, released } = c.req.valid("json");
+  const r = await failJob(getDb(), worker, id, error, retry, Date.now(), released);
   if (!r.ok) return errorResponse(c, r.status, r.message);
   return c.json(FarmOkSchema.parse({ ok: true }));
 });
