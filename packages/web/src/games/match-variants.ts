@@ -257,6 +257,26 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       },
       { value: "#7 Training: Last Day of Class", label: "#7 Training: Last Day of Class" },
       { value: "#8 Final Exam", label: "#8 Final Exam" },
+      { value: "#9 A Sense of Priorities", label: "#9 A Sense of Priorities" },
+      { value: "#10 A Rough Patch", label: "#10 A Rough Patch" },
+      {
+        value: "#11 Blue on Red, Looks Like We Are Dead",
+        label: "#11 Blue on Red, Looks Like We Are Dead",
+      },
+      { value: "#12 Wrapped in Red Tape", label: "#12 Wrapped in Red Tape" },
+      { value: "#13 Red Alert!", label: "#13 Red Alert!" },
+      {
+        value: "#14 High-Risk Bomb Disposal Expert (aka. NOOB)",
+        label: "#14 High-Risk Bomb Disposal Expert (aka. NOOB)",
+      },
+      { value: "#15 Mission in НОВОСИБИРСК", label: "#15 Mission in НОВОСИБИРСК" },
+      {
+        value: "#16 Time to Reprioritize (Is this déjà vu?)",
+        label: "#16 Time to Reprioritize (Is this déjà vu?)",
+      },
+      { value: "#17 Rhett Herrings", label: "#17 Rhett Herrings" },
+      { value: "#18 BAT-Helping-Hand", label: "#18 BAT-Helping-Hand" },
+      { value: "#19 In the Belly of the Beast", label: "#19 In the Belly of the Beast" },
     ],
   },
   // Dobble Connect: the rulebook game is played in teams (connect 4 cards of

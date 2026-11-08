@@ -52,7 +52,7 @@ describe("variantConfigForSlug", () => {
   it("lists Bomb Busters missions by number, #1 first, within the wire's scenario limit", () => {
     const config = variantConfigForSlug("bomb-busters");
     expect(config?.label).toBe("Mission");
-    expect(config?.options).toHaveLength(8);
+    expect(config?.options).toHaveLength(19);
     expect(defaultVariantValue("bomb-busters")).toBe("#1 Training, Day 1");
     for (const o of config?.options ?? []) expect(o.value.length).toBeLessThanOrEqual(64);
   });
