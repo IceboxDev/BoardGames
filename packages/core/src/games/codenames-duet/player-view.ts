@@ -58,6 +58,9 @@ export function buildDuetView(
     guessesMade: turn.guesses.length,
     tokens: state.tokens,
     tokensTotal: state.tokensTotal,
+    mistakesLeft: state.mistakesTotal === null ? null : state.mistakesLeft,
+    mistakesTotal: state.mistakesTotal,
+    campaign: state.campaign,
     agentsFound: agentsFound(state),
     agentsLeft: [agentsLeftOn(state, 0), agentsLeftOn(state, 1)],
     turns: state.turns

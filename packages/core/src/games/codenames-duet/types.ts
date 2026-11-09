@@ -5,6 +5,7 @@ import type { DuetKeyEntry, DuetKeyPair } from "../codenames/board";
 import { type Clue, ClueSchema } from "../codenames/clue-rules";
 import type { ClueNote, GuessNote } from "../codenames/notes";
 import type { Language } from "../codenames/words";
+import type { CampaignMission } from "./campaign/map";
 
 export type { DuetKeyEntry, DuetKeyPair } from "../codenames/board";
 export type { Clue } from "../codenames/clue-rules";
@@ -56,6 +57,8 @@ export interface DuetTurn {
   note?: ClueNote;
   /** One per AI guessing call this turn. */
   guessNotes?: GuessNote[];
+  /** A bystander with no free mistakes left cost two timer tokens. */
+  tokensSpent?: 2;
 }
 
 export interface DuetChatMessage {
@@ -96,6 +99,12 @@ export interface DuetState extends RngCarrier {
   giver: Side;
   tokens: number;
   tokensTotal: number;
+  /** Free mistakes left: tokens still bystander side up. Equals `tokens` in the standard game. */
+  mistakesLeft: number;
+  /** The mission's free mistakes; null = every token (the standard game). */
+  mistakesTotal: number | null;
+  /** The campaign mission this game is, if any. */
+  campaign: CampaignMission | null;
   turns: DuetTurn[];
   chat: DuetChatMessage[];
   clueTimerSec: number;
@@ -114,6 +123,8 @@ export type DuetMachineEvent =
       ai: (string | null)[];
       language: Language;
       timerTokens: number;
+      mistakes?: number;
+      campaign?: CampaignMission;
       clueTimerSec: number;
       guessTimerSec: number;
       recentBoards?: string[][];
@@ -147,6 +158,10 @@ export interface DuetPlayerView {
   guessesMade: number;
   tokens: number;
   tokensTotal: number;
+  /** Free mistakes left; null when every bystander is free (the standard game). */
+  mistakesLeft: number | null;
+  mistakesTotal: number | null;
+  campaign: CampaignMission | null;
   agentsFound: number;
   /** Agents still hidden on each side's key. */
   agentsLeft: [number, number];

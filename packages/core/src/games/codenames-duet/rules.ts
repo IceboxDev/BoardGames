@@ -13,6 +13,7 @@ import { type DuetKeyEntry, dealDuetKey, dealWords } from "../codenames/board";
 import { type Clue, cleanClueWord, clueProblem } from "../codenames/clue-rules";
 import type { ClueNote, GuessNote } from "../codenames/notes";
 import type { Language } from "../codenames/words";
+import type { CampaignMission } from "./campaign/map";
 import {
   DEFAULT_DUET_BEATS,
   type DuetAction,
@@ -30,6 +31,9 @@ export interface NewDuetInput {
   ai: readonly (string | null)[];
   language: Language;
   timerTokens: number;
+  /** Tokens that start bystander side up (mission map); absent = all of them. */
+  mistakes?: number;
+  campaign?: CampaignMission;
   clueTimerSec: number;
   guessTimerSec: number;
   /** Earlier boards in this session, newest first: the deal avoids their words (`dealWords`). */
@@ -60,6 +64,10 @@ export function createDuet(input: NewDuetInput): DuetState {
     giver,
     tokens: input.timerTokens,
     tokensTotal: input.timerTokens,
+    mistakesLeft: Math.min(input.mistakes ?? input.timerTokens, input.timerTokens),
+    mistakesTotal:
+      input.mistakes === undefined ? null : Math.min(input.mistakes, input.timerTokens),
+    campaign: input.campaign ?? null,
     turns: [{ giver, clue: null, guesses: [], end: null }],
     chat: [],
     clueTimerSec: input.clueTimerSec,
@@ -172,13 +180,55 @@ function win(state: DuetState): DuetState {
 }
 
 /**
- * A turn spends one timer token. The next clue comes from the other player,
- * unless they have no agents left to clue for; out of tokens → sudden death.
+ * The timer tokens a turn's end takes (rulebook, "Using the timer tokens").
+ * A bystander is marked with a bystander-side token; with none left it takes
+ * two checkmark-side tokens — the mistake costs two turns. Any other end
+ * takes a checkmark-side token while one is left, keeping the free mistakes.
+ * In the standard game every token is bystander side, so every end costs one.
+ */
+export function spendTokens(
+  state: Pick<DuetState, "tokens" | "mistakesLeft" | "mistakesTotal">,
+  end: DuetTurnEnd,
+): { tokens: number; mistakesLeft: number; spent: 1 | 2 } {
+  const { tokens, mistakesLeft } = state;
+  if (state.mistakesTotal === null) {
+    const left = Math.max(0, tokens - 1);
+    return { tokens: left, mistakesLeft: left, spent: 1 };
+  }
+  if (end === "bystander") {
+    return mistakesLeft > 0
+      ? { tokens: Math.max(0, tokens - 1), mistakesLeft: mistakesLeft - 1, spent: 1 }
+      : { tokens: Math.max(0, tokens - 2), mistakesLeft: 0, spent: 2 };
+  }
+  return tokens > mistakesLeft
+    ? { tokens: tokens - 1, mistakesLeft, spent: 1 }
+    : { tokens: Math.max(0, tokens - 1), mistakesLeft: Math.max(0, mistakesLeft - 1), spent: 1 };
+}
+
+/**
+ * A turn spends its timer tokens (`spendTokens`). The next clue comes from the
+ * other player, unless they have no agents left to clue for; out of tokens →
+ * sudden death.
  */
 function nextTurn(state: DuetState, end: DuetTurnEnd): DuetState {
-  const turns = closeTurn(state, end);
-  const tokens = Math.max(0, state.tokens - 1);
-  const base = { ...state, turns, tokens, deadlineTs: null, aiQueue: [] };
+  const spent = spendTokens(state, end);
+  const closed = closeTurn(state, end);
+  const turns =
+    spent.spent === 2
+      ? [
+          ...closed.slice(0, -1),
+          { ...(closed[closed.length - 1] as DuetTurn), tokensSpent: 2 as const },
+        ]
+      : closed;
+  const tokens = spent.tokens;
+  const base = {
+    ...state,
+    turns,
+    tokens,
+    mistakesLeft: spent.mistakesLeft,
+    deadlineTs: null,
+    aiQueue: [],
+  };
   if (tokens === 0) {
     // Sudden death: no more clues. Guessers alternate, starting with the
     // player who would have guessed next, skipping one with nothing to find.

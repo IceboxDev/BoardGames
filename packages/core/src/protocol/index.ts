@@ -20,6 +20,7 @@ export * from "./http/chess-farm.ts";
 export * from "./http/collection.ts";
 export * from "./http/companion-records.ts";
 export * from "./http/dnd.ts";
+export * from "./http/duet-campaign.ts";
 export * from "./http/exit.ts";
 export * from "./http/games.ts";
 export * from "./http/go.ts";

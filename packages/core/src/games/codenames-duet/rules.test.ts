@@ -10,6 +10,7 @@ import {
   guessableCards,
   guesserOf,
   judgedSide,
+  spendTokens,
   TOTAL_AGENTS,
 } from "./rules";
 import type { DuetState, Side } from "./types";
@@ -125,5 +126,63 @@ describe("duet turns", () => {
     state = applyGuess(state, guesserOf(state), last);
     expect(state.result).toMatchObject({ won: true, agentsFound: 15 });
     expect(side).toBe(state.giver);
+  });
+});
+
+describe("mission map tokens (free mistakes)", () => {
+  function mission(timerTokens: number, mistakes: number): DuetState {
+    return createDuet({
+      seed: 11,
+      ai: [null, null],
+      language: "en",
+      timerTokens,
+      mistakes,
+      clueTimerSec: 0,
+      guessTimerSec: 0,
+    });
+  }
+  const bystander = (state: DuetState) => {
+    const s = clued(state);
+    return applyGuess(s, guesserOf(s), judged(s, "bystander")[0] as number);
+  };
+
+  it("a bystander with a free mistake left costs one token", () => {
+    const after = bystander(mission(9, 3));
+    expect(after.tokens).toBe(8);
+    expect(after.mistakesLeft).toBe(2);
+  });
+
+  it("with no free mistakes left a bystander costs two turns", () => {
+    const after = bystander(mission(11, 0));
+    expect(after.tokens).toBe(9);
+    expect(after.mistakesLeft).toBe(0);
+    expect(after.turns.at(-2)?.tokensSpent).toBe(2);
+  });
+
+  it("stopping takes a checkmark token and keeps the free mistakes", () => {
+    let state = clued(mission(9, 3));
+    state = applyGuess(state, guesserOf(state), judged(state, "agent")[0] as number);
+    state = applyEndTurn(state, guesserOf(state));
+    expect(state.tokens).toBe(8);
+    expect(state.mistakesLeft).toBe(3);
+  });
+
+  it("a two-token mistake with one token left leads into sudden death", () => {
+    const after = spendTokens({ tokens: 1, mistakesLeft: 0, mistakesTotal: 0 }, "bystander");
+    expect(after).toEqual({ tokens: 0, mistakesLeft: 0, spent: 2 });
+  });
+
+  it("once only bystander-side tokens are left, a stop takes one of them", () => {
+    expect(spendTokens({ tokens: 2, mistakesLeft: 2, mistakesTotal: 4 }, "stopped")).toEqual({
+      tokens: 1,
+      mistakesLeft: 1,
+      spent: 1,
+    });
+  });
+
+  it("the standard game is unchanged: every end costs one token", () => {
+    const after = bystander(duet(9));
+    expect(after.tokens).toBe(8);
+    expect(after.mistakesTotal).toBeNull();
   });
 });
