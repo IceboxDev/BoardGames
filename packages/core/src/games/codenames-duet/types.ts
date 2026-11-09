@@ -116,6 +116,7 @@ export type DuetMachineEvent =
       timerTokens: number;
       clueTimerSec: number;
       guessTimerSec: number;
+      recentBoards?: string[][];
       beats?: Partial<DuetBeats>;
     }
   | { type: "PLAYER_ACTION"; player: number; action: DuetAction }

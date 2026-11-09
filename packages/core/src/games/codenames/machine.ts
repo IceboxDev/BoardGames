@@ -23,6 +23,7 @@ import type {
 } from "./ai/agent";
 import { fallbackClue, fallbackCodenamesAgent, fallbackGuess, fallbackJudge } from "./ai/fallback";
 import { DEFAULT_CODENAMES_MODEL } from "./ai/models";
+import { recentBoardsOf } from "./board";
 import { type Clue, ClueCountSchema, cleanClueWord, clueVerdict } from "./clue-rules";
 import { type CodenamesConfig, codenamesManifest } from "./manifest";
 import {
@@ -598,6 +599,7 @@ export const codenamesMachine = setup({
           language: event.language,
           clueTimerSec: event.clueTimerSec,
           guessTimerSec: event.guessTimerSec,
+          ...(event.recentBoards ? { recentBoards: event.recentBoards } : {}),
           ...(event.beats ? { beats: event.beats } : {}),
         }),
       }));
@@ -1147,13 +1149,14 @@ export const codenamesSpec: GameMachineSpec<
   machine: codenamesMachine,
   manifest: codenamesManifest,
 
-  buildStart: ({ seats, config, seed }) => ({
+  buildStart: ({ seats, config, seed, recentLogs }) => ({
     type: "START",
     seed,
     ai: seatStrategies(seats),
     language: config.language,
     clueTimerSec: config.clueTimerSec,
     guessTimerSec: config.guessTimerSec,
+    recentBoards: recentBoardsOf(recentLogs),
   }),
 
   getPlayerView(snapshot, player) {

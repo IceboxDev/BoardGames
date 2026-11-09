@@ -61,6 +61,15 @@ export interface EndedGame {
   readonly endedAt: Date;
 }
 
+/** What `prepareConfig` knows about the table: the account in each human seat (`null` = a guest). */
+export interface StartContext {
+  readonly humanUserIds: readonly (string | null)[];
+}
+
+export type PreparedConfig =
+  | { readonly ok: true; readonly config: unknown }
+  | { readonly ok: false; readonly reason: string };
+
 export interface ServerGame {
   readonly spec: AnyGameMachineSpec;
   /** The machine for a new session — the spec's own, or one with server-only AI bound in. */
@@ -73,6 +82,13 @@ export interface ServerGame {
    * snapshot can be emitted more than once.
    */
   readonly afterGameOver?: (ended: EndedGame) => Promise<void>;
+  /**
+   * Check and complete the client's options against server state before the
+   * manifest parses them (a Duet campaign mission: are these players in that
+   * campaign, may they play that city, and what are its numbers). Returns the
+   * options to start with, or the reason the game can't start.
+   */
+  readonly prepareConfig?: (rawConfig: unknown, ctx: StartContext) => Promise<PreparedConfig>;
   /**
    * Send the machine `{ type: "SEAT_CONNECTION", seat, connected }` when a room
    * seat drops out or comes back (`sessions/manager.ts:seatConnectionChanged`).

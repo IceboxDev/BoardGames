@@ -28,6 +28,8 @@ export interface NewGameInput {
   language: Language;
   clueTimerSec: number;
   guessTimerSec: number;
+  /** Earlier boards in this session, newest first: the deal avoids their words (`dealWords`). */
+  recentBoards?: readonly (readonly string[])[];
   beats?: Partial<CodenamesBeats>;
 }
 
@@ -35,7 +37,7 @@ export function createGame(input: NewGameInput): CodenamesState {
   const carrier = { rngState: rngStateFromSeed(input.seed) };
   const rng = rngFrom(carrier);
   const startingTeam: Team = rng() < 0.5 ? 0 : 1;
-  const words = dealWords(rng, input.language);
+  const words = dealWords(rng, input.language, input.recentBoards);
   const key = dealKey(rng, startingTeam);
   return {
     rngState: carrier.rngState,

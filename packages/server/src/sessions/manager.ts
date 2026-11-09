@@ -73,9 +73,76 @@ interface ActiveSession {
   roomCode?: string;
   /** When the game began (ms) — for the health check's list of live games. */
   startedAtMs: number;
+  /** Which run of games this one continues (`recentLogsFor`). */
+  chainKey: string;
 }
 
 const sessions = new Map<string, ActiveSession>();
+
+// ---------------------------------------------------------------------------
+// Session chains — the games played one after another at the same table
+// ---------------------------------------------------------------------------
+
+/** How many earlier games a chain remembers. */
+const CHAIN_DEPTH = 12;
+/** Chains kept at once; the least recently used is forgotten first. */
+const MAX_CHAINS = 2000;
+const chains = new Map<string, unknown[]>();
+const guestChainIds = new WeakMap<WSContext, string>();
+
+/**
+ * A room's games form one chain, and so do a player's solo games of one slug
+ * (a guest's, per connection). The next game's `buildStart` sees the chain's
+ * replay logs (`StartInput.recentLogs`), so Codenames deals fresh words the way
+ * a table flips the cards. Process memory only: a deploy starts every chain
+ * afresh, which costs nothing but a possible repeat.
+ */
+function chainKeyFor(params: {
+  gameSlug: string;
+  roomCode?: string;
+  seats: readonly SessionSeat[];
+  players: readonly PlayerConnection[];
+}): string {
+  if (params.roomCode) return `room:${params.roomCode}`;
+  const userId = params.seats.find((s) => s.kind === "human")?.userId;
+  if (userId) return `user:${userId}:${params.gameSlug}`;
+  const ws = params.players[0]?.ws;
+  if (!ws) return `none:${params.gameSlug}`;
+  let id = guestChainIds.get(ws);
+  if (!id) {
+    id = generateId();
+    guestChainIds.set(ws, id);
+  }
+  return `guest:${id}:${params.gameSlug}`;
+}
+
+function recentLogsFor(key: string): readonly unknown[] {
+  return chains.get(key) ?? [];
+}
+
+function rememberLog(key: string, log: unknown): void {
+  if (log === null || log === undefined) return;
+  const logs = [log, ...(chains.get(key) ?? [])].slice(0, CHAIN_DEPTH);
+  chains.delete(key);
+  chains.set(key, logs);
+  if (chains.size > MAX_CHAINS) {
+    const oldest = chains.keys().next().value;
+    if (oldest !== undefined) chains.delete(oldest);
+  }
+}
+
+/** Test seam: the chain bookkeeping, without a session. */
+export const sessionChainsForTests = {
+  chainKeyFor,
+  rememberLog,
+  recentLogsFor,
+  reset: () => chains.clear(),
+};
+
+/** A room closed: its chain ends with it. */
+export function forgetRoomChain(roomCode: string): void {
+  chains.delete(`room:${roomCode}`);
+}
 const wsSessions = new Map<WSContext, Set<string>>();
 
 // ---------------------------------------------------------------------------
@@ -213,6 +280,7 @@ export function endSession(sessionId: string, reason?: string): void {
 
 function subscribeSession(active: ActiveSession): void {
   let isFirstGameUpdate = true;
+  let chainLogged = false;
 
   const fail = (err: unknown, what: string): void => {
     console.error(`[session ${active.id}] ${active.gameSlug} ${what}:`, err);
@@ -232,6 +300,10 @@ function subscribeSession(active: ActiveSession): void {
     if (active.spec.isGameOver(snapshot)) {
       const outcome = active.spec.getOutcome(snapshot);
       gameLog(active.gameSlug, active.id, "game over", { outcome });
+      if (!chainLogged) {
+        chainLogged = true;
+        rememberLog(active.chainKey, active.spec.getReplayLog(snapshot));
+      }
       void (async () => {
         let replayId: number | undefined;
         try {
@@ -329,19 +401,41 @@ type StartResult =
 
 /**
  * Validate, build and start a game. Every session — solo or room — starts
- * here; the START event comes only from the game's `buildStart`.
+ * here; the START event comes only from the game's `buildStart`. A game with
+ * `prepareConfig` (a Duet campaign mission) checks and completes the options
+ * against the database first.
  */
-function startSession(params: {
+async function startSession(params: {
   gameSlug: string;
   seats: readonly SessionSeat[];
   rawConfig: unknown;
   players: PlayerConnection[];
   roomCode?: string;
-}): StartResult {
+}): Promise<StartResult> {
   const game = getServerGame(params.gameSlug);
   if (!game) return { ok: false, reason: `Unknown game: ${params.gameSlug}` };
 
-  const prepared = prepareStart(game.spec, params.seats, params.rawConfig);
+  let rawConfig = params.rawConfig;
+  if (game.prepareConfig) {
+    try {
+      const humanUserIds = params.seats.flatMap((s) => (s.kind === "human" ? [s.userId] : []));
+      const prepared = await game.prepareConfig(rawConfig, { humanUserIds });
+      if (!prepared.ok) return prepared;
+      rawConfig = prepared.config;
+    } catch (err) {
+      console.error(`[prepareConfig] ${params.gameSlug} failed:`, err);
+      return { ok: false, reason: "Could not check the game options — try again" };
+    }
+  }
+
+  const chainKey = chainKeyFor(params);
+  const prepared = prepareStart(
+    game.spec,
+    params.seats,
+    rawConfig,
+    undefined,
+    recentLogsFor(chainKey),
+  );
   if (!prepared.ok) return prepared;
 
   const active: ActiveSession = {
@@ -354,6 +448,7 @@ function startSession(params: {
     players: params.players,
     ...(params.roomCode ? { roomCode: params.roomCode } : {}),
     startedAtMs: Date.now(),
+    chainKey,
   };
   sessions.set(active.id, active);
   for (const p of active.players) {
@@ -388,13 +483,14 @@ function handleCreateSession(
       : { kind: "human", userId, name: null },
   );
   const firstHuman = seats.findIndex((s) => s.kind === "human");
-  const started = startSession({
+  void startSession({
     gameSlug: msg.gameSlug,
     seats,
     rawConfig: msg.config,
     players: [{ ws, playerIndex: Math.max(0, firstHuman), connected: true }],
+  }).then((started) => {
+    if (!started.ok) send(ws, { type: "error", message: started.reason });
   });
-  if (!started.ok) send(ws, { type: "error", message: started.reason });
 }
 
 /** Start a room's game (called by the room manager with the seated room). */
@@ -404,7 +500,7 @@ export function startRoomSession(params: {
   players: PlayerConnection[];
   rawConfig: unknown;
   roomCode: string;
-}): StartResult {
+}): Promise<StartResult> {
   return startSession(params);
 }
 

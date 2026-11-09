@@ -483,7 +483,7 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
       handleConfigureRoom(ws, msg);
       return true;
     case "start-room":
-      handleStartRoom(ws, msg);
+      void handleStartRoom(ws, msg);
       return true;
     case "kick-player":
       handleKickPlayer(ws, msg);
@@ -498,7 +498,7 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
       handleShuffleSeats(ws, msg);
       return true;
     case "rematch-room":
-      handleRematchRoom(ws, msg);
+      void handleRematchRoom(ws, msg);
       return true;
     case "chat":
       handleChat(ws, msg);

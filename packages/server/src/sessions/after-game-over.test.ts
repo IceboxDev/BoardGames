@@ -92,8 +92,8 @@ function autoplayer() {
   return { ws, sent };
 }
 
-function startTable(human: ReturnType<typeof autoplayer>) {
-  const started = startRoomSession({
+async function startTable(human: ReturnType<typeof autoplayer>) {
+  const started = await startRoomSession({
     gameSlug: "durak",
     seats: [
       { kind: "human", userId: "member-1", name: "Member" },
@@ -132,7 +132,7 @@ describe("afterGameOver", () => {
     hook.impl = async (ended) => {
       called.resolve({ ended, frameSent: human.sent.some((m) => m.type === "game-over") });
     };
-    sessionId = startTable(human);
+    sessionId = await startTable(human);
 
     // However long the game takes to play out: the hook running is the signal.
     const { ended, frameSent } = await called.promise;
@@ -153,7 +153,7 @@ describe("afterGameOver", () => {
       throw new Error("follow-up write failed");
     };
     const human = autoplayer();
-    sessionId = startTable(human);
+    sessionId = await startTable(human);
 
     const [message, error] = await logged.promise;
     expect(message).toContain("[afterGameOver] durak");

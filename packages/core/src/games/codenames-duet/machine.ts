@@ -18,6 +18,7 @@ import type {
 } from "../codenames/ai/agent";
 import { fallbackClue, fallbackCodenamesAgent, fallbackGuess } from "../codenames/ai/fallback";
 import { DEFAULT_CODENAMES_MODEL } from "../codenames/ai/models";
+import { recentBoardsOf } from "../codenames/board";
 import {
   AI_CLUE_DEADLINE_MS,
   AI_GUESS_DEADLINE_MS,
@@ -260,6 +261,7 @@ export const duetMachine = setup({
           timerTokens: event.timerTokens,
           clueTimerSec: event.clueTimerSec,
           guessTimerSec: event.guessTimerSec,
+          ...(event.recentBoards ? { recentBoards: event.recentBoards } : {}),
           ...(event.beats ? { beats: event.beats } : {}),
         }),
       }));
@@ -589,7 +591,7 @@ export const duetSpec: GameMachineSpec<
   machine: duetMachine,
   manifest: duetManifest,
 
-  buildStart: ({ seats, config, seed }) => ({
+  buildStart: ({ seats, config, seed, recentLogs }) => ({
     type: "START",
     seed,
     ai: seatStrategies(seats),
@@ -597,6 +599,7 @@ export const duetSpec: GameMachineSpec<
     timerTokens: config.timerTokens,
     clueTimerSec: config.clueTimerSec,
     guessTimerSec: config.guessTimerSec,
+    recentBoards: recentBoardsOf(recentLogs),
   }),
 
   getPlayerView(snapshot, player) {

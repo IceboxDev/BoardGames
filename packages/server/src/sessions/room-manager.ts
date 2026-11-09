@@ -11,6 +11,7 @@ import { playerAvatarUrl } from "../lib/player-avatars.ts";
 import {
   endSession,
   endSoloSessionsForWs,
+  forgetRoomChain,
   isSessionOver,
   type PlayerConnection,
   reconnectPlayer,
@@ -94,6 +95,8 @@ export interface Room {
   lobbyTimers: Map<number, ReturnType<typeof setTimeout>>;
   /** The options the last game started with — a rematch plays with them again. */
   lastConfig?: unknown;
+  /** A game is being started (its options checked); a second start waits its turn. */
+  starting?: boolean;
 }
 
 const rooms = new Map<string, Room>();
@@ -587,7 +590,11 @@ export function handleKickPlayer(
   broadcastRoomUpdate(room);
 }
 
-export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: unknown }): void {
+/** Resolves once the game has started or been refused (tests await it; the socket handler doesn't). */
+export async function handleStartRoom(
+  ws: WSContext,
+  msg: { roomCode: string; config: unknown },
+): Promise<void> {
   const room = rooms.get(msg.roomCode);
   if (!room) {
     sendError(ws, `Room ${msg.roomCode} not found`);
@@ -597,7 +604,7 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     sendError(ws, "Only the host can start the game");
     return;
   }
-  if (room.sessionId) {
+  if (room.sessionId || room.starting) {
     sendError(ws, "Game already started");
     return;
   }
@@ -617,7 +624,7 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     return;
   }
 
-  launchRoomGame(ws, room, manifest, msg.config);
+  await launchRoomGame(ws, room, manifest, msg.config);
 }
 
 /**
@@ -625,7 +632,12 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
  * manifest; the options are parsed by the game's own schema inside
  * `startRoomSession` (a refusal is reported to `ws`, the host).
  */
-function launchRoomGame(ws: WSContext, room: Room, manifest: GameManifest, config: unknown): void {
+async function launchRoomGame(
+  ws: WSContext,
+  room: Room,
+  manifest: GameManifest,
+  config: unknown,
+): Promise<void> {
   const { seats, slotOfSeat } = seatRoom(room, manifest);
   const players: PlayerConnection[] = [];
   for (const [clientWs, slotIndex] of room.clients) {
@@ -633,15 +645,23 @@ function launchRoomGame(ws: WSContext, room: Room, manifest: GameManifest, confi
     if (seat >= 0) players.push({ ws: clientWs, playerIndex: seat, connected: true });
   }
 
-  const started = startRoomSession({
+  room.starting = true;
+  const started = await startRoomSession({
     gameSlug: room.gameSlug,
     seats,
     players,
     rawConfig: config,
     roomCode: room.code,
+  }).finally(() => {
+    room.starting = false;
   });
   if (!started.ok) {
     sendError(ws, started.reason);
+    return;
+  }
+  if (rooms.get(room.code) !== room) {
+    // The room closed while the options were being checked.
+    endSession(started.sessionId);
     return;
   }
   room.sessionId = started.sessionId;
@@ -686,10 +706,10 @@ export function rotateSeats(room: Pick<Room, "slots" | "seatOrder">, by: number)
  * options — optionally rotating the seats first (`rotateBy`). Everyone who
  * played must still be connected: a seat left empty would stall the new game.
  */
-export function handleRematchRoom(
+export async function handleRematchRoom(
   ws: WSContext,
   msg: { roomCode: string; rotateBy: number },
-): void {
+): Promise<void> {
   const room = rooms.get(msg.roomCode);
   if (!room) {
     sendError(ws, `Room ${msg.roomCode} not found`);
@@ -699,7 +719,7 @@ export function handleRematchRoom(
     sendError(ws, "Only the host can start a rematch");
     return;
   }
-  if (!room.sessionId || !isSessionOver(room.sessionId)) {
+  if (room.starting || !room.sessionId || !isSessionOver(room.sessionId)) {
     sendError(ws, "Finish this game before starting another");
     return;
   }
@@ -720,7 +740,7 @@ export function handleRematchRoom(
   room.sessionId = null;
   room.seatOfSlot = [];
   broadcastRoomUpdate(room);
-  launchRoomGame(ws, room, manifest, room.lastConfig);
+  await launchRoomGame(ws, room, manifest, room.lastConfig);
 }
 
 // ---------------------------------------------------------------------------
@@ -786,6 +806,7 @@ function closeRoom(room: Room, reason: string): void {
     wsToRoom.delete(clientWs);
   }
   rooms.delete(room.code);
+  forgetRoomChain(room.code);
   if (room.sessionId) endSession(room.sessionId);
 }
 

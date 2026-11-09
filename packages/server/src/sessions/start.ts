@@ -25,6 +25,7 @@ export function prepareStart(
   seats: readonly StartSeat[],
   rawConfig: unknown,
   seed: number = randomSeed(),
+  recentLogs: readonly unknown[] = [],
 ): PreparedStart {
   const { manifest } = spec;
   const problem = seatingProblem(manifest, seats);
@@ -38,7 +39,7 @@ export function prepareStart(
   }
 
   try {
-    const event = spec.buildStart({ seats, config: config.data, seed });
+    const event = spec.buildStart({ seats, config: config.data, seed, recentLogs });
     return { ok: true, event, seats, seed };
   } catch (err) {
     return { ok: false, reason: err instanceof Error ? err.message : "Could not start the game" };

@@ -39,7 +39,7 @@ function last(s: FakeSocket, type: string) {
 }
 
 /** A started Durak room: the host plus one AI. */
-function startedRoom(): { host: FakeSocket; code: string } {
+async function startedRoom(): Promise<{ host: FakeSocket; code: string }> {
   const host = socket("host-user");
   handleCreateRoom(host.ws, { gameSlug: "durak", playerName: "Host" });
   const code = last(host, "room-created")?.roomCode as string;
@@ -52,7 +52,7 @@ function startedRoom(): { host: FakeSocket; code: string } {
         : (s as { kind: "human" | "ai" | "open"; ready: boolean; connected: boolean }),
     ),
   });
-  handleStartRoom(host.ws, { roomCode: code, config: {} });
+  await handleStartRoom(host.ws, { roomCode: code, config: {} });
   expect(last(host, "game-started")).toBeDefined();
   return { host, code };
 }
@@ -67,8 +67,8 @@ afterEach(() => {
 });
 
 describe("room reconnect grace", () => {
-  it("lets the last person back into the same game within the grace period", () => {
-    const { host, code } = startedRoom();
+  it("lets the last person back into the same game within the grace period", async () => {
+    const { host, code } = await startedRoom();
     const sessionId = last(host, "game-started")?.sessionId;
 
     handleWsClose(host.ws);
@@ -87,8 +87,8 @@ describe("room reconnect grace", () => {
     expect(last(again, "error")).toBeUndefined();
   });
 
-  it("closes the room once the grace period passes with nobody back", () => {
-    const { host, code } = startedRoom();
+  it("closes the room once the grace period passes with nobody back", async () => {
+    const { host, code } = await startedRoom();
     handleWsClose(host.ws);
     vi.advanceTimersByTime(ROOM_RECONNECT_GRACE_MS + 1_000);
 
@@ -97,8 +97,8 @@ describe("room reconnect grace", () => {
     expect(last(late, "error")?.message).toBe(`Room ${code} not found`);
   });
 
-  it("never seats a stranger in a disconnected player's place", () => {
-    const { host, code } = startedRoom();
+  it("never seats a stranger in a disconnected player's place", async () => {
+    const { host, code } = await startedRoom();
     handleWsClose(host.ws);
     const stranger = socket("someone-else");
     handleJoinRoom(stranger.ws, { roomCode: code, playerName: "Host" });
@@ -107,21 +107,25 @@ describe("room reconnect grace", () => {
 });
 
 /** A started Durak room with two people: the host and a guest. */
-function startedTwoPersonRoom(): { host: FakeSocket; guest: FakeSocket; code: string } {
+async function startedTwoPersonRoom(): Promise<{
+  host: FakeSocket;
+  guest: FakeSocket;
+  code: string;
+}> {
   const host = socket("host-user");
   handleCreateRoom(host.ws, { gameSlug: "durak", playerName: "Host" });
   const code = last(host, "room-created")?.roomCode as string;
   const guest = socket("guest-user");
   handleJoinRoom(guest.ws, { roomCode: code, playerName: "Guest" });
   handleToggleReady(guest.ws, { roomCode: code });
-  handleStartRoom(host.ws, { roomCode: code, config: {} });
+  await handleStartRoom(host.ws, { roomCode: code, config: {} });
   expect(last(guest, "game-started")).toBeDefined();
   return { host, guest, code };
 }
 
 describe("leaving a started room game", () => {
-  it("leaves the seat for one person without ending the game for the table", () => {
-    const { host, guest, code } = startedTwoPersonRoom();
+  it("leaves the seat for one person without ending the game for the table", async () => {
+    const { host, guest, code } = await startedTwoPersonRoom();
     const sessionId = last(guest, "game-started")?.sessionId as string;
 
     handleWsMessage(guest.ws, { type: "leave-session", sessionId });
@@ -135,8 +139,8 @@ describe("leaving a started room game", () => {
     expect((last(back, "state-update") ?? last(back, "game-over"))?.sessionId).toBe(sessionId);
   });
 
-  it("re-sends the room identity on a mid-game reconnect, and the host keeps host powers", () => {
-    const { host, code } = startedTwoPersonRoom();
+  it("re-sends the room identity on a mid-game reconnect, and the host keeps host powers", async () => {
+    const { host, code } = await startedTwoPersonRoom();
     handleWsClose(host.ws);
     const back = socket("host-user");
     handleJoinRoom(back.ws, { roomCode: code, playerName: "Host" });
@@ -156,7 +160,7 @@ describe("lobby reconnect grace", () => {
     return { host, guest, code };
   }
 
-  it("keeps the room open while the host refreshes", () => {
+  it("keeps the room open while the host refreshes", async () => {
     const { host, guest, code } = lobby();
     handleWsClose(host.ws);
     expect(last(guest, "room-closed")).toBeUndefined();
@@ -169,18 +173,18 @@ describe("lobby reconnect grace", () => {
 
     // Still the host: can start the game.
     handleToggleReady(guest.ws, { roomCode: code });
-    handleStartRoom(back.ws, { roomCode: code, config: {} });
+    await handleStartRoom(back.ws, { roomCode: code, config: {} });
     expect(last(guest, "game-started")).toBeDefined();
   });
 
-  it("closes the room when the host doesn't come back", () => {
+  it("closes the room when the host doesn't come back", async () => {
     const { host, guest } = lobby();
     handleWsClose(host.ws);
     vi.advanceTimersByTime(LOBBY_RECONNECT_GRACE_MS + 1);
     expect(last(guest, "room-closed")?.reason).toBe("Host left the room");
   });
 
-  it("holds a guest's seat through a refresh, then frees it", () => {
+  it("holds a guest's seat through a refresh, then frees it", async () => {
     const { host, guest, code } = lobby();
     handleWsClose(guest.ws);
     const state = last(host, "room-updated")?.roomState as {
@@ -198,7 +202,7 @@ describe("lobby reconnect grace", () => {
     expect(after.slots[1]?.kind).toBe("open");
   });
 
-  it("still refuses a second tab while the first is connected", () => {
+  it("still refuses a second tab while the first is connected", async () => {
     const { code } = lobby();
     const twin = socket("guest-user");
     handleJoinRoom(twin.ws, { roomCode: code, playerName: "Guest" });

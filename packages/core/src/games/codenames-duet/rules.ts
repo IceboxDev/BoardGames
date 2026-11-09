@@ -32,6 +32,8 @@ export interface NewDuetInput {
   timerTokens: number;
   clueTimerSec: number;
   guessTimerSec: number;
+  /** Earlier boards in this session, newest first: the deal avoids their words (`dealWords`). */
+  recentBoards?: readonly (readonly string[])[];
   beats?: Partial<DuetBeats>;
 }
 
@@ -39,7 +41,7 @@ export function createDuet(input: NewDuetInput): DuetState {
   const carrier = { rngState: rngStateFromSeed(input.seed) };
   const rng = rngFrom(carrier);
   const giver: Side = rng() < 0.5 ? 0 : 1;
-  const words = dealWords(rng, input.language);
+  const words = dealWords(rng, input.language, input.recentBoards);
   const key = dealDuetKey(rng);
   const aiOf = (seat: number) => {
     const id = input.ai[seat];

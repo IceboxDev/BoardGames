@@ -2,13 +2,15 @@ import { describe, expect, it } from "vitest";
 import { createRng } from "../../../lib/rng";
 import { BOARD_SIZE, dealWords } from "../board";
 import { foldWord } from "../clue-rules";
-import { LANGUAGES, WORD_SETS } from ".";
+import { LANGUAGES, type Language, WORD_SETS } from ".";
+
+const MIN_WORDS: Record<Language, number> = { en: 900, de: 800 };
 
 describe.each(LANGUAGES)("%s word set", (language) => {
   const words = WORD_SETS[language];
 
   it("has enough words for varied boards", () => {
-    expect(words.length).toBeGreaterThanOrEqual(400);
+    expect(words.length).toBeGreaterThanOrEqual(MIN_WORDS[language]);
   });
 
   it("has no duplicates once folded", () => {

@@ -223,6 +223,7 @@ export type CodenamesMachineEvent =
       language: Language;
       clueTimerSec: number;
       guessTimerSec: number;
+      recentBoards?: string[][];
       beats?: Partial<CodenamesBeats>;
     }
   | { type: "PLAYER_ACTION"; player: number; action: CodenamesAction }

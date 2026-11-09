@@ -4,20 +4,55 @@
  */
 
 import { type Rng, shuffle } from "../../lib/rng";
-import { wordsClash } from "./clue-rules";
+import { foldWord, wordsClash } from "./clue-rules";
 import { type Language, WORD_SETS } from "./words";
 
 export const BOARD_SIZE = 25;
 export const GRID_COLUMNS = 5;
 
 /**
- * 25 words for one board. A word that clashes with one already dealt (one
- * contains the other, or they share a stem) is skipped, so every board leaves
- * clues for every card.
+ * The fewest words a deal draws from. Avoiding recent boards never shrinks the
+ * pool below this, so a deal always has room to skip clashing pairs.
  */
-export function dealWords(rng: Rng, language: Language): string[] {
+export const MIN_FRESH_POOL = 150;
+
+/**
+ * The words a deal may use: the whole set minus the words of `recentBoards`
+ * (newest first). At a table you flip the cards or deal fresh ones, so the
+ * next game never shows last game's words: the newest board is always left
+ * out, then older ones while at least `MIN_FRESH_POOL` words remain.
+ */
+export function freshWordPool(
+  language: Language,
+  recentBoards: readonly (readonly string[])[] = [],
+): readonly string[] {
+  const all = WORD_SETS[language];
+  if (recentBoards.length === 0) return all;
+  const folded = all.map(foldWord);
+  let avoid = new Set<string>();
+  for (const [i, board] of recentBoards.entries()) {
+    const next = new Set(avoid);
+    for (const word of board) next.add(foldWord(word));
+    const left = folded.filter((w) => !next.has(w)).length;
+    if (i > 0 && left < MIN_FRESH_POOL) break;
+    avoid = next;
+  }
+  return all.filter((_, i) => !avoid.has(folded[i] as string));
+}
+
+/**
+ * 25 words for one board, none from the newest of `recentBoards` and as few
+ * as possible from older ones (`freshWordPool`). A word that clashes with one
+ * already dealt (one contains the other, or they share a stem) is skipped, so
+ * every board leaves clues for every card.
+ */
+export function dealWords(
+  rng: Rng,
+  language: Language,
+  recentBoards: readonly (readonly string[])[] = [],
+): string[] {
   const words: string[] = [];
-  for (const word of shuffle(WORD_SETS[language], rng)) {
+  for (const word of shuffle(freshWordPool(language, recentBoards), rng)) {
     if (words.some((w) => wordsClash(w, word, language))) continue;
     words.push(word);
     if (words.length === BOARD_SIZE) return words;
@@ -68,4 +103,25 @@ export function dealDuetKey(rng: Rng): DuetKeyPair[] {
     Array.from({ length: n }, () => pair),
   );
   return shuffle(cells, rng);
+}
+
+/**
+ * The boards of earlier games in this session, newest first, read from their
+ * replay logs (`StartInput.recentLogs`). Anything that isn't a log with 25
+ * words is ignored: the logs come from another game or an older format.
+ */
+export function recentBoardsOf(logs: readonly unknown[] | undefined): string[][] {
+  const boards: string[][] = [];
+  for (const log of logs ?? []) {
+    if (typeof log !== "object" || log === null || !("words" in log)) continue;
+    const { words } = log;
+    if (
+      Array.isArray(words) &&
+      words.length === BOARD_SIZE &&
+      words.every((w) => typeof w === "string")
+    ) {
+      boards.push(words as string[]);
+    }
+  }
+  return boards;
 }

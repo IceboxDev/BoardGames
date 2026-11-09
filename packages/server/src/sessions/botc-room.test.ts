@@ -75,7 +75,7 @@ describe("an online Clocktower room", () => {
       handleJoinRoom(p.ws, { roomCode: code, playerName: `P${i + 1}` });
       handleToggleReady(p.ws, { roomCode: code });
     });
-    handleStartRoom(st.ws, { roomCode: code, config: {} });
+    await handleStartRoom(st.ws, { roomCode: code, config: {} });
 
     const started = [...st.sent].find((m) => m.type === "game-started");
     expect(started).toBeDefined();

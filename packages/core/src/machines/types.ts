@@ -12,6 +12,14 @@ export interface StartInput<TConfig> {
   readonly config: TConfig;
   /** Chosen by the server; the game seeds every random step from it. */
   readonly seed: number;
+  /**
+   * The replay logs (`getReplayLog`) of the games played before this one in
+   * the same session chain — a room's earlier games, or a player's previous
+   * solo games of this slug — newest first. Lets a game deal something fresh
+   * (Codenames never repeats last game's words). Unparsed: read with the
+   * game's own schema and ignore anything else.
+   */
+  readonly recentLogs?: readonly unknown[];
 }
 
 /**
