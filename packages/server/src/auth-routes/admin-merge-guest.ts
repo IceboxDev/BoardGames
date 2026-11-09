@@ -141,6 +141,12 @@ export const GUEST_MERGE_COVERAGE = {
     "chess_trainer_library.user_id",
     // Who queued a farm evaluation (SET NULL; the shared eval survives).
     "chess_eval_jobs.requested_by",
+    // Codenames: Duet campaigns: a member's own campaigns, the games they
+    // recorded and who started one. A guest stub never signs in to have any
+    // (a guest at the table is a campaign's guest name, not an account).
+    "duet_campaigns.created_by",
+    "duet_campaign_members.user_id",
+    "duet_campaign_games.recorded_by",
   ],
 } as const;
 

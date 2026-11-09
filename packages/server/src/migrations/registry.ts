@@ -72,6 +72,7 @@ import { chessExplorerCache } from "./0064-chess-explorer-cache.ts";
 import { quizReportLinks } from "./0065-quiz-report-links.ts";
 import { adminPicks } from "./0066-admin-picks.ts";
 import { fixedGame } from "./0067-fixed-game.ts";
+import { duetCampaigns } from "./0068-duet-campaigns.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -142,6 +143,7 @@ export const migrations: readonly Migration[] = [
   quizReportLinks,
   adminPicks,
   fixedGame,
+  duetCampaigns,
 ];
 
 /**

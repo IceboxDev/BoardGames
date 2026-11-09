@@ -35,6 +35,7 @@ import type { AnyGameMachineSpec } from "@boardgames/core/machines/types";
 import type { AnyActorLogic } from "xstate";
 import { getDb } from "../db.ts";
 import { aiAvailable } from "../lib/ai";
+import { prepareDuetConfig, recordDuetMission } from "../lib/duet-campaign/missions.ts";
 import { getContentStore } from "../lib/quiz/content-store.ts";
 import { recordGameReviews } from "../lib/quiz/game-reviews.ts";
 import { botcAfterGameOver } from "./botc-records.ts";
@@ -178,7 +179,10 @@ const SERVER_GAMES: readonly ServerGame[] = [
         ended,
         DuetReplayLogSchema.safeParse(ended.replayLog).data?.aiCost,
       );
+      await recordDuetMission(getDb(), ended);
     },
+    // A campaign mission: members only, an open city, the map's numbers.
+    prepareConfig: (rawConfig, ctx) => prepareDuetConfig(getDb(), rawConfig, ctx),
   },
   {
     ...plain(botcSpec),

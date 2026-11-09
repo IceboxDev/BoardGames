@@ -51,6 +51,7 @@ import { chessTrainerRoutes } from "./auth-routes/chess-trainer.ts";
 import { collectionRoutes } from "./auth-routes/collection.ts";
 import { collectionVocabRoutes } from "./auth-routes/collection-vocab.ts";
 import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
+import { duetCampaignRoutes } from "./auth-routes/duet-campaigns.ts";
 import { geographyRoutes } from "./auth-routes/geography.ts";
 import { greetingsRoutes } from "./auth-routes/greetings.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
@@ -415,6 +416,15 @@ app.use(
 );
 app.route("/api/trainers/chess/drill", chessDrillRoutes);
 app.route("/api/trainers/chess", chessTrainerRoutes);
+
+// Codenames: Duet campaigns (the mission map). Members of either mode: a
+// campaign is played online, against the AI or at the table and recorded.
+app.use(
+  "/api/games/codenames-duet/campaigns/*",
+  requireAuth,
+  rateLimit({ name: "duet-campaign-write", windowMs: 60_000, max: 60, skipSafeMethods: true }),
+);
+app.route("/api/games/codenames-duet/campaigns", duetCampaignRoutes);
 
 // The chess analysis farm (a worker on ws21, bearer token, no cookie): claims
 // evaluation jobs and returns results. See auth-routes/chess-farm.ts.

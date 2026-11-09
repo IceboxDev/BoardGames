@@ -173,6 +173,17 @@ export const ActivityMetaSchemas = {
     title: z.string().optional(),
     minutes: z.number().int().optional(),
   }),
+  /** A Codenames: Duet campaign started (the mission map). */
+  "duet-campaign-created": z.object({
+    name: z.string(),
+    partner: z.enum(["member", "ai", "guest"]),
+  }),
+  /** A Duet campaign mission played at the table, recorded by a member. */
+  "duet-campaign-recorded": z.object({
+    campaign: z.string(),
+    city: z.string(),
+    won: z.boolean(),
+  }),
   "guest-merged": z.object({
     guestName: z.string(),
     targetUserId: z.string(),

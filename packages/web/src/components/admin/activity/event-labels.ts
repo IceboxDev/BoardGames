@@ -231,6 +231,30 @@ export const EVENT_LABELS: EventLabels = {
     tone: "match",
     describe: ({ matchId }) => `Deleted a match${matchId === undefined ? "" : ` (#${matchId})`}`,
   },
+  "duet-campaign-created": {
+    tone: "match",
+    describe: ({ name, partner }) => {
+      const how =
+        partner === "ai"
+          ? " with the AI partner"
+          : partner === "guest"
+            ? " to play at the table"
+            : "";
+      return `Started a Codenames: Duet campaign${name ? `, ${name},` : ""}${how}`.replace(
+        /,$/,
+        "",
+      );
+    },
+  },
+  "duet-campaign-recorded": {
+    tone: "match",
+    describe: ({ campaign, city, won }) => {
+      const result = won === undefined ? "" : won ? " (won)" : " (lost)";
+      const where = city ? ` in ${city}` : "";
+      const which = campaign ? ` for ${campaign}` : "";
+      return `Recorded a Duet mission played at the table${where}${result}${which}`;
+    },
+  },
   "companion-recorded": {
     tone: "match",
     describe: ({ slug, winner, players, title, minutes }, ctx) => {
