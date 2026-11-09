@@ -4,38 +4,47 @@ import type {
   DuetPlayerView,
   DuetResult,
 } from "@boardgames/core/games/codenames-duet/types";
-import { lazy, Suspense } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { lazy, type ReactNode, Suspense } from "react";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import type { GameOverAction } from "../../components/game-over";
 import { BoardFallback, RouteFallback } from "../../components/RouteFallback";
 import { type SessionFlow, type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
-import { campaignPath } from "./campaign/paths";
+import { CAMPAIGN_BASE, campaignPath } from "./campaign/paths";
 import { useMissionOutcome } from "./campaign/useMissionOutcome";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 import SetupScreen, { type DuetSetup } from "./components/SetupScreen";
 
-const CampaignRoutes = lazy(() => import("./campaign/CampaignRoutes"));
+const SoloCampaigns = lazy(() => import("./campaign/CampaignRoutes"));
+const PlayCampaignRoutes = lazy(() =>
+  import("./campaign/CampaignRoutes").then((m) => ({ default: m.PlayCampaignRoutes })),
+);
+const CompanionRoutes = lazy(() =>
+  import("./campaign/CampaignRoutes").then((m) => ({ default: m.CompanionRoutes })),
+);
+
+const lazyRoute = (element: ReactNode) => (
+  <Suspense fallback={<RouteFallback />}>{element}</Suspense>
+);
 
 function toSoloStart({ modelId, ...options }: DuetSetup): SoloStart {
   const config: DuetConfig = options;
   return { seats: [{ kind: "human" }, { kind: "ai", strategy: modelId }], config };
 }
 
+// Singleplayer is the campaign (`solo`: your campaigns with the AI partner),
+// a quick game outside it is `solo/free`, and the Companion — the live tracker
+// for the physical game — is `solo/companion` (`campaign/paths.ts`).
 export default function Duet({ source }: GameComponentProps) {
   if (source !== "solo") return <DuetGame source={source} />;
   return (
     <Routes>
-      <Route
-        path="campaign/*"
-        element={
-          <Suspense fallback={<RouteFallback />}>
-            <CampaignRoutes />
-          </Suspense>
-        }
-      />
-      <Route path="*" element={<DuetGame source="solo" />} />
+      <Route index element={lazyRoute(<SoloCampaigns />)} />
+      <Route path="free" element={<DuetGame source="solo" />} />
+      <Route path="campaign/*" element={lazyRoute(<PlayCampaignRoutes />)} />
+      <Route path="companion/*" element={lazyRoute(<CompanionRoutes />)} />
+      <Route path="*" element={<Navigate to={CAMPAIGN_BASE} replace />} />
     </Routes>
   );
 }

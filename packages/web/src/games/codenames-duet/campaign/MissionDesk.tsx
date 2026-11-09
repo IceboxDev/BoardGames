@@ -31,14 +31,22 @@ import {
   missionRule,
   teamLine,
 } from "./mission-copy";
-import { CAMPAIGN_BASE, missionPlayPath } from "./paths";
+import {
+  CAMPAIGN_BASE,
+  COMPANION_BASE,
+  campaignPath,
+  type DeskMode,
+  missionPlayPath,
+  tablePlayPath,
+} from "./paths";
 import { RecordTableGameModal } from "./RecordTableGameModal";
 import { TeamAvatars } from "./TeamAvatars";
 
 // The Mission Desk (design 1 from the campaign studio): who the team is and
 // where it stands, the map, the open missions with the chosen one's brief and
-// its three ways to play — against the AI partner, online with the partner,
-// or at the table and recorded here — and the mission log.
+// the mission log. Opened from Singleplayer / a room (`mode` "play": online
+// with the partner, or against the AI partner) or from the Companion ("table":
+// the live tracker for the physical game, or a game already played).
 
 const MODE_LABEL: Record<CampaignGame["mode"], string> = {
   solo: "vs AI",
@@ -50,7 +58,7 @@ function playedOn(iso: string): string {
   return new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
 }
 
-export default function MissionDesk({ id }: { id: string }) {
+export default function MissionDesk({ id, mode }: { id: string; mode: DeskMode }) {
   const query = useCampaign(id);
   if (query.isPending) return <LoadingState label="Opening the campaign…" className="py-24" />;
   if (query.isError || !query.data) {
@@ -61,10 +69,10 @@ export default function MissionDesk({ id }: { id: string }) {
       />
     );
   }
-  return <Desk campaign={query.data} />;
+  return <Desk campaign={query.data} mode={mode} />;
 }
 
-function Desk({ campaign }: { campaign: CampaignDetail }) {
+function Desk({ campaign, mode }: { campaign: CampaignDetail; mode: DeskMode }) {
   const navigate = useNavigate();
   const location = useLocation();
   // A mission the server refused (a locked city, someone else's campaign)
@@ -108,12 +116,14 @@ function Desk({ campaign }: { campaign: CampaignDetail }) {
   }, [openingRoom, mp.roomCode, selected, campaign.id, navigate]);
 
   const partner = campaign.members.find((m) => m.userId !== user?.id) ?? null;
-  const canOnline = campaign.partnerKind === "member" && partner !== null;
-  const canSolo = campaign.partnerKind !== "guest";
+  const atTable = mode === "table";
+  const canOnline = !atTable && campaign.partnerKind === "member" && partner !== null;
+  const canSolo = !atTable && campaign.partnerKind !== "guest";
   const sorted = [...progress.open].sort((a, b) => missionDifficulty(a) - missionDifficulty(b));
   const games = campaign.games.map((g, i) => ({ g, n: i + 1 })).reverse();
 
   const startSolo = () => selected && navigate(missionPlayPath(campaign.id, selected, aiTier));
+  const startTable = () => selected && navigate(tablePlayPath(campaign.id, selected));
   const startOnline = () => {
     if (!selected) return;
     setOpeningRoom(true);
@@ -240,6 +250,13 @@ function Desk({ campaign }: { campaign: CampaignDetail }) {
                 onSolo={startSolo}
                 onOnline={startOnline}
                 onRecord={() => setRecording(true)}
+                onTable={startTable}
+                atTable={atTable}
+                otherDesk={
+                  campaign.partnerKind === "member"
+                    ? () => navigate(campaignPath(campaign.id, atTable ? "play" : "table"))
+                    : null
+                }
                 openingRoom={openingRoom}
                 cleared={progress.cleared}
                 games={campaign.games}
@@ -306,8 +323,22 @@ function Desk({ campaign }: { campaign: CampaignDetail }) {
                 </ol>
               )}
             </Surface>
-            <Button variant="ghost" size="sm" onClick={() => navigate(CAMPAIGN_BASE)}>
-              ← All campaigns
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() =>
+                navigate(
+                  atTable
+                    ? COMPANION_BASE
+                    : campaign.partnerKind === "member"
+                      ? "/play/codenames-duet"
+                      : CAMPAIGN_BASE,
+                )
+              }
+            >
+              {atTable || campaign.partnerKind !== "member"
+                ? "← All campaigns"
+                : "← Back to the menu"}
             </Button>
           </div>
         </div>
@@ -323,17 +354,17 @@ function Desk({ campaign }: { campaign: CampaignDetail }) {
             </p>
             <p className="truncate text-2xs text-fg-muted">{missionRule(selected)}</p>
           </div>
-          {canOnline ? (
+          {atTable ? (
+            <Button size="sm" onClick={startTable} disabled={campaign.archived}>
+              Start at the table
+            </Button>
+          ) : canOnline ? (
             <Button size="sm" onClick={startOnline} disabled={openingRoom || campaign.archived}>
               Play online
             </Button>
-          ) : canSolo ? (
+          ) : (
             <Button size="sm" onClick={startSolo} disabled={campaign.archived}>
               Play vs AI
-            </Button>
-          ) : (
-            <Button size="sm" onClick={() => setRecording(true)} disabled={campaign.archived}>
-              Record game
             </Button>
           )}
         </div>
@@ -387,6 +418,9 @@ function Brief({
   onSolo,
   onOnline,
   onRecord,
+  onTable,
+  atTable,
+  otherDesk,
   openingRoom,
   cleared,
   games,
@@ -401,6 +435,10 @@ function Brief({
   onSolo: () => void;
   onOnline: () => void;
   onRecord: () => void;
+  onTable: () => void;
+  atTable: boolean;
+  /** The same campaign's other desk (play ↔ table), for a campaign with a member. */
+  otherDesk: (() => void) | null;
   openingRoom: boolean;
   cleared: ReadonlySet<CityId>;
   games: readonly CampaignGame[];
@@ -455,9 +493,23 @@ function Brief({
               </Select>
             </div>
           )}
-          <Button variant="secondary" onClick={onRecord} block>
-            Record a game played at the table
-          </Button>
+          {atTable && (
+            <>
+              <Button onClick={onTable} block>
+                Start at the table
+              </Button>
+              <Button variant="secondary" onClick={onRecord} block>
+                Record a game you already played
+              </Button>
+            </>
+          )}
+          {otherDesk && (
+            <Button variant="ghost" size="sm" onClick={otherDesk}>
+              {atTable
+                ? "Play this campaign online instead"
+                : "Playing with the real cards? Open the Companion"}
+            </Button>
+          )}
         </div>
       )}
     </div>

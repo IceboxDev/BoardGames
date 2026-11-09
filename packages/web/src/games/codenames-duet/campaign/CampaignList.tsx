@@ -19,25 +19,60 @@ import {
 import { errorMessageOf } from "../../../lib/error-message";
 import { useCampaigns, useCreateCampaign, usePartnerCandidates } from "./api";
 import { teamLine } from "./mission-copy";
-import { campaignPath } from "./paths";
+import { COMPANION_FREE_PATH, campaignPath, FREE_GAME_PATH } from "./paths";
 import { TeamAvatars } from "./TeamAvatars";
 
-// Every campaign the member is in — one per partner, each at its own depth —
-// and the way to start another.
+// The campaigns behind a mode-picker card, and the way to start another:
+//   solo  — Singleplayer: campaigns with the AI partner (plus a quick game
+//           outside any campaign);
+//   table — Companion: campaigns played with the physical cards, with a
+//           member or someone without an account (plus a tracked game
+//           outside any campaign).
+// Campaigns with a member are also what a Multiplayer room plays
+// (`DuetLobbyConfig`). Each pair keeps its own map, at its own depth.
+
+type Scope = "solo" | "table";
+
+const SCOPE_COPY: Record<
+  Scope,
+  { eyebrow: string; title: string; intro: string; empty: string; other: string }
+> = {
+  solo: {
+    eyebrow: "Codenames: Duet · Singleplayer",
+    title: "Your campaigns",
+    intro:
+      "You and the AI partner work through the mission map: start in Prague, and every mission you win opens the cities next to it. Run as many campaigns as you like, each at its own depth.",
+    empty: "Start one in Prague — the AI partner holds the other side of the key.",
+    other: "Quick game without a campaign",
+  },
+  table: {
+    eyebrow: "Codenames: Duet · Companion",
+    title: "At the table",
+    intro:
+      "Playing with the real cards? Pick your campaign and mission, keep the tracker between you, and tap what each guess reveals — it spends the timer tokens, runs sudden death and saves the result to your map.",
+    empty: "Start one with your partner — a member, or someone without an account.",
+    other: "Track a game without a campaign",
+  },
+};
+
+const inScope = (scope: Scope, kind: CampaignPartner["kind"]) =>
+  scope === "solo" ? kind === "ai" : kind !== "ai";
 
 function lastPlayed(iso: string | null): string {
   if (!iso) return "Not played yet";
   return `Last played ${new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" })}`;
 }
 
-export default function CampaignList() {
+export default function CampaignList({ scope }: { scope: Scope }) {
   const navigate = useNavigate();
   const campaigns = useCampaigns();
   const [creating, setCreating] = useState(false);
   const [showArchived, setShowArchived] = useState(false);
-
-  const list = (campaigns.data ?? []).filter((c) => showArchived || !c.archived);
-  const archivedCount = (campaigns.data ?? []).filter((c) => c.archived).length;
+  const copy = SCOPE_COPY[scope];
+  const mine = (campaigns.data ?? []).filter((c) => inScope(scope, c.partnerKind));
+  const list = mine.filter((c) => showArchived || !c.archived);
+  const archivedCount = mine.filter((c) => c.archived).length;
+  const mode = scope === "table" ? "table" : "play";
 
   return (
     <div className="relative z-raised h-full overflow-y-auto">
@@ -45,14 +80,10 @@ export default function CampaignList() {
         <header className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="text-2xs font-bold uppercase tracking-eyebrow text-accent-300">
-              Codenames: Duet
+              {copy.eyebrow}
             </p>
-            <h1 className="font-card text-3xl font-bold text-fg-strong">Campaigns</h1>
-            <p className="mt-1 max-w-prose text-sm text-fg-secondary">
-              Work through the mission map with a partner: start in Prague, and every mission you
-              win opens the cities next to it. Play online, against the AI partner, or at the table
-              and record it here.
-            </p>
+            <h1 className="font-card text-3xl font-bold text-fg-strong">{copy.title}</h1>
+            <p className="mt-1 max-w-prose text-sm text-fg-secondary">{copy.intro}</p>
           </div>
           <Button onClick={() => setCreating(true)}>New campaign</Button>
         </header>
@@ -64,7 +95,7 @@ export default function CampaignList() {
         ) : list.length === 0 ? (
           <EmptyState
             title="No campaigns yet"
-            description="Start one with a partner — each pair keeps its own map."
+            description={copy.empty}
             action={<Button onClick={() => setCreating(true)}>New campaign</Button>}
           />
         ) : (
@@ -74,7 +105,7 @@ export default function CampaignList() {
                 <SelectableCard
                   variant="row"
                   orientation="horizontal"
-                  onClick={() => navigate(campaignPath(c.id))}
+                  onClick={() => navigate(campaignPath(c.id, mode))}
                   icon={<TeamAvatars campaign={c} />}
                   title={
                     <>
@@ -109,15 +140,25 @@ export default function CampaignList() {
               : `Show archived campaigns (${archivedCount})`}
           </Button>
         )}
-        <Button variant="ghost" size="sm" onClick={() => navigate("/play/codenames-duet")}>
-          ← Back to Codenames: Duet
-        </Button>
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line-soft pt-3">
+          <Button variant="ghost" size="sm" onClick={() => navigate("/play/codenames-duet")}>
+            ← Back to Codenames: Duet
+          </Button>
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={() => navigate(scope === "solo" ? FREE_GAME_PATH : COMPANION_FREE_PATH)}
+          >
+            {copy.other}
+          </Button>
+        </div>
       </div>
 
       {creating && (
         <NewCampaignModal
+          kinds={scope === "solo" ? ["ai"] : ["member", "guest"]}
           onClose={() => setCreating(false)}
-          onCreated={(id) => navigate(campaignPath(id))}
+          onCreated={(id) => navigate(campaignPath(id, mode))}
         />
       )}
     </div>
@@ -126,17 +167,26 @@ export default function CampaignList() {
 
 type PartnerKind = CampaignPartner["kind"];
 
-function NewCampaignModal({
+const KIND_LABEL: Record<PartnerKind, string> = {
+  member: "A member",
+  ai: "AI partner",
+  guest: "Someone else",
+};
+
+/** Starts a campaign in Prague; `kinds` = the partners this entry point offers. */
+export function NewCampaignModal({
+  kinds,
   onClose,
   onCreated,
 }: {
+  kinds: readonly PartnerKind[];
   onClose: () => void;
   onCreated: (id: string) => void;
 }) {
   const create = useCreateCampaign();
   const uid = useId();
   const [name, setName] = useState("");
-  const [kind, setKind] = useState<PartnerKind>("member");
+  const [kind, setKind] = useState<PartnerKind>(kinds[0] ?? "member");
   const [memberId, setMemberId] = useState<string | null>(null);
   const [guestName, setGuestName] = useState("");
   const members = usePartnerCandidates(kind === "member");
@@ -166,17 +216,17 @@ function NewCampaignModal({
           />
         </Field>
         <div className="flex flex-col gap-2">
-          <span className="text-sm font-semibold text-fg-primary">Partner</span>
-          <SegmentedControl
-            fullWidth
-            value={kind}
-            onChange={setKind}
-            options={[
-              { value: "member", label: "A member" },
-              { value: "ai", label: "AI partner" },
-              { value: "guest", label: "Someone else" },
-            ]}
-          />
+          {kinds.length > 1 && (
+            <>
+              <span className="text-sm font-semibold text-fg-primary">Partner</span>
+              <SegmentedControl
+                fullWidth
+                value={kind}
+                onChange={setKind}
+                options={kinds.map((k) => ({ value: k, label: KIND_LABEL[k] }))}
+              />
+            </>
+          )}
           {kind === "member" &&
             (members.isPending ? (
               <LoadingState label="Loading members…" className="py-6" />
@@ -194,15 +244,15 @@ function NewCampaignModal({
             ))}
           {kind === "ai" && (
             <p className="text-sm text-fg-secondary">
-              Every mission is played against the AI partner. You can still record games played at
-              the table.
+              The AI partner holds the other side of the key and gives you clues. Pick its strength
+              before each mission.
             </p>
           )}
           {kind === "guest" && (
             <Field
               label="Their name"
               htmlFor={`${uid}-guest`}
-              hint="For a partner without an account: games are played at the table and recorded here"
+              hint="For a partner without an account: you play with the real cards and track it here"
             >
               <Input
                 id={`${uid}-guest`}

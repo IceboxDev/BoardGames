@@ -6,6 +6,7 @@ import { TeamChat } from "../../codenames/components/TeamChat";
 import { tierName } from "../../codenames/logic/review";
 import { cityName, missionNumbers } from "../campaign/mission-copy";
 import { sideLabel } from "../logic";
+import { TimerTokens } from "./TimerTokens";
 
 // The left rail: the mission's progress (agents found of 15), the timer as
 // a row of tokens, each player's side, and — when the partner is a person —
@@ -68,34 +69,13 @@ export function DuetPanel({
             <span className="text-xs font-normal text-fg-muted"> / {view.tokensTotal}</span>
           </span>
         </div>
-        <div className="mt-2 flex flex-wrap gap-1.5">
-          {Array.from({ length: view.tokensTotal }, (_, i) => {
-            // Left to right: checkmark-side tokens, then the bystander-side
-            // ones (the free mistakes, mission map), then the spent ones.
-            const checkmarks = view.tokens - (view.mistakesLeft ?? view.tokens);
-            const kind = i >= view.tokens ? "spent" : i < checkmarks ? "check" : "bystander";
-            return (
-              <span
-                // biome-ignore lint/suspicious/noArrayIndexKey: tokens are interchangeable
-                key={i}
-                title={
-                  kind === "bystander"
-                    ? "Bystander side: a free mistake"
-                    : kind === "check"
-                      ? "Checkmark side: a turn, not a mistake"
-                      : undefined
-                }
-                className={cn(
-                  "h-4 w-4 rounded-full border-2 transition-colors",
-                  kind === "spent"
-                    ? "border-line bg-transparent"
-                    : kind === "check" && view.mistakesTotal !== null
-                      ? "border-cn-green-deep bg-cn-green shadow"
-                      : "border-cn-tan-deep bg-cn-tan shadow",
-                )}
-              />
-            );
-          })}
+        <div className="mt-2">
+          <TimerTokens
+            tokens={view.tokens}
+            tokensTotal={view.tokensTotal}
+            mistakesLeft={view.mistakesLeft}
+            mistakesTotal={view.mistakesTotal}
+          />
         </div>
         {view.mistakesTotal !== null && !suddenDeath && (
           <p className="mt-2 flex items-baseline justify-between gap-2 text-3xs text-fg-secondary">
