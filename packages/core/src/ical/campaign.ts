@@ -73,6 +73,13 @@ export const CAMPAIGN_NIGHTS: readonly CampaignNight[] = [
     "Bring your hero board if you took it home.",
   ),
   night(
+    "the-adventures-of-robin-hood",
+    "Robin Hood",
+    "outlaws",
+    "slips into Sherwood for the next adventure",
+    "Nothing to bring — the board and the book keep the story.",
+  ),
+  night(
     "slay-the-spire",
     "Slay the Spire",
     "climbers",

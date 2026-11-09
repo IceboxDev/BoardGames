@@ -427,7 +427,8 @@ async function main() {
     // below still calls it out.
     try {
       const args = newCatalogEntries.flatMap((e) => ["--slug", e.slug]);
-      const res = spawnSync("node", ["scripts/gen-skills.mjs", ...args], {
+      // tsx, not node: gen-skills imports the server's TypeScript AI platform.
+      const res = spawnSync("pnpm", ["exec", "tsx", "scripts/gen-skills.mjs", ...args], {
         stdio: "inherit",
         env: process.env,
       });

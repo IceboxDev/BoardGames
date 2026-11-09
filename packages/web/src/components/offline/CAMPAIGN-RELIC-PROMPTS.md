@@ -6,7 +6,7 @@ Every file is a **PNG with a fully transparent background**. Drop the raw PNGs i
 
 ---
 
-**Status (2026-10-23):** 80 prompts in 18 batches, one batch per game. Generated and wired in except the two 12+ images (Evil Power Master, Codenames Duet); until those exist a night of twelve or more shows no relic. Convert after adding or replacing any PNG: `pnpm --filter @boardgames/web card-art --game=relics` (writes `src/assets/campaign-relics/`, used by `lib/campaign-relics.ts`).
+**Status (2026-10-23):** 83 prompts in 19 batches, one batch per game. Generated and wired in except the two 12+ images (Evil Power Master, Codenames Duet) and Robin Hood's three (batch 19, added 2026-11-09); until those exist a night of twelve or more shows no relic. Convert after adding or replacing any PNG: `pnpm --filter @boardgames/web card-art --game=relics` (writes `src/assets/campaign-relics/`, used by `lib/campaign-relics.ts`).
 
 **How to use.** One game per fresh image-generator conversation:
 
@@ -44,8 +44,9 @@ Every setup block starts with this, verbatim:
 | 16 | [The Crew: Quest for Planet Nine](#batch-16) | 2–5 | 4 | moon-white mission patch |
 | 17 | [Sky Team](#batch-17) | 2 | 1 | amber altimeter figure |
 | 18 | [Codenames Duet](#batch-18) | 2–11, 12+ | 11 | cream stencil |
+| 19 | [The Adventures of Robin Hood](#batch-19) | 2–4 | 3 | gold storybook serif |
 
-80 images in all. War with the Evil Power Master and Codenames Duet have no upper limit (Duet is played by two teams sharing the clue-giving, so any table fits); their last image reads **12+** and serves every night of twelve or more.
+83 images in all. War with the Evil Power Master and Codenames Duet have no upper limit (Duet is played by two teams sharing the clue-giving, so any table fits); their last image reads **12+** and serves every night of twelve or more.
 
 ---
 
@@ -741,4 +742,34 @@ The same image as the previous one, identical in every detail — the green-and-
 
 ```text
 The same image as the previous one, identical in every detail — the green-and-tan spy key card in its leather holder, the same view, light, size and position — with only the numeral changed to 12+ (the digits 1 and 2 followed by a small plus sign), in cream stencil lettering (#e7dcc0), like a code stamped on an agent's card, crisp and bold, in exactly the same size and position as before. The relic centred and filling about 88% of the canvas, seen in a slight three-quarter view. Isolated on a fully transparent background, no cast shadow, no text other than the numeral, no watermark. Square composition, 1:1 aspect ratio.
+```
+
+---
+
+<a id="batch-19"></a>
+
+## Batch 19 · The Adventures of Robin Hood (3)
+
+**Setup block** — paste first:
+
+```text
+Premium collectible game-piece illustration: one physical relic object painted like a deluxe sculpted game token, semi-realistic digital painting with crisp, confident edges; glossy enamel, polished metal, cut gemstone and carved stone surfaces; a warm key light from the upper left, a bright thin rim light tracing the whole silhouette and a soft inner glow in the object's own colour, so it reads clearly against a near-black warm charcoal page (#1a1816). The colour this prompt names leads the object. The silhouette is simple, bold and instantly recognisable even at 40 pixels: one strong shape, no thin protruding parts, no small loose details. In the middle of the object, facing the viewer, its face carries ONE large numeral, made as part of the object itself in the material and lettering this prompt names: it fills most of the face, sits upright and dead centre on it, and is bold and high-contrast so it reads instantly at 40 pixels. No other text, letters or numbers anywhere on the object; no signature, no watermark. This is a heroic-fantasy relic, the treasure a party carries out of a dungeon: worn but precious, forged metal and cut gems, a little battle damage, the warmth of torchlight on every edge. The relic: a round archery target of tightly woven straw bound in Lincoln-green leather (#4d7c0f), its rings of polished gold (#eab308) and green enamel, set in a thick wreath of carved oak leaves with two acorns at the bottom; NO arrows, no fletching, nothing protruding; the bullseye is a large round plate of deep green enamel that carries the numeral. The numeral: in polished gold, a bold storybook blackletter-inspired serif with a fine dark outline, like a numeral stamped on a sheriff's prize. This batch is ONE relic drawn 3 times, once per player count: every image is the identical object, the same camera, the same three-quarter view tilted about 15 degrees, the same light, the same size and position on the canvas, the same numeral lettering, size and placement. Only the numeral changes. A two-character numeral is set a little narrower so it stays inside the same face.
+```
+
+**`relic-the-adventures-of-robin-hood-2.png`** — 1:1 square, transparent
+
+```text
+The relic: a round archery target of tightly woven straw bound in Lincoln-green leather (#4d7c0f), its rings of polished gold (#eab308) and green enamel, set in a thick wreath of carved oak leaves with two acorns at the bottom; NO arrows, no fletching, nothing protruding; the bullseye is a large round plate of deep green enamel that carries the numeral. The numeral on its face is 2, in polished gold, a bold storybook blackletter-inspired serif with a fine dark outline, like a numeral stamped on a sheriff's prize, filling most of the face and dead centre on it. The relic centred and filling about 88% of the canvas, seen in a slight three-quarter view. Isolated on a fully transparent background, no cast shadow, no text other than the numeral, no watermark. Square composition, 1:1 aspect ratio.
+```
+
+**`relic-the-adventures-of-robin-hood-3.png`** — 1:1 square, transparent
+
+```text
+The same image as the previous one, identical in every detail — the Lincoln-green straw archery target with gold rings and its oak-leaf wreath, the same view, light, size and position — with only the numeral changed to 3, in polished gold, a bold storybook blackletter-inspired serif with a fine dark outline, like a numeral stamped on a sheriff's prize, in exactly the same size and position as before. The relic centred and filling about 88% of the canvas, seen in a slight three-quarter view. Isolated on a fully transparent background, no cast shadow, no text other than the numeral, no watermark. Square composition, 1:1 aspect ratio.
+```
+
+**`relic-the-adventures-of-robin-hood-4.png`** — 1:1 square, transparent
+
+```text
+The same image as the previous one, identical in every detail — the Lincoln-green straw archery target with gold rings and its oak-leaf wreath, the same view, light, size and position — with only the numeral changed to 4, in polished gold, a bold storybook blackletter-inspired serif with a fine dark outline, like a numeral stamped on a sheriff's prize, in exactly the same size and position as before. The relic centred and filling about 88% of the canvas, seen in a slight three-quarter view. Isolated on a fully transparent background, no cast shadow, no text other than the numeral, no watermark. Square composition, 1:1 aspect ratio.
 ```

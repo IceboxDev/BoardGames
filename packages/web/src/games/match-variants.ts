@@ -173,6 +173,33 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Midterm Grading", label: "Midterm Grading Extravaganza" },
     ],
   },
+  // El Grande Big Box: the base game plus every published expansion in one box
+  // (King & Intrigant with its Players' Edition and special cards, Grand
+  // Inquisitor & Colonies, Grandissimo, the Anniversary Extension). The base
+  // is always in play, so it is pre-checked; expansions stay opt-in. Values
+  // are one word each so the full selection fits the 64-character scenario.
+  "el-grande-big-box": {
+    label: "Expansions in play",
+    mode: "multi",
+    default: "Base",
+    options: [
+      { value: "Base", label: "Base game" },
+      { value: "Intrigant", label: "King & Intrigant" },
+      { value: "Inquisitor", label: "Grand Inquisitor & Colonies" },
+      { value: "Grandissimo", label: "Grandissimo" },
+      { value: "Anniversary", label: "Anniversary Extension" },
+    ],
+  },
+  // The Adventures of Robin Hood: a co-op campaign of seven adventures played
+  // in order from the story book — record which one. The first is the default.
+  "the-adventures-of-robin-hood": {
+    label: "Adventure",
+    mode: "single",
+    options: [1, 2, 3, 4, 5, 6, 7].map((n) => ({
+      value: `Adventure ${n}`,
+      label: `Adventure ${n}`,
+    })),
+  },
   // Unstable Unicorns: one base deck (the White / Black / GameStop / retail
   // boxes differ only in card backs) plus the expansion boxes shuffled in.
   // Recorded like 7 Wonders: the base is always in play, so it is pre-checked;

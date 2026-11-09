@@ -56,6 +56,12 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // co-op like Just One — no binary win/loss).
   "medical-mysteries-nyc": "coop",
   "medical-mysteries-miami": "coop",
+  // On Call: the team runs the emergency room together — the scenario's goals
+  // met, or five patients at Death's Door and everyone loses.
+  "on-call": "coop",
+  // The Adventures of Robin Hood: a co-op storybook campaign; the adventure
+  // played is the variant (match-variants.ts).
+  "the-adventures-of-robin-hood": "coop",
   // Bomb Busters: the team defuses one numbered mission together — win or the
   // bomb goes off. The mission is the variant (match-variants.ts).
   "bomb-busters": "coop",
