@@ -13,6 +13,7 @@
     "gen-descriptions": "tsx --env-file=packages/server/.env scripts/gen-descriptions/index.mjs",
     "gen-skills": "tsx --env-file=packages/server/.env scripts/gen-skills.mjs",
     "gen-cpp-7wonders": "tsx scripts/gen-cpp-7wonders.ts",
+    "gen-duet-campaign-map": "tsx scripts/gen-duet-campaign-map.mts && biome format --write packages/web/src/games/codenames-duet/campaign/world-map.gen.ts",
     "gen-cpp-hunger": "tsx scripts/gen-cpp-hunger.ts",
     "dump-hunger-parity": "tsx scripts/dump-hunger-parity.ts",
     "build-hunger-wasm": "tsx scripts/gen-hunger-wasm.ts",

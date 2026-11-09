@@ -81,6 +81,11 @@ export const qk = {
   quizContent: (kind: "article" | "index" | "timeline", id: string) =>
     ["quiz", "content", kind, id] as const,
   onboarding: () => ["onboarding"] as const,
+  // Codenames: Duet campaigns (the mission map).
+  duetCampaigns: () => ["duet-campaigns"] as const,
+  duetCampaignList: () => ["duet-campaigns", "list"] as const,
+  duetCampaign: (id: string) => ["duet-campaigns", "one", id] as const,
+  duetCampaignPartners: () => ["duet-campaigns", "partners"] as const,
   adminQuizReports: (status: string) => ["admin", "quiz-reports", status] as const,
   adminQuizReportsAll: () => ["admin", "quiz-reports"] as const,
   // Prefixes for invalidation (every date / id variant of one read).

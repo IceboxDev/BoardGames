@@ -78,6 +78,11 @@ export type CampaignDetail = z.infer<typeof CampaignDetailSchema>;
 
 export const CampaignDetailResponseSchema = z.object({ campaign: CampaignDetailSchema });
 
+/** Members a campaign can be started with (everyone but the asker). */
+export const CampaignPartnerListResponseSchema = z.object({
+  members: z.array(CampaignMemberSchema),
+});
+
 export const CreateCampaignBodySchema = z.object({
   name: z.string().trim().min(1).max(60),
   partner: CampaignPartnerSchema,

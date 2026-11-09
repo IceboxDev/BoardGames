@@ -8,10 +8,13 @@ export default function GameOverScreen({
   view,
   names,
   actions,
+  campaignLine = null,
 }: {
   view: DuetPlayerView;
   names: readonly (string | null)[];
   actions: readonly GameOverAction[];
+  /** A campaign mission's outcome on the map ("Paris cleared · now open: Madrid"). */
+  campaignLine?: string | null;
 }) {
   const model = useMemo(
     () =>
@@ -36,7 +39,7 @@ export default function GameOverScreen({
     <ReviewScreen
       title={result.won ? "Mission accomplished" : "Mission failed"}
       tone={result.won ? "win" : "lose"}
-      detail={`${DUET_REASON[result.reason] ?? result.reason} · ${result.agentsFound} / 15 agents · ${result.tokensLeft} turn${result.tokensLeft === 1 ? "" : "s"} to spare`}
+      detail={`${campaignLine ? `${campaignLine} · ` : ""}${DUET_REASON[result.reason] ?? result.reason} · ${result.agentsFound} / 15 agents · ${result.tokensLeft} turn${result.tokensLeft === 1 ? "" : "s"} to spare`}
       actions={actions}
       model={model}
     />

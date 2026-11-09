@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import { useGameShell } from "../../hooks/useGameShell";
+import { readLobbyPreset } from "../../lib/lobby-preset.ts";
 import { Lobby } from "../multiplayer";
 
 // Stable localStorage key shared with `<JoinRoom>` — that screen writes
@@ -70,9 +71,14 @@ export default function LobbyRoute() {
   const { def, mp } = useGameShell();
   const { user } = useCurrentUser();
 
-  // The game's options start at its schema defaults; the server re-parses
-  // whatever the lobby component sends.
-  const [config, setConfig] = useState<unknown>(() => def.manifest?.config.parse({}) ?? {});
+  // The game's options start at its schema defaults — or at the options the
+  // room was opened for (a Duet campaign mission, `lobby-preset.ts`); the
+  // server re-parses whatever the lobby component sends.
+  const [config, setConfig] = useState<unknown>(() => {
+    const preset = urlRoomCode ? readLobbyPreset(urlRoomCode) : undefined;
+    const parsed = preset === undefined ? undefined : def.manifest?.config.safeParse(preset);
+    return parsed?.success ? parsed.data : (def.manifest?.config.parse({}) ?? {});
+  });
 
   // Rejoin path — covers refresh and direct-URL entry. Gated on
   // `isConnected` because firing `joinRoom` before the socket is open

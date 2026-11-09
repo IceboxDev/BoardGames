@@ -17,11 +17,11 @@ import { canAttempt } from "@boardgames/core/games/codenames-duet/campaign/progr
 import {
   CampaignDetailResponseSchema,
   CampaignListResponseSchema,
+  CampaignPartnerListResponseSchema,
   CreateCampaignBodySchema,
   RecordTableGameBodySchema,
   UpdateCampaignBodySchema,
 } from "@boardgames/core/protocol";
-import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
@@ -39,12 +39,6 @@ import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const duetCampaignRoutes = authedApp();
 
-const PartnerListSchema = z.object({
-  members: z.array(
-    z.object({ userId: z.string(), name: z.string(), image: z.string().nullable() }),
-  ),
-});
-
 duetCampaignRoutes.get("/", async (c) => {
   const campaigns = await listCampaigns(getDb(), c.get("user").id);
   return c.json(CampaignListResponseSchema.parse({ campaigns }));
@@ -53,7 +47,7 @@ duetCampaignRoutes.get("/", async (c) => {
 duetCampaignRoutes.get("/partners", async (c) => {
   const me = c.get("user").id;
   const members = (await listPartnerCandidates(getDb())).filter((m) => m.userId !== me);
-  return c.json(PartnerListSchema.parse({ members }));
+  return c.json(CampaignPartnerListResponseSchema.parse({ members }));
 });
 
 duetCampaignRoutes.post("/", zJsonBody(CreateCampaignBodySchema), async (c) => {

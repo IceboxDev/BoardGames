@@ -4,6 +4,7 @@ import { MicroLabel } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
 import { TeamChat } from "../../codenames/components/TeamChat";
 import { tierName } from "../../codenames/logic/review";
+import { cityName, missionNumbers } from "../campaign/mission-copy";
 import { sideLabel } from "../logic";
 
 // The left rail: the mission's progress (agents found of 15), the timer as
@@ -24,6 +25,12 @@ export function DuetPanel({
   const chat = partner !== null && !view.ai[partner] && view.phase !== "over";
   return (
     <div className="flex min-h-0 flex-col gap-3">
+      {view.campaign && (
+        <p className="flex items-center justify-between gap-2 rounded-full bg-accent-500/15 px-3 py-1.5 text-xs font-bold text-accent-200">
+          <span className="truncate">Campaign · {cityName(view.campaign.city)}</span>
+          <span className="tabular-nums">{missionNumbers(view.campaign.city)}</span>
+        </p>
+      )}
       <section className="rounded-card-lg border border-line-soft bg-fill-soft p-3">
         <div className="flex items-baseline justify-between">
           <MicroLabel>Agents found</MicroLabel>
@@ -62,19 +69,43 @@ export function DuetPanel({
           </span>
         </div>
         <div className="mt-2 flex flex-wrap gap-1.5">
-          {Array.from({ length: view.tokensTotal }, (_, i) => (
-            <span
-              // biome-ignore lint/suspicious/noArrayIndexKey: tokens are interchangeable
-              key={i}
-              className={cn(
-                "h-4 w-4 rounded-full border-2 transition-colors",
-                i < view.tokens
-                  ? "border-cn-tan-deep bg-cn-tan shadow"
-                  : "border-line bg-transparent",
-              )}
-            />
-          ))}
+          {Array.from({ length: view.tokensTotal }, (_, i) => {
+            // Left to right: checkmark-side tokens, then the bystander-side
+            // ones (the free mistakes, mission map), then the spent ones.
+            const checkmarks = view.tokens - (view.mistakesLeft ?? view.tokens);
+            const kind = i >= view.tokens ? "spent" : i < checkmarks ? "check" : "bystander";
+            return (
+              <span
+                // biome-ignore lint/suspicious/noArrayIndexKey: tokens are interchangeable
+                key={i}
+                title={
+                  kind === "bystander"
+                    ? "Bystander side: a free mistake"
+                    : kind === "check"
+                      ? "Checkmark side: a turn, not a mistake"
+                      : undefined
+                }
+                className={cn(
+                  "h-4 w-4 rounded-full border-2 transition-colors",
+                  kind === "spent"
+                    ? "border-line bg-transparent"
+                    : kind === "check" && view.mistakesTotal !== null
+                      ? "border-cn-green-deep bg-cn-green shadow"
+                      : "border-cn-tan-deep bg-cn-tan shadow",
+                )}
+              />
+            );
+          })}
         </div>
+        {view.mistakesTotal !== null && !suddenDeath && (
+          <p className="mt-2 flex items-baseline justify-between gap-2 text-3xs text-fg-secondary">
+            <span>
+              {view.mistakesLeft === 0
+                ? "No free mistakes left: a bystander now costs two turns."
+                : `${view.mistakesLeft} free ${view.mistakesLeft === 1 ? "mistake" : "mistakes"} left (tan).`}
+            </span>
+          </p>
+        )}
         {suddenDeath && (
           <p className="mt-2 text-3xs text-amber-200">
             No clues now: take turns picking. Any bystander or assassin loses.

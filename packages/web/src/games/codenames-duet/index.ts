@@ -5,6 +5,7 @@ import rulesUrl from "./assets/rules.pdf";
 export default {
   component: lazy(() => import("./Duet")),
   extraMode: "campaign",
+  extraModePath: "solo/campaign",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./DuetLobbyConfig")),
   replayComponent: lazy(() => import("./components/DuetReplay")),
