@@ -1,8 +1,12 @@
 import type { DuetAction, DuetPlayerView } from "@boardgames/core/games/codenames-duet/types";
 import { useState } from "react";
 import { ActionLog } from "../../../components/action-log";
-import { GameScreen } from "../../../components/game-layout";
-import { Button, ErrorAlert } from "../../../components/ui";
+import {
+  GameScreen,
+  UndoableActionButton,
+  usePendingAction,
+} from "../../../components/game-layout";
+import { ErrorAlert } from "../../../components/ui";
 import { ClueComposer } from "../../codenames/components/ClueComposer";
 import {
   ClueDisplay,
@@ -58,6 +62,10 @@ export default function GameBoard({ view, names, onAction, error }: GameBoardPro
   }));
   const faceDown = view.cards.filter((c) => !c.found).map((c) => c.word);
   const now = doing(view);
+  const endTurn = usePendingAction({
+    enabled: view.canEndTurn,
+    onCommit: () => onAction({ kind: "end-turn" }),
+  });
   const partner = (1 - (view.seat === 1 ? 1 : 0)) as 0 | 1;
 
   const pick = (i: number) => {
@@ -69,6 +77,7 @@ export default function GameBoard({ view, names, onAction, error }: GameBoardPro
       });
       return;
     }
+    if (endTurn.pending) return;
     onAction({ kind: "guess", card: i });
   };
 
@@ -133,11 +142,7 @@ export default function GameBoard({ view, names, onAction, error }: GameBoardPro
           <>
             {view.aiStandIn && <StandInBadge />}
             {view.deadlineTs !== null && <TurnTimer deadlineTs={view.deadlineTs} />}
-            {view.canEndTurn && (
-              <Button variant="primary" size="sm" onClick={() => onAction({ kind: "end-turn" })}>
-                End turn
-              </Button>
-            )}
+            {view.canEndTurn && <UndoableActionButton action={endTurn} label="End turn" />}
             {view.seat !== -1 && (
               <KeyToggle shown={showKey} onToggle={() => setShowKey((s) => !s)} />
             )}

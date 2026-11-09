@@ -6,6 +6,12 @@ import { RulesShell } from "./RulesShell";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
+// pdf.js decodes JPEG 2000 images (most rulebooks' page backgrounds) and ICC
+// colour with WebAssembly modules it loads from `wasmUrl`. Without it those
+// images are skipped silently and pages render as text on white. Module-level
+// so the object is stable — react-pdf reloads the document when it changes.
+const PDF_OPTIONS = { wasmUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/wasm/` };
+
 /** A single PDF, or multiple booklets shown as tabs (Sky Team etc.). */
 export type RulesViewerSource = string | { label: string; url: string }[];
 
@@ -73,6 +79,7 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
           // new file instead of incrementally diffing against the old one.
           key={activeTab}
           file={tabs[activeTab].url}
+          options={PDF_OPTIONS}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={<LoadingState label="Loading rules…" className="py-20" />}
           error={

@@ -5,7 +5,11 @@ import type {
 } from "@boardgames/core/games/codenames/types";
 import { type ReactNode, useEffect, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
-import { GameScreen } from "../../../components/game-layout";
+import {
+  GameScreen,
+  UndoableActionButton,
+  usePendingAction,
+} from "../../../components/game-layout";
 import { GaugeIcon } from "../../../components/icons";
 import { Button, ErrorAlert, IconButton } from "../../../components/ui";
 import { useTurnAlert } from "../../../hooks/useTurnAlert";
@@ -196,7 +200,14 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
   const now = doing(view);
 
   const setPick = (card: number | null) => setPickFor({ turn: turnKey, card });
-  const touch = (i: number) => onAction({ kind: "guess", card: i });
+  const endTurn = usePendingAction({
+    enabled: view.canEndTurn,
+    onCommit: () => onAction({ kind: "end-turn" }),
+  });
+  const touch = (i: number) => {
+    if (endTurn.pending) return;
+    onAction({ kind: "guess", card: i });
+  };
 
   const tap = (i: number) => {
     if (view.mustGiveClue) {
@@ -381,9 +392,7 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
               </Button>
             )}
             {view.canEndTurn && (
-              <Button size="sm" variant="secondary" onClick={() => onAction({ kind: "end-turn" })}>
-                End turn
-              </Button>
+              <UndoableActionButton action={endTurn} label="End turn" variant="secondary" />
             )}
             {isOperative && pointing && (
               <IconButton
