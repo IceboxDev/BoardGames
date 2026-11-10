@@ -6,7 +6,7 @@ Every file is a **PNG with a fully transparent background**. Drop the raw PNGs i
 
 ---
 
-**Status (2026-10-23):** 83 prompts in 19 batches, one batch per game. Generated and wired in except the two 12+ images (Evil Power Master, Codenames Duet) and Robin Hood's three (batch 19, added 2026-11-09); until those exist a night of twelve or more shows no relic. Convert after adding or replacing any PNG: `pnpm --filter @boardgames/web card-art --game=relics` (writes `src/assets/campaign-relics/`, used by `lib/campaign-relics.ts`).
+**Status (2026-10-23):** 83 prompts in 19 batches, one batch per game. Generated and wired in except the two 12+ images (Evil Power Master, Codenames Duet); until those exist a night of twelve or more shows no relic. Convert after adding or replacing any PNG: `pnpm --filter @boardgames/web card-art --game=relics` (writes `src/assets/campaign-relics/`, used by `lib/campaign-relics.ts`).
 
 **How to use.** One game per fresh image-generator conversation:
 
