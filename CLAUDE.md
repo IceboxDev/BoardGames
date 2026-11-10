@@ -134,7 +134,7 @@ Every playable game is **server-authoritative** (registered in `packages/server/
 
 | Game | AI |
 |------|----|
-| Lost Cities | ISMCTS + heuristic strategies |
+| Lost Cities | ISMCTS + heuristic strategies. Board = "Five Trails" (`components/trails/`): five painted expedition columns, card sizes from the board box via `useTrailGeometry` (never from its contents; every lane reserved for 12 cards). Art in `ART-PROMPTS.md` (cast sheet in every batch, each expedition written back from its 10) → `art-src/lost-cities/` → `card-art --game=lost-cities` → `assets/art/*.webp`. |
 | Exploding Kittens | ISMCTS |
 | Durak | heuristic |
 | Parks | heuristic |
