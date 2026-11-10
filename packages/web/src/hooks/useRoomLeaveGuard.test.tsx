@@ -25,10 +25,15 @@ vi.mock("./useGameShell", () => ({
 
 import { useRoomLeaveGuard } from "./useRoomLeaveGuard";
 
-function setupContext(opts: { slug?: string; roomCode?: string | null; view?: unknown }) {
+function setupContext(opts: {
+  slug?: string;
+  roomCode?: string | null;
+  view?: unknown;
+  outcome?: unknown;
+}) {
   useGameShellMock.mockReturnValue({
     def: { slug: opts.slug ?? "lost-cities" },
-    session: { leaveRoom, leaveSession },
+    session: { leaveRoom, leaveSession, result: null, outcome: opts.outcome ?? null },
     game: { view: opts.view ?? null },
     mp: { roomCode: opts.roomCode ?? null },
   });
@@ -165,5 +170,32 @@ describe("useRoomLeaveGuard — in-app blocker", () => {
     await userEvent.click(screen.getByText("go"));
     expect(confirmSpy).not.toHaveBeenCalled();
     expect(await screen.findByText("arrived")).toBeInTheDocument();
+  });
+
+  it("leaves a finished solo game without asking", async () => {
+    setupContext({ view: { mock: "view" }, outcome: { kind: "ranked" } });
+    const confirmSpy = vi.spyOn(window, "confirm").mockReturnValue(false);
+    render(<RouterProvider router={dataRouterAt("/play/lost-cities", "/games")} />);
+    await userEvent.click(screen.getByText("go"));
+    expect(confirmSpy).not.toHaveBeenCalled();
+    expect(leaveSession).toHaveBeenCalledOnce();
+    expect(await screen.findByText("arrived")).toBeInTheDocument();
+  });
+
+  it("leaves a finished room game without asking", async () => {
+    setupContext({ roomCode: "ABCD", view: { mock: "view" }, outcome: { kind: "ranked" } });
+    const confirmSpy = vi.spyOn(window, "confirm").mockReturnValue(false);
+    render(<RouterProvider router={dataRouterAt("/play/lost-cities", "/games")} />);
+    await userEvent.click(screen.getByText("go"));
+    expect(confirmSpy).not.toHaveBeenCalled();
+    expect(leaveRoom).toHaveBeenCalledOnce();
+    expect(await screen.findByText("arrived")).toBeInTheDocument();
+  });
+
+  it("does not hold the tab open once the game is finished", () => {
+    const addSpy = vi.spyOn(window, "addEventListener");
+    setupContext({ view: { mock: "view" }, outcome: { kind: "ranked" } });
+    render(<RouterProvider router={dataRouterAt("/play/lost-cities", "/games")} />);
+    expect(addSpy.mock.calls.some(([type]) => type === "beforeunload")).toBe(false);
   });
 });

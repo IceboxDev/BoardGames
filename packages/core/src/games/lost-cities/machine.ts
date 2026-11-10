@@ -451,15 +451,18 @@ function buildPlayerView(ctx: LostCitiesContext, player: number): LostCitiesPlay
     playerScore: scores[player],
     opponentScore: scores[opp],
     lastDiscardedColor: gs.lastDiscardedColor,
-    actionLog:
-      player === 0
-        ? ctx.actionLog
-        : ctx.actionLog.map((e) => ({
-            ...e,
-            player: (e.player === player ? 0 : 1) as PlayerIndex,
-          })),
+    // Seen from this seat: player 0 is always "me", and a card the other seat
+    // drew from the deck stays face down (a discard-pile draw was face up).
+    actionLog: ctx.actionLog.map((e) => ({
+      ...e,
+      player: (e.player === player ? 0 : 1) as PlayerIndex,
+      card: e.action === "draw-pile" && e.player !== player ? HIDDEN_CARD : e.card,
+    })),
   };
 }
+
+/** The card a log entry shows for a deck draw the viewer didn't make. */
+const HIDDEN_CARD: Card = { id: -1, color: "yellow", type: "number", value: 0 };
 
 function buildLegalActions(ctx: LostCitiesContext, player: number): LostCitiesLegalAction[] {
   const gs = ctx.gameState;

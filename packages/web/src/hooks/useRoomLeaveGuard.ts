@@ -42,10 +42,18 @@ export function useRoomLeaveGuard() {
   // or an in-flight solo game. Both clear on `session.leaveRoom` /
   // `session.leaveSession`, so the guard tears down automatically once
   // the user explicitly leaves.
-  const isActive = mp.roomCode !== null || game.view !== null;
+  // A finished game holds nothing to lose: its result is in and saved, and
+  // the view only stays up for the game-over screen. Leaving it still drops
+  // the seat / session, just without asking. A rematch or a new game clears
+  // the result, which arms the prompt again.
+  const holding = mp.roomCode !== null || game.view !== null;
+  const finished = session.result != null || session.outcome != null;
+  const isActive = holding && !finished;
+  const finishedRef = useRef(finished);
+  finishedRef.current = finished;
 
   const blocker = useBlocker(({ nextLocation }) => {
-    if (!isActive) return false;
+    if (!holding) return false;
     const target = nextLocation.pathname;
     const root = `/play/${def.slug}`;
     // Stay inside the shell subtree — those moves are intentional.
@@ -73,7 +81,7 @@ export function useRoomLeaveGuard() {
   // ask once and act on the answer.
   useEffect(() => {
     if (blocker.state !== "blocked") return;
-    const ok = window.confirm(CONFIRM_MESSAGE);
+    const ok = finishedRef.current || window.confirm(CONFIRM_MESSAGE);
     if (ok) {
       // Clean up both projections — leaveRoom is a no-op without a
       // room, leaveSession a no-op without a sessionId, so the order
