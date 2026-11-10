@@ -1,5 +1,4 @@
 import { canPlayToExpedition, getLegalDraws } from "@boardgames/core/games/lost-cities/rules";
-import { scorePlayer } from "@boardgames/core/games/lost-cities/scoring";
 import type {
   Card as CardData,
   DiscardPiles,
@@ -9,27 +8,15 @@ import type {
   PlayerIndex,
   TurnPhase,
 } from "@boardgames/core/games/lost-cities/types";
-import {
-  COLOR_HEX,
-  COLOR_LABELS,
-  EXPEDITION_COLORS,
-} from "@boardgames/core/games/lost-cities/types";
+import { COLOR_LABELS } from "@boardgames/core/games/lost-cities/types";
 import type { ReactNode } from "react";
-import { useEffect, useRef, useState } from "react";
-import { CardDeck } from "../../../components/CardDeck";
+import { useEffect } from "react";
 import { GameScreen } from "../../../components/game-layout";
-import { PromptRow } from "../../../components/game-layout/PromptRow";
-import { type ExpeditionScoreEntry, ScoreGridPanel } from "../../../components/SidePanel";
-import { AiThinkingIndicator, WaitingIndicator } from "../../../components/ui";
 import { Button } from "../../../components/ui/Button";
-import { DEBUG_LAYOUT } from "../../../lib/debug";
-import cardBackUrl from "../assets/card-back.png";
-import BoardMiddleFit from "./BoardMiddleFit";
-import DiscardArea from "./DiscardArea";
-import ExpeditionArea from "./ExpeditionArea";
+import DrawPile from "./DrawPile";
 import FlatPlayerHand, { type FlatPlayerHandProps } from "./FlatPlayerHand";
 import PlayerHand from "./PlayerHand";
-import TurnIndicator from "./TurnIndicator";
+import TrailsBoard from "./trails/TrailsBoard";
 
 /**
  * Display-only view of the board. Contains only public / visible state —
@@ -53,14 +40,16 @@ interface GameBoardInteractiveProps {
   /** Cards the human player holds — kept separate from {@link BoardState} so the board state is pure display. */
   hand: CardData[];
   selectedCardId: number | null;
-  isMultiplayer?: boolean;
+  /** [you, the opponent] — the opponent's real name, never a generic label. */
+  names: [string, string];
+  /** The opponent is a person (a room), not the AI. */
+  opponentIsHuman?: boolean;
   onSelectCard: (card: CardData) => void;
   onPlayToExpedition: () => void;
   onDiscard: () => void;
   onDrawFromPile: () => void;
   onDrawFromDiscard: (color: ExpeditionColor) => void;
   sidebar?: ReactNode;
-  isWaiting?: boolean;
 }
 
 interface GameBoardReplayProps {
@@ -76,125 +65,42 @@ interface GameBoardReplayProps {
 
 export type GameBoardProps = GameBoardInteractiveProps | GameBoardReplayProps;
 
-function lostCitiesCardBack(cls: string) {
-  return (
-    <div className={`${cls} overflow-hidden`}>
-      <img src={cardBackUrl} alt="" className="h-full w-full object-cover" draggable={false} />
-    </div>
-  );
-}
-
-function buildScoreData(state: BoardState) {
-  const p0 = scorePlayer(state.expeditions[0]);
-  const p1 = scorePlayer(state.expeditions[1]);
-  const expeditions: ExpeditionScoreEntry[] = EXPEDITION_COLORS.map((c, i) => ({
-    color: c,
-    hex: COLOR_HEX[c],
-    label: COLOR_LABELS[c],
-    playerScore: p0.expeditions[i].total,
-    opponentScore: p1.expeditions[i].total,
-    playerStarted: p0.expeditions[i].started,
-    opponentStarted: p1.expeditions[i].started,
-  }));
-  return { expeditions, playerTotal: p0.total, opponentTotal: p1.total };
-}
-
-function boardMiddleMeasureKey(state: BoardState): string {
-  const parts: string[] = [];
-  for (const p of [0, 1] as const) {
-    for (const c of EXPEDITION_COLORS) {
-      parts.push(String(state.expeditions[p][c].length));
-    }
-  }
-  for (const c of EXPEDITION_COLORS) {
-    parts.push(String(state.discardPiles[c].length));
-  }
-  parts.push(String(state.drawPileCount));
-  return parts.join(",");
-}
+const valueLabel = (card: CardData) => (card.type === "wager" ? "wager" : String(card.value));
 
 export default function GameBoard(props: GameBoardProps) {
-  const middleMeasureKey = boardMiddleMeasureKey(props.state);
+  const interactive = props.mode !== "replay" ? props : null;
 
-  // AI thinking timer — tracks when the AI turn begins so the indicator can show elapsed time.
-  // Declared at the top so hook order stays consistent across the replay early return below.
-  const isInteractiveAiTurn =
-    props.mode !== "replay" && props.state.currentPlayer === 1 && props.state.phase !== "game-over";
-  const [aiStartTime, setAiStartTime] = useState(0);
-  const prevAiTurn = useRef(false);
+  // P / D / Space: play, discard, draw from the deck.
   useEffect(() => {
-    if (isInteractiveAiTurn && !prevAiTurn.current) {
-      setAiStartTime(Date.now());
-    }
-    prevAiTurn.current = isInteractiveAiTurn;
-  }, [isInteractiveAiTurn]);
+    if (!interactive) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLElement && e.target.closest("input,textarea,select")) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      const k = e.key.toLowerCase();
+      if (k === "p") interactive.onPlayToExpedition();
+      else if (k === "d") interactive.onDiscard();
+      else if (k === " ") {
+        e.preventDefault();
+        interactive.onDrawFromPile();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [interactive]);
 
   if (props.mode === "replay") {
     const { state, replayLabels, replayTopHand, replayBottomHand, replayCompact = true } = props;
-    const [p0, p1] = replayLabels;
-    const g = replayCompact ? "gap-1" : "gap-2";
-
-    const scores = buildScoreData(state);
-
     return (
-      <div className="flex h-full min-h-0 gap-3">
-        {/* Left stats column */}
-        <div
-          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
-        >
-          <ScoreGridPanel
-            turnCount={state.turnCount + 1}
-            playerName={p0}
-            opponentName={p1}
-            expeditions={scores.expeditions}
-            playerTotal={scores.playerTotal}
-            opponentTotal={scores.opponentTotal}
-          />
-        </div>
-
-        <div
-          className={`flex min-h-0 flex-1 flex-col ${g}${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}
-        >
-          <FlatPlayerHand {...replayTopHand} compact={replayCompact} />
-
-          <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
-            <BoardMiddleFit measureKey={middleMeasureKey}>
-              <div className="flex flex-1 flex-col">
-                <div className="shrink-0">
-                  <ExpeditionArea expeditions={state.expeditions[1]} isPlayer={false} />
-                </div>
-
-                <div className="flex flex-1 items-center justify-center border-y border-line my-1.5">
-                  <DiscardArea discardPiles={state.discardPiles} />
-                </div>
-
-                <div className="shrink-0">
-                  <ExpeditionArea expeditions={state.expeditions[0]} isPlayer={true} />
-                </div>
-              </div>
-            </BoardMiddleFit>
-          </div>
-
-          <TurnIndicator
-            currentPlayer={state.currentPlayer}
-            turnPhase={state.turnPhase}
-            isGameOver={state.phase === "game-over"}
-            readOnly
-            playerNames={[p0, p1]}
-            dense={replayCompact}
-          />
-
-          <div className="shrink-0 min-h-0">
-            <FlatPlayerHand {...replayBottomHand} compact={replayCompact} />
-          </div>
-        </div>
-
-        {/* Deck column */}
-        <div
-          className={`flex w-36 shrink-0 flex-col items-center justify-center${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
-        >
-          <CardDeck count={state.drawPileCount} size="lg" renderBack={lostCitiesCardBack} />
-        </div>
+      <div className="flex h-full min-h-0 flex-col gap-2">
+        <FlatPlayerHand {...replayTopHand} compact={replayCompact} />
+        <TrailsBoard
+          mine={state.expeditions[0]}
+          theirs={state.expeditions[1]}
+          discardPiles={state.discardPiles}
+          names={{ me: replayLabels[0], them: replayLabels[1] }}
+          highlightId={replayBottomHand.highlightCardId ?? replayTopHand.highlightCardId}
+        />
+        <FlatPlayerHand {...replayBottomHand} compact={replayCompact} />
       </div>
     );
   }
@@ -203,125 +109,110 @@ export default function GameBoard(props: GameBoardProps) {
     state,
     hand,
     selectedCardId,
-    isMultiplayer = false,
+    names,
+    opponentIsHuman = false,
     onSelectCard,
     onPlayToExpedition,
     onDiscard,
     onDrawFromPile,
     onDrawFromDiscard,
     sidebar,
-    isWaiting,
   } = props;
 
-  const isHumanTurn = state.currentPlayer === 0;
-  const isPlayPhase = isHumanTurn && state.turnPhase === "play";
-  const isDrawPhase = isHumanTurn && state.turnPhase === "draw";
+  const over = state.phase === "game-over";
+  const myTurn = state.currentPlayer === 0 && !over;
+  const playStep = myTurn && state.turnPhase === "play";
+  const drawStep = myTurn && state.turnPhase === "draw";
 
-  const legalDraws = isDrawPhase
+  const legalDraws = drawStep
     ? getLegalDraws(state.discardPiles, state.drawPileCount, state.lastDiscardedColor)
     : [];
+  const takeable = new Set(legalDraws.flatMap((d) => (d.kind === "discard-pile" ? [d.color] : [])));
+  const canDrawDeck = legalDraws.some((d) => d.kind === "draw-pile");
 
-  const drawableDiscardColors = new Set(
-    legalDraws
-      .filter(
-        (d): d is { kind: "discard-pile"; color: ExpeditionColor } => d.kind === "discard-pile",
-      )
-      .map((d) => d.color),
-  );
-
-  const canDrawFromPile = legalDraws.some((d) => d.kind === "draw-pile");
-
-  const selectedCard =
-    selectedCardId != null ? (hand.find((c) => c.id === selectedCardId) ?? null) : null;
-  const canPlay = selectedCard
-    ? canPlayToExpedition(selectedCard, state.expeditions[0][selectedCard.color])
+  const selected = playStep ? (hand.find((c) => c.id === selectedCardId) ?? null) : null;
+  const canPlay = selected
+    ? canPlayToExpedition(selected, state.expeditions[0][selected.color])
     : false;
+
+  // Buttons only, at fixed widths: the row never changes shape between steps.
+  const BTN = "w-40 truncate whitespace-nowrap sm:w-56";
+  const actions = over ? null : playStep ? (
+    <div className="flex items-center justify-center gap-2">
+      <Button
+        variant="primary"
+        size="sm"
+        className={BTN}
+        disabled={!canPlay}
+        onClick={onPlayToExpedition}
+        title="P"
+      >
+        {selected
+          ? canPlay
+            ? `Play ${valueLabel(selected)} to ${COLOR_LABELS[selected.color]}`
+            : `${COLOR_LABELS[selected.color]} is past it`
+          : "Play a card"}
+      </Button>
+      <Button
+        variant="secondary"
+        size="sm"
+        className={BTN}
+        disabled={!selected}
+        onClick={onDiscard}
+        title="D"
+      >
+        {selected ? `Discard ${valueLabel(selected)}` : "Discard"}
+      </Button>
+    </div>
+  ) : drawStep ? (
+    <div className="flex items-center justify-center gap-2">
+      <Button
+        variant="primary"
+        size="sm"
+        className={BTN}
+        disabled={!canDrawDeck}
+        onClick={onDrawFromPile}
+        title="Space — or take a lit camp"
+      >
+        Draw from the deck · {state.drawPileCount}
+      </Button>
+    </div>
+  ) : (
+    <div className="flex items-center justify-center gap-2">
+      <Button variant="secondary" size="sm" className={BTN} disabled>
+        {opponentIsHuman ? `Waiting for ${names[1]}` : `${names[1]} is thinking`}
+      </Button>
+    </div>
+  );
 
   return (
     <GameScreen
       sidebar={sidebar}
-      leftSidebar={<ScoreGridPanel turnCount={state.turnCount + 1} {...buildScoreData(state)} />}
+      leftSidebar={
+        <DrawPile state={state} names={names} canDraw={canDrawDeck} onDraw={onDrawFromPile} />
+      }
+      leftSidebarLabel="Deck & score"
       fan={
         <PlayerHand
           hand={hand}
           selectedCardId={selectedCardId}
           onSelectCard={onSelectCard}
-          disabled={!isPlayPhase}
+          disabled={!playStep}
         />
       }
-      fanActions={
-        isPlayPhase && selectedCard ? (
-          <div className="flex items-center justify-center gap-2">
-            {canPlay && (
-              <Button variant="success" size="xs" onClick={onPlayToExpedition}>
-                Play to Expedition
-              </Button>
-            )}
-            <Button variant="secondary" size="xs" onClick={onDiscard}>
-              Discard
-            </Button>
-          </div>
-        ) : isHumanTurn && state.phase !== "game-over" ? (
-          <PromptRow
-            title="Your turn"
-            message={
-              isPlayPhase
-                ? "Select a card to play or discard"
-                : "Draw a card from the pile or discard"
-            }
-          />
-        ) : !isHumanTurn && state.phase !== "game-over" ? (
-          isMultiplayer ? (
-            <PromptRow title="Opponent" tone="waiting" message="Waiting for opponent…" pulse />
-          ) : (
-            <AiThinkingIndicator
-              message="IS-MCTS computing best move"
-              showTimer
-              startTime={aiStartTime}
-            />
-          )
-        ) : undefined
-      }
+      fanActions={actions}
     >
-      {isWaiting && <WaitingIndicator />}
-      <div className="flex min-h-0 flex-1 gap-3">
-        <div
-          className={`flex min-h-0 flex-1 flex-col overflow-hidden${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}
-        >
-          <BoardMiddleFit measureKey={middleMeasureKey}>
-            <div className="flex flex-1 flex-col">
-              <div className="shrink-0">
-                <ExpeditionArea expeditions={state.expeditions[1]} isPlayer={false} />
-              </div>
-
-              <div className="flex flex-1 items-center justify-center border-y border-line my-1.5">
-                <DiscardArea
-                  discardPiles={state.discardPiles}
-                  onPickDiscard={isDrawPhase ? onDrawFromDiscard : undefined}
-                  glowingColors={isDrawPhase ? drawableDiscardColors : undefined}
-                />
-              </div>
-
-              <div className="shrink-0">
-                <ExpeditionArea expeditions={state.expeditions[0]} isPlayer={true} />
-              </div>
-            </div>
-          </BoardMiddleFit>
-        </div>
-
-        {/* Deck column */}
-        <div
-          className={`flex w-36 shrink-0 flex-col items-center justify-center${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
-        >
-          <CardDeck
-            count={state.drawPileCount}
-            size="lg"
-            glowing={isDrawPhase && canDrawFromPile}
-            onClick={isDrawPhase && canDrawFromPile ? onDrawFromPile : undefined}
-            renderBack={lostCitiesCardBack}
-          />
-        </div>
-      </div>
+      <TrailsBoard
+        mine={state.expeditions[0]}
+        theirs={state.expeditions[1]}
+        discardPiles={state.discardPiles}
+        names={{ me: names[0], them: names[1] }}
+        selected={selected}
+        canPlaySelected={canPlay}
+        takeable={takeable}
+        lockedColor={drawStep ? state.lastDiscardedColor : null}
+        onTake={drawStep ? onDrawFromDiscard : undefined}
+      />
     </GameScreen>
   );
 }

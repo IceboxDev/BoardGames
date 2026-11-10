@@ -39,7 +39,7 @@ export default function FlatPlayerHand({
       <div className={`flex flex-wrap justify-center ${compact ? "gap-0.5" : "gap-1"}`}>
         {sorted.map((card) => (
           <div key={card.id} className={`shrink-0 ${compact ? "w-10" : "w-12"}`}>
-            <Card card={card} size="sm" disabled glowing={card.id === highlightCardId} />
+            <Card card={card} glowing={card.id === highlightCardId} />
           </div>
         ))}
         {sorted.length === 0 && (

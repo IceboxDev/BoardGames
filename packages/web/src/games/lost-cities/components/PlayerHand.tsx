@@ -23,14 +23,9 @@ export default function PlayerHand({
       cards={sorted}
       getCardId={(c) => c.id}
       renderCard={(card, { isHovered }) => (
-        <Card
-          card={card}
-          size="hand"
-          selected={card.id === selectedCardId}
-          glowing={!disabled && isHovered}
-        />
+        <Card card={card} selected={card.id === selectedCardId} glowing={!disabled && isHovered} />
       )}
-      renderPreview={(card) => <Card card={card} size="hand" />}
+      renderPreview={(card) => <Card card={card} />}
       onCardClick={(card) => onSelectCard(card)}
       disabled={disabled}
     />

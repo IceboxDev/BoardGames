@@ -45,7 +45,7 @@ function cardRef(card: CardData): LogCardRef | null {
   return {
     card: label,
     color: COLOR_HEX[card.color],
-    tooltipContent: <Card card={card} size="hand" disabled />,
+    tooltipContent: <Card card={card} width={120} />,
   };
 }
 

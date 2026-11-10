@@ -10,6 +10,7 @@
 //   pnpm --filter @boardgames/web card-art --strict   # exit 1 on orphans / budget
 //   pnpm --filter @boardgames/web card-art --game=hunger   # The Hunger's blocks instead
 //   pnpm --filter @boardgames/web card-art --game=relics   # campaign-night relics
+//   pnpm --filter @boardgames/web card-art --game=lost-cities   # Lost Cities' cards, trails, insignia
 //   pnpm --filter @boardgames/web card-art --game=quiz-domains   # quiz trainer section icons
 //   pnpm --filter @boardgames/web card-art --game=quiz-sources   # quiz question source marks
 //
@@ -41,6 +42,11 @@ const GAMES = {
   // 7 Wonders: wonder boards, backdrops, Edifice plans and the icon set
   // (ART-PROMPTS.md). Loaded per image as each view needs it.
   "7-wonders": { src: "7-wonders", out: "7-wonders", dir: "art", budgetKb: 12 * 1024 },
+  // Lost Cities (ART-PROMPTS.md): the 60 card paintings, the five trail
+  // backdrops behind the board's columns, the medallions and insignia, and
+  // the card back. Cards are drawn at most ~130 px wide in the fan (2× DPR →
+  // 540 px tall at 2:3), a trail at most ~800 px tall.
+  "lost-cities": { src: "lost-cities", out: "lost-cities", dir: "art", budgetKb: 8 * 1024 },
   // Campaign-night relics (components/offline/CAMPAIGN-RELIC-PROMPTS.md): one
   // per headcount per campaign game plus the un-numbered relic, drawn at most
   // 112 px wide (the RSVP hero). Not a game's: they live under src/assets.

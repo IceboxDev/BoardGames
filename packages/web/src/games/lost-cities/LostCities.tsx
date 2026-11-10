@@ -106,14 +106,14 @@ export default function LostCities({ source }: GameComponentProps) {
       state={viewToBoardState(view)}
       hand={view.playerHand}
       selectedCardId={flow.isMyTurn ? selectedCardId : null}
-      isMultiplayer={source === "mp"}
+      names={["You", opponentName]}
+      opponentIsHuman={source === "mp"}
       onSelectCard={handleSelectCard}
       onPlayToExpedition={() => play("expedition")}
       onDiscard={() => play("discard")}
       onDrawFromPile={() => draw(null)}
       onDrawFromDiscard={(color) => draw(color)}
       sidebar={<ActionLog blocks={mapLostCitiesLog(view.actionLog ?? [], ["You", opponentName])} />}
-      isWaiting={source === "mp" && !flow.isMyTurn}
     />
   );
 }
