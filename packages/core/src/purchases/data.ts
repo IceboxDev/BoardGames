@@ -1999,7 +1999,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     title: "On Call — Full Workup Set: base game, New Wing expansion, Deluxe Components",
     shortTitle: "On Call",
     orderGroup: null,
-    slug: null, // not in the catalog yet
+    slug: "on-call",
     kind: "crowdfunding",
     status: "production",
     platform: "Kickstarter",

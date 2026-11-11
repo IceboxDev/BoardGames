@@ -25,6 +25,22 @@ describe("PURCHASES coherence", () => {
     }
   });
 
+  it("links a purchase once its game is in the catalog", () => {
+    // A record written before its game joined the catalog keeps `slug: null`
+    // (and so no thumbnail) until someone notices; On Call did.
+    const slugify = (s: string) =>
+      s
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
+    for (const p of PURCHASES) {
+      if (p.slug !== null) continue;
+      const name = p.shortTitle ?? p.title;
+      const guesses = [p.id, slugify(name), slugify(name.split(/[:—]/)[0] ?? "")];
+      for (const g of guesses) expect(isCatalogSlug(g), `${p.id}: link slug "${g}"`).toBe(false);
+    }
+  });
+
   it("carries only real calendar dates", () => {
     // The schema regex passes 2026-02-31; Date.parse of an out-of-range ISO
     // date is NaN, which is what catches it.
