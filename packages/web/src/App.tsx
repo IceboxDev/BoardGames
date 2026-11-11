@@ -12,6 +12,7 @@ import {
 import { AuthInvalidator } from "./components/AuthInvalidator";
 import { AuthLayout } from "./components/AuthLayout";
 import { GreetingGate } from "./components/GreetingGate";
+import { HibernationGate } from "./components/HibernationGate";
 import Layout from "./components/Layout";
 import { NavigationProgress } from "./components/NavigationProgress";
 import { OnboardingHintsProvider } from "./components/onboarding/OnboardingHints";
@@ -59,17 +60,22 @@ function RootShell() {
   return (
     <ThemeProvider>
       <AuthInvalidator />
-      <PageViewTracker />
-      <GreetingGate />
-      <NavigationProgress />
-      {/* First-use hints: screens declare their control is up; one bubble at a time. */}
-      <OnboardingHintsProvider>
-        <RouteErrorBoundary>
-          <Suspense fallback={<RouteFallback />}>
-            <Outlet />
-          </Suspense>
-        </RouteErrorBoundary>
-      </OnboardingHintsProvider>
+      {/* While the site hibernates, everything below gives way to the goodbye
+          screen except the online area (online members), the admin console
+          and sign-in — see components/HibernationGate.tsx. */}
+      <HibernationGate>
+        <PageViewTracker />
+        <GreetingGate />
+        <NavigationProgress />
+        {/* First-use hints: screens declare their control is up; one bubble at a time. */}
+        <OnboardingHintsProvider>
+          <RouteErrorBoundary>
+            <Suspense fallback={<RouteFallback />}>
+              <Outlet />
+            </Suspense>
+          </RouteErrorBoundary>
+        </OnboardingHintsProvider>
+      </HibernationGate>
     </ThemeProvider>
   );
 }
@@ -103,6 +109,8 @@ const router = createBrowserRouter(
       <Route element={<AuthLayout mode="admin" />}>
         <Route path="/admin" lazy={page(() => import("./pages/AdminPage"))} />
         <Route path="/admin/quiz-desk" lazy={page(() => import("./pages/QuizDeskPage"))} />
+        {/* The goodbye screen as it would look if the site hibernated now. */}
+        <Route path="/goodbye" lazy={page(() => import("./pages/GoodbyePreviewPage"))} />
       </Route>
 
       {/* Game-night members: the directory and every player-scoped page.
@@ -212,6 +220,9 @@ export default function App() {
           shouldDehydrateQuery: (q) =>
             defaultShouldDehydrateQuery(q) &&
             q.queryKey[0] !== "greetings" &&
+            // Site hibernation must come from the server on every open: a
+            // stale "awake" from disk would flash the old site.
+            q.queryKey[0] !== "site" &&
             q.queryKey[0] !== "quiz" &&
             q.queryKey[0] !== "geography" &&
             // Hint state must come from the server: a hint dismissed on another

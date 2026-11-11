@@ -15,6 +15,7 @@ import {
   PurchaseVoteCard,
   QuizReportsCard,
   ResetLinkModal,
+  SiteHibernationCard,
   SkillRatingsCard,
   UserRow,
   UsersTable,
@@ -57,7 +58,15 @@ import {
 type MemberRow = { user: AdminUser; coverage: Coverage; zeroDays: number; inactive: boolean };
 
 /** URL-backed tab set (`?tab=…`; Users is the bare default). */
-const ADMIN_TABS = ["users", "vote", "pre-register", "skills", "guests", "reports"] as const;
+const ADMIN_TABS = [
+  "users",
+  "vote",
+  "pre-register",
+  "skills",
+  "guests",
+  "reports",
+  "site",
+] as const;
 type AdminTab = (typeof ADMIN_TABS)[number];
 
 function isAdminTab(v: string | null): v is AdminTab {
@@ -326,6 +335,7 @@ export default function AdminPage() {
             { value: "skills", label: "Skill ratings" },
             { value: "guests", label: "Guests" },
             { value: "reports", label: openReports ? `Reports (${openReports})` : "Reports" },
+            { value: "site", label: "Site" },
           ]}
           value={tab}
           onChange={setTab}
@@ -395,6 +405,7 @@ export default function AdminPage() {
         )}
         {tab === "pre-register" && <PreRegisterCard />}
         {tab === "skills" && <SkillRatingsCard />}
+        {tab === "site" && <SiteHibernationCard />}
         {tab === "reports" && (
           <div className="flex flex-col gap-3">
             <Link

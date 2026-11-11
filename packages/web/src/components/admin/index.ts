@@ -12,6 +12,7 @@ export { PreRegisterCard } from "./PreRegisterCard";
 export { PurchaseVoteCard } from "./PurchaseVoteCard";
 export { QuizReportsCard } from "./QuizReportsCard";
 export { ResetLinkModal } from "./ResetLinkModal";
+export { SiteHibernationCard } from "./SiteHibernationCard";
 export { SkillRatingsCard } from "./SkillRatingsCard";
 export type { AdminUser } from "./types";
 export { UserRow } from "./UserRow";

@@ -1,3 +1,4 @@
+import "@fontsource/cinzel/600.css";
 import type {
   LostCitiesLegalAction,
   LostCitiesPlayerView,

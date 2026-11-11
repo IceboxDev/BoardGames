@@ -4,6 +4,10 @@ export const qk = {
   adminUserInventory: (targetUserId: string) => ["admin", "user-inventory", targetUserId] as const,
   adminUserNewSlugs: (targetUserId: string) => ["admin", "user-new-slugs", targetUserId] as const,
   adminPendingInventory: () => ["admin", "pending-inventory"] as const,
+  /** Site hibernation status, per signed-in user (it says whether THEY may go online). */
+  siteStatus: (userId: string | null | undefined) => ["site", "status", userId ?? null] as const,
+  adminSiteLog: () => ["admin", "site", "log"] as const,
+  adminSitePreview: () => ["admin", "site", "preview"] as const,
   availability: (userId: string | null | undefined) => ["availability", userId] as const,
   availabilityCounts: () => ["availability", "counts"] as const,
   calendarLocks: () => ["calendar", "locks"] as const,
