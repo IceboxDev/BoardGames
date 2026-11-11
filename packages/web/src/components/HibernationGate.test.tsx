@@ -71,7 +71,6 @@ describe("HibernationGate", () => {
     renderAt("/offline");
     expect(await screen.findByText("It was fun while it lasted.")).toBeInTheDocument();
     expect(screen.queryByText("The app")).not.toBeInTheDocument();
-    expect(screen.getByText(/120 game nights · 640 games recorded/)).toBeInTheDocument();
     expect(screen.queryByRole("button")).not.toBeInTheDocument();
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });

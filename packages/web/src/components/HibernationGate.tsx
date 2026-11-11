@@ -26,11 +26,7 @@ export function HibernationGate({ children }: { children: ReactNode }) {
   if (!status?.hibernated || openWhileHibernated(pathname, status)) return children;
   return (
     <Suspense fallback={<RouteFallback />}>
-      <GoodbyePage
-        memorial={status.memorial}
-        onlineAccess={status.onlineAccess}
-        admin={status.admin}
-      />
+      <GoodbyePage onlineAccess={status.onlineAccess} admin={status.admin} />
     </Suspense>
   );
 }

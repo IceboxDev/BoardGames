@@ -4,5 +4,3 @@
 export const GOODBYE_TITLE = "It was fun while it lasted.";
 
 export const GOODBYE_LINE = "Thanks for every game, every grudge and every rule we made up.";
-
-export const GOODBYE_SIGNOFF = "GG.";
