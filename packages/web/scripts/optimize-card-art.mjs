@@ -59,9 +59,9 @@ const GAMES = {
   // stamps drawn at most 20 px, so 64 px covers 2× DPR.
   "quiz-sources": { src: "quiz-sources", outDir: "trainers/quiz/assets/sources", budgetKb: 128 },
   // The goodbye screen's illustration (root PROMPTS.md, "Site — goodbye
-  // screen"): a hero at most 1024 px wide on desktop and full width on a
-  // phone, so 2048 / 900 px cover 2× DPR. Shown only while the site hibernates.
-  goodbye: { src: "goodbye", outDir: "assets/goodbye", budgetKb: 1024 },
+  // screen"): a transparent figure drawn at most 288 px tall, so 640 px
+  // covers 2× DPR. Shown only while the site hibernates.
+  goodbye: { src: "goodbye", outDir: "assets/goodbye", budgetKb: 256 },
 };
 
 const args = process.argv.slice(2);
