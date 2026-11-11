@@ -84,12 +84,11 @@ export function FrontPage({
   });
   const articles = loaded.map((q) => q.data).filter((a): a is Article => !!a);
   const ready = articles.length === reading.length;
-  // The lead is the longest article; the briefs keep reading order.
+  // The lead is the first article read (page A2) and the briefs follow in
+  // reading order, so the page numbers run down the front page. The lead's
+  // text is cut to fit its box, so a short first article fills it too.
   const lead = ready
-    ? articles.reduce<Article | null>(
-        (best, a) => (best && words(best, lang) >= words(a, lang) ? best : a),
-        null,
-      )
+    ? (articles.find((a) => a.id === reading[0]?.articleId) ?? articles[0] ?? null)
     : null;
   const pageOf = (id: string) => `A${reading.findIndex((r) => r.articleId === id) + 2}`;
   const quizPage = `A${reading.length + 2}`;

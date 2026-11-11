@@ -162,7 +162,7 @@ export function FlashCard({
                 full-card overlay, so no button's intrinsic sizing (which
                 iOS Safari lets grow past the screen) ever reaches it. */}
             <div className={cn("flex min-h-0 flex-1 flex-col overflow-y-auto py-5", INSET)}>
-              <div className="my-auto flex max-w-2xl flex-col gap-2">
+              <div className="mx-auto my-auto flex max-w-2xl flex-col gap-2 text-center text-balance">
                 {questions.map((text, i) => (
                   <p
                     key={text}
