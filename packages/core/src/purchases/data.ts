@@ -598,6 +598,30 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "April 2027, fulfilment summer 2027.",
         sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/47",
       },
+      {
+        id: "brass-pittsburgh-e09",
+        occurredOn: "2026-10-22",
+        type: "campaign-update",
+        title: "Multiplayer balancing finished; solo balancing on BGA",
+        details:
+          "Pittsburgh's multiplayer balance is final after a month on version 51. Wildcat V " +
+          "Titan is being balanced on BGA by the playtesters while the Titan cards' wording " +
+          "is tightened, with the solo rulebook hoped for in the next update.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/48",
+      },
+      {
+        id: "brass-pittsburgh-e10",
+        occurredOn: "2026-11-04",
+        type: "campaign-update",
+        title: "Pledge manager closes Nov 30 — art complete, manufacturing still 0%",
+        details:
+          "Orders lock on November 30 (stretch pay closes too); after that only the address " +
+          "can change, by hand. Chart: development 99% (final solo balance), art complete, " +
+          "prepress 86% (solo rulebook in final review, iron coin boxes approved, coin " +
+          "revisions pending), manufacturing 0%. Timeline unchanged: production Sep 2026, " +
+          "freight April 2027, fulfilment summer 2027.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/49",
+      },
     ],
   },
   {
