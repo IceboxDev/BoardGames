@@ -1555,9 +1555,25 @@ These images are used as fixed full-viewport backgrounds behind the game UI. The
 
 ---
 
+## Site — goodbye screen
+
+The illustration at the top of the goodbye screen, shown to everyone while the site hibernates (admin → Site). Not a game's thumbnail: it is the last picture of the group. The games on the table are the group's real most-played ones (prod, 2026-11-11): 7 Wonders and Blood on the Clocktower lead at the table, then Connect 4, Bomb Busters, Codenames, Just One and Wavelength; Sky Team leads online. No people, no hands (owner's rule) — only what they left behind.
+
+Generate both, drop the PNGs into `packages/web/art-src/goodbye/` under the file names below, then run `pnpm --filter @boardgames/web card-art --game=goodbye` (writes `src/assets/goodbye/*.webp`; the page picks them up on its own). The page fades the image's lower third into the near-black page background, so keep that part dark and quiet.
+
+**File:** `packages/web/art-src/goodbye/goodbye-wide.png` (16:9, desktop)
+
+> The morning after the last game night. A long wooden table seen from one end at a low three-quarter angle, lit by a single brass pendant lamp that is still warm and a grey-gold dusk light through a tall window behind. The chairs are pushed back at odd angles, one turned towards the window. Nobody is there. On the table, everything was left mid-game: an ancient-wonders card game with fanned age cards, a half-built wonder board and stacks of bronze and gold coins beside red military tokens; a round leather-bound grimoire lying open, a ring of circular character tokens around it, a small brass hand bell and a candle burned down to a stub; a five-by-five grid of word cards with a few blue and red agent tiles scattered over it; an upright blue grid of a four-in-a-row game with red and yellow discs, one yellow disc lying on its side next to it, never dropped; coloured wires and a pair of wire cutters beside numbered tiles; two small cockpit dice, one blue and one orange; a few small easels with wiped whiteboards; a turquoise dial half covered by its screen. Empty glasses, a bowl with a few crumbs, a rulebook face down. Dust motes drift in the lamp light. Wistful and warm, not sad — the feeling of a good evening that is over. The lower third of the image falls off into deep shadow under the table edge, nearly black. Digital illustration, painterly brushwork with soft gradients. Warm amber and honey palette (around #c89b5e) against a dark, atmospheric background. Shallow depth of field. Warm rim lighting and subtle volumetric glow. No people, no hands, no text, no logos, no UI elements. 16:9 aspect ratio.
+
+**File:** `packages/web/art-src/goodbye/goodbye-tall.png` (9:16, phones)
+
+> The same scene composed for a tall frame: the brass pendant lamp at the top, still glowing, and below it the near end of the long wooden table seen from slightly above. Chairs pushed back, nobody there. Left mid-game on the table, stacked towards the viewer: an open round leather-bound grimoire with a ring of circular character tokens and a small brass hand bell; fanned ancient-wonder cards with bronze and gold coins and red military tokens; an upright blue four-in-a-row grid with red and yellow discs and one yellow disc lying beside it; a few word cards with blue and red agent tiles; coloured wires and wire cutters; two small cockpit dice, one blue and one orange; a candle burned down to a stub. Dust motes in the lamp light, a tall window with grey-gold dusk light at the far end. Wistful and warm, not sad. The bottom third fades into deep shadow, nearly black. Digital illustration, painterly brushwork with soft gradients. Warm amber and honey palette (around #c89b5e) against a dark, atmospheric background. Shallow depth of field. Warm rim lighting and subtle volumetric glow. No people, no hands, no text, no logos, no UI elements. 9:16 aspect ratio.
+
+---
+
 Game-specific card/role prompts live alongside each game:
 
-- **Lost Cities card art** (60 cards): [`packages/web/src/games/lost-cities/CARD-PROMPTS.md`](packages/web/src/games/lost-cities/CARD-PROMPTS.md)
+- **Lost Cities art** (cards, trails, insignia): [`packages/web/src/games/lost-cities/ART-PROMPTS.md`](packages/web/src/games/lost-cities/ART-PROMPTS.md)
 - **Pandemic role portraits** (7 roles): [`packages/web/src/games/pandemic/ROLE-PROMPTS.md`](packages/web/src/games/pandemic/ROLE-PROMPTS.md)
 - **Sushi Go! card art** (12 types): [`packages/web/src/games/sushi-go/CARD-PROMPTS.md`](packages/web/src/games/sushi-go/CARD-PROMPTS.md)
 
