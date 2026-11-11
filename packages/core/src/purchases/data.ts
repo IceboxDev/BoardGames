@@ -338,9 +338,11 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     pledgeManagerUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/yourpledge",
     // The timeline standing at pledge time (Nov '25 update): shipping
     // Sep–Oct '26, worldwide fulfilment Oct '26. The July '26 per-component
-    // timeline moved every component to "start fulfilment end of 2026".
+    // timeline moved every component to "start fulfilment end of 2026"; the
+    // Nov '26 timetable (#36) moves every row, Sundrop included, to Q1 '27
+    // (a quarter reads as its first month).
     originalEtaMonth: "2026-10",
-    currentEtaMonth: "2026-12",
+    currentEtaMonth: "2027-01",
     pledgedOn: "2026-03-29",
     deliveredOn: null,
     currency: "EUR",
@@ -355,7 +357,8 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       "(€10.00 + €1.90 — the upgraded 5-building pack) and the 3D Arcade promo building & " +
       "card (€10.00 + €1.90); both get Sundrop free with a Sundrop main pledge. Total paid " +
       "€404.60. NOTE: 3Dition contains NO base game — the retail copy is required. Shipping " +
-      "is charged in the pledge manager, due to open right after Essen SPIEL (Oct 2026).",
+      "is charged in the pledge manager, which opens once the Sundrop samples are shown " +
+      '("in just a few weeks" as of Nov 6 2026).',
     events: [
       {
         id: "ark-nova-3dition-e01",
@@ -452,6 +455,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "(hall 3, N410), shown in the post-Essen update, which is also when the pledge " +
           "manager opens to lock in shipping addresses. No change to the fulfilment date.",
         sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/35",
+      },
+      {
+        id: "ark-nova-3dition-e09",
+        occurredOn: "2026-11-06",
+        type: "delay",
+        title: "Fulfilment slips to Q1 2027; pledge manager waits for Sundrop samples",
+        details:
+          "Three parts are still open: the Big Box 1 inlay, Sundrop tested on the final " +
+          "miniatures, and the deluxe player boards. The new timetable has every component " +
+          "in series production with fulfilment starting Q1 '27. The pledge manager opens " +
+          "in a few weeks, after the Sundrop samples are shown, and the coffee break token " +
+          "gains weight as a free upgrade.",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/36",
       },
     ],
   },
