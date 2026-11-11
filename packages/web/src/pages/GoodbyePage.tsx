@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { PageHeader } from "../components/ui/PageHeader";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { firstNameOf, GOODBYE_TITLE, goodbyeLine } from "./goodbye-copy";
+import { firstNameOf, GOODBYE_AFTER, GOODBYE_TITLE, goodbyeLine } from "./goodbye-copy";
 
 // The goodbye screen: the whole site while it hibernates. One farewell
 // figure, two lines and — only for members who may still play online — one
@@ -56,6 +56,7 @@ export default function GoodbyePage({ onlineAccess, admin, preview }: GoodbyePag
         <p className="text-pretty text-base text-fg-secondary sm:text-lg">
           {goodbyeLine(firstNameOf(user?.name))}
         </p>
+        <p className="text-sm text-fg-muted">{GOODBYE_AFTER}</p>
 
         {(onlineAccess || admin) && (
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2">

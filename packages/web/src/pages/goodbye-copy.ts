@@ -1,14 +1,17 @@
 // The goodbye screen's words. Fixed on purpose: one short farewell, the same
-// for everyone — except that a signed-in member is thanked by name. Edit here.
+// for everyone — except that a signed-in member is thanked by name. The name
+// is the last word of the line on purpose: nothing after it dilutes it.
+// Edit here.
 
 export const GOODBYE_TITLE = "It was fun while it lasted.";
 
 /** The line under the title; `firstName` is null for a signed-out visitor. */
 export function goodbyeLine(firstName: string | null): string {
-  return firstName
-    ? `Thanks for every game, ${firstName} — every grudge and every rule we made up.`
-    : "Thanks for every game, every grudge and every rule we made up.";
+  return firstName ? `Thanks for every game, ${firstName}.` : "Thanks for every game.";
 }
+
+/** The quiet line after it. */
+export const GOODBYE_AFTER = "We kept your seat.";
 
 /** "Mantas Kandratavičius" → "Mantas"; empty or missing → null. */
 export function firstNameOf(name: string | null | undefined): string | null {
