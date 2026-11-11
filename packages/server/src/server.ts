@@ -4,6 +4,7 @@ import { type Context, Hono } from "hono";
 import { bodyLimit } from "hono/body-limit";
 import { cors } from "hono/cors";
 import { requireAgent } from "./auth/agent-auth.ts";
+import { hibernationGate, sessionGateUser, wsHibernationGate } from "./auth/hibernation-users.ts";
 import {
   auth,
   requireAdmin,
@@ -61,6 +62,7 @@ import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
 import { purchaseVoteRoutes } from "./auth-routes/purchase-vote.ts";
 import { purchaseRoutes } from "./auth-routes/purchases.ts";
 import { quizRoutes } from "./auth-routes/quiz.ts";
+import { adminSiteRoutes, siteStatusRoutes } from "./auth-routes/site.ts";
 import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
@@ -110,6 +112,14 @@ app.use(
 // CORS above does not stop a forged request from EXECUTING — it only hides the
 // response. This does. Must sit ahead of every mutating route.
 app.use("/api/*", requireTrustedOrigin);
+
+// Site hibernation (lib/site-state.ts): awake, a no-op; asleep, only the
+// online area (for members with online access), the admin console, sign-in,
+// health and the calendar feed get through — everything else answers 503
+// HIBERNATED and the web shows the goodbye screen. Policy in
+// auth/hibernation-gate.ts.
+app.use("/api/*", hibernationGate);
+app.route("/api/site", siteStatusRoutes(sessionGateUser));
 
 // Credential stuffing / password guessing. Keyed by IP because the whole point
 // is that the attacker has no session yet.
@@ -244,6 +254,7 @@ app.route("/api/admin", adminAnnouncementRoutes);
 app.route("/api/admin", adminQuizReportRoutes);
 app.route("/api/admin", adminQuizDeskRoutes);
 app.route("/api/admin", adminAiCallRoutes);
+app.route("/api/admin", adminSiteRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);
 app.route("/api/admin/history", adminMatchHistoryRoutes);
 app.route("/api/admin/skills", adminSkillsRoutes);
@@ -518,7 +529,7 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
   }
 }
 
-app.use("/ws", requireWsAuth);
+app.use("/ws", requireWsAuth, wsHibernationGate);
 app.get(
   "/ws",
   upgradeWebSocket((c) => {

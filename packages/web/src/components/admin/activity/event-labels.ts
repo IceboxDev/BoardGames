@@ -284,6 +284,14 @@ export const EVENT_LABELS: EventLabels = {
         matchesUpdated === undefined ? "" : ` (${count(matchesUpdated, "match", "matches")})`
       }`,
   },
+  "site-hibernated": {
+    tone: "greeting",
+    describe: () => "Hibernated the whole site",
+  },
+  "site-woken": {
+    tone: "greeting",
+    describe: () => "Woke the site up from hibernation",
+  },
   "skill-recomputed": {
     tone: "greeting",
     describe: ({ ranked, candidates }) => {

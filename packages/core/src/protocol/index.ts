@@ -33,6 +33,7 @@ export * from "./http/profile-insights.ts";
 export * from "./http/purchase-vote.ts";
 export * from "./http/purchases.ts";
 export * from "./http/quiz-reports.ts";
+export * from "./http/site.ts";
 export * from "./http/skills.ts";
 export * from "./http/trainer-chess.ts";
 export * from "./http/trainer-geography.ts";

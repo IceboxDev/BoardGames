@@ -39,6 +39,7 @@ import {
   type TombstoneRow,
 } from "../lib/available-games.ts";
 import { parseRow } from "../lib/db-rows.ts";
+import { getSiteState, todayKey } from "../lib/site-state.ts";
 
 /** `SELECT state_digest, sequence FROM calendar_feed_event_versions`. */
 const FeedEventVersionRowSchema = z.object({
@@ -98,12 +99,21 @@ calendarFeedPublicRoutes.get("/feed/:token/calendar.ics", async (c) => {
     return true;
   });
 
+  // While the site hibernates, every night from today on is emitted as
+  // CANCELLED so subscribed calendars drop it; its digest differs from the
+  // confirmed one, so SEQUENCE advances both ways (asleep and on wake). The
+  // lock itself is untouched, which is what makes waking a full restore.
+  const { hibernatedAt } = await getSiteState();
+  const today = todayKey(now);
+
   const events: IcsEvent[] = [];
   for (const ref of uniqueRefs) {
     try {
       const ev =
         ref.source === "locked"
-          ? await buildEventForLockedDate(viewerId, ref.dateKey)
+          ? hibernatedAt && nightDate(ref.dateKey) >= today
+            ? await buildEventForHibernatedNight(viewerId, ref.dateKey, hibernatedAt)
+            : await buildEventForLockedDate(viewerId, ref.dateKey)
           : await buildEventForTombstone(viewerId, ref.dateKey);
       if (ev) events.push(ev);
     } catch (err) {
@@ -206,6 +216,42 @@ async function buildEventForLockedDate(
     lastModified: stamp,
     dtstamp: stamp,
     url: buildDeepLink(dateKey),
+  };
+}
+
+/** An upcoming night while the site hibernates: cancelled, not deleted. */
+async function buildEventForHibernatedNight(
+  viewerId: string,
+  dateKey: string,
+  hibernatedAt: string,
+): Promise<IcsEvent | null> {
+  const view = await computeAvailableGamesPayload({ db: getDb(), date: dateKey, viewerId });
+  if (!view) return null;
+  const stamp = formatUtcFromSqlite(hibernatedAt);
+  const summary = buildSummary("[Cancelled]", view.lock.hostName, {
+    isPrivate: view.lock.isPrivate,
+    title: view.lock.title,
+  });
+  const description = "The game-night site is hibernating.\nThis night is off for now.";
+  const { start, end } = buildEventTimes(dateKey, view.lock.eventTime);
+  const sequence = await bumpSequence(
+    viewerId,
+    dateKey,
+    null,
+    "CANCELLED",
+    `hibernated:${hibernatedAt}`,
+  );
+  return {
+    uid: buildUid(dateKey, viewerId),
+    start,
+    ...(end ? { end } : {}),
+    summary,
+    description,
+    location: view.lock.address,
+    status: "CANCELLED",
+    sequence,
+    lastModified: stamp,
+    dtstamp: stamp,
   };
 }
 

@@ -147,6 +147,10 @@ export const GUEST_MERGE_COVERAGE = {
     "duet_campaigns.created_by",
     "duet_campaign_members.user_id",
     "duet_campaign_games.recorded_by",
+    // Site hibernation: the admin who put the site to sleep, and the log of
+    // hibernate / wake. Only an admin does either; a guest stub never signs in.
+    "site_state.hibernated_by",
+    "site_state_log.by_user_id",
   ],
 } as const;
 

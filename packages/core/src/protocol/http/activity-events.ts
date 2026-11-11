@@ -189,6 +189,10 @@ export const ActivityMetaSchemas = {
     targetUserId: z.string(),
     matchesUpdated: z.number().int(),
   }),
+  /** The admin put the whole site to sleep (the goodbye screen). */
+  "site-hibernated": z.object({}),
+  /** The admin woke the site up again. */
+  "site-woken": z.object({}),
   "skill-recomputed": z.object({
     matches: z.number().int(),
     ranked: z.number().int(),
