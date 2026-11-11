@@ -11,7 +11,7 @@ export function goodbyeLine(firstName: string | null): string {
 }
 
 /** The quiet line after it. */
-export const GOODBYE_AFTER = "We kept your seat.";
+export const GOODBYE_AFTER = "We'll miss the games too.";
 
 /** "Mantas Kandratavičius" → "Mantas"; empty or missing → null. */
 export function firstNameOf(name: string | null | undefined): string | null {
