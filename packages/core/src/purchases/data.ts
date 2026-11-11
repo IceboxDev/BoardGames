@@ -137,6 +137,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         sourceUrl:
           "https://gamefound.com/en/projects/contention-games/slay-the-spire-the-board-game---downfall/updates/3",
       },
+      {
+        id: "slay-the-spire-downfall-e05",
+        occurredOn: "2026-11-03",
+        type: "campaign-update",
+        title: "$10 million pledged; Early Shipping going out region by region",
+        details:
+          "Early Shipping (not this pledge) is underway: Canada done, UK nearly done, half of " +
+          "Europe shipped with the rest this week, the US, Australia, Asia and elsewhere " +
+          "starting this week. 4th-printing base games come with 500 improved art sleeves. " +
+          "Nothing changes for the main wave, still July 2027.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/contention-games/slay-the-spire-the-board-game---downfall/updates/4",
+      },
     ],
   },
   // One Gamefound pledge (063695A), split into its two shipping waves so
