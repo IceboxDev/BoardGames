@@ -847,13 +847,14 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     campaignUrl:
       "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium",
     pledgeManagerUrl: null, // BackerKit survey; closed June 14 '26
-    // Kickstarter's reward estimate at pledge time: Sep 2026. September has
-    // passed: the Sep 25 shipping update starts US/Australia/Asia only, with
-    // EU-bound copies (this pledge ships to Germany) held for country
-    // compliance approvals — and names no new month, so the ETA stays put
-    // and reads as overdue.
+    // Kickstarter's reward estimate at pledge time: Sep 2026. The Sep 25
+    // shipping update started US/Australia/Asia only, holding EU-bound copies
+    // (this pledge ships to Germany) for compliance approvals. The Nov 9
+    // backer message puts the EU shipment at the Netherlands warehouse in
+    // mid-December, some games arriving before Christmas, some in early
+    // January: ETA December.
     originalEtaMonth: "2026-09",
-    currentEtaMonth: "2026-09",
+    currentEtaMonth: "2026-12",
     pledgedOn: "2025-12-08",
     deliveredOn: null,
     currency: "USD",
@@ -941,6 +942,17 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "date given.",
         sourceUrl:
           "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4808584",
+      },
+      {
+        id: "elements-of-truth-e07",
+        occurredOn: "2026-11-09",
+        type: "delay",
+        title: "EU shipment reaches the Netherlands warehouse mid-December",
+        details:
+          "A backer message for EU backers: the shipment arrives at the Dutch distribution " +
+          "centre in mid-December and GamesQuest dispatches once it is checked in, with " +
+          "tracking from them. Some games may arrive before Christmas, others in early January.",
+        sourceUrl: null,
       },
     ],
   },
