@@ -1721,6 +1721,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "shipments from Germany: four items in 5–8 business days, four in March 2027.",
         sourceUrl: null,
       },
+      {
+        id: "stonespine-architects-invasion-e02",
+        occurredOn: "2026-10-27",
+        type: "campaign-update",
+        title: "Samples approved — mass production begins",
+        details:
+          "All molds are done and the preproduction copies of every SKU are approved, after " +
+          "fixes to the base game and Collector's Edition inserts. The final manufactured " +
+          "copies are due for approval by the end of November. Schedule unchanged: " +
+          "fulfilment hubs Jan–Feb, backers March 2027. Rewards can be added until Dec 1.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/thunderworks/stonespine-architects-invasion-expansion/posts/4841186",
+      },
     ],
   },
   {
