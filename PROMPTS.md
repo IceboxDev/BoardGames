@@ -1557,19 +1557,19 @@ These images are used as fixed full-viewport backgrounds behind the game UI. The
 
 ## Site — goodbye screen
 
-One farewell figure above the goodbye text, shown while the site hibernates (admin → Site). A single character on a **transparent background**, no scenery. Drop the PNG into `packages/web/art-src/goodbye/goodbye.png` and run `pnpm --filter @boardgames/web card-art --game=goodbye`; the page picks it up on its own. Pick one:
+One farewell figure above the goodbye text, shown while the site hibernates (admin → Site). Characters on a **transparent background**, no scenery. The prompts never name a game (image generators refuse those) — the characters are described instead: A and C borrow the Bomb Busters rabbit and the Exploding Kittens cat. Drop the PNG into `packages/web/art-src/goodbye/goodbye.png` and run `pnpm --filter @boardgames/web card-art --game=goodbye`; the page picks it up on its own. Pick one:
 
 **A — the rabbit and the kitten (recommended).** File: `packages/web/art-src/goodbye/goodbye.png` (1:1, transparent)
 
-> The sad bomb-defusing rabbit from Bomb Busters sitting on the ground, ears drooping, gently petting a small Exploding Kittens cat curled up in its lap. The kitten's fuse is unlit and tied into a little bow. The rabbit has one paw raised in a small, wistful wave. Bittersweet and cute, a goodbye, not a tragedy. Clean cartoon illustration in the games' own playful style, bold outlines, soft cel shading, warm colours. Full figure, centred, nothing else in the frame. Transparent background (PNG with alpha), no ground shadow, no text, no logos. 1:1 aspect ratio.
+> a small white cartoon rabbit drawn with clean, thin black outlines and almost no shading: a round head, two long ears with pale pink insides, eyes drawn as simple curved lines, a tiny pink triangle nose and a small mouth. It wears a bulky, bright red padded bomb-disposal suit with a high collar, chunky quilted sleeves and thick red gloves. The rabbit sits on the ground looking sad: ears drooping backwards, eyes as downturned arcs, one small tear on its cheek. In its lap lies a scruffy jet-black cat with spiky, uneven fur, two enormous bulging round eyes of slightly different sizes with pale yellow whites, thin red veins and tiny pinprick pupils, small pointed ears and a thin scraggly tail. A short black bomb fuse sticks up from the top of its head; the fuse is unlit and tied into a little bow. The rabbit gently strokes the cat with one gloved paw and raises the other in a small, wistful wave. The cat looks up at it with its huge eyes, oddly calm. Bittersweet and cute — a goodbye, not a tragedy. Simple flat cartoon illustration, clean outlines, flat colours with very light shading. Full figures, centred, nothing else in the frame. Transparent background (PNG with alpha), no ground shadow, no text, no logos. 1:1 aspect ratio.
 
 **B — the last meeple.** Same file and format.
 
 > A single wooden meeple sitting on the edge of a closed board-game box, legs dangling, holding a tiny white handkerchief and waving goodbye. A six-sided die lies beside it showing one pip. Warm wood, soft painterly shading, a little melancholy, a little funny. Full figure, centred, nothing else in the frame. Transparent background (PNG with alpha), no text, no logos. 1:1 aspect ratio.
 
-**C — the kitten packs up.** Same file and format.
+**C — the cat packs up.** Same file and format.
 
-> A small Exploding Kittens cat wearing a tiny backpack, carrying a bindle over its shoulder made from a rolled-up rulebook, looking back over its shoulder with a sad little wave. Its fuse is unlit. Clean cartoon illustration in the game's playful style, bold outlines, soft cel shading. Full figure, centred, nothing else in the frame. Transparent background (PNG with alpha), no text, no logos. 1:1 aspect ratio.
+> A scruffy jet-black cat with spiky, uneven fur, two enormous bulging round eyes of slightly different sizes with pale yellow whites, thin red veins and tiny pinprick pupils, small pointed ears and a thin scraggly tail. A short black bomb fuse sticks up from the top of its head; the fuse is unlit. The cat walks away on its hind legs wearing a tiny brown backpack, carrying a bundle on a stick over its shoulder, and looks back over its shoulder with its huge eyes and a small, sad wave of one paw. Simple flat cartoon illustration, thick slightly wobbly black outlines, flat colours. Full figure, centred, nothing else in the frame. Transparent background (PNG with alpha), no text, no logos. 1:1 aspect ratio.
 
 ---
 
