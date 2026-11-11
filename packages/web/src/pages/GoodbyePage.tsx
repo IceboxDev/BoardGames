@@ -2,7 +2,8 @@ import "@fontsource/cinzel/600.css";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { PageHeader } from "../components/ui/PageHeader";
-import { GOODBYE_LINE, GOODBYE_TITLE } from "./goodbye-copy";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
+import { firstNameOf, GOODBYE_TITLE, goodbyeLine } from "./goodbye-copy";
 
 // The goodbye screen: the whole site while it hibernates. One farewell
 // figure, two lines and — only for members who may still play online — one
@@ -27,6 +28,7 @@ export interface GoodbyePageProps {
 
 export default function GoodbyePage({ onlineAccess, admin, preview }: GoodbyePageProps) {
   const navigate = useNavigate();
+  const { user } = useCurrentUser();
 
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center overflow-x-hidden bg-surface-950 text-fg-primary">
@@ -51,7 +53,9 @@ export default function GoodbyePage({ onlineAccess, admin, preview }: GoodbyePag
           align="center"
           title={<span className="text-balance font-fantasy font-semibold">{GOODBYE_TITLE}</span>}
         />
-        <p className="text-pretty text-base text-fg-secondary sm:text-lg">{GOODBYE_LINE}</p>
+        <p className="text-pretty text-base text-fg-secondary sm:text-lg">
+          {goodbyeLine(firstNameOf(user?.name))}
+        </p>
 
         {(onlineAccess || admin) && (
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
