@@ -2,6 +2,7 @@ import {
   HIBERNATED_CODE,
   type Memorial,
   MemorialPreviewResponseSchema,
+  OkResponseSchema,
   SiteLogResponseSchema,
   type SiteStatus,
   SiteStatusSchema,
@@ -12,6 +13,16 @@ import { ApiError, apiFetch } from "./api-fetch.ts";
 
 export function fetchSiteStatus(signal?: AbortSignal): Promise<SiteStatus> {
   return apiFetch("/api/site/status", { response: SiteStatusSchema, signal });
+}
+
+/** Tell the activity trail the goodbye screen was shown (the server logs it
+ *  once a day per member, and ignores signed-out callers). Never throws. */
+export async function reportGoodbyeSeen(): Promise<void> {
+  try {
+    await apiFetch("/api/site/seen", { method: "POST", response: OkResponseSchema });
+  } catch {
+    // A missed report only leaves a gap in the trail.
+  }
 }
 
 export function adminFetchSiteLog(signal?: AbortSignal) {

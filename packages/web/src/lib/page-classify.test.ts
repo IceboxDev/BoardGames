@@ -18,6 +18,7 @@ describe("classifyRoute", () => {
     expect(at("/admin")).toEqual({ page: "admin", detail: "users" });
     expect(at("/admin?tab=vote")).toEqual({ page: "admin", detail: "vote" });
     expect(at("/admin/quiz-desk?tab=backlog")).toEqual({ page: "admin", detail: "quiz-desk" });
+    expect(at("/goodbye")).toEqual({ page: "goodbye", detail: "preview" });
   });
 
   it("logs a profile visit itself, and each profile sub-page", () => {

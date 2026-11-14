@@ -107,6 +107,10 @@ export function classifyRoute(pathname: string, search: string): ClassifiedView 
       const deck = second ? TRAINER_ROUTES[second] : undefined;
       return deck ? trainerView(deck, rest) : null;
     }
+    // The admin's preview; the real goodbye screen reports itself
+    // (GoodbyePage → POST /api/site/seen) because it replaces this tracker.
+    case "goodbye":
+      return { page: "goodbye", detail: "preview" };
     case "go":
       if (second !== "review") return null;
       return rest[0] ? { page: "go-review", detail: rest[0] } : { page: "go-review" };

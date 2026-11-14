@@ -89,6 +89,8 @@ export function classifyPath(path: string): HibernationClass {
 
 /** Who is asking, as far as the gate cares. */
 export interface GateUser {
+  /** Present for a session user; the `/ws` gate does not need it. */
+  id?: string;
   role: string | null | undefined;
   onlineMode: string | null | undefined;
 }

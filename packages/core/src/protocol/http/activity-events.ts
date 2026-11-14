@@ -375,6 +375,9 @@ export const PAGE_VIEW_PAGES = [
   "trainer-explore",
   // Go reviews (detail: review id, absent on the list)
   "go-review",
+  // The goodbye screen while the site hibernates (detail "preview": the
+  // admin's preview at /goodbye while it is awake)
+  "goodbye",
   // Surfaces that aren't routes
   "night", // detail: date key — a night's RSVP card
   "purchase-vote",

@@ -27,6 +27,7 @@ const ADMIN_TAB_NAMES: Readonly<Record<string, string>> = {
   guests: "Guests",
   reports: "Reports",
   "quiz-desk": "Quiz desk",
+  site: "Site",
 };
 
 /** A greeting card being shown: "Saw the group spotlight about Melanie". */
@@ -72,6 +73,8 @@ export const PAGE_LABELS: Readonly<Record<PageViewPage, PageLabel>> = {
   "trainer-explore": (deck) => `Explored the ${trainerName(deck)} globe`,
 
   "go-review": (id) => (id ? `Opened Go review #${id}` : "Opened Go game reviews"),
+  goodbye: (detail) =>
+    detail === "preview" ? "Previewed the goodbye screen" : "Saw the goodbye screen",
 
   night: (key) => (key ? `Opened the ${day(key)} game night` : "Opened a game night"),
   "purchase-vote": () => "Opened the purchase-vote screen",

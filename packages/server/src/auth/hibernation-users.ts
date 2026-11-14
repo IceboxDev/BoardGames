@@ -16,6 +16,7 @@ export async function sessionGateUser(c: Context): Promise<GateUser | null> {
   if (!result?.user) return null;
   const user: { role?: string | null; onlineMode?: unknown } = result.user;
   return {
+    id: result.user.id,
     role: user.role ?? null,
     onlineMode: typeof user.onlineMode === "string" ? user.onlineMode : null,
   };

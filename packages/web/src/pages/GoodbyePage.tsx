@@ -1,8 +1,10 @@
 import "@fontsource/cinzel/600.css";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { PageHeader } from "../components/ui/PageHeader";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
+import { reportGoodbyeSeen } from "../lib/site";
 import { firstNameOf, GOODBYE_AFTER, GOODBYE_TITLE, goodbyeLine } from "./goodbye-copy";
 
 // The goodbye screen: the whole site while it hibernates. One farewell
@@ -29,6 +31,13 @@ export interface GoodbyePageProps {
 export default function GoodbyePage({ onlineAccess, admin, preview }: GoodbyePageProps) {
   const navigate = useNavigate();
   const { user } = useCurrentUser();
+  const userId = user?.id;
+
+  // The real screen replaces the page-view tracker, so it reports itself;
+  // the admin's preview at /goodbye is logged by the tracker as a preview.
+  useEffect(() => {
+    if (!preview && userId) void reportGoodbyeSeen();
+  }, [preview, userId]);
 
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center overflow-x-hidden bg-surface-950 text-fg-primary">
