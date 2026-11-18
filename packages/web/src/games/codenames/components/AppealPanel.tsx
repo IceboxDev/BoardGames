@@ -1,7 +1,6 @@
 import { type ClueCount, formatClueCount } from "@boardgames/core/games/codenames/clue-rules";
 import { Button } from "../../../components/ui";
-import { ThinkingLine } from "./TableHeader";
-import { TurnTimer } from "./TurnTimer";
+import { ThinkingLine, TurnTimer } from "../table";
 
 // A clue question in the turn header's centre slot. The rulebook: a clue
 // that only shares spelling with a table word (SPARROW while ROW is out) is

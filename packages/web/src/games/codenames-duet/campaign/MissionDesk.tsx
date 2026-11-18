@@ -5,7 +5,7 @@ import {
   opensOnWin,
 } from "@boardgames/core/games/codenames-duet/campaign/progress";
 import type { CampaignDetail, CampaignGame } from "@boardgames/core/protocol";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   Badge,
@@ -95,6 +95,10 @@ function Desk({ campaign, mode }: { campaign: CampaignDetail; mode: DeskMode }) 
   const [recording, setRecording] = useState(false);
   const [aiTier, setAiTier] = useState<string>(CODENAMES_AI_MODELS[2].id);
   const [openingRoom, setOpeningRoom] = useState(false);
+  // The room this player was still in when "Play online" was pressed (the
+  // last mission's, finished): its code must not be mistaken for the new
+  // room's, or the lobby link opens the old game's end screen.
+  const staleRoom = useRef<string | null>(null);
   const deleteGame = useDeleteTableGame(campaign.id);
 
   // A city can stop being open (a partner cleared it meanwhile): keep a valid pick.
@@ -106,7 +110,7 @@ function Desk({ campaign, mode }: { campaign: CampaignDetail; mode: DeskMode }) 
 
   // "Play online": once the room exists, its lobby opens with the mission's options.
   useEffect(() => {
-    if (!openingRoom || !mp.roomCode || !selected) return;
+    if (!openingRoom || !mp.roomCode || mp.roomCode === staleRoom.current || !selected) return;
     setLobbyPreset(mp.roomCode, {
       campaign: { id: campaign.id, city: selected },
       ...missionConfig(selected),
@@ -126,6 +130,12 @@ function Desk({ campaign, mode }: { campaign: CampaignDetail; mode: DeskMode }) 
   const startTable = () => selected && navigate(tablePlayPath(campaign.id, selected));
   const startOnline = () => {
     if (!selected) return;
+    // Leave the last mission's room (and its finished game) before opening the next.
+    staleRoom.current = mp.roomCode;
+    if (mp.roomCode) {
+      mp.reset();
+      mp.leaveRoom();
+    }
     setOpeningRoom(true);
     mp.createRoom(user?.name?.trim() || "Player");
   };

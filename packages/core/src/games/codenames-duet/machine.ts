@@ -30,10 +30,12 @@ import {
   type TableShape,
 } from "../codenames/machine";
 import { aiCostOf, personClueNote } from "../codenames/notes";
-import { type DuetConfig, duetManifest } from "./manifest";
+import { type DuetConfig, duetManifest, TOTAL_AGENTS } from "./manifest";
 import { buildDuetView } from "./player-view";
+import { applyReclaims, handOver, handOverProblem, markAway, markBack } from "./presence";
 import type { DuetReplayLog } from "./record";
 import {
+  agentsFound,
   agentsLeftOn,
   applyChat,
   applyClue,
@@ -51,6 +53,7 @@ import {
   isAiSeat,
   judgedSide,
   legalActionsFor,
+  partnerOf,
 } from "./rules";
 import {
   ChatActionSchema,
@@ -61,6 +64,7 @@ import {
   type DuetState,
   type DuetViewPhase,
   GiveClueActionSchema,
+  HandOverActionSchema,
   type Side,
 } from "./types";
 
@@ -123,6 +127,8 @@ export function buildDuetClueInput(state: DuetState): ClueInput {
     history: giverHistory(state, side),
     agentsLeft: agentsLeftOn(state, side),
     turnsLeft: state.tokens,
+    // The partner guesses this clue.
+    operatives: [state.ai[partnerOf(side)] ?? null],
   };
 }
 
@@ -144,6 +150,7 @@ export function buildDuetGuessInput(state: DuetState): GuessInput {
     clue,
     guessesLeft: state.phase === "sudden-death" ? 1 : null,
     agentsLeft: agentsLeftOn(state, judgedSide(state)),
+    totalAgentsLeft: TOTAL_AGENTS - agentsFound(state),
     turnsLeft: state.tokens,
     // The guesser reads its partner's clues: from the giver's side, "us" are
     // the clues this guesser has been answering. The live clue isn't history.
@@ -241,6 +248,12 @@ export const duetMachine = setup({
       const e = actionOf(event, "chat");
       return e !== null && canChat(context.game, e.player);
     },
+    isHandOver: ({ context, event }) => {
+      const e = actionOf(event, "hand-over");
+      return (
+        e !== null && handOverProblem(context.game, e.player, e.action.seat, Date.now()) === null
+      );
+    },
     // The AI's picks are spent, or the turn (or guesser) changed under it.
     aiTurnDone: ({ context }) => {
       const g = context.game;
@@ -312,6 +325,26 @@ export const duetMachine = setup({
         game: applyChat(context.game, e.player, e.action.text),
       }));
     }),
+
+    trackConnection: assign(({ context, event }) => {
+      if (event.type !== "SEAT_CONNECTION") return {};
+      return {
+        game: event.connected
+          ? markBack(context.game, event.seat)
+          : markAway(context.game, event.seat, Date.now()),
+      };
+    }),
+
+    handOver: assign(({ context, event }) => {
+      const e = actionOf(event, "hand-over");
+      if (!e) return {};
+      return safeApply("codenames-duet", () => ({ game: handOver(context.game, e.action.seat) }));
+    }),
+
+    // A person who came back while their stand-in was mid-move gets the seat now.
+    applyReclaims: assign(({ context }) =>
+      context.game.reclaims.length === 0 ? {} : { game: applyReclaims(context.game) },
+    ),
 
     markGiverThinking: assign(({ context }) => ({
       game: { ...context.game, aiThinking: context.game.giver },
@@ -396,12 +429,18 @@ export const duetMachine = setup({
     active: {
       initial: "route",
       on: {
-        PLAYER_ACTION: { guard: "isChat", actions: "appendChat" },
+        PLAYER_ACTION: [
+          { guard: "isChat", actions: "appendChat" },
+          // Not the seat being waited on: no re-route, nothing interrupted.
+          { guard: "isHandOver", actions: "handOver" },
+        ],
+        SEAT_CONNECTION: { actions: "trackConnection" },
         START: { target: "active", actions: "initGame" },
         RESET: { target: "idle" },
       },
       states: {
         route: {
+          entry: "applyReclaims",
           always: [
             { guard: "isOver", target: "#duet.gameOver" },
             { guard: "inClue", target: "clue" },
@@ -422,20 +461,20 @@ export const duetMachine = setup({
             },
             waiting: {
               on: {
-                PLAYER_ACTION: {
-                  guard: "isGiveClue",
-                  actions: "applyClue",
-                  target: "#duet.active.route",
-                },
+                PLAYER_ACTION: [
+                  { guard: "isGiveClue", actions: "applyClue", target: "#duet.active.route" },
+                  // Waiting on a person: handing their seat over hands the move to the AI.
+                  { guard: "isHandOver", actions: "handOver", target: "#duet.active.route" },
+                ],
               },
             },
             timed: {
               on: {
-                PLAYER_ACTION: {
-                  guard: "isGiveClue",
-                  actions: "applyClue",
-                  target: "#duet.active.route",
-                },
+                PLAYER_ACTION: [
+                  { guard: "isGiveClue", actions: "applyClue", target: "#duet.active.route" },
+                  // Waiting on a person: handing their seat over hands the move to the AI.
+                  { guard: "isHandOver", actions: "handOver", target: "#duet.active.route" },
+                ],
               },
               after: { timeout: { actions: "timeOut", target: "#duet.active.route" } },
             },
@@ -466,20 +505,26 @@ export const duetMachine = setup({
             },
             waiting: {
               on: {
-                PLAYER_ACTION: {
-                  guard: "isGuessMove",
-                  actions: "applyGuessMove",
-                  target: "#duet.active.route",
-                },
+                PLAYER_ACTION: [
+                  {
+                    guard: "isGuessMove",
+                    actions: "applyGuessMove",
+                    target: "#duet.active.route",
+                  },
+                  { guard: "isHandOver", actions: "handOver", target: "#duet.active.route" },
+                ],
               },
             },
             timed: {
               on: {
-                PLAYER_ACTION: {
-                  guard: "isGuessMove",
-                  actions: "applyGuessMove",
-                  target: "#duet.active.route",
-                },
+                PLAYER_ACTION: [
+                  {
+                    guard: "isGuessMove",
+                    actions: "applyGuessMove",
+                    target: "#duet.active.route",
+                  },
+                  { guard: "isHandOver", actions: "handOver", target: "#duet.active.route" },
+                ],
               },
               after: { timeout: { actions: "timeOut", target: "#duet.active.route" } },
             },
@@ -561,6 +606,14 @@ function validateDuetAction(
         ...(targets.length > 0 ? { targets } : {}),
       }),
     );
+  }
+
+  if (kind === "hand-over") {
+    const parsed = parseActionSync(HandOverActionSchema, raw.action);
+    if (!parsed.ok) return rejectAction(parsed.reason);
+    const problem = handOverProblem(game, player, parsed.value.seat, Date.now());
+    if (problem !== null) return rejectAction(problem);
+    return acceptAction(toEvent(player, { kind: "hand-over", seat: parsed.value.seat }));
   }
 
   if (kind === "chat") {
@@ -648,7 +701,11 @@ export const duetSpec: GameMachineSpec<
       formatVersion: 1,
       seed: game.seed,
       language: game.language,
-      ai: [game.ai[0], game.ai[1]],
+      // A stand-in played for a person who was away: the seat stays theirs.
+      ai: [
+        game.standIns.includes(0) ? null : game.ai[0],
+        game.standIns.includes(1) ? null : game.ai[1],
+      ],
       words: [...game.words],
       key: game.key.map((pair) => [pair[0], pair[1]] as [(typeof pair)[0], (typeof pair)[1]]),
       tokensTotal: game.tokensTotal,

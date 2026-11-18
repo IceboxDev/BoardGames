@@ -1,5 +1,11 @@
-import { motion } from "framer-motion";
-import { type CSSProperties, useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import {
+  type CSSProperties,
+  type PointerEvent,
+  type ReactNode,
+  useLayoutEffect,
+  useRef,
+} from "react";
 import { Avatar, Button } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
 import { AgentGlyph, AssassinGlyph, BystanderGlyph } from "./Glyphs";
@@ -50,6 +56,10 @@ export interface GridCard {
   touchTone?: CoverTone;
   /** Spymaster: a card an earlier clue meant that is still face down. */
   owed?: boolean;
+  /** Companion: the viewer's own ★ on a word they're weighing. */
+  marked?: boolean;
+  /** Companion: the photo scan wasn't sure it read this word right. */
+  unsure?: boolean;
 }
 
 export interface CardPointer {
@@ -94,13 +104,19 @@ function TouchMark({
   tone: CoverTone | undefined;
   animate: boolean;
 }) {
+  const reduceMotion = useReducedMotion() ?? false;
   return (
     <motion.span
       {...(animate
-        ? {
-            initial: { opacity: 0, clipPath: "polygon(100% 0, 100% 0, 100% 0)" },
-            transition: { delay: 0.18, duration: 0.28, ease: "easeOut" },
-          }
+        ? reduceMotion
+          ? {
+              initial: { opacity: 0, clipPath: "polygon(0 0, 100% 0, 100% 100%)" },
+              transition: { delay: 0.18, duration: 0.15, ease: [0.23, 1, 0.32, 1] },
+            }
+          : {
+              initial: { opacity: 0, clipPath: "polygon(100% 0, 100% 0, 100% 0)" },
+              transition: { delay: 0.18, duration: 0.28, ease: [0.23, 1, 0.32, 1] },
+            }
         : { initial: false as const })}
       animate={{ opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
       aria-label={`Touch ${n}`}
@@ -183,30 +199,148 @@ function plateText(word: string): CSSProperties {
   } as CSSProperties;
 }
 
+/** Room kept free on each side of a fitted word, as a share of the plate. */
+const FIT_SLACK = 0.96;
+
+/**
+ * A card's word, shrunk until it really fits its plate. `fitSize` only
+ * estimates from the letter count, and wide letters beat the estimate
+ * (AMBULANCE truncated to "AMBULAN…"), so the word is measured once laid
+ * out and `--cn-fit` scales it down; the font sizes multiply by it. Measured
+ * again when the card resizes or the web font arrives. `truncate` stays as
+ * the last resort.
+ */
+function FitWord({
+  className,
+  style,
+  children,
+}: {
+  className: string;
+  style: CSSProperties;
+  children: ReactNode;
+}) {
+  const box = useRef<HTMLSpanElement>(null);
+  const text = useRef<HTMLSpanElement>(null);
+  useLayoutEffect(() => {
+    const outer = box.current;
+    const inner = text.current;
+    if (!outer || !inner) return;
+    const refit = () => {
+      const current = Number.parseFloat(outer.style.getPropertyValue("--cn-fit")) || 1;
+      const natural = inner.getBoundingClientRect().width / current;
+      const pad = getComputedStyle(outer);
+      const room =
+        outer.clientWidth -
+        Number.parseFloat(pad.paddingLeft) -
+        Number.parseFloat(pad.paddingRight);
+      if (natural <= 0 || room <= 0) return;
+      const next = Math.min(1, (room * FIT_SLACK) / natural);
+      if (Math.abs(next - current) > 0.005) outer.style.setProperty("--cn-fit", next.toFixed(3));
+    };
+    refit();
+    const observer = new ResizeObserver(refit);
+    observer.observe(outer);
+    let alive = true;
+    void document.fonts?.ready.then(() => alive && refit());
+    return () => {
+      alive = false;
+      observer.disconnect();
+    };
+  }, []);
+  return (
+    <span ref={box} className={className} style={style}>
+      <span ref={text}>{children}</span>
+    </span>
+  );
+}
+
 /** Faint diagonal hatching, so a cover reads as a printed tile, not a flat fill. */
 const HATCH: CSSProperties = {
   backgroundImage:
     "repeating-linear-gradient(135deg, rgb(255 255 255 / 0.07) 0 2px, transparent 2px 9px)",
 };
 
+/**
+ * A word as the card prints it. CSS `uppercase` turns ß into "SS"; the
+ * capital ẞ stays one letter, as on a German card.
+ */
+function printed(word: string): string {
+  return word.replace(/ß/g, "ẞ");
+}
+
+/** How long a press must last to count as a hold (the companion's ★). */
+const HOLD_MS = 450;
+/** A finger that drifts further than this is scrolling, not holding. */
+const HOLD_SLOP_PX = 10;
+
+/**
+ * A long-press (or a right-click / the phone's own long-press menu) on a
+ * card. The click that ends a hold is swallowed, so a hold never also picks.
+ */
+function useHold(onHold: (() => void) | undefined) {
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const start = useRef<{ x: number; y: number } | null>(null);
+  const held = useRef(false);
+  const cancel = () => {
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = null;
+    start.current = null;
+  };
+  const fire = () => {
+    cancel();
+    held.current = true;
+    onHold?.();
+  };
+  if (!onHold) return null;
+  return {
+    onPointerDown: (e: PointerEvent) => {
+      held.current = false;
+      start.current = { x: e.clientX, y: e.clientY };
+      timer.current = setTimeout(fire, HOLD_MS);
+    },
+    onPointerMove: (e: PointerEvent) => {
+      const s = start.current;
+      if (s && Math.hypot(e.clientX - s.x, e.clientY - s.y) > HOLD_SLOP_PX) cancel();
+    },
+    onPointerUp: cancel,
+    onPointerLeave: cancel,
+    onPointerCancel: cancel,
+    onContextMenu: (e: { preventDefault: () => void }) => {
+      e.preventDefault();
+      if (!held.current) fire();
+    },
+    /** Whether the click now arriving ends a hold (and must not pick). */
+    consumeHold: () => {
+      const was = held.current;
+      held.current = false;
+      return was;
+    },
+  };
+}
+
 function WordCard({
   card,
   onPick,
+  onHold,
   onTouch,
   touchLabel,
 }: {
   card: GridCard;
   onPick: () => void;
+  onHold?: () => void;
   onTouch?: () => void;
   touchLabel: string;
 }) {
+  const hold = useHold(onHold);
+  const reduceMotion = useReducedMotion() ?? false;
   // A cover that arrives while the board is open is laid on; one already
   // there when the board appears simply is.
   const coveredAtMount = useRef(card.cover !== null);
   const covered = card.cover !== null;
   const key = !covered ? card.keyTone : null;
   const dark = key === "ink";
-  const label = covered ? `${card.word}: ${COVER_LABEL[card.cover as CoverTone]}` : card.word;
+  const shown = card.word || "Hidden word";
+  const label = `${covered ? `${shown}: ${COVER_LABEL[card.cover as CoverTone]}` : shown}${card.marked ? " (marked)" : ""}${card.unsure ? " (may be misread)" : ""}`;
   const pointers = card.pointers ?? [];
   const notes = card.notes ?? [];
   const raised = card.chosen || card.selected;
@@ -223,7 +357,19 @@ function WordCard({
         type="button"
         data-word-card=""
         disabled={!card.pickable}
-        onClick={onPick}
+        onClick={() => {
+          if (!hold?.consumeHold()) onPick();
+        }}
+        {...(hold
+          ? {
+              onPointerDown: hold.onPointerDown,
+              onPointerMove: hold.onPointerMove,
+              onPointerUp: hold.onPointerUp,
+              onPointerLeave: hold.onPointerLeave,
+              onPointerCancel: hold.onPointerCancel,
+              onContextMenu: hold.onContextMenu,
+            }
+          : {})}
         aria-label={label}
         aria-pressed={card.chosen ?? card.selected ?? undefined}
         className={cn(
@@ -242,6 +388,9 @@ function WordCard({
             !card.pinned &&
             "ring-2 ring-fg-strong ring-offset-2 ring-offset-surface-950",
           card.owed && "outline-dashed outline-2 outline-offset-2 outline-cn-note",
+          // A held card must not select its text or open the page's own menus.
+          hold &&
+            "touch-manipulation select-none [-webkit-touch-callout:none] active:scale-[0.97] duration-[160ms] ease-[cubic-bezier(0.23,1,0.32,1)]",
         )}
       >
         {/* The printed card: frame, emblem, and the word on its plate. */}
@@ -268,16 +417,17 @@ function WordCard({
               key ? KEY_PLATE[key] : "bg-cn-plate ring-1 ring-cn-card-ink/10",
             )}
           >
-            <span
+            <FitWord
               className={cn(
-                "w-full truncate text-center font-black uppercase leading-none tracking-pill [font-size:var(--cn-word)]",
-                "@max-[7rem]:tracking-normal @max-[7rem]:[font-size:var(--cn-word-narrow)]",
+                // py: `truncate` clips to the line box, and `leading-none` would cut the dots off Ä Ö Ü.
+                "w-full truncate py-[0.15em] text-center font-black uppercase leading-none tracking-pill [font-size:calc(var(--cn-word)*var(--cn-fit,1))]",
+                "@max-[7rem]:tracking-normal @max-[7rem]:[font-size:calc(var(--cn-word-narrow)*var(--cn-fit,1))]",
                 dark ? "text-cn-cover-ink" : "text-cn-card-ink",
               )}
               style={plateText(card.word)}
             >
-              {card.word}
-            </span>
+              {printed(card.word)}
+            </FitWord>
           </span>
         </span>
 
@@ -292,10 +442,18 @@ function WordCard({
           <motion.span
             aria-hidden
             initial={
-              coveredAtMount.current ? false : { opacity: 0, scale: 1.18, y: -10, rotate: -3 }
+              coveredAtMount.current
+                ? false
+                : reduceMotion
+                  ? { opacity: 0 }
+                  : { opacity: 0, scale: 1.18, y: -10, rotate: -3 }
             }
             animate={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
-            transition={{ type: "spring", stiffness: 420, damping: 30 }}
+            transition={
+              reduceMotion
+                ? { duration: 0.15, ease: [0.23, 1, 0.32, 1] }
+                : { type: "spring", stiffness: 420, damping: 30 }
+            }
             className={cn(
               "absolute inset-0 flex flex-col items-center justify-center rounded-card-md bg-gradient-to-br shadow-inner",
               COVER_FILL[card.cover as CoverTone],
@@ -306,8 +464,8 @@ function WordCard({
               tone={card.cover as CoverTone}
               className="relative h-[52%] w-[52%] text-cn-cover-ink/85 drop-shadow"
             />
-            <span
-              className="relative mt-[2%] w-full truncate px-[6%] text-center font-bold uppercase leading-none tracking-pill text-cn-cover-ink/75 [font-size:var(--cn-word)] @max-[7rem]:px-[3%] @max-[7rem]:tracking-normal @max-[7rem]:[font-size:var(--cn-word-narrow)]"
+            <FitWord
+              className="relative mt-[2%] w-full truncate px-[6%] py-[0.15em] text-center font-bold uppercase leading-none tracking-pill text-cn-cover-ink/75 [font-size:calc(var(--cn-word)*var(--cn-fit,1))] @max-[7rem]:px-[3%] @max-[7rem]:tracking-normal @max-[7rem]:[font-size:calc(var(--cn-word-narrow)*var(--cn-fit,1))]"
               style={
                 {
                   "--cn-word": fitSize(card.word, 7, 70),
@@ -315,8 +473,8 @@ function WordCard({
                 } as CSSProperties
               }
             >
-              {card.word}
-            </span>
+              {printed(card.word)}
+            </FitWord>
           </motion.span>
         )}
 
@@ -388,6 +546,24 @@ function WordCard({
         </span>
       )}
 
+      {card.marked && (
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -left-1 -top-1.5 z-raised flex h-5 w-5 items-center justify-center rounded-full bg-cn-note text-xs font-black text-cn-note-ink shadow-lg ring-2 ring-surface-950"
+        >
+          ★
+        </span>
+      )}
+
+      {card.unsure && (
+        <span
+          title="The scan may have misread this word — tap to fix it"
+          className="pointer-events-none absolute -right-1 -top-1.5 z-raised flex h-5 w-5 items-center justify-center rounded-full bg-cn-tan text-xs font-black text-cn-ink shadow-lg ring-2 ring-surface-950"
+        >
+          ?
+        </span>
+      )}
+
       {card.badges && card.badges.length > 0 && (
         <span className="pointer-events-none absolute -bottom-1.5 right-1 z-raised flex gap-0.5">
           {card.badges.map((b) => (
@@ -413,12 +589,15 @@ function WordCard({
 export function WordGrid({
   cards,
   onPick,
+  onHold,
   onTouch,
   touchLabel = "Touch",
   className,
 }: {
   cards: readonly GridCard[];
   onPick?: (index: number) => void;
+  /** A long-press on a card (the companion's ★); without it a press is only a tap. */
+  onHold?: (index: number) => void;
   /** Commit the selected card (its Touch button). */
   onTouch?: (index: number) => void;
   touchLabel?: string;
@@ -439,6 +618,7 @@ export function WordGrid({
             key={i}
             card={card}
             onPick={() => onPick?.(i)}
+            {...(onHold ? { onHold: () => onHold(i) } : {})}
             {...(onTouch ? { onTouch: () => onTouch(i) } : {})}
             touchLabel={touchLabel}
           />

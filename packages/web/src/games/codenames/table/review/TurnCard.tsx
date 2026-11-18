@@ -1,14 +1,9 @@
 import { formatClueCount } from "@boardgames/core/games/codenames/clue-rules";
 import { useEffect, useRef } from "react";
 import { BotIcon, KeyIcon, UsersIcon } from "../../../../components/icons";
+import { TONE_BUBBLE, TONE_TEXT } from "../../../../components/ui/tones";
 import { cn } from "../../../../lib/cn";
-import type {
-  ReviewAppeal,
-  ReviewGuess,
-  ReviewTarget,
-  ReviewTurn,
-  Verdict,
-} from "../../logic/review";
+import type { ReviewAppeal, ReviewGuess, ReviewTarget, ReviewTurn, Verdict } from "../review-model";
 import type { CoverTone } from "../WordGrid";
 
 // One turn of the review, in its two halves. The spymaster's (tinted in the
@@ -43,17 +38,17 @@ const BAR: Record<CoverTone, string> = {
 };
 
 const FATE: Record<ReviewTarget["fate"], { mark: string; label: string; ink: string }> = {
-  now: { mark: "✓", label: "found this turn", ink: "text-emerald-300" },
-  later: { mark: "↻", label: "found on a later turn", ink: "text-sky-300" },
-  them: { mark: "⇄", label: "uncovered by the other side", ink: "text-amber-300" },
+  now: { mark: "✓", label: "found this turn", ink: TONE_TEXT.emerald },
+  later: { mark: "↻", label: "found on a later turn", ink: TONE_TEXT.sky },
+  them: { mark: "⇄", label: "uncovered by the other side", ink: TONE_TEXT.amber },
   never: { mark: "·", label: "never found", ink: "text-fg-muted" },
 };
 
 const VERDICT: Record<Verdict, { mark: string; ink: string; label: string }> = {
-  hit: { mark: "✓", ink: "text-emerald-300", label: "agent" },
+  hit: { mark: "✓", ink: TONE_TEXT.emerald, label: "agent" },
   bystander: { mark: "✗", ink: "text-fg-secondary", label: "bystander" },
-  opponent: { mark: "✗", ink: "text-amber-300", label: "their agent" },
-  assassin: { mark: "☠", ink: "text-rose-300", label: "assassin" },
+  opponent: { mark: "✗", ink: TONE_TEXT.amber, label: "their agent" },
+  assassin: { mark: "☠", ink: TONE_TEXT.rose, label: "assassin" },
 };
 
 function WordChip({
@@ -129,9 +124,9 @@ function GuessRow({ guess, n }: { guess: ReviewGuess; n: number }) {
 }
 
 const RULING: Record<ReviewAppeal["ruling"], { label: string; ink: string }> = {
-  allowed: { label: "allowed", ink: "text-emerald-300" },
-  unanswered: { label: "no answer — stood", ink: "text-emerald-300" },
-  refused: { label: "refused", ink: "text-amber-300" },
+  allowed: { label: "allowed", ink: TONE_TEXT.emerald },
+  unanswered: { label: "no answer — stood", ink: TONE_TEXT.emerald },
+  refused: { label: "refused", ink: TONE_TEXT.amber },
   withdrawn: { label: "withdrawn", ink: "text-fg-muted" },
 };
 
@@ -209,9 +204,9 @@ function SubLabel({ children, title }: { children: React.ReactNode; title?: stri
 
 function endTone(turn: ReviewTurn): string {
   const last = turn.guesses.at(-1)?.verdict;
-  if (last === "assassin") return "bg-rose-500/10 text-rose-300";
-  if (turn.end === "Found the last agent") return "bg-emerald-500/10 text-emerald-300";
-  if (last === "bystander" || last === "opponent") return "bg-amber-500/10 text-amber-200";
+  if (last === "assassin") return TONE_BUBBLE.rose;
+  if (turn.end === "Found the last agent") return TONE_BUBBLE.emerald;
+  if (last === "bystander" || last === "opponent") return TONE_BUBBLE.amber;
   return "bg-fill text-fg-secondary";
 }
 
@@ -257,14 +252,12 @@ export function TurnCard({
           {turn.side}
         </span>
         {turn.standIn && (
-          <span className="rounded-full bg-amber-500/15 px-1.5 text-3xs text-amber-300">
-            stand-in
-          </span>
+          <span className={cn("rounded-full px-1.5 text-3xs", TONE_BUBBLE.amber)}>stand-in</span>
         )}
         <span
           className={cn(
             "ml-auto rounded-full px-2 py-0.5 text-3xs font-black tabular-nums",
-            turn.hits > 0 ? "bg-emerald-500/15 text-emerald-300" : "bg-fill-strong text-fg-muted",
+            turn.hits > 0 ? TONE_BUBBLE.emerald : "bg-fill-strong text-fg-muted",
           )}
           title={`${turn.hits} agent${turn.hits === 1 ? "" : "s"} found this turn`}
         >

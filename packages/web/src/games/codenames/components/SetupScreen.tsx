@@ -2,7 +2,7 @@ import { codenamesManifest } from "@boardgames/core/games/codenames/manifest";
 import { useState } from "react";
 import { PvAISetupScreen } from "../../../components/setup";
 import { SegmentedControl } from "../../../components/ui";
-import { OptionsControls, type TableOptions } from "./OptionsControls";
+import { OptionsControls, type TableOptions } from "../table";
 
 export type SoloRole = "spymaster" | "operative";
 

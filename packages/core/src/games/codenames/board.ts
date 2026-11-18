@@ -5,6 +5,7 @@
 
 import { type Rng, shuffle } from "../../lib/rng";
 import { foldWord, wordsClash } from "./clue-rules";
+import { SECOND_TEAM_AGENTS, STARTING_TEAM_AGENTS } from "./seating";
 import { type Language, WORD_SETS } from "./words";
 
 export const BOARD_SIZE = 25;
@@ -67,8 +68,8 @@ export type KeyEntry = 0 | 1 | "bystander" | "assassin";
 export function dealKey(rng: Rng, startingTeam: 0 | 1): KeyEntry[] {
   const other = (1 - startingTeam) as 0 | 1;
   const key: KeyEntry[] = [
-    ...Array<KeyEntry>(9).fill(startingTeam),
-    ...Array<KeyEntry>(8).fill(other),
+    ...Array<KeyEntry>(STARTING_TEAM_AGENTS).fill(startingTeam),
+    ...Array<KeyEntry>(SECOND_TEAM_AGENTS).fill(other),
     ...Array<KeyEntry>(7).fill("bystander"),
     "assassin",
   ];

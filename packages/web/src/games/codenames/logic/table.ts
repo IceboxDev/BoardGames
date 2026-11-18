@@ -1,10 +1,20 @@
-import type { ClueCount } from "@boardgames/core/games/codenames/clue-rules";
+import { type ClueCount, formatClueCount } from "@boardgames/core/games/codenames/clue-rules";
+import { agentsFor } from "@boardgames/core/games/codenames/seating";
 import type {
   CodenamesPlayerView,
   KeyEntry,
   Team,
   TurnEnd,
 } from "@boardgames/core/games/codenames/types";
+import {
+  type AwayNotice,
+  awayNoticesOf,
+  type LastTurnSummary,
+  latestTouchOrder,
+  type StripClue,
+  type TouchMark,
+} from "../table";
+import { TEAM_TONE, teamName } from "./labels";
 
 // What the live table derives from a view, for the board's chrome: the clue
 // strip (with what each clue still owes, for its spymaster), the score, the
@@ -12,21 +22,7 @@ import type {
 // game is waiting on this player for. Pure, so it is tested on its own.
 
 /** One of the viewer's team's clues, as the strip shows it. */
-export interface TeamClue {
-  /** The clue's turn — what a sticky note refers to. */
-  turn: number;
-  word: string;
-  count: ClueCount;
-  /** Own agents found on that clue's turn. */
-  found: number;
-  /** Cards carrying it as a sticky note (operatives). */
-  pinned: number;
-  /**
-   * Spymaster only: the cards it was aimed at that are still face down, or
-   * null when its targets weren't marked.
-   */
-  owed: number[] | null;
-}
+export type TeamClue = StripClue;
 
 /** The viewer's team's clues, oldest first. A turn's index is its index in the game. */
 export function teamClues(view: CodenamesPlayerView): TeamClue[] {
@@ -66,7 +62,7 @@ export function scoreOf(view: CodenamesPlayerView): TeamScore[] {
   return ([view.startingTeam, (1 - view.startingTeam) as Team] as const).map((team) => ({
     team,
     left: view.agentsLeft[team],
-    total: team === view.startingTeam ? 9 : 8,
+    total: agentsFor(team, view.startingTeam),
     active: live && view.currentTeam === team,
   }));
 }
@@ -86,16 +82,8 @@ export interface RecentTouches {
 
 export function recentTouches(view: CodenamesPlayerView): RecentTouches | null {
   if (view.phase !== "clue" && view.phase !== "guessing") return null;
-  for (let i = view.turns.length - 1; i >= 0; i--) {
-    const turn = view.turns[i];
-    if (!turn || turn.guesses.length === 0) continue;
-    return {
-      team: turn.team,
-      order: new Map(turn.guesses.map((g, n) => [g.card, n + 1])),
-      live: turn.end === null,
-    };
-  }
-  return null;
+  const latest = latestTouchOrder(view.turns);
+  return latest && { team: latest.turn.team, order: latest.order, live: latest.turn.end === null };
 }
 
 /** The last finished turn, for a one-line "what just happened". */
@@ -124,14 +112,29 @@ export function lastTurn(view: CodenamesPlayerView): LastTurn | null {
   return null;
 }
 
-/** Someone who dropped out, as the people still at the table see it. */
-export interface AwayNotice {
-  seat: number;
-  since: number;
-  handoverAt: number;
-  /** The game can't go on without this seat right now. */
-  blocking: boolean;
+const NO_TOUCH: Partial<Record<TurnEnd, string>> = {
+  "clue-timeout": "ran out of time for a clue",
+  "guess-timeout": "ran out of time to guess",
+};
+
+function markOf(result: KeyEntry, own: boolean): TouchMark {
+  if (own) return "own";
+  if (result === "assassin" || result === "bystander") return result;
+  return "opponent";
 }
+
+/** The last turn as the shared one-line `LastTurnLine` reads it. */
+export function lastTurnSummary(last: LastTurn): LastTurnSummary {
+  return {
+    who: teamName(last.team),
+    tone: TEAM_TONE[last.team],
+    clue: last.clue,
+    touches: last.touches.map((t) => ({ word: t.word, mark: markOf(t.result, t.own) })),
+    idle: NO_TOUCH[last.end] ?? "touched nothing",
+  };
+}
+
+export type { AwayNotice };
 
 /** Whether the game is waiting on `seat` this moment. */
 function blockingSeat(view: CodenamesPlayerView, seat: number): boolean {
@@ -147,27 +150,18 @@ function blockingSeat(view: CodenamesPlayerView, seat: number): boolean {
 
 /** The away seats this viewer could hand to the AI (or soon can), most urgent first. */
 export function awayNotices(view: CodenamesPlayerView): AwayNotice[] {
-  if (!view.canHandOver) return [];
-  return view.seats
-    .flatMap((s) =>
-      s.awaySince !== null && s.handoverAt !== null && !s.standIn && s.seat !== view.seat
-        ? [
-            {
-              seat: s.seat,
-              since: s.awaySince,
-              handoverAt: s.handoverAt,
-              blocking: blockingSeat(view, s.seat),
-            },
-          ]
-        : [],
-    )
-    .sort((a, b) => Number(b.blocking) - Number(a.blocking) || a.since - b.since);
+  return awayNoticesOf(view.seats, view.seat, view.canHandOver, (seat) => blockingSeat(view, seat));
 }
 
 /** What the game is waiting on this player for, for the tab title — or null. */
 export function alertLabel(view: CodenamesPlayerView): string | null {
   if (view.mustRuleClue) return "Your ruling";
   if (view.mustGiveClue) return "Your clue";
-  if (view.canGuess) return "Your guess";
+  // The clue itself, so a player in another tab knows what to look for.
+  if (view.canGuess) {
+    return view.clue
+      ? `Your guess: ${view.clue.word.toUpperCase()} ${formatClueCount(view.clue.count)}`
+      : "Your guess";
+  }
   return null;
 }

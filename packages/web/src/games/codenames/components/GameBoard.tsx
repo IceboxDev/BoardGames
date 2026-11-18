@@ -3,17 +3,14 @@ import type {
   CodenamesPlayerView,
   Team,
 } from "@boardgames/core/games/codenames/types";
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
-import {
-  GameScreen,
-  UndoableActionButton,
-  usePendingAction,
-} from "../../../components/game-layout";
+import { GameScreen, usePendingAction } from "../../../components/game-layout";
 import { GaugeIcon } from "../../../components/icons";
-import { Button, ErrorAlert, IconButton } from "../../../components/ui";
+import { Button, IconButton } from "../../../components/ui";
 import { useTurnAlert } from "../../../hooks/useTurnAlert";
-import { hasFellowOperative, seatLabel, TEAM_TONE, teamName, toneOf } from "../logic/labels";
+import { codenamesGridCards } from "../logic/grid";
+import { hasFellowOperative, seatLabel, TEAM_TONE, teamName } from "../logic/labels";
 import { mapCodenamesLog } from "../logic/log-mapper";
 import { useOneTapTouch } from "../logic/preferences";
 import {
@@ -21,26 +18,32 @@ import {
   awayNotices,
   type LastTurn,
   lastTurn,
-  recentTouches,
+  lastTurnSummary,
   scoreOf,
   teamClues,
 } from "../logic/table";
-import { AppealPending, AppealRuling, AppealWatch } from "./AppealPanel";
-import { ClueComposer } from "./ClueComposer";
-import { ClueStrip, type ClueStripMode } from "./ClueStrip";
-import { LastTurnLine } from "./LastTurnLine";
-import { PresenceNotices } from "./PresenceNotices";
 import {
+  BoardStage,
+  ClueComposer,
   ClueDisplay,
+  ClueStrip,
+  type ClueStripMode,
+  EndTurnButton,
   KeyToggle,
+  LastTurnLine,
+  PresenceNotices,
   StandInBadge,
   TableHeader,
   ThinkingLine,
   TurnStatus,
-} from "./TableHeader";
+  TurnTimer,
+  useClueTargets,
+  useTableKeys,
+  WordGrid,
+} from "../table";
+import { AppealPending, AppealRuling, AppealWatch } from "./AppealPanel";
+import { ScorePills } from "./ScorePills";
 import { TeamsPanel } from "./TeamsPanel";
-import { TurnTimer } from "./TurnTimer";
-import { type CardNote, type CardPointer, type GridCard, WordGrid } from "./WordGrid";
 
 // The Codenames table: the turn header (fixed height, so the board never
 // moves), the clue strip (the team's clues and, on narrow screens, the
@@ -87,17 +90,8 @@ function Watching({ last, children }: { last: LastTurn | null; children: ReactNo
   return (
     <div className="flex min-w-0 max-w-full flex-col items-center gap-1">
       {children}
-      {last && <LastTurnLine last={last} />}
+      {last && <LastTurnLine last={lastTurnSummary(last)} />}
     </div>
-  );
-}
-
-/** Typing somewhere (chat, the clue): board keys stay out of the way. */
-function typing(target: EventTarget | null): boolean {
-  return (
-    target instanceof HTMLInputElement ||
-    target instanceof HTMLTextAreaElement ||
-    (target instanceof HTMLElement && target.isContentEditable)
   );
 }
 
@@ -115,11 +109,7 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
   const turnKey = `${view.turns.filter((t) => t.end !== null).length}:${view.phase}`;
 
   // The cards a spymaster taps while writing a clue: what it means.
-  const [chosenFor, setChosenFor] = useState<{ turn: string; cards: number[] }>({
-    turn: turnKey,
-    cards: [],
-  });
-  const chosen = chosenFor.turn === turnKey ? chosenFor.cards : [];
+  const { chosen, toggle: toggleTarget } = useClueTargets(turnKey);
 
   // The operative's pick — local first, so it shows at once; after a reload
   // the server's copy of their pointer stands in.
@@ -142,7 +132,6 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
   const owed = new Set(owedClue?.owed ?? []);
 
   useTurnAlert(alertLabel(view));
-  const recent = recentTouches(view);
   const last = lastTurn(view);
   const appeal = view.appeal;
   const otherSpymaster = (1 - view.currentTeam) as Team;
@@ -150,50 +139,15 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
   const choosable = (i: number) =>
     view.mustGiveClue && view.cards[i]?.revealed === null && view.cards[i]?.key === view.team;
 
-  const pointersOn = (i: number): CardPointer[] => {
-    const seats = (view.cards[i]?.marks ?? []).filter((seat) => seat !== view.seat);
-    if (picked === i) seats.unshift(view.seat);
-    return seats.map((seat) => ({
-      key: String(seat),
-      name: seatLabel(seat, names),
-      image: images[seat] ?? null,
-      mine: seat === view.seat,
-    }));
-  };
-
-  const notesOn = (i: number): CardNote[] =>
-    [...(view.cards[i]?.notes ?? [])]
-      .sort((a, b) => a.turn - b.turn)
-      .map((note) => {
-        const clue = view.turns[note.turn]?.clue;
-        const word = (clue?.word ?? "?").toUpperCase();
-        const count = clue ? ` ${clue.count === "unlimited" ? "∞" : clue.count}` : "";
-        return {
-          key: String(note.turn),
-          label: word,
-          title: `${word}${count} — pinned by ${note.seat === view.seat ? "you" : seatLabel(note.seat, names)}`,
-        };
-      });
-
-  const cards: GridCard[] = view.cards.map((card, i) => {
-    const faceDown = card.revealed === null;
-    return {
-      word: card.word,
-      cover: card.revealed === null ? null : toneOf(card.revealed),
-      keyTone: faceDown && card.key !== null && showKey ? toneOf(card.key) : null,
-      pointers: pointersOn(i),
-      notes: notesOn(i),
-      pickable: faceDown && (choosable(i) || view.canGuess || pinning !== null),
-      chosen: chosen.includes(i),
-      selected: picked === i && pinning === null,
-      pinned: pinning !== null && card.notes.some((n) => n.turn === pinning),
-      owed: faceDown && owed.has(i),
-      ...(recent?.order.has(i)
-        ? { touch: recent.order.get(i) as number, touchTone: TEAM_TONE[recent.team] }
-        : {}),
-      // The two spymasters weighing a clue question see the word it brushes.
-      ...(appeal?.clash && faceDown && card.word === appeal.clash ? { target: true } : {}),
-    };
+  const cards = codenamesGridCards(view, {
+    names,
+    images,
+    showKey,
+    chosen,
+    picked,
+    pinning,
+    owed,
+    choosable,
   });
   const faceDownWords = view.cards.filter((c) => c.revealed === null).map((c) => c.word);
   const tone = TEAM_TONE[view.currentTeam];
@@ -211,11 +165,7 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
 
   const tap = (i: number) => {
     if (view.mustGiveClue) {
-      if (!choosable(i)) return;
-      setChosenFor({
-        turn: turnKey,
-        cards: chosen.includes(i) ? chosen.filter((x) => x !== i) : [...chosen, i],
-      });
+      if (choosable(i)) toggleTarget(i);
       return;
     }
     if (view.cards[i]?.revealed !== null) return;
@@ -234,28 +184,20 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
   };
 
   // Keys: Enter touches the pick, Esc puts down the armed clue or the pick.
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (typing(e.target)) return;
-      if (e.key === "Escape") {
-        if (stripTurn !== null) setStripTurn(null);
-        else if (picked !== null) {
-          setPickFor({ turn: turnKey, card: null });
-          onAction({ kind: "mark", card: picked });
-        }
-        return;
+  useTableKeys({
+    onEscape: () => {
+      if (stripTurn !== null) setStripTurn(null);
+      else if (picked !== null) {
+        setPick(null);
+        onAction({ kind: "mark", card: picked });
       }
-      if (e.key !== "Enter" || picked === null || pinning !== null) return;
-      // A focused control keeps its own Enter — except a word card, whose
-      // Enter would otherwise just lift the pick it is showing.
-      const control = e.target instanceof HTMLElement ? e.target.closest("button") : null;
-      if (control && control.dataset.wordCard === undefined) return;
-      e.preventDefault();
+    },
+    onEnter: () => {
+      if (picked === null || pinning !== null) return false;
       onAction({ kind: "guess", card: picked });
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onAction, picked, pinning, stripTurn, turnKey]);
+      return true;
+    },
+  });
 
   // The last question this team's clue drew a "no" on, while it thinks again.
   const live = view.turns.at(-1);
@@ -333,7 +275,7 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
         clue={view.clue}
         tone={tone}
         guessesMade={view.guessesMade}
-        guessesLeft={view.guessesLeft}
+        guesses={view.guessesLeft === null ? "unlimited" : { left: view.guessesLeft }}
       />
     ) : null;
 
@@ -369,10 +311,9 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
         status={
           <TurnStatus
             tone={tone}
-            side={teamName(view.currentTeam)}
-            doing={now.text}
+            who={teamName(view.currentTeam)}
+            activity={now.text}
             mine={now.mine}
-            waiting={!now.mine}
           />
         }
         center={center}
@@ -391,9 +332,7 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
                 <span className="truncate">Touch {pickedWord}</span>
               </Button>
             )}
-            {view.canEndTurn && (
-              <UndoableActionButton action={endTurn} label="End turn" variant="secondary" />
-            )}
+            {view.canEndTurn && <EndTurnButton action={endTurn} />}
             {isOperative && pointing && (
               <IconButton
                 variant="bordered"
@@ -420,29 +359,28 @@ export default function GameBoard({ view, names, images, onAction, error }: Game
         selected={stripMode === "watch" ? null : stripTurn}
         onSelect={setStripTurn}
         enabled={stripMode === "pin" ? view.canNote : view.phase !== "over"}
-        score={scoreOf(view)}
+        score={<ScorePills score={scoreOf(view)} />}
         owedWords={(owedClue?.owed ?? []).map((c) => (view.cards[c]?.word ?? "").toUpperCase())}
       />
 
-      <div className="relative flex min-h-0 flex-1 flex-col">
-        {error && (
-          <div className="absolute inset-x-0 top-2 z-raised mx-auto w-full max-w-md px-2">
-            <ErrorAlert message={error} />
-          </div>
-        )}
+      <BoardStage
+        error={error}
+        notices={
+          <PresenceNotices
+            notices={away}
+            nameOf={(seat) => seatLabel(seat, names)}
+            waitingFor={appeal !== null ? "ruling" : view.phase === "clue" ? "clue" : "guess"}
+            returning={me?.returning ?? false}
+            onHandOver={(seat) => onAction({ kind: "hand-over", seat })}
+          />
+        }
+      >
         <WordGrid
           cards={cards}
           onPick={tap}
           {...(view.canGuess && !oneTap && pinning === null ? { onTouch: touch } : {})}
         />
-        <PresenceNotices
-          notices={away}
-          nameOf={(seat) => seatLabel(seat, names)}
-          waitingFor={appeal !== null ? "ruling" : view.phase === "clue" ? "clue" : "guess"}
-          returning={me?.returning ?? false}
-          onHandOver={(seat) => onAction({ kind: "hand-over", seat })}
-        />
-      </div>
+      </BoardStage>
     </GameScreen>
   );
 }

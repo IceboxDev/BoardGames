@@ -329,6 +329,11 @@
      prompt line. Fixed so the board and the fan never move when a control
      appears or changes; a control must fit the row, never wrap. */
   --layout-actions-h: 2.25rem;
+  /* The turn header above a word-card table (Codenames, Duet): one fixed
+     height in every phase so the board under it never moves — two rows on a
+     phone, one from `sm`. */
+  --layout-table-header-h: 7rem;
+  --layout-table-header-h-wide: 5rem;
   /* A playing card's face. Six games each declared `aspect-[2/3]` for
      themselves. */
   --aspect-card: 2 / 3;
@@ -420,6 +425,12 @@
 }
 @utility h-actions {
   height: var(--layout-actions-h);
+}
+@utility h-table-header {
+  height: var(--layout-table-header-h);
+  @media (width >= 40rem) {
+    height: var(--layout-table-header-h-wide);
+  }
 }
 
 /* Newspaper columns (quiz trainer's Reading Room): balanced text columns

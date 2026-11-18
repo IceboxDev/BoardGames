@@ -489,3 +489,25 @@ describe("codenames machine — the team's working-out", () => {
     expect(send(actor, op, { kind: "note", card, turn: "0" }).ok).toBe(false);
   });
 });
+
+describe("who guesses a clue", () => {
+  it("the spymaster's input names its team's operatives: their AI tier, or null for a person", () => {
+    const actor = createActor(codenamesMachine);
+    actor.start();
+    actor.send({
+      type: "START",
+      seed: 4,
+      ai: [null, "codenames-expert", null, "codenames-hard", null, "codenames-medium"],
+      language: "en",
+      clueTimerSec: 0,
+      guessTimerSec: 0,
+    });
+    const game = actor.getSnapshot().context.game;
+    const input = buildClueInput(game);
+    // Red operatives are seats 2 and 4, Blue's seats 3 and 5.
+    expect(input.operatives).toEqual(
+      game.currentTeam === 0 ? [null, null] : ["codenames-hard", "codenames-medium"],
+    );
+    actor.stop();
+  });
+});

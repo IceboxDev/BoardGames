@@ -16,13 +16,15 @@ export const CODENAMES_AI_MODELS = [
   {
     id: "codenames-hard",
     label: "Analyst",
-    description: "A solid partner — links two or three words and steers clear of the assassin.",
+    description:
+      "Tries a clue of every size, tests its ideas on readers and gives the one that reads best — two- and three-word clues that steer clear of the assassin.",
     difficulty: "Hard",
   },
   {
     id: "codenames-expert",
     label: "Mastermind",
-    description: "The strongest agent. Ambitious multi-word clues and sharp guessing.",
+    description:
+      "The strongest agent. Plays every idea out on simulated operatives before it gives one — the biggest clues a table actually finds. Takes its time.",
     difficulty: "Expert",
   },
 ] as const satisfies readonly StrategyInfo[];

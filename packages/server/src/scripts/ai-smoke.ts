@@ -5,10 +5,11 @@
 //   AI_PROFILE=anthropic pnpm exec tsx src/scripts/ai-smoke.ts            # what it would call
 //   AI_PROFILE=anthropic pnpm exec tsx src/scripts/ai-smoke.ts --yes      # run it (bills)
 //   … --yes --pdf=/path/to/character-sheet.pdf                            # + D&D extraction
+//   … --yes --grid=/path/to/codenames-table.jpg                           # + Codenames grid scan
 //
 // Runs: the probe; Codenames clue, guess and clue ruling (each tier's model
 // once); Decrypto encrypt and intercept; an agent run with a tool; and, with
-// --pdf, a D&D character extraction. The game agents fall back to their
+// --pdf, a D&D character extraction; with --grid, a Codenames grid scan. The game agents fall back to their
 // deterministic stand-ins on any failure, so the verdict is read from the AI
 // ledger: every call the step made, ok or failed, with model, time, tokens
 // (cached) and dollars. Generation scripts (descriptions, skills) are smoke-
@@ -24,11 +25,13 @@ import { aiStatus, probeAi } from "../lib/ai";
 import { defineAgent } from "../lib/ai/agent";
 import { type AiCallRecord, recentAiCalls } from "../lib/ai/ledger";
 import { catalogLookup } from "../lib/ai/tools/catalog";
+import { scanGrid } from "../lib/codenames-scan";
 import { extractCharacter } from "../lib/dnd-extract";
 
 const args = process.argv.slice(2);
 const run = args.includes("--yes");
 const pdf = args.find((a) => a.startsWith("--pdf="))?.slice("--pdf=".length);
+const grid = args.find((a) => a.startsWith("--grid="))?.slice("--grid=".length);
 
 const WORDS = [
   ["APPLE", "own"],
@@ -72,7 +75,7 @@ interface Step {
 const STEPS: Step[] = [
   { name: "probe (one generation, fast role)", run: () => probeAi(true) },
   {
-    name: "codenames: clue (Mastermind — smart role + test reads on balanced)",
+    name: "codenames: clue (Mastermind — five brainstorms, screened and played out on three guessers)",
     run: () =>
       llmCodenamesAgent.giveClue({
         model: "codenames-expert",
@@ -100,7 +103,7 @@ const STEPS: Step[] = [
       }),
   },
   {
-    name: "codenames: clue ruling (Analyst — balanced role)",
+    name: "codenames: clue ruling (Analyst — smart role)",
     run: async () =>
       llmCodenamesAgent.judgeClue?.({
         model: "codenames-hard",
@@ -169,6 +172,23 @@ if (pdf) {
       const dataUri = `data:application/pdf;base64,${readFileSync(pdf).toString("base64")}`;
       const sheet = await extractCharacter(dataUri, basename(pdf));
       return { name: sheet.name };
+    },
+  });
+}
+
+if (grid) {
+  STEPS.push({
+    name: `codenames: grid scan (${basename(grid)}, balanced role)`,
+    run: async () => {
+      const type = /\.png$/i.test(grid) ? "png" : /\.webp$/i.test(grid) ? "webp" : "jpeg";
+      const scan = await scanGrid(
+        `data:image/${type};base64,${readFileSync(grid).toString("base64")}`,
+      );
+      return {
+        language: scan.language,
+        words: scan.cells.map((c) => c.word || `[${c.cover}]`).join(" "),
+        unsure: scan.cells.filter((c) => !c.sure).length,
+      };
     },
   });
 }

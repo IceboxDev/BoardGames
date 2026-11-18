@@ -3,6 +3,7 @@
  * their own side of the key until the game is over; chat is between the two
  * players (spectators see none).
  */
+import { seatPresenceView } from "../codenames/seat-presence";
 import {
   agentsFound,
   agentsLeftOn,
@@ -16,6 +17,7 @@ import {
 import type {
   DuetCardView,
   DuetPlayerView,
+  DuetSeatView,
   DuetState,
   DuetTurn,
   DuetViewPhase,
@@ -50,8 +52,7 @@ export function buildDuetView(
     phase,
     seat: side ?? -1,
     language: state.language,
-    ai: [state.ai[0] !== null, state.ai[1] !== null],
-    tiers: [state.ai[0], state.ai[1]],
+    seats: [seatView(state, 0, live), seatView(state, 1, live)],
     cards,
     giver: state.giver,
     clue: phase === "guessing" ? turn.clue : null,
@@ -76,7 +77,17 @@ export function buildDuetView(
     deadlineTs: live ? state.deadlineTs : null,
     aiThinking: live ? state.aiThinking : null,
     aiStandIn: usedStandIn(state.turns),
+    canHandOver: live && human,
     result: state.result,
+  };
+}
+
+function seatView(state: DuetState, seat: Side, live: boolean): DuetSeatView {
+  return {
+    seat,
+    ai: isAiSeat(state, seat),
+    tier: state.ai[seat],
+    ...seatPresenceView(state, seat, live),
   };
 }
 

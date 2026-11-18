@@ -173,6 +173,9 @@ const SERVER_GAMES: readonly ServerGame[] = [
   {
     spec: duetSpec,
     createMachine: () => (aiAvailable() ? withDuetAgent(llmCodenamesAgent) : duetSpec.machine),
+    // Two people by design: a dropped partner stalls the game, so after a short
+    // wait the one left may hand the seat to an AI stand-in (`presence.ts`).
+    observesConnections: true,
     afterGameOver: async (ended) => {
       logAiCost(
         "codenames-duet",

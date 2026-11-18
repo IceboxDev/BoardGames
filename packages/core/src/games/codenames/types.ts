@@ -4,6 +4,7 @@ import type { CodenamesAiModel } from "./ai/models";
 import type { KeyEntry } from "./board";
 import { type Clue, ClueSchema } from "./clue-rules";
 import type { AiCost, ClueNote, GuessNote } from "./notes";
+import type { SeatPresenceView } from "./seat-presence";
 import type { Role, Team } from "./seating";
 import type { Language } from "./words";
 
@@ -260,21 +261,13 @@ export interface AppealView {
   deadlineTs: number;
 }
 
-export interface SeatView {
+export interface SeatView extends SeatPresenceView {
   seat: number;
   team: Team;
   role: Role;
   ai: boolean;
-  /** The AI tier playing it, or null for a person. */
+  /** The AI tier playing it (a stand-in's too), or null for a person. */
   tier: CodenamesAiModel | null;
-  /** The person's connection dropped (at `awaySince`). */
-  awaySince: number | null;
-  /** From when anyone else may hand the seat to the AI. */
-  handoverAt: number | null;
-  /** An AI is playing it for its absent person (`tier` is the stand-in's). */
-  standIn: boolean;
-  /** The person is back; the stand-in hands over once its move is done. */
-  returning: boolean;
 }
 
 export interface CodenamesPlayerView {

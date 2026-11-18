@@ -84,7 +84,7 @@ describe("score and alerts", () => {
     const asked = askClue(s, team, { word: `${word}zq`, count: 1 }, null, 0);
     expect(alertLabel(buildPlayerView(asked, asked.phase, 1 - team))).toBe("Your ruling");
     const clued = applyClue(s, team, { word: "zqx", count: 1 });
-    expect(alertLabel(buildPlayerView(clued, clued.phase, 2 + team))).toBe("Your guess");
+    expect(alertLabel(buildPlayerView(clued, clued.phase, 2 + team))).toBe("Your guess: ZQX 1");
   });
 });
 

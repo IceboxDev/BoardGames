@@ -39,6 +39,7 @@ export type {
   PageShellLayout,
 } from "./PageShell";
 export { PageMain, PageShell } from "./PageShell";
+export { PipMeter } from "./PipMeter";
 export { ProgressBar, type ProgressBarSize, type ProgressBarTone } from "./ProgressBar";
 export { QueryBoundary } from "./QueryBoundary";
 export { SearchInput } from "./SearchInput";
@@ -58,6 +59,7 @@ export {
   type SurfaceVariant,
 } from "./Surface";
 export { Textarea } from "./Textarea";
+export { ThinkingDots } from "./ThinkingDots";
 export { TreeView, type TreeViewNode } from "./TreeView";
 export {
   type CoreTone,

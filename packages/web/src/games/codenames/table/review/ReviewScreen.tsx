@@ -2,8 +2,10 @@ import { useEffect, useMemo, useState } from "react";
 import type { GameOverAction } from "../../../../components/game-over";
 import { ChevronLeftIcon, ChevronRightIcon } from "../../../../components/icons";
 import { Button, IconButton } from "../../../../components/ui";
+import { TONE_TEXT } from "../../../../components/ui/tones";
 import { cn } from "../../../../lib/cn";
-import type { Highlight, ReviewModel } from "../../logic/review";
+import type { Highlight, ReviewModel } from "../review-model";
+import type { ReviewNotice } from "../table-logic";
 import { type CoverTone, WordGrid } from "../WordGrid";
 import { RaceChart } from "./RaceChart";
 import { TurnCard } from "./TurnCard";
@@ -17,8 +19,8 @@ import { TurnCard } from "./TurnCard";
 export type ResultTone = "win" | "lose" | "neutral";
 
 const TITLE_INK: Record<ResultTone, string> = {
-  win: "text-emerald-300",
-  lose: "text-rose-300",
+  win: TONE_TEXT.emerald,
+  lose: TONE_TEXT.rose,
   neutral: "text-fg-strong",
 };
 
@@ -49,7 +51,7 @@ const TILE_EDGE: Record<CoverTone | "neutral", string> = {
 /** "3 to find", or "done" once a side has found every agent. */
 function LeftToFind({ left }: { left: number }) {
   return left === 0 ? (
-    <span className="font-bold text-emerald-300">all found</span>
+    <span className={cn("font-bold", TONE_TEXT.emerald)}>all found</span>
   ) : (
     <span className="text-fg-muted">
       <span className="font-bold tabular-nums text-fg-strong">{left}</span> to find
@@ -96,7 +98,7 @@ export function ReviewScreen({
   /** Extra panel above the turn list (Duet's timer). */
   aside?: React.ReactNode;
   /** A line under the result: a room waiting on its host, a refused rematch. */
-  notice?: { text: string; tone: "info" | "error" } | null;
+  notice?: ReviewNotice | null;
 }) {
   const [shown, setShown] = useState<number | null>(null);
   const last = model.turns.length - 1;
@@ -161,12 +163,12 @@ export function ReviewScreen({
           role={notice.tone === "error" ? "alert" : "status"}
           className={cn(
             "flex shrink-0 items-center gap-2 px-4 pt-3 text-xs lg:px-8",
-            notice.tone === "error" ? "text-amber-300" : "text-fg-secondary",
+            notice.tone === "error" ? TONE_TEXT.amber : "text-fg-secondary",
           )}
         >
           {notice.tone === "info" && (
             <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
-              <span className="absolute inset-0 animate-ping rounded-full bg-accent-400 opacity-60" />
+              <span className="absolute inset-0 animate-ping rounded-full bg-accent-400 opacity-60 motion-reduce:hidden" />
               <span className="relative h-2 w-2 rounded-full bg-accent-400" />
             </span>
           )}

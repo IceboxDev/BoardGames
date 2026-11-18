@@ -1,7 +1,7 @@
 import { codenamesManifest } from "@boardgames/core/games/codenames/manifest";
 import { configOrDefaults } from "@boardgames/core/machines/manifest";
 import type { LobbyConfigProps } from "../types";
-import { OptionsControls } from "./components/OptionsControls";
+import { OptionsControls } from "./table";
 
 // Codenames' lobby options. Teams and spymasters are NOT chosen here: they
 // follow the seats above (Red/Blue Spymaster first, then alternating

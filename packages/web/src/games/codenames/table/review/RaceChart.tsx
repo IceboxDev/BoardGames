@@ -1,5 +1,5 @@
 import { cn } from "../../../../lib/cn";
-import type { RaceSeries } from "../../logic/review";
+import type { RaceSeries } from "../review-model";
 import type { CoverTone } from "../WordGrid";
 
 // The race: agents each side still has to find after every turn, one stepped

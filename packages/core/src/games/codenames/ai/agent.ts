@@ -58,6 +58,12 @@ export interface ClueInput {
   opponentAgentsLeft?: number;
   /** Duet only: turns left on the timer (0 = sudden death). */
   turnsLeft?: number;
+  /**
+   * Who will guess this clue: each guessing seat's AI tier, or null for a
+   * person. The Mastermind test-reads its ideas the way they will be read.
+   * Absent = unknown (read as for a person).
+   */
+  operatives?: (CodenamesAiModel | null)[];
 }
 
 /** What one agent answer cost (summed over its model calls), and the ledger ids. */
@@ -98,6 +104,8 @@ export interface GuessInput {
   opponentAgentsLeft?: number;
   /** Duet only: turns left on the timer (0 = sudden death). */
   turnsLeft?: number;
+  /** Duet only: distinct agents still hidden across both sides (the pair needs all 15). */
+  totalAgentsLeft?: number;
   history: PublicTurn[];
 }
 

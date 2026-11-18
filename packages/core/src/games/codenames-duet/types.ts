@@ -4,6 +4,7 @@ import type { CodenamesAiModel } from "../codenames/ai/models";
 import type { DuetKeyEntry, DuetKeyPair } from "../codenames/board";
 import { type Clue, ClueSchema } from "../codenames/clue-rules";
 import type { ClueNote, GuessNote } from "../codenames/notes";
+import type { SeatPresenceView } from "../codenames/seat-presence";
 import type { Language } from "../codenames/words";
 import type { CampaignMission } from "./campaign/map";
 
@@ -26,11 +27,18 @@ export const ChatActionSchema = z.object({
   text: z.string().trim().min(1).max(MAX_CHAT_LENGTH),
 });
 
+export const HandOverActionSchema = z.object({
+  kind: z.literal("hand-over"),
+  seat: z.number().int().min(0).max(1),
+});
+
 export type DuetAction =
   | { kind: "give-clue"; clue: Clue; targets?: number[] }
   | { kind: "guess"; card: number }
   | { kind: "end-turn" }
-  | { kind: "chat"; text: string };
+  | { kind: "chat"; text: string }
+  /** Hand an absent partner's seat to an AI stand-in (`../codenames/seat-presence.ts`). */
+  | { kind: "hand-over"; seat: number };
 
 export interface DuetGuess {
   card: number;
@@ -112,6 +120,10 @@ export interface DuetState extends RngCarrier {
   deadlineTs: number | null;
   aiThinking: Side | null;
   aiQueue: number[];
+  /** Presence (`presence.ts`): who dropped out, and the seats an AI stands in for. */
+  away: { seat: number; since: number }[];
+  standIns: number[];
+  reclaims: number[];
   result: DuetResult | null;
   beats: DuetBeats;
 }
@@ -131,6 +143,7 @@ export type DuetMachineEvent =
       beats?: Partial<DuetBeats>;
     }
   | { type: "PLAYER_ACTION"; player: number; action: DuetAction }
+  | { type: "SEAT_CONNECTION"; seat: number; connected: boolean }
   | { type: "RESET" };
 
 export type DuetViewPhase = "idle" | DuetPhase;
@@ -145,13 +158,19 @@ export interface DuetCardView {
   theirs: DuetKeyEntry | null;
 }
 
+/** A seat as the table sees it: who plays it and whether they are here. */
+export interface DuetSeatView extends SeatPresenceView {
+  seat: Side;
+  ai: boolean;
+  /** The AI tier playing it (a stand-in's too), or null for a person. */
+  tier: CodenamesAiModel | null;
+}
+
 export interface DuetPlayerView {
   phase: DuetViewPhase;
   seat: number;
   language: Language;
-  ai: [boolean, boolean];
-  /** Each seat's AI tier, or null for a person. */
-  tiers: [CodenamesAiModel | null, CodenamesAiModel | null];
+  seats: [DuetSeatView, DuetSeatView];
   cards: DuetCardView[];
   giver: Side;
   clue: Clue | null;
@@ -177,5 +196,7 @@ export interface DuetPlayerView {
   aiThinking: Side | null;
   /** Some AI move this game was played by the stand-in (the model was unavailable). */
   aiStandIn: boolean;
+  /** Whether this seat (a person at a live table) may hand an absent partner's seat to the AI. */
+  canHandOver: boolean;
   result: DuetResult | null;
 }

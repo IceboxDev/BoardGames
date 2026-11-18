@@ -45,3 +45,12 @@ export function operativesOf(team: Team, seatCount: number): number[] {
 export function otherTeam(team: Team): Team {
   return (1 - team) as Team;
 }
+
+/** The starting team hides one agent more: it plays first. */
+export const STARTING_TEAM_AGENTS = 9;
+export const SECOND_TEAM_AGENTS = 8;
+
+/** How many agents `team` has to find. */
+export function agentsFor(team: 0 | 1, startingTeam: 0 | 1): number {
+  return team === startingTeam ? STARTING_TEAM_AGENTS : SECOND_TEAM_AGENTS;
+}

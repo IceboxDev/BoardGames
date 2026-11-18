@@ -12,7 +12,6 @@
  * is over; everyone else sees that a question is open. `rngState` never leaves.
  */
 
-import { handoverAt } from "./presence";
 import {
   agentsLeft,
   canChat,
@@ -26,6 +25,7 @@ import {
   isAiSeat,
   usedStandIn,
 } from "./rules";
+import { seatPresenceView } from "./seat-presence";
 import { roleOf, teamOf } from "./seating";
 import type {
   AppealView,
@@ -91,10 +91,7 @@ export function buildPlayerView(
       role: roleOf(s),
       ai: isAiSeat(state, s),
       tier: state.ai[s] ?? null,
-      awaySince: live ? (state.away.find((a) => a.seat === s)?.since ?? null) : null,
-      handoverAt: live && !state.standIns.includes(s) ? handoverAt(state, s) : null,
-      standIn: state.standIns.includes(s),
-      returning: live && state.reclaims.includes(s),
+      ...seatPresenceView(state, s, live),
     })),
     cards,
     startingTeam: state.startingTeam,

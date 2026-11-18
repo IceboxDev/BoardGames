@@ -1,20 +1,26 @@
 import type { DuetPlayerView } from "@boardgames/core/games/codenames-duet/types";
 import { useMemo } from "react";
 import type { GameOverAction } from "../../../components/game-over";
-import { ReviewScreen } from "../../codenames/components/review/ReviewScreen";
-import { buildDuetReview, DUET_REASON } from "../logic";
+import { ReviewScreen, roomNotice } from "../../codenames/table";
+import { buildDuetReview, duetDetail } from "../logic";
 
 export default function GameOverScreen({
   view,
   names,
   actions,
   campaignLine = null,
+  waitingForHost = false,
+  error = null,
 }: {
   view: DuetPlayerView;
   names: readonly (string | null)[];
   actions: readonly GameOverAction[];
   /** A campaign mission's outcome on the map ("Paris cleared · now open: Madrid"). */
   campaignLine?: string | null;
+  /** A room guest: the host decides whether there is another game. */
+  waitingForHost?: boolean;
+  /** Why a rematch couldn't start (someone left the table). */
+  error?: string | null;
 }) {
   const model = useMemo(
     () =>
@@ -28,7 +34,7 @@ export default function GameOverScreen({
         }),
         turns: view.turns,
         tokensTotal: view.tokensTotal,
-        tiers: view.tiers,
+        tiers: view.seats.map((s) => (s.standIn ? null : s.tier)),
         names,
       }),
     [view, names],
@@ -39,9 +45,10 @@ export default function GameOverScreen({
     <ReviewScreen
       title={result.won ? "Mission accomplished" : "Mission failed"}
       tone={result.won ? "win" : "lose"}
-      detail={`${campaignLine ? `${campaignLine} · ` : ""}${DUET_REASON[result.reason] ?? result.reason} · ${result.agentsFound} / 15 agents · ${result.tokensLeft} turn${result.tokensLeft === 1 ? "" : "s"} to spare`}
+      detail={duetDetail(result, campaignLine)}
       actions={actions}
       model={model}
+      notice={roomNotice({ error, waitingForHost })}
     />
   );
 }

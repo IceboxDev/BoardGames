@@ -11,6 +11,7 @@ import type { Language } from "@boardgames/core/games/codenames/words/index";
 import { useEffect, useState } from "react";
 import { MinusIcon, PlusIcon } from "../../../components/icons";
 import { Button, IconButton, Input } from "../../../components/ui";
+import { TONE_TEXT } from "../../../components/ui/tones";
 import { cn } from "../../../lib/cn";
 
 // The spymaster's clue form, shared by Codenames and Duet, sized for the
@@ -50,7 +51,6 @@ export function ClueComposer({
   language,
   chosenWords,
   onSubmit,
-  showUnlimited = true,
   ask,
 }: {
   faceDownWords: readonly string[];
@@ -58,8 +58,6 @@ export function ClueComposer({
   /** The cards tapped as this clue's targets, in tap order. */
   chosenWords: readonly string[];
   onSubmit: (word: string, count: ClueCount) => void;
-  /** Duet's number is only information, so ∞ adds nothing there. */
-  showUnlimited?: boolean;
   ask?: ClueAsk;
 }) {
   const [word, setWord] = useState("");
@@ -84,19 +82,19 @@ export function ClueComposer({
     setCount((c) => {
       const n = c === "unlimited" ? MAX_CLUE_COUNT + 1 : c;
       const next = n + delta;
-      if (next > MAX_CLUE_COUNT) return showUnlimited ? "unlimited" : MAX_CLUE_COUNT;
+      if (next > MAX_CLUE_COUNT) return "unlimited";
       return Math.max(0, next);
     });
   };
 
   const hint = problem ? (
-    <span className="text-amber-300">{problem}</span>
+    <span className={TONE_TEXT.amber}>{problem}</span>
   ) : asking && verdict?.kind === "soft" ? (
     <span className="text-amber-200">
       {verdict.message} The rulebook lets {ask?.judge} allow it — ask quietly.
     </span>
   ) : ask?.refused && !word.trim() ? (
-    <span className="text-amber-300">
+    <span className={TONE_TEXT.amber}>
       {ask.judge} refused {ask.refused.toUpperCase()} — think of another word.
     </span>
   ) : chosenWords.length > 0 ? (
@@ -148,7 +146,7 @@ export function ClueComposer({
             aria-live="polite"
             title={
               count === "unlimited"
-                ? "∞: as many guesses as they like"
+                ? "∞: everything left is covered — this clue plus the words still owed from earlier clues"
                 : count === 0
                   ? "0: none of ours fit this word"
                   : `${count} word${count === 1 ? "" : "s"}`
@@ -160,7 +158,7 @@ export function ClueComposer({
             size="sm"
             icon={<PlusIcon />}
             aria-label="More words"
-            disabled={count === (showUnlimited ? "unlimited" : MAX_CLUE_COUNT)}
+            disabled={count === "unlimited"}
             onClick={() => step(1)}
           />
         </div>

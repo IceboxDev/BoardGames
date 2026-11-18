@@ -4,7 +4,9 @@ import rulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./Codenames")),
+  // The Companion reads a photo of the table's grid onto your phone (`companion/`).
   extraMode: "companion",
+  extraModePath: "solo/companion",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./CodenamesLobbyConfig")),
   // Seats two apart are one team's: rotating by 2 makes each team's next operative its spymaster.

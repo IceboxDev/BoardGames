@@ -1,6 +1,6 @@
 import type { ClueInput, GuessInput } from "@boardgames/core/games/codenames/ai/agent";
 import { describe, expect, it } from "vitest";
-import { capPicks, ideaSizes, toCandidate } from "./codenames-agent";
+import { capPicks, clueWordOf, ideaSizes, toCandidate } from "./codenames-agent";
 
 // The SOFTWARE 4 turn from a real game: CAP was still owed from PROOFREADING.
 const input: ClueInput = {
@@ -33,7 +33,6 @@ const input: ClueInput = {
 
 const raw = (targets: string[], leftovers: string[] = []) => ({
   clue: "software",
-  unlimited: false,
   targets: targets.map((word) => ({ word, why: `${word} is software-ish` })),
   leftovers,
   risk: "onion",
@@ -41,15 +40,22 @@ const raw = (targets: string[], leftovers: string[] = []) => ({
 });
 
 describe("codenames agent — the leftover rule", () => {
-  it("a leftover folded into a new clue goes to the +1 instead: SOFTWARE 3, not 4", () => {
+  it("a leftover folded into a new clue is not counted: 3 new + CAP owed = all 4 left → SOFTWARE ∞", () => {
     const c = toCandidate(raw(["fox", "worm", "match", "cap"]), input);
-    expect(c?.clue).toEqual({ word: "software", count: 3 });
+    expect(c?.clue).toEqual({ word: "software", count: "unlimited" });
     expect(c?.targets).toEqual([0, 1, 2]);
     expect(c?.leftover).toEqual([3]);
     expect(c?.links.map((l) => l.card)).toEqual([0, 1, 2]);
   });
 
-  it("two leftovers folded in → ∞, so the team can collect both", () => {
+  it("short of every agent left, the number stays: SOFTWARE 2 with CAP owed of four", () => {
+    expect(toCandidate(raw(["fox", "worm"]), input)?.clue).toEqual({
+      word: "software",
+      count: 2,
+    });
+  });
+
+  it("two owed + two new = all four → ∞", () => {
     const two: ClueInput = {
       ...input,
       history: [
@@ -147,5 +153,43 @@ describe("codenames agent — what a clue can mean", () => {
     expect(toCandidate(raw(["nonsense"]), fresh)).toBeNull();
     // A deliberate 0 (no targets named) stays a 0.
     expect(toCandidate(raw([]), fresh)?.clue.count).toBe(0);
+  });
+});
+
+describe("codenames agent — a leftover named with its number", () => {
+  it("reads the clue a pick is for from the label's first word", () => {
+    expect(clueWordOf("ELECTRIC 3")).toBe("electric");
+    expect(clueWordOf("electric (earlier clue)")).toBe("electric");
+    expect(clueWordOf("Mäuse 2")).toBe("maeuse");
+  });
+
+  it("spends the +1 on a leftover labelled 'ELECTRIC 3' (it used to be dropped)", () => {
+    const guess: GuessInput = {
+      model: "codenames-expert",
+      mode: "classic",
+      language: "en",
+      words: [
+        { index: 0, word: "lamp" },
+        { index: 1, word: "wire" },
+        { index: 2, word: "gold" },
+      ],
+      clue: { word: "metal", count: 1 },
+      guessesLeft: 2,
+      agentsLeft: 5,
+      opponentAgentsLeft: 5,
+      history: [
+        {
+          by: "us",
+          clue: { word: "electric", count: 3 },
+          guesses: [{ word: "plug", result: "own" }],
+        },
+      ],
+    };
+    const pick = (word: string, f: string) => ({ word, confidence: 0.8, why: "", for: f });
+    for (const label of ["ELECTRIC", "ELECTRIC 3", "electric (earlier clue)"]) {
+      expect(
+        capPicks([pick("gold", "METAL"), pick("wire", label)], guess).map((p) => p.word),
+      ).toEqual(["gold", "wire"]);
+    }
   });
 });

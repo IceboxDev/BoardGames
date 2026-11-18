@@ -13,12 +13,12 @@ import {
   Select,
   SelectableCard,
 } from "../../components/ui";
-import { OptionsControls } from "../codenames/components/OptionsControls";
+import { OptionsControls } from "../codenames/table";
 import type { LobbyConfigProps } from "../types";
 import { useCampaign, useCampaigns } from "./campaign/api";
-import { NewCampaignModal } from "./campaign/CampaignList";
 import { cityName, missionDifficulty, missionNumbers, missionRule } from "./campaign/mission-copy";
-import { TokenSelect } from "./components/SetupScreen";
+import { NewCampaignModal } from "./campaign/NewCampaignModal";
+import { TokenSelect } from "./components/TokenSelect";
 
 // A Duet room plays the campaign by default: the host picks one of the
 // campaigns they share with a member and its next mission (the server checks

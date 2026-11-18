@@ -19,6 +19,7 @@ import { OnboardingHintsProvider } from "./components/onboarding/OnboardingHints
 import { PageViewTracker } from "./components/PageViewTracker";
 import { RouteErrorBoundary } from "./components/RouteErrorBoundary";
 import { RouteFallback } from "./components/RouteFallback";
+import { HistoryTrailRecorder } from "./lib/history-trail";
 import { queryClient } from "./lib/query-client";
 import { queryPersistBuster, queryPersister } from "./lib/query-persister";
 import { ThemeProvider } from "./lib/theme/provider";
@@ -65,6 +66,7 @@ function RootShell() {
           and sign-in — see components/HibernationGate.tsx. */}
       <HibernationGate>
         <PageViewTracker />
+        <HistoryTrailRecorder />
         <GreetingGate />
         <NavigationProgress />
         {/* First-use hints: screens declare their control is up; one bubble at a time. */}

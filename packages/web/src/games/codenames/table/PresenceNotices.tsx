@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { BotIcon } from "../../../components/icons";
 import { Button } from "../../../components/ui";
+import { TONE_TEXT } from "../../../components/ui/tones";
 import { cn } from "../../../lib/cn";
-import type { AwayNotice } from "../logic/table";
+import type { AwayNotice } from "./table-logic";
 
 // Who dropped out of the room, floating at the foot of the board (an overlay:
 // the board never moves for it). For each person gone: how long ago, why it
@@ -57,7 +58,7 @@ export function PresenceNotices({
     <div className="pointer-events-none absolute inset-x-0 bottom-2 z-raised flex flex-col items-center gap-1.5 px-2">
       {returning && (
         <div className="pointer-events-auto flex max-w-full items-center gap-2 rounded-full bg-surface-900/95 px-3 py-1.5 text-xs text-fg-secondary shadow-xl ring-1 ring-line-strong backdrop-blur">
-          <BotIcon className="h-3.5 w-3.5 shrink-0 text-sky-300" />
+          <BotIcon className={cn("h-3.5 w-3.5 shrink-0", TONE_TEXT.sky)} />
           <span className="min-w-0 truncate">
             Welcome back — the AI is finishing a move for you; your seat is yours right after.
           </span>
@@ -76,7 +77,7 @@ export function PresenceNotices({
             role="status"
           >
             <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden>
-              <span className="absolute inset-0 animate-ping rounded-full bg-amber-400 opacity-60" />
+              <span className="absolute inset-0 animate-ping rounded-full bg-amber-400 opacity-60 motion-reduce:hidden" />
               <span className="relative h-2.5 w-2.5 rounded-full bg-amber-400" />
             </span>
             <span className="flex min-w-0 flex-col leading-tight">
@@ -85,7 +86,10 @@ export function PresenceNotices({
                 <span className="tabular-nums text-fg-muted"> · {clock(now - n.since)}</span>
               </span>
               <span
-                className={cn("truncate text-3xs", n.blocking ? "text-amber-300" : "text-fg-muted")}
+                className={cn(
+                  "truncate text-3xs",
+                  n.blocking ? TONE_TEXT.amber : TONE_TEXT.neutral,
+                )}
               >
                 {n.blocking
                   ? WAITING_ON[waitingFor]

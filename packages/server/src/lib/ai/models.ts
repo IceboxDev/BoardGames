@@ -75,7 +75,35 @@ export function activeProfile(): AiProfileId {
 }
 
 export function providerKey(provider: AiProviderId): string | undefined {
+  // Claude Platform on AWS stands in for a direct Anthropic key when set (see anthropicProvider).
+  if (provider === "anthropic") return env(AWS_KEY_ENV) ?? env(PROVIDER_KEY_ENV.anthropic);
   return env(PROVIDER_KEY_ENV[provider]);
+}
+
+/**
+ * Claude Platform on AWS — Anthropic-operated, the same Messages API and bare
+ * model ids, reached at the region's own endpoint with a Bearer key and the
+ * workspace id header. Used for the "anthropic" provider whenever
+ * ANTHROPIC_AWS_API_KEY is set (with AWS_REGION and ANTHROPIC_AWS_WORKSPACE_ID);
+ * otherwise ANTHROPIC_API_KEY against Anthropic directly.
+ */
+const AWS_KEY_ENV = "ANTHROPIC_AWS_API_KEY";
+
+function anthropicProvider() {
+  const awsKey = env(AWS_KEY_ENV);
+  if (!awsKey) return createAnthropic();
+  const region = env("AWS_REGION");
+  const workspace = env("ANTHROPIC_AWS_WORKSPACE_ID");
+  if (!region || !workspace) {
+    throw new AiConfigError(
+      "Claude Platform on AWS needs AWS_REGION and ANTHROPIC_AWS_WORKSPACE_ID beside ANTHROPIC_AWS_API_KEY.",
+    );
+  }
+  return createAnthropic({
+    baseURL: `https://aws-external-anthropic.${region}.api.aws/v1`,
+    authToken: awsKey,
+    headers: { "anthropic-workspace-id": workspace },
+  });
 }
 
 export interface ModelRef {
@@ -111,11 +139,16 @@ export function roleModel(role: AiRole): ModelRef | null {
  * Each is created with our env var names, so a missing key fails as our own
  * AiConfigError (`requireKey`) before any request leaves.
  */
-const registry = createProviderRegistry({
-  gateway,
-  anthropic: createAnthropic(),
-  openai: createOpenAI(),
-});
+let registry: ReturnType<typeof createProviderRegistry> | null = null;
+
+function providers() {
+  registry ??= createProviderRegistry({
+    gateway,
+    anthropic: anthropicProvider(),
+    openai: createOpenAI(),
+  });
+  return registry;
+}
 
 export function requireKey(ref: ModelRef): void {
   if (!providerKey(ref.provider)) {
@@ -127,5 +160,5 @@ export function requireKey(ref: ModelRef): void {
 
 /** The AI SDK model for a registry id. */
 export function languageModel(ref: ModelRef): LanguageModel {
-  return registry.languageModel(`${ref.provider}:${ref.model}`);
+  return providers().languageModel(`${ref.provider}:${ref.model}`);
 }

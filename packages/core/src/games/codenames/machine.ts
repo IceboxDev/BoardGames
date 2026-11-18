@@ -68,7 +68,7 @@ import {
   noteProblem,
   resolveAppeal,
 } from "./rules";
-import { teamOf } from "./seating";
+import { operativesOf, teamOf } from "./seating";
 import {
   type AppealRuling,
   AskClueActionSchema,
@@ -185,6 +185,7 @@ export function buildClueInput(state: CodenamesState): ClueInput {
     history: spymasterHistory(state, team),
     agentsLeft: agentsLeft(state)[team],
     opponentAgentsLeft: agentsLeft(state)[team === 0 ? 1 : 0],
+    operatives: operativesOf(team, state.seatCount).map((seat) => state.ai[seat] ?? null),
   };
 }
 

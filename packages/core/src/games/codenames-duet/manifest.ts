@@ -6,6 +6,9 @@ import { LanguageSchema } from "../codenames/words";
 import { CampaignMissionSchema } from "./campaign/map";
 
 /** Timer-token counts on offer: 9 is the standard game, fewer is harder. */
+/** Agents to find between the two sides of the key. */
+export const TOTAL_AGENTS = 15;
+
 export const TOKEN_OPTIONS = [7, 8, 9, 10, 11] as const;
 export const STANDARD_TOKENS = 9;
 /** The fewest timer tokens a game may have: Hong Kong, Mumbai and Singapore on the mission map. */

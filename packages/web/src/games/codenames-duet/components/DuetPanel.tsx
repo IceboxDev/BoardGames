@@ -1,74 +1,89 @@
+import { TOTAL_AGENTS } from "@boardgames/core/games/codenames-duet/manifest";
 import type { DuetPlayerView } from "@boardgames/core/games/codenames-duet/types";
-import { BotIcon, UserIcon } from "../../../components/icons";
-import { MicroLabel } from "../../../components/ui";
+import { Badge, MicroLabel, PipMeter } from "../../../components/ui";
+import { TONE_TEXT } from "../../../components/ui/tones";
 import { cn } from "../../../lib/cn";
-import { TeamChat } from "../../codenames/components/TeamChat";
-import { tierName } from "../../codenames/logic/review";
+import { RailCard, RailStat, SeatRow, SeatStatus, TeamChat } from "../../codenames/table";
 import { cityName, missionNumbers } from "../campaign/mission-copy";
 import { sideLabel } from "../logic";
 import { TimerTokens } from "./TimerTokens";
 
 // The left rail: the mission's progress (agents found of 15), the timer as
-// a row of tokens, each player's side, and — when the partner is a person —
-// the pair's chat.
+// a row of tokens, the pair (pictures, AI tier, who is thinking, who dropped
+// out — the same rows as Codenames' teams), and — when the partner is a
+// person — the pair's chat.
+
+const GREEN = { bg: "bg-cn-green", ring: "ring-cn-green" };
 
 export function DuetPanel({
   view,
   names,
+  images,
   onChat,
 }: {
   view: DuetPlayerView;
   names: readonly (string | null)[];
+  /** People's profile pictures by seat; null = the role icon. */
+  images: readonly (string | null)[];
   onChat: (text: string) => void;
 }) {
   const suddenDeath = view.phase === "sudden-death";
   const partner = view.seat === 0 ? 1 : view.seat === 1 ? 0 : null;
-  const chat = partner !== null && !view.ai[partner] && view.phase !== "over";
+  const partnerSeat = partner === null ? null : view.seats[partner];
+  // A partner the AI stands in for is still a person: the chat waits for them.
+  const chat =
+    partnerSeat !== null && (!partnerSeat.ai || partnerSeat.standIn) && view.phase !== "over";
   return (
     <div className="flex min-h-0 flex-col gap-3">
       {view.campaign && (
-        <p className="flex items-center justify-between gap-2 rounded-full bg-accent-500/15 px-3 py-1.5 text-xs font-bold text-accent-200">
+        <Badge tone="accent" shape="pill" size="md" className="flex w-full justify-between gap-2">
           <span className="truncate">Campaign · {cityName(view.campaign.city)}</span>
           <span className="tabular-nums">{missionNumbers(view.campaign.city)}</span>
-        </p>
+        </Badge>
       )}
-      <section className="rounded-card-lg border border-line-soft bg-fill-soft p-3">
-        <div className="flex items-baseline justify-between">
-          <MicroLabel>Agents found</MicroLabel>
-          <span className="flex items-baseline gap-1">
-            <span className="text-3xl font-black tabular-nums leading-none text-fg-strong">
-              {view.agentsFound}
-            </span>
-            <span className="text-xs text-fg-muted">/ 15</span>
-          </span>
-        </div>
-        <div className="mt-2 grid grid-cols-15 gap-0.5" title={`${view.agentsFound} of 15 found`}>
-          {Array.from({ length: 15 }, (_, i) => (
-            <span
-              // biome-ignore lint/suspicious/noArrayIndexKey: pips are positional
-              key={i}
-              className={cn(
-                "h-1.5 rounded-full",
-                i < view.agentsFound ? "bg-cn-green" : "bg-fill-strong",
-              )}
+      <RailCard active={view.phase !== "over"} accentBg="bg-cn-green">
+        <RailStat
+          label={<MicroLabel>Agents found</MicroLabel>}
+          value={view.agentsFound}
+          unit={`/ ${TOTAL_AGENTS}`}
+        />
+        <PipMeter
+          className="mt-2"
+          total={TOTAL_AGENTS}
+          filled={view.agentsFound}
+          fillClass="bg-cn-green"
+          title={`${view.agentsFound} of ${TOTAL_AGENTS} found`}
+        />
+        <ul className="mt-2.5 flex flex-col gap-1">
+          {view.seats.map((s) => (
+            <SeatRow
+              key={s.seat}
+              name={sideLabel(s.seat, names)}
+              image={images[s.seat] ?? null}
+              ai={s.ai}
+              tier={s.standIn ? null : s.tier}
+              you={s.seat === view.seat}
+              marker={GREEN}
+              away={s.awaySince !== null && !s.standIn}
+              status={
+                <SeatStatus
+                  thinking={view.aiThinking === s.seat}
+                  presence={s}
+                  idle={`${view.agentsLeft[s.seat]} on key`}
+                />
+              }
             />
           ))}
-        </div>
-      </section>
+        </ul>
+      </RailCard>
 
-      <section
-        className={cn(
-          "rounded-card-lg border p-3",
-          suddenDeath ? "border-amber-400/40 bg-amber-500/10" : "border-line-soft bg-fill-soft",
-        )}
-      >
-        <div className="flex items-baseline justify-between">
-          <MicroLabel>{suddenDeath ? "Sudden death" : "Turns left"}</MicroLabel>
-          <span className="text-sm font-black tabular-nums text-fg-strong">
-            {view.tokens}
-            <span className="text-xs font-normal text-fg-muted"> / {view.tokensTotal}</span>
-          </span>
-        </div>
+      <RailCard warn={suddenDeath}>
+        <RailStat
+          label={<MicroLabel>{suddenDeath ? "Sudden death" : "Turns left"}</MicroLabel>}
+          value={view.tokens}
+          unit={`/ ${view.tokensTotal}`}
+          size="sm"
+        />
         <div className="mt-2">
           <TimerTokens
             tokens={view.tokens}
@@ -78,57 +93,18 @@ export function DuetPanel({
           />
         </div>
         {view.mistakesTotal !== null && !suddenDeath && (
-          <p className="mt-2 flex items-baseline justify-between gap-2 text-3xs text-fg-secondary">
-            <span>
-              {view.mistakesLeft === 0
-                ? "No free mistakes left: a bystander now costs two turns."
-                : `${view.mistakesLeft} free ${view.mistakesLeft === 1 ? "mistake" : "mistakes"} left (tan).`}
-            </span>
+          <p className="mt-2 text-3xs text-fg-secondary">
+            {view.mistakesLeft === 0
+              ? "No free mistakes left: a bystander now costs two turns."
+              : `${view.mistakesLeft} free ${view.mistakesLeft === 1 ? "mistake" : "mistakes"} left (tan).`}
           </p>
         )}
         {suddenDeath && (
-          <p className="mt-2 text-3xs text-amber-200">
+          <p className={cn("mt-2 text-3xs", TONE_TEXT.amber)}>
             No clues now: take turns picking. Any bystander or assassin loses.
           </p>
         )}
-      </section>
-
-      <section className="flex flex-col gap-1.5 rounded-card-lg border border-line-soft bg-fill-soft p-3">
-        {([0, 1] as const).map((side) => (
-          <div key={side} className="flex items-center gap-2 text-xs">
-            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-cn-green text-cn-cover-ink">
-              {view.ai[side] ? <BotIcon className="h-3 w-3" /> : <UserIcon className="h-3 w-3" />}
-            </span>
-            <span
-              className={cn(
-                "min-w-0 flex-1 truncate",
-                side === view.seat ? "font-bold text-fg-strong" : "text-fg-secondary",
-              )}
-            >
-              {sideLabel(side, names)}
-              {side === view.seat && <span className="font-normal text-fg-muted"> (you)</span>}
-              {view.tiers[side] && (
-                <span className="font-normal text-fg-muted"> · {tierName(view.tiers[side])}</span>
-              )}
-            </span>
-            {view.aiThinking === side ? (
-              <span className="flex shrink-0 gap-0.5" title="Thinking…">
-                {[0, 1, 2].map((i) => (
-                  <span
-                    key={i}
-                    className="h-1 w-1 animate-bounce rounded-full bg-amber-300"
-                    style={{ animationDelay: `${i * 140}ms` }}
-                  />
-                ))}
-              </span>
-            ) : (
-              <span className="shrink-0 text-3xs tabular-nums text-fg-muted">
-                {view.agentsLeft[side]} on key
-              </span>
-            )}
-          </div>
-        ))}
-      </section>
+      </RailCard>
 
       {chat && (
         <div className="flex min-h-0 flex-1 flex-col gap-1.5">

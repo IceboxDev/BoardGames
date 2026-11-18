@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Input } from "../../../components/ui";
+import { TONE_TEXT } from "../../../components/ui/tones";
 import { cn } from "../../../lib/cn";
 
 // Table talk for one side, shared by Codenames (per team) and Duet (the pair).
@@ -16,23 +17,16 @@ export function TeamChat({
   onSend,
   lockedReason,
   placeholder = "Message your team",
-  listClassName,
 }: {
   lines: readonly ChatLine[];
   onSend: (text: string) => void;
   lockedReason?: string | null;
   placeholder?: string;
-  listClassName?: string;
 }) {
   const [draft, setDraft] = useState("");
   return (
     <div className="flex min-h-0 flex-col gap-1.5">
-      <div
-        className={cn(
-          "min-h-0 overflow-y-auto rounded-card-lg bg-surface-800/40 p-2",
-          listClassName ?? "max-h-48",
-        )}
-      >
+      <div className="max-h-48 min-h-0 overflow-y-auto rounded-card-lg bg-surface-800/40 p-2">
         <ul className="flex flex-col gap-1">
           {lines.map((m, i) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: append-only log
@@ -46,7 +40,7 @@ export function TeamChat({
         </ul>
       </div>
       {lockedReason ? (
-        <p className="text-3xs italic leading-snug text-amber-300/80">{lockedReason}</p>
+        <p className={cn("text-3xs italic leading-snug", TONE_TEXT.amber)}>{lockedReason}</p>
       ) : (
         <form
           className="flex gap-1"

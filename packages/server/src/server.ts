@@ -49,6 +49,7 @@ import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
 import { chessDrillRoutes } from "./auth-routes/chess-drill.ts";
 import { chessFarmRoutes } from "./auth-routes/chess-farm.ts";
 import { chessTrainerRoutes } from "./auth-routes/chess-trainer.ts";
+import { codenamesScanRoutes } from "./auth-routes/codenames-scan.ts";
 import { collectionRoutes } from "./auth-routes/collection.ts";
 import { collectionVocabRoutes } from "./auth-routes/collection-vocab.ts";
 import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
@@ -427,6 +428,20 @@ app.use(
 );
 app.route("/api/trainers/chess/drill", chessDrillRoutes);
 app.route("/api/trainers/chess", chessTrainerRoutes);
+
+// Codenames Companion: a photo of the grid → the words on a phone. Every
+// scan is a paid vision call, hence its own tight meter (and before the
+// generic /api/games block, whose limits are for result writes).
+app.use(
+  "/api/games/codenames/scan",
+  requireAuth,
+  bodyLimit({
+    maxSize: 4_500_000,
+    onError: (c) => errorResponse(c, 413, "Photo too large", "PAYLOAD_TOO_LARGE"),
+  }),
+  rateLimit({ name: "codenames-scan", windowMs: 60_000, max: 10 }),
+);
+app.route("/api/games/codenames/scan", codenamesScanRoutes);
 
 // Codenames: Duet campaigns (the mission map). Members of either mode: a
 // campaign is played online, against the AI or at the table and recorded.

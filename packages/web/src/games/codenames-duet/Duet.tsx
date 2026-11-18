@@ -5,10 +5,11 @@ import type {
   DuetResult,
 } from "@boardgames/core/games/codenames-duet/types";
 import { lazy, type ReactNode, Suspense } from "react";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import type { GameOverAction } from "../../components/game-over";
 import { BoardFallback, RouteFallback } from "../../components/RouteFallback";
 import { type SessionFlow, type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
+import { useGoBackTo } from "../../lib/history-trail";
 import type { GameComponentProps } from "../types";
 import { CAMPAIGN_BASE, campaignPath } from "./campaign/paths";
 import { useMissionOutcome } from "./campaign/useMissionOutcome";
@@ -68,21 +69,23 @@ export function DuetTable({
   flow: SessionFlow<DuetPlayerView, DuetAction, DuetResult, DuetSetup>;
   source: GameComponentProps["source"];
 }) {
-  const navigate = useNavigate();
+  const goBackTo = useGoBackTo();
   const mission = flow.view?.campaign ?? null;
   const outcome = useMissionOutcome(mission);
   if (!flow.view) return <BoardFallback />;
   const names = flow.seats.map((s) => (source === "mp" && s.kind === "human" ? s.name : null));
+  const images = flow.seats.map((s) => s.image);
   if (flow.phase === "finished") {
     const actions: GameOverAction[] = mission
       ? [
           {
             label: "Back to the campaign",
             variant: "primary",
-            onClick: () => navigate(campaignPath(mission.id)),
+            // The campaign's entry is usually just behind: go back to it.
+            onClick: () => goBackTo(campaignPath(mission.id)),
           },
           ...flow.endActions
-            .filter((a) => a.label !== "Back to Menu")
+            .filter((a) => a.kind !== "back-to-menu")
             .map((a) => ({ ...a, variant: "secondary" as const })),
         ]
       : [...flow.endActions];
@@ -92,8 +95,18 @@ export function DuetTable({
         names={names}
         actions={actions}
         campaignLine={outcome(flow.view.result)}
+        waitingForHost={flow.waitingForHost}
+        error={source === "mp" ? flow.error : null}
       />
     );
   }
-  return <GameBoard view={flow.view} names={names} onAction={flow.sendAction} error={flow.error} />;
+  return (
+    <GameBoard
+      view={flow.view}
+      names={names}
+      images={images}
+      onAction={flow.sendAction}
+      error={flow.error}
+    />
+  );
 }

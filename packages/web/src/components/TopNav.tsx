@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { cn } from "../lib/cn";
+import { currentHistoryIndex, previousIsSamePage, stepsBackTo } from "../lib/history-trail";
 import { Button } from "./ui/Button";
 
 // ── TopNav ───────────────────────────────────────────────────────────────
@@ -87,16 +88,21 @@ export function TopNavBackButton({ to, label = "Back", onClick }: BackButtonProp
       onClick={(e) => {
         onClick?.(e);
         if (e.defaultPrevented) return;
-        // A plain left-click goes ONE step back through in-app history.
-        // `to` stays as the href (new-tab/middle-click keep working) and as
-        // the destination when this page was the entry point (idx 0 —
-        // deep link / fresh tab, where "back" would leave the app).
+        // A plain left-click goes back through in-app history: one step when
+        // the entry behind is this same page (a solo game above its setup
+        // screen), else back to where `to` — this page's parent — already
+        // sits in history, so Game → Menu → Game → Menu … never has to be
+        // walked entry by entry. With `to` nowhere behind, one step back
+        // (where the player came from). `to` stays as the href
+        // (new-tab/middle-click keep working) and as the destination when
+        // this page was the entry point (idx 0 — deep link / fresh tab,
+        // where "back" would leave the app).
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-        const idx = (window.history.state as { idx?: number } | null)?.idx ?? 0;
-        if (idx > 0) {
-          e.preventDefault();
-          navigate(-1);
-        }
+        const idx = currentHistoryIndex();
+        if (idx === 0) return;
+        e.preventDefault();
+        const steps = previousIsSamePage(idx) ? 1 : (stepsBackTo(to, idx) ?? 1);
+        navigate(-steps);
       }}
       className={NAV_ACTION_CLS}
     >

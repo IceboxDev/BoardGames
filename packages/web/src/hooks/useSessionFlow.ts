@@ -4,6 +4,7 @@ import { roomSeating } from "@boardgames/core/protocol";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { GameOverAction } from "../components/game-over/GameOverLayout";
+import { useGoBackTo } from "../lib/history-trail";
 import { useCurrentUser } from "./useCurrentUser";
 import type { GameSource } from "./useGameShell";
 import { useGameShell } from "./useGameShell";
@@ -116,6 +117,7 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
   { toSoloStart, autoStart, soloRematches }: SessionFlowOptions<TSetup> = {},
 ): SessionFlow<TView, TAction, TResult, TSetup> {
   const navigate = useNavigate();
+  const goBackTo = useGoBackTo();
   const { def, game, mp } = useGameShell<TView, TAction, TResult>();
   const myImage = useCurrentUser().user?.image ?? null;
   const active = source === "mp" ? mp : game;
@@ -169,8 +171,9 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
   const backToMenu = useCallback(() => {
     if (source === "mp") mp.reset();
     else game.reset();
-    navigate(`/play/${def.slug}`);
-  }, [source, mp.reset, game.reset, def.slug, navigate]);
+    // Back to the menu entry already behind this one, not a new one on top.
+    goBackTo(`/play/${def.slug}`);
+  }, [source, mp.reset, game.reset, def.slug, goBackTo]);
 
   const seats = useMemo((): SeatInfo[] => {
     const ai = (strategy: string | undefined): SeatInfo => {
@@ -231,6 +234,7 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
   const rematches =
     source === "solo" && lastSetup && lastStart && soloRematches
       ? soloRematches(lastSetup.value, lastStart).map((r) => ({
+          kind: "rotate" as const,
           label: r.label,
           variant: "secondary" as const,
           onClick: () => replay(r.setup),
@@ -240,13 +244,28 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
     ...(source === "solo"
       ? [
           ...(playAgain
-            ? [{ label: "Play Again", variant: "primary" as const, onClick: playAgain }]
+            ? [
+                {
+                  kind: "play-again" as const,
+                  label: "Play Again",
+                  variant: "primary" as const,
+                  onClick: playAgain,
+                },
+              ]
             : []),
           ...rematches,
           ...(autoStart
-            ? [{ label: "Back to Menu", variant: "secondary" as const, onClick: backToMenu }]
+            ? [
+                {
+                  kind: "back-to-menu" as const,
+                  label: "Back to Menu",
+                  variant: "secondary" as const,
+                  onClick: backToMenu,
+                },
+              ]
             : [
                 {
+                  kind: "change-setup" as const,
                   label: "Change Setup",
                   variant: "secondary" as const,
                   onClick: gameHistory.exitGame,
@@ -255,17 +274,42 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
         ]
       : mp.isHost
         ? [
-            { label: "Rematch", variant: "primary" as const, onClick: () => mp.rematchRoom(0) },
+            {
+              kind: "rematch" as const,
+              label: "Rematch",
+              variant: "primary" as const,
+              onClick: () => mp.rematchRoom(0),
+            },
             ...(def.kind === "playable" ? (def.rematchRotations ?? []) : []).map((r) => ({
+              kind: "rotate" as const,
               label: r.label,
               variant: "secondary" as const,
               onClick: () => mp.rematchRoom(r.by),
             })),
-            { label: "Back to Menu", variant: "secondary" as const, onClick: backToMenu },
+            {
+              kind: "back-to-menu" as const,
+              label: "Back to Menu",
+              variant: "secondary" as const,
+              onClick: backToMenu,
+            },
           ]
-        : [{ label: "Back to Menu", variant: "primary" as const, onClick: backToMenu }]),
+        : [
+            {
+              kind: "back-to-menu" as const,
+              label: "Back to Menu",
+              variant: "primary" as const,
+              onClick: backToMenu,
+            },
+          ]),
     ...(viewReplay
-      ? [{ label: "View Replay", variant: "secondary" as const, onClick: viewReplay }]
+      ? [
+          {
+            kind: "view-replay" as const,
+            label: "View Replay",
+            variant: "secondary" as const,
+            onClick: viewReplay,
+          },
+        ]
       : []),
   ];
 

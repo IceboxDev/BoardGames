@@ -14,6 +14,7 @@ import { type Clue, cleanClueWord, clueProblem } from "../codenames/clue-rules";
 import type { ClueNote, GuessNote } from "../codenames/notes";
 import type { Language } from "../codenames/words";
 import type { CampaignMission } from "./campaign/map";
+import { TOTAL_AGENTS } from "./manifest";
 import {
   DEFAULT_DUET_BEATS,
   type DuetAction,
@@ -24,7 +25,7 @@ import {
   type Side,
 } from "./types";
 
-export const TOTAL_AGENTS = 15;
+export { TOTAL_AGENTS } from "./manifest";
 
 export interface NewDuetInput {
   seed: number;
@@ -75,6 +76,9 @@ export function createDuet(input: NewDuetInput): DuetState {
     deadlineTs: null,
     aiThinking: null,
     aiQueue: [],
+    away: [],
+    standIns: [],
+    reclaims: [],
     result: null,
     beats: { ...DEFAULT_DUET_BEATS, ...input.beats },
   };

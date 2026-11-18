@@ -1,13 +1,14 @@
 import { formatClueCount } from "@boardgames/core/games/codenames/clue-rules";
+import type { ReactNode } from "react";
 import { Button, Chip, MicroLabel } from "../../../components/ui";
+import { TONE_TEXT } from "../../../components/ui/tones";
 import { cn } from "../../../lib/cn";
-import { TEAM_BG, TEAM_TEXT, teamName } from "../logic/labels";
-import type { TeamClue, TeamScore } from "../logic/table";
+import type { StripClue } from "./table-logic";
 
 // The strip between the turn header and the board — one fixed height for the
 // viewer's whole game, so the board below never moves.
 //
-// Left: the viewer's team's clues, oldest first.
+// Shared by Codenames and Duet. Left: the viewer's (team's) clues, oldest first.
 //   - Operatives ("pin"): tap a clue to arm it, then tap cards to pin it on
 //     them as a sticky note — CSI-style working-out the team's operatives see,
 //     on any turn. Tap it again, Done, or Esc to stop.
@@ -27,7 +28,7 @@ function ClueChip({
   enabled,
   onSelect,
 }: {
-  clue: TeamClue;
+  clue: StripClue;
   mode: ClueStripMode;
   selected: boolean;
   enabled: boolean;
@@ -57,7 +58,7 @@ function ClueChip({
       {clue.word}
       <span className="tabular-nums text-fg-muted">{count}</span>
       {mode === "pin" && clue.found > 0 && (
-        <span className="tabular-nums text-emerald-300">{clue.found}✓</span>
+        <span className={cn("tabular-nums", TONE_TEXT.emerald)}>{clue.found}✓</span>
       )}
       {mode === "owed" && owed !== null && owed.length > 0 && (
         <span className="rounded-full bg-cn-note px-1 tabular-nums text-cn-note-ink">
@@ -68,25 +69,35 @@ function ClueChip({
   );
 }
 
-function ScorePills({ score }: { score: readonly TeamScore[] }) {
+/** One side's count in the strip's score slot: a dot, a name, a number. */
+export function ScorePill({
+  dotClass,
+  label,
+  labelClass,
+  value,
+  active = false,
+  title,
+}: {
+  dotClass: string;
+  label: string;
+  labelClass: string;
+  value: number | string;
+  /** Its turn now: ringed; otherwise slightly dimmed. */
+  active?: boolean;
+  title: string;
+}) {
   return (
-    <div className="flex shrink-0 items-center gap-1.5 lg:hidden">
-      <span className="sr-only">Agents left to find:</span>
-      {score.map((s) => (
-        <span
-          key={s.team}
-          title={`${teamName(s.team)}: ${s.left} of ${s.total} agents still to find`}
-          className={cn(
-            "flex h-6 items-center gap-1.5 rounded-full bg-fill px-2 text-3xs font-black uppercase tracking-pill",
-            s.active ? "ring-1 ring-fg-strong/40" : "opacity-80",
-          )}
-        >
-          <span className={cn("h-2 w-2 rounded-full", TEAM_BG[s.team])} aria-hidden />
-          <span className={TEAM_TEXT[s.team]}>{teamName(s.team)}</span>
-          <span className="text-xs tabular-nums text-fg-strong">{s.left}</span>
-        </span>
-      ))}
-    </div>
+    <span
+      title={title}
+      className={cn(
+        "flex h-6 items-center gap-1.5 rounded-full bg-fill px-2 text-3xs font-black uppercase tracking-pill",
+        active ? "ring-1 ring-fg-strong/40" : "opacity-80",
+      )}
+    >
+      <span className={cn("h-2 w-2 rounded-full", dotClass)} aria-hidden />
+      <span className={labelClass}>{label}</span>
+      <span className="text-xs tabular-nums text-fg-strong">{value}</span>
+    </span>
   );
 }
 
@@ -98,25 +109,29 @@ export function ClueStrip({
   enabled,
   score,
   owedWords,
+  ownLabel = "Our clues",
 }: {
   mode: ClueStripMode;
-  clues: readonly TeamClue[];
+  clues: readonly StripClue[];
   /** The armed (pin) or opened (owed) clue's turn, or null. */
   selected: number | null;
   onSelect: (turn: number | null) => void;
   enabled: boolean;
-  score: readonly TeamScore[];
+  /** The race at a glance, shown below the wide layout only (the rail has it there). */
+  score: ReactNode;
   /** Owed mode: the opened clue's face-down targets, as words. */
   owedWords?: readonly string[];
+  /** The strip's caption ("Our clues"; Duet's "Your clues"). */
+  ownLabel?: string;
 }) {
   const open = clues.find((c) => c.turn === selected);
   const label =
     mode === "pin"
       ? open
         ? `Tap cards for ${open.word.toUpperCase()}`
-        : "Our clues"
+        : ownLabel
       : mode === "owed"
-        ? "Our clues"
+        ? ownLabel
         : null;
   const empty =
     mode === "pin"
@@ -166,7 +181,7 @@ export function ClueStrip({
           </Button>
         )}
       </div>
-      <ScorePills score={score} />
+      <div className="flex shrink-0 items-center gap-1.5 lg:hidden">{score}</div>
     </div>
   );
 }

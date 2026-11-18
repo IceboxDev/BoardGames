@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { ClockIcon } from "../../../components/icons";
+import { TONE_BUBBLE } from "../../../components/ui/tones";
 import { cn } from "../../../lib/cn";
 
 // Countdown pill for the optional clue / guess timers. The view carries an
@@ -20,10 +22,11 @@ export function TurnTimer({ deadlineTs }: { deadlineTs: number }) {
     <span
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold tabular-nums",
-        remaining <= 15 ? "bg-rose-500/15 text-rose-300" : "bg-amber-500/15 text-amber-300",
+        TONE_BUBBLE[remaining <= 15 ? "rose" : "amber"],
       )}
     >
-      ⏱ {m}:{s}
+      <ClockIcon />
+      {m}:{s}
     </span>
   );
 }

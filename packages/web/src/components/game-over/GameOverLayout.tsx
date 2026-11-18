@@ -3,7 +3,18 @@ import { cn } from "../../lib/cn";
 import { Button } from "../ui/Button";
 import { PageHeader } from "../ui/PageHeader";
 
+/** What a shared game-over action does — for callers that filter or reorder them (never match on `label`). */
+export type GameOverActionKind =
+  | "play-again"
+  | "rematch"
+  | "rotate"
+  | "change-setup"
+  | "back-to-menu"
+  | "view-replay";
+
 export interface GameOverAction {
+  /** Set on `useSessionFlow`'s shared actions; a game's own actions may leave it out. */
+  kind?: GameOverActionKind;
   label: string;
   onClick: () => void;
   variant: "primary" | "secondary";

@@ -1,26 +1,35 @@
 import { formatClueCount } from "@boardgames/core/games/codenames/clue-rules";
+import { TOTAL_AGENTS } from "@boardgames/core/games/codenames-duet/manifest";
 import type {
-  DuetCardView,
   DuetKeyEntry,
   DuetKeyPair,
+  DuetPlayerView,
+  DuetResult,
   DuetTurn,
   DuetTurnEnd,
   Side,
 } from "@boardgames/core/games/codenames-duet/types";
 import type { LogAction, LogBlock } from "../../components/action-log";
-import type { CoverTone, GridCard } from "../codenames/components/WordGrid";
 import {
+  type AwayNotice,
+  awayNoticesOf,
+  type CoverTone,
+  type GridCard,
   guessParts,
   type Highlight,
+  type LastTurnSummary,
+  latestTouchOrder,
   noteTargets,
   type RaceSeries,
   type ReviewGuess,
   type ReviewModel,
   type ReviewTurn,
+  type StripClue,
   type TargetFate,
+  type TouchMark,
   tierName,
   type Verdict,
-} from "../codenames/logic/review";
+} from "../codenames/table";
 
 export const SIDE_NAMES = ["Agent A", "Agent B"] as const;
 
@@ -34,18 +43,138 @@ const KEY_TONE: Record<DuetKeyEntry, CoverTone | null> = {
   bystander: null,
 };
 
-/** A Duet card as the shared grid draws it, from one seat's view. */
-export function toGridCard(card: DuetCardView, pickable: boolean, showKey: boolean): GridCard {
-  const deadForBoth = card.bystanderFor.length === 2;
-  return {
-    word: card.word,
-    cover: card.found ? "green" : deadForBoth ? "tan" : null,
-    keyTone: !card.found && showKey && card.mine ? KEY_TONE[card.mine] : null,
-    badges: deadForBoth
-      ? []
-      : card.bystanderFor.map((s) => ({ label: SIDE_NAMES[s].slice(-1), tone: "tan" })),
-    pickable,
-  };
+const live = (view: DuetPlayerView) =>
+  view.phase === "clue" || view.phase === "guessing" || view.phase === "sudden-death";
+
+export interface DuetGridContext {
+  showKey: boolean;
+  /** The clue-giver's chosen targets. */
+  chosen: readonly number[];
+  /** Cards the clue-giver may choose as targets. */
+  choosable: (card: number) => boolean;
+  /** The viewer's opened strip clue: its face-down targets. */
+  owed: ReadonlySet<number>;
+}
+
+/**
+ * The live board from one seat's view: covers, the viewer's own key side,
+ * bystander badges, the clue-giver's targets, an opened clue's leftovers and
+ * the latest touches in order — what the classic board shows, Duet's way.
+ */
+export function duetGridCards(view: DuetPlayerView, ctx: DuetGridContext): GridCard[] {
+  const guessable = new Set(view.guessable);
+  const recent = live(view) ? latestTouchOrder(view.turns) : null;
+  return view.cards.map((card, i) => {
+    const deadForBoth = card.bystanderFor.length === 2;
+    const touch = recent?.order.get(i);
+    return {
+      word: card.word,
+      cover: card.found ? "green" : deadForBoth ? "tan" : null,
+      keyTone: !card.found && ctx.showKey && card.mine ? KEY_TONE[card.mine] : null,
+      badges: deadForBoth
+        ? []
+        : card.bystanderFor.map((s) => ({ label: SIDE_NAMES[s].slice(-1), tone: "tan" })),
+      pickable: guessable.has(i) || ctx.choosable(i),
+      chosen: ctx.chosen.includes(i),
+      owed: !card.found && ctx.owed.has(i),
+      ...(touch !== undefined ? { touch, touchTone: "green" as const } : {}),
+    };
+  });
+}
+
+/** The viewer's own clues for the strip, with what each still owes (its targets not yet found). */
+export function duetStripClues(view: DuetPlayerView): StripClue[] {
+  if (view.seat !== 0 && view.seat !== 1) return [];
+  return view.turns.flatMap((turn, index) => {
+    if (turn.giver !== view.seat || !turn.clue) return [];
+    const targets = turn.note?.targets ?? [];
+    return [
+      {
+        turn: index,
+        word: turn.clue.word,
+        count: turn.clue.count,
+        found: turn.guesses.filter((g) => g.result === "agent").length,
+        pinned: 0,
+        owed: targets.length > 0 ? targets.filter((c) => view.cards[c]?.found === false) : null,
+      },
+    ];
+  });
+}
+
+const TOUCH_MARK: Record<DuetKeyEntry, TouchMark> = {
+  agent: "own",
+  bystander: "bystander",
+  assassin: "assassin",
+};
+
+const NO_TOUCH: Partial<Record<DuetTurnEnd, string>> = {
+  "clue-timeout": "ran out of time for a clue",
+  "guess-timeout": "ran out of time to guess",
+};
+
+/** The last finished turn in one line, for whoever looked away. */
+export function duetLastTurn(
+  view: DuetPlayerView,
+  names: readonly (string | null)[],
+): LastTurnSummary | null {
+  for (let i = view.turns.length - 1; i >= 0; i--) {
+    const turn = view.turns[i];
+    if (!turn || turn.end === null) continue;
+    return {
+      who: turn.giver === null ? "Sudden death" : sideLabel(turn.giver, names),
+      tone: turn.giver === null ? "ink" : "green",
+      clue: turn.clue,
+      touches: turn.guesses.map((g) => ({
+        word: view.cards[g.card]?.word ?? "?",
+        mark: TOUCH_MARK[g.result],
+      })),
+      idle: NO_TOUCH[turn.end] ?? "touched nothing",
+    };
+  }
+  return null;
+}
+
+/** The seat the game is waiting on: the clue-giver, else the one touching cards. */
+export function waitedOnSeat(view: DuetPlayerView): Side | null {
+  if (view.phase === "clue" || view.phase === "sudden-death") return view.giver;
+  if (view.phase === "guessing") return (1 - view.giver) as Side;
+  return null;
+}
+
+/** The partner gone from the table, once the viewer may (or soon may) hand their seat over. */
+export function duetAwayNotices(view: DuetPlayerView): AwayNotice[] {
+  return awayNoticesOf(
+    view.seats,
+    view.seat,
+    view.canHandOver,
+    (seat) => seat === waitedOnSeat(view),
+  );
+}
+
+/** What the game is waiting on this player for, for the tab title — or null. */
+export function duetAlertLabel(view: DuetPlayerView): string | null {
+  if (view.mustGiveClue) return "Your clue";
+  if (view.canGuess) {
+    if (view.phase === "sudden-death") return "Your pick";
+    // The clue itself, so a player in another tab knows what to look for.
+    return view.clue
+      ? `Your guess: ${view.clue.word.toUpperCase()} ${formatClueCount(view.clue.count)}`
+      : "Your guess";
+  }
+  return null;
+}
+
+/** The result line under a finished game — the same on the game-over screen and in a replay. */
+export function duetDetail(result: DuetResult, campaignLine: string | null = null): string {
+  const spare = `${result.tokensLeft} turn${result.tokensLeft === 1 ? "" : "s"} to spare`;
+  return [
+    campaignLine,
+    DUET_REASON[result.reason] ?? result.reason,
+    `${result.agentsFound} / ${TOTAL_AGENTS} agents`,
+    spare,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 }
 
 export const DUET_REASON: Record<string, string> = {
@@ -189,13 +318,13 @@ export function buildDuetReview(game: DuetGame): ReviewModel {
     };
   });
 
-  const points = [15];
-  let left = 15;
+  const points = [TOTAL_AGENTS];
+  let left = TOTAL_AGENTS;
   for (const t of game.turns) {
     left -= t.guesses.filter((g) => g.result === "agent").length;
     points.push(left);
   }
-  const series: RaceSeries[] = [{ label: "Agents", tone: "green", points, total: 15 }];
+  const series: RaceSeries[] = [{ label: "Agents", tone: "green", points, total: TOTAL_AGENTS }];
 
   return {
     turns,

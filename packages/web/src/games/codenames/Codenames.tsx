@@ -5,7 +5,9 @@ import type {
   CodenamesResult,
 } from "@boardgames/core/games/codenames/types";
 import type { SeatRequest } from "@boardgames/core/machines/seats";
-import { BoardFallback } from "../../components/RouteFallback";
+import { lazy, Suspense } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { BoardFallback, RouteFallback } from "../../components/RouteFallback";
 import { type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
 import GameBoard from "./components/GameBoard";
@@ -22,7 +24,29 @@ function toSoloStart({ role, players, modelId, ...options }: CodenamesSetup): So
   return { seats, config };
 }
 
+const CompanionScreen = lazy(() => import("./companion/CompanionScreen"));
+
+// Singleplayer is the game against the AI (`solo`); the Companion — a photo of
+// the table's grid read onto your phone — is `solo/companion`.
 export default function Codenames({ source }: GameComponentProps) {
+  if (source !== "solo") return <CodenamesGame source={source} />;
+  return (
+    <Routes>
+      <Route index element={<CodenamesGame source="solo" />} />
+      <Route
+        path="companion"
+        element={
+          <Suspense fallback={<RouteFallback />}>
+            <CompanionScreen />
+          </Suspense>
+        }
+      />
+      <Route path="*" element={<Navigate to="/play/codenames/solo" replace />} />
+    </Routes>
+  );
+}
+
+function CodenamesGame({ source }: GameComponentProps) {
   const flow = useSessionFlow<
     CodenamesPlayerView,
     CodenamesAction,

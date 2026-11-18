@@ -20,6 +20,7 @@ import {
 
 export type AiFeature =
   | "codenames"
+  | "codenames-scan"
   | "decrypto"
   | "dnd"
   | "dnd-extract"
@@ -34,6 +35,8 @@ export type AiTransportId = "sync" | "stream" | "openai-background";
 /** The role each feature runs at when nothing pins it. Game features pass their tier's model. */
 const FEATURE_ROLES: Record<AiFeature, AiRole> = {
   codenames: "smart",
+  // Reading 25 printed words off a photo: every profile's balanced model sees images.
+  "codenames-scan": "balanced",
   decrypto: "smart",
   dnd: "smart",
   "dnd-extract": "smart",
@@ -45,6 +48,7 @@ const FEATURE_ROLES: Record<AiFeature, AiRole> = {
 };
 
 const MODEL_ENV: Partial<Record<AiFeature, string>> = {
+  "codenames-scan": "AI_MODEL_CODENAMES_SCAN",
   dnd: "AI_MODEL_DND",
   "dnd-extract": "AI_MODEL_DND_EXTRACT",
   avatar: "AI_MODEL_AVATAR",

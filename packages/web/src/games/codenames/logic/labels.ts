@@ -1,6 +1,6 @@
 import { SEAT_NAMES, TEAM_NAMES } from "@boardgames/core/games/codenames/seating";
 import type { CodenamesPlayerView, KeyEntry, Team } from "@boardgames/core/games/codenames/types";
-import type { CoverTone } from "../components/WordGrid";
+import type { CoverTone } from "../table";
 
 export const TEAM_TEXT: Record<Team, string> = { 0: "text-cn-red", 1: "text-cn-blue" };
 export const TEAM_BG: Record<Team, string> = { 0: "bg-cn-red", 1: "bg-cn-blue" };
