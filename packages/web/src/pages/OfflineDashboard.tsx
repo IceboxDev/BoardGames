@@ -156,6 +156,9 @@ export default function OfflineDashboard() {
   // "Find the next session" from a campaign night: the group is the party and
   // the night locks with the campaign's game set (no vote).
   const [findCampaign, setFindCampaign] = useState<string | null>(null);
+  // …and only dates after the campaign's latest locked session are offered:
+  // the next session can't come before the one it follows.
+  const [findAfter, setFindAfter] = useState<string | null>(null);
   const wide = useMediaQuery(WIDE_BOARD_QUERY);
   const [debugAsPlayer, setDebugAsPlayer] = useState(false);
   const inAdminView = isAdmin && !debugAsPlayer;
@@ -214,9 +217,12 @@ export default function OfflineDashboard() {
     () =>
       build42Days(weekStart)
         .map(dateKey)
-        .filter((k) => k >= todayKey),
-    [weekStart, todayKey],
+        .filter((k) => k >= todayKey && (findAfter === null || k > findAfter)),
+    [weekStart, todayKey, findAfter],
   );
+  // The searcher knows their own diary: they count as free on every date, so
+  // the dates are chosen by the others' marks alone.
+  const assumeFree = useMemo(() => new Set(userId ? [userId] : []), [userId]);
   const members = playersQuery.data?.players ?? NO_MEMBERS;
   const group = useGroupMatch({
     dates: groupDates,
@@ -224,6 +230,7 @@ export default function OfflineDashboard() {
     awayByUser: awayQuery.data,
     locks,
     members,
+    assumeFree,
   });
   const campaignGame = findCampaign ? resolveGame(findCampaign) : undefined;
   const campaignBanner = findCampaign
@@ -333,7 +340,7 @@ export default function OfflineDashboard() {
     unlockMutation.reset();
     setFindOpen(false);
     group.clear();
-    setFindCampaign(null);
+    dropCampaign();
     setMode("view");
   }
 
@@ -366,11 +373,26 @@ export default function OfflineDashboard() {
 
   /** From a campaign night: find a date for its next session with this party. */
   function findNextSession(campaignSlug: string, partyIds: string[]) {
+    // After the night it was asked from, and after any later session of the
+    // same campaign that is already locked.
+    let after = rsvpDate ? nightDate(rsvpDate) : null;
+    for (const [key, lock] of Object.entries(locks ?? {})) {
+      if ((lock.fixedGameSlug ?? lock.topGameSlug) !== campaignSlug) continue;
+      const day = nightDate(key);
+      if (after === null || day > after) after = day;
+    }
+    setFindAfter(after);
     setRsvpDate(null);
     enterLockMode();
     group.replace(partyIds);
     setFindCampaign(campaignSlug);
     setFindOpen(true);
+  }
+
+  /** Back to a plain find-a-date: no game set, every date from today. */
+  function dropCampaign() {
+    setFindCampaign(null);
+    setFindAfter(null);
   }
 
   /** A ranked night from the panel: on phones the sheet makes way for the dialog. */
@@ -546,7 +568,7 @@ export default function OfflineDashboard() {
                 names={group.names}
                 onPickNight={pickGroupNight}
                 campaign={campaignBanner}
-                onDropCampaign={() => setFindCampaign(null)}
+                onDropCampaign={dropCampaign}
               />
             </aside>
           )}
@@ -605,7 +627,7 @@ export default function OfflineDashboard() {
             names={group.names}
             onPickNight={pickGroupNight}
             campaign={campaignBanner}
-            onDropCampaign={() => setFindCampaign(null)}
+            onDropCampaign={dropCampaign}
           />
         </Drawer>
       )}

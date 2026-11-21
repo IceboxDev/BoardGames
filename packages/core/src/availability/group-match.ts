@@ -5,6 +5,10 @@
 // can. An admin away note counts as missing, but only where the member left
 // no mark of their own (their mark wins — the calendar's rule). The RSVP
 // yes/no merging already happened server-side in the aggregate map.
+//
+// The person searching knows their own diary by heart: they are listed in
+// `assumeFree` and count as free on every date whatever they marked, so the
+// dates are chosen by everyone else's marks alone.
 
 import { nightKeysOf } from "../protocol/common.ts";
 
@@ -12,8 +16,11 @@ export type GroupMatchTier = "all" | "most" | "none";
 
 export interface GroupDayMatch {
   date: string;
+  /** Free for sure — including every `assumeFree` member. */
   can: string[];
   maybe: string[];
+  /** The subset of `can` that is only assumed free (the searcher), not marked. */
+  assumed: string[];
   /** Picked members with no mark that day (includes `away`). */
   missing: string[];
   /** The subset of `missing` an admin noted as away. */
@@ -36,6 +43,8 @@ export interface GroupMatchInput {
   awayByUser?: Readonly<Record<string, readonly string[] | undefined>>;
   /** Night keys already locked (`date` / `date_2`). */
   lockedNightKeys?: ReadonlySet<string>;
+  /** Members free on every date regardless of their marks (the person searching). */
+  assumeFree?: ReadonlySet<string>;
 }
 
 /** "Most" means everyone but one — and only once a group is big enough for that to matter. */
@@ -43,7 +52,7 @@ const MOST_MIN_GROUP = 3;
 
 /** Every date scored, keyed by date. Empty when the group is empty. */
 export function scoreGroupDates(input: GroupMatchInput): Record<string, GroupDayMatch> {
-  const { group, dates, availability, awayByUser, lockedNightKeys } = input;
+  const { group, dates, availability, awayByUser, lockedNightKeys, assumeFree } = input;
   const out: Record<string, GroupDayMatch> = {};
   if (group.length === 0) return out;
 
@@ -58,9 +67,13 @@ export function scoreGroupDates(input: GroupMatchInput): Record<string, GroupDay
     const maybe: string[] = [];
     const missing: string[] = [];
     const away: string[] = [];
+    const assumed: string[] = [];
     for (const id of group) {
       const mark = marks.get(id);
-      if (mark === "can") can.push(id);
+      if (assumeFree?.has(id)) {
+        can.push(id);
+        assumed.push(id);
+      } else if (mark === "can") can.push(id);
       else if (mark === "maybe") maybe.push(id);
       else {
         missing.push(id);
@@ -75,7 +88,7 @@ export function scoreGroupDates(input: GroupMatchInput): Record<string, GroupDay
           ? "most"
           : "none";
     const nightKey = nightKeysOf(date).find((key) => !lockedNightKeys?.has(key)) ?? null;
-    out[date] = { date, can, maybe, missing, away, tier, nightKey };
+    out[date] = { date, can, maybe, assumed, missing, away, tier, nightKey };
   }
   return out;
 }
@@ -83,11 +96,12 @@ export function scoreGroupDates(input: GroupMatchInput): Record<string, GroupDay
 /**
  * The dates worth offering, best first: most of the group available, then
  * most of them a firm "can", then the earliest. Dates with no free night
- * slot and dates nobody in the group marked are left out.
+ * slot and dates nobody in the group marked are left out (an assumed-free
+ * searcher is no mark: a date only they are "free" on suits nobody).
  */
 export function rankGroupDates(scored: Readonly<Record<string, GroupDayMatch>>): GroupDayMatch[] {
   return Object.values(scored)
-    .filter((m) => m.nightKey !== null && m.can.length + m.maybe.length > 0)
+    .filter((m) => m.nightKey !== null && m.can.length - m.assumed.length + m.maybe.length > 0)
     .sort(
       (a, b) =>
         b.can.length + b.maybe.length - (a.can.length + a.maybe.length) ||

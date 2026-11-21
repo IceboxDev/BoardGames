@@ -18,12 +18,15 @@ export function useGroupMatch({
   awayByUser,
   locks,
   members,
+  assumeFree,
 }: {
   dates: readonly string[];
   availability: AggregateAvailabilityMap | null;
   awayByUser: Readonly<Record<string, readonly string[]>> | undefined;
   locks: CalendarLocks | undefined;
   members: readonly ProfileDirectoryEntry[];
+  /** Counted free on every date whatever they marked — the person searching. */
+  assumeFree?: ReadonlySet<string>;
 }) {
   const [ids, setIds] = useState<ReadonlySet<string>>(() => new Set());
 
@@ -35,8 +38,9 @@ export function useGroupMatch({
         availability: availability ?? {},
         awayByUser,
         lockedNightKeys: new Set(Object.keys(locks ?? {})),
+        assumeFree,
       }),
-    [ids, dates, availability, awayByUser, locks],
+    [ids, dates, availability, awayByUser, locks, assumeFree],
   );
   const ranked = useMemo(() => rankGroupDates(byDate), [byDate]);
   const names = useMemo(() => new Map(members.map((m) => [m.id, m.name])), [members]);

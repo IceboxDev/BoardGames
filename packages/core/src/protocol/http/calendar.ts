@@ -103,9 +103,10 @@ export const LockedDateSchema = z.object({
   /**
    * True when the server stripped this lock for a viewer who is neither
    * invited nor admin: `rsvps`, `expectedUserIds`, `seatedUserIds`,
-   * `waitlistUserIds` are empty, `title`/`eventTime`/`address`/`topGameSlug`
-   * are null, and only the host + seat tally remain. The client renders the
-   * peek panel instead of the RSVP modal.
+   * `waitlistUserIds` are empty, `title`/`eventTime`/`address` are null, and
+   * only the host + seat tally remain — plus `topGameSlug`/`fixedGameSlug`
+   * when (and only when) the game is a campaign, so everyone sees one is on.
+   * The client renders the peek panel instead of the RSVP modal.
    */
   redacted: z.boolean().default(false),
 });

@@ -263,6 +263,23 @@ describe("private nights", () => {
     expect(exit.status).toBe(403);
   });
 
+  it("shows an outsider which campaign a private night is, and nothing else of its lineup", async () => {
+    await lockPrivate();
+    await client.execute({
+      sql: "INSERT INTO game_requests (date_key, user_id, game_slug, reaction) VALUES (?, ?, 'catan', 'hype')",
+      args: [DATE, HOST],
+    });
+    expect((await locks(as(OUT)))[DATE]).toMatchObject({ topGameSlug: null, fixedGameSlug: null });
+
+    await lockPrivate({ fixedGameSlug: "gloomhaven" });
+    expect((await locks(as(OUT)))[DATE]).toMatchObject({
+      redacted: true,
+      topGameSlug: "gloomhaven",
+      fixedGameSlug: "gloomhaven",
+      title: null,
+    });
+  });
+
   it("shows an invitee the guest list but keeps others' declines for the host and admin", async () => {
     await lockPrivate();
     await rsvp(A, "yes", "2020-01-01 10:00:00");

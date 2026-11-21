@@ -109,7 +109,8 @@ export async function computeMemorial(now = new Date()): Promise<Memorial> {
   const db = getDb();
   const [locks, matches, online, members, offlinePlays, onlinePlays] = await db.batch(
     [
-      "SELECT date_key FROM locked_dates",
+      // A called-off night (soft unlock, migration 0035) never happened.
+      "SELECT date_key FROM locked_dates WHERE unlocked_at IS NULL",
       "SELECT COUNT(*) AS n FROM match_results",
       "SELECT COUNT(*) AS n FROM session_replays",
       `SELECT COUNT(*) AS n FROM "user" WHERE COALESCE(guest, 0) = 0`,

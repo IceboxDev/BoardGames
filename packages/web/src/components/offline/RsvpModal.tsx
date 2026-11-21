@@ -8,7 +8,15 @@ import { formatDayKey } from "../../lib/date-format.ts";
 import { EXIT_CATALOG_SLUG } from "../../lib/exit-night";
 import { canManageNight, seatsLeft, viewerSeat, waitlistPosition } from "../../lib/night-access";
 import { reportPageView } from "../../lib/page-views";
-import { ClockIcon, HostIcon, PadlockIcon, PinIcon, UsersIcon } from "../icons";
+import {
+  CampaignIcon,
+  ClockIcon,
+  EyeIcon,
+  HostIcon,
+  PadlockIcon,
+  PinIcon,
+  UsersIcon,
+} from "../icons";
 import { useOnboardingHint } from "../onboarding/OnboardingHints";
 import {
   Badge,
@@ -141,6 +149,14 @@ export default function RsvpModal({ date, locks, onClose, onFindNextSession }: P
   // Likewise for EXIT — except the winner is a franchise, so the takeover is a
   // second-stage vote narrowing down which box to play (ExitNightPanel).
   const isExit = picksLocked && topSlugs[0] === EXIT_CATALOG_SLUG;
+  // The takeover hides the vote that put the game there. Admins may still
+  // look behind it: a two-way switch in the row's free left slot, the
+  // night's own panel or the vote as it stood (read-only — the night is
+  // sealed). Nobody else sees the switch; a night whose game was set in
+  // advance never voted, so it has nothing to show.
+  const [adminTab, setAdminTab] = useState<"night" | "votes">("night");
+  const canPeekVotes = isAdmin && (!!campaign || isExit) && !lock?.fixedGameSlug && hypedCount > 0;
+  const showVotes = canPeekVotes && adminTab === "votes";
 
   // When picks are locked, the modal contents are inaccessible to anyone who
   // wasn't in the expected (RSVP yes / maybe) snapshot at lock-in time. The
@@ -390,7 +406,37 @@ export default function RsvpModal({ date, locks, onClose, onFindNextSession }: P
         // going) fits at ~250px of content width — see `RsvpSwitch` and the
         // tightened sm padding in SegmentedControl.
         <div className="flex items-center justify-between gap-2">
-          {showViewToggle && viewerRsvp !== "no" && !campaign && !isExit ? (
+          {canPeekVotes && viewerRsvp !== "no" ? (
+            <SegmentedControl
+              shape="pill"
+              size="sm"
+              aria-label="Night or votes (admin)"
+              value={adminTab}
+              onChange={setAdminTab}
+              options={[
+                {
+                  value: "night",
+                  // Long campaign names ("The Crew · Deep Sea") must not
+                  // push the RSVP switch off a phone row.
+                  label: (
+                    <span className="block max-w-24 truncate sm:max-w-48">
+                      {campaign ? campaign.night : "EXIT"}
+                    </span>
+                  ),
+                  icon: <CampaignIcon className="h-3.5 w-3.5" />,
+                  tone: "accent",
+                },
+                {
+                  value: "votes",
+                  label: "Votes",
+                  icon: <EyeIcon className="h-3.5 w-3.5" />,
+                  tone: "amber",
+                  title: "How the night voted — only admins see this",
+                },
+              ]}
+              className="min-w-0"
+            />
+          ) : showViewToggle && viewerRsvp !== "no" && !campaign && !isExit ? (
             <SegmentedControl
               shape="pill"
               size="sm"
@@ -450,6 +496,15 @@ export default function RsvpModal({ date, locks, onClose, onFindNextSession }: P
             />
           ) : gamesQuery.isPending ? (
             <LoadingState label="Finding games…" />
+          ) : showVotes ? (
+            <RankedGameList
+              date={date}
+              games={availableGames}
+              reactions={reactions}
+              topSlugs={topSlugs}
+              runnerUpSlugs={runnerUpSlugs}
+              reactionsDisabled
+            />
           ) : campaign ? (
             <CampaignNightPanel
               campaign={campaign}

@@ -1,5 +1,6 @@
 import { isCatalogSlug, isNightGame } from "@boardgames/core/games/catalog";
 import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
+import { campaignBySlug } from "@boardgames/core/ical/campaign";
 import {
   AdminNightGuestBodySchema,
   AvailableGamesQuerySchema,
@@ -477,9 +478,12 @@ calendarLocksRoutes.get("/locks", async (c) => {
     const seats = participants.seats;
 
     // Outsiders to a private night learn only that the date is taken, by
-    // whom, and how full it is. Everything else is stripped here — the wire
-    // is the boundary, not the UI.
+    // whom, how full it is — and, when it is a campaign, which one: a
+    // campaign running that night is the group's news, so its cell wears the
+    // game's colours for everyone. Everything else is stripped here — the
+    // wire is the boundary, not the UI.
     if (lock.isPrivate && !participants.canView(viewer.id, viewerIsAdmin)) {
+      const publicCampaign = campaignBySlug(topGameSlug)?.slug ?? null;
       out[lock.dateKey] = {
         lockedBy: lock.lockedBy,
         lockedAt: lock.lockedAt,
@@ -491,8 +495,8 @@ calendarLocksRoutes.get("/locks", async (c) => {
         picksLockedAt: sealedAt(lock),
         hostAtHome: lock.hostAtHome,
         attendance: { definite: seats?.taken ?? 0, tentative: 0 },
-        topGameSlug: null,
-        fixedGameSlug: null,
+        topGameSlug: publicCampaign,
+        fixedGameSlug: campaignBySlug(lock.fixedGameSlug)?.slug ?? null,
         isPrivate: true,
         title: null,
         pickMode: lock.pickMode,

@@ -1,7 +1,9 @@
 // What an outsider sees when they tap a private night: that the date is
-// taken, by whom, and how full the table is. Nothing else — the server sent a
-// redacted lock, so there is nothing else to show even by accident.
+// taken, by whom, how full the table is, and — when it is one — which
+// campaign is on. Nothing else — the server sent a redacted lock, so there is
+// nothing else to show even by accident.
 
+import { campaignNightFor } from "@boardgames/core/ical/campaign";
 import type { LockedDate } from "../../lib/calendar-locks";
 import { formatDayKey } from "../../lib/date-format";
 import { Modal, ModalBody, ProgressBar } from "../ui";
@@ -19,11 +21,12 @@ export default function PrivateNightPeek({
   const seats = lock.seats;
   const left = seats ? Math.max(0, seats.total - seats.taken) : null;
   const hostName = lock.host?.name ?? null;
+  const campaign = campaignNightFor(lock.picksLockedAt, lock.topGameSlug);
   return (
     <Modal
       onClose={onClose}
       size="xs"
-      eyebrow="Private night"
+      eyebrow={campaign ? `${campaign.night} night · Private` : "Private night"}
       eyebrowClassName="text-private-ink/70"
       title={formatDayKey(date, "weekday")}
       subheader={hostName ? <HostLine name={hostName} /> : undefined}
@@ -47,7 +50,7 @@ export default function PrivateNightPeek({
           </div>
         )}
         <p className="text-sm text-fg-secondary">
-          This one is invitation only
+          {campaign ? `This ${campaign.night} session is` : "This one is"} invitation only
           {hostName ? (
             <>
               {" "}

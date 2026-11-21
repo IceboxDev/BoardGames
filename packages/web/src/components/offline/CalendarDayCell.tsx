@@ -249,7 +249,7 @@ function SingleDayCell({
       }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}${
         showCampaign && campaign ? ` — ${campaign.night} night` : ""
       }${
-        showPrivate && privateNight
+        locked && privateNight
           ? ` — private night, ${privateNight.seats.taken} of ${privateNight.seats.total} seats${
               privateNight.viewerSeat && privateNight.viewerSeat !== "outsider"
                 ? `, you: ${privateNight.viewerSeat}`
@@ -283,7 +283,11 @@ function SingleDayCell({
       {showHeatLayer && heat.kind === "fire" && <FireLayer compact={compact} cellSeed={cellSeed} />}
       {locked &&
         (showCampaign ? (
-          <CampaignNightLayer compact={compact} viewerRsvp={viewerRsvp} />
+          <CampaignNightLayer
+            compact={compact}
+            viewerRsvp={viewerRsvp}
+            privateNight={privateNight}
+          />
         ) : showPrivate && privateNight ? (
           <PrivateNightLayer compact={compact} viewerSeat={privateNight.viewerSeat} />
         ) : (
@@ -408,7 +412,9 @@ function SingleDayCell({
             )
           }
           pills={
-            showPrivate && privateNight ? (
+            // A private campaign night keeps the seat pill too: its art is the
+            // campaign's, but it is still invitation only.
+            locked && privateNight ? (
               <PhoneSeatPill viewerSeat={privateNight.viewerSeat} />
             ) : locked ? (
               <PhoneRsvpPill viewerRsvp={viewerRsvp} />
@@ -689,10 +695,13 @@ function SealMedallion({ variant }: { variant: MedallionVariant }) {
 function CampaignNightLayer({
   compact,
   viewerRsvp,
+  privateNight = null,
   pane = false,
 }: {
   compact: boolean;
   viewerRsvp?: RsvpStatus;
+  /** A private campaign night: the pill tells the viewer's seat, not an RSVP. */
+  privateNight?: PrivateNightCell | null;
   pane?: boolean;
 }) {
   return (
@@ -744,8 +753,19 @@ function CampaignNightLayer({
           />
         </>
       )}
-      {/* RSVP-aware pill: invitation by default; flips to GOING / PASS. */}
-      {pane ? (
+      {/* RSVP-aware pill: invitation by default; flips to GOING / PASS. A
+          private campaign night shows the viewer's seat instead ("Private"
+          for an outsider, who sees the campaign but holds no invitation). */}
+      {privateNight ? (
+        pane ? (
+          <>
+            <PrivateSeatPill viewerSeat={privateNight.viewerSeat} pane />
+            <PaneStatusEdge tone={seatTone(privateNight.viewerSeat)} />
+          </>
+        ) : (
+          !compact && <PrivateSeatPill viewerSeat={privateNight.viewerSeat} />
+        )
+      ) : pane ? (
         <>
           <LockedPill viewerRsvp={viewerRsvp} pane />
           <PaneStatusEdge tone={rsvpTone(viewerRsvp)} />
@@ -1555,14 +1575,19 @@ function NightPane({
       type="button"
       onClick={night.onClick}
       disabled={!clickable}
-      aria-label={paneLabel(night, showCampaign, showPrivate)}
+      aria-label={paneLabel(night, showCampaign)}
       data-campaign={showCampaign ? campaign?.slug : undefined}
       className={`night-pane relative flex overflow-hidden rounded-card-md border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${chrome} ${
         clickable ? "hover:brightness-110 active:brightness-95" : "pointer-events-none"
       }`}
     >
       {showCampaign ? (
-        <CampaignNightLayer compact={compact} viewerRsvp={viewerRsvp} pane />
+        <CampaignNightLayer
+          compact={compact}
+          viewerRsvp={viewerRsvp}
+          privateNight={privateNight}
+          pane
+        />
       ) : showPrivate && privateNight ? (
         <PrivateNightLayer compact={compact} viewerSeat={privateNight.viewerSeat} pane />
       ) : (
@@ -1675,11 +1700,11 @@ function PaneStatusEdge({ tone }: { tone: EdgeTone }) {
   );
 }
 
-function paneLabel(night: NightCell, showCampaign: boolean, showPrivate: boolean): string {
+function paneLabel(night: NightCell, showCampaign: boolean): string {
   const slot = nightSlot(night.key) === 2 ? "Second night" : "First night";
   let label = `${slot} — locked in`;
   if (showCampaign && night.campaign) label += ` — ${night.campaign.night} night`;
-  if (showPrivate && night.privateNight) {
+  if (night.privateNight) {
     const { seats, viewerSeat } = night.privateNight;
     label += ` — private night, ${seats.taken} of ${seats.total} seats`;
     if (viewerSeat && viewerSeat !== "outsider") label += `, you: ${viewerSeat}`;

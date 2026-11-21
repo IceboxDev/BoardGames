@@ -21,6 +21,7 @@ const match = (over: Partial<GroupDayMatch>): GroupDayMatch => ({
   date: "2026-10-16",
   can: [],
   maybe: [],
+  assumed: [],
   missing: [],
   away: [],
   tier: "all",

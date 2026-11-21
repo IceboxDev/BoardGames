@@ -53,6 +53,24 @@ describe("scoreGroupDates", () => {
     expect(scored[D2]).toMatchObject({ missing: ["a", "b"], away: ["a"] });
   });
 
+  it("counts an assumed-free member as free everywhere, whatever they marked", () => {
+    const scored = scoreGroupDates({
+      group: ["me", "a", "b"],
+      dates: [D1, D2],
+      availability: { [D1]: [{ userId: "a", status: "can" }] },
+      awayByUser: { me: [D1, D2] },
+      assumeFree: new Set(["me"]),
+    });
+    expect(scored[D1]).toMatchObject({
+      tier: "most",
+      can: ["me", "a"],
+      assumed: ["me"],
+      missing: ["b"],
+      away: [],
+    });
+    expect(scored[D2]).toMatchObject({ can: ["me"], assumed: ["me"], missing: ["a", "b"] });
+  });
+
   it("picks the free night slot and nulls a full date", () => {
     const scored = scoreGroupDates({
       group: ["a"],
@@ -92,5 +110,15 @@ describe("rankGroupDates", () => {
       lockedNightKeys: new Set([D3, `${D3}_2`]),
     });
     expect(rankGroupDates(scored).map((m) => m.date)).toEqual([D2, D1, "2026-10-19"]);
+  });
+
+  it("never offers a date only the assumed-free searcher is free on", () => {
+    const scored = scoreGroupDates({
+      group: ["me", "a"],
+      dates: [D1, D2],
+      availability: { [D2]: [{ userId: "me", status: "can" }] },
+      assumeFree: new Set(["me"]),
+    });
+    expect(rankGroupDates(scored)).toEqual([]);
   });
 });
