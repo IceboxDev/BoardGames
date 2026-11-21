@@ -11,6 +11,7 @@
 //   pnpm --filter @boardgames/web card-art --game=hunger   # The Hunger's blocks instead
 //   pnpm --filter @boardgames/web card-art --game=relics   # campaign-night relics
 //   pnpm --filter @boardgames/web card-art --game=lost-cities   # Lost Cities' cards, trails, insignia
+//   pnpm --filter @boardgames/web card-art --game=decrypto   # Decrypto's Wireless Room desk
 //   pnpm --filter @boardgames/web card-art --game=quiz-domains   # quiz trainer section icons
 //   pnpm --filter @boardgames/web card-art --game=quiz-sources   # quiz question source marks
 //
@@ -47,6 +48,11 @@ const GAMES = {
   // the card back. Cards are drawn at most ~130 px wide in the fan (2× DPR →
   // 540 px tall at 2:3), a trail at most ~800 px tall.
   "lost-cities": { src: "lost-cities", out: "lost-cities", dir: "art", budgetKb: 8 * 1024 },
+  // Decrypto (ART-PROMPTS.md): the Wireless Room desk's parts — code
+  // screens, windows, plates, tokens, lamps, dials, teletype paper, desk
+  // textures, insignia and the five debrief scenes. Small parts are drawn
+  // at most ~60 px; a screen at most ~700 px wide, a debrief ~800 px.
+  decrypto: { src: "decrypto", out: "decrypto", dir: "art", budgetKb: 4 * 1024 },
   // Campaign-night relics (components/offline/CAMPAIGN-RELIC-PROMPTS.md): one
   // per headcount per campaign game plus the un-numbered relic, drawn at most
   // 112 px wide (the RSVP hero). Not a game's: they live under src/assets.

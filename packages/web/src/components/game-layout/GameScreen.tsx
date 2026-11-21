@@ -21,8 +21,7 @@ import { Eyebrow } from "../ui/Label";
 // JS, never both), so stateful rail content is never double-mounted.
 //
 //   mobileRails="none"  — the game re-surfaces its rail content itself inside
-//                         the board (Decrypto's MobilePanels) and wants no
-//                         rail bar.
+//                         the board and wants no rail bar.
 //   pinSidebars         — legacy escape hatch: keep both rails in the row at
 //                         every width. No game uses it; it exists so a board
 //                         whose rail IS the game (a status track that must

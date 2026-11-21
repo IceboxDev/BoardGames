@@ -49,7 +49,7 @@ export default function Decrypto({ source }: GameComponentProps) {
     return <GameOverScreen view={flow.view} actions={flow.endActions} />;
   }
 
-  // Room players by name; AI seats (and solo) are labelled by model / "You".
+  // Room players by name; AI seats (and solo) are labelled by their tier / "You".
   const playerNames = flow.seats.map((s) =>
     source === "mp" && s.kind === "human" ? s.name : null,
   );
@@ -57,6 +57,7 @@ export default function Decrypto({ source }: GameComponentProps) {
     <GameBoard
       view={flow.view}
       playerNames={playerNames}
+      images={flow.seats.map((s) => s.image ?? null)}
       onAction={flow.sendAction}
       error={flow.error}
     />

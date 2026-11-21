@@ -136,7 +136,8 @@ export function normalizeClue(clue: string): string {
   return clue.trim().toLowerCase().replace(/\s+/g, " ");
 }
 
-function clueWords(normalized: string): string[] {
+/** A normalized clue's words — what the keyword rule compares. */
+export function clueWords(normalized: string): string[] {
   return normalized.split(/[^a-z0-9à-ÿ]+/i).filter((w) => w.length > 0);
 }
 
