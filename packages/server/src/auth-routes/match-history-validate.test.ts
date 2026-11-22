@@ -433,6 +433,23 @@ describe("parseOutcome — D&D co-op (campaign + condition)", () => {
     }
   });
 
+  it("keeps a co-op player's role (The Crew's captain)", () => {
+    const result = parseOutcome({
+      kind: "coop",
+      outcome: "win",
+      scenario: "#3 Power and Priorities",
+      participants: [
+        { userId: "u1", displayName: "Alice", role: "Captain" },
+        { userId: "u2", displayName: "Bob" },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "coop") {
+      expect(result.value.participants[0].role).toBe("Captain");
+      expect("role" in result.value.participants[1]).toBe(false);
+    }
+  });
+
   it("rejects an unknown condition value", () => {
     expect(
       parseOutcome({

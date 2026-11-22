@@ -16,7 +16,7 @@ import { campaignNightFor } from "@boardgames/core/ical/campaign";
 import { nightDate } from "@boardgames/core/protocol";
 import { type InfiniteData, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { defaultKindForSlug, kindForVariant } from "../../games/match-kinds";
+import { coopLeaderRole, defaultKindForSlug, kindForVariant } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
 import { games } from "../../games/registry";
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
@@ -567,6 +567,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 users={allUsers}
                 value={outcome as MatchOutcomeCoop}
                 onChange={setOutcome}
+                leaderRole={coopLeaderRole(gameSlug)}
               />
             ))}
           {kind === "one-vs-many" && (

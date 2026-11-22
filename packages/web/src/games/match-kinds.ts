@@ -124,3 +124,22 @@ export function defaultKindForSlug(slug: string | null): MatchKind | null {
   if (!slug) return null;
   return MATCH_KIND_BY_SLUG[slug] ?? null;
 }
+
+/**
+ * Co-ops where one player leads the table and the match records who: The
+ * Crew's captain (whoever holds the 4 rocket — a different player each game).
+ * Stored as that participant's `role`.
+ */
+export type CoopLeaderRole = { label: string; hint: string };
+
+const CREW_CAPTAIN: CoopLeaderRole = { label: "Captain", hint: "Whoever held the 4 rocket" };
+
+const COOP_LEADER_ROLE: Record<string, CoopLeaderRole> = {
+  "the-crew-mission-deep-sea": CREW_CAPTAIN,
+  "the-crew-quest-for-planet-nine": CREW_CAPTAIN,
+};
+
+/** The leader role a co-op match of this game records, or null when it has none. */
+export function coopLeaderRole(slug: string | null): CoopLeaderRole | null {
+  return slug ? (COOP_LEADER_ROLE[slug] ?? null) : null;
+}

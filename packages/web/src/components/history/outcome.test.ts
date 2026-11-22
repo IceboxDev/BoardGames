@@ -1037,3 +1037,28 @@ describe("standalone days", () => {
     ]);
   });
 });
+
+describe("The Crew — captain", () => {
+  const P9 = "the-crew-quest-for-planet-nine";
+  const crew = (captain: boolean): MatchOutcomeCoop => ({
+    kind: "coop",
+    outcome: "win",
+    scenario: "#1 Teambuilding",
+    participants: [
+      { userId: "a", displayName: "Ana", ...(captain ? { role: "Captain" } : {}) },
+      { userId: "b", displayName: "Ben" },
+    ],
+  });
+
+  it("asks for the captain, and accepts the match once one is picked", () => {
+    expect(describeOutcomeError(crew(false), P9)).toBe("Pick the captain");
+    expect(describeOutcomeError(crew(true), P9)).toBeNull();
+    // Other co-ops have no captain to pick.
+    expect(describeOutcomeError(crew(false), "pandemic")).toBeNull();
+  });
+
+  it("leaves the captain behind when the game changes", () => {
+    const next = carryOverParticipants("coop", crew(true)) as MatchOutcomeCoop;
+    expect(next.participants.every((p) => p.role === undefined)).toBe(true);
+  });
+});

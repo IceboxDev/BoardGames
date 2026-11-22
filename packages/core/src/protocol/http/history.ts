@@ -194,10 +194,12 @@ export type MatchOutcomeLastStanding = z.infer<typeof MatchOutcomeLastStandingSc
 
 // A co-op participant. `condition` is D&D-specific: whether this character went
 // down during the session — "unconscious" (dropped to 0 HP but survived) or
-// "dead" (permanent character death). Absent = came through unscathed. It is the
-// only per-player datum a co-op carries; the win/loss is shared by the table.
+// "dead" (permanent character death). Absent = came through unscathed. `role`
+// marks the one player who led the table (The Crew's captain — see
+// `coopLeaderRole` in web's match-kinds). The win/loss is shared by the table.
 export const CoopParticipantSchema = ParticipantSchema.extend({
   condition: z.enum(["unconscious", "dead"]).optional(),
+  role: z.string().max(64).optional(),
 });
 export type CoopParticipant = z.infer<typeof CoopParticipantSchema>;
 

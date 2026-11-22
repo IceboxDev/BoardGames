@@ -888,9 +888,11 @@ function CoopInline({
               name={p.displayName}
               tone={won ? "winner" : "loser"}
               isMe={p.userId === currentUserId}
+              title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
             />
           ))}
         </span>
+        <CoopLeaders outcome={outcome} />
       </div>
     );
   }
@@ -929,11 +931,26 @@ function CoopInline({
             name={p.displayName}
             tone={won ? "winner" : "loser"}
             isMe={p.userId === currentUserId}
+            title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
           />
         ))}
       </span>
+      <CoopLeaders outcome={outcome} />
     </div>
   );
+}
+
+// A co-op's leader (The Crew's captain): role caption + first name after the
+// party, so who led each mission reads at a glance.
+function CoopLeaders({ outcome }: { outcome: MatchOutcomeCoop }) {
+  return outcome.participants
+    .filter((p) => p.role)
+    .map((p) => (
+      <span key={p.userId} className="inline-flex items-center gap-1 text-3xs text-fg-muted">
+        <MicroLabel>{p.role}</MicroLabel>
+        {p.displayName.trim().split(/\s+/)[0]}
+      </span>
+    ));
 }
 
 function DndInline({

@@ -166,12 +166,30 @@ export function summaryLine(
   const since = `since ${formatDay(nightDate(first.nightKey))}`;
   if (missions.length > 0) {
     const cleared = clearedMissions(sessions).size;
-    return `Session ${tonight.n} · ${cleared} of ${missions.length} missions cleared · ${since}`;
+    const tries = missionAttempts(sessions);
+    const inTries = tries > 0 ? ` in ${tries} ${tries === 1 ? "attempt" : "attempts"}` : "";
+    return `Session ${tonight.n} · ${cleared} of ${missions.length} missions cleared${inTries} · ${since}`;
   }
   const logged = sessions
     .filter((s) => s.when !== "upcoming")
     .reduce((n, s) => n + s.matches.length, 0);
   return `Session ${tonight.n} · ${logged} ${logged === 1 ? "match" : "matches"} logged · ${since}`;
+}
+
+/**
+ * Attempts so far, like the logbook's tally: every recorded match on a
+ * numbered mission (tonight's included), or only those on mission `n`.
+ */
+export function missionAttempts(sessions: readonly CampaignSession[], n?: number): number {
+  let count = 0;
+  for (const s of sessions) {
+    if (s.when === "upcoming") continue;
+    for (const m of s.matches) {
+      const mission = missionOfMatch(m);
+      if (mission !== null && (n === undefined || mission === n)) count++;
+    }
+  }
+  return count;
 }
 
 /** The next mission not yet cleared, when the game numbers its missions. */

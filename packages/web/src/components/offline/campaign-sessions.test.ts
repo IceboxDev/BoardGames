@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import {
   campaignSessions,
   matchChip,
+  missionAttempts,
   missionOfMatch,
   missionsOf,
   nextMission,
@@ -107,9 +108,18 @@ describe("missions", () => {
     const s = campaignSessions(BB, locks, "2026-10-23", ms);
     const total = missionsOf(BB).length;
     expect(summaryLine(BB, s, (k) => k)).toBe(
-      `Session 2 · 1 of ${total} missions cleared · since 2026-10-02`,
+      `Session 2 · 1 of ${total} missions cleared in 2 attempts · since 2026-10-02`,
     );
     expect(nextMission(BB, s)?.n).toBe(2);
+    expect(missionAttempts(s, 2)).toBe(1);
+    expect(missionAttempts(s, 3)).toBe(0);
+  });
+
+  it("numbers Planet Nine's 50 logbook missions", () => {
+    const p9 = missionsOf("the-crew-quest-for-planet-nine");
+    expect(p9).toHaveLength(50);
+    expect(p9.map((m) => m.n)).toEqual(Array.from({ length: 50 }, (_, i) => i + 1));
+    expect(p9[11]).toEqual({ n: 12, label: "Papers Everywhere" });
   });
 
   it("says the campaign starts tonight on its first session", () => {

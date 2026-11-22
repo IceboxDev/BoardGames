@@ -13,6 +13,7 @@
 
 import { QUIZTOPIA_MODES } from "@boardgames/core/history/coop-challenge";
 import { DUNGEON_MAYHEM_SET_LABELS } from "./dungeon-mayhem/characters";
+import { PLANET_NINE_LOGBOOK, planetNineScenario } from "./the-crew-quest-for-planet-nine/logbook";
 import { TRIVIAL_PURSUIT_EDITIONS } from "./trivial-pursuit/editions";
 import {
   defaultBoxLabelForGame,
@@ -498,6 +499,17 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Big Button", label: "Big Button" },
       { value: "Big Button 2", label: "Big Button 2" },
     ],
+  },
+  // The Crew: Quest for Planet Nine — the logbook's 50 numbered missions
+  // (the-crew-quest-for-planet-nine/logbook.ts), stored "#12 Papers
+  // Everywhere" like Bomb Busters so the campaign thread counts them.
+  "the-crew-quest-for-planet-nine": {
+    label: "Mission",
+    mode: "single",
+    options: PLANET_NINE_LOGBOOK.map((m) => {
+      const value = planetNineScenario(m);
+      return { value, label: value };
+    }),
   },
   // Questline's one expansion, the Solstice mini-expansion (six more classes).
   // The base game is always in play, so it is pre-checked, like 7 Wonders.

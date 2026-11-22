@@ -3,6 +3,7 @@ import { type CampaignNight, pickKeeper } from "@boardgames/core/ical/campaign";
 import { type CalendarLocks, nightDate } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
+import { planetNineMission } from "../../games/the-crew-quest-for-planet-nine/logbook";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 import { cn } from "../../lib/cn";
@@ -21,9 +22,11 @@ import {
   type CampaignSession,
   campaignSessions,
   matchChip,
+  missionAttempts,
   nextMission,
   summaryLine,
 } from "./campaign-sessions";
+import { LogbookBrief } from "./LogbookBrief";
 
 // The RSVP modal's body for a campaign night (D&D among them): the campaign
 // as one thread. Past sessions sit above tonight — each with its party and
@@ -108,6 +111,10 @@ export default function CampaignNightPanel({
   const tonight = sessions.find((s) => s.when === "tonight");
   const upcoming = sessions.filter((s) => s.when === "upcoming");
   const next = nextMission(campaign.slug, sessions);
+  const nextTries = next ? missionAttempts(sessions, next.n) : 0;
+  // Planet Nine's logbook: the next mission's setup and special rule.
+  const logbook =
+    next && campaign.slug === "the-crew-quest-for-planet-nine" ? planetNineMission(next.n) : null;
   const party = attendees.filter((a) => a.status === "definite");
   const canFind = isAdmin && onFindNextSession !== undefined;
 
@@ -151,9 +158,11 @@ export default function CampaignNightPanel({
                 {next && (
                   <span className="campaign-ink text-xs opacity-80">
                     Next: #{next.n} {next.label}
+                    {nextTries > 0 && ` · attempt ${nextTries + 1}`}
                   </span>
                 )}
               </div>
+              {logbook && <LogbookBrief mission={logbook} partyCount={partyCount} />}
               {tonight && tonight.matches.length > 0 && <MatchChips session={tonight} />}
               {party.length === 0 ? (
                 <p className="campaign-ink text-xs opacity-80">The party is still assembling…</p>

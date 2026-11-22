@@ -30,6 +30,7 @@ import type {
 } from "@boardgames/core/history/types";
 import { nightDate } from "@boardgames/core/protocol";
 import { isClocktowerTraveller } from "../../games/blood-on-the-clocktower/characters";
+import { coopLeaderRole } from "../../games/match-kinds";
 import { JAIPUR_BEST_OF_ONE } from "../../games/match-variants";
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
@@ -266,6 +267,11 @@ export function describeOutcomeError(
           if (outcome.score < 0 || outcome.score > max) return `Score must be between 0 and ${max}`;
         }
       }
+      {
+        const leader = coopLeaderRole(gameSlug);
+        if (leader && !outcome.participants.some((p) => p.role === leader.label))
+          return `Pick the ${leader.label.toLowerCase()}`;
+      }
       return null;
     case "one-vs-many":
       if (!outcome.solo.userId) return "Pick the solo player";
@@ -480,7 +486,9 @@ export function flatParticipants(outcome: MatchOutcome): Participant[] {
     case "teams":
       return outcome.teams.flatMap((t) => t.members);
     case "coop":
-      return outcome.participants;
+      // Bare players: a captain or a D&D casualty belongs to the game it was
+      // recorded for, not the next one picked.
+      return outcome.participants.map((p) => ({ userId: p.userId, displayName: p.displayName }));
     case "one-vs-many":
       return [
         ...(outcome.solo.userId

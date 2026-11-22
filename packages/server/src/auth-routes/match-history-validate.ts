@@ -465,7 +465,15 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
       }
       condition = raw.condition;
     }
-    participants.push({ ...p.value, ...(condition !== undefined ? { condition } : {}) });
+    // Optional per-player role label (The Crew's captain) — mirrors the
+    // free-for-all `role` handling so it survives the write round-trip.
+    const role =
+      isPlainObject(raw) && raw.role !== undefined ? asOptionalString(raw.role, 64) : undefined;
+    participants.push({
+      ...p.value,
+      ...(role !== undefined ? { role } : {}),
+      ...(condition !== undefined ? { condition } : {}),
+    });
   }
   // `outcome` (win/loss) and `score` are both optional, but a coop match needs at
   // least one: binary co-ops carry win/loss, scored co-ops (Just One) carry a

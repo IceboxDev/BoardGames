@@ -92,6 +92,18 @@ describe("MatchOutcomeSchema", () => {
     }
   });
 
+  it("keeps a co-op player's role (The Crew's captain)", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "coop",
+      outcome: "win",
+      participants: [
+        { ...sampleParticipant("u1", "Alice"), role: "Captain" },
+        sampleParticipant("u2", "Bob"),
+      ],
+    });
+    expect(parsed.kind === "coop" && parsed.participants[0].role).toBe("Captain");
+  });
+
   // ── Win/draw/loss duels (chess, Connect 4) ────────────────────────────
 
   it("keeps the secondary tiebreak count — a Sensō Emperor ranked 1 below the top score", () => {
