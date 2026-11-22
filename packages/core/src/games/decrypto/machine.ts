@@ -117,6 +117,12 @@ function modelForSeat(ctx: DecryptoContext, seat: number): string {
   return canonicalDecryptoModel(ctx.aiModels[seat] ?? DEFAULT_DECRYPTO_MODEL);
 }
 
+/** The AI tier that will play `purpose` on `tx`, or null when a person will (any human seat decides). */
+function guesserTier(ctx: DecryptoContext, tx: Transmission, purpose: GuessPurpose): string | null {
+  const seat = eligibleSeats(ctx, tx, purpose)[0];
+  return seat !== undefined && guessDrivenByAi(ctx, tx, purpose) ? modelForSeat(ctx, seat) : null;
+}
+
 function buildEncryptInput(ctx: DecryptoContext, tx: Transmission): EncryptInput {
   const team = ctx.teams[tx.team];
   const opponent = ctx.teams[(1 - tx.team) as Team];
@@ -138,6 +144,9 @@ function buildEncryptInput(ctx: DecryptoContext, tx: Transmission): EncryptInput
         miscommunications: opponent.miscommunications,
       },
     },
+    variant: ctx.variant,
+    decoder: guesserTier(ctx, tx, "decode"),
+    interceptor: guesserTier(ctx, tx, "intercept"),
   };
 }
 

@@ -113,7 +113,7 @@ const STEPS: Step[] = [
       }),
   },
   {
-    name: "decrypto: encrypt (expert — smart role)",
+    name: "decrypto: encrypt (Mastermind — the search)",
     run: () =>
       openAiDecryptoAgent.encrypt({
         model: "decrypto-expert",
@@ -128,10 +128,13 @@ const STEPS: Step[] = [
           own: { interceptions: 0, miscommunications: 0 },
           opp: { interceptions: 0, miscommunications: 0 },
         },
+        variant: "standard",
+        decoder: "decrypto-expert",
+        interceptor: "decrypto-expert",
       }),
   },
   {
-    name: "decrypto: intercept (hard — balanced role)",
+    name: "decrypto: intercept (Analyst — smart role)",
     run: () =>
       openAiDecryptoAgent.guess({
         model: "decrypto-hard",

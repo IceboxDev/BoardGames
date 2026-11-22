@@ -41,6 +41,12 @@ export interface EncryptInput {
     own: { interceptions: number; miscommunications: number };
     opp: { interceptions: number; miscommunications: number };
   };
+  /** "interceptor": a miscommunication also feeds the lone interceptor's token pool. */
+  variant: "standard" | "interceptor";
+  /** Who decodes these clues: the AI tier of the decoding seat, or null for a person. */
+  decoder: string | null;
+  /** Who intercepts them: the AI tier of the intercepting seat, or null for a person. */
+  interceptor: string | null;
 }
 
 export interface GuessInput {

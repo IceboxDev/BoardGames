@@ -5,6 +5,11 @@
  * gateway slug), so ids stay provider-neutral on the wire and in persisted
  * room state / match history.
  *
+ * Tier ids are stable while what they play moves: on 2026-11-22 the old Scout
+ * (fast model) retired, Scout took the old Analyst's play, Analyst the old
+ * Mastermind's, and Mastermind became the search
+ * (`server/src/games/decrypto-mastermind.ts`).
+ *
  * `difficulty` matches the web setup screen's shared DifficultyTier vocabulary
  * ("Easy" | "Medium" | "Hard" | "Hard+" | "Expert").
  */
@@ -19,19 +24,21 @@ export const DECRYPTO_AI_MODELS: readonly DecryptoAiModel[] = [
   {
     id: "decrypto-medium",
     label: "Scout",
-    description: "Fast and cheap. Gives serviceable clues but misses subtle associations.",
+    description: "A solid all-rounder — coherent clues and decent pattern-matching on yours.",
     difficulty: "Medium",
   },
   {
     id: "decrypto-hard",
     label: "Analyst",
-    description: "A solid all-rounder — coherent clues and decent pattern-matching on yours.",
+    description:
+      "Oblique clues for its team, sharp interception on yours. Thinks each clue through once.",
     difficulty: "Hard",
   },
   {
     id: "decrypto-expert",
     label: "Mastermind",
-    description: "The strongest agent. Oblique clues for its team, ruthless interception on yours.",
+    description:
+      "The strongest agent. Weighs a dozen clues per digit, tests them on simulated teammates and interceptors, and plays the score. Takes its time.",
     difficulty: "Expert",
   },
 ] as const;
