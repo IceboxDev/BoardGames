@@ -74,6 +74,7 @@ import { adminPicks } from "./0066-admin-picks.ts";
 import { fixedGame } from "./0067-fixed-game.ts";
 import { duetCampaigns } from "./0068-duet-campaigns.ts";
 import { siteHibernation } from "./0069-site-hibernation.ts";
+import { nonDrinker } from "./0070-non-drinker.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -146,6 +147,7 @@ export const migrations: readonly Migration[] = [
   fixedGame,
   duetCampaigns,
   siteHibernation,
+  nonDrinker,
 ];
 
 /**

@@ -88,6 +88,14 @@ export const auth = betterAuth({
         defaultValue: false,
         input: false,
       },
+      // Admin-set (migration 0070): a voting night with a non-drinker coming
+      // leaves the drinking games out of its picker.
+      nonDrinker: {
+        type: "boolean",
+        required: false,
+        defaultValue: false,
+        input: false,
+      },
     },
   },
   plugins: [admin()],

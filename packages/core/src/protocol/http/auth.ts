@@ -40,6 +40,12 @@ export const SetOnlineModeBodySchema = z.object({
 });
 export type SetOnlineModeBody = z.infer<typeof SetOnlineModeBodySchema>;
 
+/** `POST /api/admin/users/:id/non-drinker` — mark whether a member drinks. */
+export const SetNonDrinkerBodySchema = z.object({
+  nonDrinker: z.boolean(),
+});
+export type SetNonDrinkerBody = z.infer<typeof SetNonDrinkerBodySchema>;
+
 // ── Admin: user list (better-auth admin plugin response) ───────────────
 
 /**
@@ -81,6 +87,8 @@ export const AdminUserSchema = z.object({
   onlineMode: OnlineModeSchema.nullable().optional(),
   internal: z.boolean().nullable().optional(),
   guest: z.boolean().nullable().optional(),
+  /** Admin-set: drinking games stay out of a voting night's picker while they're coming. */
+  nonDrinker: z.boolean().nullable().optional(),
   banned: z.boolean().nullable().optional(),
   banReason: z.string().nullable().optional(),
   banExpires: z.union([z.string(), z.date()]).nullable().optional(),

@@ -15,6 +15,7 @@ import {
   OkResponseSchema,
   type OnlineMode,
   PublishGreetingBodySchema,
+  SetNonDrinkerBodySchema,
   SetOnlineModeBodySchema,
   type UnseenActivityResponse,
   UnseenActivityResponseSchema,
@@ -26,6 +27,16 @@ export async function adminSetOnlineMode(userId: string, onlineMode: OnlineMode)
     method: "POST",
     body: { onlineMode },
     request: SetOnlineModeBodySchema,
+    response: OkResponseSchema,
+  });
+}
+
+/** Mark whether a member drinks (drinking games leave their nights' pickers). */
+export async function adminSetNonDrinker(userId: string, nonDrinker: boolean) {
+  await apiFetch(`/api/admin/users/${userId}/non-drinker`, {
+    method: "POST",
+    body: { nonDrinker },
+    request: SetNonDrinkerBodySchema,
     response: OkResponseSchema,
   });
 }

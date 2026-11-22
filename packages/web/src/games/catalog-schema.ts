@@ -33,6 +33,8 @@ export const CatalogEntrySchema = z
     bggOverrides: BggGameSchema.partial().optional(),
     /** Browsable and collectable, but never offered at a game night (an IQ/puzzle pack). */
     notABoardGame: z.literal(true).optional(),
+    /** Played with drinks — hidden from a night's picker when a non-drinker is coming. */
+    drinking: z.literal(true).optional(),
   })
   // Reject unknown fields rather than silently dropping them — catches
   // typos like `lobbyConfigComponent: ...` accidentally landing in

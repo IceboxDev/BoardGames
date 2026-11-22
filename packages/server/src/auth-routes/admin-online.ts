@@ -1,4 +1,8 @@
-import { OkResponseSchema, SetOnlineModeBodySchema } from "@boardgames/core/protocol";
+import {
+  OkResponseSchema,
+  SetNonDrinkerBodySchema,
+  SetOnlineModeBodySchema,
+} from "@boardgames/core/protocol";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
@@ -17,6 +21,22 @@ adminOnlineRoutes.post("/:id/online-mode", zJsonBody(SetOnlineModeBodySchema), a
     args: [onlineMode, userId],
   });
 
+  if (result.rowsAffected === 0) {
+    return errorResponse(c, 404, "user not found");
+  }
+  return c.json(OkResponseSchema.parse({ ok: true }));
+});
+
+// POST /:id/non-drinker — admin marks whether a member drinks. A voting night
+// with a non-drinker coming leaves the drinking games out of its picker
+// (lib/night-picker-filters.ts).
+adminOnlineRoutes.post("/:id/non-drinker", zJsonBody(SetNonDrinkerBodySchema), async (c) => {
+  const userId = c.req.param("id");
+  const { nonDrinker } = c.req.valid("json");
+  const result = await getDb().execute({
+    sql: `UPDATE "user" SET "nonDrinker" = ? WHERE id = ?`,
+    args: [nonDrinker ? 1 : 0, userId],
+  });
   if (result.rowsAffected === 0) {
     return errorResponse(c, 404, "user not found");
   }

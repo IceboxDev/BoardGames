@@ -31,7 +31,12 @@ import {
 } from "../components/ui";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { adminFetchUnseenActivity, adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
+import {
+  adminFetchUnseenActivity,
+  adminGenerateResetLink,
+  adminSetNonDrinker,
+  adminSetOnlineMode,
+} from "../lib/admin";
 import { authClient } from "../lib/auth-client";
 import { errorMessageOf } from "../lib/error-message";
 import { adminFetchLastAttended } from "../lib/match-history";
@@ -229,6 +234,14 @@ export default function AdminPage() {
     },
   });
 
+  const nonDrinkerMutation = useMutation({
+    mutationFn: ({ userId, nonDrinker }: { userId: string; nonDrinker: boolean }) =>
+      adminSetNonDrinker(userId, nonDrinker),
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
+    },
+  });
+
   const deleteMutation = useMutation({
     mutationFn: async (userId: string) => {
       const { error } = await authClient.admin.removeUser({ userId });
@@ -263,6 +276,7 @@ export default function AdminPage() {
   const errorMessage =
     errorMessageOf(usersQuery.error, "Failed to load users") ??
     errorMessageOf(setOnlineModeMutation.error, "Update failed") ??
+    errorMessageOf(nonDrinkerMutation.error, "Update failed") ??
     errorMessageOf(deleteMutation.error, "Delete failed") ??
     errorMessageOf(resetLinkMutation.error, "Couldn't generate reset link");
 
@@ -300,6 +314,12 @@ export default function AdminPage() {
         onSetOnlineMode={(mode) => setOnlineModeMutation.mutate({ userId: u.id, mode })}
         pending={
           setOnlineModeMutation.isPending && setOnlineModeMutation.variables?.userId === u.id
+        }
+        onToggleNonDrinker={() =>
+          nonDrinkerMutation.mutate({ userId: u.id, nonDrinker: !u.nonDrinker })
+        }
+        nonDrinkerPending={
+          nonDrinkerMutation.isPending && nonDrinkerMutation.variables?.userId === u.id
         }
         onOpenCalendar={() => setCalendarUser(u)}
         onOpenActivity={() => setActivityUser(u)}

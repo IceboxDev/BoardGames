@@ -6,6 +6,7 @@ import {
   AuthConfigSchema,
   OnlineModeSchema,
   SessionUserSchema,
+  SetNonDrinkerBodySchema,
   SetOnlineModeBodySchema,
   WsTicketResponseSchema,
 } from "./auth.ts";
@@ -252,5 +253,13 @@ describe("AdminUserListSchema", () => {
         { id: "u2", email: "c@d.com", createdAt: "2026-01-02" },
       ]),
     ).toThrow();
+  });
+});
+
+describe("SetNonDrinkerBodySchema", () => {
+  it("takes a boolean and rejects anything else", () => {
+    expect(SetNonDrinkerBodySchema.parse({ nonDrinker: true })).toEqual({ nonDrinker: true });
+    expect(() => SetNonDrinkerBodySchema.parse({ nonDrinker: "yes" })).toThrow();
+    expect(() => SetNonDrinkerBodySchema.parse({})).toThrow();
   });
 });

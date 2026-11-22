@@ -26,6 +26,11 @@ import { z } from "zod";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "./db-rows.ts";
 import { fetchNewSlugsByUser } from "./new-acquisitions.ts";
 import { deriveNightParticipants, loadNightLock, sealedAt } from "./night-participants.ts";
+import {
+  loadPickerFilterInputs,
+  nightPickerExclusions,
+  withoutExcluded,
+} from "./night-picker-filters.ts";
 
 // ── Row projections ───────────────────────────────────────────────────
 //
@@ -426,7 +431,15 @@ export async function computeAvailableGamesPayload(opts: {
       inventoryByUser.set(inv.user_id, set);
     }
   }
-  const ownedSlugs = [...ownedUnion].sort();
+  // A still-voting night leaves out drinking games when a non-drinker is
+  // coming and every ongoing campaign (lib/night-picker-filters.ts). From here
+  // on "owned" means "on offer": the picker, the bring list and the ranking.
+  const excluded = nightPickerExclusions(await loadPickerFilterInputs(db), {
+    sealed: picksLockedAt !== null,
+    peopleIds: [...definiteIds, ...tentativeIds],
+  });
+  const onOffer = withoutExcluded(ownedUnion, excluded);
+  const ownedSlugs = [...onOffer].sort();
 
   // New for the table: a copy that is new to ONE of the attending owners is
   // shown as new to everyone in the picker. Only owners who are coming count
@@ -444,7 +457,7 @@ export async function computeAvailableGamesPayload(opts: {
   // "Playable" = owned AND fits the night's headcount window (open: [definite,
   // definite+tentative]; private: the seat count both ways).
   const { lo, hi } = participants.window;
-  const playableSlugs = computePlayableSlugs(ownedUnion, lo, hi);
+  const playableSlugs = computePlayableSlugs(onOffer, lo, hi);
 
   type ReactionAggregate = {
     hype: number;

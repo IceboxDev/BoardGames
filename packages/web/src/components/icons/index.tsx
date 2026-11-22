@@ -595,6 +595,23 @@ export function KeyIcon({ className = "h-4 w-4" }: IconProps) {
   );
 }
 
+// A glass struck through — the admin users table's non-drinker toggle.
+export function NoDrinkIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M4.5 2.5 H11.5 L10.5 13.5 H5.5 Z" />
+      <path d="M5 6.5 H11" />
+      <path d="M2.5 13.5 L13.5 2.5" />
+    </svg>
+  );
+}
+
 // Four-point sparkle — the "skill profile coming soon" placeholder and other
 // generated/aspirational affordances on the profile page.
 export function SparkleIcon({ className = "h-4 w-4" }: IconProps) {

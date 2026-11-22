@@ -21,6 +21,8 @@ export type CatalogSlugEntry = {
   skills: SkillWeights;
   /** In the catalog (and collections) but not something a game night plays — a puzzle/IQ pack. */
   notABoardGame?: boolean;
+  /** Played with drinks — left out of a night's picker when a non-drinker is coming. */
+  drinking?: boolean;
 };
 
 /** The raw catalog array, as committed. Validated downstream by web. */

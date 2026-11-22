@@ -1,6 +1,6 @@
 import type { OnlineMode } from "@boardgames/core/protocol";
 import type { Coverage } from "../../pages/admin-coverage";
-import { KeyIcon } from "../icons";
+import { KeyIcon, NoDrinkIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
 import { IconButton } from "../ui/IconButton";
@@ -33,6 +33,9 @@ export type UserRowProps = {
   /** Online-mode picker. `pending` greys the control while the mutation is in flight. */
   onSetOnlineMode: (mode: OnlineMode) => void;
   pending: boolean;
+  /** Non-drinker toggle: drinking games leave the pickers of nights they come to. */
+  onToggleNonDrinker: () => void;
+  nonDrinkerPending: boolean;
   /** Calendar drawer trigger. */
   onOpenCalendar: () => void;
   /** Activity drawer trigger (clicking the user's name). */
@@ -72,6 +75,8 @@ export function UserRow({
   onToggleInventory,
   onSetOnlineMode,
   pending,
+  onToggleNonDrinker,
+  nonDrinkerPending,
   onOpenCalendar,
   onOpenActivity,
   deleteMode,
@@ -150,6 +155,9 @@ export function UserRow({
             email={user.email}
             onSetOnlineMode={onSetOnlineMode}
             pending={pending}
+            nonDrinker={user.nonDrinker === true}
+            onToggleNonDrinker={onToggleNonDrinker}
+            nonDrinkerPending={nonDrinkerPending}
             onResetPassword={onResetPassword}
             resettingPassword={resettingPassword}
           />
@@ -205,6 +213,9 @@ type DeleteOrOnlineProps = {
   email: string;
   onSetOnlineMode: (mode: OnlineMode) => void;
   pending: boolean;
+  nonDrinker: boolean;
+  onToggleNonDrinker: () => void;
+  nonDrinkerPending: boolean;
   onResetPassword: () => void;
   resettingPassword: boolean;
 };
@@ -224,6 +235,9 @@ function DeleteOrOnlineCell({
   email,
   onSetOnlineMode,
   pending,
+  nonDrinker,
+  onToggleNonDrinker,
+  nonDrinkerPending,
   onResetPassword,
   resettingPassword,
 }: DeleteOrOnlineProps) {
@@ -246,6 +260,20 @@ function DeleteOrOnlineCell({
         )
       ) : (
         <>
+          <IconButton
+            variant="subtle"
+            size="xs"
+            pressed={nonDrinker}
+            aria-label={`Non-drinker: ${email}`}
+            title={
+              nonDrinker
+                ? "Non-drinker — drinking games stay out of their nights' pickers"
+                : "Mark as non-drinker"
+            }
+            onClick={onToggleNonDrinker}
+            disabled={nonDrinkerPending}
+            icon={<NoDrinkIcon className="h-3.5 w-3.5" />}
+          />
           <IconButton
             variant="subtle"
             size="xs"

@@ -33,6 +33,8 @@ function defaultProps() {
     onToggleInventory: vi.fn(),
     onSetOnlineMode: vi.fn(),
     pending: false,
+    onToggleNonDrinker: vi.fn(),
+    nonDrinkerPending: false,
     onOpenCalendar: vi.fn(),
     onOpenActivity: vi.fn(),
     deleteMode: false,
@@ -312,5 +314,16 @@ describe("UserRow — inventory expansion", () => {
       </table>,
     );
     expect(screen.getByTestId("inv-u1")).toBeInTheDocument();
+  });
+});
+
+describe("UserRow — non-drinker toggle", () => {
+  it("shows the flag as pressed and toggles it", async () => {
+    const onToggleNonDrinker = vi.fn();
+    renderRow({ user: user({ nonDrinker: true }), onToggleNonDrinker });
+    const button = screen.getByRole("button", { name: /non-drinker/i });
+    expect(button).toHaveAttribute("aria-pressed", "true");
+    await userEvent.click(button);
+    expect(onToggleNonDrinker).toHaveBeenCalledTimes(1);
   });
 });

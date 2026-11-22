@@ -37,6 +37,11 @@ import {
   loadNightLock,
   sealedAt,
 } from "../lib/night-participants.ts";
+import {
+  loadPickerFilterInputs,
+  nightPickerExclusions,
+  withoutExcluded,
+} from "../lib/night-picker-filters.ts";
 import { RSVP_NOW } from "./calendar-rsvps.ts";
 
 /**
@@ -383,7 +388,7 @@ calendarLocksRoutes.post("/private-night", zJsonBody(PrivateNightUpdateBodySchem
 calendarLocksRoutes.get("/locks", async (c) => {
   const viewer = c.get("user");
   const viewerIsAdmin = viewer.role === "admin";
-  const [locks, rsvpsResult, availabilityResult, reactionsResult, inventoryResult] =
+  const [locks, rsvpsResult, availabilityResult, reactionsResult, inventoryResult, pickerFilters] =
     await Promise.all([
       loadActiveNightLocks(getDb()),
       getDb().execute("SELECT date_key, user_id, status, rsvped_at FROM rsvps"),
@@ -400,6 +405,9 @@ calendarLocksRoutes.get("/locks", async (c) => {
         "SELECT date_key, user_id, game_slug, reaction, created_at FROM game_requests WHERE date_key IN (SELECT date_key FROM locked_dates WHERE unlocked_at IS NULL)",
       ),
       getDb().execute("SELECT user_id, game_slugs_json FROM user_inventory"),
+      // Non-drinkers and ongoing campaigns: what a still-voting night's
+      // picker leaves out (the same rule as the per-night payload).
+      loadPickerFilterInputs(getDb()),
     ]);
 
   // user_id → owned slug set. One row per user, so loading the whole table is
@@ -467,7 +475,17 @@ calendarLocksRoutes.get("/locks", async (c) => {
           isPrivate: lock.isPrivate,
           hostUserId: lock.hostUserId,
           voters: participants.voters,
-          playableSlugs: computePlayableSlugs(ownedUnion, lo, hi),
+          playableSlugs: computePlayableSlugs(
+            withoutExcluded(
+              ownedUnion,
+              nightPickerExclusions(pickerFilters, {
+                sealed: sealedAt(lock) !== null,
+                peopleIds: [...participants.definite, ...participants.tentative],
+              }),
+            ),
+            lo,
+            hi,
+          ),
         },
         reactionsByDate.get(lock.dateKey) ?? [],
         1,
