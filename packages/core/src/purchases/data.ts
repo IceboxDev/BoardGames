@@ -651,9 +651,10 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     pledgeManagerUrl: "https://www.allplay.com/pledge-manager",
     // The Kickstarter pledge itself promised "Estimated delivery Nov 2026";
     // the Aug 25 '26 update still estimates October/November delivery. The
-    // Oct 15 update has the EU ship reaching the warehouse Nov 22, with
-    // receiving, packing and shipping still to follow (and delays expected
-    // on at least one ship) — so delivery reads as December.
+    // Oct 15 update had the EU ship reaching the warehouse Nov 22; the
+    // creator's pinned comment of ~Nov 20 moved that to Nov 30 (OOCL
+    // Portugal to Germany), with receiving, packing and shipping still to
+    // follow — so delivery reads as December.
     originalEtaMonth: "2026-11",
     currentEtaMonth: "2026-12",
     pledgedOn: "2026-03-25",
@@ -716,6 +717,18 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4779725",
       },
       {
+        id: "roma-xli-e06",
+        occurredOn: "2026-09-16",
+        type: "delay",
+        title: "Factory delays — production finishing in about two weeks, delivery around November",
+        details:
+          "Creator comment: the factory had some delays and would finish production in about " +
+          "two weeks; after ocean freight, everything was estimated to ship to backers around " +
+          "November. A later comment (early Oct, date approximate) blamed unexpected delays on " +
+          "a few components and said no deliveries before November at the earliest.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/comments",
+      },
+      {
         id: "roma-xli-e05",
         occurredOn: "2026-10-15",
         type: "status-change",
@@ -726,6 +739,28 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "Dec 5 — with delays likely on at least one ship and receiving, packing and " +
           "shipping still to come after arrival.",
         sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4829043",
+      },
+      {
+        id: "roma-xli-e07",
+        occurredOn: "2026-10-23",
+        type: "note",
+        title: "Creator still hoping for Nov/Dec delivery in the UK",
+        details:
+          "Creator comment, answering whether the UK would slip to Q1 2027: hoping for " +
+          "November/December delivery in the UK, with some unknowns still at play.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/comments",
+      },
+      {
+        id: "roma-xli-e08",
+        occurredOn: "2026-11-20",
+        type: "delay",
+        title: "More ocean delays — EU ship (OOCL Portugal) to the German warehouse ~Nov 30",
+        details:
+          "Pinned creator comment (date approximate): Australia reached its warehouse Nov 13 " +
+          "(Aetherworks fulfils); Canada and the EU are due at their warehouses ~Nov 30, the " +
+          "EU on the OOCL Portugal to Germany; USA ~Dec 11, UK ~Dec 21. A fuller update and " +
+          "possibly ship tracking were promised; address changes go to help@allplay.com.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/comments",
       },
     ],
   },
@@ -1023,10 +1058,10 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion",
     pledgeManagerUrl: null, // BackerKit survey; closed Aug 31 '26, cards charged Sep 1
     // A BackerKit "Ready-to-Ship" campaign — printing ran during the campaign
-    // and the page promises "Estimated to ship by October 2026". The Oct 14
-    // update puts the EU container at the fulfilment hub in late November and
-    // warns that's a hub date, not a doorstep date (holiday-rush queue) —
-    // so delivery reads as December.
+    // and the page promises "Estimated to ship by October 2026". The Oct 13
+    // update put the EU container at the fulfilment hub in late November; by
+    // Nov 18 its Southampton arrival had slipped to Nov 30, with the hub
+    // queue and the last leg still to come — so delivery reads as December.
     originalEtaMonth: "2026-10",
     currentEtaMonth: "2026-12",
     pledgedOn: "2026-08-03",
@@ -1084,19 +1119,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
       {
         id: "parks-europe-e04",
-        occurredOn: "2026-10-14",
+        occurredOn: "2026-10-13",
         type: "status-change",
         title: "Production finished Sep 24 — EU container waiting at the port",
         details:
           "Parks Europe finished production September 24. The US shipment is on the water; " +
           "the Canada, Europe and Australia containers are packed and waiting at the port in " +
-          "China for their ships. (Date approximate.)",
+          "China for their ships.",
         sourceUrl:
           "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/53168",
       },
       {
         id: "parks-europe-e05",
-        occurredOn: "2026-10-14",
+        occurredOn: "2026-10-13",
         type: "delay",
         title: "Typhoons and Golden Week miss every sailing — EU hub arrival late November",
         details:
@@ -1104,9 +1139,61 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "four typhoons and daily intake limits backed up Yantian port, and Golden Week " +
           "(Oct 1–7) followed. Expected hub arrivals: Australia late October, US early " +
           "November, Canada/UK/EU late November — hub dates, not doorstep dates; backers are " +
-          "promised their copies before retail. (Date approximate.)",
+          "promised their copies before retail.",
         sourceUrl:
           "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/53168",
+      },
+      {
+        id: "parks-europe-e06",
+        occurredOn: "2026-11-02",
+        type: "campaign-update",
+        title: "UK/EU games on the water — fulfilment centres late Nov to early Dec",
+        details:
+          "US games reached the US fulfilment centre that week (addresses locked); AUS/NZ " +
+          "expected the week of Nov 9, Canada late Nov–early Dec. UK/Europe containers are " +
+          "on the water, due at the fulfilment centres late November to early December. " +
+          "Missing or damaged pieces go through Keymaster's form or hello@keymaster.fun; " +
+          "a Watch It Played how-to-play video is in the works.",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/55720",
+      },
+      {
+        id: "parks-europe-e07",
+        occurredOn: "2026-11-11",
+        type: "shipping-notice",
+        title: "US tracking numbers sent — US orders shipping via Fulfillrite",
+        details:
+          "Community post: the new US fulfilment partner Fulfillrite had not sent tracking " +
+          "automatically, so Keymaster pushed the numbers out by hand; about 300 more US " +
+          "orders were to ship the next day. Nothing for Europe yet.",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/discussions/114825",
+      },
+      {
+        id: "parks-europe-e08",
+        occurredOn: "2026-11-18",
+        type: "delay",
+        title: "EU ship anchored off Senegal — Southampton arrival slips from Nov 23 to Nov 30",
+        details:
+          "Community post: 2,659 of 5,265 orders fulfilled (50.5%) and the US done. The " +
+          "UK/EU container's vessel is anchored off the coast of Senegal and its estimated " +
+          "arrival into Southampton moved from November 23 to November 30, before the hub " +
+          "and the last leg to the door.",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/discussions/115875",
+      },
+      {
+        id: "parks-europe-e09",
+        occurredOn: "2026-11-18",
+        type: "note",
+        title: "Standard edition already in UK/EU shops — refund offered to backers who buy retail",
+        details:
+          "Community post: distributors' standard-edition stock left the factory with the " +
+          "backer container but wasn't delayed, and some UK/EU retailers ignored the street " +
+          "date. The Chalet Edition is backer-only; a backer who would rather buy the " +
+          "standard edition in a shop can email hello@keymaster.fun for a refund.",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/discussions/115870",
       },
     ],
   },
@@ -1279,16 +1366,17 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: { id: "gloomhaven-festival", title: "Gloomhaven Grand Festival" },
     slug: "gloomhaven",
     kind: "crowdfunding",
-    status: "production",
+    status: "shipping",
     platform: "BackerKit",
     campaignUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven",
     pledgeManagerUrl: null, // final-wave BackerKit pledge manager reopened Jul 10 '26; closing expected Nov '26
     // No wave-4 promise survives in the accessible updates; the earliest
     // documented estimate (May '24) put RPG freight + fulfilment at Oct/Nov
     // 2024, used here as a conservative original. The June '26 conservative
-    // timeline has RPG fulfilment Dec '26 with completion in Jan '27.
+    // timeline had RPG fulfilment Dec '26 – Jan '27; the Nov 3 '26 tracker
+    // moved fulfilment to Jan–Feb '27 (same window as the minis).
     originalEtaMonth: "2024-11",
-    currentEtaMonth: "2027-01",
+    currentEtaMonth: "2027-02",
     pledgedOn: "2023-07-20",
     deliveredOn: null,
     currency: "USD",
@@ -1298,8 +1386,10 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       "Wave 4 of pledge 182879: Gloomhaven RPG Deluxe Box Set ($90), which now also gets a " +
       "free Gloomhaven Playing Cards deck ($12.99 value) added automatically at fulfilment. " +
       "In mass production since July 2026 (a different factory from the miniatures; ships " +
-      "separately). Wave 4–5 shipping + taxes have NOT been charged yet — they hit when " +
-      "freight begins (ship loading mid/late Oct 2026 per the Sep '26 update).",
+      "separately). On the water since mid-Nov 2026 (EU vessel not yet confirmed); the RPG " +
+      "PDF came by BackerKit email Nov 17. Cards not yet run were charged Nov 16 when the " +
+      "late pledge manager closed (wave 4–5 shipping + taxes amount not recorded); address " +
+      "changes now go through support@cephalofair.com, with a last freeze near New Year.",
     events: [
       {
         id: "gloomhaven-festival-rpg-e01",
@@ -1372,27 +1462,63 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
       {
         id: "gloomhaven-festival-rpg-e07",
-        occurredOn: "2026-09-30",
+        occurredOn: "2026-09-29",
         type: "campaign-update",
         title: "Printed RPG drying before packing — PDF to follow after SPIEL",
         details:
           "The printed RPG components are drying before boxing and shrink-wrap, and a real " +
           "production-line copy arrived for review. The RPG PDF will reach backers via the " +
           "pledge manager after SPIEL, before the physical product; the miniatures may arrive " +
-          "early enough to ship in the same wave. Timeline chart unchanged. (Date approximate.)",
+          "early enough to ship in the same wave. Timeline chart unchanged.",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/53197",
       },
       {
         id: "gloomhaven-festival-rpg-e08",
-        occurredOn: "2026-10-14",
+        occurredOn: "2026-10-13",
         type: "campaign-update",
         title: "RPG in assembly — packing into containers starts Oct 15",
         details:
           "Assembly is underway (with some drying still going) and packing into cases and " +
           "containers was set to start that Thursday; each Deluxe set ships in its own thick, " +
           "foam-padded carton. The PDF is expected early November, the pledge manager should " +
-          "close in November, and the timeline chart is unchanged. (Date approximate.)",
+          "close in November, and the timeline chart is unchanged.",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/54265",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e09",
+        occurredOn: "2026-11-03",
+        type: "delay",
+        title: "Ocean freight booked — tracker moves RPG fulfilment to Jan–Feb 2027",
+        details:
+          "The RPG is loading into containers and ocean freight is officially booked, with " +
+          "pick-up for the port within the week. The tracker chart now has production in " +
+          "November, sea freight Nov–Dec, land freight Dec–Jan and fulfilment Jan–Feb (was " +
+          "Dec–Jan). Shown at SPIEL from a factory Deluxe set; every RPG backer gets the PDF free.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/56084",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e10",
+        occurredOn: "2026-11-03",
+        type: "campaign-update",
+        title: "Late pledge manager closes and unrun cards charged Nov 16, 12pm PST",
+        details:
+          "Two weeks' warning: the pledge manager shuts November 16 at 12pm PST, every card " +
+          "not already run is charged then, and addresses can be changed in BackerKit until " +
+          "then — afterwards only via support@cephalofair.com, with a last-chance address " +
+          "freeze close to New Year.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/56084",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e11",
+        occurredOn: "2026-11-17",
+        type: "status-change",
+        title: "RPG on the water — EU vessel still to be confirmed; PDFs emailed",
+        details:
+          "US, AU, CA and UK/RoW containers are at sea with vessel names and tracking links; " +
+          "the EU vessel is still awaiting confirmation. Tracker: sea freight Nov–Dec, land " +
+          "Dec–Jan, fulfilment Jan–Feb. BackerKit is emailing ~8,000 RPG PDF download links " +
+          "(save the file — links expire when the campaign winds down).",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/57095",
       },
     ],
   },
@@ -1499,26 +1625,50 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
       {
         id: "gloomhaven-festival-minis-e07",
-        occurredOn: "2026-09-30",
+        occurredOn: "2026-09-29",
         type: "campaign-update",
         title: "Minis may arrive early enough to ship with the RPG",
         details:
           "Factory photos show bins of finished miniatures waiting to be trayed and packaged. " +
           "The minis may arrive a little earlier than expected, letting them ship in the same " +
-          "wave as the RPG — depending on ships and routes. (Date approximate.)",
+          "wave as the RPG — depending on ships and routes.",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/53197",
       },
       {
         id: "gloomhaven-festival-minis-e08",
-        occurredOn: "2026-10-14",
+        occurredOn: "2026-10-13",
         type: "campaign-update",
         title: "All minis made — hand-trayed, onto ships in the next few weeks",
         details:
           "Every set in the line is in production; minis, trays and boxes were sent to a " +
           "central site where ~1.5 million miniatures are being placed into trays by hand, " +
           "with ship loading expected in the next few weeks. Timeline chart unchanged " +
-          "(sea freight Oct–Dec, fulfilment Jan–Feb). (Date approximate.)",
+          "(sea freight Oct–Dec, fulfilment Jan–Feb).",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/54265",
+      },
+      {
+        id: "gloomhaven-festival-minis-e09",
+        occurredOn: "2026-11-03",
+        type: "campaign-update",
+        title: "Minis in assembly — packaging in, may ship alongside the RPG",
+        details:
+          "Miniatures are officially in assembly and the packaging arrived before SPIEL. They " +
+          "come from a different factory on a different ship from the RPG but should arrive " +
+          "close to it, so Cephalofair hopes to combine shipments. Tracker: production " +
+          "November, sea freight Nov–Dec, land Dec–Jan, fulfilment Jan–Feb.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/56084",
+      },
+      {
+        id: "gloomhaven-festival-minis-e10",
+        occurredOn: "2026-11-17",
+        type: "campaign-update",
+        title: "Production done — minis containers loading",
+        details:
+          "The tracker ticks production off and marks the minis as container loading, with " +
+          "sea freight Nov–Dec, land Dec–Jan and fulfilment Jan–Feb. Size photos next to " +
+          "HeroQuest, D&D, Warhammer and Marvel figures on a 1-inch grid show typical mini size " +
+          "(made to fit the map tiles and the existing mercenary minis).",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/57095",
       },
     ],
   },
