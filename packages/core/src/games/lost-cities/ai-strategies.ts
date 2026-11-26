@@ -623,7 +623,7 @@ export const STRATEGY_V1: AIStrategy = {
 
 export const STRATEGY_V4: AIStrategy = {
   id: "ismcts-v4",
-  label: "Strict",
+  label: "Scout",
   description:
     "Strict tree filters, wager-first, low-first ordering, tighter expedition starts, opponent-aware discards. 8k iterations.",
   pickPlay: pickPlayV4,
@@ -633,7 +633,7 @@ export const STRATEGY_V4: AIStrategy = {
 
 export const STRATEGY_V5: AIStrategy = {
   id: "ismcts-v5",
-  label: "Adaptive",
+  label: "Pathfinder",
   description:
     "Game-stage aware rollout, conservative starts, opponent-aware discards, known-card pinning. 16k iterations.",
   pickPlay: pickPlayV5,
@@ -643,7 +643,7 @@ export const STRATEGY_V5: AIStrategy = {
 
 export const STRATEGY_V6: AIStrategy = {
   id: "ismcts-v6",
-  label: "Adaptive+",
+  label: "Trailblazer",
   description:
     "V5 rollout + dead-to-both discard bias (capped vs expedition) and terminal penalty for unplayed cards still legal on own expeditions. 16k iterations.",
   pickPlay: pickPlayV6,

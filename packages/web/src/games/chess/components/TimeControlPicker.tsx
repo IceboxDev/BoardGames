@@ -17,7 +17,7 @@ export function TimeControlPicker({
   disabled?: boolean;
 }) {
   return (
-    <fieldset className="grid grid-cols-4 gap-2 sm:grid-cols-7" aria-label="Time control">
+    <fieldset className="grid w-full grid-cols-4 gap-1.5 sm:grid-cols-7" aria-label="Time control">
       {TIME_CONTROL_PRESETS.map((preset) => {
         const selected = sameControl(value, preset.control);
         return (

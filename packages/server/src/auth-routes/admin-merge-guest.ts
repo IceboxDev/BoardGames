@@ -78,6 +78,8 @@ export const GUEST_MERGE_COVERAGE = {
     "locked_dates.host_user_id",
     "skill_greetings.subject_user_id",
     "match_participants.user_id",
+    // The admins' notes on what the guest owed follow them onto the member.
+    "admin_member_notes.user_id",
   ],
   droppedByDesign: [
     // better-auth: a guest never signs in.
@@ -106,6 +108,8 @@ export const GUEST_MERGE_COVERAGE = {
     "purchase_arrivals.published_by",
     // Only an admin notes a member as away; SET NULL like resolved_by.
     "admin_away_days.marked_by",
+    // Only an admin writes a member note; SET NULL like resolved_by.
+    "admin_member_notes.created_by",
     "dnd_campaigns.user_id",
     "dnd_parties.user_id",
     "dnd_files.user_id",
@@ -190,6 +194,10 @@ function transferStatements(guestId: string, targetId: string): InStatement[] {
     })),
     {
       sql: "UPDATE locked_dates SET host_user_id = ? WHERE host_user_id = ?",
+      args: [targetId, guestId],
+    },
+    {
+      sql: "UPDATE admin_member_notes SET user_id = ? WHERE user_id = ?",
       args: [targetId, guestId],
     },
     {

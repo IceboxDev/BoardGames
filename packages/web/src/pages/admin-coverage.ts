@@ -38,6 +38,27 @@ export function countMarkedInWindow(
 }
 
 /**
+ * Days in the same window the member has left blank: neither marked nor
+ * noted away by an admin. What "Mark which days you can make" asks them to fill.
+ */
+export function countBlankInWindow(
+  availability: AvailabilityMap | null,
+  today: Date,
+  weekStart: Date,
+  awayDays: ReadonlySet<string>,
+): number {
+  const todayKey = dateKey(today);
+  let count = 0;
+  for (const d of build42Days(weekStart)) {
+    const key = dateKey(d);
+    if (key < todayKey || awayDays.has(key)) continue;
+    const status = availability?.[key];
+    if (status !== "can" && status !== "maybe") count += 1;
+  }
+  return count;
+}
+
+/**
  * Compute one user's coverage of an editable date window. `total` is the
  * window size less the admin-noted away days (`awayDays`) the user has not
  * marked; `can` and `maybe` are how many of the remaining days the user has

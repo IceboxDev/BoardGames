@@ -12,6 +12,7 @@
 
 import { parseFen, positionKey } from "@boardgames/core/games/chess/engine/fen";
 import type { BuildProgress } from "@boardgames/core/games/chess/trainer/builder";
+import { BEST_MOVE_SPEC } from "@boardgames/core/games/chess/trainer/eval-policy";
 import { FARM_FOCUS } from "@boardgames/core/games/chess/trainer/folders";
 import type { MoveStat } from "@boardgames/core/games/chess/trainer/position-index";
 import {
@@ -43,6 +44,27 @@ const send = (w: Worker, m: ToWorker) => w.postMessage(m);
 
 export type BuildPhase = "idle" | "loading" | "indexing" | "building" | "stopping";
 
+export interface CatchUp {
+  readonly done: number;
+  readonly total: number;
+  readonly etaSeconds: number | null;
+}
+
+/** The farm's results a tree holds: positions built from a farm evaluation. */
+const FARM_HELD = new WeakMap<RepertoireTree, number>();
+export function farmResultsIn(tree: RepertoireTree): number {
+  const known = FARM_HELD.get(tree);
+  if (known !== undefined) return known;
+  let n = 0;
+  for (const node of Object.values(tree.nodes))
+    if (node.evalSpec === BEST_MOVE_SPEC && node.engine && node.engine.length > 0) n++;
+  FARM_HELD.set(tree, n);
+  return n;
+}
+
+/** Wait this long for a pace before giving a time left. */
+const PACE_AFTER_MS = 2 * 60_000;
+
 export interface TreeBuild {
   readonly phase: BuildPhase;
   readonly progress: BuildProgress | null;
@@ -58,6 +80,13 @@ export interface TreeBuild {
   readonly farm: FarmState | null;
   /** A build between passes, fetching the farm's results for the positions it parked. */
   readonly askingFarm: boolean;
+  /**
+   * While the build takes in results the farm finished since the tree was
+   * last built (pass after pass, each a move or two deeper): how many of the
+   * farm's results for this colour the tree holds, of how many, and the time
+   * left at the pace so far (null until there is a pace). Null otherwise.
+   */
+  readonly catchUp: CatchUp | null;
   /** What your games (as this colour) played from a position, most first. */
   readonly positionStats: (fen: string) => Promise<MoveStat[]>;
   /** Folder ownership of your games (see the worker's `folders` message). */
@@ -113,6 +142,10 @@ export function useTreeBuild(
   // checkpoints hold only the part walked so far: while a finished tree exists
   // they are never saved, never built on, and a stopped rebuild falls back to it.
   const settledRef = useRef<RepertoireTree | null>(finished(rep?.tree ?? null));
+  // The same, as state: the catch-up count reads it.
+  const [settledTree, setSettledTree] = useState<RepertoireTree | null>(settledRef.current);
+  /** New farm results the last request brought (null before the first). */
+  const [lastAdded, setLastAdded] = useState<number | null>(null);
   const settingsRef = useRef<TreeSettings>(rep?.settings ?? TreeSettingsSchema.parse({}));
   if (rep) settingsRef.current = rep.settings;
   // The tree arriving after the screen opened (the hook outlives "loading").
@@ -127,6 +160,7 @@ export function useTreeBuild(
     versionRef.current = rep.version;
     treeRef.current = rep.tree;
     settledRef.current = finished(rep.tree);
+    setSettledTree(settledRef.current);
     setTree(rep.tree);
   }
 
@@ -197,6 +231,7 @@ export function useTreeBuild(
               versionRef.current = fresh.version;
               treeRef.current = fresh.tree;
               settledRef.current = finished(fresh.tree) ?? settledRef.current;
+              setSettledTree(settledRef.current);
               setTree(fresh.tree);
               queryClient.setQueryData(chessKeys.repertoire(id), fresh);
               setError(null);
@@ -323,7 +358,10 @@ export function useTreeBuild(
             if (parked.length > 0) {
               await farmRef.current
                 .request(parked)
-                .then((r) => setFarm(r.farm))
+                .then((r) => {
+                  setFarm(r.farm);
+                  setLastAdded(r.added);
+                })
                 .catch(() => {});
             }
           }
@@ -369,6 +407,7 @@ export function useTreeBuild(
               if (m.type === "done") {
                 treeRef.current = m.tree;
                 settledRef.current = finished(m.tree);
+                setSettledTree(settledRef.current);
                 setTree(m.tree);
                 save(m.tree);
                 // The farm works on the focus folders only (`FARM_FOCUS`):
@@ -426,8 +465,11 @@ export function useTreeBuild(
           setAskingFarm(true);
           const r = await farmRef.current.request(pendingRef.current).catch(() => null);
           setAskingFarm(false);
-          if (r) setFarm(r.farm);
-          else setError("Couldn't reach the server for the farm's results. Trying again shortly.");
+          if (r) {
+            setFarm(r.farm);
+            setLastAdded(r.added);
+          } else
+            setError("Couldn't reach the server for the farm's results. Trying again shortly.");
           if (wantRef.current) continue;
           if (r && r.added > 0) {
             wantRef.current = { from: done };
@@ -522,6 +564,32 @@ export function useTreeBuild(
     send(w, { type: "stop" });
   }, []);
 
+  // The catch-up: shown while passes keep bringing new farm results.
+  const totalRef = useRef<number | null>(null);
+  const total = farm?.results?.[color] ?? totalRef.current;
+  totalRef.current = total;
+  const held = settledTree ? farmResultsIn(settledTree) : 0;
+  const paceRef = useRef<{ at: number; held: number } | null>(null);
+  const catchingUp = phase !== "idle" && lastAdded !== null && lastAdded > 0 && total !== null;
+  if (!catchingUp) paceRef.current = null;
+  else if (!paceRef.current || held < paceRef.current.held)
+    paceRef.current = { at: Date.now(), held };
+  let catchUp: CatchUp | null = null;
+  if (catchingUp && total !== null) {
+    const start = paceRef.current;
+    const elapsed = start ? Date.now() - start.at : 0;
+    const gained = start ? held - start.held : 0;
+    const left = Math.max(0, total - held);
+    catchUp = {
+      done: Math.min(held, total),
+      total,
+      etaSeconds:
+        elapsed >= PACE_AFTER_MS && gained > 0
+          ? Math.round((left * elapsed) / gained / 1000)
+          : null,
+    };
+  }
+
   return {
     phase,
     progress,
@@ -533,6 +601,7 @@ export function useTreeBuild(
     providers,
     farm,
     askingFarm,
+    catchUp,
     positionStats,
     folderCounts,
     transposition,

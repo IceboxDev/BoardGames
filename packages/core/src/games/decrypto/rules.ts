@@ -79,6 +79,7 @@ export function buildTeams(input: SetupInput): [TeamState, TeamState] {
     interceptions: 0,
     miscommunications: 0,
     usedClues: [],
+    rivalNotes: ["", "", "", ""],
   });
   return [team(0), team(1)];
 }
@@ -124,6 +125,9 @@ export function buildRoundTransmissions(ctx: DecryptoContext, round: number): Tr
     interceptGuess: null,
     interceptRequired: round > 1,
     resolved: null,
+    encryptNote: null,
+    decodeNote: null,
+    interceptNote: null,
   }));
 }
 
@@ -452,6 +456,30 @@ export function applyGuess(
   return { current };
 }
 
+/**
+ * A team member pencils a guess at one of the rival's keywords — a team
+ * note, so it follows the chat's encryptor lockout (no side channel).
+ */
+export function applyNote(
+  ctx: DecryptoContext,
+  seat: number,
+  digit: Digit,
+  text: string,
+): CtxPatch {
+  const team = teamOf(ctx, seat);
+  if (team === null) throw new Error("only a team member can write notes");
+  if (ctx.teams[team].players.length >= 2 && !chatAllowed(ctx, seat)) {
+    throw new Error("the encryptor can't write notes until their code is revealed");
+  }
+  const teams = ctx.teams.map((t, i) => {
+    if (i !== team) return t;
+    const rivalNotes = [...t.rivalNotes] as TeamState["rivalNotes"];
+    rivalNotes[digit - 1] = text.trim();
+    return { ...t, rivalNotes };
+  }) as DecryptoContext["teams"];
+  return { teams };
+}
+
 export function applyChat(ctx: DecryptoContext, seat: number, text: string): CtxPatch {
   if (!chatAllowed(ctx, seat)) {
     throw new Error("the encryptor can't talk to their team until their code is revealed");
@@ -477,6 +505,11 @@ export function legalActionsFor(
   phase: DecryptoViewPhase,
   seat: number,
 ): DecryptoAction[] {
+  if (phase === "reveal") {
+    return ctx.humanPlayers.includes(seat) && !ctx.revealAcks.includes(seat)
+      ? [{ kind: "continue" }]
+      : [];
+  }
   if (phase !== "guessing") return [];
   const tx = currentTransmission(ctx);
   if (!tx || tx.skipped || tx.clues === null) return [];

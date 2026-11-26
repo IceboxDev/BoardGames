@@ -4,6 +4,7 @@ import {
   balanceTeams,
   gameStrength,
   type StrengthSource,
+  stackTeams,
   TOLERANCE,
   teamChances,
   teamSizes,
@@ -107,5 +108,31 @@ describe("balanceTeams", () => {
   it("copes with an empty or tiny pool", () => {
     expect(balanceTeams([], 2, of, 1).teams).toEqual([]);
     expect(balanceTeams(["ace", "bee"], 2, of, 1).teams.map((t) => t.length)).toEqual([1, 1]);
+  });
+});
+
+describe("stackTeams", () => {
+  const R: Record<string, number> = { me: 0.5, a: 2, b: 1.5, c: -1, d: 1, e: -0.5, f: 0, g: 3 };
+  const ids = Object.keys(R);
+  const of = (id: string) => R[id];
+
+  it("puts the underdog with the weakest others, against everyone strong", () => {
+    const res = stackTeams(ids, 2, of, "me", 7);
+    expect(res.teams[0].sort()).toEqual(["c", "e", "f", "me"]);
+    expect(res.teams[1].sort()).toEqual(["a", "b", "d", "g"]);
+    expect(res.chances[0]).toBeLessThan(0.2);
+  });
+
+  it("gives the underdog the smaller team and shares the strong among the rivals", () => {
+    const res = stackTeams(ids, 3, of, "me", 7);
+    expect(res.teams.map((t) => t.length)).toEqual([2, 3, 3]);
+    expect(res.teams[0].sort()).toEqual(["c", "me"]);
+    // The two rival teams are each other's fair match.
+    expect(Math.abs(res.strengths[1] - res.strengths[2])).toBeLessThan(0.5);
+    expect(Math.min(res.strengths[1], res.strengths[2])).toBeGreaterThan(res.strengths[0]);
+  });
+
+  it("refuses an underdog outside the pool", () => {
+    expect(() => stackTeams(["a", "b"], 2, of, "me", 1)).toThrow();
   });
 });

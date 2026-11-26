@@ -34,7 +34,7 @@ const req = (strategy: "katago-max" | "katago-5k") => ({ game, strategy, timeMs:
 describe("KataGo as a Go opponent", () => {
   it("sends the position with our exact rules and handicap setup", () => {
     const q = baseQuery(newGame({ size: 19, komi: 0.5, handicap: 2 }));
-    expect(q.rules.koRule).toBe("POSITIONAL");
+    expect(q.rules.ko).toBe("POSITIONAL");
     expect(q.initialStones).toEqual([
       ["B", "Q16"],
       ["B", "D4"],

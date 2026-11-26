@@ -13,6 +13,8 @@ const FAST: Partial<DecryptoBeats> = {
   reveal: 1,
   roundEnd: 1,
   clueTimeout: 60,
+  // A reveal waits for the people at the table; these tests don't press Continue.
+  revealTimeout: 1,
 };
 
 type Actor = ActorRefFrom<typeof decryptoMachine>;
@@ -141,7 +143,11 @@ describe("decrypto machine — AI-vs-AI soaks", () => {
 
 describe("decrypto machine — human flow", () => {
   it("plays a full human round: clues, guesses, tokens, note sheet", async () => {
-    const actor = startActor({ humanPlayers: [0, 1, 2, 3] });
+    // This test presses Continue itself, so the reveal never times out.
+    const actor = startActor({
+      humanPlayers: [0, 1, 2, 3],
+      beats: { ...FAST, revealTimeout: 600_000 },
+    });
     await waitForPhase(actor, "clueWriting");
 
     // Round 1 encryptors are seats 0 (White) and 2 (Black).
@@ -171,6 +177,15 @@ describe("decrypto machine — human flow", () => {
     // Committed — the enumeration is now empty for seat 1.
     expect(send(actor, 1, { kind: "submit-guess", purpose: "decode", code: wrong }).ok).toBe(false);
 
+    // The reveal holds until every person has continued.
+    await waitForPhase(actor, "reveal");
+    expect(decryptoSpec.getPlayerView(actor.getSnapshot(), 0).myPending.continue).toBe(true);
+    for (const seat of [0, 1, 2]) expect(send(actor, seat, { kind: "continue" }).ok).toBe(true);
+    expect(send(actor, 0, { kind: "continue" }).ok).toBe(false); // already pressed
+    expect(phaseOf(actor.getSnapshot())).toBe("reveal");
+    expect(decryptoSpec.getPlayerView(actor.getSnapshot(), 0).revealWaiting).toEqual([3]);
+    expect(send(actor, 3, { kind: "continue" }).ok).toBe(true);
+
     // Black's transmission: seat 3 decodes it EXACTLY (test reads the code).
     await waitFor(actor, (s) => s.context.txIdx === 1 && phaseOf(s) === "guessing");
     ctx = actor.getSnapshot().context;
@@ -179,6 +194,8 @@ describe("decrypto machine — human flow", () => {
       true,
     );
 
+    await waitForPhase(actor, "reveal");
+    for (const seat of [0, 1, 2, 3]) send(actor, seat, { kind: "continue" });
     await waitFor(actor, (s) => s.context.history.length === 1);
     ctx = actor.getSnapshot().context;
     expect(ctx.teams[0].miscommunications).toBe(1); // White decoded wrong
@@ -381,6 +398,82 @@ describe("decrypto machine — sanity", () => {
     const view = decryptoSpec.getPlayerView(snapshot, 1);
     expect(view.transmissions[0]?.code).toBeNull();
     expect(codesEqual(snapshot.context.current[0]?.code ?? null, null)).toBe(false);
+    actor.stop();
+  });
+});
+
+describe("decrypto machine — AI notes", () => {
+  const noted: DecryptoAiAgent = {
+    encrypt: async (input) => ({
+      clues: (await scriptedAgent.encrypt(input)) as [string, string, string],
+      note: {
+        clues: [0, 1, 2].map((i) => ({ link: `link ${i}`, cover: `cover ${i}` })),
+        tableRead: "they think 1 is fruit",
+        standIn: false,
+      },
+    }),
+    guess: async (input) => {
+      const code = (await scriptedAgent.guess(input)) as Code;
+      return {
+        code,
+        note: {
+          purpose: input.purpose,
+          picks: code.map((digit) => ({ digit, why: "the k-number", chances: null })),
+          standIn: false,
+        },
+      };
+    },
+  };
+
+  it("keeps every AI note, and shows them only once the game is over", async () => {
+    useAgent(noted);
+    const actor = startActor({ humanPlayers: [], aiModels: ["smart", "smart", "smart", "smart"] });
+    await waitFor(actor, (s) => s.context.history.length === 1);
+    const live = decryptoSpec.getPlayerView(actor.getSnapshot(), 0);
+    for (const r of live.roundSummaries) {
+      for (const t of r.transmissions) {
+        expect(t.encryptNote).toBeNull();
+        expect(t.decodeNote).toBeNull();
+        expect(t.interceptNote).toBeNull();
+      }
+    }
+    const stored = actor.getSnapshot().context.history[0]?.transmissions[0];
+    expect(stored?.encryptNote?.clues[0]?.link).toBe("link 0");
+    expect(stored?.decodeNote?.picks[0]?.why).toBe("the k-number");
+
+    await waitForGameOver(actor);
+    const over = decryptoSpec.getPlayerView(actor.getSnapshot(), 0);
+    const round2 = over.roundSummaries[1]?.transmissions[0];
+    expect(round2?.encryptNote?.tableRead).toBe("they think 1 is fruit");
+    expect(round2?.interceptNote?.purpose).toBe("intercept");
+    actor.stop();
+  });
+
+  it("drops a malformed note and keeps the move", async () => {
+    useAgent({
+      encrypt: async (input) => ({
+        clues: (await scriptedAgent.encrypt(input)) as [string, string, string],
+        note: { clues: "x".repeat(5000), standIn: "no" },
+      }),
+      guess: async (input) => ({
+        code: (await scriptedAgent.guess(input)) as Code,
+        note: { picks: [{ digit: 9 }] },
+      }),
+    });
+    const actor = startActor({ humanPlayers: [], aiModels: ["smart", "smart", "smart", "smart"] });
+    await waitFor(actor, (s) => s.context.history.length === 1);
+    const t = actor.getSnapshot().context.history[0]?.transmissions[0];
+    expect(t?.clues).not.toBeNull();
+    expect(t?.encryptNote).toBeNull();
+    expect(t?.decodeNote).toBeNull();
+    actor.stop();
+  });
+
+  it("marks the fallback's guesses as a stand-in", async () => {
+    const actor = startActor({ humanPlayers: [] });
+    await waitFor(actor, (s) => s.context.history.length === 1);
+    const t = actor.getSnapshot().context.history[0]?.transmissions[0];
+    expect(t?.decodeNote?.standIn).toBe(true);
     actor.stop();
   });
 });

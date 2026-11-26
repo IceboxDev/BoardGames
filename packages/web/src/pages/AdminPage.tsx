@@ -32,6 +32,7 @@ import {
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import {
+  adminFetchOutstanding,
   adminFetchUnseenActivity,
   adminGenerateResetLink,
   adminSetNonDrinker,
@@ -148,6 +149,17 @@ export default function AdminPage() {
     queryFn: ({ signal }) => adminFetchUnseenActivity(signal),
   });
   const unseenActivity: Record<string, number> = unseenActivityQuery.data?.counts ?? {};
+
+  // What each member still owes the group, plus open admin notes — the amber
+  // count beside the pie (the availability drawer lists them).
+  const outstandingQuery = useQuery({
+    queryKey: qk.adminOutstanding(),
+    queryFn: ({ signal }) => adminFetchOutstanding(signal),
+  });
+  const outstandingCount = (userId: string) => {
+    const m = outstandingQuery.data?.members[userId];
+    return m ? m.items.length + m.openNotes : 0;
+  };
 
   // Editable window = the 42-day grid the dashboard exposes, minus past days.
   const editableDateKeys = useMemo(() => {
@@ -309,6 +321,7 @@ export default function AdminPage() {
         coverage={coverage}
         zeroForDays={inactive ? zeroDays : undefined}
         unseenActivity={unseenActivity[u.id] ?? 0}
+        outstanding={outstandingCount(u.id)}
         expanded={expandedUserId === u.id}
         onToggleInventory={() => setExpandedUserId((prev) => (prev === u.id ? null : u.id))}
         onSetOnlineMode={(mode) => setOnlineModeMutation.mutate({ userId: u.id, mode })}

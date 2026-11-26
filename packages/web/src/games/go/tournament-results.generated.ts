@@ -3,8 +3,9 @@ import type { TournamentResults } from "@boardgames/core/tournament/results";
 
 const results: TournamentResults = {
   formatVersion: 1,
+  kind: "head-to-head",
   slug: "go",
-  generatedAt: "2026-10-09T01:23:27.900Z",
+  generatedAt: "2026-11-25T13:09:56.184Z",
   strategies: [
     {
       id: "heuristic",
@@ -15,20 +16,8 @@ const results: TournamentResults = {
       label: "Brook",
     },
     {
-      id: "katago-5k",
-      label: "5 kyu",
-    },
-    {
-      id: "katago-1k",
-      label: "1 kyu",
-    },
-    {
-      id: "katago-5d",
-      label: "5 dan",
-    },
-    {
       id: "katago-max",
-      label: "KataGo",
+      label: "Mountain",
     },
   ],
   tables: [
@@ -39,11 +28,31 @@ const results: TournamentResults = {
           a: "heuristic",
           b: "mcts",
           games: 20,
+          aWins: 1,
+          bWins: 19,
+          draws: 0,
+          avgScoreA: 37,
+          avgScoreB: 51.6,
+        },
+        {
+          a: "heuristic",
+          b: "katago-max",
+          games: 20,
           aWins: 0,
           bWins: 20,
           draws: 0,
-          avgScoreA: 33.8,
-          avgScoreB: 54.8,
+          avgScoreA: 3.8,
+          avgScoreB: 84.8,
+        },
+        {
+          a: "mcts",
+          b: "katago-max",
+          games: 20,
+          aWins: 0,
+          bWins: 20,
+          draws: 0,
+          avgScoreA: 3.8,
+          avgScoreB: 84.8,
         },
       ],
     },

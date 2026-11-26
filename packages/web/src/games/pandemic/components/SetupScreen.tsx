@@ -3,15 +3,19 @@ import { createRng, randomSeed } from "@boardgames/core/games/pandemic/rng";
 import { ROLE_DEFS } from "@boardgames/core/games/pandemic/roles";
 import type { SetupConfig } from "@boardgames/core/games/pandemic/types";
 import { useCallback, useState } from "react";
-import { SectionLabel, SetupHeader, SetupLayout } from "../../../components/setup";
+import {
+  SetupBriefing,
+  SetupChoiceCards,
+  SetupFooter,
+  SetupOptions,
+  SetupSection,
+} from "../../../components/setup";
 import { Button } from "../../../components/ui/Button";
 import { SegmentedControl } from "../../../components/ui/SegmentedControl";
-import { SelectableCard } from "../../../components/ui/SelectableCard";
 import RoleCard from "./RoleCard";
 
-// The difficulty cards below are card-shaped clickable surfaces: a row
-// card with a number badge, label, star rating, and description. The
-// Shuffle text-button is migrated to <Button variant="link">.
+// Pandemic's briefing: co-op, so the main choice is the difficulty (how many
+// epidemics are shuffled in), not an AI. You control every role.
 
 interface SetupScreenProps {
   onStart: (config: SetupConfig) => void;
@@ -30,23 +34,11 @@ const PLAYER_OPTIONS = [2, 3, 4].map((n) => ({
   label: `${n}`,
 }));
 
-const DIFFICULTY_META = [
-  {
-    value: 4 as const,
-    label: "Introductory",
-    accent: "#22c55e",
-    stars: 1,
-    desc: "A gentler introduction",
-  },
-  {
-    value: 5 as const,
-    label: "Standard",
-    accent: "#f59e0b",
-    stars: 2,
-    desc: "The intended challenge",
-  },
-  { value: 6 as const, label: "Heroic", accent: "#ef4444", stars: 3, desc: "Near-impossible odds" },
-];
+const DIFFICULTIES = [
+  { id: "4", label: "Introductory", description: "A gentler introduction.", tier: "Easy" },
+  { id: "5", label: "Standard", description: "The intended challenge.", tier: "Medium" },
+  { id: "6", label: "Heroic", description: "Near-impossible odds.", tier: "Hard" },
+] as const;
 
 export default function SetupScreen({ onStart }: SetupScreenProps) {
   const [numPlayers, setNumPlayers] = useState<2 | 3 | 4>(2);
@@ -62,109 +54,83 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
     setPreviewRoles(previewShuffle(ALL_ROLE_IDS).slice(0, numPlayers));
   }, [numPlayers]);
 
-  const handleStart = useCallback(() => {
-    onStart({ numPlayers, difficulty });
-  }, [numPlayers, difficulty, onStart]);
+  const level = DIFFICULTIES.find((d) => d.id === String(difficulty));
 
   return (
-    <SetupLayout>
-      <SetupHeader
-        title="Pandemic"
-        subtitle="Cooperative disease-fighting board game. Cure four diseases before they overwhelm the world."
-      />
-
-      <div className="w-full max-w-5xl grid grid-cols-[1fr_auto] gap-12 items-start">
-        {/* Left: setup controls */}
-        <div className="space-y-6">
-          <div>
-            <SectionLabel>Players</SectionLabel>
-            <SegmentedControl
-              shape="rounded"
-              selectionMode="toggle"
-              aria-label="Number of players"
-              options={PLAYER_OPTIONS}
-              value={numPlayers}
-              onChange={handlePlayerChange}
-            />
-          </div>
-
-          <div>
-            <SectionLabel>Difficulty</SectionLabel>
-            <div className="space-y-2">
-              {DIFFICULTY_META.map((d) => (
-                <SelectableCard
-                  key={d.value}
-                  variant="stripe"
-                  orientation="horizontal"
-                  accentColor={d.accent}
-                  selected={difficulty === d.value}
-                  onClick={() => setDifficulty(d.value)}
-                  padding="sm"
-                >
-                  {/* Epidemic count */}
-                  <div
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-black"
-                    style={{ backgroundColor: `${d.accent}20`, color: d.accent }}
-                  >
-                    {d.value}
+    <SetupBriefing
+      title="Pandemic"
+      eyebrow="Solo · you control every role"
+      blurb="Cooperative disease-fighting board game. Cure four diseases before they overwhelm the world."
+      footer={
+        <SetupFooter
+          summary={`${numPlayers} roles · ${level?.label ?? ""} · ${difficulty} epidemics`}
+          onStart={() => onStart({ numPlayers, difficulty })}
+        />
+      }
+    >
+      <SetupSection label="Difficulty">
+        <SetupChoiceCards
+          label="Difficulty"
+          choices={DIFFICULTIES.map((d) => ({
+            id: d.id,
+            label: d.label,
+            description: d.description,
+            tier: d.tier,
+            meta: <span className="text-fg-muted">{d.id} epidemics</span>,
+          }))}
+          value={String(difficulty)}
+          onChange={(id) => setDifficulty(Number(id) as 4 | 5 | 6)}
+        />
+      </SetupSection>
+      <SetupSection label="Game">
+        <SetupOptions
+          options={[
+            {
+              id: "players",
+              label: "Players",
+              span: "s",
+              note: "Each player is a role; you play them all.",
+              control: (
+                <SegmentedControl
+                  shape="rounded"
+                  selectionMode="toggle"
+                  aria-label="Number of players"
+                  options={PLAYER_OPTIONS}
+                  value={numPlayers}
+                  onChange={handlePlayerChange}
+                />
+              ),
+            },
+            {
+              id: "roles",
+              label: "Assigned roles",
+              span: "l",
+              control: (
+                <div className="flex w-full items-center gap-3">
+                  <div className="flex min-w-0 flex-1 gap-3 overflow-x-auto">
+                    {previewRoles.map((roleId, i) => {
+                      const role = ROLE_DEFS.find((r) => r.id === roleId);
+                      if (!role) return null;
+                      return (
+                        <RoleCard
+                          key={roleId}
+                          role={role}
+                          playerIndex={i}
+                          variant="compact"
+                          width={72}
+                        />
+                      );
+                    })}
                   </div>
-
-                  {/* Text */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-bold text-fg-strong">{d.label}</span>
-                      <div className="flex gap-0.5">
-                        {[1, 2, 3].map((n) => (
-                          <svg
-                            key={n}
-                            viewBox="0 0 20 20"
-                            fill={n <= d.stars ? d.accent : "currentColor"}
-                            className={`h-3 w-3 ${n <= d.stars ? "" : "text-fg-disabled"}`}
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        ))}
-                      </div>
-                    </div>
-                    <span className="text-xs text-fg-muted">{d.desc}</span>
-                  </div>
-
-                  {/* Epidemics label */}
-                  <span className="text-xs text-fg-disabled shrink-0">{d.value} epidemics</span>
-                </SelectableCard>
-              ))}
-            </div>
-          </div>
-
-          <Button variant="primary" size="lg" onClick={handleStart}>
-            Start Game
-          </Button>
-        </div>
-
-        {/* Right: role cards — fixed width so it doesn't shift with player count */}
-        <div className="w-[676px]">
-          <div className="flex items-center justify-between mb-4">
-            <SectionLabel>Assigned roles</SectionLabel>
-            <Button variant="link" onClick={handleShuffle}>
-              Shuffle
-            </Button>
-          </div>
-          <div className="flex justify-center gap-3">
-            {previewRoles.map((roleId, i) => {
-              const role = ROLE_DEFS.find((r) => r.id === roleId);
-              if (!role) return null;
-              return (
-                <RoleCard key={roleId} role={role} playerIndex={i} variant="full" width={160} />
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </SetupLayout>
+                  <Button variant="secondary" size="sm" onClick={handleShuffle}>
+                    Shuffle
+                  </Button>
+                </div>
+              ),
+            },
+          ]}
+        />
+      </SetupSection>
+    </SetupBriefing>
   );
 }

@@ -1,4 +1,7 @@
-import type { ProfileMatchSummaryResponse } from "@boardgames/core/protocol";
+import type {
+  ProfileMatchSummaryItem,
+  ProfileMatchSummaryResponse,
+} from "@boardgames/core/protocol";
 import { formatMonthYear, formatShortDate } from "../../../lib/date-format.ts";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
 import { summaryBadge } from "../../../lib/summary-badge.ts";
@@ -24,6 +27,23 @@ function GameThumb({ slug, title }: { slug: string | null; title: string }) {
   );
 }
 
+type TimelineRow = ProfileMatchSummaryItem & { part: number | null };
+
+/**
+ * One row per session: a multi-session campaign counts once in the stats but
+ * lists each of its sittings on its own night. Stable sort by day keeps the
+ * curated order within a night.
+ */
+export function timelineRows(items: readonly ProfileMatchSummaryItem[]): TimelineRow[] {
+  const rows: TimelineRow[] = items.flatMap((item) =>
+    item.sittings.length > 1
+      ? item.sittings.map((s, i): TimelineRow => ({ ...item, ...s, part: i + 1 })).reverse()
+      : [{ ...item, part: null } satisfies TimelineRow],
+  );
+  const day = (r: TimelineRow) => r.playedAt.slice(0, 10);
+  return rows.sort((a, b) => day(b).localeCompare(day(a)));
+}
+
 export function MatchTimeline({
   items,
   filtered,
@@ -46,9 +66,9 @@ export function MatchTimeline({
     );
   }
 
-  // Group consecutive items (already newest-first) by "YYYY-MM".
-  const groups: { key: string; label: string; items: typeof items }[] = [];
-  for (const item of items) {
+  // Group consecutive rows (newest-first) by "YYYY-MM".
+  const groups: { key: string; label: string; items: TimelineRow[] }[] = [];
+  for (const item of timelineRows(items)) {
     const key = item.playedAt.slice(0, 7);
     const last = groups[groups.length - 1];
     if (last && last.key === key) last.items.push(item);
@@ -67,7 +87,7 @@ export function MatchTimeline({
               return (
                 <Surface
                   as="li"
-                  key={item.matchId}
+                  key={`${item.matchId}-${item.part ?? 0}`}
                   variant="tile"
                   padding="none"
                   className="flex items-center gap-3 px-3 py-2"
@@ -76,9 +96,9 @@ export function MatchTimeline({
                   <div className="min-w-0 flex-1">
                     <p className="flex items-center gap-1.5 truncate text-sm font-semibold text-fg-primary">
                       <span className="truncate">{item.gameTitle}</span>
-                      {item.sessions > 1 && (
+                      {item.part !== null && (
                         <Badge tone="purple" size="xs">
-                          ×{item.sessions} sessions
+                          Session {item.part} of {item.sessions}
                         </Badge>
                       )}
                     </p>

@@ -10,10 +10,24 @@ import {
 } from "../../machines/action-validation";
 import { humanSeats, seatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
-import type { DecryptoAiAgent, EncryptInput, GuessInput } from "./ai/agent";
+import {
+  cluesOf,
+  codeOf,
+  type DecryptoAiAgent,
+  type EncryptInput,
+  type GuessInput,
+  noteOf,
+} from "./ai/agent";
 import { fallbackDecryptoAgent, fallbackGuess } from "./ai/fallback";
 import { canonicalDecryptoModel, DEFAULT_DECRYPTO_MODEL } from "./ai/models";
 import { type DecryptoConfig, decryptoManifest } from "./manifest";
+import {
+  type ClueNote,
+  type GuessNote,
+  parseClueNote,
+  parseGuessNote,
+  standInGuessNote,
+} from "./notes";
 import { buildPlayerView } from "./player-view";
 import {
   allCluesDone,
@@ -21,6 +35,7 @@ import {
   applyChat,
   applyDraft,
   applyGuess,
+  applyNote,
   applySubmitClues,
   buildRoundTransmissions,
   buildTeams,
@@ -55,7 +70,13 @@ import type {
   Team,
   Transmission,
 } from "./types";
-import { ChatActionSchema, DEFAULT_BEATS, MAX_CLUE_LENGTH, SubmitCluesActionSchema } from "./types";
+import {
+  ChatActionSchema,
+  DEFAULT_BEATS,
+  MAX_CLUE_LENGTH,
+  NoteActionSchema,
+  SubmitCluesActionSchema,
+} from "./types";
 
 // ---------------------------------------------------------------------------
 // Decrypto machine.
@@ -206,11 +227,25 @@ interface AiClueResult {
   team: Team;
   /** Null = the agent failed to produce legal clues in time → skip the transmission. */
   clues: [string, string, string] | null;
+  note: ClueNote | null;
 }
 
 interface AiGuessResult {
   purpose: GuessPurpose;
   code: Code;
+  note: GuessNote | null;
+}
+
+/** The live transmission with an AI guess's note attached. */
+function withGuessNote(
+  ctx: DecryptoContext,
+  purpose: GuessPurpose,
+  note: GuessNote | null,
+): DecryptoContext {
+  const tx = currentTransmission(ctx);
+  if (!tx) return ctx;
+  const key = purpose === "decode" ? "decodeNote" : "interceptNote";
+  return { ...ctx, current: ctx.current.map((t) => (t === tx ? { ...t, [key]: note } : t)) };
 }
 
 // ---------------------------------------------------------------------------
@@ -225,8 +260,22 @@ const initialContext: DecryptoContext = {
   humanPlayers: [0],
   aiModels: [],
   teams: [
-    { players: [0, 1], keywords: null, interceptions: 0, miscommunications: 0, usedClues: [] },
-    { players: [2, 3], keywords: null, interceptions: 0, miscommunications: 0, usedClues: [] },
+    {
+      players: [0, 1],
+      keywords: null,
+      interceptions: 0,
+      miscommunications: 0,
+      usedClues: [],
+      rivalNotes: ["", "", "", ""],
+    },
+    {
+      players: [2, 3],
+      keywords: null,
+      interceptions: 0,
+      miscommunications: 0,
+      usedClues: [],
+      rivalNotes: ["", "", "", ""],
+    },
   ],
   round: 0,
   current: [],
@@ -234,6 +283,7 @@ const initialContext: DecryptoContext = {
   clueTimerDeadlineTs: null,
   chat: [],
   history: [],
+  revealAcks: [],
   result: null,
   beats: DEFAULT_BEATS,
 };
@@ -254,10 +304,8 @@ function aiActors(agent: DecryptoAiAgent) {
           pendingAiClueTransmissions(ctx).map(async (tx) => {
             const encryptInput = buildEncryptInput(ctx, tx);
             const raw = await raceOrNull(() => agent.encrypt(encryptInput), AI_ENCRYPT_DEADLINE_MS);
-            return {
-              team: tx.team,
-              clues: raw === null ? null : sanitizeCluesOrNull(ctx, tx, raw),
-            };
+            const clues = raw === null ? null : sanitizeCluesOrNull(ctx, tx, cluesOf(raw));
+            return { team: tx.team, clues, note: clues ? parseClueNote(noteOf(raw)) : null };
           }),
         );
       },
@@ -272,12 +320,20 @@ function aiActors(agent: DecryptoAiAgent) {
         return Promise.all(
           pendingAiGuessPurposes(ctx).map(async (purpose) => {
             const guessInput = buildGuessInput(ctx, tx, purpose);
-            const raw = await raceWithFallback(
+            const raw: unknown = await raceWithFallback<unknown>(
               () => agent.guess(guessInput),
-              () => fallbackGuess(guessInput),
+              () => {
+                const code = fallbackGuess(guessInput);
+                return { code, note: standInGuessNote(purpose, code) };
+              },
               AI_GUESS_DEADLINE_MS,
             );
-            return { purpose, code: sanitizeGuess(ctx, tx, purpose, raw) };
+            const answered = codeOf(raw);
+            const code = sanitizeGuess(ctx, tx, purpose, answered);
+            const note = isValidCode(answered)
+              ? parseGuessNote(noteOf(raw))
+              : standInGuessNote(purpose, code);
+            return { purpose, code, note };
           }),
         );
       },
@@ -294,7 +350,7 @@ export const decryptoMachine = setup({
   delays: {
     roundStartBeat: ({ context }) => context.beats.roundStart,
     aiBeat: ({ context }) => context.beats.aiBeat,
-    // A token-awarding reveal (interception / miscommunication) holds three
+    // A token-awarding reveal (interception / miscommunication) holds two
     // beats so the digit-by-digit breakdown can actually be read; a clean
     // transmission moves on after one. Derived from the guesses rather than
     // `resolved` so evaluation order vs the entry action can't bite.
@@ -303,10 +359,11 @@ export const decryptoMachine = setup({
       if (!tx) return context.beats.reveal;
       const intercepted = tx.interceptRequired && codesEqual(tx.interceptGuess, tx.code);
       const miscommunicated = tx.skipped || !codesEqual(tx.decodeGuess, tx.code);
-      return context.beats.reveal * (intercepted || miscommunicated ? 3 : 1);
+      return context.beats.reveal * (intercepted || miscommunicated ? 2 : 1);
     },
     roundEndBeat: ({ context }) => context.beats.roundEnd,
     clueTimeout: ({ context }) => context.beats.clueTimeout,
+    revealTimeout: ({ context }) => context.beats.revealTimeout,
   },
 
   // The deterministic fallback until the server binds its model-backed agent
@@ -342,6 +399,15 @@ export const decryptoMachine = setup({
       event.type === "PLAYER_ACTION" &&
       event.action.kind === "chat" &&
       chatAllowed(context, event.player),
+    isNote: ({ event }) => event.type === "PLAYER_ACTION" && event.action.kind === "note",
+    isContinue: ({ context, event }) =>
+      event.type === "PLAYER_ACTION" &&
+      event.action.kind === "continue" &&
+      context.humanPlayers.includes(event.player),
+    noHumans: ({ context }) => context.humanPlayers.length === 0,
+    everyoneContinued: ({ context }) =>
+      context.humanPlayers.length > 0 &&
+      context.humanPlayers.every((s) => context.revealAcks.includes(s)),
   },
 
   actions: {
@@ -377,6 +443,7 @@ export const decryptoMachine = setup({
           clueTimerDeadlineTs: null,
           chat: [],
           history: [],
+          revealAcks: [],
           result: null,
           beats: { ...DEFAULT_BEATS, ...event.beats },
         };
@@ -411,6 +478,12 @@ export const decryptoMachine = setup({
         }
         return {};
       });
+    }),
+
+    setNote: assign(({ context, event }) => {
+      if (event.type !== "PLAYER_ACTION" || event.action.kind !== "note") return {};
+      const { digit, text } = event.action;
+      return safeApply("decrypto", () => applyNote(context, event.player, digit, text));
     }),
 
     appendChat: assign(({ context, event }) => {
@@ -455,6 +528,11 @@ export const decryptoMachine = setup({
         }
         try {
           patch = { ...patch, ...applySubmitClues(patch, tx.encryptor, item.clues) };
+          const note = item.note;
+          patch = {
+            ...patch,
+            current: patch.current.map((t, i) => (i === idx ? { ...t, encryptNote: note } : t)),
+          };
         } catch {
           // Sanitized upstream; an illegal item here means the context moved on.
         }
@@ -484,7 +562,13 @@ export const decryptoMachine = setup({
         const seat = eligibleSeats(patch, tx, item.purpose)[0];
         if (seat === undefined) continue;
         try {
+          const before = currentTransmission(patch);
+          const alreadyIn =
+            item.purpose === "decode"
+              ? before?.decodeGuess != null
+              : before?.interceptGuess != null;
           patch = { ...patch, ...applyGuess(patch, seat, item.purpose, item.code) };
+          if (!alreadyIn) patch = withGuessNote(patch, item.purpose, item.note);
         } catch {
           // already committed / no longer applicable — first commit wins
         }
@@ -502,11 +586,19 @@ export const decryptoMachine = setup({
         try {
           const code = fallbackGuess(buildGuessInput(patch, tx, purpose));
           patch = { ...patch, ...applyGuess(patch, seat, purpose, code) };
+          patch = withGuessNote(patch, purpose, standInGuessNote(purpose, code));
         } catch {
           // unreachable by construction
         }
       }
       return { current: patch.current };
+    }),
+
+    clearRevealAcks: assign({ revealAcks: () => [] }),
+
+    ackReveal: assign(({ context, event }) => {
+      if (event.type !== "PLAYER_ACTION" || context.revealAcks.includes(event.player)) return {};
+      return { revealAcks: [...context.revealAcks, event.player] };
     }),
 
     resolveCurrentTransmission: assign(({ context }) => {
@@ -540,7 +632,10 @@ export const decryptoMachine = setup({
       // Team chat flows in every in-game phase; the guard enforces the
       // encryptor lockout. Unhandled PLAYER_ACTIONs bubble here and drop.
       on: {
-        PLAYER_ACTION: { guard: "isChat", actions: "appendChat" },
+        PLAYER_ACTION: [
+          { guard: "isChat", actions: "appendChat" },
+          { guard: "isNote", actions: "setNote" },
+        ],
         START: { target: "active", actions: "initGame" },
         RESET: { target: "idle" },
       },
@@ -641,18 +736,28 @@ export const decryptoMachine = setup({
               },
             },
 
+            // The verdict stays up until every person has read it and pressed
+            // Continue (at most `revealTimeout`); an all-AI game keeps the beat.
             reveal: {
-              entry: "resolveCurrentTransmission",
-              after: {
-                revealBeat: [
-                  {
-                    guard: "hasNextTransmission",
-                    target: "guessing",
-                    actions: "advanceTransmission",
-                  },
-                  { target: "#decrypto.active.roundEnd" },
-                ],
+              entry: ["resolveCurrentTransmission", "clearRevealAcks"],
+              on: {
+                PLAYER_ACTION: { guard: "isContinue", actions: "ackReveal" },
               },
+              always: { guard: "everyoneContinued", target: "revealDone" },
+              after: {
+                revealBeat: { guard: "noHumans", target: "revealDone" },
+                revealTimeout: { target: "revealDone" },
+              },
+            },
+            revealDone: {
+              always: [
+                {
+                  guard: "hasNextTransmission",
+                  target: "guessing",
+                  actions: "advanceTransmission",
+                },
+                { target: "#decrypto.active.roundEnd" },
+              ],
             },
           },
         },
@@ -753,6 +858,21 @@ function validateDecryptoAction(
       return rejectAction("the encryptor can't talk to their team until their code is revealed");
     }
     return acceptAction(toEvent(player, { kind: "chat", text: parsed.value.text }));
+  }
+
+  if (kind === "note") {
+    const parsed = parseActionSync(NoteActionSchema, raw.action);
+    if (!parsed.ok) return rejectAction(parsed.reason);
+    if (phase === "idle" || phase === "gameOver") {
+      return rejectAction("notes are only available during a game");
+    }
+    const team = teamOf(ctx, player);
+    if (team === null) return rejectAction("only a team member can write notes");
+    if (ctx.teams[team].players.length >= 2 && !chatAllowed(ctx, player)) {
+      return rejectAction("the encryptor can't write notes until their code is revealed");
+    }
+    const { digit, text } = parsed.value;
+    return acceptAction(toEvent(player, { kind: "note", digit, text }));
   }
 
   // Enumerable actions: the client may only pick a move the engine offered,

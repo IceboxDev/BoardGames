@@ -732,6 +732,210 @@ const THIRD_MOVES: readonly {
       ],
     ],
   },
+  {
+    at: ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "a7a6", "b5a4", "g8f6", "e1g1", "f8e7"],
+    pick: "f1e1",
+    name: "6.Re1 Main Line",
+    note: "Named from the literature: 6.Re1 guards e4 and so threatens Bxc6 and Nxe5; it is the main line of the Closed Ruy. lichess files the position under the Closed itself.",
+    replies: [
+      [
+        "b7b5",
+        "6…b5 Main Line",
+        "Named from the literature: 6…b5 breaks the pin and is the book main line; lichess names the position after your 7.Bb3 the Closed.",
+      ],
+      ["d7d6", "6…d6 Averbakh"],
+      [
+        "e8g8",
+        "6…O-O Pawn Slip",
+        "Coined: no name found. Black castles before …b5, so 7.Bxc6 dxc6 8.Nxe5 wins the e5 pawn — the threat 6.Re1 made.",
+      ],
+    ],
+  },
+  {
+    at: [
+      "e2e4",
+      "e7e5",
+      "g1f3",
+      "b8c6",
+      "f1b5",
+      "a7a6",
+      "b5a4",
+      "g8f6",
+      "e1g1",
+      "f8e7",
+      "f1e1",
+      "b7b5",
+    ],
+    pick: "a4b3",
+    name: "7.Bb3 Closed",
+    note: "lichess: Ruy Lopez: Closed.",
+    replies: [
+      [
+        "d7d6",
+        "7…d6 Main Line",
+        "Named from the literature: 7…d6 is the book main line, heading for the Chigorin, Breyer and Zaitsev after 8.c3 O-O 9.h3. The same position as 6…d6 Averbakh 7.c3 b5 8.Bb3.",
+      ],
+      [
+        "e8g8",
+        "7…O-O Marshall Move",
+        "Named from the literature: 7…O-O invites the Marshall Attack (8.c3 d5); your 8.a4 is the Anti-Marshall. lichess files the position under the Closed.",
+      ],
+      [
+        "c6a5",
+        "7…Na5 Bishop Hunt",
+        "Coined: no name found. The knight goes after the b3 bishop at once and leaves e5, so 8.Nxe5 takes the pawn.",
+      ],
+      [
+        "d7d5",
+        "7…d5 Early Marshall",
+        "Coined: no name found. The Marshall's …d5 strike, played before castling and before c3; 8.exd5 takes the pawn.",
+      ],
+    ],
+  },
+  {
+    at: [
+      "e2e4",
+      "e7e5",
+      "g1f3",
+      "b8c6",
+      "f1b5",
+      "a7a6",
+      "b5a4",
+      "g8f6",
+      "e1g1",
+      "f8e7",
+      "f1e1",
+      "d7d6",
+    ],
+    pick: "c2c3",
+    name: "7.c3 Main Line",
+    note: "Named from the literature: 7.c3 prepares d4, the usual answer to the Averbakh. lichess files the position under the Averbakh itself.",
+    replies: [
+      [
+        "b7b5",
+        "7…b5 Closed",
+        "A transposition: after 8.Bb3 the Closed main line (6…b5 7.Bb3 d6 8.c3); its games and moves belong there.",
+      ],
+      [
+        "c8d7",
+        "7…Bd7 Steinitz Setup",
+        "Coined: no name found. …d6 and …Bd7 hold e5 the way the Steinitz Defence does, with the a4 bishop still pinning.",
+      ],
+      [
+        "e8g8",
+        "7…O-O Castles",
+        "Coined: no name found. Black castles first and keeps …b5 in hand.",
+      ],
+      [
+        "c8g4",
+        "7…Bg4 Counter-Pin",
+        "Coined: no name found. Black answers the pin on c6 by pinning the f3 knight in turn.",
+      ],
+      [
+        "h7h6",
+        "7…h6 Waiting Move",
+        "Coined: no name found. A quiet pawn move that keeps Ng5 and Bg5 out before Black decides.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e5", "g1f3", "d7d6", "d2d4", "e5d4"],
+    pick: "f3d4",
+    name: "4.Nxd4 Recapture",
+    note: "Named from the literature: the natural recapture; lichess files the position under the Exchange Variation itself.",
+    replies: [
+      ["g8f6", "4…Nf6 Main Line", MAIN],
+      [
+        "f8e7",
+        "4…Be7 Quiet Bishop",
+        "Coined: no name found. Black develops behind the d6 pawn and puts off …Nf6 for a move.",
+      ],
+      ["g7g6", "4…g6 Larsen"],
+      [
+        "b8c6",
+        "4…Nc6 Knight Swap",
+        "Coined: no name found. The knight challenges the d4 knight at once, offering to trade it off.",
+      ],
+      [
+        "c8d7",
+        "4…Bd7 Modest Bishop",
+        "Coined: no name found. The light bishop takes the short step to d7, behind the d6 pawn.",
+      ],
+      [
+        "a7a6",
+        "4…a6 Waiting Move",
+        "Coined: no name found. A quiet pawn move that keeps a knight and bishop off b5.",
+      ],
+      [
+        "d8e7",
+        "4…Qe7 E-file Queen",
+        "Coined: no name found. The queen steps onto the e-file the exchange opened, pressing e4.",
+      ],
+      ["h7h6", "4…h6 Late Carr", LATE("h6", "Carr Defence", "three moves")],
+      [
+        "g8e7",
+        "4…Ne7 Shy Knight",
+        "Coined: no name found. The king's knight goes to e7 instead of f6, where it neither hits e4 nor guards h7.",
+      ],
+      [
+        "c7c5",
+        "4…c5 Knight Kick",
+        "Coined: no name found. The pawn drives the d4 knight away at once, leaving a hole on d5; you answer 5.Nb3.",
+      ],
+      ["f7f6", "4…f6 Late Barnes", LATE("f6", "Barnes Defence", "three moves")],
+      [
+        "d8f6",
+        "4…Qf6 Early Queen",
+        "Coined: no name found. The queen comes out to f6 before the knights, taking the knight's best square.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "f8c5"],
+    pick: "c2c3",
+    name: "4.c3 Central",
+    replies: [
+      [
+        "g8f6",
+        "4…Nf6 Main Line",
+        "A transposition: after your 5.O-O it is the Berlin's 4.O-O Bc5 5.c3 (Beverwijk), where its games and moves belong. lichess calls it the Zukertort Gambit.",
+      ],
+      [
+        "a7a6",
+        "4…a6 Late Morphy",
+        "Coined: no name found. 3…a6 is the Morphy Defence; here it comes a move later, after …Bc5 and 4.c3.",
+      ],
+      [
+        "d7d6",
+        "4…d6 Steinitz Hybrid",
+        "Coined: no name found. …d6 holds e5 as in the Steinitz Defence, with the bishop already out on c5.",
+      ],
+      ["c5b6", "4…Bb6 Charousek"],
+      ["f7f6", "4…f6 Late Barnes", LATE("f6", "Barnes Defence", "three moves")],
+      [
+        "g8e7",
+        "4…Nge7 Quiet Knight",
+        "Coined: no name found. The king's knight goes to e7, keeping the f-pawn free and the c6 knight guarded.",
+      ],
+      [
+        "c5d6",
+        "4…Bd6 Late Self-Block",
+        "Coined: no name found. As 2…Bd6 Self-Block, the bishop stands in front of the d-pawn, here after a detour to c5.",
+      ],
+      [
+        "a7a5",
+        "4…a5 Bishop Shelter",
+        "Coined: no name found. …a5 gives the c5 bishop a7 as a retreat before d4 arrives.",
+      ],
+      [
+        "d8f6",
+        "4…Qf6 Early Queen",
+        "Coined: no name found. The queen comes out to f6 before the king's knight, guarding e5 and eyeing f2.",
+      ],
+      ["f7f5", "4…f5 Cordel Gambit"],
+      ["h7h6", "4…h6 Late Carr", LATE("h6", "Carr Defence", "three moves")],
+    ],
+  },
 ];
 
 const deeper = (moves: readonly string[]): TrainerFolder[] =>
@@ -1101,6 +1305,75 @@ const BLACK_MOVES: readonly {
         "h2h3",
         "5.h3 Waiting Move",
         "Coined: no name found. A quiet pawn move that keeps …Bg4 out before developing, as 4.h3 Waiting Move a move earlier.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e6", "d2d4", "d7d5", "e4d5", "e6d5", "g1f3", "f8d6", "b1c3"],
+    pick: "g8f6",
+    name: "5…Nf6 Development",
+    note: "Coined: no name found. The natural developing move, ready to castle next.",
+    replies: [
+      [
+        "f1d3",
+        "6.Bd3 Symmetrical",
+        "Named from the literature: bishops on d3 and d6 make the fully symmetrical Exchange French.",
+      ],
+      [
+        "c1g5",
+        "6.Bg5 Knight Pin",
+        "Coined: no name found. The bishop pins the f6 knight to the queen.",
+      ],
+      [
+        "f1e2",
+        "6.Be2 Quiet Bishop",
+        "Coined: no name found. The bishop takes the modest e2 square, out of the d6 bishop's sight.",
+      ],
+      ["c1e3", "6.Be3 Bishop Guard", "Coined: no name found. The dark bishop guards d4 from e3."],
+      [
+        "f1b5",
+        "6.Bb5+ Spite Check",
+        "Coined: no name found. A check that achieves little: …c6 blocks it with tempo.",
+      ],
+      [
+        "h2h3",
+        "6.h3 Waiting Move",
+        "Coined: no name found. A quiet pawn move that keeps …Bg4 out before developing.",
+      ],
+      [
+        "c1d2",
+        "6.Bd2 Modest Bishop",
+        "Coined: no name found. The dark bishop takes the short step to d2, out of …Bb4's reach.",
+      ],
+      [
+        "f3e5",
+        "6.Ne5 Outpost Knight",
+        "Coined: no name found. The knight jumps to e5 at once, where …Bxe5 is always possible.",
+      ],
+      [
+        "d1e2",
+        "6.Qe2+ Queen Check",
+        "Coined: no name found. A queen check on the open e-file, as 4.Qe2+ Queen Check two moves earlier.",
+      ],
+      [
+        "b2b3",
+        "6.b3 Fianchetto Prep",
+        "Coined: no name found. The pawn makes room for the dark bishop on b2.",
+      ],
+      [
+        "c3d5",
+        "6.Nxd5 Knight Blunder",
+        "Coined: no name found. The knight takes d5, but …Nxd5 wins it for a pawn.",
+      ],
+      [
+        "c3b5",
+        "6.Nb5 Knight Raid",
+        "Coined: no name found. The knight goes for the d6 bishop, which steps aside or is traded.",
+      ],
+      [
+        "c1f4",
+        "6.Bf4 London Setup",
+        "Named by analogy: d4 with an early Bf4 is the London System's setup.",
       ],
     ],
   },

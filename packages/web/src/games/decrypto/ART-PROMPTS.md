@@ -2,7 +2,7 @@
 
 Everything the Wireless Room board paints: the two code screens and their windows, the digit and label plates, the tokens, trays and the nixie tube, the signal lamps, the brass code selectors, the teletype paper and the code card, the desk surfaces, the insignia and AI-tier crests, and the five debrief scenes. The board adds every keyword, digit, clue, name and count itself; the prompts generate **only pictures**.
 
-Every file is a **PNG with a fully transparent background** unless its prompt says *opaque*. Drop the raw PNGs into `packages/web/art-src/decrypto/<name>.png` (gitignored; this file is the reproducible source). They are converted to `assets/art/*.webp` with `pnpm --filter @boardgames/web card-art --game=decrypto` per `assets/art/manifest.json`. The menu backdrop is not in this sheet: like every game's background it lives in the root `PROMPTS.md` ("Background Image Prompts", entry 17 · Decrypto, drawn with one ivory and one black screen to match this set) and is saved straight to `assets/background.png`.
+Every file is a **PNG with a fully transparent background** unless its prompt says *opaque*. Drop the raw PNGs into `packages/web/art-src/decrypto/<name>.png` (gitignored; this file is the reproducible source). They are converted to `assets/art/*.webp` with `pnpm --filter @boardgames/web card-art --game=decrypto` per `assets/art/manifest.json`.
 
 ---
 

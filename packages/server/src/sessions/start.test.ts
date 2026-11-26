@@ -12,7 +12,7 @@ describe("prepareStart", () => {
   it("builds the game's own START from seats, parsed options and the seed", () => {
     const started = prepareStart(
       spec("the-hunger"),
-      [{ kind: "human" }, { kind: "ai", strategy: "heuristic-v1" }],
+      [{ kind: "human" }, { kind: "ai", strategy: "strigoi" }],
       { mode: "rookie" },
       42,
     );
@@ -22,11 +22,21 @@ describe("prepareStart", () => {
       event: {
         type: "START",
         playerCount: 2,
-        strategies: [null, "heuristic-v1"],
+        strategies: [null, "strigoi"],
         options: { mode: "rookie", beginnerSafeMountains: false },
         seed: 42,
       },
     });
+  });
+
+  it("refuses an AI taken off the ladder", () => {
+    const started = prepareStart(
+      spec("the-hunger"),
+      [{ kind: "human" }, { kind: "ai", strategy: "heuristic-v1" }],
+      {},
+      42,
+    );
+    expect(started).toMatchObject({ ok: false });
   });
 
   it("fills omitted options with the manifest's defaults", () => {

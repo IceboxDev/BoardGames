@@ -1,5 +1,4 @@
-import { isCatalogSlug, isNightGame } from "@boardgames/core/games/catalog";
-import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
+import { isCatalogSlug } from "@boardgames/core/games/catalog";
 import { campaignBySlug } from "@boardgames/core/ical/campaign";
 import {
   AdminNightGuestBodySchema,
@@ -17,18 +16,13 @@ import {
   PicksLockBodySchema,
   PrivateNightUpdateBodySchema,
   ResetGameVotesBodySchema,
-  SlugListSchema,
   UnlockBodySchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { adminApp, authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
-import {
-  computeAvailableGamesPayload,
-  computePlayableSlugs,
-  rankNightLineup,
-} from "../lib/available-games.ts";
+import { computeAvailableGamesPayload } from "../lib/available-games.ts";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import {
@@ -37,11 +31,8 @@ import {
   loadNightLock,
   sealedAt,
 } from "../lib/night-participants.ts";
-import {
-  loadPickerFilterInputs,
-  nightPickerExclusions,
-  withoutExcluded,
-} from "../lib/night-picker-filters.ts";
+import { loadPickerFilterInputs } from "../lib/night-picker-filters.ts";
+import { loadNightGameInventories, nightLineupLeader } from "../lib/night-winner.ts";
 import { RSVP_NOW } from "./calendar-rsvps.ts";
 
 /**
@@ -114,12 +105,6 @@ const GameRequestRowSchema = z.object({
   game_slug: z.string(),
   reaction: z.enum(["hype", "teach", "learn"]),
   created_at: z.string(),
-});
-
-/** `SELECT user_id, game_slugs_json FROM user_inventory`. */
-const InventoryRowSchema = z.object({
-  user_id: z.string(),
-  game_slugs_json: jsonColumn(SlugListSchema),
 });
 
 // ── Routes ────────────────────────────────────────────────────────────
@@ -388,7 +373,7 @@ calendarLocksRoutes.post("/private-night", zJsonBody(PrivateNightUpdateBodySchem
 calendarLocksRoutes.get("/locks", async (c) => {
   const viewer = c.get("user");
   const viewerIsAdmin = viewer.role === "admin";
-  const [locks, rsvpsResult, availabilityResult, reactionsResult, inventoryResult, pickerFilters] =
+  const [locks, rsvpsResult, availabilityResult, reactionsResult, inventoryByUser, pickerFilters] =
     await Promise.all([
       loadActiveNightLocks(getDb()),
       getDb().execute("SELECT date_key, user_id, status, rsvped_at FROM rsvps"),
@@ -404,28 +389,11 @@ calendarLocksRoutes.get("/locks", async (c) => {
       getDb().execute(
         "SELECT date_key, user_id, game_slug, reaction, created_at FROM game_requests WHERE date_key IN (SELECT date_key FROM locked_dates WHERE unlocked_at IS NULL)",
       ),
-      getDb().execute("SELECT user_id, game_slugs_json FROM user_inventory"),
+      loadNightGameInventories(getDb()),
       // Non-drinkers and ongoing campaigns: what a still-voting night's
       // picker leaves out (the same rule as the per-night payload).
       loadPickerFilterInputs(getDb()),
     ]);
-
-  // user_id → owned slug set. One row per user, so loading the whole table is
-  // cheap; per-row tolerance keeps one corrupt inventory from breaking /locks.
-  const inventoryByUser = new Map<string, Set<string>>();
-  for (const row of inventoryResult.rows) {
-    let inv: { user_id: string; game_slugs_json: string[] };
-    try {
-      inv = parseRow(InventoryRowSchema, row, "user_inventory");
-    } catch (err) {
-      if (!(err instanceof RowParseError)) throw err;
-      continue;
-    }
-    inventoryByUser.set(
-      inv.user_id,
-      new Set([...expandOwnedSlugs(new Set(inv.game_slugs_json))].filter(isNightGame)),
-    );
-  }
 
   // Group every per-date input so each night is derived from its own rows.
   const groupByDate = <T extends { date_key: string }>(rows: T[]): Map<string, T[]> => {
@@ -459,38 +427,14 @@ calendarLocksRoutes.get("/locks", async (c) => {
 
     // Vote winner for this night, using the same lineup rule as the per-date
     // games payload (so `topGameSlug` always equals that payload's
-    // `topSlugs[0]`). Playable = owned by a definite attendee AND fits the
-    // night's headcount window. Drives the calendar's D&D-night treatment.
-    const ownedUnion = new Set<string>();
-    for (const id of participants.definite) {
-      const inv = inventoryByUser.get(id);
-      if (inv) for (const slug of inv) ownedUnion.add(slug);
-    }
-    const { lo, hi } = participants.window;
-    const topGameSlug =
-      lock.fixedGameSlug ??
-      rankNightLineup(
-        {
-          pickMode: lock.pickMode,
-          isPrivate: lock.isPrivate,
-          hostUserId: lock.hostUserId,
-          voters: participants.voters,
-          playableSlugs: computePlayableSlugs(
-            withoutExcluded(
-              ownedUnion,
-              nightPickerExclusions(pickerFilters, {
-                sealed: sealedAt(lock) !== null,
-                peopleIds: [...participants.definite, ...participants.tentative],
-              }),
-            ),
-            lo,
-            hi,
-          ),
-        },
-        reactionsByDate.get(lock.dateKey) ?? [],
-        1,
-      ).topSlugs[0] ??
-      null;
+    // `topSlugs[0]`). Drives the calendar's D&D-night treatment.
+    const { topGameSlug } = nightLineupLeader({
+      lock,
+      participants,
+      inventoryByUser,
+      pickerFilters,
+      reactions: reactionsByDate.get(lock.dateKey) ?? [],
+    });
 
     const host = lock.hostUserId ? { userId: lock.hostUserId, name: lock.hostName ?? "" } : null;
     const seats = participants.seats;

@@ -1,8 +1,8 @@
 import { duetManifest, STANDARD_TOKENS } from "@boardgames/core/games/codenames-duet/manifest";
 import { useState } from "react";
 import { PvAISetupScreen } from "../../../components/setup";
-import { OptionsControls, type TableOptions } from "../../codenames/table";
-import { TokenSelect } from "./TokenSelect";
+import { type TableOptions, tableOptionFields } from "../../codenames/table";
+import { TOKENS_LABEL, TokenSelectControl } from "./TokenSelect";
 
 export interface DuetSetup extends TableOptions {
   timerTokens: number;
@@ -22,13 +22,19 @@ export default function SetupScreen({ onStart }: { onStart: (setup: DuetSetup) =
       title="Codenames: Duet"
       manifest={duetManifest}
       playerCounts={[2]}
+      eyebrow="Solo · you + an AI partner"
+      fileWord="File"
+      stamp="Assigned"
+      summary={({ strategy }) => `Partner: ${strategy?.label ?? ""} · ${timerTokens} turns`}
       onStart={(_players, modelId) => onStart({ ...options, timerTokens, modelId })}
-      extraControls={
-        <div className="flex flex-col items-center gap-3">
-          <OptionsControls value={options} onChange={setOptions} />
-          <TokenSelect value={timerTokens} onChange={setTimerTokens} />
-        </div>
-      }
+      options={[
+        ...tableOptionFields(options, setOptions),
+        {
+          id: "tokens",
+          label: TOKENS_LABEL,
+          control: <TokenSelectControl value={timerTokens} onChange={setTimerTokens} />,
+        },
+      ]}
     />
   );
 }

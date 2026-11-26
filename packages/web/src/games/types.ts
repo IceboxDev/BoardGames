@@ -159,8 +159,7 @@ export type GameFamily = {
 //   2. BGG snapshot bundled in `@boardgames/core/bgg`
 //   3. Per-slug `descriptions.generated.ts` when present
 //   4. Per-slug `assets/thumbnail.webp` (or placeholder)
-//   5. For playable slugs: the `<slug>/index.ts` module, the core manifest
-//      and `assets/background.png` when present
+//   5. For playable slugs: the `<slug>/index.ts` module and the core manifest
 
 /** Fields shared by every entry, regardless of kind. */
 interface GameBase {
@@ -221,12 +220,6 @@ export interface PlayableGame extends GameBase {
     description: string;
     component: LazyExoticComponent<ComponentType>;
   };
-  /**
-   * Full-page backdrop behind every `/play/:slug` screen. Hydrated by the
-   * registry from the game's `assets/background.png` when the file exists —
-   * never declared in `index.ts`.
-   */
-  backgroundImage?: string;
   /**
    * Which of the four solo groups the mode-picker's left card opens; the
    * card's label, icon, tone and copy come from the group. Defaults to `"singleplayer"`.
@@ -367,7 +360,4 @@ export type CatalogEntry = {
  * The folder name *is* the slug; no need to repeat it here. Registry
  * looks up the matching catalog entry by folder path.
  */
-export type PlayableModule = Omit<
-  PlayableGame,
-  "kind" | "manifest" | "backgroundImage" | keyof GameBase
->;
+export type PlayableModule = Omit<PlayableGame, "kind" | "manifest" | keyof GameBase>;

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   EvalQueueBodySchema,
   EvalQueueResponseSchema,
+  EvalRequestResponseSchema,
   FarmClaimBodySchema,
   FarmEnqueueBodySchema,
   FarmGamesQuerySchema,
@@ -70,6 +71,30 @@ describe("queue places", () => {
         places: { [fen]: { status: "done", ahead: 0 } },
         lanes: 1,
         avgSeconds: null,
+      }),
+    ).toThrow();
+  });
+});
+
+describe("eval request response", () => {
+  const farm = { queued: 3, running: 24, avgSeconds: 1200, lastSeen: null };
+  it("carries the finished results per colour, and parses without them (older servers)", () => {
+    const withResults = EvalRequestResponseSchema.parse({
+      results: {},
+      queued: 0,
+      farm: { ...farm, results: { w: 8473, b: 6859 } },
+    });
+    expect(withResults.farm.results).toEqual({ w: 8473, b: 6859 });
+    expect(EvalRequestResponseSchema.parse({ results: {}, queued: 0, farm }).farm.results).toBe(
+      undefined,
+    );
+  });
+  it("rejects a negative count", () => {
+    expect(() =>
+      EvalRequestResponseSchema.parse({
+        results: {},
+        queued: 0,
+        farm: { ...farm, results: { w: -1, b: 0 } },
       }),
     ).toThrow();
   });

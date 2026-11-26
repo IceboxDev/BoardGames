@@ -8,19 +8,15 @@ const results: TournamentResults = {
   strategies: [
     {
       id: "blocker",
-      label: "Blocker",
+      label: "Sentry",
     },
     {
       id: "lookahead",
-      label: "Lookahead",
-    },
-    {
-      id: "deep",
-      label: "Deep Search",
+      label: "Tactician",
     },
     {
       id: "perfect",
-      label: "Perfect",
+      label: "Oracle",
     },
   ],
   tables: [
@@ -39,16 +35,6 @@ const results: TournamentResults = {
         },
         {
           a: "blocker",
-          b: "deep",
-          games: 20,
-          aWins: 0,
-          bWins: 20,
-          draws: 0,
-          avgScoreA: 0,
-          avgScoreB: 1,
-        },
-        {
-          a: "blocker",
           b: "perfect",
           games: 20,
           aWins: 0,
@@ -59,32 +45,12 @@ const results: TournamentResults = {
         },
         {
           a: "lookahead",
-          b: "deep",
-          games: 20,
-          aWins: 0,
-          bWins: 20,
-          draws: 0,
-          avgScoreA: 0,
-          avgScoreB: 1,
-        },
-        {
-          a: "lookahead",
           b: "perfect",
           games: 20,
           aWins: 0,
           bWins: 20,
           draws: 0,
           avgScoreA: 0,
-          avgScoreB: 1,
-        },
-        {
-          a: "deep",
-          b: "perfect",
-          games: 20,
-          aWins: 1,
-          bWins: 19,
-          draws: 0,
-          avgScoreA: 0.1,
           avgScoreB: 1,
         },
       ],

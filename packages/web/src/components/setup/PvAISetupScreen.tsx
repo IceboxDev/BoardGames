@@ -4,20 +4,25 @@ import {
   strategiesFor,
 } from "@boardgames/core/machines/manifest";
 import { type ReactNode, useCallback, useMemo, useState } from "react";
-import { Button } from "../ui/Button";
-import { SelectableCard } from "../ui/SelectableCard";
 import { Stepper } from "../ui/Stepper";
-import { DIFFICULTY } from "./difficulty";
-import { SectionLabel } from "./SectionLabel";
-import { SetupHeader } from "./SetupHeader";
-import { SetupLayout } from "./SetupLayout";
+import { SetupBriefing, SetupFooter, SetupSection } from "./SetupBriefing";
+import { SetupChoiceCards } from "./SetupChoiceCards";
+import { type SetupOption, SetupOptions } from "./SetupOptions";
 
 // ---------------------------------------------------------------------------
-// Types
+// The solo setup every game against the AI shares: the Briefing (the game's
+// art, one row of AI levels, the game's options across the full width,
+// Start). Fits a laptop screen without scrolling.
 // ---------------------------------------------------------------------------
 
 /** An AI option on the setup screen — the manifest's own description of it. */
 export type StrategyOption = StrategyInfo;
+
+/** What the summary and the options can depend on. */
+export interface SetupState {
+  playerCount: number;
+  strategy: StrategyInfo | undefined;
+}
 
 export interface PvAISetupScreenProps {
   title: string;
@@ -31,28 +36,22 @@ export interface PvAISetupScreenProps {
   initialStrategy?: string;
   /** Called when user clicks Start, with an AI the game offers at that size. */
   onStart: (playerCount: number, strategyId: string) => void;
-  /** Optional extra controls (e.g. an expansion toggle) shown above Start. */
-  extraControls?: ReactNode;
+  /** The game's own options, laid out across the full width (after Players). */
+  options?: readonly SetupOption[] | ((state: SetupState) => readonly SetupOption[]);
+  /** One line under the title; defaults to the game's short description. */
+  blurb?: ReactNode;
+  /** Small caps line above the title; defaults to "Solo · you + n AI". */
+  eyebrow?: ReactNode;
+  /** The footer's line; defaults to the AI and the table size. */
+  summary?: (state: SetupState) => ReactNode;
+  startLabel?: ReactNode;
+  /** The word in front of each AI card's number. */
+  fileWord?: string;
+  /** The chosen AI card's stamp. */
+  stamp?: string;
 }
 
-// ---------------------------------------------------------------------------
-// Grid column mapping (Tailwind needs static classes)
-// ---------------------------------------------------------------------------
-
-const GRID_COLS: Record<number, string> = {
-  1: "grid-cols-1",
-  2: "grid-cols-2",
-  3: "grid-cols-3",
-  4: "grid-cols-4",
-};
-
-function gridColsClass(count: number): string {
-  return GRID_COLS[Math.min(count, 4)] ?? "grid-cols-4";
-}
-
-// ---------------------------------------------------------------------------
-// Component
-// ---------------------------------------------------------------------------
+const aiCount = (players: number) => `${players - 1} AI`;
 
 export function PvAISetupScreen({
   title,
@@ -60,8 +59,14 @@ export function PvAISetupScreen({
   playerCounts: playerCountsProp,
   defaultPlayerCount,
   onStart,
-  extraControls,
+  options,
   initialStrategy,
+  blurb,
+  eyebrow,
+  summary,
+  startLabel,
+  fileWord,
+  stamp,
 }: PvAISetupScreenProps) {
   const playerCounts = useMemo(
     () =>
@@ -73,7 +78,12 @@ export function PvAISetupScreen({
     [playerCountsProp, manifest.seats],
   );
   const initialPlayerCount = defaultPlayerCount ?? playerCounts[0] ?? manifest.seats.min;
-  const [playerCount, setPlayerCount] = useState(initialPlayerCount);
+  const [chosenCount, setPlayerCount] = useState(initialPlayerCount);
+  // A game whose mode sets the table size (Decrypto) changes `playerCounts`
+  // under us: a count no longer on offer falls back to the first one.
+  const playerCount = playerCounts.includes(chosenCount)
+    ? chosenCount
+    : (playerCounts[0] ?? chosenCount);
 
   const currentStrategies = useMemo(
     () => strategiesFor(manifest, playerCount),
@@ -84,99 +94,88 @@ export function PvAISetupScreen({
     initialStrategy ?? manifest.defaultStrategy ?? currentStrategies[0]?.id ?? "",
   );
 
-  // Reset selection when strategy list changes and current selection is no longer valid
+  // A selection the current table size doesn't offer falls back to the first AI.
   const validSelection = currentStrategies.some((s) => s.id === selectedId);
   const effectiveId = validSelection ? selectedId : (currentStrategies[0]?.id ?? "");
+  const strategy = currentStrategies.find((s) => s.id === effectiveId);
+  const state: SetupState = { playerCount, strategy };
 
   const handleStart = useCallback(() => {
     onStart(playerCount, effectiveId);
   }, [onStart, playerCount, effectiveId]);
 
   const showPlayerCount = playerCounts.length > 1;
-  const subtitle = showPlayerCount
-    ? "Choose how many players and your AI opponent"
-    : "Choose your AI opponent";
+  const min = playerCounts[0] ?? playerCount;
+  const max = playerCounts[playerCounts.length - 1] ?? playerCount;
+  const gameOptions = typeof options === "function" ? options(state) : (options ?? []);
+  const allOptions: SetupOption[] = [
+    ...(showPlayerCount
+      ? [
+          {
+            id: "players",
+            label: "Players",
+            span: gameOptions.length === 0 ? ("full" as const) : ("s" as const),
+            control: (
+              <Stepper
+                label="Player count"
+                size="sm"
+                min={min}
+                max={max}
+                value={playerCount}
+                onChange={setPlayerCount}
+                className="flex-row gap-3"
+                caption={`You + ${aiCount(playerCount)}`}
+              />
+            ),
+          },
+        ]
+      : []),
+    ...gameOptions,
+  ];
+  const ais = playerCount - 1;
 
   return (
-    <SetupLayout>
-      <SetupHeader title={title} subtitle={subtitle} />
-
-      {showPlayerCount && (
-        <div className="mb-8">
-          <SectionLabel>Number of players</SectionLabel>
-          <Stepper
-            label="Player count"
-            caption={`You + ${playerCount - 1} bot${playerCount > 2 ? "s" : ""}`}
-            min={playerCounts[0]}
-            max={playerCounts[playerCounts.length - 1]}
-            value={playerCount}
-            onChange={setPlayerCount}
-          />
-        </div>
-      )}
-
-      <SectionLabel>Choose your opponent</SectionLabel>
-
-      <div
-        className={`mb-8 grid w-full min-w-0 max-w-6xl gap-2 sm:gap-4 ${gridColsClass(currentStrategies.length)}`}
+    <SetupBriefing
+      title={title}
+      eyebrow={eyebrow ?? `Solo · you + ${aiCount(playerCount)}`}
+      blurb={blurb}
+      footer={
+        <SetupFooter
+          summary={
+            summary
+              ? summary(state)
+              : `${playerCount} players · ${ais === 1 ? "" : `${ais} × `}${strategy?.label ?? ""}`
+          }
+          startLabel={startLabel}
+          onStart={handleStart}
+        />
+      }
+    >
+      <SetupSection
+        label="Choose the AI"
+        aside={
+          ais === 1 ? "Your opponent plays at this level" : `All ${ais} AI seats play at this level`
+        }
       >
-        {currentStrategies.map((strat, index) => {
-          const stars = index + 1;
-          const diff = DIFFICULTY[strat.difficulty];
-          return (
-            <SelectableCard
-              key={strat.id}
-              variant="stripe"
-              accentColor={diff.accentColor}
-              selected={effectiveId === strat.id}
-              padding="sm"
-              className="min-w-0"
-              onClick={() => setSelectedId(strat.id)}
-            >
-              <div className="mb-1.5 flex items-start justify-between gap-0.5 sm:mb-3">
-                <span
-                  className={`inline-flex max-w-18 items-center truncate rounded-full px-1 py-0.5 text-5xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-label ${diff.badgeClass}`}
-                >
-                  {strat.difficulty}
-                </span>
-                <div className="flex shrink-0 gap-px sm:gap-0.5">
-                  {Array.from({ length: currentStrategies.length }, (_, i) => i + 1).map((n) => (
-                    <svg
-                      key={n}
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                      fill={n <= stars ? diff.accentColor : "currentColor"}
-                      className={`h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 ${n <= stars ? "" : "text-fg-disabled"}`}
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-
-              <span className="mb-0.5 block text-2xs font-bold leading-tight text-fg-strong transition-colors group-hover:text-fg-strong sm:mb-1 sm:text-lg">
-                {strat.label}
-              </span>
-
-              <span className="line-clamp-4 text-3xs leading-snug text-fg-secondary sm:line-clamp-none sm:text-sm sm:leading-relaxed">
-                {strat.description}
-              </span>
-            </SelectableCard>
-          );
-        })}
-      </div>
-
-      {extraControls && <div className="mb-6 flex justify-center">{extraControls}</div>}
-
-      <div className="flex justify-center pt-2">
-        <Button variant="primary" size="lg" onClick={handleStart}>
-          Start Game
-        </Button>
-      </div>
-    </SetupLayout>
+        <SetupChoiceCards
+          label="AI level"
+          choices={currentStrategies.map((s) => ({
+            id: s.id,
+            label: s.label,
+            description: s.description,
+            tier: s.difficulty,
+          }))}
+          value={effectiveId}
+          onChange={setSelectedId}
+          fileWord={fileWord}
+          stamp={stamp}
+        />
+      </SetupSection>
+      {allOptions.length > 0 && (
+        <SetupSection label="Game">
+          <SetupOptions options={allOptions} />
+        </SetupSection>
+      )}
+    </SetupBriefing>
   );
 }

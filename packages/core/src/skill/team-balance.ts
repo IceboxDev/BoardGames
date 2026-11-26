@@ -214,3 +214,44 @@ export function balanceTeams(
     spread: Math.max(...strengths) - Math.min(...strengths),
   };
 }
+
+/**
+ * The opposite of `balanceTeams`: `underdog` (the player asking) gets the
+ * weakest possible team — themselves plus the weakest others, in the smallest
+ * team — and everyone else is shared out fairly among the other teams, so
+ * every rival team is as strong as the table allows. Ties among equally weak
+ * teammates are broken by `seed`. The underdog's team comes first.
+ */
+export function stackTeams(
+  ids: readonly string[],
+  teamCount: number,
+  strengthOf: (id: string) => number,
+  underdog: string,
+  seed: number,
+): BalancedTeams {
+  if (!ids.includes(underdog)) throw new Error("the underdog must be in the pool");
+  const sizes = teamSizes(ids.length, teamCount);
+  const rng = createRng(seed);
+  const r = new Map(ids.map((id) => [id, strengthOf(id)]));
+  const strength = (id: string) => r.get(id) ?? 0;
+  // Shuffle first so the stable sort breaks ties by the seed.
+  const others = shuffle(
+    ids.filter((id) => id !== underdog),
+    rng,
+  ).sort((a, b) => strength(a) - strength(b));
+  const size = sizes[sizes.length - 1];
+  const mine = [underdog, ...others.slice(0, size - 1)];
+  const rest = others.slice(size - 1);
+  const rivals =
+    sizes.length > 1
+      ? balanceTeams(rest, sizes.length - 1, strength, Math.floor(rng() * 2 ** 31)).teams
+      : [];
+  const teams = [mine, ...rivals];
+  const strengths = teams.map((t) => t.reduce((a, id) => a + strength(id), 0) / t.length);
+  return {
+    teams,
+    strengths,
+    chances: teamChances(strengths),
+    spread: Math.max(...strengths) - Math.min(...strengths),
+  };
+}

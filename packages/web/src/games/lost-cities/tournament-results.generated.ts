@@ -7,56 +7,22 @@ const results: TournamentResults = {
   generatedAt: "2026-09-26T23:56:16.800Z",
   strategies: [
     {
-      id: "ismcts-v1",
-      label: "Baseline",
-    },
-    {
       id: "ismcts-v4",
-      label: "Strict",
+      label: "Scout",
     },
     {
       id: "ismcts-v5",
-      label: "Adaptive",
+      label: "Pathfinder",
     },
     {
       id: "ismcts-v6",
-      label: "Adaptive+",
+      label: "Trailblazer",
     },
   ],
   tables: [
     {
       playerCount: 2,
       matchups: [
-        {
-          a: "ismcts-v1",
-          b: "ismcts-v4",
-          games: 40,
-          aWins: 11,
-          bWins: 29,
-          draws: 0,
-          avgScoreA: -10.5,
-          avgScoreB: 4.5,
-        },
-        {
-          a: "ismcts-v1",
-          b: "ismcts-v5",
-          games: 40,
-          aWins: 1,
-          bWins: 39,
-          draws: 0,
-          avgScoreA: -14.2,
-          avgScoreB: 40.2,
-        },
-        {
-          a: "ismcts-v1",
-          b: "ismcts-v6",
-          games: 40,
-          aWins: 5,
-          bWins: 33,
-          draws: 2,
-          avgScoreA: -11.9,
-          avgScoreB: 28.9,
-        },
         {
           a: "ismcts-v4",
           b: "ismcts-v5",

@@ -1,12 +1,18 @@
 import { LibraryOwnersResponseSchema } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import { isPlayable } from "../games/types";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { EMPTY_FILTERS, filterGames, type GameFilters } from "../lib/game-filters";
+import {
+  EMPTY_FILTERS,
+  filterGames,
+  filtersFromParams,
+  filtersToParams,
+  type GameFilters,
+} from "../lib/game-filters";
 import { qk } from "../lib/query-keys";
 import { jsonQuery } from "../lib/typed-query";
 import GameCard from "./GameCard";
@@ -23,7 +29,15 @@ const EAGER_ROW = 4;
 export default function GameMenu() {
   const { isAdmin, user } = useCurrentUser();
   const navigate = useNavigate();
-  const [filters, setFilters] = useState<GameFilters>(EMPTY_FILTERS);
+  // The filters are mirrored into the URL, so going into a game and back (or
+  // reloading) keeps them. Local state stays the source while typing — the
+  // URL is written after, with `replace` so a tweak isn't a history step.
+  const [params, setParams] = useSearchParams();
+  const [filters, setFilters] = useState<GameFilters>(() => filtersFromParams(params));
+  useEffect(() => {
+    const next = filtersToParams(filters, params);
+    if (next.toString() !== params.toString()) setParams(next, { replace: true });
+  }, [filters, params, setParams]);
 
   // Admins browse the full catalog (incl. coming-soon entries); everyone
   // else sees only playable games. Filter the flat list first, then group

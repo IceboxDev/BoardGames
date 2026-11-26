@@ -161,6 +161,13 @@ export const RepertoireTreeSchema = z.object({
   status: z.enum(["generating", "analysing", "decisions", "ready"]),
   root: z.string(),
   nodes: z.record(z.string(), TreeNodeSchema),
+  /**
+   * Every move you've set (`choice`), by position key, including positions
+   * the last build didn't reach: a build that stops above a choice (a
+   * position waiting for the farm) must not lose it. Older trees keep theirs
+   * on the nodes only.
+   */
+  choices: z.record(z.string(), UserChoiceSchema).optional(),
   stats: TreeStatsSchema,
 });
 export type RepertoireTree = z.infer<typeof RepertoireTreeSchema>;
@@ -174,8 +181,18 @@ export function withChoice(
   const node = tree.nodes[key];
   if (!node || node.side !== "user") return tree;
   const { choice: _old, ...rest } = node;
+  const { [key]: _was, ...others } = choicesOf(tree);
   return {
     ...tree,
     nodes: { ...tree.nodes, [key]: choice ? { ...rest, choice } : rest },
+    choices: choice ? { ...others, [key]: choice } : others,
   };
+}
+
+/** Every move you've set in `tree`: its `choices`, and any still kept only on a node. */
+export function choicesOf(tree: RepertoireTree): Record<string, UserChoice> {
+  const out: Record<string, UserChoice> = { ...tree.choices };
+  for (const [key, node] of Object.entries(tree.nodes))
+    if (node.choice && node.side === "user") out[key] = node.choice;
+  return out;
 }

@@ -125,4 +125,46 @@ describe("TeamsPanel", () => {
     expect(screen.getByText("Pick the game to balance for")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /balance teams/i })).toBeDisabled();
   });
+
+  it("stacks the signed-in member into the underdog team", async () => {
+    balance.mockResolvedValue({
+      slug: "codenames",
+      teams: [
+        { userIds: ["ana", "cid"], chance: 0.2 },
+        { userIds: ["ben", "dee"], chance: 0.8 },
+      ],
+      basis: { ana: "game", ben: "game", cid: "game", dee: "game" },
+    });
+    render(
+      <TeamsPanel
+        date="2026-09-26"
+        attendees={ROSTER}
+        lineup={["codenames"]}
+        me="ana"
+        onBack={() => {}}
+      />,
+    );
+    fireEvent.click(screen.getByRole("button", { name: /^unbalanced/i }));
+    expect(screen.getByText("Stacked for")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /stack the odds/i }));
+    await waitFor(() => expect(cards()).toHaveLength(2));
+    expect(balance).toHaveBeenCalledWith(expect.objectContaining({ mode: "unbalanced" }));
+    expect(within(cards()[0]).getByText("Underdog")).toBeInTheDocument();
+    expect(screen.getByText("Lopsided")).toBeInTheDocument();
+  });
+
+  it("asks the member to join the pool before stacking against them", () => {
+    render(
+      <TeamsPanel
+        date="2026-09-26"
+        attendees={ROSTER}
+        lineup={["codenames"]}
+        me="eve"
+        onBack={() => {}}
+      />,
+    );
+    fireEvent.click(screen.getByRole("button", { name: /^unbalanced/i }));
+    expect(screen.getByText("Add yourself — you're the underdog")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /stack the odds/i })).toBeDisabled();
+  });
 });

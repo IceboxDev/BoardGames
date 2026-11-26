@@ -205,8 +205,10 @@ describe("SKILL_TRAITS", () => {
 describe("BalanceTeamsBodySchema", () => {
   const ok = { slug: "codenames", userIds: ["a", "b", "c", "d"], teamCount: 2, seed: 7 };
 
-  it("parses a pool", () => {
-    expect(BalanceTeamsBodySchema.parse(ok)).toEqual(ok);
+  it("parses a pool, balanced unless asked otherwise", () => {
+    expect(BalanceTeamsBodySchema.parse(ok)).toEqual({ ...ok, mode: "balanced" });
+    expect(BalanceTeamsBodySchema.parse({ ...ok, mode: "unbalanced" }).mode).toBe("unbalanced");
+    expect(BalanceTeamsBodySchema.safeParse({ ...ok, mode: "lopsided" }).success).toBe(false);
   });
 
   it("rejects duplicates, too many teams and a lone player", () => {

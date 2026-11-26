@@ -3,15 +3,14 @@ import type { ReactNode } from "react";
 // The single results-table kit shared by solo Match History and the tournament
 // game list. The two screens used to be ~95% copy-pasted files (container,
 // heading, W/L/D tally, `<table>` chrome, and every cell class chain) that had
-// already drifted — one had the `relative z-raised` stacking fix for the fixed
-// game background, the other didn't. Columns are data; chrome lives here once.
+// already drifted — one had the `relative z-raised` stacking fix, the other
+// didn't. Columns are data; chrome lives here once.
 
 // ── MatchResultsLayout ───────────────────────────────────────────────────
 //
-// Outer container + centered heading. `relative z-raised` is load-bearing: these
-// screens render inside `GameShellLayoutInner`, which paints a fixed
-// `def.backgroundImage` at z-0 over the whole main area — without a stacking
-// context the background covers this static content.
+// Outer container + centered heading. `relative z-raised` is load-bearing: the
+// theme's ambient layer is fixed at z-0 over the whole page — without a
+// stacking context it would paint over this static content.
 
 export function MatchResultsLayout({
   title,

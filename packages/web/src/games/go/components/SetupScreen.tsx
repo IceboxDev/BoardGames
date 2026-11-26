@@ -1,9 +1,9 @@
 import { goManifest } from "@boardgames/core/games/go/manifest";
 import { useState } from "react";
-import { ControlGroup, PvAISetupScreen } from "../../../components/setup";
+import { PvAISetupScreen } from "../../../components/setup";
 import { SegmentedControl } from "../../../components/ui";
 import { DEFAULT_OPTIONS, type GoOptionsValue } from "../logic/options";
-import GoOptions from "./GoOptions";
+import { goOptionFields } from "./GoOptions";
 
 export type ColorChoice = "black" | "white" | "random";
 
@@ -20,10 +20,17 @@ export default function SetupScreen({ onStart }: { onStart: (setup: GoSoloSetup)
     <PvAISetupScreen
       title="Go"
       manifest={goManifest}
+      eyebrow="Solo · against the AI"
+      summary={({ strategy }) =>
+        `${color === "random" ? "Random colour" : color === "black" ? "Black" : "White"} · vs ${strategy?.label ?? ""} · ${options.size}×${options.size}${options.handicap ? ` · ${options.handicap} stones` : ""}`
+      }
       onStart={(_n, strategy) => onStart({ strategy, color, options })}
-      extraControls={
-        <div className="flex flex-col gap-3">
-          <ControlGroup label="You play">
+      options={[
+        {
+          id: "colour",
+          label: "You play",
+          span: "s",
+          control: (
             <SegmentedControl<ColorChoice>
               options={[
                 { value: "black", label: "● Black" },
@@ -36,10 +43,10 @@ export default function SetupScreen({ onStart }: { onStart: (setup: GoSoloSetup)
               fullWidth
               aria-label="Your colour"
             />
-          </ControlGroup>
-          <GoOptions value={options} onChange={setOptions} />
-        </div>
-      }
+          ),
+        },
+        ...goOptionFields({ value: options, onChange: setOptions }),
+      ]}
     />
   );
 }

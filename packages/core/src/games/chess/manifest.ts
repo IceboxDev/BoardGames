@@ -6,56 +6,43 @@ import { replayGame } from "./game";
 import { type TimeControl, TimeControlSchema, UciSchema } from "./schemas";
 
 /**
- * The AI ladder, easiest first. Every tier above `random` is Stockfish on the
+ * The AI ladder, easiest first: Stockfish on the
  * server (`server/src/games/chess-agent.ts` maps each id to UCI options); when
  * the engine is unavailable the machine's built-in search plays instead.
  */
 export const CHESS_STRATEGIES = [
   {
-    id: "random",
-    label: "Wanderer",
-    description: "Plays any legal move at random. For learning how the pieces move.",
-    difficulty: "Easy",
-  },
-  {
-    id: "sf-beginner",
-    label: "Pawn",
-    description: "Stockfish at its weakest — sees one move ahead and hangs pieces.",
-    difficulty: "Easy",
-  },
-  {
     id: "sf-1400",
-    label: "Club player",
-    description: "Stockfish limited to about 1400 Elo. Solid, but leaves chances.",
+    label: "Knight",
+    description: "Stockfish limited to about 1400 Elo. Tricky, but leaves chances.",
     difficulty: "Medium",
   },
   {
     id: "sf-1800",
-    label: "Tournament player",
-    description: "About 1800 Elo. Punishes loose pieces and simple blunders.",
+    label: "Rook",
+    description: "About 1800 Elo. Solid and direct; punishes loose pieces and simple blunders.",
     difficulty: "Hard",
   },
   {
-    id: "sf-2200",
-    label: "Master",
-    description: "About 2200 Elo — national-master strength.",
-    difficulty: "Hard+",
-  },
-  {
-    id: "sf-2700",
-    label: "Grandmaster",
-    description: "About 2700 Elo. Elite human strength.",
-    difficulty: "Expert",
-  },
-  {
     id: "sf-max",
-    label: "Stockfish",
-    description: "Full strength. Stronger than any human who has ever played.",
+    label: "Queen",
+    description: "Stockfish at full strength. Stronger than any human who has ever played.",
     difficulty: "Master",
   },
 ] as const satisfies readonly StrategyInfo[];
 
-export type ChessStrategyId = (typeof CHESS_STRATEGIES)[number]["id"];
+/** Off the ladder since 2026-11-26; old games still name them, and their engine tiers still run. */
+export const CHESS_RETIRED_STRATEGIES = [
+  { id: "random", label: "Wanderer" },
+  { id: "sf-beginner", label: "Pawn" },
+  { id: "sf-2200", label: "Master" },
+  { id: "sf-2700", label: "Grandmaster" },
+] as const;
+
+export type ChessStrategyId = (
+  | typeof CHESS_STRATEGIES
+  | typeof CHESS_RETIRED_STRATEGIES
+)[number]["id"];
 
 /** Time controls offered on the setup and lobby screens, as `minutes+increment`. */
 export const TIME_CONTROL_PRESETS: readonly {
@@ -137,5 +124,6 @@ export const chessManifest = defineManifest({
   seatNames: ["White", "Black"],
   strategies: CHESS_STRATEGIES,
   defaultStrategy: "sf-1400",
+  retiredStrategies: CHESS_RETIRED_STRATEGIES,
   config: ChessConfigSchema,
 });

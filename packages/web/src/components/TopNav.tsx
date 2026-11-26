@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { cn } from "../lib/cn";
-import { currentHistoryIndex, previousIsSamePage, stepsBackTo } from "../lib/history-trail";
+import { currentHistoryIndex, stepsBackOut } from "../lib/history-trail";
 import { Button } from "./ui/Button";
 
 // ── TopNav ───────────────────────────────────────────────────────────────
@@ -88,20 +88,20 @@ export function TopNavBackButton({ to, label = "Back", onClick }: BackButtonProp
       onClick={(e) => {
         onClick?.(e);
         if (e.defaultPrevented) return;
-        // A plain left-click goes back through in-app history: one step when
-        // the entry behind is this same page (a solo game above its setup
-        // screen), else back to where `to` — this page's parent — already
-        // sits in history, so Game → Menu → Game → Menu … never has to be
-        // walked entry by entry. With `to` nowhere behind, one step back
-        // (where the player came from). `to` stays as the href
+        // A plain left-click goes back to the page this one was opened from,
+        // stepping over entries of this same page and pages beneath it (a solo
+        // game above its setup screen; Game → Menu → Game → Menu trips), so it
+        // never walks them entry by entry — and never jumps past the page the
+        // player came from to wherever `to` last sat. `to` stays as the href
         // (new-tab/middle-click keep working) and as the destination when
-        // this page was the entry point (idx 0 — deep link / fresh tab,
-        // where "back" would leave the app).
+        // nothing behind qualifies (idx 0 — deep link / fresh tab, where
+        // "back" would leave the app).
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
         const idx = currentHistoryIndex();
         if (idx === 0) return;
+        const steps = stepsBackOut(idx);
+        if (steps === null) return;
         e.preventDefault();
-        const steps = previousIsSamePage(idx) ? 1 : (stepsBackTo(to, idx) ?? 1);
         navigate(-steps);
       }}
       className={NAV_ACTION_CLS}

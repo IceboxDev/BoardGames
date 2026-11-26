@@ -89,7 +89,7 @@ describe("codenames AI situation", () => {
     );
     expect(
       guessSituation(guessInput({ clue: { word: "x", count: "unlimited" } })).lines.join(),
-    ).toMatch(/EVERYTHING left is covered/);
+    ).toMatch(/doesn't say how many/);
   });
 
   it("∞ tells the guessers how many are left and how many the clue itself holds", () => {
@@ -107,25 +107,92 @@ describe("codenames AI situation", () => {
       }),
     ).lines.join("\n");
     expect(text).toMatch(/VEHICLE: 1\) are ALL 3/);
-    expect(text).toMatch(/RAIL itself points to about 2/);
+    expect(text).toMatch(/RAIL itself points to 2 \(3 left − 1 owed\)/);
   });
 
-  it("the ∞ agreement: ∞ exactly when the clue and the owed words cover every agent left", () => {
-    // BUS is owed from VEHICLE 2; TRAIN is the only other agent.
+  it("an ∞ with nothing owed is not the agreement", () => {
+    const text = guessSituation(
+      guessInput({ clue: { word: "rail", count: "unlimited" } }),
+    ).lines.join("\n");
+    expect(text).toMatch(/not your team's ∞ agreement/);
+  });
+
+  it("the ∞ agreement: k owed (public count) + the clue's own X = every agent left, k ≥ 1", () => {
+    // VEHICLE 2 found 1 → k = 1 owed (BUS); TRAIN is the only other agent: X = 1.
     expect(closesTheBoard(clueInput(), [2])).toBe(true);
-    expect(closesTheBoard(clueInput(), [1, 2])).toBe(true);
+    // A clue for both counts the owed word in X: 2 + 1 ≠ 2, so it carries its number.
+    expect(closesTheBoard(clueInput(), [1, 2])).toBe(false);
     expect(closesTheBoard(clueInput(), [])).toBe(false);
-    // With nothing owed, a clue for one of the two leaves one undescribed.
+    // Nothing owed: never ∞, even for every agent left (it would read as X = 0).
     expect(closesTheBoard(clueInput({ history: [] }), [2])).toBe(false);
-    expect(closesTheBoard(clueInput({ history: [] }), [1, 2])).toBe(true);
+    expect(closesTheBoard(clueInput({ history: [] }), [1, 2])).toBe(false);
     // Duet keeps the same agreement.
     expect(closesTheBoard(clueInput({ mode: "duet" }), [2])).toBe(true);
   });
 
+  it("game 68: FANFARE for the last agent, with GLASS 4's miss counted owed, is FANFARE 1", () => {
+    // GLASS 4 found 3 (its 4th was found later), so the table counts 1 owed; 1 + 1 ≠ 1 left.
+    const input = clueInput({
+      cards: [
+        { index: 0, word: "factory", kind: "own", revealed: true },
+        { index: 1, word: "trumpet", kind: "own", revealed: false },
+      ],
+      history: [
+        {
+          by: "us",
+          clue: { word: "glass", count: 4 },
+          guesses: ["crystal", "pipe", "round"].map((word) => ({ word, result: "own" as const })),
+          intended: ["crystal", "pipe", "factory", "round"],
+        },
+      ],
+      agentsLeft: 1,
+    });
+    expect(closesTheBoard(input, [1])).toBe(false);
+    expect(closesTheBoard({ ...input, history: [] }, [1])).toBe(false);
+  });
+
+  it("the owed words must really be the rest, or the sum would mislead", () => {
+    // VEHICLE 2 found 1 (k = 1) but its intended BUS is already up: TRAIN + a phantom.
+    const input = clueInput({
+      cards: [
+        { index: 1, word: "bus", kind: "own", revealed: true },
+        { index: 2, word: "train", kind: "own", revealed: false },
+        { index: 5, word: "plane", kind: "own", revealed: false },
+      ],
+      agentsLeft: 2,
+    });
+    expect(closesTheBoard(input, [2])).toBe(false);
+  });
+
+  it("each earlier clue's miss must be its own word still face down", () => {
+    const glass = {
+      by: "us" as const,
+      clue: { word: "glass", count: 4 },
+      guesses: ["crystal", "pipe", "round"].map((word) => ({ word, result: "own" as const })),
+      intended: ["crystal", "pipe", "factory", "round"],
+    };
+    const board = (factoryUp: boolean) =>
+      clueInput({
+        cards: [
+          { index: 0, word: "factory", kind: "own", revealed: factoryUp },
+          { index: 1, word: "trumpet", kind: "own", revealed: false },
+          { index: 2, word: "nerve", kind: "own", revealed: !factoryUp },
+        ],
+        history: [glass],
+        agentsLeft: 2,
+      });
+    // FACTORY (GLASS's 4th) still hidden: FANFARE for TRUMPET + the owed FACTORY = ∞.
+    expect(closesTheBoard(board(false), [1])).toBe(true);
+    // FACTORY went in another round: GLASS owes nothing real, NERVE is undescribed —
+    // ∞ would send them looking for a 4th GLASS word. FANFARE 1.
+    expect(closesTheBoard(board(true), [1])).toBe(false);
+  });
+
   it("tells the spymaster which clue becomes ∞", () => {
     expect(clueSituation(clueInput()).join("\n")).toMatch(
-      /links the other 1 agent covers everything/,
+      /exactly the other 1 agent .* is given as ∞/,
     );
+    expect(clueSituation(clueInput({ history: [] })).join("\n")).not.toMatch(/∞/);
   });
 
   it("scores a reader's ranking: hits in order, then the price of the miss", () => {

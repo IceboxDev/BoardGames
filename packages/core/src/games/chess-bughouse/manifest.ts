@@ -9,30 +9,27 @@ import { TimeControlSchema } from "../chess/schemas";
  */
 export const BUGHOUSE_STRATEGIES = [
   {
-    id: "random",
-    label: "Wanderer",
-    description: "Plays any legal move or drop at random.",
-    difficulty: "Easy",
-  },
-  {
     id: "fairy-easy",
-    label: "Rookie",
-    description: "Fairy-Stockfish looking one move ahead.",
+    label: "Beetle",
+    description: "Fairy-Stockfish looking one move ahead. Slow and sturdy.",
     difficulty: "Easy",
   },
   {
     id: "fairy-medium",
-    label: "Clubber",
-    description: "Fairy-Stockfish at a middling skill level.",
+    label: "Hornet",
+    description: "Fairy-Stockfish at a middling skill level. Punishes careless drops.",
     difficulty: "Medium",
   },
   {
     id: "fairy-max",
-    label: "Shark",
+    label: "Mantis",
     description: "Fairy-Stockfish at full strength — drops with intent.",
     difficulty: "Expert",
   },
 ] as const satisfies readonly StrategyInfo[];
+
+/** Off the ladder since 2026-11-26; old games still name it. */
+export const BUGHOUSE_RETIRED_STRATEGIES = [{ id: "random", label: "Wanderer" }] as const;
 
 export const BughouseConfigSchema = z.object({
   /** Bughouse is a timed game; `null` plays without clocks (casual). */
@@ -47,5 +44,6 @@ export const bughouseManifest = defineManifest({
   seatNames: ["Board A · White", "Board A · Black", "Board B · White", "Board B · Black"],
   strategies: BUGHOUSE_STRATEGIES,
   defaultStrategy: "fairy-medium",
+  retiredStrategies: BUGHOUSE_RETIRED_STRATEGIES,
   config: BughouseConfigSchema,
 });

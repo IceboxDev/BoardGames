@@ -133,3 +133,43 @@ export function filterGames(
     return true;
   });
 }
+
+// ── URL round trip ─────────────────────────────────────────────────────
+//
+// The filters live in the library's URL (`/games?players=2&playable=1`), so
+// opening a game and coming back — or reloading — keeps them.
+
+const WEIGHTS: readonly WeightBucket[] = ["light", "medium", "heavy"];
+const TIMES: readonly TimeBucket[] = ["short", "mid", "long", "epic"];
+
+/** Filters from the URL; anything malformed is simply no filter. */
+export function filtersFromParams(params: URLSearchParams): GameFilters {
+  const players = Number(params.get("players"));
+  const weight = params.get("weight");
+  const time = params.get("time");
+  return {
+    query: params.get("q") ?? "",
+    players:
+      Number.isInteger(players) && players >= 1 && players <= PLAYERS_MAX_PLUS ? players : null,
+    weight: WEIGHTS.find((w) => w === weight) ?? null,
+    time: TIMES.find((t) => t === time) ?? null,
+    playableOnly: params.get("playable") === "1",
+    ownedBy: (params.get("owner") ?? "").split(",").filter(Boolean),
+  };
+}
+
+/** The URL params for `filters`, keeping any unrelated params in `base`. */
+export function filtersToParams(filters: GameFilters, base?: URLSearchParams): URLSearchParams {
+  const out = new URLSearchParams(base);
+  const set = (key: string, value: string | null) => {
+    if (value) out.set(key, value);
+    else out.delete(key);
+  };
+  set("q", filters.query || null);
+  set("players", filters.players === null ? null : String(filters.players));
+  set("weight", filters.weight);
+  set("time", filters.time);
+  set("playable", filters.playableOnly ? "1" : null);
+  set("owner", filters.ownedBy.length > 0 ? filters.ownedBy.join(",") : null);
+  return out;
+}

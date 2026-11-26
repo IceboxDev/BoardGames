@@ -11,7 +11,9 @@ const DIFFICULTY = {
 } as const satisfies Record<AIStrategyId, DifficultyTier>;
 
 // Easiest first.
-const ORDER: readonly AIStrategyId[] = ["random", "heuristic-v1", "strigoi", "dracula", "lilith"];
+const ORDER: readonly AIStrategyId[] = ["strigoi", "dracula", "lilith"];
+/** Off the ladder since 2026-11-26; old games still name them. */
+const RETIRED: readonly AIStrategyId[] = ["random", "heuristic-v1"];
 
 export const HungerConfigSchema = z.object({
   /** Elder = board side B (end in the Castle or Cemetery); Rookie = side A. */
@@ -29,6 +31,10 @@ export const theHungerManifest = defineManifest({
     if (!s) throw new Error(`Unknown The Hunger strategy ${id}`);
     return { id, label: s.label, description: s.description, difficulty: DIFFICULTY[id] };
   }),
-  defaultStrategy: "heuristic-v1",
+  defaultStrategy: "dracula",
+  retiredStrategies: ALL_STRATEGIES.filter((s) => RETIRED.includes(s.id)).map(({ id, label }) => ({
+    id,
+    label,
+  })),
   config: HungerConfigSchema,
 });

@@ -24,6 +24,10 @@ export const qk = {
   adminAggregateAvailability: () => ["admin", "availability", "all"] as const,
   /** Every member's admin-noted away days (userId → date keys), today on. */
   adminAwayDays: () => ["admin", "away-days"] as const,
+  /** What every member still owes the group (items + open-note counts). */
+  adminOutstanding: () => ["admin", "outstanding"] as const,
+  /** The admins' notes on one member. */
+  adminMemberNotes: (targetUserId: string) => ["admin", "member-notes", targetUserId] as const,
   history: () => ["history"] as const,
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
   historyByGame: (slug: string) => ["history", "by-game", slug] as const,

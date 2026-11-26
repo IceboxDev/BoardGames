@@ -47,6 +47,7 @@ import {
   balanceTeams,
   gameStrength,
   type StrengthBasis,
+  stackTeams,
 } from "@boardgames/core/skill/team-balance";
 import { z } from "zod";
 import { getDb } from "../db.ts";
@@ -660,8 +661,14 @@ export async function liveSkillFit(): Promise<SkillFitResult> {
   return fit;
 }
 
-/** The fairest split of a pool for one game — teams and chances, no strengths. */
-export async function balanceTeamsFor(body: BalanceTeamsBody): Promise<BalanceTeamsResponse> {
+/**
+ * The fairest split of a pool for one game — teams and chances, no strengths.
+ * Unbalanced: `underdog` (the member asking) gets the weakest team instead.
+ */
+export async function balanceTeamsFor(
+  body: BalanceTeamsBody,
+  underdog?: string,
+): Promise<BalanceTeamsResponse> {
   const fit = await liveSkillFit();
   const strength = new Map<string, number>();
   const basis: Record<string, StrengthBasis> = {};
@@ -670,7 +677,11 @@ export async function balanceTeamsFor(body: BalanceTeamsBody): Promise<BalanceTe
     strength.set(id, s.strength);
     basis[id] = s.basis;
   }
-  const res = balanceTeams(body.userIds, body.teamCount, (id) => strength.get(id) ?? 0, body.seed);
+  const of = (id: string) => strength.get(id) ?? 0;
+  const res =
+    body.mode === "unbalanced" && underdog
+      ? stackTeams(body.userIds, body.teamCount, of, underdog, body.seed)
+      : balanceTeams(body.userIds, body.teamCount, of, body.seed);
   return {
     slug: body.slug,
     teams: res.teams.map((userIds, i) => ({ userIds, chance: res.chances[i] })),

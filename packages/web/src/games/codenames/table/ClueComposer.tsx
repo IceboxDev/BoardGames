@@ -146,7 +146,7 @@ export function ClueComposer({
             aria-live="polite"
             title={
               count === "unlimited"
-                ? "∞: everything left is covered — this clue plus the words still owed from earlier clues"
+                ? "∞: words are still owed from earlier clues, and this clue's own words are all the others — they work out its number (left − owed) and can finish"
                 : count === 0
                   ? "0: none of ours fit this word"
                   : `${count} word${count === 1 ? "" : "s"}`

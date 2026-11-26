@@ -7,7 +7,9 @@ import type {
 import { MAX_CLUE_LENGTH } from "@boardgames/core/games/decrypto/types";
 import { type CSSProperties, type ReactNode, useEffect, useRef, useState } from "react";
 import { clueProblem, fmtCode, type LampState, type LastReveal, teamName } from "../../logic/desk";
+import { verdictFor } from "../../logic/verdict";
 import { Lamp } from "./Instruments";
+import { VerdictLines, VerdictStamp } from "./Verdict";
 
 // The pieces of the transmission slot: the code card, the "Last" card, the
 // incoming teletype strip, the rotary code selectors, the typing sheet and the
@@ -43,7 +45,7 @@ export function InfoCard({
 }: {
   eyebrow: string;
   title: ReactNode;
-  text: string;
+  text?: string;
   /** A painted badge beside the card's text. */
   icon?: string;
 }) {
@@ -52,12 +54,12 @@ export function InfoCard({
       {icon && <img className="dc-infocard-icon" src={icon} alt="" />}
       <span className="dc-engr">{eyebrow}</span>
       <b>{title}</b>
-      <span>{text}</span>
+      {text && <span>{text}</span>}
     </div>
   );
 }
 
-/** The last revealed transmission, so a reveal that has moved on stays readable. */
+/** The last revealed transmission, so a reveal that has moved on stays readable — in our words. */
 export function LastCard({ view, last }: { view: DecryptoPlayerView; last: LastReveal | null }) {
   if (!last) {
     return (
@@ -67,25 +69,16 @@ export function LastCard({ view, last }: { view: DecryptoPlayerView; last: LastR
       </div>
     );
   }
-  const other = teamName(view, last.team === 0 ? 1 : 0);
+  const verdict = verdictFor(view, last);
   return (
-    <div className="dc-last" title="The last revealed transmission">
+    <div className={`dc-last ${verdict.tone}`} title="The last revealed transmission">
+      <span className="dc-engr">Last · round {last.round}</span>
       <div className="dc-last-top">
-        <span className="dc-engr">Last · R{last.round}</span>
         <span className={`dc-tdot t${last.team}`} />
-        {teamName(view, last.team)}
+        {teamName(view, last.team)} {fmtCode(last.code)}
       </div>
-      <span className="dc-last-code">{fmtCode(last.code)}</span>
-      <span className={last.miscommunicated ? "dc-r" : "dc-g"}>
-        {last.miscommunicated ? `✗ misread as ${fmtCode(last.decodeGuess)}` : "✓ decoded"}
-      </span>
-      {last.interceptGuess && (
-        <span className={last.intercepted ? "dc-r" : "dc-g"}>
-          {last.intercepted
-            ? `✗ intercepted by ${other}`
-            : `✓ held against ${fmtCode(last.interceptGuess)}`}
-        </span>
-      )}
+      <VerdictStamp verdict={verdict} />
+      <VerdictLines verdict={verdict} details={false} compact />
     </div>
   );
 }

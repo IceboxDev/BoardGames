@@ -42,15 +42,16 @@ import { moveToUci } from "../engine/uci";
 import { BEST_MOVE_SPEC, finalDepth } from "./eval-policy";
 import { padReplies } from "./padding";
 import { hashKey, MAX_PLIES, type PositionIndex } from "./position-index";
-import type {
-  EngineLine,
-  Lc0Stat,
-  PopularMove,
-  RepertoireTree,
-  TreeMove,
-  TreeNode,
-  TreeSettings,
-  TreeStats,
+import {
+  choicesOf,
+  type EngineLine,
+  type Lc0Stat,
+  type PopularMove,
+  type RepertoireTree,
+  type TreeMove,
+  type TreeNode,
+  type TreeSettings,
+  type TreeStats,
 } from "./tree";
 
 /** Thrown by `TreeProviders.evaluate` for a position the farm hasn't analysed yet. */
@@ -154,6 +155,10 @@ export async function buildTree(
   let ended = 0;
   let settledPlies = 0;
   const cache = previous && previous.color === color ? previous.nodes : {};
+  // Your moves, kept whether or not this build reaches their positions.
+  const choices = new Map(
+    Object.entries(previous && previous.color === color ? choicesOf(previous) : {}),
+  );
   // Transpositions: the tree's positions by hash, the games that left the tree
   // (game → the ply where they left), and the later positions they wait at.
   const workByHash = new Map<number, Work>();
@@ -180,7 +185,8 @@ export async function buildTree(
       following: 0,
       seen: 0,
     };
-    if (old?.choice && node.side === "user") node.choice = old.choice;
+    const choice = choices.get(key);
+    if (choice && node.side === "user") node.choice = choice;
     if (old?.engine) node.engine = old.engine;
     if (old?.evalSpec) node.evalSpec = old.evalSpec;
     if (old?.evalSource) node.evalSource = old.evalSource;
@@ -539,6 +545,7 @@ export async function buildTree(
             : "ready",
       root: root.key,
       nodes,
+      ...(choices.size > 0 ? { choices: Object.fromEntries(choices) } : {}),
       stats,
     };
   };

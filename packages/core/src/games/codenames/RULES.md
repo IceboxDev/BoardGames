@@ -27,7 +27,7 @@ This file follows the rulebook section by section. Under each rule, **App** says
 - **Expert clues** (p. 7):
   - **0**: "None of our words relate to *feathers*." There is no limit on guesses, but the operatives must still make at least one.
   - **Unlimited** (∞): for when several earlier clues still have unguessed words. The operatives don't learn how many words the new clue is for, but may guess as many as they like.
-    - *Table agreement (our AI keeps it, and so can people): ∞ means everything left is covered — the new clue's words plus the words still owed from earlier clues are ALL the team's remaining agents. Short of that, the clue carries its number.*
+    - *Table agreement (our AI keeps it, and so can people): WORD X says WORD describes X words. With k words still owed — each earlier clue's number minus the agents found on its turn — and X + k = every agent left, the clue is WORD ∞ instead: the operatives work out X = left − k, get X + k guesses instead of X + 1, and know everything is described. ∞ needs k ≥ 1: with nothing owed a clue carries its number, even one for the last agent.*
 
 **App**
 - The number is 0–9 or ∞.

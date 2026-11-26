@@ -138,6 +138,7 @@ export default function AttendeesView({
           date={date}
           attendees={attendees}
           lineup={topSlugs}
+          me={user?.id}
           onBack={() => setMode("list")}
         />
       </div>

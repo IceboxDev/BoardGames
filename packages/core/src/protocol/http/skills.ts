@@ -364,6 +364,11 @@ export const BalanceTeamsBodySchema = z
       .int()
       .min(0)
       .max(2 ** 31 - 1),
+    /**
+     * "balanced" = the fairest split; "unbalanced" = the member asking (who
+     * must be in the pool) gets the weakest team against the strongest.
+     */
+    mode: z.enum(["balanced", "unbalanced"]).default("balanced"),
   })
   .refine((b) => new Set(b.userIds).size === b.userIds.length, {
     message: "each player once",
@@ -373,7 +378,7 @@ export const BalanceTeamsBodySchema = z
     message: "more teams than players",
     path: ["teamCount"],
   });
-export type BalanceTeamsBody = z.infer<typeof BalanceTeamsBodySchema>;
+export type BalanceTeamsBody = z.input<typeof BalanceTeamsBodySchema>;
 
 export const BalanceTeamsResponseSchema = z.object({
   slug: z.string().min(1),

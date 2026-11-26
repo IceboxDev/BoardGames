@@ -25,6 +25,7 @@ function item(overrides: Partial<ProfileMatchSummaryItem>): ProfileMatchSummaryI
     fieldSize: 2,
     score: null,
     sessions: 1,
+    sittings: [],
     coPlayerIds: [],
     ...overrides,
   };

@@ -1,4 +1,4 @@
-import type { GameManifest } from "@boardgames/core/machines/manifest";
+import { type GameManifest, strategyLabel } from "@boardgames/core/machines/manifest";
 import { seatPlacement, seatResult, seatScore } from "@boardgames/core/machines/outcome";
 import type { MatchSummary } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
@@ -63,8 +63,7 @@ function tableLabel(match: MatchSummary, manifest: GameManifest): string {
     .map((seat) => {
       if (seat.isViewer) return "You";
       if (seat.kind === "human") return seat.name ?? "Player";
-      const strategy = manifest.strategies.find((s) => s.id === seat.strategy);
-      return `${strategy?.label ?? seat.strategy ?? "AI"} (AI)`;
+      return `${strategyLabel(manifest, seat.strategy) ?? seat.strategy ?? "AI"} (AI)`;
     })
     .join(" · ");
 }

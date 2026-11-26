@@ -7,10 +7,12 @@ import type { Attendee } from "./calendar-games";
 // their phone up to the table, and the split is kept per night in
 // localStorage so closing the modal doesn't lose it.
 //
-// Two ways to deal: BALANCED asks the server for the fairest split for the
+// Three ways to deal: BALANCED asks the server for the fairest split for the
 // chosen game (the rating engine's strengths never leave the server — the
-// answer is teams + win chances), RANDOM shuffles right here, and is also
-// the fallback when the server can't be reached.
+// answer is teams + win chances), UNBALANCED asks it for the opposite — the
+// member holding the phone on the weakest team against the strongest — and
+// RANDOM shuffles right here, which is also the fallback when the server
+// can't be reached.
 
 /** Shuffle, then deal round-robin: sizes differ by at most one, no team is empty. */
 export function dealTeams(ids: readonly string[], teamCount: number, rng?: Rng): string[][] {
@@ -47,7 +49,7 @@ export function splitCaption(poolSize: number, teamCount: number): string {
   return Array.from({ length: count }, (_, i) => base + (i < extra ? 1 : 0)).join(" + ");
 }
 
-export type TeamsMode = "balanced" | "random";
+export type TeamsMode = "balanced" | "unbalanced" | "random";
 
 const TeamsStateSchema = z.object({
   teamCount: z.number().int().min(1),
@@ -55,7 +57,7 @@ const TeamsStateSchema = z.object({
   overrides: z.record(z.string(), z.boolean()),
   teams: z.array(z.array(z.string())).nullable(),
   // Added with balancing; older saves parse with the defaults.
-  mode: z.enum(["balanced", "random"]).default("balanced"),
+  mode: z.enum(["balanced", "unbalanced", "random"]).default("balanced"),
   /** The game the teams are balanced for; null until one is picked. */
   slug: z.string().nullable().default(null),
   /** Win chance per team of a balanced deal (same order as `teams`). */

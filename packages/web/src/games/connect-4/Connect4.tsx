@@ -9,7 +9,7 @@ import { BoardFallback } from "../../components/RouteFallback";
 import { PvAISetupScreen } from "../../components/setup/PvAISetupScreen";
 import { againstAi, type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
-import { ConfigControls } from "./components/ConfigControls";
+import { connect4OptionFields } from "./components/ConfigControls";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 
@@ -34,14 +34,16 @@ export default function Connect4({ source }: GameComponentProps) {
       <PvAISetupScreen
         title="Connect 4"
         manifest={connect4Manifest}
-        onStart={(_count, strategy) => flow.start({ strategy, config })}
-        extraControls={
-          <ConfigControls
-            value={config}
-            onChange={setConfig}
-            openerLabels={{ seat0: "You", seat1: "AI" }}
-          />
+        eyebrow="Solo · against the AI"
+        summary={({ strategy }) =>
+          `vs ${strategy?.label ?? ""} · ${config.board.replace("x", "×")} · ${config.bestOf === 1 ? "single game" : `best of ${config.bestOf}`}${config.popOut ? " · PopOut" : ""}`
         }
+        onStart={(_count, strategy) => flow.start({ strategy, config })}
+        options={connect4OptionFields({
+          value: config,
+          onChange: setConfig,
+          openerLabels: { seat0: "You", seat1: "AI" },
+        })}
       />
     );
   }

@@ -8,56 +8,22 @@ const results: TournamentResults = {
   generatedAt: "2026-10-11T00:27:17.630Z",
   strategies: [
     {
-      id: "random",
-      label: "Wanderer",
-    },
-    {
       id: "fairy-easy",
-      label: "Rookie",
+      label: "Beetle",
     },
     {
       id: "fairy-medium",
-      label: "Clubber",
+      label: "Hornet",
     },
     {
       id: "fairy-max",
-      label: "Shark",
+      label: "Mantis",
     },
   ],
   tables: [
     {
       playerCount: 4,
       matchups: [
-        {
-          a: "random",
-          b: "fairy-easy",
-          games: 16,
-          aWins: 0,
-          bWins: 16,
-          draws: 0,
-          avgScoreA: null,
-          avgScoreB: null,
-        },
-        {
-          a: "random",
-          b: "fairy-medium",
-          games: 16,
-          aWins: 0,
-          bWins: 16,
-          draws: 0,
-          avgScoreA: null,
-          avgScoreB: null,
-        },
-        {
-          a: "random",
-          b: "fairy-max",
-          games: 16,
-          aWins: 0,
-          bWins: 16,
-          draws: 0,
-          avgScoreA: null,
-          avgScoreB: null,
-        },
         {
           a: "fairy-easy",
           b: "fairy-medium",

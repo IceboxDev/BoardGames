@@ -45,6 +45,22 @@ export const ProfileMatchSummaryItemSchema = z.object({
   sessions: z.number().int().min(1),
   /** Other participants of the representative session (self excluded). */
   coPlayerIds: z.array(z.string()),
+  /**
+   * Every session of a multi-session campaign, oldest first, each with its own
+   * result — the timeline lists them as separate rows while the stats count
+   * the unit once. Empty for a single-session unit.
+   */
+  sittings: z
+    .array(
+      z.object({
+        matchId: z.number().int(),
+        dateKey: NightKeyStringSchema.nullable(),
+        playedAt: z.string(),
+        result: z.enum(["win", "loss", "draw", "moderator", "played"]),
+        coPlayerIds: z.array(z.string()),
+      }),
+    )
+    .default([]),
 });
 export type ProfileMatchSummaryItem = z.infer<typeof ProfileMatchSummaryItemSchema>;
 

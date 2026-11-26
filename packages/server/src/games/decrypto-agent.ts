@@ -8,10 +8,17 @@ import {
   canonicalDecryptoModel,
   DEFAULT_DECRYPTO_MODEL,
 } from "@boardgames/core/games/decrypto/ai/models";
+import {
+  type ClueNote,
+  type GuessNote,
+  noteText,
+  STAND_IN_CLUE_NOTE,
+  standInGuessNote,
+} from "@boardgames/core/games/decrypto/notes";
 import { checkClueLegality, isValidCode } from "@boardgames/core/games/decrypto/rules";
 import type { Code } from "@boardgames/core/games/decrypto/types";
 import { type AiRole, causeChain, structuredGenerate, tierModel } from "../lib/ai";
-import { mastermindEncrypt, mastermindGuess } from "./decrypto-mastermind";
+import { mastermindEncryptNoted, mastermindGuessNoted } from "./decrypto-mastermind";
 import {
   decodeSystem,
   ENCRYPT_JSON_SCHEMA,
@@ -91,10 +98,17 @@ export function modelForTier(raw: string): string {
 // One-call answers
 // ---------------------------------------------------------------------------
 
-async function callEncrypt(
-  input: EncryptInput,
-  violation?: string,
-): Promise<[string, string, string]> {
+export interface Encrypted {
+  clues: [string, string, string];
+  note: ClueNote;
+}
+
+export interface Guessed {
+  code: Code;
+  note: GuessNote;
+}
+
+async function callEncrypt(input: EncryptInput, violation?: string): Promise<Encrypted> {
   const raw = await structuredGenerate({
     feature: "decrypto",
     label: "decrypto",
@@ -109,12 +123,45 @@ async function callEncrypt(
   const parsed = RawEncryptSchema.parse(raw);
   // The entries carry their target digit — realign to code order in case the
   // model listed them by digit instead of by position.
-  const byDigit = new Map(parsed.clues.map((c) => [c.digit, c.clue]));
+  const byDigit = new Map(parsed.clues.map((c) => [c.digit, c]));
   const realigned = input.code.map((d) => byDigit.get(d));
-  if (realigned.every((c): c is string => typeof c === "string")) {
-    return realigned as [string, string, string];
-  }
-  return parsed.clues.map((c) => c.clue) as [string, string, string];
+  const entries = realigned.every((c) => c !== undefined) ? realigned : parsed.clues;
+  return {
+    clues: entries.slice(0, 3).map((c) => c?.clue ?? "") as [string, string, string],
+    note: {
+      clues: entries.slice(0, 3).map((c) => ({
+        link: noteText(c?.link ?? c?.facet),
+        cover: noteText(c?.interceptorTest),
+      })),
+      tableRead: noteText(parsed.tableRead),
+      search: null,
+      standIn: false,
+      cost: null,
+      traceIds: [],
+    },
+  };
+}
+
+/** A one-call guess's per-clue reasons → its note. */
+export function oneCallGuessNote(
+  purpose: GuessInput["purpose"],
+  code: readonly number[],
+  reasons: readonly (string | undefined)[],
+): GuessNote {
+  return {
+    purpose,
+    picks: code.slice(0, 3).map((digit, i) => ({
+      digit,
+      why: noteText(reasons[i]),
+      chances: null,
+    })),
+    columns: null,
+    candidates: [],
+    verdict: null,
+    standIn: false,
+    cost: null,
+    traceIds: [],
+  };
 }
 
 /** One guess on `model` (a registry id) — a one-call tier's answer, or a simulated person's. */
@@ -124,6 +171,16 @@ export async function guessWithModel(
   effort: Effort = reasoningEffort(),
   violation?: string,
 ): Promise<[number, number, number]> {
+  return (await guessWithModelNoted(model, input, effort, violation)).code;
+}
+
+/** `guessWithModel`, with each clue's reasoning beside the code. */
+export async function guessWithModelNoted(
+  model: string,
+  input: GuessInput,
+  effort: Effort = reasoningEffort(),
+  violation?: string,
+): Promise<{ code: [number, number, number]; reasons: string[] }> {
   const raw = await structuredGenerate({
     feature: "decrypto",
     label: "decrypto",
@@ -136,73 +193,96 @@ export async function guessWithModel(
     reasoningEffort: effort,
   });
   const parsed = RawGuessSchema.parse(raw);
-  if (isValidCode(parsed.code)) return parsed.code;
+  const reasons = parsed.assignments.map((a) => a.reasoning);
+  if (isValidCode(parsed.code)) return { code: parsed.code, reasons };
   // The final field disagreed with itself — fall back to the per-clue digits.
-  return parsed.assignments.map((a) => a.digit) as [number, number, number];
+  return {
+    code: parsed.assignments.map((a) => a.digit) as [number, number, number],
+    reasons,
+  };
+}
+
+function standInClues(input: EncryptInput): Encrypted {
+  return { clues: fallbackClues(input), note: STAND_IN_CLUE_NOTE };
+}
+
+async function oneCallEncryptNoted(input: EncryptInput): Promise<Encrypted> {
+  let answer = await callEncrypt(input);
+  let legality = checkClueLegality(input.keywords, input.forbiddenClues, answer.clues);
+  if (!legality.ok) {
+    // One corrective re-prompt with the violation, then give up on the LLM.
+    answer = await callEncrypt(input, legality.reason);
+    legality = checkClueLegality(input.keywords, input.forbiddenClues, answer.clues);
+    if (!legality.ok) return standInClues(input);
+  }
+  return answer;
 }
 
 async function oneCallEncrypt(input: EncryptInput): Promise<[string, string, string]> {
-  let clues = await callEncrypt(input);
-  let legality = checkClueLegality(input.keywords, input.forbiddenClues, clues);
-  if (!legality.ok) {
-    // One corrective re-prompt with the violation, then give up on the LLM.
-    clues = await callEncrypt(input, legality.reason);
-    legality = checkClueLegality(input.keywords, input.forbiddenClues, clues);
-    if (!legality.ok) return fallbackClues(input);
-  }
-  return clues;
+  return (await oneCallEncryptNoted(input)).clues;
 }
 
-async function oneCallGuess(input: GuessInput): Promise<Code> {
+async function oneCallGuessNoted(input: GuessInput): Promise<Guessed> {
   const model = modelForTier(input.model);
-  const first = await guessWithModel(model, input);
-  if (isValidCode(first)) return first;
-  const second = await guessWithModel(
+  const first = await guessWithModelNoted(model, input);
+  if (isValidCode(first.code)) {
+    return { code: first.code, note: oneCallGuessNote(input.purpose, first.code, first.reasons) };
+  }
+  const second = await guessWithModelNoted(
     model,
     input,
     reasoningEffort(),
-    `digits must be three DIFFERENT values, got ${first.join("-")}`,
+    `digits must be three DIFFERENT values, got ${first.code.join("-")}`,
   );
-  if (!isValidCode(second)) throw new Error(`invalid guess ${second.join("-")}`);
-  return second;
+  if (!isValidCode(second.code)) throw new Error(`invalid guess ${second.code.join("-")}`);
+  return { code: second.code, note: oneCallGuessNote(input.purpose, second.code, second.reasons) };
+}
+
+/** A guess as the tier `tier` plays it, with its note. */
+export function guessAsNoted(tier: string, input: GuessInput): Promise<Guessed> {
+  const asTier = { ...input, model: tier };
+  return tierOf(tier) === MASTERMIND ? mastermindGuessNoted(asTier) : oneCallGuessNoted(asTier);
 }
 
 /** A guess as the tier `tier` plays it — what the Mastermind's play-outs ask its teammate and rival. */
-export function guessAs(tier: string, input: GuessInput): Promise<Code> {
-  const asTier = { ...input, model: tier };
-  return tierOf(tier) === MASTERMIND ? mastermindGuess(asTier) : oneCallGuess(asTier);
+export async function guessAs(tier: string, input: GuessInput): Promise<Code> {
+  return (await guessAsNoted(tier, input)).code;
 }
 
 // ---------------------------------------------------------------------------
 // The agent
 // ---------------------------------------------------------------------------
 
-export const openAiDecryptoAgent: DecryptoAiAgent = {
-  async encrypt(input) {
+export const openAiDecryptoAgent = {
+  async encrypt(input): Promise<Encrypted> {
     try {
       if (tierOf(input.model) === MASTERMIND) {
-        const clues = await mastermindEncrypt(input, {
+        const answer = await mastermindEncryptNoted(input, {
           guessAs,
           guessWithModel,
           oneCallEncrypt,
+          oneCallEncryptNoted,
           modelForTier,
         });
-        if (checkClueLegality(input.keywords, input.forbiddenClues, clues).ok) return clues;
-        return await oneCallEncrypt(input);
+        if (checkClueLegality(input.keywords, input.forbiddenClues, answer.clues).ok) {
+          return answer;
+        }
+        return await oneCallEncryptNoted(input);
       }
-      return await oneCallEncrypt(input);
+      return await oneCallEncryptNoted(input);
     } catch (err) {
       console.error("[decrypto] encrypt failed, using fallback:", causeChain(err));
-      return fallbackClues(input);
+      return standInClues(input);
     }
   },
 
-  async guess(input): Promise<Code> {
+  async guess(input): Promise<Guessed> {
     try {
-      return await guessAs(input.model, input);
+      return await guessAsNoted(input.model, input);
     } catch (err) {
       console.error("[decrypto] guess failed, using fallback:", causeChain(err));
-      return fallbackGuess(input);
+      const code = fallbackGuess(input);
+      return { code, note: standInGuessNote(input.purpose, code) };
     }
   },
-};
+} satisfies DecryptoAiAgent;

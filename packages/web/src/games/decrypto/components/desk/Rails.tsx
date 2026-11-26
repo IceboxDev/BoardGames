@@ -6,8 +6,10 @@ import type {
 } from "@boardgames/core/games/decrypto/types";
 import { artUrl } from "../../logic/art";
 import { fmtCode, hasHumanTeammate, operatorName, seatActivity, teamName } from "../../logic/desk";
+import { verdictFor } from "../../logic/verdict";
 import { TeamChat } from "../TeamChat";
 import { Lamp } from "./Instruments";
+import { VerdictLines } from "./Verdict";
 
 // The two rails beside the desk: the operators (both teams' seats with their
 // lamps, and the team line when a teammate is a person) and the history,
@@ -152,15 +154,17 @@ export function Operators({
 
 function Telegram({
   view,
+  round,
   tx,
 }: {
   view: DecryptoPlayerView;
+  round: number;
   tx: RoundSummaryView["transmissions"][number];
 }) {
-  const other = teamName(view, tx.team === 0 ? 1 : 0);
   const seal = sealUrl(tx.team);
+  const verdict = verdictFor(view, { round, ...tx });
   return (
-    <div className="dc-tg">
+    <div className={`dc-tg ${verdict.tone}`}>
       <div className="dc-tg-h">
         {seal ? <img src={seal} alt="" /> : <span className={`dc-tdot t${tx.team}`} />}
         {teamName(view, tx.team)} {fmtCode(tx.code)}
@@ -172,18 +176,7 @@ function Telegram({
             : "No clues before the timer ran out"
           : tx.clues.join(" / ")}
       </div>
-      <div className="dc-tg-e">
-        <span className={tx.miscommunicated ? "bad" : "ok"}>
-          {tx.miscommunicated ? `misread ${fmtCode(tx.decodeGuess)}` : "decoded"}
-        </span>
-        {tx.interceptGuess && (
-          <span className={tx.intercepted ? "bad" : "ok"}>
-            {tx.intercepted
-              ? `intercepted by ${other}`
-              : `held against ${fmtCode(tx.interceptGuess)}`}
-          </span>
-        )}
-      </div>
+      <VerdictLines verdict={verdict} details={false} compact />
     </div>
   );
 }
@@ -200,7 +193,7 @@ export function History({ view }: { view: DecryptoPlayerView }) {
         <div key={r.round}>
           <div className="dc-hist-rh">Round {r.round}</div>
           {r.transmissions.map((t) => (
-            <Telegram key={t.team} view={view} tx={t} />
+            <Telegram key={t.team} view={view} round={r.round} tx={t} />
           ))}
         </div>
       ))}

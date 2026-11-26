@@ -6,12 +6,17 @@
  */
 import { z } from "zod";
 
-/** Exactly the rules the Go engine plays: area scoring, positional superko, no suicide. */
+/**
+ * Exactly the rules the Go engine plays: area scoring, positional superko, no
+ * suicide. The keys are KataGo's own JSON names (`ko`, `scoring`, `tax`,
+ * `suicide`); the long names (`koRule`, …) are rejected with "Could not parse
+ * rules", which failed every query until 2026-11-24.
+ */
 export const GO_RULES = {
-  koRule: "POSITIONAL",
-  scoringRule: "AREA",
-  taxRule: "NONE",
-  multiStoneSuicideLegal: false,
+  ko: "POSITIONAL",
+  scoring: "AREA",
+  tax: "NONE",
+  suicide: false,
   hasButton: false,
   whiteHandicapBonus: "N",
   friendlyPassOk: true,

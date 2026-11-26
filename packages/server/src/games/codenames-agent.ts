@@ -27,6 +27,7 @@ import {
   clueUrgency,
   guessSituation,
   pendingTargets,
+  publicOwed,
   type ReadPick,
   readScore,
   unfinishedClues,
@@ -204,7 +205,7 @@ const SPYMASTER_PLAYBOOK = `PLAYBOOK
 - Your number buys number + 1 guesses. The +1 is for a leftover from one of your earlier clues.
 - Count honestly: the number is how many of YOUR face-down cards the clue points to.
 - One leftover from an earlier clue is covered by the +1 — don't spend a whole clue on it; clue new words instead.
-- ∞ is your team's agreement and is set for you: a clue whose targets, together with the words still owed from your earlier clues, are ALL your remaining agents is given as ∞ ("everything is described — collect it all this turn"). Any other clue carries its number, which tells them an agent is still undescribed.
+- ∞ is your team's agreement and is set for you: with k words still owed by the public count (each earlier clue's number minus the agents found on its turn) and k ≥ 1, a clue whose own targets are exactly the other agents left is given as ∞ — the operatives work out its number as (agents left − k) and know everything is described. Always name the targets this clue itself points to; never count the owed words in it. With nothing owed, a clue carries its number — even one for your last agent.
 - 0 is legal and rare: "none of ours relate to WORD" — useful only to steer operatives away from a dangerous meaning (and it allows unlimited guesses).
 - The race matters more than safety near the end: if the other team is about to win, a cautious clue loses — link every remaining agent you can. When you are well ahead, take no risks.
 - Picture a smart operative reading your clue: list the face-down words they would pick first. Your targets must rank above every bystander, opponent agent and above all the assassin.
@@ -215,7 +216,7 @@ const DUET_PLAYBOOK = `PLAYBOOK
 - The number is information for your partner, not a limit. Count honestly.
 - A leftover from your earlier clue can be taken on a later turn — don't spend a whole clue on a single leftover when new words can be linked.
 - Few turns left and many agents hidden: be ambitious.
-- ∞ is your agreement with your partner and is set for you: a clue whose targets, together with the words still owed from your earlier clues, are ALL the agents left on your side is given as ∞ ("everything is described — collect it all"). Any other clue carries its number, which tells them an agent is still undescribed.
+- ∞ is your agreement with your partner and is set for you: with k words still owed by the public count (each earlier clue's number minus the agents found on its turn) and k ≥ 1, a clue whose own targets are exactly the other agents left on your side is given as ∞ — your partner works out its number as (agents left − k) and knows everything is described. Always name the targets this clue itself points to; never count the owed words in it. With nothing owed, a clue carries its number — even one for your last agent.
 - Picture your partner reading the clue: your targets must rank above every bystander and above all the assassins.`;
 
 /** How a clue call asks: fixed per-size slots (the Mastermind) and the second brainstorm's lens. */
@@ -876,8 +877,8 @@ export interface Candidate {
  * dropped, and so is a target it rated a `stretch`; the number counts what
  * remains. Enforces the leftover rule too: a word still owed from an earlier
  * clue is the extra guess's job, not the new clue's — so it moves to
- * `leftover` and the number drops (one leftover: the +1 covers it; two or
- * more: ∞, so the team can collect them all).
+ * `leftover` and the number drops (the +1 covers one; when the owed words and
+ * this clue's own are every agent left, ∞ — `closesTheBoard`).
  */
 export function toCandidate(raw: RawCandidate, input: ClueInput): Candidate | null {
   const faceDown = input.cards.filter((c) => !c.revealed);
@@ -903,8 +904,8 @@ export function toCandidate(raw: RawCandidate, input: ClueInput): Candidate | nu
     ...moved.map((t) => t.card),
     ...indicesOf(faceDown, raw.leftovers).filter((c) => own.has(c)),
   ].filter((c, i, all) => all.indexOf(c) === i && !targets.some((t) => t.card === c));
-  // The ∞ agreement (`closesTheBoard`): ∞ exactly when this clue and the words
-  // still owed cover every agent left — for people and AI, in both games.
+  // The ∞ agreement (`closesTheBoard`): ∞ exactly when words are owed by the
+  // public count k and this clue's own targets are the other agents left.
   const unlimited = closesTheBoard(
     input,
     targets.map((t) => t.card),
@@ -1423,13 +1424,15 @@ async function bestByPlayOut(
   // the leaders, so a raise never wins on one lucky turn.
   if (timeLeft() >= MIN_READ_MS) {
     const leaders = ranked().slice(0, REPLAY_IDEAS);
-    // Each leader also one number higher. Never up to every agent left: that
-    // claim is the ∞ agreement's, and a number there would say one is undescribed.
-    const owed = pendingTargets(input).reduce((n, p) => n + p.words.length, 0);
+    // Each leader also one number higher (where the ∞ agreement allows a number).
+    const owed = publicOwed(input);
     const raised: Candidate[] = masterPart("RAISE")
       ? leaders.slice(0, RAISE_IDEAS).flatMap((idea) => {
           const n = idea.clue.count;
-          if (typeof n !== "number" || n + 1 + owed >= input.agentsLeft) return [];
+          // Never more than are left, and never to where n + 1 + owed is every
+          // agent left: that clue is ∞'s, by the agreement.
+          if (typeof n !== "number" || n + 1 > input.agentsLeft) return [];
+          if (owed > 0 && n + 1 + owed >= input.agentsLeft) return [];
           const higher: Candidate = { ...idea, clue: { word: idea.clue.word, count: n + 1 } };
           raisedOf.set(higher, idea);
           return [higher];

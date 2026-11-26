@@ -9,6 +9,8 @@
  * Determinism matters for replays: guesses derive from a stable hash of the
  * input, not from randomness.
  */
+
+import { STAND_IN_CLUE_NOTE, standInGuessNote } from "../notes";
 import { ALL_CODES } from "../rules";
 import type { Code } from "../types";
 import type { DecryptoAiAgent, EncryptInput, GuessInput } from "./agent";
@@ -45,7 +47,11 @@ export function fallbackGuess(input: GuessInput): Code {
   return [...code] as unknown as Code;
 }
 
+/** The fallback's answers carry stand-in notes, so the debrief says the AI was offline. */
 export const fallbackDecryptoAgent: DecryptoAiAgent = {
-  encrypt: (input) => Promise.resolve(fallbackClues(input)),
-  guess: (input) => Promise.resolve(fallbackGuess(input)),
+  encrypt: (input) => Promise.resolve({ clues: fallbackClues(input), note: STAND_IN_CLUE_NOTE }),
+  guess: (input) => {
+    const code = fallbackGuess(input);
+    return Promise.resolve({ code, note: standInGuessNote(input.purpose, code) });
+  },
 };

@@ -71,7 +71,7 @@ function transmissionViewFor(
   };
 }
 
-function roundSummaries(ctx: DecryptoContext): RoundSummaryView[] {
+function roundSummaries(ctx: DecryptoContext, gameOver: boolean): RoundSummaryView[] {
   const summarize = (transmissions: Transmission[]) =>
     transmissions
       .filter((t) => t.resolved !== null)
@@ -86,6 +86,11 @@ function roundSummaries(ctx: DecryptoContext): RoundSummaryView[] {
         interceptGuess: t.interceptGuess,
         intercepted: t.resolved?.intercepted ?? false,
         miscommunicated: t.resolved?.miscommunicated ?? false,
+        // An encrypt note names the keyword behind every clue: notes stay
+        // secret from everyone until the game is over.
+        encryptNote: gameOver ? t.encryptNote : null,
+        decodeNote: gameOver ? t.decodeNote : null,
+        interceptNote: gameOver ? t.interceptNote : null,
       }));
   const rows: RoundSummaryView[] = ctx.history.map((record) => ({
     round: record.round,
@@ -129,6 +134,8 @@ export function buildPlayerView(
 
   const tx = currentTransmission(ctx);
   const myPending = {
+    continue:
+      phase === "reveal" && ctx.humanPlayers.includes(seat) && !ctx.revealAcks.includes(seat),
     encrypt:
       phase === "clueWriting" && pendingClueTransmissions(ctx).some((t) => t.encryptor === seat),
     decode:
@@ -173,11 +180,14 @@ export function buildPlayerView(
     transmissions: ctx.current.map((t) => transmissionViewFor(ctx, t, seat)),
     txIdx: ctx.txIdx,
     noteSheet: noteSheetFor(ctx),
-    roundSummaries: roundSummaries(ctx),
+    roundSummaries: roundSummaries(ctx, gameOver),
     chat,
+    rivalNotes: isMember ? [...ctx.teams[team].rivalNotes] : ["", "", "", ""],
     timerEnabled: ctx.timerEnabled,
     clueTimerDeadlineTs: ctx.clueTimerDeadlineTs,
     myPending,
+    revealWaiting:
+      phase === "reveal" ? ctx.humanPlayers.filter((s) => !ctx.revealAcks.includes(s)) : [],
     result:
       gameOver && ctx.result
         ? {

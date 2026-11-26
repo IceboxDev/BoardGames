@@ -3,6 +3,9 @@ import { describe, expect, it } from "vitest";
 import {
   type Candidate,
   codeChance,
+  columnLines,
+  coverLine,
+  guessNote,
   legalCandidate,
   likeliestCode,
   meanRow,
@@ -11,6 +14,7 @@ import {
   poolCandidates,
   rankTriples,
   readersFor,
+  searchNote,
   tokenCosts,
   tripleValue,
 } from "./decrypto-mastermind";
@@ -126,5 +130,94 @@ describe("choosing the triple", () => {
     expect(readersFor(INPUT, tierModel).intercept).toHaveLength(2);
     expect(readersFor({ ...INPUT, decoder: null }, tierModel).decode).toHaveLength(3);
     expect(readersFor({ ...INPUT, round: 1 }, tierModel).intercept).toEqual([]);
+  });
+});
+
+describe("debrief notes", () => {
+  it("explains the pick: links, cover from the rival's read, play-outs, runner-ups", () => {
+    const row = (a: number, b: number, c: number, d: number) => normalizeRow([a, b, c, d]);
+    const pools: Candidate[][] = [
+      [{ clue: "salt", decode: row(1, 0, 0, 0), intercept: row(10, 60, 20, 10), exposure: 0.1 }],
+      [{ clue: "rails", decode: row(0, 1, 0, 0), intercept: row(5, 80, 10, 5), exposure: 0 }],
+      [{ clue: "wick", decode: row(0, 0, 1, 0), intercept: row(30, 10, 50, 10), exposure: 0 }],
+    ];
+    const input = { ...INPUT, code: [1, 2, 3] as EncryptInput["code"], round: 3 };
+    const ranked = [
+      {
+        clues: ["salt", "rails", "wick"] as [string, string, string],
+        decode: 0.9,
+        intercept: 0.1,
+        exposure: 0.1,
+        value: -1,
+      },
+      {
+        clues: ["tide", "rails", "wick"] as [string, string, string],
+        decode: 0.8,
+        intercept: 0.2,
+        exposure: 0,
+        value: -2,
+      },
+    ];
+    const note = searchNote(
+      input,
+      ranked[0] as (typeof ranked)[number],
+      pools,
+      ranked,
+      [{ ...(ranked[0] as (typeof ranked)[number]), decodeHits: "2/2", interceptHits: "0/2" }],
+      new Map([["salt", "ocean → sea salt"]]),
+    );
+    expect(note.clues[0]?.link).toBe("ocean → sea salt");
+    expect(note.clues[0]?.cover).toContain("column 2");
+    expect(note.clues[1]?.cover).toContain("true column (");
+    expect(note.search?.playOut).toEqual({ decode: "2/2", intercept: "0/2" });
+    expect(note.search?.alternatives.map((a) => a.clues[0])).toEqual(["tide"]);
+    expect(note.search?.pooled).toEqual([1, 1, 1]);
+  });
+
+  it("a round-1 cover says the rival has nothing to read against", () => {
+    expect(coverLine(normalizeRow([1, 1, 1, 1]), 2, 1)).toContain("Round 1");
+  });
+
+  it("reads a table's column lines in either shape", () => {
+    expect(columnLines("1: sea things\n2: trains\n3: light\n4: big cats")).toEqual([
+      "sea things",
+      "trains",
+      "light",
+      "big cats",
+    ]);
+    expect(columnLines("1 = water; 3 = fire")).toEqual(["water", null, "fire", null]);
+    expect(columnLines("no idea")).toBeNull();
+  });
+
+  it("keeps distinct legal candidates and the averaged chances", () => {
+    const note = guessNote(
+      {
+        model: "decrypto-expert",
+        purpose: "intercept",
+        keywords: null,
+        currentClues: ["a", "b", "c"],
+        targetRevealedClues: [],
+        pastDecodeMistakes: [],
+        round: 2,
+      },
+      [2, 1, 4],
+      {
+        why: ["salt is sea", "rails", "stripes"],
+        rows: [normalizeRow([1, 3, 0, 0]), normalizeRow([1, 0, 0, 0]), normalizeRow([0, 0, 0, 1])],
+        candidates: [
+          { code: [2, 1, 4], from: "table" },
+          { code: [2, 1, 4], from: "one-call" },
+          { code: [1, 1, 4], from: "table" },
+          { code: [3, 1, 4], from: "average" },
+        ],
+        verdict: "  column 2   fits salt  ",
+      },
+    );
+    expect(note.candidates).toEqual([
+      { code: [2, 1, 4], from: "table" },
+      { code: [3, 1, 4], from: "average" },
+    ]);
+    expect(note.picks[0]?.chances?.[1]).toBeCloseTo(0.75, 1);
+    expect(note.verdict).toBe("column 2 fits salt");
   });
 });

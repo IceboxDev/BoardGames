@@ -1,5 +1,6 @@
 import type { RevealedClueView, Team } from "@boardgames/core/games/decrypto/types";
-import { type CSSProperties, useLayoutEffect, useRef, useState } from "react";
+import { MAX_NOTE_LENGTH } from "@boardgames/core/games/decrypto/types";
+import { type CSSProperties, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 // A team's code screen: four numbered windows (the keywords behind red film,
 // or sealed for the enemy's) and, hanging under each window, its teletype
@@ -9,7 +10,10 @@ import { type CSSProperties, useLayoutEffect, useRef, useState } from "react";
 
 interface CodeScreenProps {
   team: Team;
-  title: string;
+  /** Spoken name of the screen. */
+  label: string;
+  /** A printed title over the windows (the debrief's "· your keywords"); the live desk has none. */
+  title?: string;
   /** The four keywords, or null when they are the enemy's secret. */
   words: readonly string[] | null;
   /** Per digit, the revealed clues that meant it. */
@@ -22,9 +26,74 @@ interface CodeScreenProps {
   fromRound: number;
   maxRounds: number;
   hidden?: boolean;
+  /** The team's pencilled guesses at these (sealed) keywords, editable when `onNote` is set. */
+  notes?: readonly string[];
+  onNote?: (digit: 1 | 2 | 3 | 4, text: string) => void;
+  /** Why the notes can't be written right now (the encryptor's lockout). */
+  notesLocked?: string | null;
 }
 
+/**
+ * A sealed window's pencilled guess: typed locally, sent to the team when the
+ * field loses focus or Enter is pressed, and replaced by the team's copy
+ * whenever it is not being edited (a teammate may have written it).
+ */
+function NoteField({
+  digit,
+  value,
+  onNote,
+  locked,
+}: {
+  digit: 1 | 2 | 3 | 4;
+  value: string;
+  onNote: (digit: 1 | 2 | 3 | 4, text: string) => void;
+  locked: string | null;
+}) {
+  const [draft, setDraft] = useState(value);
+  const [editing, setEditing] = useState(false);
+  useEffect(() => {
+    if (!editing) setDraft(value);
+  }, [value, editing]);
+  const commit = () => {
+    setEditing(false);
+    const text = draft.trim().slice(0, MAX_NOTE);
+    if (text !== value) onNote(digit, text);
+  };
+  return (
+    // biome-ignore lint/correctness/noRestrictedElements: a pencil note written on the sealed window, a game piece
+    <input
+      className="dc-note"
+      value={draft}
+      maxLength={MAX_NOTE}
+      placeholder={locked ? "????" : "guess"}
+      disabled={locked !== null}
+      title={locked ?? `Your team's guess at their keyword #${digit} — only your team sees it`}
+      aria-label={`Your team's guess at their keyword ${digit}`}
+      onFocus={() => setEditing(true)}
+      onChange={(e) => setDraft(e.target.value)}
+      onBlur={commit}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === "Escape") {
+          if (e.key === "Escape") setDraft(value);
+          e.currentTarget.blur();
+        }
+      }}
+    />
+  );
+}
+
+const MAX_NOTE = MAX_NOTE_LENGTH;
+
 const NO_FRESH: ReadonlySet<string> = new Set();
+
+/**
+ * The clue's longest word, in characters. The tape's type is monospaced, so
+ * CSS can size a line to fit its longest word whole: lines wrap only between
+ * words, never mid-word (no "Corporatio-n").
+ */
+function longestWord(clue: string): number {
+  return Math.max(1, ...clue.split(/\s+/).map((w) => [...w].length));
+}
 const lineKey = (e: RevealedClueView) => `${e.round}-${e.clue}`;
 
 /**
@@ -75,6 +144,7 @@ function Tape({
               key={key}
               className={`dc-tape-line${fresh.has(key) ? " fresh" : ""}`}
               title={`Round ${e.round}`}
+              style={{ "--dc-long": longestWord(e.clue) } as CSSProperties}
             >
               <span className="rd">{e.round}</span>
               <span className="cl">{e.clue}</span>
@@ -95,6 +165,7 @@ function Tape({
 
 export function CodeScreen({
   team,
+  label,
   title,
   words,
   tapes,
@@ -103,14 +174,17 @@ export function CodeScreen({
   fromRound,
   maxRounds,
   hidden,
+  notes,
+  onNote,
+  notesLocked = null,
 }: CodeScreenProps) {
   return (
     <section
       className={`dc-screen ${team === 0 ? "w" : "b"}${hidden ? " hidden" : ""}`}
-      aria-label={title}
+      aria-label={label}
     >
       <div className="dc-screen-body">
-        <div className="dc-engr dc-screen-title">{title}</div>
+        {title && <div className="dc-engr dc-screen-title">{title}</div>}
         <div className="dc-screen-row" aria-hidden>
           {[1, 2, 3, 4].map((d) => (
             <span key={d} className="dc-plate">
@@ -122,9 +196,20 @@ export function CodeScreen({
           {[0, 1, 2, 3].map((i) => (
             <div key={i} className={`dc-window${words ? "" : " sealed"}${lit[i] ? " lit" : ""}`}>
               {badges?.[i] && <span className="dc-badge">{badges[i]}</span>}
-              <span className="dc-kw" title={words?.[i]}>
-                {words ? words[i] : "????"}
-              </span>
+              {words ? (
+                <span className="dc-kw" title={words[i]}>
+                  {words[i]}
+                </span>
+              ) : onNote ? (
+                <NoteField
+                  digit={(i + 1) as 1 | 2 | 3 | 4}
+                  value={notes?.[i] ?? ""}
+                  onNote={onNote}
+                  locked={notesLocked}
+                />
+              ) : (
+                <span className="dc-kw">????</span>
+              )}
             </div>
           ))}
         </div>

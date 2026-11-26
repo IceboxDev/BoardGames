@@ -1,3 +1,4 @@
+import { strategyLabel } from "@boardgames/core/machines/manifest";
 import type { GameOutcome } from "@boardgames/core/machines/outcome";
 import type { SeatRequest } from "@boardgames/core/machines/seats";
 import { roomSeating } from "@boardgames/core/protocol";
@@ -177,8 +178,8 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
 
   const seats = useMemo((): SeatInfo[] => {
     const ai = (strategy: string | undefined): SeatInfo => {
-      const info = def.manifest?.strategies.find((s) => s.id === strategy);
-      return { name: info ? `${info.label} (AI)` : "AI", kind: "ai", image: null };
+      const label = def.manifest ? strategyLabel(def.manifest, strategy) : undefined;
+      return { name: label ? `${label} (AI)` : "AI", kind: "ai", image: null };
     };
     if (source === "mp") {
       const room = mp.roomState;

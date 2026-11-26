@@ -1,8 +1,9 @@
 import { codenamesManifest } from "@boardgames/core/games/codenames/manifest";
+import { LANGUAGE_LABELS } from "@boardgames/core/games/codenames/words/index";
 import { useState } from "react";
 import { PvAISetupScreen } from "../../../components/setup";
 import { SegmentedControl } from "../../../components/ui";
-import { OptionsControls, type TableOptions } from "../table";
+import { type TableOptions, tableOptionFields } from "../table";
 
 export type SoloRole = "spymaster" | "operative";
 
@@ -11,6 +12,16 @@ export interface CodenamesSetup extends TableOptions {
   players: number;
   modelId: string;
 }
+
+const ROLE_NOTE: Record<SoloRole, string> = {
+  operative: "You guess your AI spymaster's clues.",
+  spymaster: "You give clues to your AI operatives.",
+};
+
+const timers = (o: TableOptions) =>
+  o.clueTimerSec || o.guessTimerSec
+    ? `clue ${o.clueTimerSec || "∞"}s · guess ${o.guessTimerSec || "∞"}s`
+    : "no timers";
 
 // Solo: you play for Red — as its spymaster (an AI operative guesses) or as
 // its operative (an AI spymaster clues for you) — against an all-AI Blue team.
@@ -29,22 +40,35 @@ export default function SetupScreen({ onStart }: { onStart: (setup: CodenamesSet
       title="Codenames"
       manifest={codenamesManifest}
       playerCounts={[4]}
-      onStart={(players, modelId) => onStart({ ...options, role, players, modelId })}
-      extraControls={
-        <div className="flex flex-col items-center gap-4">
-          <SegmentedControl
-            options={[
-              { value: "operative", label: "Operative — guess your AI spymaster's clues" },
-              { value: "spymaster", label: "Spymaster — clue your AI operatives" },
-            ]}
-            value={role}
-            onChange={setRole}
-            selectionMode="toggle"
-            size="sm"
-          />
-          <OptionsControls value={options} onChange={setOptions} />
-        </div>
+      eyebrow="Solo briefing · Red team"
+      fileWord="File"
+      stamp="Assigned"
+      startLabel="Begin mission"
+      summary={({ strategy }) =>
+        `Red ${role} · 3 × ${strategy?.label ?? ""} · ${LANGUAGE_LABELS[options.language]} · ${timers(options)}`
       }
+      onStart={(players, modelId) => onStart({ ...options, role, players, modelId })}
+      options={[
+        {
+          id: "role",
+          label: "Your seat",
+          span: "s",
+          note: ROLE_NOTE[role],
+          control: (
+            <SegmentedControl
+              options={[
+                { value: "operative", label: "Operative" },
+                { value: "spymaster", label: "Spymaster" },
+              ]}
+              value={role}
+              onChange={setRole}
+              selectionMode="toggle"
+              size="sm"
+            />
+          ),
+        },
+        ...tableOptionFields(options, setOptions),
+      ]}
     />
   );
 }

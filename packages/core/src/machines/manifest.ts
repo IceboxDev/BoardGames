@@ -41,6 +41,11 @@ export interface GameManifest<TConfig = unknown> {
   /** Preselected AI; must be one of `strategies`. */
   readonly defaultStrategy?: string;
   /**
+   * AIs taken off the ladder. Never offered or accepted at a start; kept so
+   * finished games, replays and records still name them.
+   */
+  readonly retiredStrategies?: readonly Pick<StrategyInfo, "id" | "label">[];
+  /**
    * Game options chosen in the lobby or on the solo setup screen. The server
    * parses the client's untrusted config with this before anything else sees
    * it, and `{}` must parse to the defaults.
@@ -48,6 +53,15 @@ export interface GameManifest<TConfig = unknown> {
   readonly config: z.ZodType<TConfig>;
   /** A game-specific seating rule on top of `seats` — a reason, or `null` when fine. */
   readonly validateSeats?: (seats: readonly StartSeat[]) => string | null;
+}
+
+/** An AI's name, offered or retired; `undefined` for an id the game never had. */
+export function strategyLabel(manifest: GameManifest, id: string | null | undefined) {
+  if (!id) return undefined;
+  return (
+    manifest.strategies.find((s) => s.id === id)?.label ??
+    manifest.retiredStrategies?.find((s) => s.id === id)?.label
+  );
 }
 
 /** Identity helper that keeps the config type attached to the manifest. */

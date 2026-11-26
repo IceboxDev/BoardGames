@@ -2,7 +2,6 @@ import type { TimeControl } from "@boardgames/core/games/chess/schemas";
 import { bughouseManifest } from "@boardgames/core/games/chess-bughouse/manifest";
 import { useState } from "react";
 import { PvAISetupScreen } from "../../../components/setup/PvAISetupScreen";
-import { SectionLabel } from "../../../components/setup/SectionLabel";
 import { SegmentedControl } from "../../../components/ui";
 import { TimeControlPicker } from "../../chess/components/TimeControlPicker";
 
@@ -24,11 +23,18 @@ export default function SetupScreen({ onStart }: { onStart: (setup: BughouseSetu
     <PvAISetupScreen
       title="Chess Bughouse"
       manifest={bughouseManifest}
+      eyebrow="Solo · you + 3 AI on two boards"
+      summary={({ strategy }) =>
+        `${seat === 0 ? "Board A · White" : "Board A · Black"} · 3 × ${strategy?.label ?? ""}`
+      }
       onStart={(_n, strategy) => onStart({ strategy, seat, timeControl })}
-      extraControls={
-        <div className="mb-8 flex w-full max-w-3xl flex-col gap-6">
-          <div>
-            <SectionLabel>Your seat</SectionLabel>
+      options={[
+        {
+          id: "seat",
+          label: "Your seat",
+          span: "m",
+          note: "Your partner is the bot on the other board, playing the other colour.",
+          control: (
             <SegmentedControl<number>
               aria-label="Your seat"
               value={seat}
@@ -38,16 +44,15 @@ export default function SetupScreen({ onStart }: { onStart: (setup: BughouseSetu
                 { value: 1, label: "Board A · Black" },
               ]}
             />
-            <p className="mt-2 text-xs text-fg-muted">
-              Your partner is the bot on the other board, playing the other colour.
-            </p>
-          </div>
-          <div>
-            <SectionLabel>Time control</SectionLabel>
-            <TimeControlPicker value={timeControl} onChange={setTimeControl} />
-          </div>
-        </div>
-      }
+          ),
+        },
+        {
+          id: "time",
+          label: "Time control",
+          span: "l",
+          control: <TimeControlPicker value={timeControl} onChange={setTimeControl} />,
+        },
+      ]}
     />
   );
 }

@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { Rng } from "../../lib/rng";
+import type { ClueNote, GuessNote } from "./notes";
 
 // ---------------------------------------------------------------------------
 // Decrypto — core types
@@ -29,6 +30,8 @@ export type DecryptoVariant = "standard" | "interceptor";
 
 export const MAX_CLUE_LENGTH = 40;
 export const MAX_CHAT_LENGTH = 300;
+/** A team's pencilled guess at one rival keyword. */
+export const MAX_NOTE_LENGTH = 40;
 export const STANDARD_MAX_ROUNDS = 8;
 export const INTERCEPTOR_MAX_ROUNDS = 5;
 export const TOKENS_TO_WIN = 2;
@@ -57,6 +60,10 @@ export interface Transmission {
   interceptRequired: boolean;
   /** Set by the reveal step; null while the transmission is live. */
   resolved: { intercepted: boolean; miscommunicated: boolean } | null;
+  /** What an AI encryptor / decoder / interceptor meant (null for a person). Secret until game over. */
+  encryptNote: ClueNote | null;
+  decodeNote: GuessNote | null;
+  interceptNote: GuessNote | null;
 }
 
 export interface RoundRecord {
@@ -81,6 +88,11 @@ export interface TeamState {
   miscommunications: number;
   /** Normalized clues this team has given, whole game — the no-reuse rule. */
   usedClues: string[];
+  /**
+   * The team's pencilled guesses at the RIVAL's four keywords (digit order),
+   * shared by the team and seen by no one else. "" = nothing written.
+   */
+  rivalNotes: [string, string, string, string];
 }
 
 export type DecryptoEndReason =
@@ -119,6 +131,8 @@ export interface DecryptoContext {
   clueTimerDeadlineTs: number | null;
   chat: ChatMessage[];
   history: RoundRecord[];
+  /** Seats of people who pressed Continue on the reveal on screen (cleared per reveal). */
+  revealAcks: number[];
   result: DecryptoResult | null;
   beats: DecryptoBeats;
 }
@@ -131,7 +145,10 @@ export type DecryptoAction =
   | { kind: "submit-clues"; clues: [string, string, string] }
   | { kind: "submit-guess"; purpose: GuessPurpose; code: Code }
   | { kind: "set-draft"; purpose: GuessPurpose; slot: 0 | 1 | 2; digit: Digit | null }
-  | { kind: "chat"; text: string };
+  | { kind: "chat"; text: string }
+  | { kind: "note"; digit: Digit; text: string }
+  /** A person has read the reveal; it moves on once every person has. */
+  | { kind: "continue" };
 
 const ClueSchema = z.string().trim().min(1).max(MAX_CLUE_LENGTH);
 
@@ -145,6 +162,13 @@ export const ChatActionSchema = z.object({
   text: z.string().trim().min(1).max(MAX_CHAT_LENGTH),
 });
 
+/** Write (or clear, with "") the team's guess at a rival keyword. */
+export const NoteActionSchema = z.object({
+  kind: z.literal("note"),
+  digit: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]),
+  text: z.string().trim().max(MAX_NOTE_LENGTH),
+});
+
 /** Pacing delays, ms. Overridable via START so tests run at millisecond scale. */
 export interface DecryptoBeats {
   roundStart: number;
@@ -152,14 +176,18 @@ export interface DecryptoBeats {
   reveal: number;
   roundEnd: number;
   clueTimeout: number;
+  /** A reveal waits for every person to continue — at most this long (an idle seat can't stall the room). */
+  revealTimeout: number;
 }
 
 export const DEFAULT_BEATS: DecryptoBeats = {
   roundStart: 600,
   aiBeat: 500,
-  reveal: 2500,
+  // Long enough to read the verdict board (what each side read, clue by clue).
+  reveal: 4000,
   roundEnd: 1500,
   clueTimeout: 30_000,
+  revealTimeout: 60_000,
 };
 
 export type DecryptoMachineEvent =
@@ -247,6 +275,10 @@ export interface RoundSummaryView {
     interceptGuess: Code | null;
     intercepted: boolean;
     miscommunicated: boolean;
+    /** The AI's notes — present only once the game is over. */
+    encryptNote: ClueNote | null;
+    decodeNote: GuessNote | null;
+    interceptNote: GuessNote | null;
   }[];
 }
 
@@ -279,9 +311,13 @@ export interface DecryptoPlayerView {
   roundSummaries: RoundSummaryView[];
   /** Own team only; messages sent while this seat was a locked-out encryptor are omitted. */
   chat: ChatMessage[];
+  /** The own team's pencilled guesses at the rival's keywords (empty for non-members). */
+  rivalNotes: [string, string, string, string];
   timerEnabled: boolean;
   clueTimerDeadlineTs: number | null;
-  myPending: { encrypt: boolean; decode: boolean; intercept: boolean };
+  myPending: { encrypt: boolean; decode: boolean; intercept: boolean; continue: boolean };
+  /** During a reveal: the people it is still waiting for. */
+  revealWaiting: number[];
   /** Full disclosure at game over. */
   result: (DecryptoResult & { keywords: [string[] | null, string[] | null] }) | null;
 }

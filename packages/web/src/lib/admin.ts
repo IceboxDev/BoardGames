@@ -4,11 +4,17 @@ import {
   ActivitySeenBodySchema,
   type AdminDevicesResponse,
   AdminDevicesResponseSchema,
+  type AdminMemberNote,
+  AdminMemberNoteResponseSchema,
+  AdminMemberNotesResponseSchema,
   AdminNightGuestBodySchema,
+  type AdminOutstandingResponse,
+  AdminOutstandingResponseSchema,
   type AdminResetLinkResponse,
   AdminResetLinkResponseSchema,
   type AdminSkillStateResponse,
   AdminSkillStateResponseSchema,
+  CreateMemberNoteBodySchema,
   MergeGuestBodySchema,
   type MergeGuestResponse,
   MergeGuestResponseSchema,
@@ -19,6 +25,7 @@ import {
   SetOnlineModeBodySchema,
   type UnseenActivityResponse,
   UnseenActivityResponseSchema,
+  UpdateMemberNoteBodySchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
 
@@ -157,6 +164,59 @@ export async function adminPublishGreeting(candidateKey: string): Promise<AdminS
 export async function adminRetractGreeting(id: number): Promise<void> {
   await apiFetch(`/api/admin/skills/greeting/${id}/retract`, {
     method: "POST",
+    response: OkResponseSchema,
+  });
+}
+
+/** What every member still owes the group (`lib/member-outstanding.ts` on the server). */
+export async function adminFetchOutstanding(
+  signal?: AbortSignal,
+): Promise<AdminOutstandingResponse> {
+  return apiFetch("/api/admin/outstanding", { response: AdminOutstandingResponseSchema, signal });
+}
+
+/** The admins' notes on one member: open first, newest first. */
+export async function adminFetchMemberNotes(
+  userId: string,
+  signal?: AbortSignal,
+): Promise<AdminMemberNote[]> {
+  const { notes } = await apiFetch(`/api/admin/users/${userId}/notes`, {
+    response: AdminMemberNotesResponseSchema,
+    signal,
+  });
+  return notes;
+}
+
+export async function adminCreateMemberNote(
+  userId: string,
+  text: string,
+): Promise<AdminMemberNote> {
+  const { note } = await apiFetch(`/api/admin/users/${userId}/notes`, {
+    method: "POST",
+    body: { text },
+    request: CreateMemberNoteBodySchema,
+    response: AdminMemberNoteResponseSchema,
+  });
+  return note;
+}
+
+export async function adminUpdateMemberNote(
+  userId: string,
+  noteId: number,
+  patch: { text?: string; done?: boolean },
+): Promise<AdminMemberNote> {
+  const { note } = await apiFetch(`/api/admin/users/${userId}/notes/${noteId}`, {
+    method: "PATCH",
+    body: patch,
+    request: UpdateMemberNoteBodySchema,
+    response: AdminMemberNoteResponseSchema,
+  });
+  return note;
+}
+
+export async function adminDeleteMemberNote(userId: string, noteId: number): Promise<void> {
+  await apiFetch(`/api/admin/users/${userId}/notes/${noteId}`, {
+    method: "DELETE",
     response: OkResponseSchema,
   });
 }

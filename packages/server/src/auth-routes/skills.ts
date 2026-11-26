@@ -69,10 +69,16 @@ skillsRoutes.get("/players/:userId", async (c) => {
 
 // ── POST /api/skills/balance-teams ─────────────────────────────────────
 //
-// The night's team mixer: the fairest split of the pool for one game. A POST
-// because the pool rides in the body; nothing is stored or logged.
+// The night's team mixer: the fairest split of the pool for one game — or,
+// "unbalanced", the signed-in member stacked into the weakest team against
+// the strongest (always the session's member, never one named in the body).
+// A POST because the pool rides in the body; nothing is stored or logged.
 
 skillsRoutes.post("/balance-teams", zJsonBody(BalanceTeamsBodySchema), async (c) => {
   const body = c.req.valid("json");
-  return c.json(BalanceTeamsResponseSchema.parse(await balanceTeamsFor(body)));
+  const me = c.get("user").id;
+  if (body.mode === "unbalanced" && !body.userIds.includes(me)) {
+    return errorResponse(c, 400, "you must be in the pool to play the underdog", "BAD_REQUEST");
+  }
+  return c.json(BalanceTeamsResponseSchema.parse(await balanceTeamsFor(body, me)));
 });

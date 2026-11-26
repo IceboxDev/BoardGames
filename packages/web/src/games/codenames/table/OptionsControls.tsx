@@ -4,10 +4,13 @@ import {
   LANGUAGES,
   type Language,
 } from "@boardgames/core/games/codenames/words/index";
+import type { SetupOption } from "../../../components/setup";
 import { MicroLabel, SegmentedControl, Select } from "../../../components/ui";
 
 // The table options both setup screens and both lobbies share: word set and
-// the two optional timers.
+// the two optional timers. `tableOptionFields` is the one definition; the
+// setup screens lay the fields out across the briefing's options panel, the
+// lobbies stack them with `OptionsControls`.
 
 export interface TableOptions {
   language: Language;
@@ -21,6 +24,49 @@ function timerLabel(sec: number): string {
     : `${sec / 60 >= 1 && sec % 60 === 0 ? `${sec / 60} min` : `${sec}s`}`;
 }
 
+export function tableOptionFields(
+  value: TableOptions,
+  onChange: (next: TableOptions) => void,
+  disabled = false,
+): SetupOption[] {
+  const timer = (field: "clueTimerSec" | "guessTimerSec", label: string): SetupOption => ({
+    id: field,
+    label,
+    control: (
+      <Select
+        size="sm"
+        value={String(value[field])}
+        disabled={disabled}
+        aria-label={label}
+        onChange={(e) => onChange({ ...value, [field]: Number(e.target.value) })}
+      >
+        {TIMER_OPTIONS.map((sec) => (
+          <option key={sec} value={sec}>
+            {timerLabel(sec)}
+          </option>
+        ))}
+      </Select>
+    ),
+  });
+  return [
+    {
+      id: "language",
+      label: "Words",
+      control: (
+        <SegmentedControl
+          options={LANGUAGES.map((l) => ({ value: l, label: LANGUAGE_LABELS[l] }))}
+          value={value.language}
+          onChange={(language) => !disabled && onChange({ ...value, language })}
+          selectionMode="toggle"
+          size="sm"
+        />
+      ),
+    },
+    timer("clueTimerSec", "Clue timer"),
+    timer("guessTimerSec", "Guess timer"),
+  ];
+}
+
 export function OptionsControls({
   value,
   onChange,
@@ -30,40 +76,20 @@ export function OptionsControls({
   onChange: (next: TableOptions) => void;
   disabled?: boolean;
 }) {
+  const [words, ...timers] = tableOptionFields(value, onChange, disabled);
   return (
     <div className="flex flex-col items-center gap-3">
-      <div className="flex flex-col items-center gap-1">
-        <MicroLabel>Words</MicroLabel>
-        <SegmentedControl
-          options={LANGUAGES.map((l) => ({ value: l, label: LANGUAGE_LABELS[l] }))}
-          value={value.language}
-          onChange={(language) => !disabled && onChange({ ...value, language })}
-          selectionMode="toggle"
-          size="sm"
-        />
-      </div>
+      {words && (
+        <div className="flex flex-col items-center gap-1">
+          <MicroLabel>{words.label}</MicroLabel>
+          {words.control}
+        </div>
+      )}
       <div className="flex flex-wrap justify-center gap-3">
-        {(
-          [
-            ["clueTimerSec", "Clue timer"],
-            ["guessTimerSec", "Guess timer"],
-          ] as const
-        ).map(([field, label]) => (
-          <div key={field} className="flex flex-col items-center gap-1">
-            <MicroLabel>{label}</MicroLabel>
-            <Select
-              size="sm"
-              value={String(value[field])}
-              disabled={disabled}
-              aria-label={label}
-              onChange={(e) => onChange({ ...value, [field]: Number(e.target.value) })}
-            >
-              {TIMER_OPTIONS.map((sec) => (
-                <option key={sec} value={sec}>
-                  {timerLabel(sec)}
-                </option>
-              ))}
-            </Select>
+        {timers.map((field) => (
+          <div key={field.id} className="flex flex-col items-center gap-1">
+            <MicroLabel>{field.label}</MicroLabel>
+            {field.control}
           </div>
         ))}
       </div>

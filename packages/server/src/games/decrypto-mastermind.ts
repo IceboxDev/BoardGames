@@ -1,4 +1,6 @@
+import { AsyncLocalStorage } from "node:async_hooks";
 import type { EncryptInput, GuessInput } from "@boardgames/core/games/decrypto/ai/agent";
+import { type ClueNote, type GuessNote, noteText } from "@boardgames/core/games/decrypto/notes";
 import { ALL_CODES, clueWords, normalizeClue } from "@boardgames/core/games/decrypto/rules";
 import { type Code, MAX_CLUE_LENGTH } from "@boardgames/core/games/decrypto/types";
 import { z } from "zod";
@@ -8,9 +10,11 @@ import {
   digitTable,
   encryptSystem,
   encryptUser,
+  GUESS_JSON_SCHEMA,
   guessUser,
   interceptSystem,
   mistakesText,
+  RawGuessSchema,
   RULES_PRIMER,
 } from "./decrypto-prompts";
 
@@ -52,6 +56,18 @@ export interface MastermindDeps {
   guessWithModel(model: string, input: GuessInput, effort?: Effort): Promise<number[]>;
   /** The one-call encryptor — the floor when the search finds nothing. */
   oneCallEncrypt(input: EncryptInput): Promise<Triple>;
+  /** The same floor with its note, when the caller keeps notes. */
+  oneCallEncryptNoted?(input: EncryptInput): Promise<{ clues: Triple; note: ClueNote }>;
+}
+
+export interface NotedTriple {
+  clues: Triple;
+  note: ClueNote;
+}
+
+export interface NotedCode {
+  code: Code;
+  note: GuessNote;
 }
 
 /** The whole encrypt search answers by this; the machine races 120 s. */
@@ -59,6 +75,10 @@ const SEARCH_MS = Number(process.env.DECRYPTO_MASTER_SEARCH_MS) || 92_000;
 const BRAINSTORM_MS = 48_000;
 const READ_MS = 24_000;
 const GUESS_MS = 45_000;
+/** A guess's candidates must arrive by this; the adjudication gets the rest of GUESS_TOTAL_MS. */
+const CANDIDATE_MS = 25_000;
+/** Inside the machine's 60 s guess race, with room to spare. */
+const GUESS_TOTAL_MS = 52_000;
 /** Candidates asked of each lens per position. */
 const PER_LENS = 5;
 /** Candidates kept per position (the readers read every one). */
@@ -79,16 +99,31 @@ const ROW_FLOOR = 0.02;
 /** Model calls at once across every Mastermind in the process (a provider rejects more). */
 const CONCURRENCY = Math.max(1, Number(process.env.DECRYPTO_AI_CONCURRENCY) || 32);
 let running = 0;
-const waiting: (() => void)[] = [];
+const waiting: { priority: number; resolve: () => void }[] = [];
+
+/**
+ * Which search a call belongs to: its start time. Waiting calls are served
+ * oldest search first, so with several searches at once (an all-AI room, two
+ * rooms) the earliest finishes inside its budget instead of every search's
+ * phases interleaving in one queue and all of them missing their deadlines.
+ * Carried implicitly through every nested call (play-outs included).
+ */
+const searchStart = new AsyncLocalStorage<number>();
 
 async function withSlot<T>(run: () => Promise<T>): Promise<T> {
-  if (running >= CONCURRENCY) await new Promise<void>((resolve) => waiting.push(resolve));
+  if (running >= CONCURRENCY) {
+    const priority = searchStart.getStore() ?? Date.now();
+    await new Promise<void>((resolve) => {
+      waiting.push({ priority, resolve });
+      waiting.sort((a, b) => a.priority - b.priority);
+    });
+  }
   running++;
   try {
     return await run();
   } finally {
     running--;
-    waiting.shift()?.();
+    waiting.shift()?.resolve();
   }
 }
 
@@ -297,8 +332,13 @@ const BRAINSTORM_JSON_SCHEMA = {
               properties: {
                 facet: { type: "string", description: "The angle, in a few words." },
                 clue: { type: "string" },
+                link: {
+                  type: "string",
+                  description:
+                    "After choosing: how the clue leads a teammate to the keyword, in a short phrase.",
+                },
               },
-              required: ["facet", "clue"],
+              required: ["facet", "clue", "link"],
             },
           },
         },
@@ -314,10 +354,12 @@ const RawBrainstorm = z.object({
     .array(
       z.object({
         digit: z.number().int(),
-        candidates: z.array(z.object({ facet: z.string(), clue: z.string() })),
+        candidates: z.array(
+          z.object({ facet: z.string(), clue: z.string(), link: z.string().optional() }),
+        ),
       }),
     )
-    .length(3),
+    .min(1),
 });
 
 interface Lens {
@@ -362,6 +404,168 @@ one fits. Check each against your other three keywords: if it fits two of them, 
   },
 ];
 
+// ── Experimental variants (bench only) ─────────────────────────────────────
+//
+// A Mastermind seat's strategy string may carry flags after a colon,
+// "decrypto-expert:joint+sets", read only when DECRYPTO_BENCH_VARIANTS=1 —
+// how the bench plays one search against another in the same process.
+
+export interface MasterVariant {
+  /** Extra brainstorm lenses by name (EXTRA_LENSES). */
+  lenses: string[];
+  /** Whole triples built along one axis, judged jointly. */
+  sets: boolean;
+  /** Finalists judged by joint reads of the whole triple. */
+  joint: boolean;
+  /** Triples played out (PLAY_TRIPLES by default). */
+  playTriples: number;
+  /** Real-interceptor samples per played triple when an AI intercepts. */
+  interceptSamples: number;
+  /** Weight of the reader's estimate against each real play-out (PRIOR_WEIGHT). */
+  priorWeight: number;
+}
+
+/** The variant the search plays by default (flags that won their bench). */
+const DEFAULT_VARIANT: MasterVariant = {
+  lenses: [],
+  sets: false,
+  joint: false,
+  playTriples: PLAY_TRIPLES,
+  interceptSamples: 1,
+  priorWeight: PRIOR_WEIGHT,
+};
+
+export function variantOf(model: string): MasterVariant {
+  if (process.env.DECRYPTO_BENCH_VARIANTS !== "1" || !model.includes(":")) return DEFAULT_VARIANT;
+  const flags = model
+    .slice(model.indexOf(":") + 1)
+    .split("+")
+    .filter(Boolean);
+  const v: MasterVariant = { ...DEFAULT_VARIANT, lenses: [] };
+  for (const f of flags) {
+    if (f === "sets") {
+      v.sets = true;
+      v.joint = true;
+    } else if (f === "jfinal") v.joint = true;
+    else if (f === "base") continue;
+    else if (f === "deep") {
+      // Trust the real interceptor's pipeline over the quick reads.
+      v.joint = true;
+      v.playTriples = 6;
+      v.interceptSamples = 2;
+      v.priorWeight = 0.5;
+    } else if (f === "play6") v.playTriples = 6;
+    else if (f === "isamp2") v.interceptSamples = 2;
+    else if (f === "trust") v.priorWeight = 0.5;
+    else v.lenses.push(f);
+  }
+  return v;
+}
+
+const EXTRA_LENSES: Record<string, Lens> = {
+  joint: {
+    name: "joint",
+    model: smartModel,
+    effort: "medium",
+    text: `JOINT RESOLUTION. Your teammate reads the three clues TOGETHER, knowing they are three
+DIFFERENT keywords. So a clue may honestly fit TWO of your keywords, as long as the other
+keyword it fits is clued unmistakably elsewhere in this same code — your teammate resolves
+it by elimination, while an outsider, who can't eliminate, is left with an ambiguous clue.
+Example: keywords CAT DOG FISH BIRD, code 1-2-3: "fur" (cat or dog), "leash" (dog), "gills"
+(fish) — "fur" is cat once "leash" takes dog. Give such deliberately two-way candidates for
+each position, naming in the facet which other keyword it also fits and which position
+resolves it.`,
+  },
+  prism: {
+    name: "prism",
+    model: smartModel,
+    effort: "medium",
+    text: `SEMANTIC PRISM. List every distinct SENSE or identity of the keyword — homonyms, verb vs
+noun, idioms, technical meanings, brands, places, people, titles named after it (BANK: river
+edge, money, a shot in billiards, to tilt a plane; MERCURY: planet, element, god, Freddie,
+thermometer). Give candidates that each come from a sense the column has NOT used yet, so
+the public column jumps between unrelated identities and never converges on one concept.`,
+  },
+  trail: {
+    name: "trail",
+    model: smartModel,
+    effort: "medium",
+    text: `FALSE TRAIL. Look at your OTHER columns' public clues: give candidates for this position
+that also fit the visible theme of a DIFFERENT column — a false positive an outsider will
+file there — while your teammate, who knows the keywords, still reads them as the true one.
+(TRIANGLE was clued "equilateral"; clue POLITICS with "unilateral" — an outsider files it
+under the triangle column.) Name in the facet which column it baits.`,
+  },
+};
+
+function lensesFor(variant: MasterVariant): Lens[] {
+  return [...LENSES, ...variant.lenses.flatMap((n) => (EXTRA_LENSES[n] ? [EXTRA_LENSES[n]] : []))];
+}
+
+// Whole triples along one axis: the clues share a category, so each is read
+// against the other two ("bicycle / tricycle / quadricycle" counts 2-3-4).
+
+const SETS_JSON_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    sets: {
+      type: "array",
+      minItems: 1,
+      maxItems: 4,
+      items: {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          axis: { type: "string", description: "The shared category, in a few words." },
+          clues: {
+            type: "array",
+            minItems: 3,
+            maxItems: 3,
+            items: { type: "string" },
+            description: "One clue per code position, in code order.",
+          },
+        },
+        required: ["axis", "clues"],
+      },
+    },
+  },
+  required: ["sets"],
+};
+
+const RawSets = z.object({
+  sets: z.array(z.object({ axis: z.string(), clues: z.array(z.string()).min(3) })),
+});
+
+const SETS_TEXT = `SAME AXIS. Build WHOLE TRANSMISSIONS: pick one category or axis (vehicles by wheel count,
+animals, colours, famous duos, numbers, materials…) and clue all three positions with words
+from that same axis, so each clue is read against the other two — the pattern points at
+each keyword even when a single clue alone would not (EYES / TRIANGLE / CAR as BICYCLE /
+TRICYCLE / QUADRICYCLE: two, three, four). Every clue must still pick its keyword out of
+your four for a teammate who sees the whole set. A good axis also poisons the public table:
+it sends the same theme into three columns at once. Propose up to 4 different sets.`;
+
+async function brainstormSets(input: EncryptInput): Promise<Triple[]> {
+  const raw = await withSlot(() =>
+    structuredGenerate({
+      feature: "decrypto",
+      label: "decrypto:master:sets",
+      modelOverride: smartModel(),
+      system: `${encryptSystem()}\n\nTHIS TASK — ${SETS_TEXT}`,
+      user: encryptUser(input),
+      schemaName: "decrypto_sets",
+      jsonSchema: SETS_JSON_SCHEMA,
+      budgetMs: BRAINSTORM_MS,
+      reasoningEffort: "medium",
+    }),
+  );
+  return RawSets.parse(raw)
+    .sets.map((set) => set.clues.slice(0, 3).map((c) => c.trim()) as Triple)
+    .filter(
+      (t) => t.every((c) => legalCandidate(c, input)) && new Set(t.map(normalizeClue)).size === 3,
+    );
+}
+
 function brainstormSystem(lens: Lens): string {
   return `${encryptSystem()}
 
@@ -380,7 +584,11 @@ each other (different facets), all following the hard rules.
 LENS — ${lens.text}`;
 }
 
-async function brainstorm(input: EncryptInput, lens: Lens): Promise<string[][]> {
+async function brainstorm(
+  input: EncryptInput,
+  lens: Lens,
+  links?: Map<string, string>,
+): Promise<string[][]> {
   const raw = await withSlot(() =>
     structuredGenerate({
       feature: "decrypto",
@@ -399,7 +607,12 @@ async function brainstorm(input: EncryptInput, lens: Lens): Promise<string[][]> 
   return input.code.map((digit, i) => {
     const byDigit = parsed.positions.find((p) => p.digit === digit);
     const pos = byDigit ?? parsed.positions[i];
-    return (pos?.candidates ?? []).map((c) => c.clue.trim());
+    return (pos?.candidates ?? []).map((c) => {
+      const clue = c.clue.trim();
+      const link = c.link?.trim() || c.facet.trim();
+      if (links && link && !links.has(clue.toLowerCase())) links.set(clue.toLowerCase(), link);
+      return clue;
+    });
   });
 }
 
@@ -757,6 +970,7 @@ async function playOut(
   deps: MastermindDeps,
   purpose: "decode" | "intercept",
   ms: number,
+  samples = 1,
 ): Promise<PlayResult> {
   const tier = purpose === "decode" ? input.decoder : input.interceptor;
   const build = purpose === "decode" ? decodeInputFor : interceptInputFor;
@@ -765,7 +979,7 @@ async function playOut(
       ? (purpose === "decode" ? peopleModels() : peopleModels().slice(1)).map((model) =>
           withSlot(() => deps.guessWithModel(model, build(input, triple.clues, "person"), "low")),
         )
-      : [deps.guessAs(tier, build(input, triple.clues, tier))];
+      : Array.from({ length: samples }, () => deps.guessAs(tier, build(input, triple.clues, tier)));
   const answers = await settledBy(runs, ms);
   return {
     hits: answers.filter((code) => sameCode(code, input.code)).length,
@@ -774,13 +988,90 @@ async function playOut(
 }
 
 /** The estimate moved by what really happened. */
-export function blend(estimate: number, result: PlayResult): number {
-  return (estimate * PRIOR_WEIGHT + result.hits) / (PRIOR_WEIGHT + result.tries);
+export function blend(estimate: number, result: PlayResult, prior = PRIOR_WEIGHT): number {
+  return (estimate * prior + result.hits) / (prior + result.tries);
 }
 
 // ---------------------------------------------------------------------------
 // The search
 // ---------------------------------------------------------------------------
+
+/** Finalists the joint read judges. */
+const JOINT_TOP = 6;
+const JOINT_MS = 22_000;
+
+/**
+ * The finalists — the best independent triples and every same-axis set — read
+ * as WHOLE transmissions, the way the decoder and interceptor will meet them:
+ * each reader gives a probability table for the three clues together, so a
+ * clue that only works beside the other two (an axis, an elimination) is
+ * valued at last. The finalists come back ranked by those joint chances.
+ */
+async function jointRerank(
+  input: EncryptInput,
+  ranked: Scored[],
+  sets: Triple[],
+  readers: { decode: string[]; intercept: string[] },
+  costs: Costs,
+  modelForTier: (tier: string) => string,
+  left: () => number,
+): Promise<Scored[]> {
+  const seen = new Set<string>();
+  const finalists: { clues: Triple; exposure: number | null }[] = [];
+  for (const t of ranked.slice(0, JOINT_TOP)) {
+    seen.add(t.clues.join("|"));
+    finalists.push({ clues: t.clues, exposure: t.exposure });
+  }
+  for (const t of sets) {
+    if (seen.has(t.join("|"))) continue;
+    seen.add(t.join("|"));
+    finalists.push({ clues: t, exposure: null });
+  }
+  const ms = Math.min(JOINT_MS, left() - 8_000);
+  const exposeModels =
+    input.interceptor === null ? peopleModels().slice(1) : [modelForTier(input.interceptor)];
+  const scored = await Promise.all(
+    finalists.map(async (f) => {
+      const [dec, int, exp] = await Promise.all([
+        settledBy(
+          readers.decode.map((m) => readTable(decodeInputFor(input, f.clues, "reader"), m, "low")),
+          ms,
+        ),
+        costs.interception > 0
+          ? settledBy(
+              readers.intercept.map((m) =>
+                readTable(interceptInputFor(input, f.clues, "reader"), m, "low"),
+              ),
+              ms,
+            )
+          : Promise.resolve([] as [Row, Row, Row][]),
+        f.exposure !== null
+          ? Promise.resolve(f.exposure)
+          : exposures(
+              input,
+              f.clues.map((c) => [c]),
+              exposeModels,
+              ms,
+            ).then((e) => e.reduce((a, row) => a + (row[0] ?? 0), 0)),
+      ]);
+      if (dec.length === 0) return null;
+      const rowsOf = (tables: [Row, Row, Row][]) =>
+        [0, 1, 2].map((i) => meanRow(tables.map((t) => t[i] as Row))) as [Row, Row, Row];
+      const decode = codeChance(rowsOf(dec), input.code);
+      const intercept = int.length > 0 ? codeChance(rowsOf(int), input.code) : 1 / 24;
+      return {
+        clues: f.clues,
+        decode,
+        intercept,
+        exposure: exp,
+        value: tripleValue(decode, intercept, costs, exp),
+      } satisfies Scored;
+    }),
+  );
+  const judged = scored.filter((s): s is Scored => s !== null);
+  if (judged.length === 0) return ranked;
+  return judged.sort((a, b) => b.value - a.value);
+}
 
 export interface MastermindTrace {
   candidates: number[];
@@ -799,17 +1090,119 @@ export async function mastermindEncrypt(
   input: EncryptInput,
   deps: MastermindDeps & { modelForTier?: (tier: string) => string },
 ): Promise<Triple> {
+  return (await mastermindEncryptNoted(input, deps)).clues;
+}
+
+/** The search's clues with what it weighed — the debrief's note. */
+export function mastermindEncryptNoted(
+  input: EncryptInput,
+  deps: MastermindDeps & { modelForTier?: (tier: string) => string },
+): Promise<NotedTriple> {
   const started = Date.now();
+  return searchStart.run(started, () => search(input, deps, started));
+}
+
+/** A one-call answer when the search found nothing to choose from. */
+async function floorOf(input: EncryptInput, deps: MastermindDeps): Promise<NotedTriple> {
+  if (deps.oneCallEncryptNoted) return deps.oneCallEncryptNoted(input);
+  const clues = await deps.oneCallEncrypt(input);
+  return {
+    clues,
+    note: {
+      clues: clues.map(() => ({ link: null, cover: null })),
+      tableRead: null,
+      search: null,
+      standIn: false,
+      cost: null,
+      traceIds: [],
+    },
+  };
+}
+
+/** Why the rival's reader shouldn't file a clue under its true column, from its read. */
+export function coverLine(intercept: Row, digit: number, round: number): string | null {
+  if (round < 2) return "Round 1: the rival has no table to read it against yet.";
+  const truth = intercept[digit - 1] ?? 0;
+  let lean = digit === 1 ? 1 : 0;
+  for (let d = 0; d < 4; d++) {
+    if (d !== digit - 1 && (intercept[d] ?? 0) > (intercept[lean] ?? 0)) lean = d;
+  }
+  const pct = (x: number) => `${Math.round(100 * x)}%`;
+  const other = intercept[lean] ?? 0;
+  return other > truth
+    ? `A rival reader leans to column ${lean + 1} (${pct(other)}) — only ${pct(truth)} on the true one.`
+    : `A rival reader already puts it on the true column (${pct(truth)}) — a risk taken for a clear read.`;
+}
+
+/** The search's working → its note. */
+export function searchNote(
+  input: EncryptInput,
+  picked: Scored,
+  candidates: readonly (readonly Candidate[])[],
+  ranked: readonly Scored[],
+  played: MastermindTrace["played"],
+  links: ReadonlyMap<string, string>,
+): ClueNote {
+  const play = played.find((p) => p.clues.join("|") === picked.clues.join("|"));
+  const alternatives: NonNullable<ClueNote["search"]>["alternatives"] = [];
+  for (const r of ranked) {
+    if (alternatives.length >= 2) break;
+    if (r.clues.join("|") === picked.clues.join("|")) continue;
+    alternatives.push({ clues: r.clues, decode: r.decode, intercept: r.intercept });
+  }
+  return {
+    clues: picked.clues.map((clue, pos) => {
+      const digit = input.code[pos] ?? 1;
+      const cand = candidates[pos]?.find((c) => c.clue === clue);
+      return {
+        link: noteText(links.get(clue.toLowerCase())),
+        cover: cand ? noteText(coverLine(cand.intercept, digit, input.round)) : null,
+      };
+    }),
+    tableRead: null,
+    search: {
+      pooled: candidates.map((c) => Math.min(99, c.length)),
+      decode: clamp01(picked.decode),
+      intercept: clamp01(picked.intercept),
+      exposure: Math.min(3, Math.max(0, picked.exposure)),
+      playOut: play ? { decode: play.decodeHits, intercept: play.interceptHits } : null,
+      alternatives: alternatives.map((a) => ({
+        ...a,
+        decode: clamp01(a.decode),
+        intercept: clamp01(a.intercept),
+      })),
+    },
+    standIn: false,
+    cost: null,
+    traceIds: [],
+  };
+}
+
+function clamp01(x: number): number {
+  return Number.isFinite(x) ? Math.min(1, Math.max(0, x)) : 0;
+}
+
+async function search(
+  input: EncryptInput,
+  deps: MastermindDeps & { modelForTier?: (tier: string) => string },
+  started: number,
+): Promise<NotedTriple> {
   const left = () => started + SEARCH_MS - Date.now();
   const modelForTier = deps.modelForTier ?? (() => smartModel());
+  const variant = variantOf(input.model);
+  const links = new Map<string, string>();
 
-  // 1. Candidates.
+  // 1. Candidates (and, with `sets`, whole same-axis triples beside them).
+  const setsRun = variant.sets
+    ? settledBy([brainstormSets(input)], Math.min(BRAINSTORM_MS, left())).then((r) => r[0] ?? [])
+    : Promise.resolve([] as Triple[]);
   const offers = await settledBy(
-    LENSES.map((lens) => brainstorm(input, lens)),
+    lensesFor(variant).map((lens) => brainstorm(input, lens, links)),
     Math.min(BRAINSTORM_MS, left()),
   );
+  const setTriples = await setsRun;
   const pools = poolCandidates(input, offers);
-  if (pools.some((p) => p.length === 0)) return deps.oneCallEncrypt(input);
+  if (pools.some((p) => p.length === 0)) return floorOf(input, deps);
 
   // 2. Readers: in groups of three different keywords, so no list gives a keyword away.
   const groups = readingGroups(pools);
@@ -855,7 +1248,7 @@ export async function mastermindEncrypt(
     ),
     exposures(input, pools, exposeModels, Math.min(READ_MS, left())),
   ]);
-  if (decodeReads.length === 0) return deps.oneCallEncrypt(input);
+  if (decodeReads.length === 0) return floorOf(input, deps);
   const uniform = normalizeRow([1, 1, 1, 1]);
   const candidates = pools.map((pool, pos) =>
     pool.map((clue, j) => ({
@@ -885,9 +1278,13 @@ export async function mastermindEncrypt(
 
   // 3. The triple.
   const costs = tokenCosts(input);
-  const ranked = rankTriples(candidates, input.code, costs);
-  const top = ranked[0];
-  if (!top) return deps.oneCallEncrypt(input);
+  let ranked = rankTriples(candidates, input.code, costs);
+  let top = ranked[0];
+  if (!top) return floorOf(input, deps);
+  if (variant.joint && left() > 20_000) {
+    ranked = await jointRerank(input, ranked, setTriples, readers, costs, modelForTier, left);
+    top = ranked[0] ?? top;
+  }
 
   // 4. Play-outs of the leaders (distinct triples), within what's left. When
   // every played triple did worse than the next one's estimate, another wave
@@ -898,11 +1295,12 @@ export async function mastermindEncrypt(
     const [dec, int] = await Promise.all([
       playOut(input, t, deps, "decode", ms),
       costs.interception > 0
-        ? playOut(input, t, deps, "intercept", ms)
+        ? playOut(input, t, deps, "intercept", ms, variant.interceptSamples)
         : Promise.resolve({ hits: 0, tries: 0 }),
     ]);
-    const decode = blend(t.decode, dec);
-    const intercept = costs.interception > 0 ? blend(t.intercept, int) : t.intercept;
+    const decode = blend(t.decode, dec, variant.priorWeight);
+    const intercept =
+      costs.interception > 0 ? blend(t.intercept, int, variant.priorWeight) : t.intercept;
     const rescored: Scored = {
       clues: t.clues,
       decode,
@@ -918,7 +1316,7 @@ export async function mastermindEncrypt(
     return rescored;
   };
   for (let wave = 0; wave < PLAY_WAVES; wave++) {
-    const next = ranked.slice(wave * PLAY_TRIPLES, (wave + 1) * PLAY_TRIPLES);
+    const next = ranked.slice(wave * variant.playTriples, (wave + 1) * variant.playTriples);
     const ms = left();
     if (next.length === 0 || ms < (wave === 0 ? 8_000 : 14_000)) break;
     // A later wave only when what was played fell below the next estimate.
@@ -934,7 +1332,10 @@ export async function mastermindEncrypt(
     ms: Date.now() - started,
   });
   if (traces.size > 200) traces.delete(traces.keys().next().value as string);
-  return picked.clues;
+  return {
+    clues: picked.clues,
+    note: searchNote(input, picked, candidates, ranked, played, links),
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -979,8 +1380,19 @@ const TABLE_JSON_SCHEMA = {
 
 const RawTable = z.object({
   columns: z.string(),
-  rows: z.array(z.object({ clue: z.string(), pct: z.array(z.number()) })).length(3),
+  rows: z
+    .array(
+      z.object({ clue: z.string(), reasoning: z.string().optional(), pct: z.array(z.number()) }),
+    )
+    .min(3),
 });
+
+interface TableRead {
+  rows: [Row, Row, Row];
+  /** The reader's line per digit on what each column stands for. */
+  columns: string;
+  reasons: string[];
+}
 
 function tableSystem(purpose: "decode" | "intercept"): string {
   return `${purpose === "decode" ? decodeSystem() : interceptSystem()}
@@ -1003,14 +1415,24 @@ async function readTable(
   input: GuessInput,
   model: string,
   effort: Effort,
+  extra?: string,
 ): Promise<[Row, Row, Row]> {
+  return (await readTableFull(input, model, effort, extra)).rows;
+}
+
+async function readTableFull(
+  input: GuessInput,
+  model: string,
+  effort: Effort,
+  extra?: string,
+): Promise<TableRead> {
   const raw = await withSlot(() =>
     structuredGenerate({
       feature: "decrypto",
       label: `decrypto:master:${input.purpose}`,
       modelOverride: model,
       system: tableSystem(input.purpose),
-      user: guessUser(input),
+      user: extra ? `${guessUser(input)}\n\n${extra}` : guessUser(input),
       schemaName: "decrypto_table",
       jsonSchema: TABLE_JSON_SCHEMA,
       budgetMs: GUESS_MS,
@@ -1018,12 +1440,360 @@ async function readTable(
     }),
   );
   const parsed = RawTable.parse(raw);
-  return parsed.rows.map((r) => normalizeRow(r.pct)) as [Row, Row, Row];
+  const rows = parsed.rows.slice(0, 3);
+  return {
+    rows: rows.map((r) => normalizeRow(r.pct)) as [Row, Row, Row],
+    columns: parsed.columns,
+    reasons: rows.map((r) => r.reasoning ?? ""),
+  };
 }
 
 export async function mastermindGuess(input: GuessInput): Promise<Code> {
+  return (await mastermindGuessNoted(input)).code;
+}
+
+/** Mastermind's guess with its working — the debrief's note. */
+export function mastermindGuessNoted(input: GuessInput): Promise<NotedCode> {
+  // A guess inside a search (a play-out) keeps the search's place in the queue.
+  const own = searchStart.getStore();
+  return own === undefined ? searchStart.run(Date.now(), () => guess(input)) : guess(input);
+}
+
+// ── Interception variants (bench only, like the encrypt variants) ─────────
+//
+// "khyp": before reading the clues, infer each column's likely hidden keyword
+// from the public table — interception then reads like decoding against the
+// suspected keywords. "ens5": five tables instead of three.
+
+const HYP_JSON_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    columns: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          digit: { type: "integer", enum: [1, 2, 3, 4] },
+          words: {
+            type: "array",
+            items: {
+              type: "object",
+              additionalProperties: false,
+              properties: { word: { type: "string" }, pct: { type: "integer" } },
+              required: ["word", "pct"],
+            },
+            description: "Your five likeliest hidden keywords for this column, best first.",
+          },
+        },
+        required: ["digit", "words"],
+      },
+    },
+  },
+  required: ["columns"],
+};
+
+const RawHyp = z.object({
+  columns: z.array(
+    z.object({
+      digit: z.number().int(),
+      words: z.array(z.object({ word: z.string(), pct: z.number() })),
+    }),
+  ),
+});
+
+const HYP_SYSTEM = `You are an expert Decrypto player studying a rival team's public clue table. Every
+column (digit 1-4) hides one secret keyword — a common, concrete noun. Each clue evokes
+that keyword's meaning from some angle; skilled encryptors switch angles every round.
+For each column, name your five likeliest hidden keywords with honest percentages
+(they need not sum to 100 — the rest is "something else"). A column with no clues: say
+so with low percentages. Single words.`;
+
+/** The suspected keywords behind each public column, as a block for the table readers. */
+async function keywordHypotheses(input: GuessInput): Promise<string | null> {
+  if (input.purpose !== "intercept" || input.targetRevealedClues.length === 0) return null;
+  const raw = await withSlot(() =>
+    structuredGenerate({
+      feature: "decrypto",
+      label: "decrypto:master:hypotheses",
+      modelOverride: smartModel(),
+      system: HYP_SYSTEM,
+      user: `THE RIVAL'S PUBLIC CLUE TABLE:\n${digitTable(input.targetRevealedClues)}`,
+      schemaName: "decrypto_hypotheses",
+      jsonSchema: HYP_JSON_SCHEMA,
+      budgetMs: 20_000,
+      reasoningEffort: "medium",
+    }),
+  );
+  const cols = RawHyp.parse(raw).columns;
+  const lines = [1, 2, 3, 4].map((d) => {
+    const words = cols.find((c) => c.digit === d)?.words ?? [];
+    return `  #${d}: ${words.length ? words.map((w) => `${w.word} ${Math.round(w.pct)}%`).join(", ") : "(no idea)"}`;
+  });
+  return `LIKELY HIDDEN KEYWORDS PER COLUMN (an analyst's read of the table — use them like a
+decoder would use real keywords, but remember they are guesses):\n${lines.join("\n")}`;
+}
+
+/** One careful assignment-style guess (the one-call tiers' prompt) on the smart model. */
+async function oneCallGuess(input: GuessInput, effort: Effort): Promise<number[]> {
+  return (await oneCallGuessFull(input, effort)).code;
+}
+
+async function oneCallGuessFull(
+  input: GuessInput,
+  effort: Effort,
+): Promise<{ code: number[]; reasons: string[] }> {
+  const raw = await withSlot(() =>
+    structuredGenerate({
+      feature: "decrypto",
+      label: `decrypto:master:${input.purpose}-one`,
+      modelOverride: smartModel(),
+      system: input.purpose === "decode" ? decodeSystem() : interceptSystem(),
+      user: guessUser(input),
+      schemaName: "decrypto_guess",
+      jsonSchema: GUESS_JSON_SCHEMA,
+      budgetMs: GUESS_MS,
+      reasoningEffort: effort,
+    }),
+  );
+  const parsed = RawGuessSchema.parse(raw);
+  const code = [...parsed.code];
+  return {
+    code: new Set(code).size === 3 ? code : parsed.assignments.map((a) => a.digit),
+    reasons: parsed.assignments.map((a) => a.reasoning),
+  };
+}
+
+const ADJUDICATE_JSON_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    review: {
+      type: "string",
+      description: "For each candidate code, test every clue against its column; note what breaks.",
+    },
+    code: {
+      type: "array",
+      minItems: 3,
+      maxItems: 3,
+      items: { type: "integer", enum: [1, 2, 3, 4] },
+    },
+    reasons: {
+      type: "array",
+      minItems: 3,
+      maxItems: 3,
+      description:
+        "After answering, for the debrief: one short sentence per clue, in clue order, on why it is that digit.",
+      items: { type: "string" },
+    },
+  },
+  required: ["review", "code", "reasons"],
+};
+
+const RawAdjudicate = z.object({
+  review: z.string(),
+  code: z.array(z.number().int()).min(3),
+  reasons: z.array(z.string()).optional(),
+});
+
+interface Verdict {
+  code: number[];
+  review: string;
+  reasons: string[];
+}
+
+/** Several methods propose codes; one strong reader weighs the candidates against each other. */
+async function adjudicate(input: GuessInput, candidates: string[]): Promise<Verdict> {
+  const raw = await withSlot(() =>
+    structuredGenerate({
+      feature: "decrypto",
+      label: `decrypto:master:${input.purpose}-adjudicate`,
+      modelOverride: smartModel(),
+      system: `${input.purpose === "decode" ? decodeSystem() : interceptSystem()}
+
+THIS TASK: several analysts proposed codes for these clues. Check each candidate clue by
+clue against the table — which assignments are forced, which are stretched — and answer
+with the single most likely code (it may be one none of them proposed).`,
+      user: `${guessUser(input)}\n\nCANDIDATE CODES: ${candidates.join(", ")}`,
+      schemaName: "decrypto_adjudicate",
+      jsonSchema: ADJUDICATE_JSON_SCHEMA,
+      budgetMs: GUESS_MS,
+      reasoningEffort: "high",
+    }),
+  );
+  const parsed = RawAdjudicate.parse(raw);
+  return { code: parsed.code.slice(0, 3), review: parsed.review, reasons: parsed.reasons ?? [] };
+}
+
+function plurality(codes: number[][]): number[] {
+  const count = new Map<string, number>();
+  for (const c of codes) count.set(c.join(""), (count.get(c.join("")) ?? 0) + 1);
+  let best = codes[0] ?? [1, 2, 3];
+  let n = 0;
+  for (const c of codes) {
+    const k = count.get(c.join("")) ?? 0;
+    if (k > n) {
+      n = k;
+      best = c;
+    }
+  }
+  return best;
+}
+
+function validOr(code: number[], fallback: () => Promise<Code>): Code | Promise<Code> {
+  return code.length === 3 && new Set(code).size === 3 && code.every((d) => d >= 1 && d <= 4)
+    ? ([...code] as unknown as Code)
+    : fallback();
+}
+
+function guessFlags(model: string): Set<string> {
+  if (process.env.DECRYPTO_BENCH_VARIANTS !== "1" || !model.includes(":")) return new Set();
+  return new Set(model.slice(model.indexOf(":") + 1).split("+"));
+}
+
+/** A table reader's "one line per digit" → four column lines (null when it didn't keep the shape). */
+export function columnLines(raw: string): (string | null)[] | null {
+  const lines = raw
+    .split(/\n|;\s*(?=[1-4]\s*[:=.)-])/)
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const out: (string | null)[] = [null, null, null, null];
+  for (const line of lines) {
+    const m = /^(?:digit\s*)?([1-4])\s*[:=.)\-–—]+\s*(.+)$/i.exec(line);
+    if (m?.[1] && m[2]) out[Number(m[1]) - 1] = noteText(m[2]);
+  }
+  if (out.some((x) => x !== null)) return out;
+  return lines.length === 4 ? lines.map((l) => noteText(l)) : null;
+}
+
+/** A guess's working → its note. */
+export function guessNote(
+  input: GuessInput,
+  code: readonly number[],
+  parts: {
+    why?: readonly (string | undefined)[];
+    rows?: readonly Row[] | null;
+    columns?: string | null;
+    candidates?: { code: number[]; from: GuessNote["candidates"][number]["from"] }[];
+    verdict?: string | null;
+  },
+): GuessNote {
+  const seen = new Set<string>();
+  const candidates: GuessNote["candidates"] = [];
+  for (const c of parts.candidates ?? []) {
+    const key = c.code.join("");
+    if (seen.has(key) || c.code.length !== 3 || new Set(c.code).size !== 3) continue;
+    if (!c.code.every((d) => d >= 1 && d <= 4)) continue;
+    seen.add(key);
+    candidates.push({ code: c.code.slice(0, 3) as [number, number, number], from: c.from });
+  }
+  return {
+    purpose: input.purpose,
+    picks: code.slice(0, 3).map((digit, i) => ({
+      digit,
+      why: noteText(parts.why?.[i]),
+      chances: parts.rows?.[i] ? parts.rows[i].map(clamp01) : null,
+    })),
+    columns: parts.columns ? columnLines(parts.columns) : null,
+    candidates: candidates.slice(0, 8),
+    verdict: noteText(parts.verdict ?? null),
+    standIn: false,
+    cost: null,
+    traceIds: [],
+  };
+}
+
+async function guess(input: GuessInput): Promise<NotedCode> {
+  const flags = guessFlags(input.model);
+  const plain = async (code: Code | Promise<Code>): Promise<NotedCode> => {
+    const c = await code;
+    return { code: c, note: guessNote(input, c, {}) };
+  };
+  if (flags.has("ana1") || flags.has("high")) {
+    const code = await oneCallGuess(input, flags.has("high") ? "high" : "medium");
+    return plain(validOr(code, () => tableGuess(input, flags)));
+  }
+  if (flags.has("ana3")) {
+    const codes = await settledBy(
+      [0, 1, 2].map(() => oneCallGuess(input, "medium")),
+      GUESS_MS,
+    );
+    if (codes.length === 0) return plain(tableGuess(input, flags));
+    return plain(validOr(plurality(codes), () => tableGuess(input, flags)));
+  }
+  if (flags.has("tables")) return plain(tableGuess(input, flags));
+  // The default since 2026-11-23: candidates from several methods, then one
+  // strong call weighs them (interception bench 70% exact vs 61% for the
+  // averaged tables; whole games 67% vs 58% of intercepts).
+  const started = Date.now();
+  const [tables, ones] = await Promise.all([
+    settledBy(
+      tableModels().map(({ model, effort }) => readTableFull(input, model, effort)),
+      CANDIDATE_MS,
+    ),
+    settledBy([oneCallGuessFull(input, "medium"), oneCallGuessFull(input, "medium")], CANDIDATE_MS),
+  ]);
+  const averaged =
+    tables.length > 0
+      ? ([0, 1, 2].map((i) => meanRow(tables.map((t) => t.rows[i] as Row))) as [Row, Row, Row])
+      : null;
+  const proposed: { code: number[]; from: GuessNote["candidates"][number]["from"] }[] = [];
+  for (const t of tables) proposed.push({ code: [...likeliestCode(t.rows)], from: "table" });
+  if (averaged) proposed.push({ code: [...likeliestCode(averaged)], from: "average" });
+  for (const o of ones) proposed.push({ code: o.code, from: "one-call" });
+  const columns = tables[0]?.columns ?? null;
+  /** The reasons of whichever method proposed `code`, if one did. */
+  const whyFor = (code: readonly number[]): string[] | undefined => {
+    const one = ones.find((o) => o.code.join("") === code.join(""));
+    if (one) return one.reasons;
+    return tables.find((t) => likeliestCode(t.rows).join("") === code.join(""))?.reasons;
+  };
+  const noted = (code: Code, extra: { why?: string[]; verdict?: string } = {}): NotedCode => ({
+    code,
+    note: guessNote(input, code, {
+      why: extra.why ?? whyFor(code),
+      rows: averaged,
+      columns,
+      candidates: proposed,
+      verdict: extra.verdict ?? null,
+    }),
+  });
+  const distinct = new Set(proposed.map((p) => p.code.join("-")));
+  if (distinct.size === 1) {
+    const only = proposed[0]?.code ?? [];
+    return noted(await validOr(only, () => tableGuess(input, flags)));
+  }
+  const judged = await settledBy(
+    [adjudicate(input, [...distinct])],
+    Math.max(0, GUESS_TOTAL_MS - (Date.now() - started)),
+  );
+  const verdict = judged[0];
+  if (verdict) {
+    const code = await validOr(verdict.code, () => tableGuess(input, flags));
+    const why = verdict.reasons.length >= 3 ? verdict.reasons : whyFor(code);
+    return noted(code, { why, verdict: verdict.review });
+  }
+  // No verdict in time: the averaged tables' code (the old default).
+  if (averaged) return noted(likeliestCode(averaged));
+  const first = ones[0];
+  if (first) return noted(await validOr(first.code, () => tableGuess(input, flags)));
+  throw new Error("no candidate code arrived in time");
+}
+
+async function tableGuess(input: GuessInput, flags: Set<string>): Promise<Code> {
+  const hyp = flags.has("khyp")
+    ? await settledBy([keywordHypotheses(input)], 22_000).then((r) => r[0] ?? null)
+    : null;
+  const models = flags.has("ens5")
+    ? [
+        ...tableModels(),
+        { model: smartModel(), effort: "medium" as Effort },
+        { model: balancedModel(), effort: "low" as Effort },
+      ]
+    : tableModels();
   const tables = await settledBy(
-    tableModels().map(({ model, effort }) => readTable(input, model, effort)),
+    models.map(({ model, effort }) => readTable(input, model, effort, hyp ?? undefined)),
     GUESS_MS,
   );
   if (tables.length === 0) throw new Error("no probability table arrived in time");

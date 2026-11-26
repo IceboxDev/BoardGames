@@ -8,12 +8,13 @@ import {
 } from "../../lib/offline-availability";
 import { startOfWeekMonday } from "../../lib/offline-week";
 import { qk } from "../../lib/query-keys";
-import { countMarkedInWindow } from "../../pages/admin-coverage";
+import { countBlankInWindow, countMarkedInWindow } from "../../pages/admin-coverage";
 import Calendar from "../offline/Calendar";
 import { Drawer } from "../ui/Drawer";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { LoadingState } from "../ui/LoadingState";
 import { QueryBoundary } from "../ui/QueryBoundary";
+import { OutstandingSection } from "./OutstandingSection";
 import type { AdminUser } from "./types";
 
 type AwayByUser = Record<string, string[]>;
@@ -139,6 +140,12 @@ export function AvailabilityDrawer({ user, awayDays, onClose }: Props) {
               today={today}
               weekStart={weekStart}
               awayCount={awayDays.filter((d) => availability[d] === undefined).length}
+            />
+            {/* The room under the calendar: what else they owe, and the
+                admins' notes on it. */}
+            <OutstandingSection
+              user={user}
+              blankDays={countBlankInWindow(availability, today, weekStart, awaySet)}
             />
           </>
         )}

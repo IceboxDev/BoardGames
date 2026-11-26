@@ -1,8 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { createRng } from "../../lib/rng";
+import { buildPlayerView } from "./player-view";
 import {
   ALL_CODES,
   allGuessesDone,
+  applyNote,
   buildRoundTransmissions,
   buildTeams,
   chatAllowed,
@@ -41,6 +43,7 @@ function makeCtx(overrides: Partial<DecryptoContext> = {}): DecryptoContext {
     clueTimerDeadlineTs: null,
     chat: [],
     history: [],
+    revealAcks: [],
     result: null,
     beats: DEFAULT_BEATS,
   };
@@ -124,6 +127,7 @@ describe("setup", () => {
       interceptions: 0,
       miscommunications: 0,
       usedClues: [],
+      rivalNotes: ["", "", "", ""],
     };
     expect(encryptorFor(team, 1)).toBe(2);
     expect(encryptorFor(team, 2)).toBe(3);
@@ -413,5 +417,25 @@ describe("win evaluation", () => {
       reason: "survived",
     });
     expect(evaluateRoundEnd(withTokens({ ...base, round: 4 }, [{}, { i: 1 }]))).toBeNull();
+  });
+});
+
+describe("rival notes", () => {
+  it("are the team's own, shared by teammates and hidden from the rival", () => {
+    const ctx = makeCtx();
+    const next = { ...ctx, ...applyNote(ctx, 1, 2, "  tuna  ") };
+    expect(next.teams[0].rivalNotes).toEqual(["", "tuna", "", ""]);
+    expect(next.teams[1].rivalNotes).toEqual(["", "", "", ""]);
+    expect(buildPlayerView(next, "clueWriting", 1).rivalNotes[1]).toBe("tuna");
+    expect(buildPlayerView(next, "clueWriting", 2).rivalNotes).toEqual(["", "", "", ""]);
+    // Clearing writes the empty note.
+    const cleared = { ...next, ...applyNote(next, 1, 2, "") };
+    expect(cleared.teams[0].rivalNotes[1]).toBe("");
+  });
+
+  it("follow the chat's encryptor lockout", () => {
+    const ctx = makeCtx();
+    // Round 1: seat 0 encrypts for White and hasn't sent its clues yet.
+    expect(() => applyNote(ctx, 0, 1, "fish")).toThrow(/encryptor/);
   });
 });

@@ -157,6 +157,31 @@ export async function farmStats(db: Client) {
   };
 }
 
+const ResultsRowSchema = z.object({ w: z.number().nullable(), b: z.number().nullable() });
+
+let resultsCache: { spec: string; at: number; value: { w: number; b: number } } | null = null;
+
+/**
+ * Finished evaluations by the colour whose tree they belong to: yours to move
+ * in that colour (`user`) or the opponent's (`opp`). A build shows how many of
+ * them its tree has taken in. Counted once a minute: it reads every row.
+ */
+export async function farmResults(db: Client, spec: string): Promise<{ w: number; b: number }> {
+  const now = Date.now();
+  if (resultsCache && resultsCache.spec === spec && now - resultsCache.at < 60_000)
+    return resultsCache.value;
+  const r = await db.execute({
+    sql: `SELECT SUM(CASE WHEN whites THEN 1 ELSE 0 END) AS w, SUM(CASE WHEN whites THEN 0 ELSE 1 END) AS b
+          FROM (SELECT (kind = 'user') = (substr(fen_key, instr(fen_key, ' ') + 1, 1) = 'w') AS whites
+                FROM chess_position_evals WHERE spec = ?)`,
+    args: [spec],
+  });
+  const [row] = parseRows(ResultsRowSchema, r.rows, "chess_position_evals.results");
+  const value = { w: Number(row?.w ?? 0), b: Number(row?.b ?? 0) };
+  resultsCache = { spec, at: now, value };
+  return value;
+}
+
 const PlaceRowSchema = z.object({
   fen_key: z.string(),
   kind: z.enum(["user", "opp"]),

@@ -43,8 +43,13 @@ export const ENCRYPT_JSON_SCHEMA = {
               "Seeing only the public table plus this clue, which column would an outsider pick, and why is it NOT the true one?",
           },
           clue: { type: "string", minLength: 1, maxLength: 40 },
+          link: {
+            type: "string",
+            description:
+              "For the debrief, after choosing: how this clue leads your teammates to the keyword, in a short phrase (e.g. 'mosaic → tiny tiles → tesserae').",
+          },
         },
-        required: ["digit", "facet", "interceptorTest", "clue"],
+        required: ["digit", "facet", "interceptorTest", "clue", "link"],
       },
     },
   },
@@ -96,6 +101,7 @@ export const RawEncryptSchema = z.object({
         facet: z.string(),
         interceptorTest: z.string(),
         clue: z.string(),
+        link: z.string().optional(),
       }),
     )
     .length(3),

@@ -65,12 +65,32 @@ export function stepsBackTo(to: string, from = currentHistoryIndex()): number | 
   return null;
 }
 
-/** Whether the entry just behind this one is the same page (an in-page step: setup → game). */
-export function previousIsSamePage(from = currentHistoryIndex()): boolean {
-  if (from === 0) return false;
+/**
+ * How many steps back the page this one was opened FROM is: the nearest
+ * earlier entry that is neither this page nor a page beneath it (a solo game
+ * under its menu, a room under its game). So Back returns where the player
+ * came from — the players list, not the dashboard — while Menu → Game → Menu
+ * trips still collapse into one step back. Null when every entry behind is
+ * this page or beneath it (Back then opens the page's parent).
+ */
+export function stepsBackOut(from = currentHistoryIndex()): number | null {
   const trail = read();
   const here = trail[String(from)];
-  return here !== undefined && trail[String(from - 1)] === here;
+  if (here === undefined) return from > 0 ? 1 : null;
+  const base = pathOnly(here);
+  for (let i = from - 1; i >= 0; i--) {
+    const entry = trail[String(i)];
+    if (entry === undefined) return from - i;
+    const path = pathOnly(entry);
+    if (path === base || (base !== "/" && path.startsWith(`${base}/`))) continue;
+    return from - i;
+  }
+  return null;
+}
+
+function pathOnly(key: string): string {
+  const q = key.indexOf("?");
+  return q === -1 ? key : key.slice(0, q);
 }
 
 /**

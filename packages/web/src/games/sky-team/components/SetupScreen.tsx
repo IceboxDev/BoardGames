@@ -1,8 +1,7 @@
 import { skyTeamManifest } from "@boardgames/core/games/sky-team/manifest";
-import type { StrategyInfo } from "@boardgames/core/machines/manifest";
 import { useMemo, useState } from "react";
-import { ControlGroup, DIFFICULTY, SectionHeading } from "../../../components/setup";
-import { Button } from "../../../components/ui/Button";
+import { SetupBriefing, SetupFooter, SetupOptions, SetupSection } from "../../../components/setup";
+import { SegmentedControl } from "../../../components/ui/SegmentedControl";
 import { SCENARIO_CARDS } from "../scenarios";
 import ScenarioPicker from "./ScenarioPicker";
 
@@ -17,49 +16,19 @@ interface Props {
   onStart: (setup: SkyTeamSoloSetup) => void;
 }
 
-interface SeatOption {
-  id: 0 | 1;
-  label: string;
-  description: string;
-  accentColor: string;
-}
-
-const SEATS: SeatOption[] = [
-  {
-    id: 0,
-    label: "Pilot",
-    description: "Blue side • deploys gear",
-    accentColor: "#38bdf8",
-  },
-  {
-    id: 1,
-    label: "Co-Pilot",
-    description: "Orange side • deploys flaps",
-    accentColor: "#f97316",
-  },
-];
+const SEAT_NOTE: Record<0 | 1, string> = {
+  0: "Blue side · deploys the landing gear.",
+  1: "Orange side · deploys the flaps.",
+};
 
 const STRATEGIES = skyTeamManifest.strategies;
 
 const DEFAULT_SCENARIO_SLUG = SCENARIO_CARDS.find((s) => s.backendId != null)?.slug ?? "yul-green";
 
 /**
- * Sky Team setup screen. Fills the entire `#app-main` viewport with no
- * scrollbar (universal setup-screen rule). Layout vertical strips:
- *
- *   1. Title strip (slim)              — name + tagline
- *   2. Crew + AI + Start strip (~28%)  — three logical groups: who's
- *                                        flying, who's flying with them,
- *                                        the launch button
- *   3. Destination strip (FLEX-1)      — scenario gallery, 4 difficulty
- *                                        columns, cards stretch to fill
- *
- * The controls sit on TOP and the destination gallery fills the rest —
- * the multiplayer lobby (wide layout) stacks its room/crew/launch strip
- * the same way, so the two screens mirror each other.
- *
- * Every flex parent carries `min-h-0` so child overflow never forces the
- * page to scroll.
+ * Sky Team's briefing. The destination gallery is the screen's big choice,
+ * so it takes the leftover height under the options; your AI partner and
+ * your seat sit in the options panel. Fits the screen without scrolling.
  */
 export default function SetupScreen({ onStart }: Props) {
   const [scenarioSlug, setScenarioSlug] = useState(DEFAULT_SCENARIO_SLUG);
@@ -70,168 +39,67 @@ export default function SetupScreen({ onStart }: Props) {
     () => SCENARIO_CARDS.find((s) => s.slug === scenarioSlug),
     [scenarioSlug],
   );
+  const partner = STRATEGIES.find((s) => s.id === strategyId);
 
   const start = () => {
     const backendId = selectedCard?.backendId ?? "yul-montreal";
     onStart({ scenarioId: backendId, seat, strategy: strategyId });
   };
 
-  const seatLabel = seat === 0 ? "Pilot" : "Co-Pilot";
-
   return (
-    <div className="relative z-raised flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
-      <header className="mb-3 flex shrink-0 items-baseline gap-3">
-        <h1 className="text-xl font-bold text-fg-strong sm:text-2xl">Sky Team</h1>
-        <p className="text-xs text-fg-secondary sm:text-sm">
-          Pick a destination, your seat, and an AI partner
-        </p>
-      </header>
-
-      {/* Controls strip — fixed-height logical groups for Crew, AI, and Start. */}
-      <section className="grid shrink-0 grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)_minmax(0,1fr)]">
-        <ControlGroup label="Crew">
-          <div className="grid h-full grid-cols-2 gap-2">
-            {SEATS.map((opt) => (
-              <SeatCard
-                key={opt.id}
-                option={opt}
-                selected={seat === opt.id}
-                onSelect={() => setSeat(opt.id)}
+    <SetupBriefing
+      title="Sky Team"
+      eyebrow="Solo · you + an AI co-pilot"
+      footer={
+        <SetupFooter
+          summary={`${selectedCard?.airportCode ?? "—"} ${selectedCard?.airportName ?? ""} · flying as ${seat === 0 ? "Pilot" : "Co-Pilot"} · ${partner?.label ?? ""} partner`}
+          startLabel="Start flight"
+          onStart={start}
+        />
+      }
+    >
+      <SetupOptions
+        options={[
+          {
+            id: "partner",
+            label: "AI partner",
+            span: "l",
+            note: partner?.description,
+            control: (
+              <SegmentedControl<string>
+                aria-label="AI partner"
+                options={STRATEGIES.map((s) => ({ value: s.id, label: s.label }))}
+                value={strategyId}
+                onChange={setStrategyId}
+                size="sm"
               />
-            ))}
-          </div>
-        </ControlGroup>
-
-        <ControlGroup label="AI Partner">
-          <div className="flex h-full flex-col gap-2">
-            {STRATEGIES.map((strat) => (
-              <StrategyCard
-                key={strat.id}
-                option={strat}
-                selected={strategyId === strat.id}
-                onSelect={() => setStrategyId(strat.id)}
+            ),
+          },
+          {
+            id: "seat",
+            label: "Your seat",
+            span: "l",
+            note: SEAT_NOTE[seat],
+            control: (
+              <SegmentedControl<0 | 1>
+                aria-label="Your seat"
+                options={[
+                  { value: 0, label: "Pilot" },
+                  { value: 1, label: "Co-Pilot" },
+                ]}
+                value={seat}
+                onChange={setSeat}
+                size="sm"
               />
-            ))}
-          </div>
-        </ControlGroup>
-
-        <ControlGroup label="Launch">
-          <LaunchSummary
-            airportCode={selectedCard?.airportCode ?? "—"}
-            airportName={selectedCard?.airportName ?? ""}
-            seatLabel={seatLabel}
-            onStart={start}
-          />
-        </ControlGroup>
-      </section>
-
-      {/* Destination — takes all leftover vertical space below the controls. */}
-      <section className="mt-4 flex min-h-0 flex-1 flex-col gap-2">
-        <SectionHeading>Destination</SectionHeading>
-        <div className="min-h-0 flex-1">
+            ),
+          },
+        ]}
+      />
+      <SetupSection label="Destination" grow>
+        <div className="min-h-64 flex-1 lg:min-h-0">
           <ScenarioPicker selectedSlug={scenarioSlug} onSelect={setScenarioSlug} />
         </div>
-      </section>
-    </div>
-  );
-}
-
-// ── Helpers ──────────────────────────────────────────────────────────────
-
-function SeatCard({
-  option,
-  selected,
-  onSelect,
-}: {
-  option: SeatOption;
-  selected: boolean;
-  onSelect: () => void;
-}) {
-  return (
-    // biome-ignore lint/correctness/noRestrictedElements: bespoke pick-tile chrome (accent stripe) — <Button> primary/secondary variants would override it
-    <button
-      type="button"
-      onClick={onSelect}
-      className={`group relative flex flex-col justify-center gap-1 overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2 text-left transition-all duration-150 ${
-        selected
-          ? "border-fg-strong/30 bg-surface-800 shadow-md"
-          : "border-line hover:bg-surface-800 hover:border-line"
-      }`}
-      style={{ borderLeftWidth: "4px", borderLeftColor: option.accentColor }}
-      aria-pressed={selected}
-    >
-      <span className="text-sm font-bold text-fg-strong">{option.label}</span>
-      <span className="text-3xs leading-tight text-fg-secondary">{option.description}</span>
-    </button>
-  );
-}
-
-function StrategyCard({
-  option,
-  selected,
-  onSelect,
-}: {
-  option: StrategyInfo;
-  selected: boolean;
-  onSelect: () => void;
-}) {
-  return (
-    // biome-ignore lint/correctness/noRestrictedElements: bespoke pick-tile chrome (accent stripe, difficulty pill) — <Button> variants would override the styling
-    <button
-      type="button"
-      onClick={onSelect}
-      className={`group relative flex h-full flex-col gap-1 overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2 text-left transition-all duration-150 ${
-        selected
-          ? "border-fg-strong/30 bg-surface-800 shadow-md"
-          : "border-line hover:bg-surface-800 hover:border-line"
-      }`}
-      style={{ borderLeftWidth: "4px", borderLeftColor: DIFFICULTY[option.difficulty].accentColor }}
-      aria-pressed={selected}
-    >
-      <div className="flex items-center justify-between gap-2">
-        <span className="text-sm font-bold text-fg-strong">{option.label}</span>
-        <span
-          className={`inline-flex items-center rounded-full px-1.5 py-0.5 text-4xs font-semibold uppercase tracking-wider ring-1 ring-inset ${DIFFICULTY[option.difficulty].badgeClass}`}
-        >
-          {option.difficulty}
-        </span>
-      </div>
-      <span className="line-clamp-2 text-3xs leading-tight text-fg-secondary">
-        {option.description}
-      </span>
-    </button>
-  );
-}
-
-/**
- * Right-most block of the controls strip. Shows a compact summary of the
- * current selection so the Start button isn't an unanchored CTA — the
- * player can confirm where they're flying and from which seat at a glance,
- * then hit Launch. The button fills the height of the group.
- */
-function LaunchSummary({
-  airportCode,
-  airportName,
-  seatLabel,
-  onStart,
-}: {
-  airportCode: string;
-  airportName: string;
-  seatLabel: string;
-  onStart: () => void;
-}) {
-  return (
-    <div className="flex h-full flex-col justify-between gap-2">
-      <div className="flex flex-col gap-0.5">
-        <span className="font-mono text-base font-black tracking-wider text-fg-strong">
-          {airportCode}
-        </span>
-        <span className="line-clamp-1 text-2xs text-fg-secondary">{airportName}</span>
-        <span className="text-3xs text-fg-muted">Flying as {seatLabel}</span>
-      </div>
-      <Button variant="primary" size="lg" block onClick={onStart}>
-        Start Flight
-      </Button>
-    </div>
+      </SetupSection>
+    </SetupBriefing>
   );
 }

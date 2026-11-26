@@ -21,6 +21,9 @@ vi.mock("../../lib/offline-availability", async (importOriginal) => {
   };
 });
 
+// The outstanding list under the calendar has its own test.
+vi.mock("./OutstandingSection", () => ({ OutstandingSection: () => null }));
+
 import { testQueryClient } from "../../test/query-client";
 import { AvailabilityDrawer } from "./AvailabilityDrawer";
 

@@ -16,36 +16,43 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
     <PvAISetupScreen
       title="7 Wonders"
       manifest={sevenWondersManifest}
-      onStart={(playerCount, strategy) => onStart({ playerCount, strategy, edifice })}
-      extraControls={
-        <div className="flex flex-col items-center gap-1.5">
-          {artUrl("emblem-seven-wonders") && (
-            <img
-              src={artUrl("emblem-seven-wonders")}
-              alt=""
-              aria-hidden
-              draggable={false}
-              className="mb-2 h-24 w-24 select-none drop-shadow-[0_8px_18px_rgb(0_0_0/0.6)]"
-            />
-          )}
-          <Chip
-            pressed={edifice}
-            tone="amber"
-            variant="outlined"
-            size="md"
-            onClick={() => setEdifice((v) => !v)}
-          >
-            <span className="flex items-center gap-1.5">
-              <SevenIcon name="edifice" className="h-5 w-5" />
-              Edifice expansion{edifice ? " · on" : ""}
-            </span>
-          </Chip>
-          <span className="max-w-xs text-center text-2xs text-fg-secondary">
-            Co-fund communal projects while building your Wonder for shared rewards — or a penalty
-            if they fail.
-          </span>
-        </div>
+      summary={({ playerCount, strategy }) =>
+        `${playerCount} players · ${playerCount - 1} × ${strategy?.label ?? ""}${edifice ? " · Edifice" : ""}`
       }
+      onStart={(playerCount, strategy) => onStart({ playerCount, strategy, edifice })}
+      options={[
+        {
+          id: "edifice",
+          label: "Expansion",
+          span: "l",
+          note: "Co-fund communal projects while building your Wonder for shared rewards — or a penalty if they fail.",
+          control: (
+            <span className="flex items-center gap-3">
+              {artUrl("emblem-seven-wonders") && (
+                <img
+                  src={artUrl("emblem-seven-wonders")}
+                  alt=""
+                  aria-hidden
+                  draggable={false}
+                  className="h-9 w-9 select-none"
+                />
+              )}
+              <Chip
+                pressed={edifice}
+                tone="amber"
+                variant="outlined"
+                size="md"
+                onClick={() => setEdifice((v) => !v)}
+              >
+                <span className="flex items-center gap-1.5">
+                  <SevenIcon name="edifice" className="h-5 w-5" />
+                  Edifice expansion{edifice ? " · on" : ""}
+                </span>
+              </Chip>
+            </span>
+          ),
+        },
+      ]}
     />
   );
 }

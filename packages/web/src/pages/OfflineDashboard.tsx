@@ -357,13 +357,17 @@ export default function OfflineDashboard() {
     lockMutation.reset();
     unlockMutation.reset();
     // A new night picked while a group is chosen starts as their private
-    // night: the group invited, a seat each plus the host's.
+    // night: the group invited, a seat each plus the host's — the member
+    // locking it, who is often in the group already (a campaign's party)
+    // and must not be counted twice.
+    const seated = new Set(group.ids);
+    if (userId) seated.add(userId);
     setLockPrefill(
       group.active && !locks?.[date]
         ? {
             kind: "private",
             inviteeIds: [...group.ids],
-            seatCount: Math.min(MAX_SEAT_COUNT, Math.max(MIN_SEAT_COUNT, group.ids.size + 1)),
+            seatCount: Math.min(MAX_SEAT_COUNT, Math.max(MIN_SEAT_COUNT, seated.size)),
             fixedGameSlug: findCampaign,
           }
         : null,

@@ -1,3 +1,4 @@
+import { EDITION_NAME } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import {
   type BotcConfig,
   botcManifest,
@@ -5,9 +6,15 @@ import {
 import { MAX_PLAYERS, MIN_PLAYERS } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { configOrDefaults } from "@boardgames/core/machines/manifest";
 import { useState } from "react";
-import { SetupHeader, SetupLayout } from "../../../components/setup";
-import { Button, ErrorAlert, FieldGroup, SelectableCard, Stepper } from "../../../components/ui";
-import BotcLobbyConfig from "../BotcLobbyConfig";
+import {
+  SetupBriefing,
+  SetupChoiceCards,
+  SetupFooter,
+  SetupOptions,
+  SetupSection,
+} from "../../../components/setup";
+import { ErrorAlert, Stepper } from "../../../components/ui";
+import { botcOptionFields } from "../BotcLobbyConfig";
 
 /** What the Singleplayer screen starts: your seat, the town's size, the options. */
 export interface BotsSetupChoice {
@@ -35,61 +42,75 @@ export function BotsSetup({
   const [players, setPlayers] = useState(8);
   const [config, setConfig] = useState<BotcConfig>(() => configOrDefaults(botcManifest, {}));
 
+  const set = (patch: Partial<BotcConfig>) =>
+    setConfig(configOrDefaults(botcManifest, { ...config, ...patch }));
+  const start = () =>
+    onStart({
+      // A random chair in the town, so you aren't always first in the circle.
+      seat: role === "storyteller" ? 0 : 1 + Math.floor(Math.random() * players),
+      players,
+      config,
+    });
+
   return (
-    <SetupLayout>
-      <SetupHeader title="Blood on the Clocktower" />
-      <div className="mx-auto flex w-full max-w-2xl flex-col gap-6">
-        <FieldGroup label="Your seat">
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <SelectableCard
-              variant="row"
-              tone="amber"
-              title="A player in the town"
-              description="A bot Storyteller runs the game; bots fill the other seats."
-              selected={role === "player"}
-              onClick={() => setRole("player")}
-            />
-            <SelectableCard
-              variant="row"
-              tone="rose"
-              title="The Storyteller"
-              description="You hold the Grimoire; every player is a bot."
-              selected={role === "storyteller"}
-              onClick={() => setRole("storyteller")}
-            />
-          </div>
-        </FieldGroup>
-        <FieldGroup label="Players in the town">
-          <Stepper
-            value={players}
-            min={MIN_PLAYERS}
-            max={MAX_PLAYERS}
-            onChange={setPlayers}
-            label="Players"
-            caption={role === "player" ? "including you" : "plus you as the Storyteller"}
-          />
-        </FieldGroup>
-        <BotcLobbyConfig
-          value={config}
-          onChange={(next) => setConfig(configOrDefaults(botcManifest, next))}
+    <SetupBriefing
+      title="Blood on the Clocktower"
+      eyebrow="Solo · every other seat a stand-in bot"
+      blurb="The online game alone: run it as the Storyteller for a bot town, or play in the town under a bot Storyteller. The bots play by the rules, not to win."
+      footer={
+        <SetupFooter
+          summary={`${role === "player" ? "A player in the town" : "The Storyteller"} · ${players} players · ${EDITION_NAME[config.edition]}`}
+          onStart={start}
         />
-        {error && <ErrorAlert message={error} />}
-        <Button
-          size="lg"
-          variant="solid"
-          tone="amber"
-          onClick={() =>
-            onStart({
-              // A random chair in the town, so you aren't always first in the circle.
-              seat: role === "storyteller" ? 0 : 1 + Math.floor(Math.random() * players),
-              players,
-              config,
-            })
-          }
-        >
-          Start
-        </Button>
-      </div>
-    </SetupLayout>
+      }
+    >
+      <SetupSection label="Your seat">
+        <SetupChoiceCards
+          label="Your seat"
+          fileWord="Seat"
+          choices={[
+            {
+              id: "player",
+              label: "A player in the town",
+              description: "A bot Storyteller runs the game; bots fill the other seats.",
+              meta: <span className="text-amber-400">Player</span>,
+            },
+            {
+              id: "storyteller",
+              label: "The Storyteller",
+              description: "You hold the Grimoire; every player is a bot.",
+              meta: <span className="text-rose-400">Storyteller</span>,
+            },
+          ]}
+          value={role}
+          onChange={(id) => setRole(id === "storyteller" ? "storyteller" : "player")}
+        />
+      </SetupSection>
+      <SetupSection label="Game">
+        <SetupOptions
+          options={[
+            {
+              id: "players",
+              label: "Players in the town",
+              span: "s",
+              control: (
+                <Stepper
+                  value={players}
+                  min={MIN_PLAYERS}
+                  max={MAX_PLAYERS}
+                  onChange={setPlayers}
+                  label="Players"
+                  size="sm"
+                  className="flex-row gap-3"
+                  caption={role === "player" ? "including you" : "plus you as the Storyteller"}
+                />
+              ),
+            },
+            ...botcOptionFields(config, set),
+          ]}
+        />
+      </SetupSection>
+      {error && <ErrorAlert message={error} />}
+    </SetupBriefing>
   );
 }

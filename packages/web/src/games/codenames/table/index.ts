@@ -11,7 +11,7 @@ export { ClueComposer } from "./ClueComposer";
 export { ClueStrip, type ClueStripMode, ScorePill } from "./ClueStrip";
 export { useClueTargets, useTableKeys } from "./hooks";
 export { LastTurnLine } from "./LastTurnLine";
-export { OptionsControls, type TableOptions } from "./OptionsControls";
+export { OptionsControls, type TableOptions, tableOptionFields } from "./OptionsControls";
 export { PresenceNotices } from "./PresenceNotices";
 export { RailCard, RailStat } from "./RailCard";
 export { ReviewScreen } from "./review/ReviewScreen";

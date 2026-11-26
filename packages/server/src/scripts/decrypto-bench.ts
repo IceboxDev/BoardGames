@@ -158,6 +158,8 @@ for (let i = 0; i < pairs; i++) {
   jobs.push({ seed: seed0 + i, tiers: [tierB, tierA] });
 }
 
+/** Mastermind encrypts that left a search trace vs fell back to the one-call clue, by tier. */
+const searches: Record<string, { traced: number; fallback: number }> = {};
 const tally = {
   a: { wins: 0, sent: 0, decoded: 0, intercepted: 0, skipped: 0, intercepts: 0, chances: 0 },
   b: { wins: 0, sent: 0, decoded: 0, intercepted: 0, skipped: 0, intercepts: 0, chances: 0 },
@@ -216,6 +218,13 @@ async function runJob(job: { seed: number; tiers: [string, string] }) {
       ms: Date.now() - t,
     };
     appendFileSync(resolve(OUT_DIR, "games.jsonl"), `${JSON.stringify(line)}\n`);
+    for (const t of line.transcript) {
+      if (!t.tier.startsWith("decrypto-expert") || !t.clues) continue;
+      const s = searches[t.tier] ?? { traced: 0, fallback: 0 };
+      if ("expect" in t) s.traced++;
+      else s.fallback++;
+      searches[t.tier] = s;
+    }
     tally.games++;
     tally.rounds += ctx.result?.rounds ?? 0;
     if (winnerTier === null) tally.shared++;
@@ -274,6 +283,9 @@ for (const [name, xs] of Object.entries(timings).sort()) {
   console.log(
     `  ${name}: n ${xs.length}, p50 ${(median(xs) / 1000).toFixed(1)} s, p95 ${(p95(xs) / 1000).toFixed(1)} s`,
   );
+}
+for (const [tier, s] of Object.entries(searches)) {
+  console.log(`  ${tier}: searches ${s.traced}, fell back ${s.fallback}`);
 }
 console.log("  spend:", JSON.stringify(aiSpendTotals().decrypto ?? {}));
 process.exit(0);

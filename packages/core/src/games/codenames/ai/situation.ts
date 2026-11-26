@@ -6,14 +6,15 @@
  * What a good player keeps in mind, beyond "link some words":
  *   - the number buys number + 1 guesses; the extra one is for leftovers
  *   - one leftover is covered by that +1, so it isn't worth a whole clue
- *   - ∞ is an agreement, not a size: "everything left is covered" — this
- *     clue's words plus the words still owed from earlier clues are ALL the
- *     agents left (`closesTheBoard`), so keep going until they're found
+ *   - ∞ is an agreement, not a size: WORD ∞ = "WORD's own number is (agents
+ *     left − owed)" — owed counted from the public record, so both sides do
+ *     the same sum — and that covers everything (`closesTheBoard`). It needs
+ *     words owed: with none, the clue just carries its number
  *   - when the other side is about to win, a safe clue loses: go for it all
  *   - what the other side's clue didn't find is probably theirs
  */
 import { type ClueCount, formatClueCount } from "../clue-rules";
-import type { ClueInput, GuessInput, SpymasterCardKind } from "./agent";
+import type { ClueInput, GuessInput, PublicTurn, SpymasterCardKind } from "./agent";
 
 const upper = (w: string) => w.toUpperCase();
 const listWords = (words: readonly string[]) => words.map(upper).join(", ");
@@ -36,19 +37,54 @@ export function pendingTargets(input: ClueInput): { clue: string; words: string[
 }
 
 /**
- * The ∞ agreement, for both games and every guesser, AI or person: a clue is
- * ∞ exactly when its targets plus the words still owed from your earlier
- * clues are every agent you have left — "everything is described, finish it
- * this turn". Short of that, the clue carries its number (WORD 2 with one
- * owed of four says one word is still undescribed).
+ * How many words the table counts as still owed by this side's earlier clues:
+ * each clue's number minus the agents found on its turn (`unfinishedClues`),
+ * at most the agents left. Public, so the spymaster and every operative get
+ * the same k.
+ */
+export function publicOwed(input: { history: readonly PublicTurn[]; agentsLeft: number }): number {
+  const k = unfinishedClues(input).reduce((n, c) => n + c.missing, 0);
+  return Math.min(k, input.agentsLeft);
+}
+
+/**
+ * The ∞ agreement, for both games and every guesser, AI or person. WORD X says
+ * WORD describes X words. With k words still owed (`publicOwed`) and
+ * X + k = every agent left, the clue may be WORD ∞ instead: the operatives
+ * work out X = agents left − k themselves, get X + k guesses instead of
+ * X + 1, and learn that everything is described. So ∞ needs k > 0 and
+ * X ≥ 1 — a clue for the last agent with nothing owed is WORD 1, never ∞
+ * (that would read as X = 0). The owed words must really be the rest of the
+ * agents, too (the spymaster's own notes), or the sum would mislead.
  */
 export function closesTheBoard(input: ClueInput, targets: readonly number[]): boolean {
   if (targets.length === 0) return false;
-  const owed = new Set(pendingTargets(input).flatMap((p) => p.words));
-  const covered = new Set(targets);
-  return input.cards
-    .filter((c) => !c.revealed && c.kind === "own")
-    .every((c) => covered.has(c.index) || owed.has(c.word));
+  const k = publicOwed(input);
+  if (k === 0 || targets.length + k !== input.agentsLeft) return false;
+  const hidden = new Set(
+    input.cards.filter((c) => !c.revealed && c.kind === "own").map((c) => c.word),
+  );
+  // Clue by clue, what the table counts as missing must be exactly that
+  // clue's own words still face down: GLASS 4 that found 3, whose 4th went in
+  // another round, owes nothing — ∞ would send them looking for a 4th GLASS word.
+  const owedWords = new Set<string>();
+  for (const turn of input.history) {
+    if (turn.by !== "us" || !turn.clue) continue;
+    const count = turn.clue.count;
+    if (typeof count !== "number" || count === 0) continue;
+    const found = turn.guesses.filter((g) => g.result === "own").length;
+    const missing = Math.max(0, count - found);
+    if (missing === 0) continue;
+    if (!turn.intended) return false;
+    const still = turn.intended.filter((w) => hidden.has(w) && !owedWords.has(w));
+    if (still.length !== missing) return false;
+    for (const w of still) owedWords.add(w);
+  }
+  const byIndex = new Map(input.cards.map((c) => [c.index, c.word]));
+  const own = new Set(targets.map((t) => byIndex.get(t)));
+  // The clue's own words are the rest: none of them owed, together everything left.
+  if ([...own].some((w) => w === undefined || owedWords.has(w))) return false;
+  return [...hidden].every((w) => own.has(w) || owedWords.has(w));
 }
 
 export type Urgency = "desperate" | "behind" | "even" | "ahead";
@@ -105,11 +141,12 @@ export function clueSituation(input: ClueInput): string[] {
         "Exactly one leftover: don't spend this clue on it. Clue other words — your operatives get number + 1 guesses, and the extra one is for that leftover.",
       );
     }
-    const rest = input.agentsLeft - total;
+  }
+  const k = publicOwed(input);
+  const x = input.agentsLeft - k;
+  if (k > 0 && x > 0) {
     lines.push(
-      rest > 0
-        ? `A clue that links the other ${rest} agent${rest === 1 ? "" : "s"} covers everything you have left: it is given as ∞ — your team's agreed sign that every agent left is described (this clue + the words still owed), so they keep going until they have found them all. A smaller clue keeps its number, which tells them some agent is still undescribed.`
-        : "Your earlier clues already cover every agent you have left: a clue toward any of them is given as ∞ — the agreed sign that everything is described and they should collect it all.",
+      `By the public record your team counts ${k} word${k === 1 ? "" : "s"} still owed (each earlier clue's number minus the agents found on its turn). A clue whose own words are exactly the other ${x} agent${x === 1 ? "" : "s"} — each clue's miss really being one of its own words still face down — is given as ∞, your team's agreement: they work out ${x} = ${input.agentsLeft} − ${k}, may guess all ${input.agentsLeft}, and know everything is described. Any other clue carries its number.`,
     );
   }
   return lines;
@@ -135,7 +172,9 @@ function clueTally(turn: GuessInput["history"][number]): {
  * record: the number said, minus your agents touched on that turn. Their
  * words are what the extra (+1) guess is for.
  */
-export function unfinishedClues(input: GuessInput): { word: string; missing: number }[] {
+export function unfinishedClues(input: {
+  history: readonly PublicTurn[];
+}): { word: string; missing: number }[] {
   return input.history.flatMap((turn) => {
     if (turn.by !== "us") return [];
     const t = clueTally(turn);
@@ -185,10 +224,12 @@ export function guessSituation(input: GuessInput, stopByScore = false): GuessSit
     );
   } else if (input.clue.count === "unlimited") {
     const owed = unfinishedClues(input);
-    const owedTotal = owed.reduce((n, c) => n + c.missing, 0);
-    const own = Math.max(1, input.agentsLeft - owedTotal);
+    const owedTotal = publicOwed(input);
+    const own = input.agentsLeft - owedTotal;
     lines.push(
-      `∞ is your team's agreement: EVERYTHING left is covered. ${upper(input.clue.word)} plus the words still owed from earlier clues${owed.length > 0 ? ` (${owed.map((c) => `${upper(c.word)}: ${c.missing}`).join(", ")})` : ""} are ALL ${input.agentsLeft} of your remaining agents — so ${upper(input.clue.word)} itself points to about ${own}. ${stopByScore ? "List every word that could be one of them." : `Keep going until you have found all ${input.agentsLeft}; stop only when no candidate is left that you would really pick.`}`,
+      owedTotal === 0 || own < 1
+        ? `${upper(input.clue.word)} ∞ with no words owed from earlier clues is not your team's ∞ agreement: it doesn't say how many words it points to. Guess the ones that fit it, best first.`
+        : `∞ is your team's agreement: EVERYTHING left is covered. ${upper(input.clue.word)} plus the words still owed from earlier clues${owed.length > 0 ? ` (${owed.map((c) => `${upper(c.word)}: ${c.missing}`).join(", ")})` : ""} are ALL ${input.agentsLeft} of your remaining agents — so ${upper(input.clue.word)} itself points to ${own} (${input.agentsLeft} left − ${owedTotal} owed). ${stopByScore ? "List every word that could be one of them." : `Keep going until you have found all ${input.agentsLeft}; stop only when no candidate is left that you would really pick.`}`,
     );
   } else if (input.mode === "classic" && stopByScore) {
     lines.push(

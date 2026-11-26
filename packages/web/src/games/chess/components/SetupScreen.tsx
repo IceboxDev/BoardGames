@@ -5,7 +5,6 @@ import { TRAINER_FOLDERS } from "@boardgames/core/games/chess/trainer/folders";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { PvAISetupScreen } from "../../../components/setup/PvAISetupScreen";
-import { SectionLabel } from "../../../components/setup/SectionLabel";
 import { Button, Checkbox, SegmentedControl } from "../../../components/ui";
 import { lineText, playLine } from "../analysis/line";
 import { lineFromSearch } from "../logic/play-line";
@@ -40,46 +39,82 @@ export default function SetupScreen({ onStart }: { onStart: (setup: ChessSetup) 
       title="Chess"
       manifest={chessManifest}
       initialStrategy={saved?.strategy}
+      eyebrow="Solo · against the engine"
+      summary={({ strategy }) =>
+        `${COLOUR_WORD[color]} · vs ${strategy?.label ?? ""} · ${clockWord(timeControl)} · takebacks ${takebacks ? "on" : "off"}`
+      }
       onStart={(_n, strategy) => {
         const setup = { strategy, color, timeControl, takebacks };
         saveSetup(setup);
         onStart({ ...setup, openingMoves: line?.moves ?? [] });
       }}
-      extraControls={
-        <div className="mb-8 flex w-full max-w-3xl flex-col gap-6">
-          {line && (
-            <OpeningLine
-              moves={line.moves}
-              side={line.side}
-              onClear={() => setParams({}, { replace: true })}
-            />
-          )}
-          <div>
-            <SectionLabel>Play as</SectionLabel>
+      options={[
+        ...(line
+          ? [
+              {
+                id: "opening",
+                label: "Opening",
+                span: "full" as const,
+                control: (
+                  <OpeningLine
+                    moves={line.moves}
+                    side={line.side}
+                    onClear={() => setParams({}, { replace: true })}
+                  />
+                ),
+              },
+            ]
+          : []),
+        {
+          id: "colour",
+          label: "Play as",
+          span: "s",
+          control: (
             <SegmentedControl<ColorChoice>
               aria-label="Your colour"
               value={color}
               onChange={setColor}
+              size="sm"
               options={[
                 { value: "w", label: "♔ White" },
                 { value: "random", label: "Random" },
                 { value: "b", label: "♚ Black" },
               ]}
             />
-          </div>
-          <div>
-            <SectionLabel>Time control</SectionLabel>
-            <TimeControlPicker value={timeControl} onChange={setTimeControl} />
-          </div>
-          <Checkbox
-            checked={takebacks}
-            onChange={(e) => setTakebacks(e.target.checked)}
-            label="Allow takebacks"
-          />
-        </div>
-      }
+          ),
+        },
+        {
+          id: "time",
+          label: "Time control",
+          span: "l",
+          control: <TimeControlPicker value={timeControl} onChange={setTimeControl} />,
+        },
+        {
+          id: "takebacks",
+          label: "Takebacks",
+          span: "s",
+          control: (
+            <Checkbox
+              checked={takebacks}
+              onChange={(e) => setTakebacks(e.target.checked)}
+              label="Allow takebacks"
+            />
+          ),
+        },
+      ]}
     />
   );
+}
+
+const COLOUR_WORD: Record<ColorChoice, string> = {
+  w: "White",
+  random: "Random colour",
+  b: "Black",
+};
+
+function clockWord(control: TimeControl | null): string {
+  if (!control) return "untimed";
+  return `${control.initialMs / 60_000}+${control.incrementMs / 1000}`;
 }
 
 /** The line the game starts after: its position, its moves, its folder's name. */
@@ -95,31 +130,28 @@ function OpeningLine({
   const fen = playLine(START_FEN, moves).fens.at(-1) ?? START_FEN;
   const folder = currentFolder(flatten(TRAINER_FOLDERS[side]), walkLine(moves), new Map());
   return (
-    <div>
-      <SectionLabel>Opening</SectionLabel>
-      <div className="flex items-center gap-4 rounded-card-lg bg-fill p-3 ring-1 ring-line-soft">
-        <MiniBoard
-          fen={fen}
-          orientation={side}
-          lastMove={moves.at(-1) ?? null}
-          className="size-24 shrink-0 overflow-hidden rounded-card-md"
-          label="The position the game starts from"
-        />
-        <div className="flex min-w-0 flex-1 flex-col gap-1">
-          {folder && (
-            <span className="truncate text-sm font-semibold text-fg-strong">
-              {folder.folder.name}
-            </span>
-          )}
-          <span className="line-clamp-2 text-sm text-fg-secondary">
-            {lineText(START_FEN, moves, moves.length)}
+    <div className="flex w-full items-center gap-3">
+      <MiniBoard
+        fen={fen}
+        orientation={side}
+        lastMove={moves.at(-1) ?? null}
+        className="size-14 shrink-0 overflow-hidden rounded-card-md"
+        label="The position the game starts from"
+      />
+      <div className="flex min-w-0 flex-1 flex-col">
+        {folder && (
+          <span className="truncate text-sm font-semibold text-fg-strong">
+            {folder.folder.name}
           </span>
-          <span className="text-xs text-fg-muted">The game starts after these moves.</span>
-        </div>
-        <Button size="xs" variant="ghost" onClick={onClear}>
-          Standard start
-        </Button>
+        )}
+        <span className="truncate text-sm text-fg-secondary">
+          {lineText(START_FEN, moves, moves.length)}
+        </span>
+        <span className="text-xs text-fg-muted">The game starts after these moves.</span>
       </div>
+      <Button size="xs" variant="ghost" onClick={onClear}>
+        Standard start
+      </Button>
     </div>
   );
 }

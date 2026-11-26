@@ -7,34 +7,16 @@ export const sensoManifest = defineManifest({
   seats: { min: 2, max: 5 },
   strategies: [
     {
-      id: "random",
-      label: AI_STRATEGY_LABELS.random,
-      description: AI_STRATEGY_DESCRIPTIONS.random,
-      difficulty: "Easy",
-    },
-    {
       id: "heuristic-v1",
       label: AI_STRATEGY_LABELS["heuristic-v1"],
       description: AI_STRATEGY_DESCRIPTIONS["heuristic-v1"],
       difficulty: "Medium",
     },
     {
-      id: "aggressive",
-      label: AI_STRATEGY_LABELS.aggressive,
-      description: AI_STRATEGY_DESCRIPTIONS.aggressive,
-      difficulty: "Hard",
-    },
-    {
       id: "shogun",
       label: AI_STRATEGY_LABELS.shogun,
       description: AI_STRATEGY_DESCRIPTIONS.shogun,
-      difficulty: "Hard+",
-    },
-    {
-      id: "tenka",
-      label: AI_STRATEGY_LABELS.tenka,
-      description: AI_STRATEGY_DESCRIPTIONS.tenka,
-      difficulty: "Expert",
+      difficulty: "Hard",
     },
     {
       id: "kami",
@@ -44,5 +26,10 @@ export const sensoManifest = defineManifest({
     },
   ],
   defaultStrategy: "kami",
+  /** Off the ladder since 2026-11-26; old games still name them. */
+  retiredStrategies: (["random", "aggressive", "tenka"] as const).map((id) => ({
+    id,
+    label: AI_STRATEGY_LABELS[id],
+  })),
   config: z.object({}),
 });

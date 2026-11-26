@@ -49,7 +49,12 @@ import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { lookupExplorer, saveExplorer } from "../lib/chess-trainer/explorer-cache.ts";
-import { farmStats, queuePlaces, requestEvals } from "../lib/chess-trainer/farm-store.ts";
+import {
+  farmResults,
+  farmStats,
+  queuePlaces,
+  requestEvals,
+} from "../lib/chess-trainer/farm-store.ts";
 import {
   createRepertoire,
   deleteLink,
@@ -183,7 +188,11 @@ chessTrainerRoutes.post("/evals", zJsonBody(EvalRequestBodySchema), async (c) =>
     .valid("json")
     .items.filter((i) => i.kind !== "opp" || i.reach > 0 || i.stage > 0);
   const { results, queued } = await requestEvals(db, c.get("user").id, BEST_MOVE_SPEC, items);
-  const { done: _d, failed: _f, ...farm } = await farmStats(db);
+  const [{ done: _d, failed: _f, ...stats }, finished] = await Promise.all([
+    farmStats(db),
+    farmResults(db, BEST_MOVE_SPEC),
+  ]);
+  const farm = { ...stats, results: finished };
   return c.json(EvalRequestResponseSchema.parse({ results, queued, farm }));
 });
 

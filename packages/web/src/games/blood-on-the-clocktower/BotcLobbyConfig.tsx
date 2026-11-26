@@ -4,6 +4,7 @@ import {
   botcManifest,
 } from "@boardgames/core/games/blood-on-the-clocktower/manifest";
 import { configOrDefaults } from "@boardgames/core/machines/manifest";
+import type { SetupOption } from "../../components/setup";
 import { CheckRow, FieldGroup, SegmentedControl } from "../../components/ui";
 import type { LobbyConfigProps } from "../types";
 
@@ -17,12 +18,18 @@ const VOTE_SPEEDS = [
   { value: 2500, label: "Slow" },
 ] as const;
 
-export default function BotcLobbyConfig({ value, onChange, isHost = true }: LobbyConfigProps) {
-  const cfg = configOrDefaults(botcManifest, value);
-  const set = (patch: Partial<BotcConfig>) => onChange({ ...cfg, ...patch });
-  return (
-    <div className="flex flex-col gap-4">
-      <FieldGroup label="Script">
+/** The table's options as fields: the solo bots setup lays them out across its panel. */
+export function botcOptionFields(
+  cfg: BotcConfig,
+  set: (patch: Partial<BotcConfig>) => void,
+  isHost = true,
+): SetupOption[] {
+  return [
+    {
+      id: "edition",
+      label: "Script",
+      span: "l",
+      control: (
         <SegmentedControl
           options={[
             { value: "trouble-brewing", label: EDITION_NAME["trouble-brewing"] },
@@ -33,8 +40,13 @@ export default function BotcLobbyConfig({ value, onChange, isHost = true }: Lobb
           shape="rounded"
           size="sm"
         />
-      </FieldGroup>
-      <FieldGroup label="Demon bluffs">
+      ),
+    },
+    {
+      id: "demon",
+      label: "Demon bluffs",
+      span: "s",
+      control: (
         <SegmentedControl
           options={[
             { value: "new", label: "New Demon", title: "Safer bluffs" },
@@ -45,8 +57,13 @@ export default function BotcLobbyConfig({ value, onChange, isHost = true }: Lobb
           shape="rounded"
           size="sm"
         />
-      </FieldGroup>
-      <FieldGroup label="Vote clock">
+      ),
+    },
+    {
+      id: "vote",
+      label: "Vote clock",
+      span: "s",
+      control: (
         <SegmentedControl
           options={VOTE_SPEEDS.map((s) => ({ value: s.value, label: s.label }))}
           value={cfg.voteClockMs}
@@ -54,9 +71,14 @@ export default function BotcLobbyConfig({ value, onChange, isHost = true }: Lobb
           shape="rounded"
           size="sm"
         />
-      </FieldGroup>
-      <FieldGroup label="Talking">
-        <div className="flex flex-col gap-2">
+      ),
+    },
+    {
+      id: "talking",
+      label: "Talking",
+      span: "l",
+      control: (
+        <div className="grid w-full gap-2 sm:grid-cols-2">
           <CheckRow
             checked={cfg.whispers}
             disabled={!isHost}
@@ -72,7 +94,21 @@ export default function BotcLobbyConfig({ value, onChange, isHost = true }: Lobb
             description="Keep the town square open while everyone sleeps."
           />
         </div>
-      </FieldGroup>
+      ),
+    },
+  ];
+}
+
+export default function BotcLobbyConfig({ value, onChange, isHost = true }: LobbyConfigProps) {
+  const cfg = configOrDefaults(botcManifest, value);
+  const set = (patch: Partial<BotcConfig>) => onChange({ ...cfg, ...patch });
+  return (
+    <div className="flex flex-col gap-4">
+      {botcOptionFields(cfg, set, isHost).map((field) => (
+        <FieldGroup key={field.id} label={String(field.label)}>
+          {field.control}
+        </FieldGroup>
+      ))}
     </div>
   );
 }

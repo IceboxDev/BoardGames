@@ -70,7 +70,42 @@ export interface GuessInput {
   round: number;
 }
 
+/** Clues with what they meant — the note is untrusted; the machine parses it. */
+export interface NotedClues {
+  clues: [string, string, string];
+  note?: unknown;
+}
+
+/** A guess with its reasons — the note is untrusted; the machine parses it. */
+export interface NotedGuess {
+  code: Code;
+  note?: unknown;
+}
+
 export interface DecryptoAiAgent {
-  encrypt(input: EncryptInput): Promise<[string, string, string]>;
-  guess(input: GuessInput): Promise<Code>;
+  /** A bare triple, or the triple with its note. */
+  encrypt(input: EncryptInput): Promise<[string, string, string] | NotedClues>;
+  /** A bare code, or the code with its note. */
+  guess(input: GuessInput): Promise<Code | NotedGuess>;
+}
+
+/** The clues of an agent's answer, whichever shape it came in. */
+export function cluesOf(answer: unknown): unknown {
+  return answer !== null && typeof answer === "object" && "clues" in answer
+    ? (answer as { clues: unknown }).clues
+    : answer;
+}
+
+/** The code of an agent's answer, whichever shape it came in. */
+export function codeOf(answer: unknown): unknown {
+  return answer !== null && typeof answer === "object" && "code" in answer
+    ? (answer as { code: unknown }).code
+    : answer;
+}
+
+/** The note of an agent's answer, if it carried one. */
+export function noteOf(answer: unknown): unknown {
+  return answer !== null && typeof answer === "object" && "note" in answer
+    ? (answer as { note: unknown }).note
+    : undefined;
 }

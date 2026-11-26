@@ -112,17 +112,6 @@ const thumbnailModules = import.meta.glob<string>("./*/assets/thumbnail.webp", {
 
 const thumbnailBySlug = bySlug(thumbnailModules);
 
-/**
- * Every playable game's optional backdrop, `<slug>/assets/background.png`.
- * Dropping the file in is all a game needs — `index.ts` never imports it.
- */
-const backgroundModules = import.meta.glob<string>("./*/assets/background.png", {
-  eager: true,
-  query: "?url",
-  import: "default",
-});
-const backgroundBySlug = bySlug(backgroundModules);
-
 /** `./<slug>/assets/<file>` glob results keyed by slug. */
 function bySlug(modules: Record<string, string>): Record<string, string> {
   const out: Record<string, string> = {};
@@ -189,7 +178,6 @@ function buildDefinition(entry: CatalogEntry): GameDefinition {
       ...playable,
       kind: "playable",
       ...(manifest ? { manifest } : {}),
-      ...(backgroundBySlug[entry.slug] ? { backgroundImage: backgroundBySlug[entry.slug] } : {}),
     };
     return def;
   }

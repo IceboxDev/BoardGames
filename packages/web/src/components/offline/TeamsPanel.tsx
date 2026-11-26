@@ -16,7 +16,7 @@ import {
   type TeamsState,
   teamCountBounds,
 } from "../../lib/teams";
-import { ChevronLeftIcon, ShuffleIcon, SparkleIcon } from "../icons";
+import { ChevronLeftIcon, GaugeIcon, ShuffleIcon, SparkleIcon } from "../icons";
 import { Avatar, Badge, Button, Chip, Eyebrow, SegmentedControl, Stepper, Surface } from "../ui";
 import { TONE_BUBBLE, TONE_RING, type Tone } from "../ui/tones";
 import { TeamGamePicker } from "./TeamGamePicker";
@@ -25,8 +25,10 @@ import { TeamOdds } from "./TeamOdds";
 // "Make teams" for the night: pick the game, who's playing and how many
 // teams, then deal. BALANCED asks the server for the fairest split for that
 // game — the rating engine weighs each player by the traits the game asks
-// for plus their own record in it — and shows the win chances; RANDOM just
-// shuffles. Local to this phone: the point is to hold it up to the table.
+// for plus their own record in it — and shows the win chances; UNBALANCED
+// asks for the opposite: whoever is holding the phone gets the weakest team
+// against the strongest; RANDOM just shuffles. Local to this phone: the
+// point is to hold it up to the table.
 
 type Props = {
   date: string;
@@ -34,6 +36,8 @@ type Props = {
   /** Tonight's lineup, best first — the picker's strip. */
   lineup?: readonly string[];
   onBack: () => void;
+  /** The signed-in member — the underdog an unbalanced deal is stacked against. */
+  me?: string;
   /** The balance request — the dev preview swaps in a local one. */
   balancer?: typeof balanceTeams;
 };
@@ -69,6 +73,7 @@ export function TeamsPanel({
   attendees,
   lineup = NO_LINEUP,
   onBack,
+  me,
   balancer = balanceTeams,
 }: Props) {
   const reduceMotion = useReducedMotion();
@@ -97,7 +102,10 @@ export function TeamsPanel({
   // The game defaults to tonight's top pick until one is chosen.
   const slug = state.slug ?? lineup.find((s) => TITLE_BY_SLUG.has(s)) ?? null;
   const gameTitle = slug ? (TITLE_BY_SLUG.get(slug) ?? null) : null;
-  const balanced = state.mode === "balanced";
+  // Both rated modes need a game; "balanced" below means "dealt from the ratings".
+  const balanced = state.mode !== "random";
+  const stacked = state.mode === "unbalanced";
+  const meInPool = me !== undefined && inPool.has(me);
 
   // People who left the night since the deal drop out of their team.
   const teams = state.teams
@@ -129,7 +137,11 @@ export function TeamsPanel({
     }
     const random = () =>
       commit({ ...base, teams: dealTeams(nextPool, clamped), chances: null, guessed: {} });
-    if (mode === "random" || !dealSlug) {
+    if (
+      mode === "random" ||
+      !dealSlug ||
+      (mode === "unbalanced" && !(me && nextPool.includes(me)))
+    ) {
       random();
       return;
     }
@@ -140,6 +152,7 @@ export function TeamsPanel({
         userIds: nextPool,
         teamCount: clamped,
         seed: newSeed(),
+        mode: mode === "unbalanced" ? "unbalanced" : "balanced",
       });
       if (ticket !== dealNo.current) return;
       const guessed: TeamsState["guessed"] = {};
@@ -211,14 +224,19 @@ export function TeamsPanel({
         .join("; ")}`
     : "";
 
-  const canDeal = pool.length >= 2 && (!balanced || slug !== null);
-  const dealLabel = balanced
+  const canDeal = pool.length >= 2 && (!balanced || slug !== null) && (!stacked || meInPool);
+  const dealLabel = stacked
     ? dealt
-      ? "Another fair split"
-      : "Balance teams"
-    : dealt
-      ? "Reshuffle"
-      : "Shuffle teams";
+      ? "Stack them again"
+      : "Stack the odds"
+    : balanced
+      ? dealt
+        ? "Another fair split"
+        : "Balance teams"
+      : dealt
+        ? "Reshuffle"
+        : "Shuffle teams";
+  const DealIcon = stacked ? GaugeIcon : balanced ? SparkleIcon : ShuffleIcon;
 
   return (
     <div className="flex flex-col gap-4">
@@ -233,6 +251,11 @@ export function TeamsPanel({
       <SegmentedControl<TeamsMode>
         options={[
           { value: "balanced", label: "Balanced", title: "Fair teams from everyone's record" },
+          {
+            value: "unbalanced",
+            label: "Unbalanced",
+            title: "You on the weakest team, against the strongest",
+          },
           { value: "random", label: "Random", title: "Just shuffle" },
         ]}
         value={state.mode}
@@ -246,7 +269,12 @@ export function TeamsPanel({
       />
 
       {balanced && (
-        <TeamGamePicker lineup={lineup} value={slug} onChange={(s) => update({ slug: s })} />
+        <TeamGamePicker
+          lineup={lineup}
+          value={slug}
+          onChange={(s) => update({ slug: s })}
+          label={stacked ? "Stacked for" : "Balanced for"}
+        />
       )}
 
       {dealt && (
@@ -292,6 +320,11 @@ export function TeamsPanel({
                             className={cn("h-2.5 w-2.5 rounded-full", dot)}
                           />
                           Team {i + 1}
+                          {stacked && chances && me && team.includes(me) && (
+                            <Badge tone="neutral" shape="pill" size="xs">
+                              Underdog
+                            </Badge>
+                          )}
                         </span>
                         <span className="tabular-nums">
                           {chances ? `${Math.round(chances[i] * 100)}%` : team.length}
@@ -422,6 +455,9 @@ export function TeamsPanel({
         {balanced && !slug && pool.length >= 2 && (
           <p className="text-2xs text-fg-muted">Pick the game to balance for</p>
         )}
+        {stacked && slug && pool.length >= 2 && !meInPool && (
+          <p className="text-2xs text-fg-muted">Add yourself — you're the underdog</p>
+        )}
         <Button
           variant="primary"
           size="lg"
@@ -433,7 +469,7 @@ export function TeamsPanel({
           }
           className="gap-2 sm:w-auto sm:min-w-56"
         >
-          {balanced ? <SparkleIcon className="h-4 w-4" /> : <ShuffleIcon className="h-4 w-4" />}
+          <DealIcon className="h-4 w-4" />
           {dealLabel}
         </Button>
       </div>

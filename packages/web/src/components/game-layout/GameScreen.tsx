@@ -146,13 +146,11 @@ export default function GameScreen({
   const showRailBar = !railsInRow && mobileRails === "sheet" && hasRails;
 
   return (
-    // `relative z-raised` is load-bearing: `GameShellLayoutInner` renders a
-    // fixed `def.backgroundImage` at `z-0` over the entire main area. Without
-    // a positioning context here, GameScreen's static descendants (rails, fan
-    // tray, History) paint at CSS-painting step 3 and the bg image at step 6
-    // — i.e. the image covers them. Raising GameScreen puts its whole subtree
-    // above the image's stacking context so the `bg-surface-950` actually
-    // covers the image and the rails / history / fan become visible.
+    // `relative z-raised` is load-bearing: the theme's ambient layer is fixed
+    // at `z-0` over the whole page. Without a positioning context here,
+    // GameScreen's static descendants (rails, fan tray, History) paint at
+    // CSS-painting step 3 and the fixed layer at step 6 — i.e. it covers
+    // them. Raising GameScreen puts its whole subtree above it.
     <div
       ref={setRoot}
       className={cn("relative z-raised flex min-h-0 flex-1 gap-2 p-2", background)}

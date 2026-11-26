@@ -334,6 +334,10 @@
      phone, one from `sm`. */
   --layout-table-header-h: 7rem;
   --layout-table-header-h-wide: 5rem;
+  /* The setup briefing's art hero: one fixed height so the AI cards, the
+     options and Start below it fit a 1280×800 laptop without scrolling. */
+  --layout-setup-hero-h: 10rem;
+  --layout-setup-hero-h-wide: 13rem;
   /* A playing card's face. Six games each declared `aspect-[2/3]` for
      themselves. */
   --aspect-card: 2 / 3;
@@ -425,6 +429,12 @@
 }
 @utility h-actions {
   height: var(--layout-actions-h);
+}
+@utility h-setup-hero {
+  height: var(--layout-setup-hero-h);
+  @media (width >= 64rem) {
+    height: var(--layout-setup-hero-h-wide);
+  }
 }
 @utility h-table-header {
   height: var(--layout-table-header-h);

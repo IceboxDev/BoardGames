@@ -98,6 +98,24 @@ describe("balanceTeamsFor", () => {
     expect(played.basis.ace).toBe("game");
   });
 
+  it("stacks the asking member with the weakest against the strongest", async () => {
+    const client = db.current as Client;
+    let day = 1;
+    for (let i = 0; i < 4; i++) {
+      for (const w of ["ace", "bee"]) {
+        for (const l of ["cat", "dan"]) await addWin(client, "codenames", w, l, (day++ % 28) + 1);
+      }
+    }
+    const res = await balanceTeamsFor(
+      { slug: "codenames", userIds: PLAYERS, teamCount: 2, seed: 3, mode: "unbalanced" },
+      "ace",
+    );
+    expect(res.teams[0]?.userIds).toContain("ace");
+    expect(res.teams[0]?.userIds).not.toContain("bee");
+    expect(res.teams[1]?.userIds).toContain("bee");
+    expect(res.teams[0]?.chance).toBeLessThan(res.teams[1]?.chance ?? 0);
+  });
+
   it("refits as soon as a match lands", async () => {
     const client = db.current as Client;
     await addWin(client, "codenames", "ace", "bee", 1);

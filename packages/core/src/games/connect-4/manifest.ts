@@ -45,16 +45,20 @@ const STRATEGY_TIERS = {
   perfect: "Expert",
 } as const satisfies Record<AIStrategyId, DifficultyTier>;
 
+const OFFERED = AI_STRATEGY_IDS.filter((id) => id !== "deep");
+
 export const connect4Manifest = defineManifest({
   slug: "connect-4",
   seats: { min: 2, max: 2 },
   seatNames: ["Red", "Yellow"],
-  strategies: AI_STRATEGY_IDS.map((id) => ({
+  strategies: OFFERED.map((id) => ({
     id,
     label: AI_STRATEGY_LABELS[id],
     description: AI_STRATEGY_DESCRIPTIONS[id],
     difficulty: STRATEGY_TIERS[id],
   })),
   defaultStrategy: "blocker",
+  /** Off the ladder since 2026-11-26 (Oracle still plays it where it can't solve); old games still name it. */
+  retiredStrategies: [{ id: "deep", label: AI_STRATEGY_LABELS.deep }],
   config: Connect4ConfigSchema,
 });

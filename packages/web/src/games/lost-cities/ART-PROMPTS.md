@@ -1,8 +1,8 @@
 # Lost Cities Art
 
-Everything the Lost Cities board paints: the 60 expedition cards, the five trail paintings behind the board's columns, the expedition medallions and insignia, the card back and the menu backdrop. The board adds every number, name and score itself; the prompts generate **only pictures**.
+Everything the Lost Cities board paints: the 60 expedition cards, the five trail paintings behind the board's columns, the expedition medallions and insignia and the card back. The board adds every number, name and score itself; the prompts generate **only pictures**.
 
-Drop the raw PNGs into `packages/web/art-src/lost-cities/<name>.png` (gitignored; this file is the reproducible source) and convert them with `pnpm --filter @boardgames/web card-art --game=lost-cities`, which writes `assets/art/*.webp` per `assets/art/manifest.json`. The menu backdrop is the exception: it replaces `assets/background.png` directly.
+Drop the raw PNGs into `packages/web/art-src/lost-cities/<name>.png` (gitignored; this file is the reproducible source) and convert them with `pnpm --filter @boardgames/web card-art --game=lost-cities`, which writes `assets/art/*.webp` per `assets/art/manifest.json`.
 
 ---
 
@@ -68,7 +68,6 @@ Every card batch's setup block carries this, verbatim:
 | `medal-{colour}.png` ×5 | 1:1 transparent | trail headers, results |
 | `emblem-lost-cities.png`, `icon-camp.png`, `icon-wager.png`, `seal-bonus.png`, `icon-deck.png` | 1:1 transparent | setup, camps, wager and bonus marks, the deck |
 | `back.png` | 2:3 opaque | the deck and every face-down card |
-| `assets/background.png` (menu) | 16:9 opaque | the mode picker and setup screen |
 
 ## Batches
 
@@ -86,7 +85,7 @@ Every card batch's setup block carries this, verbatim:
 | 10 | [Volcano II — to the destination (6)](#batch-10) | 6 |
 | 11 | [The five trails (5)](#batch-11) | 5 |
 | 12 | [Medallions and insignia (10)](#batch-12) | 10 |
-| 13 | [Card back and menu backdrop (2)](#batch-13) | 2 |
+| 13 | [Card back (1)](#batch-13) | 1 |
 
 ---
 
@@ -686,12 +685,12 @@ A small stack of expedition cards with a leather-bound journal cover on top, tie
 
 <a id="batch-13"></a>
 
-## Batch 13 · Card back and menu backdrop (2) — pending
+## Batch 13 · Card back (1) — pending
 
 **Setup block** — paste first:
 
 ```text
-Painterly digital illustration in the tradition of classic 1930s expedition adventure art: semi-realistic digital painting with soft, confident brushwork and crisp, readable silhouettes; cinematic depth with atmospheric haze and dramatic, warm-against-cool light; a sense of wonder and enormous scale, adventurous and inviting, never grim and never gory. The world is the 1930s: canvas, leather, brass, hurricane lamps, wooden boats and brass diving helmets; no modern equipment, no electronics, no plastic. No text, no lettering, no numbers, no signature, no watermark. This batch is the card back and the menu backdrop of the Lost Cities board. Both are rich and dark so the game's light text and cards stand out on them.
+Painterly digital illustration in the tradition of classic 1930s expedition adventure art: semi-realistic digital painting with soft, confident brushwork and crisp, readable silhouettes; cinematic depth with atmospheric haze and dramatic, warm-against-cool light; a sense of wonder and enormous scale, adventurous and inviting, never grim and never gory. The world is the 1930s: canvas, leather, brass, hurricane lamps, wooden boats and brass diving helmets; no modern equipment, no electronics, no plastic. No text, no lettering, no numbers, no signature, no watermark. This batch is the card back of the Lost Cities board, rich and dark so the game's light text stands out on it.
 ```
 
 **`back.png`** — Card back · 2:3, opaque
@@ -700,8 +699,3 @@ Painterly digital illustration in the tradition of classic 1930s expedition adve
 The back of an expedition card: dark tooled leather like a journal cover, with an embossed brass compass rose in the centre surrounded by a ring of five small enamel dots in amber gold, sea blue, ice white, emerald green and crimson, brass corner caps and a fine gilt border line. Portrait 2:3 aspect ratio, opaque, filling the whole canvas edge to edge, symmetrical, readable as a small thumbnail. No text, no lettering, no numbers, no watermark.
 ```
 
-**`background.png`** — Menu backdrop (saved as assets/background.png) · 16:9, opaque
-
-```text
-An expedition headquarters tent at night: a big map table covered with charts of the five destinations (a pyramid, a sunken palace, a cliff monastery, a jungle temple, a volcano), brass instruments, a hurricane lamp throwing warm light on the maps, the canvas walls fading into darkness, the night outside the open tent flap deep blue. Wide 16:9 aspect ratio, opaque, filling the whole canvas edge to edge. Dark overall (it sits behind light text and menus): deep shadows, one warm pool of lamplight, nothing bright near the centre. No people in close-up. No text, no lettering, no numbers, no watermark.
-```

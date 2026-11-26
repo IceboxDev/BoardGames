@@ -22,20 +22,31 @@ function formatHours(h: number): string {
   return `${(h / 24).toFixed(1)} days`;
 }
 
-/** What a running build is waiting on, when it isn't just working: the farm or lichess. */
-function waitText(build: TreeBuild, now: number): string | null {
-  if (build.askingFarm) return "Fetching the farm's results";
+/** What a running build is waiting on, when it isn't just working: lichess. */
+function waitText(now: number): string | null {
   const lichess = lichessQueue();
   if (lichess.rateLimitedUntil !== null)
-    return `lichess rate limit, retrying in ${Math.max(0, Math.ceil((lichess.rateLimitedUntil - now) / 1000))} s`;
+    return `lichess is pausing us, ${Math.max(0, Math.ceil((lichess.rateLimitedUntil - now) / 1000))} s`;
   // lichess takes one explorer request every three seconds.
-  if (lichess.waiting > 1) return `Asking lichess · ${lichess.waiting} waiting`;
+  if (lichess.waiting > 1) return `${lichess.waiting} lichess lookups waiting`;
   return null;
 }
 
-/** One line on where a tree's build stands (`now` for countdowns). */
+/** "about 40 min left", "about 2 h left". */
+function leftText(seconds: number): string {
+  const min = seconds / 60;
+  if (min < 1) return "under a minute left";
+  if (min < 90) return `about ${Math.round(min)} min left`;
+  return `about ${formatHours(min / 60)} left`;
+}
+
+/**
+ * One line on where a tree's build stands (`now` for countdowns). While it
+ * takes in the farm's results it counts only those — a number that only goes
+ * up — never the positions a single pass has walked (each pass starts again
+ * from the first move).
+ */
 export function buildLabel(build: TreeBuild, now = Date.now()): string {
-  const p = build.progress;
   const tree = build.tree;
   switch (build.phase) {
     case "loading":
@@ -45,12 +56,16 @@ export function buildLabel(build: TreeBuild, now = Date.now()): string {
     case "stopping":
       return "Pausing…";
     case "building": {
-      const base = p
-        ? `Building · ${p.nodes.toLocaleString()} positions · ${p.settled.toLocaleString()} of ${p.games.toLocaleString()} games placed`
-        : "Building…";
-      // The wait first: the rail is narrow and the end of the line gets cut off.
-      const wait = waitText(build, now);
-      return wait ? `${wait} · ${base.replace(/^Building · /, "")}` : base;
+      const wait = waitText(now);
+      const c = build.catchUp;
+      const main = c
+        ? `Adding the farm's results · ${c.done.toLocaleString()} of ${c.total.toLocaleString()}${c.etaSeconds !== null ? ` · ${leftText(c.etaSeconds)}` : ""}`
+        : build.askingFarm
+          ? "Fetching the farm's results"
+          : tree
+            ? "Updating your tree"
+            : "Building your tree";
+      return wait ? `${main} · ${wait}` : main;
     }
     default:
       // Nothing to say once a tree is built: the farm's progress is the map's

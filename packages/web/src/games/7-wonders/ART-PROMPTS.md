@@ -8,7 +8,7 @@ Every file is a **PNG with a fully transparent background** unless its prompt sa
 
 ---
 
-**Status (2026-10-15):** 110 prompts in 15 batches of at most 10. All generated and wired in: `assets/art/*.webp` (manifest in `assets/art/manifest.json`, convert with `pnpm --filter @boardgames/web card-art --game=7-wonders`). The menu backdrop (`assets/background.png`) is a separate night-harbour painting.
+**Status (2026-10-15):** 110 prompts in 15 batches of at most 10. All generated and wired in: `assets/art/*.webp` (manifest in `assets/art/manifest.json`, convert with `pnpm --filter @boardgames/web card-art --game=7-wonders`).
 
 **How to use.** Work one batch at a time, in a fresh image-generator conversation:
 

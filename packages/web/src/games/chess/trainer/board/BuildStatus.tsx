@@ -52,13 +52,13 @@ export function BuildStatusText({
 /** The header's bottom rule: a plain divider, or the build's progress while one runs. */
 export function BuildProgressRule({ build }: { build: TreeBuild | null }) {
   const busy = isBusy(build);
-  const p = build?.progress;
+  const c = build?.catchUp;
   const value = !build
     ? null
     : build.phase === "indexing" && build.indexing
       ? build.indexing.done / Math.max(1, build.indexing.total)
-      : p
-        ? p.settled / Math.max(1, p.games)
+      : c
+        ? c.done / Math.max(1, c.total)
         : null;
   return (
     <span aria-hidden="true" className="relative block h-px shrink-0 overflow-visible bg-line-soft">

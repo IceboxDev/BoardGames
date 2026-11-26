@@ -55,7 +55,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   color: var(--dc-engrave);
   text-shadow: 0 1px 0 #000a;
 }
@@ -205,7 +205,7 @@
   font-family: var(--dc-cond);
   font-weight: 600;
   letter-spacing: 0.16em;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   color: #d9c9a4;
   text-transform: uppercase;
 }
@@ -285,7 +285,7 @@
   font-family: var(--dc-cond);
   font-weight: 600;
   letter-spacing: 0.12em;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   color: #5d5240;
   text-transform: uppercase;
   text-shadow: 0 1px 0 #000;
@@ -382,6 +382,10 @@
 .dc-screen-title {
   text-align: center;
 }
+/* The live desk prints no title: the plates need the frame's top margin instead. */
+.dc-screen-body:not(:has(.dc-screen-title)) {
+  padding-top: 1rem;
+}
 .dc-screen.w .dc-screen-title {
   color: #6b5a3a;
   text-shadow: 0 1px 0 #fff8;
@@ -399,7 +403,7 @@
   place-items: center;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   line-height: 1;
   color: #3b2a12;
   text-shadow: 0 1px 0 #f3dca088;
@@ -441,7 +445,7 @@
   white-space: nowrap;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: clamp(0.72rem, 1.5cqi, 1rem);
+  font-size: clamp(0.85rem, 1.8cqi, 1.2rem);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffe9cf;
@@ -449,6 +453,39 @@
 }
 .dc-window.sealed .dc-kw {
   color: #ffffff30;
+  letter-spacing: 0.3em;
+}
+/* The team's pencilled guess at a sealed keyword: chalk on the dark film. */
+.dc-note {
+  width: 100%;
+  min-width: 0;
+  padding: 0.15rem 0.3rem;
+  border: 0;
+  border-bottom: 1px dashed #ffffff30;
+  border-radius: 0;
+  background: transparent;
+  text-align: center;
+  font-family: var(--dc-type);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.7cqi, 1.1rem);
+  color: #f3e6c8;
+  text-shadow: 0 1px 2px #000c;
+  outline: none;
+}
+.dc-note::placeholder {
+  color: #ffffff38;
+  font-weight: 400;
+  font-style: italic;
+}
+.dc-note:focus-visible {
+  border-bottom-color: var(--dc-brass-hi);
+  background: #00000040;
+}
+.dc-note:disabled {
+  cursor: default;
+}
+.dc-note:disabled::placeholder {
+  font-style: normal;
   letter-spacing: 0.3em;
 }
 .dc-badge {
@@ -459,7 +496,7 @@
   border-radius: 0.2rem;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   color: #2a1c08;
   background: linear-gradient(180deg, #f3dca0, var(--dc-brass));
@@ -487,8 +524,11 @@
   min-height: 0;
   flex: 1;
   display: grid;
-  grid-template-rows: repeat(var(--dc-rows, 8), minmax(1.15rem, 1fr));
+  grid-template-rows: repeat(var(--dc-rows, 8), minmax(0, 1fr));
   align-content: stretch;
+  /* The tape's own height sets its type size: every round's row is reserved,
+     so the text grows with the room each row actually has. */
+  container: dc-tape / size;
   overflow: hidden;
   padding: 0.65rem 0.2rem 0.1rem 0.8rem;
   background:
@@ -507,16 +547,26 @@
   min-height: 0;
   align-self: center;
   font-family: var(--dc-type);
-  font-size: 0.72rem;
+  /* Two lines must fit one row: (paper height − padding) ÷ rows × 0.4 — and
+     the longest word must fit the paper's width whole (a Courier character is
+     0.6em wide, 0.57em with the tracking; cqw is the paper's content box, so
+     only the round number's ~0.85rem comes off). */
+  font-size: max(
+    0.52rem,
+    min(
+      clamp(0.62rem, calc((100cqh - 0.8rem) / var(--dc-rows, 8) * 0.4), 1.15rem),
+      calc((100cqw - 1.05rem) / (var(--dc-long, 1) * 0.6))
+    )
+  );
   letter-spacing: -0.03em;
-  line-height: 0.9rem;
+  line-height: 1.15em;
   color: var(--dc-ink);
 }
 .dc-tape-line .rd {
   flex: none;
-  width: 0.45rem;
+  width: 0.9em;
   font-family: var(--dc-cond);
-  font-size: 0.55rem;
+  font-size: 0.75em;
   font-weight: 600;
   color: #a2896a;
 }
@@ -526,7 +576,12 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  /* Lines break between words — the font shrinks to fit the longest one (a
+     12-letter "Transylvania" stays whole). Only a word too long even at the
+     floor hyphenates, never leaving fewer than three letters either side. */
   overflow-wrap: normal;
+  hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
 }
 .dc-tape-line.blank .cl {
   flex: 1;
@@ -540,6 +595,24 @@
 }
 .dc-tape-line.fresh .cl {
   animation: dc-print 260ms var(--dc-ease-out) 120ms both;
+}
+
+/* A short tape (a laptop's shallow desk, the phone) can't fit two lines a
+   row: one line, as large as the row allows, cut with an ellipsis. */
+@container dc-tape (max-height: 12rem) {
+  .dc-tape-line {
+    font-size: max(
+      0.52rem,
+      min(
+        clamp(0.6rem, calc((100cqh - 0.8rem) / var(--dc-rows, 8) * 0.66), 0.95rem),
+        calc((100cqw - 1.05rem) / (var(--dc-long, 1) * 0.6))
+      )
+    );
+  }
+  .dc-tape-line .cl {
+    -webkit-line-clamp: 1;
+    hyphens: manual;
+  }
 }
 
 /* ── Transmission slot (fixed height) ──────────────────────────────── */
@@ -597,7 +670,7 @@
   top: 18%;
   left: 8%;
   right: 8%;
-  font-size: 0.55rem;
+  font-size: 0.66rem;
   color: #8e1f1c;
   text-shadow: none;
   white-space: nowrap;
@@ -638,10 +711,13 @@
   background: #00000040;
   box-shadow: inset 0 0 0 1px #b3894a33;
   color: var(--color-fg-secondary);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
 }
 .dc-infocard {
   position: relative;
+}
+.dc-infocard:has(.dc-infocard-icon) {
+  padding-right: 3rem;
 }
 .dc-infocard-icon {
   position: absolute;
@@ -659,7 +735,7 @@
   align-items: center;
   gap: 0.4rem;
   color: var(--color-fg-strong);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .dc-last {
@@ -672,7 +748,7 @@
   border-radius: 0.35rem;
   background: #00000030;
   box-shadow: inset 0 0 0 1px #ffffff10;
-  font-size: 0.75rem;
+  font-size: 0.88rem;
   color: var(--color-fg-secondary);
   overflow: hidden;
 }
@@ -681,10 +757,20 @@
   align-items: center;
   gap: 0.35rem;
 }
+.dc-last.good {
+  box-shadow:
+    inset 3px 0 0 var(--dc-green),
+    inset 0 0 0 1px #ffffff10;
+}
+.dc-last.bad {
+  box-shadow:
+    inset 3px 0 0 var(--dc-red),
+    inset 0 0 0 1px #ffffff10;
+}
 .dc-last-code {
   font-family: var(--dc-type);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: var(--color-fg-strong);
 }
 
@@ -728,7 +814,7 @@
   flex: none;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #8e1f1c;
 }
 .dc-strip-cell .c {
@@ -738,7 +824,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.05rem;
   text-align: center;
 }
@@ -748,7 +834,7 @@
 }
 .dc-strip-wait {
   font-family: var(--dc-type);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--dc-ink);
 }
 
@@ -807,7 +893,7 @@
   cursor: pointer;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: #2a1c08;
   background:
     var(--dc-art-dial-stud) center / contain no-repeat,
@@ -834,7 +920,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.05rem;
-  font-size: 0.75rem;
+  font-size: 0.86rem;
   text-align: center;
   color: var(--color-fg-secondary);
 }
@@ -848,7 +934,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-fg-strong);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .dc-cap .prior {
   max-width: 100%;
@@ -898,7 +984,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: #6b5a3a;
   white-space: nowrap;
   overflow: hidden;
@@ -940,7 +1026,7 @@
 }
 .dc-ty-hint {
   font-family: var(--dc-type);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: #2a262288;
 }
 .dc-stamp {
@@ -953,7 +1039,7 @@
   padding: 0.2rem 0.9rem;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -982,30 +1068,210 @@
     var(--dc-art-paper-typing) 0 0 / 256px repeat,
     var(--dc-paper);
   font-family: var(--dc-type);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--dc-ink);
   filter: drop-shadow(0 4px 8px #000b);
 }
 .dc-closing-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem 0.6rem;
   min-width: 0;
 }
-.dc-closing-row .clues {
+.dc-closing-row .who {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+/* ── The verdict: what a reveal meant for us ───────────────────────── */
+.dc-stamp.grey {
+  color: #6b6156;
+  background: var(--dc-art-stamp-green) center / 100% 100% no-repeat;
+  filter: grayscale(1);
+}
+.dc-verdict-stamp {
+  font-size: 1.05rem;
+  min-height: 2.1rem;
+}
+.dc-vlines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.dc-vline {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
   min-width: 0;
+}
+.dc-vline .mark {
+  flex: none;
+  width: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.dc-vline .body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.dc-vline .detail {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+.dc-vline.good .mark,
+.dc-vline.good b {
+  color: #1f7a4c;
+}
+.dc-vline.bad .mark,
+.dc-vline.bad b {
+  color: #a3261f;
+}
+.dc-vline.neutral .mark,
+.dc-vline.neutral b {
+  color: #6b6156;
+}
+.dc-last .dc-verdict-stamp {
+  align-self: flex-start;
+  min-width: 0;
+  font-size: 0.8rem;
+}
+.dc-closing-row .dc-verdict-stamp {
+  min-width: 0;
+  font-size: 0.8rem;
+}
+.dc-closing-row .dc-vlines {
+  flex-basis: 100%;
+}
+/* On the dark desk (the Last card) the inks are lifted. */
+.dc-last .dc-vline.good .mark,
+.dc-last .dc-vline.good b {
+  color: var(--dc-green);
+}
+.dc-last .dc-vline.bad .mark,
+.dc-last .dc-vline.bad b {
+  color: #ff7a6b;
+}
+.dc-last .dc-vline.neutral .mark,
+.dc-last .dc-vline.neutral b {
+  color: var(--color-fg-secondary);
+}
+
+/* The reveal board: typed on paper where the dials were. */
+.dc-verdict {
   flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  overflow: hidden;
+  background:
+    var(--dc-art-paper-typing) 0 0 / 256px repeat,
+    var(--dc-paper);
+  font-family: var(--dc-type);
+  font-size: 0.95rem;
+  color: var(--dc-ink);
+  filter: drop-shadow(0 4px 8px #000b);
+  animation: dc-verdict-in 260ms var(--dc-ease-out) both;
+  container: dc-verdict / inline-size;
+}
+.dc-verdict.good {
+  box-shadow: inset 0 4px 0 #2f9a63;
+}
+.dc-verdict.bad {
+  box-shadow: inset 0 4px 0 #c0392b;
+}
+@keyframes dc-verdict-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+.dc-verdict-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 0;
+}
+.dc-verdict-head .dc-verdict-stamp {
+  flex: none;
+  animation: dc-stamp-in 220ms var(--dc-ease-pop) 120ms both;
+}
+@keyframes dc-stamp-in {
+  from {
+    opacity: 0;
+    transform: rotate(-1.5deg) scale(1.25);
+  }
+}
+/* A narrow board (the laptop's compressed slot): stamp over the lines, and
+   the lines without their numbers — the clue table below shows every read. */
+@container dc-verdict (max-width: 30rem) {
+  .dc-verdict-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  .dc-verdict .dc-vline .detail {
+    display: none;
+  }
+}
+.dc-vtable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.dc-vtable th {
+  padding: 0 0.3rem 0.15rem;
+  text-align: left;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a7a62;
+  border-bottom: 1px solid #2a262230;
+}
+.dc-vtable th:nth-child(1) {
+  width: 36%;
+}
+.dc-vtable th:nth-child(2) {
+  width: 28%;
+}
+.dc-vtable td {
+  padding: 0.15rem 0.3rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border-bottom: 1px dashed #2a262220;
 }
-.dc-closing-row .ok {
-  color: #1f7a4c;
+.dc-vtable td.clue {
   font-weight: 700;
 }
-.dc-closing-row .bad {
+.dc-vtable td.meant span {
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: #8e1f1c;
+}
+.dc-vread {
   font-weight: 700;
+}
+.dc-vread.good {
+  color: #1f7a4c;
+}
+.dc-vread.bad {
+  color: #a3261f;
+}
+.dc-vread.none {
+  color: #8a7a62;
 }
 
 /* Right column: status lamps and the transmit key */
@@ -1026,7 +1292,7 @@
   margin-top: 0.15rem;
 }
 .dc-lamp-text {
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   line-height: 1.25;
   color: var(--color-fg-primary);
 }
@@ -1052,9 +1318,11 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #3b2a12;
-  background:
-    var(--dc-art-key-cap) center / 100% 100% no-repeat,
-    linear-gradient(180deg, #f6eed9, var(--dc-ivory) 50%, var(--dc-ivory-lo));
+  /* Nine-slice: the brass rim's corners keep their shape at any width (a plain
+     100% 100% stretch squashes them). The painted cap alone — any fill behind
+     it peeks out past the rim's anti-aliased edge as white pixels. */
+  border-image: var(--dc-art-key-cap) 50 60 fill / 1.7rem 2.05rem stretch;
+  background: none;
   border-radius: 0.4rem;
   filter: drop-shadow(0 3px 0 #0009);
   transition:
@@ -1076,7 +1344,7 @@
 }
 .dc-key kbd {
   font-family: var(--dc-type);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   opacity: 0.6;
 }
 .dc-keyplate {
@@ -1089,14 +1357,15 @@
   text-align: center;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3b2a12;
   text-shadow: 0 1px 0 #f3dca088;
-  background:
-    var(--dc-art-plate-label) center / 100% 100% no-repeat,
-    linear-gradient(180deg, #e6c98a, var(--dc-brass) 50%, #7f5d28);
+  /* Nine-slice the 6.8:1 plate: the screws stay round, only the middle stretches. */
+  border-image: var(--dc-art-plate-label) 35 60 fill / 1.7rem 2.9rem stretch;
+  background: none;
+  padding-inline: 2.4rem;
   border-radius: 0.35rem;
 }
 
@@ -1105,6 +1374,26 @@
   display: none;
 }
 @container dc-desk (max-width: 860px) {
+  /* The narrow left column: a compact incoming card leaves room for the Last verdict. */
+  .dc-infocard {
+    font-size: 0.82rem;
+  }
+  .dc-infocard b {
+    font-size: 0.95rem;
+  }
+  /* No room for the badge beside the text in the narrow column. */
+  .dc-infocard:has(.dc-infocard-icon) {
+    padding-right: 0.65rem;
+  }
+  .dc-infocard-icon {
+    display: none;
+  }
+  .dc-last .dc-vlines {
+    font-size: 0.8rem;
+  }
+  .dc-infocard > span:last-child {
+    display: none;
+  }
   .dc-slot {
     grid-template-columns: 9.5rem minmax(0, 1fr) 11rem;
     gap: 0.5rem;
@@ -1125,14 +1414,14 @@
     letter-spacing: 0.08em;
   }
   .dc-kw {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
     letter-spacing: 0.02em;
   }
   .dc-ty-line {
     grid-template-columns: 6.5rem minmax(0, 1fr);
   }
   .dc-lamp-text {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
   .dc-key {
     font-size: 0.85rem;
@@ -1142,6 +1431,15 @@
 }
 
 @container dc-desk (max-width: 560px) {
+  .dc-verdict-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .dc-strip-cell .c {
+    font-size: 0.92rem;
+    line-height: 1rem;
+  }
   .dc-felt {
     gap: 0.5rem;
     padding: 0.5rem;
@@ -1159,7 +1457,7 @@
     gap: 0.3rem;
   }
   .dc-warn {
-    font-size: 0.58rem;
+    font-size: 0.68rem;
     letter-spacing: 0.06em;
   }
   .dc-tube {
@@ -1214,24 +1512,17 @@
     padding: 0.45rem 0.6rem 0.65rem;
   }
   .dc-kw {
-    font-size: 0.78rem;
+    font-size: 0.86rem;
     letter-spacing: 0.02em;
   }
   .dc-tapes {
     padding: 0 0.6rem;
-    height: 8rem;
+    height: 10rem;
     flex: none;
   }
   .dc-tape-paper {
     grid-template-rows: repeat(var(--dc-rows, 8), minmax(0, 1fr));
     padding-top: 0.55rem;
-  }
-  .dc-tape-line {
-    font-size: 0.64rem;
-    line-height: 0.8rem;
-  }
-  .dc-tape-line .cl {
-    -webkit-line-clamp: 1;
   }
   .dc-wells {
     width: 3.7rem;
@@ -1250,9 +1541,6 @@
   }
   .dc-slot-col.left:not(:has(.dc-card)) {
     display: none;
-  }
-  .dc-tape-line {
-    font-size: 0.7rem;
   }
   .dc-slot {
     height: auto;
@@ -1311,190 +1599,738 @@
   }
 }
 
-/* ── Debrief (game over) ───────────────────────────────────────────── */
-.dc-debrief {
-  container: dc-debrief / inline-size;
+/* ── Debrief (game over): the poster ──────────────────────────────── */
+/* Two halves on one screen: the painted scene with the verdict and the real
+   tokens, and the rounds as teletype tapes. Only the tape list scrolls. */
+.dc-poster-frame {
+  container: dc-poster / size;
   flex: 1;
   min-height: 0;
-  overflow-y: auto;
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
-.dc-hero {
+.dc-poster {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+  background: var(--dc-felt-deep);
+  font-family: var(--font-body);
+}
+.dc-ps-hero {
   position: relative;
-  flex: none;
-  min-height: 13rem;
-  display: flex;
-  align-items: flex-end;
-  padding: 1.25rem 1.5rem;
-  border-radius: 1rem;
+  min-height: 0;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, #0b0d0cf2 0%, #0b0d0cc0 34%, #0b0d0c00 60%),
-    var(--dc-hero-art) right center / cover no-repeat,
-    var(--dc-felt-deep);
-  box-shadow: inset 0 0 0 1px #ffffff10;
-}
-.dc-hero-text {
-  max-width: 34rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 2.5rem 2.5rem 2.25rem;
+  background:
+    linear-gradient(0deg, #0b0d0c 0%, #0b0d0cd9 34%, #0b0d0c22 70%, #0b0d0c00),
+    linear-gradient(90deg, transparent 80%, #0b0d0c),
+    var(--dc-hero-art) 62% center / cover no-repeat,
+    var(--dc-felt-deep);
+  animation: dc-ps-rise 420ms var(--dc-ease-out) both;
 }
-.dc-hero h1 {
+@keyframes dc-ps-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.dc-ps-kick {
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--dc-brass);
+}
+.dc-ps-h1 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--dc-cond);
+  font-weight: 800;
+  font-size: clamp(3rem, 11cqh, 6.4rem);
+  line-height: 0.86;
+  text-transform: uppercase;
+  color: #f4efe1;
+  overflow-wrap: anywhere;
+}
+.dc-ps-h1 em {
+  font-style: normal;
+  color: var(--dc-brass-hi);
+}
+.dc-ps-h1.win em {
+  color: #8fe3b5;
+}
+.dc-ps-h1.lose em {
+  color: #ff9d92;
+}
+.dc-ps-you {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-fg-secondary);
+}
+.dc-ps-you b {
+  color: var(--color-fg-strong);
+  font-weight: 600;
+}
+.dc-ps-tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+}
+.dc-ps-tok {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.dc-ps-tok .name {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-fg-primary);
+}
+.dc-ps-tok .row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-fg-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.dc-ps-stack {
+  display: flex;
+}
+.dc-ps-stack img,
+.dc-ps-stack i {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: -0.45rem;
+  border-radius: 50%;
+  filter: drop-shadow(0 3px 4px #000a);
+}
+.dc-ps-stack i {
+  background: var(--dc-brass);
+}
+.dc-ps-stack .off {
+  opacity: 0.18;
+  filter: grayscale(1);
+}
+.dc-ps-turn {
+  margin: 0;
+  max-width: 34rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--dc-red);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-fg-secondary);
+}
+.dc-ps-turn b {
+  color: var(--color-fg-strong);
+  font-weight: 600;
+}
+.dc-ps-acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.dc-ps-tapes {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.9rem;
+  padding: 1.6rem 1.75rem 1.4rem 0.5rem;
+}
+.dc-ps-th {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+.dc-ps-th h2 {
   margin: 0;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 2.4rem;
-  line-height: 1;
-  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-fg-strong);
-}
-.dc-hero h1.win {
-  color: #8fe3b5;
-}
-.dc-hero h1.lose {
-  color: #ff9d92;
-}
-.dc-hero p {
-  margin: 0;
   color: var(--color-fg-secondary);
-  font-size: 0.9rem;
 }
-.dc-hero-actions {
+.dc-ps-scroll {
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff22 transparent;
+}
+.dc-tapes-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  flex-direction: column;
+  gap: 0.55rem;
 }
-.dc-debrief .dc-felt,
-.dc-debrief .dc-screens {
+
+/* A round's strip: closed it's one typed line; open it prints the round. */
+.dc-tape-strip {
   flex: none;
+  border-radius: 0.25rem;
+  background:
+    var(--dc-art-paper-typing) 0 0 / 256px repeat,
+    var(--dc-paper);
+  color: var(--dc-ink);
+  font-family: var(--dc-type);
+  box-shadow: 0 8px 20px #0007;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    98.5% calc(100% - 4px),
+    97% 100%,
+    95.5% calc(100% - 4px),
+    94% 100%,
+    0 100%
+  );
 }
-.dc-debrief .dc-tapes {
+.dc-tape-strip > button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+}
+.dc-tape-strip > button:focus-visible {
+  outline: 2px solid var(--dc-brass);
+  outline-offset: -2px;
+}
+.dc-tape-strip > button > b {
+  font-family: var(--dc-cond);
+  font-size: 1.15rem;
+  color: #5b4c33;
+}
+.dc-tape-strip .tx {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  white-space: nowrap;
+}
+.dc-tape-strip .tx .code {
+  font-weight: 700;
+}
+.dc-tape-strip .tx .cl {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dc-tape-strip .st {
   flex: none;
-  height: auto;
+  padding: 0 0.3rem;
+  border: 1.5px solid currentColor;
+  border-radius: 0.15rem;
+  color: #b4302a;
+  font-family: var(--dc-cond);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
 }
-.dc-debrief .dc-tape-paper {
-  grid-template-rows: none;
-  grid-auto-rows: minmax(1.15rem, auto);
-  row-gap: 0.25rem;
+.dc-tape-strip .st.a {
+  color: #9a6a12;
 }
-.dc-debrief-grid {
+@media (hover: hover) and (pointer: fine) {
+  .dc-tape-strip:not(.on) > button:hover {
+    background: #2a26220a;
+  }
+}
+.dc-tape-open {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 0.75rem;
+  border-top: 1px dashed #2a262240;
+  animation: dc-tape-print 420ms var(--dc-ease-out);
 }
-.dc-panel {
+@keyframes dc-tape-print {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+.dc-tp-side {
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.9rem 1rem;
-  border-radius: 0.75rem;
-  background: color-mix(in srgb, var(--color-surface-900) 60%, transparent);
+  padding: 0.8rem 1rem 1rem;
 }
-.dc-telegram {
+.dc-tp-side + .dc-tp-side {
+  border-left: 1px dashed #2a262240;
+}
+.dc-tp-oh {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5b4c33;
+}
+.dc-tp-oh > span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.dc-tp-oh b {
+  font-family: var(--dc-type);
+  font-size: 1rem;
+  color: #8e1f1c;
+}
+.dc-tp-empty {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #6b6052;
+}
+/* The clue table: clue | keyword | team | rival, reasons spanning beneath. */
+.dc-tp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) 2.7rem 2.7rem;
+  column-gap: 0.55rem;
+  align-items: center;
+}
+.dc-tp-th {
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #2a262230;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a7d64;
+}
+.dc-tp-th.c {
+  text-align: center;
+}
+.dc-tp-r {
+  display: contents;
+}
+.dc-tp-w {
+  padding-top: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.dc-tp-k {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 0.6rem;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8e1f1c;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.dc-tp-k i {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.2rem;
+  background: #8e1f1c;
+  color: #fbe9d3;
+  font-style: normal;
+  font-size: 0.7rem;
+}
+.dc-tp-v {
+  justify-self: center;
+  margin-top: 0.6rem;
+  width: 2.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+.dc-tp-v b {
+  font-family: var(--dc-type);
+  font-size: 0.85rem;
+}
+.dc-tp-v.good {
+  background: #1e7a4c1f;
+  color: #1e7a4c;
+  box-shadow: inset 0 0 0 1.5px #1e7a4c80;
+}
+.dc-tp-v.miss {
+  background: #c2851a26;
+  color: #8a5a06;
+  box-shadow: inset 0 0 0 1.5px #c2851a;
+}
+.dc-tp-v.leak {
+  background: #b4302a;
+  color: #fdeee8;
+}
+.dc-tp-v.safe {
+  color: #6b6052;
+  box-shadow: inset 0 0 0 1.5px #2a262233;
+}
+.dc-tp-v.na {
+  color: #a39882;
+}
+.dc-tp-n {
+  grid-column: 1 / -1;
+  margin: 0.3rem 0 0;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed #2a262226;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+.dc-tp-n.empty {
+  margin: 0;
+  padding-bottom: 0.6rem;
+}
+.dc-tp-n > div {
+  display: grid;
+  grid-template-columns: 2.9rem minmax(0, 1fr);
+  gap: 0.5rem;
+}
+.dc-tp-n dt {
+  padding-top: 0.1rem;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a7d64;
+}
+.dc-tp-n dd {
+  margin: 0;
+  min-width: 0;
+  color: #3d362f;
+}
+.dc-tp-n.brief dd {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dc-tp-n .dim dd {
+  color: #7d7262;
+}
+.dc-tp-n .hot dt {
+  color: #b4302a;
+}
+.dc-tp-n .hot dd {
+  color: #7a1f1a;
+}
+.dc-tp-sum {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: #6b6052;
+}
+.dc-tp-sum b {
+  font-family: var(--dc-type);
+  font-size: 0.85rem;
+  color: var(--dc-ink);
+}
+.dc-tp-sum em {
+  margin-left: 0.2rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.dc-tp-sum .good {
+  color: #1e7a4c;
+}
+.dc-tp-sum .miss {
+  color: #8a5a06;
+}
+.dc-tp-sum .leak {
+  color: #b4302a;
+}
+.dc-tp-sum .safe {
+  color: #8a7d64;
+}
+.dc-tp-more {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #5a5045;
+}
+.dc-tp-more:empty {
+  display: none;
+}
+.dc-tp-more p {
+  margin: 0;
+}
+.dc-tp-more span {
+  margin-right: 0.35rem;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a7d64;
+}
+
+/* How each AI tier decides (Full reasoning). */
+.dc-tl-legend {
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.5rem;
+}
+.dc-tl-tier {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  padding: 0.75rem 0.9rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 0.4rem;
+  background: var(--color-fill-soft);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--color-fg-secondary);
+}
+.dc-tl-tier .hd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.2rem 0.6rem;
+}
+.dc-tl-tier .hd b {
+  font-family: var(--dc-cond);
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dc-brass-hi);
+}
+.dc-tl-tier .hd span {
+  font-size: 0.78rem;
+  color: var(--color-fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+.dc-tl-tier p {
+  margin: 0;
+}
+.dc-tl-tier p span {
+  margin-right: 0.3rem;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dc-engrave);
+}
+
+/* By keyword: the finished note sheet, both teams. */
+.dc-kb {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.dc-kb-team h3 {
+  margin: 0 0 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--dc-cond);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-fg-secondary);
+}
+.dc-kb-cols {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+.dc-kb-col {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.35rem;
+  overflow: hidden;
   background:
     var(--dc-art-paper-typing) 0 0 / 256px repeat,
     var(--dc-paper);
-  font-family: var(--dc-type);
-  font-size: 0.82rem;
-  color: var(--dc-ink);
 }
-.dc-tl-round {
-  display: grid;
-  grid-template-columns: 2rem minmax(0, 1fr);
-  gap: 0.4rem;
-  padding: 0.25rem 0;
-  border-bottom: 1px dashed #2a262230;
-}
-.dc-tl-tx {
+.dc-kb-kw {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.15rem 0.45rem;
-}
-.dc-tl-stamp {
-  padding: 0 0.3rem;
-  border: 1.5px solid currentColor;
-  border-radius: 0.2rem;
+  gap: 0.4rem;
+  padding: 0.5rem 0.55rem;
+  background: linear-gradient(#a3241f, #6e1512);
+  color: #fde9d2;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  transform: rotate(-2deg);
-}
-.dc-tl-stamp.r {
-  color: #b4302a;
-}
-.dc-tl-stamp.a {
-  color: #9a6a12;
-}
-.dc-insight {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  padding: 0.45rem 0;
-  border-bottom: 1px solid var(--color-line-soft);
-  font-size: 0.85rem;
-  color: var(--color-fg-primary);
-}
-.dc-insight .k {
-  font-family: var(--dc-cond);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  font-size: 0.7rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
-/* The debrief enters once: the hero rises, then the screens, the panels and
-   the turning points fade in. Only the hero moves — the debrief scrolls, and a
-   translated element near its foot would flash a scrollbar. */
-@keyframes dc-rise {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
+.dc-kb-kw i {
+  font-style: normal;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+.dc-kb-col ul {
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  min-height: 3rem;
+}
+.dc-kb-col li {
+  display: flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  padding: 0.12rem 0.55rem;
+  font-family: var(--dc-type);
+  font-size: 0.85rem;
+  color: var(--dc-ink);
+  overflow-wrap: anywhere;
+}
+.dc-kb-col li small {
+  flex: none;
+  font-size: 0.65rem;
+  color: #8a7d64;
+}
+
+@container dc-poster (max-width: 380px) {
+  .dc-tp-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 2.2rem 2.2rem;
+    column-gap: 0.4rem;
+  }
+  .dc-tp-v {
+    width: 2.1rem;
+  }
+  .dc-tp-w {
+    font-size: 0.85rem;
+  }
+  .dc-tp-k {
+    font-size: 0.74rem;
   }
 }
-@keyframes dc-appear {
-  from {
-    opacity: 0;
-  }
-}
-.dc-debrief > .dc-hero {
-  animation: dc-rise 400ms var(--dc-ease-out) both;
-}
-.dc-debrief > .dc-felt {
-  animation: dc-appear 300ms var(--dc-ease-out) 120ms both;
-}
-.dc-debrief-grid > .dc-panel {
-  animation: dc-appear 300ms var(--dc-ease-out) 200ms both;
-}
-.dc-debrief .dc-insight {
-  animation: dc-appear 250ms var(--dc-ease-out) both;
-  animation-delay: calc(260ms + min(var(--i, 0), 6) * 50ms);
-}
-@container dc-debrief (max-width: 760px) {
-  .dc-debrief-grid,
-  .dc-debrief .dc-screens {
+@container dc-poster (max-width: 760px) {
+  .dc-poster {
     grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
   }
-  .dc-hero {
-    min-height: 15rem;
-    padding: 1rem;
+  .dc-ps-hero {
+    padding: 1.25rem 1.1rem 1.1rem;
+    gap: 0.7rem;
     background:
-      linear-gradient(0deg, #0b0d0cf5 0%, #0b0d0cb0 45%, #0b0d0c10 80%),
-      var(--dc-hero-art) 70% center / cover no-repeat,
+      linear-gradient(0deg, #0b0d0c 8%, #0b0d0cb0 60%, #0b0d0c30),
+      var(--dc-hero-art) 62% center / cover no-repeat,
       var(--dc-felt-deep);
   }
-  .dc-hero h1 {
-    font-size: 1.8rem;
+  .dc-ps-h1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 0.35em;
+    font-size: 2.3rem;
+  }
+  .dc-ps-kick {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+  }
+  .dc-ps-you {
+    font-size: 0.9rem;
+  }
+  .dc-ps-tokens {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .dc-ps-tok {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.9rem;
+  }
+  .dc-ps-tok .name {
+    width: 4.5rem;
+  }
+  .dc-ps-stack img,
+  .dc-ps-stack i {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+  .dc-ps-acts {
+    flex-wrap: nowrap;
+  }
+  .dc-ps-turn {
+    display: none;
+  }
+  .dc-ps-acts > * {
+    flex: 1;
+  }
+  .dc-ps-tapes {
+    padding: 0.75rem;
+  }
+  .dc-tape-strip > button {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+  }
+  .dc-tape-strip > button .tx + .tx {
+    grid-column: 2;
+  }
+  .dc-tape-open {
+    grid-template-columns: 1fr;
+  }
+  .dc-ps-th {
+    gap: 0.4rem;
+  }
+  .dc-tp-side {
+    padding: 0.7rem 0.75rem 0.85rem;
+  }
+  .dc-tp-side + .dc-tp-side {
+    border-left: 0;
+    border-top: 1px dashed #2a262240;
+  }
+  .dc-kb-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1526,7 +2362,7 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1586,14 +2422,14 @@
   display: flex;
   align-items: baseline;
   gap: 0.35rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-fg-strong);
   white-space: nowrap;
   overflow: hidden;
 }
 .dc-op-name span {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--color-fg-muted);
 }
@@ -1605,7 +2441,7 @@
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--color-fg-secondary);
   white-space: nowrap;
   overflow: hidden;
@@ -1632,7 +2468,7 @@
   text-align: center;
   font-family: var(--dc-cond);
   font-weight: 600;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-fg-muted);
@@ -1647,7 +2483,7 @@
     var(--dc-art-tape-teletype) 0 0 / 100% auto repeat-y,
     var(--dc-paper);
   font-family: var(--dc-type);
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   color: var(--dc-ink);
   filter: drop-shadow(0 2px 3px #0008);
 }
@@ -1661,17 +2497,14 @@
   width: 0.95rem;
   height: 0.95rem;
 }
-.dc-tg-e {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.1rem 0.6rem;
-  font-weight: 700;
+.dc-tg.good {
+  box-shadow: inset 3px 0 0 #2f9a63;
 }
-.dc-tg-e .ok {
-  color: #1f7a4c;
+.dc-tg.bad {
+  box-shadow: inset 3px 0 0 #c0392b;
 }
-.dc-tg-e .bad {
-  color: #8e1f1c;
+.dc-tg .dc-vlines {
+  margin-top: 0.15rem;
 }
 
 /* Reduced motion: nothing moves, every arrival still fades. Last in the file
@@ -1686,7 +2519,10 @@
   .dc-card.flip,
   .dc-strip.print .dc-strip-cell,
   .dc-tape-line.fresh .cl,
-  .dc-debrief > .dc-hero {
+  .dc-verdict,
+  .dc-verdict-head .dc-verdict-stamp,
+  .dc-ps-hero,
+  .dc-tape-open {
     animation: dc-fade 150ms ease both;
   }
   .dc-dial-knob,

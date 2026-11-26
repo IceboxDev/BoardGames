@@ -17,32 +17,22 @@ export const GO_STRATEGIES = [
     difficulty: "Medium",
   },
   {
-    id: "katago-5k",
-    label: "5 kyu",
-    description: "KataGo's human-style network, playing like a 5-kyu club player.",
-    difficulty: "Hard",
-  },
-  {
-    id: "katago-1k",
-    label: "1 kyu",
-    description: "KataGo's human-style network at 1 kyu.",
-    difficulty: "Hard+",
-  },
-  {
-    id: "katago-5d",
-    label: "5 dan",
-    description: "KataGo's human-style network at strong amateur dan level.",
-    difficulty: "Expert",
-  },
-  {
     id: "katago-max",
-    label: "KataGo",
-    description: "KataGo searching at full strength. Expect to lose.",
+    label: "Mountain",
+    description:
+      "KataGo searching at full strength — stronger than any professional. Expect to lose.",
     difficulty: "Master",
   },
 ] as const satisfies readonly StrategyInfo[];
 
-export type GoStrategy = (typeof GO_STRATEGIES)[number]["id"];
+/** Off the ladder since 2026-11-26; old games still name them, and the server can still play them. */
+export const GO_RETIRED_STRATEGIES = [
+  { id: "katago-5k", label: "5 kyu" },
+  { id: "katago-1k", label: "1 kyu" },
+  { id: "katago-5d", label: "5 dan" },
+] as const;
+
+export type GoStrategy = (typeof GO_STRATEGIES | typeof GO_RETIRED_STRATEGIES)[number]["id"];
 
 export const GoSizeSchema = z.union([z.literal(9), z.literal(13), z.literal(19)]);
 
@@ -73,5 +63,6 @@ export const goManifest = defineManifest({
   seatNames: ["Black", "White"],
   strategies: GO_STRATEGIES,
   defaultStrategy: "mcts",
+  retiredStrategies: GO_RETIRED_STRATEGIES,
   config: GoConfigSchema,
 });

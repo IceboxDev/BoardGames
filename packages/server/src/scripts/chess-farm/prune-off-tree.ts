@@ -72,7 +72,12 @@ for (const tdb of treeDbs) {
     const color = t.color === "b" ? "b" : "w";
     const tree = JSON.parse(String(t.tree_json)) as {
       nodes: Record<string, { fen: string; choice?: { source: string; uci?: string } }>;
+      choices?: Record<string, { source: string; uci?: string }>;
     };
+    // Keys in `choices` are position keys already; a node's own choice wins.
+    for (const [key, c] of Object.entries(tree.choices ?? {})) {
+      if (c.source === "handpicked" && c.uci) handpicked[color].set(key, c.uci);
+    }
     for (const n of Object.values(tree.nodes)) {
       if (n.choice?.source === "handpicked" && n.choice.uci) {
         handpicked[color].set(positionKey(parseFen(n.fen)), n.choice.uci);

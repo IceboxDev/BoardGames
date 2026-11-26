@@ -4,10 +4,10 @@ export const AI_STRATEGY_IDS = ["blocker", "lookahead", "deep", "perfect"] as co
 export type AIStrategyId = (typeof AI_STRATEGY_IDS)[number];
 
 export const AI_STRATEGY_LABELS: Record<AIStrategyId, string> = {
-  blocker: "Blocker",
-  lookahead: "Lookahead",
+  blocker: "Sentry",
+  lookahead: "Tactician",
   deep: "Deep Search",
-  perfect: "Perfect",
+  perfect: "Oracle",
 };
 
 export const AI_STRATEGY_DESCRIPTIONS: Record<AIStrategyId, string> = {
@@ -15,5 +15,5 @@ export const AI_STRATEGY_DESCRIPTIONS: Record<AIStrategyId, string> = {
   lookahead: "Searches six moves ahead and builds threats.",
   deep: "A much deeper search that sets traps several moves out.",
   perfect:
-    "Never misplays, yet varies its play from game to game: an exact solver with an opening book that picks at random among moves within a disc of the best. In PopOut, and on 8×7 before the middle game, it plays Deep Search.",
+    "Never misplays, yet varies its play from game to game: an exact solver with an opening book that picks at random among moves within a disc of the best. In PopOut, and on 8×7 before the middle game, it plays a deep search instead.",
 };

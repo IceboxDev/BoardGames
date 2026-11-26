@@ -7,12 +7,6 @@ export const lostCitiesManifest = defineManifest({
   seats: { min: 2, max: 2 },
   strategies: [
     {
-      id: "ismcts-v1",
-      label: AI_ENGINE_LABELS["ismcts-v1"],
-      description: AI_ENGINE_DESCRIPTIONS["ismcts-v1"],
-      difficulty: "Easy",
-    },
-    {
       id: "ismcts-v4",
       label: AI_ENGINE_LABELS["ismcts-v4"],
       description: AI_ENGINE_DESCRIPTIONS["ismcts-v4"],
@@ -32,5 +26,7 @@ export const lostCitiesManifest = defineManifest({
     },
   ],
   defaultStrategy: "ismcts-v4",
+  /** Off the ladder since 2026-11-26; old games still name it. */
+  retiredStrategies: [{ id: "ismcts-v1", label: AI_ENGINE_LABELS["ismcts-v1"] }],
   config: z.object({}),
 });

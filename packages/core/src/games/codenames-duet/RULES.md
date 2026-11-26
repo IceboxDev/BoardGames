@@ -24,7 +24,7 @@ Transcribed from the rulebook. **Please verify against your copy**, especially t
 2. The partner guesses. **Every guess is judged against the clue-giver's side.**
    - **Agent:** the card is covered for both players and the partner may keep guessing.
      - *Ruling: Duet has no number + 1 limit; the number is only information.* (verify)
-     - *Table agreement: ∞ means everything left is covered — this clue's words plus the words still owed from earlier clues are ALL the agents left on the giver's side. Short of that, the clue carries its number.*
+     - *Table agreement: WORD X says WORD describes X words. With k words still owed — each earlier clue's number minus the agents found on its turn — and X + k = every agent left on the giver's side, the clue is WORD ∞ instead (the guesser works out X = left − k). ∞ needs k ≥ 1: with nothing owed a clue carries its number, even one for the last agent.*
    - **Bystander:** the card is marked as that side's bystander and the turn ends. It stays guessable when the other player gives the clue.
    - **Assassin:** the pair loses.
 3. Every turn spends timer tokens (rulebook, "Using the timer tokens"; `spendTokens`):

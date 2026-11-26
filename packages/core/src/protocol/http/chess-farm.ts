@@ -99,6 +99,10 @@ export const EvalRequestResponseSchema = z.object({
     avgSeconds: z.number().nonnegative().nullable(),
     /** When a farm worker last checked in (ISO), or null. */
     lastSeen: z.string().nullable(),
+    /** Finished evaluations, by the colour whose tree they belong to. */
+    results: z
+      .object({ w: z.number().int().nonnegative(), b: z.number().int().nonnegative() })
+      .optional(),
   }),
 });
 export type EvalRequestResponse = z.infer<typeof EvalRequestResponseSchema>;

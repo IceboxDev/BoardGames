@@ -3,6 +3,8 @@ import type { GameDefinition } from "../games/types";
 import {
   EMPTY_FILTERS,
   filterGames,
+  filtersFromParams,
+  filtersToParams,
   type GameFilters,
   hasActiveFilters,
   timeBucket,
@@ -209,5 +211,28 @@ describe("filterGames", () => {
     expect(pick(["ada"])).toEqual(["Azul"]);
     expect(pick(["ada", "bob"])).toEqual(["Azul", "Codenames"]);
     expect(pick(["unknown"])).toEqual([]);
+  });
+});
+
+describe("filters in the URL", () => {
+  it("round-trips every axis and keeps unrelated params", () => {
+    const filters = {
+      query: "dice",
+      players: 2,
+      weight: "light",
+      time: "short",
+      playableOnly: true,
+      ownedBy: ["u1", "u2"],
+    } as const;
+    const params = filtersToParams(filters, new URLSearchParams("tab=x"));
+    expect(params.get("tab")).toBe("x");
+    expect(filtersFromParams(params)).toEqual(filters);
+    expect(filtersToParams(EMPTY_FILTERS, params).toString()).toBe("tab=x");
+  });
+
+  it("reads malformed values as no filter", () => {
+    expect(
+      filtersFromParams(new URLSearchParams("players=99&weight=huge&time=&playable=yes")),
+    ).toEqual(EMPTY_FILTERS);
   });
 });

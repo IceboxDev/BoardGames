@@ -45,14 +45,14 @@ export default function Decrypto({ source }: GameComponentProps) {
   }
   if (!flow.view) return <BoardFallback />;
 
-  if (flow.phase === "finished") {
-    return <GameOverScreen view={flow.view} actions={flow.endActions} />;
-  }
-
   // Room players by name; AI seats (and solo) are labelled by their tier / "You".
   const playerNames = flow.seats.map((s) =>
     source === "mp" && s.kind === "human" ? s.name : null,
   );
+  if (flow.phase === "finished") {
+    return <GameOverScreen view={flow.view} actions={flow.endActions} playerNames={playerNames} />;
+  }
+
   return (
     <GameBoard
       view={flow.view}

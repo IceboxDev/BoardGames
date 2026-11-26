@@ -426,3 +426,70 @@ describe("buildTree", () => {
     expect(Object.keys(tree.nodes).sort()).toEqual(Object.keys(direct.nodes).sort());
   });
 });
+
+describe("your moves survive a build that stops above them", () => {
+  it("keeps a choice whose position the build didn't reach, and uses it once it does", async () => {
+    const index = PositionIndex.build([game("a", "e4 e5 Nf3 Nc6"), game("b", "e4 e5 Bc4 Nf6")]);
+    const first = await buildTree(index, "w", settings(), null, fakeProviders([], E4));
+    const starred = withChoice(first, keyAfter("e4 e5"), { source: "handpicked", uci: "f1c4" });
+
+    // The farm hasn't answered the start: the build stops at the root.
+    const waiting: TreeProviders = {
+      ...fakeProviders([], E4),
+      evaluate: async () => {
+        throw new EvalPending();
+      },
+    };
+    const stopped = await buildTree(index, "w", settings(), starred, waiting);
+    expect(Object.keys(stopped.nodes)).toEqual([stopped.root]);
+    expect(stopped.choices?.[keyAfter("e4 e5")]).toEqual({ source: "handpicked", uci: "f1c4" });
+
+    const answered: TreeProviders = {
+      ...fakeProviders([], E4),
+      evaluate: async (fen) => ({
+        lines: [
+          {
+            uci: fen.startsWith("rnbqkbnr/pppppppp/8/8/8/8") ? "e2e4" : "g1f3",
+            cp: 0,
+            mate: null,
+            depth: 50,
+          },
+        ],
+      }),
+    };
+    const again = await buildTree(index, "w", settings(), stopped, answered);
+    expect(movesAt(again, "e4 e5")).toEqual(["Bc4:handpicked"]);
+  });
+
+  it("forgets a choice you clear", () => {
+    const tree: RepertoireTree = {
+      formatVersion: 1,
+      color: "w",
+      settings: settings(),
+      status: "ready",
+      root: "r",
+      nodes: {
+        r: {
+          fen: START_FEN,
+          ply: 0,
+          side: "user",
+          status: "done",
+          moves: [],
+          following: 0,
+          seen: 0,
+        },
+      },
+      choices: { r: { source: "handpicked", uci: "e2e4" } },
+      stats: {
+        games: 0,
+        deviated: 0,
+        ended: 0,
+        waiting: 0,
+        avgFollowPlies: 0,
+        decisions: 0,
+        awaiting: 0,
+      },
+    };
+    expect(withChoice(tree, "r", null).choices).toEqual({});
+  });
+});

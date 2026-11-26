@@ -1,6 +1,7 @@
 import type { Color } from "@boardgames/core/games/chess/engine/types";
-import { CHESS_STRATEGIES } from "@boardgames/core/games/chess/manifest";
+import { chessManifest } from "@boardgames/core/games/chess/manifest";
 import { type ChessReplayLog, ChessReplayLogSchema } from "@boardgames/core/games/chess/schemas";
+import { strategyLabel } from "@boardgames/core/machines/manifest";
 import type { MatchSummary } from "@boardgames/core/protocol";
 import { useMemo, useState } from "react";
 import { EmptyState } from "../../../components/ui";
@@ -16,7 +17,7 @@ function namesOf(log: ChessReplayLog, match: MatchSummary | undefined): Record<C
     const s = match?.seats.find((x) => x.seat === seat);
     if (s?.kind === "human" && s.name) return s.isViewer ? `${s.name} (you)` : s.name;
     const strategy = log.strategies[seat];
-    if (strategy) return CHESS_STRATEGIES.find((x) => x.id === strategy)?.label ?? strategy;
+    if (strategy) return strategyLabel(chessManifest, strategy) ?? strategy;
     return fallback;
   };
   return { w: name(0, "White"), b: name(1, "Black") };

@@ -142,6 +142,23 @@ profileInsightsRoutes.get("/:userId/match-summary", async (c) => {
 
     const coPlayerIds = extractParticipantIds(o).filter((id) => id !== userId);
     for (const id of coPlayerIds) coIds.add(id);
+    const sittings =
+      unit.sessions > 1
+        ? unit.rows
+            .map((s) => {
+              const others = extractParticipantIds(s.outcome_json).filter((id) => id !== userId);
+              for (const id of others) coIds.add(id);
+              const own = unitResult(s.outcome_json, userId, lowestWins, s.game_slug).result;
+              return {
+                matchId: s.id,
+                dateKey: s.date_key,
+                playedAt: s.played_at,
+                result: own ?? result,
+                coPlayerIds: others,
+              };
+            })
+            .sort((a, b) => a.playedAt.localeCompare(b.playedAt))
+        : [];
 
     items.push({
       matchId: r.id,
@@ -157,6 +174,7 @@ profileInsightsRoutes.get("/:userId/match-summary", async (c) => {
       score,
       sessions: unit.sessions,
       coPlayerIds,
+      sittings,
     });
   }
 

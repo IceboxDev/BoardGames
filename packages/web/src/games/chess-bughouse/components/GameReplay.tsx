@@ -1,8 +1,9 @@
-import { BUGHOUSE_STRATEGIES } from "@boardgames/core/games/chess-bughouse/manifest";
+import { bughouseManifest } from "@boardgames/core/games/chess-bughouse/manifest";
 import {
   type BughouseReplayLog,
   BughouseReplayLogSchema,
 } from "@boardgames/core/games/chess-bughouse/schemas";
+import { strategyLabel } from "@boardgames/core/machines/manifest";
 import { useMemo } from "react";
 import { ReplayControls } from "../../../components/replay/ReplayControls";
 import { useReplayPlayback } from "../../../components/replay/useReplayPlayback";
@@ -16,7 +17,7 @@ const BOARD = ["Board A", "Board B"] as const;
 function nameOf(strategy: string | null | undefined, seat: number): string {
   const fallback = ["A-White", "A-Black", "B-White", "B-Black"][seat] ?? "Player";
   if (!strategy) return fallback;
-  return BUGHOUSE_STRATEGIES.find((s) => s.id === strategy)?.label ?? strategy;
+  return strategyLabel(bughouseManifest, strategy) ?? strategy;
 }
 
 /** Both boards, stepped through in the order the moves were played across the table. */

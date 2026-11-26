@@ -17,6 +17,8 @@ type Props = {
   lineup: readonly string[];
   value: string | null;
   onChange: (slug: string) => void;
+  /** The strip's caption ("Balanced for", "Stacked for"). */
+  label?: string;
 };
 
 const BY_SLUG = new Map(games.map((g) => [g.slug, g]));
@@ -30,7 +32,7 @@ const ALL = [...games].sort((a, b) => {
 
 const accent = (g: GameDefinition) => ({ "--accent": g.accentHex }) as CSSProperties;
 
-export function TeamGamePicker({ lineup, value, onChange }: Props) {
+export function TeamGamePicker({ lineup, value, onChange, label = "Balanced for" }: Props) {
   const reduceMotion = useReducedMotion();
   const labelId = useId();
   const [searching, setSearching] = useState(false);
@@ -58,7 +60,7 @@ export function TeamGamePicker({ lineup, value, onChange }: Props) {
   return (
     <section aria-labelledby={labelId} className="flex flex-col gap-2">
       <div className="flex items-baseline justify-between gap-2 px-1">
-        <MicroLabel id={labelId}>Balanced for</MicroLabel>
+        <MicroLabel id={labelId}>{label}</MicroLabel>
         {lineup.length > 0 && (
           <span className="text-3xs text-fg-muted">tonight's lineup · or any game</span>
         )}

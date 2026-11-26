@@ -121,8 +121,8 @@ describe("the Analyst's clue step (the former Mastermind)", () => {
   it("asks in size slots, pools the second brainstorm and gives the 3 that reads cleanly", async () => {
     const seen = stub(answers);
     const out = await llmCodenamesAgent.giveClue({ ...BOARD, operatives: [null] });
-    // GARDEN covers all three agents left: by the ∞ agreement it is given as ∞.
-    expect(out).toMatchObject({ word: "garden", count: "unlimited" });
+    // GARDEN covers all three agents left, nothing owed: a number, never ∞.
+    expect(out).toMatchObject({ word: "garden", count: 3 });
     const main = seen.find((r) => r.label === "codenames-clue");
     expect(JSON.stringify(main?.jsonSchema)).toContain('"ideas"');
     expect(seen.filter((r) => r.label === "codenames-clue-bold")).toHaveLength(1);
@@ -259,7 +259,7 @@ describe("the ∞ agreement in the Mastermind", () => {
     expect(users.some((u) => /CLUE: DEN 3/.test(u))).toBe(false);
   });
 
-  it("keeps the number while an agent is still undescribed", async () => {
+  it("with nothing owed it is never ∞, even for every agent left", async () => {
     vi.stubEnv("CODENAMES_MASTER_TARGETED", "0");
     stub(answers);
     const out = await llmCodenamesAgent.giveClue({
@@ -267,6 +267,7 @@ describe("the ∞ agreement in the Mastermind", () => {
       history: [],
       operatives: ["codenames-expert"],
     });
-    expect(out).toMatchObject({ word: "den", count: 2 });
+    expect(out.word).toBe("den");
+    expect(typeof out.count).toBe("number");
   });
 });

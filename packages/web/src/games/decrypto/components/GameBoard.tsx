@@ -27,6 +27,7 @@ import {
   teamName,
   teamNames,
 } from "../logic/desk";
+import { revealedOf, type Tone, verdictFor } from "../logic/verdict";
 import { CodeScreen } from "./desk/CodeScreen";
 import { Lamp, Nixie, TokenTray } from "./desk/Instruments";
 import { History, Operators } from "./desk/Rails";
@@ -40,6 +41,7 @@ import {
   Strip,
   TypingSheet,
 } from "./desk/Slot";
+import { VerdictBoard, VerdictLines, VerdictStamp } from "./desk/Verdict";
 import "./desk/desk.css";
 
 // The Wireless Room: the board is the cipher desk. Token trays and the round
@@ -138,6 +140,22 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
     }
   };
 
+  // The reveal stays up until everyone has read it: Continue (or Enter) moves on.
+  const continueReveal = () => onAction({ kind: "continue" });
+  // biome-ignore lint/correctness/useExhaustiveDependencies: onAction is stable for the board's life
+  useEffect(() => {
+    if (!view.myPending.continue) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (e.key === "Enter") {
+        e.preventDefault();
+        onAction({ kind: "continue" });
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [view.myPending.continue]);
+
   // Keys 1–4 set the active dial, Backspace clears the last, Enter transmits.
   // biome-ignore lint/correctness/useExhaustiveDependencies: pick/submitGuess read the same draft
   useEffect(() => {
@@ -184,11 +202,17 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
   if (revealing && tx?.resolved) for (const d of tx.resolved.code) lit[tx.team][d - 1] = true;
 
   const interceptorOnly = view.variant === "interceptor";
+  // Notes are team talk: a teamed encryptor is locked out until its code is revealed.
+  const teamSize = view.seats.filter((s) => s.team === view.team).length;
+  const notesLocked =
+    teamSize >= 2 && view.seats.find((s) => s.seat === view.seat)?.isEncryptor
+      ? "Your team's notes open again once your code is revealed"
+      : null;
   const screen = (team: Team) => (
     <CodeScreen
       key={team}
       team={team}
-      title={
+      label={
         team === view.team
           ? `${teamName(view, team)} · your screen`
           : `${teamName(view, team)} · their screen`
@@ -200,6 +224,11 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
       fromRound={firstBlankRound(view)}
       maxRounds={view.maxRounds}
       hidden={narrow && !interceptorOnly && side !== team}
+      notes={team === view.team ? undefined : view.rivalNotes}
+      onNote={
+        team === view.team ? undefined : (digit, text) => onAction({ kind: "note", digit, text })
+      }
+      notesLocked={notesLocked}
     />
   );
   const screenTeams: Team[] = interceptorOnly ? [0] : view.team === 0 ? [0, 1] : [1, 0];
@@ -227,11 +256,7 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
       encrypting && myTx ? (
         <CodeCard code={myTx.code} label={`Your code · ${roundTag}`} />
       ) : (
-        <InfoCard
-          eyebrow={roundTag}
-          title="Clue writing"
-          text={`${operatorName(view, view.transmissions[0]?.encryptor ?? 0, playerNames)} encrypts for ${teamName(view, view.transmissions[0]?.team ?? 0)}`}
-        />
+        <InfoCard eyebrow={roundTag} title="Clue writing" />
       );
     mid =
       encrypting && myTx ? (
@@ -281,7 +306,7 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
         <CodeCard code={tx.resolved.code} label={`${teamName(view, t)} · ${roundTag}`} flip />
       ) : (
         <InfoCard
-          eyebrow={`Incoming · ${view.txIdx + 1} of ${view.transmissions.length}`}
+          eyebrow={`Incoming ${view.txIdx + 1}/${view.transmissions.length}`}
           icon={artUrl("icon-transmission")}
           title={
             <>
@@ -289,10 +314,11 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
               {teamName(view, t)}'s code
             </>
           }
-          text={`${operatorName(view, tx.encryptor, playerNames)} encrypted`}
         />
       );
-    mid = (
+    mid = revealing ? (
+      <VerdictBoard view={view} tx={tx} />
+    ) : (
       <>
         <Strip
           clues={tx.skipped ? null : tx.clues}
@@ -314,26 +340,16 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
     );
     let rows: LampRow[];
     if (revealing && tx.resolved) {
-      const r = tx.resolved;
-      rows = [
-        {
-          label: `${teamName(view, t)} decode`,
-          state: r.miscommunicated ? "bad" : "done",
-          text: r.miscommunicated
-            ? `Misread as ${fmtCode(r.decodeGuess)} — a black token to ${teamName(view, t)}`
-            : "Decoded cleanly",
-        },
-      ];
-      if (tx.interceptRequired) {
-        const hits = r.interceptGuess?.filter((d, i) => d === r.code[i]).length ?? 0;
-        rows.push({
-          label: `${teamName(view, other)} intercept`,
-          state: r.intercepted ? "bad" : "done",
-          text: r.intercepted
-            ? `Intercepted — a white token to ${teamName(view, other)}`
-            : `Held — they read ${fmtCode(r.interceptGuess)} (${hits}/3)`,
-        });
-      }
+      const revealed = revealedOf(view, tx);
+      const lamp: Record<Tone, LampRow["state"]> = { good: "done", bad: "bad", neutral: "off" };
+      rows = revealed
+        ? verdictFor(view, revealed).lines.map((line) => ({
+            label: line.title,
+            state: lamp[line.tone],
+            // The board beside it spells out the numbers.
+            text: "",
+          }))
+        : [];
     } else {
       rows = [
         {
@@ -371,11 +387,19 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
         </button>
       );
     } else if (revealing) {
-      key = (
+      const next =
+        view.txIdx + 1 < view.transmissions.length
+          ? `${teamName(view, other)}'s code next`
+          : "Round closes next";
+      const waiting = view.revealWaiting.map((s) => operatorName(view, s, playerNames));
+      key = view.myPending.continue ? (
+        // biome-ignore lint/correctness/noRestrictedElements: the desk's painted transmit key, a game piece
+        <button type="button" className="dc-key" onClick={continueReveal} title={next}>
+          Continue <kbd>↵</kbd>
+        </button>
+      ) : (
         <div className="dc-keyplate">
-          {view.txIdx + 1 < view.transmissions.length
-            ? `Next: ${teamName(view, other)}'s transmission`
-            : "Round closes next"}
+          {waiting.length > 0 ? `Waiting for ${waiting.join(", ")}` : next}
         </div>
       );
     } else if (
@@ -401,23 +425,19 @@ export default function GameBoard({ view, playerNames, images, onAction, error }
     left = <InfoCard eyebrow={roundTag} title="Line closed" text="Checking the trays…" />;
     mid = (
       <div className="dc-closing">
-        {(summary?.transmissions ?? []).map((t) => (
-          <div key={t.team} className="dc-closing-row">
-            <span className={`dc-tdot t${t.team}`} />
-            <b>
-              {teamName(view, t.team)} {fmtCode(t.code)}
-            </b>
-            <span className="clues">{(t.clues ?? []).join(" / ")}</span>
-            <span className={t.miscommunicated ? "bad" : "ok"}>
-              {t.miscommunicated ? "misread" : "decoded"}
-            </span>
-            {t.interceptGuess && (
-              <span className={t.intercepted ? "bad" : "ok"}>
-                {t.intercepted ? "intercepted" : "held"}
+        {(summary?.transmissions ?? []).map((t) => {
+          const verdict = verdictFor(view, { round: view.round, ...t });
+          return (
+            <div key={t.team} className="dc-closing-row">
+              <span className="who">
+                <span className={`dc-tdot t${t.team}`} />
+                {teamName(view, t.team)} {fmtCode(t.code)}
               </span>
-            )}
-          </div>
-        ))}
+              <VerdictStamp verdict={verdict} />
+              <VerdictLines verdict={verdict} details={false} compact />
+            </div>
+          );
+        })}
       </div>
     );
     right = (

@@ -27,6 +27,9 @@ export type UserRowProps = {
    *  (accent bubble on the name). Clears once the activity drawer is opened;
    *  never shown on the admin's own row (`isSelf`). */
   unseenActivity?: number;
+  /** Things they owe the group (RSVPs, picks, purchase votes, …) plus open
+   *  admin notes — an amber count beside the pie, which opens the list. */
+  outstanding?: number;
   /** Inventory expansion (renders a second `<tr>` with the editor). */
   expanded: boolean;
   onToggleInventory: () => void;
@@ -71,6 +74,7 @@ export function UserRow({
   coverage,
   zeroForDays,
   unseenActivity = 0,
+  outstanding = 0,
   expanded,
   onToggleInventory,
   onSetOnlineMode,
@@ -101,10 +105,19 @@ export function UserRow({
             onClick={onOpenCalendar}
             // This label OVERRIDES the inner "NN%" text for assistive tech, so
             // it has to carry the coverage data itself (see coverageSpeech).
-            aria-label={`View ${user.name || user.email}'s availability calendar — ${coverageSpeech(coverage)}`}
-            className="-mx-1 cursor-pointer rounded-ui-md px-1 py-0.5 transition-colors hover:bg-fill focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+            aria-label={`View ${user.name || user.email}'s availability calendar — ${coverageSpeech(coverage)}${outstanding > 0 ? ` · ${outstanding} outstanding` : ""}`}
+            className="-mx-1 flex cursor-pointer items-center gap-1.5 rounded-ui-md px-1 py-0.5 transition-colors hover:bg-fill focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
           >
             <CoverageCell coverage={coverage} />
+            {outstanding > 0 && (
+              <span
+                aria-hidden
+                title={`${outstanding} outstanding`}
+                className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-400/20 px-1 text-3xs font-bold tabular-nums text-amber-200"
+              >
+                {outstanding}
+              </span>
+            )}
           </button>
         </td>
         <td className="px-5 py-3 font-medium">
@@ -267,7 +280,7 @@ function DeleteOrOnlineCell({
             aria-label={`Non-drinker: ${email}`}
             title={
               nonDrinker
-                ? "Non-drinker — drinking games stay out of their nights' pickers"
+                ? "Non-drinker — any night they join (even as a maybe) hides drinking games from everyone's picker"
                 : "Mark as non-drinker"
             }
             onClick={onToggleNonDrinker}

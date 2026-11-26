@@ -112,9 +112,9 @@ export interface ActionLogEntry {
 
 export const AI_ENGINE_LABELS: Record<AIEngine, string> = {
   "ismcts-v1": "Baseline",
-  "ismcts-v4": "Strict",
-  "ismcts-v5": "Adaptive",
-  "ismcts-v6": "Adaptive+",
+  "ismcts-v4": "Scout",
+  "ismcts-v5": "Pathfinder",
+  "ismcts-v6": "Trailblazer",
 };
 
 export const AI_ENGINE_DESCRIPTIONS: Record<AIEngine, string> = {
